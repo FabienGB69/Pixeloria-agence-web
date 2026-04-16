@@ -1,0 +1,25 @@
+{
+  "name": "pixeloria-agence-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static site for Pixeloria – web agency.",
+  "scripts": {
+    "start": "npx --yes http-server . -p 8080 -c-1 -s",
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
+    "lint:html": "htmlhint \"**/*.html\"",
+    "lint:css": "stylelint \"**/*.css\"",
+    "lint:js": "eslint .",
+    "linkcheck": "linkinator ./index.html --silent --skip \"^https://(fonts\\.(googleapis|gstatic)\\.com|wa\\.me|www\\.(instagram|linkedin|facebook)\\.com|pixeloria\\.fr)\" --skip \"^/_vercel/\"",
+    "test:e2e": "playwright test",
+    "test:e2e:install": "playwright install --with-deps chromium",
+    "ci": "npm run lint && npm run linkcheck"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "eslint": "^8.57.0",
+    "htmlhint": "^1.1.4",
+    "linkinator": "^6.1.2",
+    "stylelint": "^16.10.0",
+    "stylelint-config-standard": "^36.0.1"
+  }
+}
