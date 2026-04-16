@@ -1,14 +1,14 @@
 :root {
-  --bg: #f7f8ff;
+  --bg: #f6fffd;
   --surface: #ffffff;
-  --surface-soft: #f1f4ff;
-  --text: #1d2142;
-  --text-muted: #4f5678;
-  --primary: #5f4dff;
-  --primary-strong: #4b37ef;
-  --accent: #00b7ff;
-  --border: rgba(84, 97, 156, 0.24);
-  --shadow: 0 22px 52px rgba(42, 55, 109, 0.16);
+  --surface-soft: #ecfcf7;
+  --text: #000c48;
+  --text-muted: #35506d;
+  --primary: #26d8be;
+  --primary-strong: #2ca7ff;
+  --accent: #35e38f;
+  --border: rgba(17, 91, 132, 0.23);
+  --shadow: 0 22px 52px rgba(3, 20, 73, 0.14);
   --radius: 18px;
 }
 
@@ -27,8 +27,8 @@ body {
 body {
   font-family: "Space Grotesk", sans-serif;
   background:
-    radial-gradient(circle at 12% 8%, rgba(95, 77, 255, 0.16), transparent 34%),
-    radial-gradient(circle at 88% 92%, rgba(0, 183, 255, 0.14), transparent 32%),
+    radial-gradient(circle at 12% 8%, rgba(53, 227, 143, 0.16), transparent 34%),
+    radial-gradient(circle at 88% 92%, rgba(44, 167, 255, 0.14), transparent 32%),
     var(--bg);
   color: var(--text);
   line-height: 1.6;
@@ -70,9 +70,9 @@ body {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(247, 248, 255, 0.82);
+  background: rgba(246, 255, 253, 0.84);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(86, 99, 154, 0.2);
+  border-bottom: 1px solid rgba(17, 91, 132, 0.2);
 }
 
 .nav-wrapper {
@@ -104,7 +104,7 @@ body {
 }
 
 .site-nav a {
-  color: #3f4671;
+  color: #1f4770;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease;
@@ -137,13 +137,13 @@ body {
 
 .eyebrow {
   display: inline-block;
-  color: #4b3ccd;
+  color: #0c6f99;
   font-weight: 600;
   font-size: 0.85rem;
   padding: 0.3rem 0.7rem;
   border-radius: 999px;
-  border: 1px solid rgba(95, 77, 255, 0.34);
-  background: rgba(95, 77, 255, 0.1);
+  border: 1px solid rgba(38, 216, 190, 0.44);
+  background: rgba(38, 216, 190, 0.14);
 }
 
 h1,
@@ -190,8 +190,8 @@ p {
 
 .btn-primary {
   color: #fff;
-  background: linear-gradient(140deg, var(--primary), var(--primary-strong));
-  box-shadow: 0 14px 26px rgba(104, 68, 255, 0.35);
+  background: linear-gradient(140deg, var(--accent), var(--primary-strong));
+  box-shadow: 0 14px 26px rgba(44, 167, 255, 0.3);
 }
 
 .btn-secondary {
@@ -222,7 +222,7 @@ p {
 }
 
 .hero-card {
-  background: linear-gradient(155deg, #ffffff, #f2f6ff);
+  background: linear-gradient(155deg, #ffffff, #eefdff);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.5rem;
@@ -233,7 +233,7 @@ p {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: #2a5cc0;
+  color: #0c7b90;
   margin-bottom: 0.8rem;
 }
 
@@ -285,8 +285,8 @@ p {
 
 .tag {
   font-size: 0.8rem;
-  color: #0c6f99;
-  border: 1px solid rgba(0, 183, 255, 0.38);
+  color: #0f6f86;
+  border: 1px solid rgba(38, 216, 190, 0.45);
   border-radius: 999px;
   padding: 0.2rem 0.55rem;
 }
@@ -316,8 +316,8 @@ p {
   width: 2.5rem;
   aspect-ratio: 1;
   border-radius: 10px;
-  background: rgba(95, 77, 255, 0.14);
-  color: #4b3ccd;
+  background: rgba(38, 216, 190, 0.2);
+  color: #0f6d7e;
   font-weight: 700;
 }
 
@@ -326,7 +326,7 @@ p {
   grid-template-columns: 1fr 1fr;
   gap: 1.2rem;
   align-items: start;
-  background: linear-gradient(180deg, #eff3ff, #ffffff);
+  background: linear-gradient(180deg, #e9fff8, #f3fdff);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.4rem;
@@ -339,7 +339,7 @@ p {
 }
 
 .contact-details a {
-  color: #273486;
+  color: #0f5676;
   text-decoration: none;
   font-weight: 600;
 }
@@ -371,7 +371,7 @@ textarea {
 
 input::placeholder,
 textarea::placeholder {
-  color: #858db5;
+  color: #6f89a5;
 }
 
 textarea {
@@ -379,7 +379,7 @@ textarea {
 }
 
 .site-footer {
-  border-top: 1px solid rgba(86, 99, 154, 0.2);
+  border-top: 1px solid rgba(17, 91, 132, 0.2);
   padding: 1.2rem 0 1.8rem;
 }
 
@@ -457,8 +457,8 @@ textarea {
     right: 0;
     display: grid;
     gap: 0.6rem;
-    background: rgba(251, 252, 255, 0.98);
-    border-bottom: 1px solid rgba(86, 99, 154, 0.2);
+    background: rgba(246, 255, 253, 0.98);
+    border-bottom: 1px solid rgba(17, 91, 132, 0.2);
     padding: 1rem 1.2rem 1.2rem;
     transform-origin: top;
     transform: scaleY(0);
