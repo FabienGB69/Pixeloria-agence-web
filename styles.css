@@ -412,6 +412,41 @@ textarea {
   flex-wrap: wrap;
 }
 
+.footer-right {
+  display: grid;
+  justify-items: end;
+  gap: 0.75rem;
+}
+
+.social-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.social-link {
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  color: #0f5676;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(44, 167, 255, 0.2);
+}
+
+.social-link svg {
+  width: 1rem;
+  height: 1rem;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(12px);
@@ -440,6 +475,10 @@ textarea {
   .footer-content {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .footer-right {
+    justify-items: flex-start;
   }
 
   .footer-logo {
