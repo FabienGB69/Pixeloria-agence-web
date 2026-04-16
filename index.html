@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pixeloria | Agence web creative</title>
+    <title>Pixeloria | Agence web créative</title>
     <meta
       name="description"
-      content="Pixeloria assemble design, branding et experiences web pour des marques ambitieuses."
+      content="Pixeloria assemble design, branding et expériences web pour des marques ambitieuses."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,8 +30,12 @@
     <header class="site-header">
       <div class="container nav-wrapper">
         <a href="#home" class="logo" aria-label="Pixeloria accueil">
-          <span class="logo-icon">P</span>
-          Pixeloria
+          <img
+            src="./assets/pixeloria-logo.svg"
+            class="logo-image"
+            alt="Pixeloria"
+            decoding="async"
+          />
         </a>
         <button
           class="menu-toggle"
@@ -55,10 +59,10 @@
         <div class="container hero-grid">
           <div class="reveal">
             <span class="eyebrow">Studio digital premium</span>
-            <h1>Assemble les designs qui transforment tes visiteurs en clients.</h1>
+            <h1>Assemblez des designs qui transforment vos visiteurs en clients.</h1>
             <p>
-              Pixeloria fusionne branding, UI/UX et developpement front pour
-              creer des experiences web rapides, belles et memorables.
+              Pixeloria fusionne branding, UI/UX et développement front pour
+              créer des expériences web rapides, belles et mémorables.
             </p>
             <div class="hero-actions">
               <a href="#contact" class="btn btn-primary">Lancer mon projet</a>
@@ -67,7 +71,7 @@
             <div class="hero-metrics">
               <article>
                 <strong>+120</strong>
-                <span>sites designes</span>
+                <span>sites designés</span>
               </article>
               <article>
                 <strong>98%</strong>
@@ -83,10 +87,10 @@
           <div class="hero-card reveal">
             <div class="chip">Design Assembly</div>
             <h2>Pixeloria Dashboard</h2>
-            <p>Direction artistique + UI kit + integration responsive.</p>
+            <p>Direction artistique + UI kit + intégration responsive.</p>
             <ul>
-              <li>Systeme visuel coherent</li>
-              <li>Composants prets a scaler</li>
+              <li>Système visuel cohérent</li>
+              <li>Composants prêts à évoluer</li>
               <li>Animations fluides</li>
             </ul>
           </div>
@@ -103,7 +107,7 @@
             <article class="card reveal">
               <h3>Branding digital</h3>
               <p>
-                Positionnement, logo system, palette, tone of voice et assets
+                Positionnement, système de logo, palette, tone of voice et assets
                 social media.
               </p>
             </article>
@@ -111,14 +115,14 @@
               <h3>UI / UX design</h3>
               <p>
                 Wireframes, prototypes interactifs et interfaces modernes
-                optimisees conversion.
+                optimisées pour la conversion.
               </p>
             </article>
             <article class="card reveal">
-              <h3>Web integration</h3>
+              <h3>Intégration web</h3>
               <p>
-                Pages ultra-rapides, SEO-ready et maintenables avec des
-                composants reutilisables.
+                Pages ultra-rapides, optimisées SEO et maintenables avec des
+                composants réutilisables.
               </p>
             </article>
           </div>
@@ -129,23 +133,23 @@
         <div class="container">
           <div class="section-heading reveal">
             <span class="eyebrow">Portfolio</span>
-            <h2>Designs assembles pour des marques ambitieuses</h2>
+            <h2>Designs assemblés pour des marques ambitieuses</h2>
           </div>
           <div class="portfolio-grid">
             <article class="project-card reveal">
               <span class="tag">SaaS</span>
               <h3>Nebula CRM</h3>
-              <p>Refonte complete du dashboard avec +45% de retention.</p>
+              <p>Refonte complète du dashboard avec +45 % de rétention.</p>
             </article>
             <article class="project-card reveal">
               <span class="tag">E-commerce</span>
               <h3>Studio Vanta</h3>
-              <p>Expérience premium mobile-first et tunnel d'achat simplifie.</p>
+              <p>Expérience premium mobile-first et tunnel d'achat simplifié.</p>
             </article>
             <article class="project-card reveal">
               <span class="tag">Media</span>
               <h3>Pulse Magazine</h3>
-              <p>Design editorial moderne et architecture de contenu optimisee.</p>
+              <p>Design éditorial moderne et architecture de contenu optimisée.</p>
             </article>
           </div>
         </div>
@@ -176,7 +180,7 @@
               <span>03</span>
               <div>
                 <h3>Build & lancement</h3>
-                <p>On integre, on optimise, on publie. Votre site est pret.</p>
+                <p>On intègre, on optimise, on publie. Votre site est prêt.</p>
               </div>
             </li>
           </ol>
@@ -187,16 +191,35 @@
         <div class="container cta reveal">
           <div>
             <span class="eyebrow">Nouveau projet</span>
-            <h2>Construisons votre experience Pixeloria</h2>
+            <h2>Construisons votre expérience Pixeloria</h2>
             <p>
-              Donnez-nous votre brief et recevez une proposition strategique et
+              Donnez-nous votre brief et recevez une proposition stratégique et
               visuelle.
             </p>
+            <div class="contact-details">
+              <a href="tel:+33786125313">📞 0786125313</a>
+              <a href="mailto:contact@pixeloria.fr">✉️ contact@pixeloria.fr</a>
+              <a href="https://wa.me/33786125313" target="_blank" rel="noopener noreferrer"
+                >WhatsApp : 0786125313</a
+              >
+            </div>
           </div>
           <form class="contact-form" action="#" method="post">
             <label>
+              Prénom
+              <input type="text" name="first_name" placeholder="Votre prénom" required />
+            </label>
+            <label>
               Nom
               <input type="text" name="name" placeholder="Votre nom" required />
+            </label>
+            <label>
+              Nom Entreprise (facultatif)
+              <input
+                type="text"
+                name="company"
+                placeholder="Nom de votre entreprise"
+              />
             </label>
             <label>
               Email
@@ -219,8 +242,69 @@
 
     <footer class="site-footer">
       <div class="container footer-content">
-        <p>© <span id="year"></span> Pixeloria. Tous droits reserves.</p>
-        <a href="#home">Retour en haut</a>
+        <div class="footer-brand">
+          <img
+            src="./assets/pixeloria-logo.svg"
+            class="footer-logo"
+            alt="Logo Pixeloria"
+            decoding="async"
+          />
+          <p>© <span id="year"></span> Pixeloria. Tous droits réservés.</p>
+        </div>
+        <div class="footer-right">
+          <div class="footer-links">
+            <a href="tel:+33786125313">📞 0786125313</a>
+            <a href="mailto:contact@pixeloria.fr">✉️ contact@pixeloria.fr</a>
+            <a href="https://wa.me/33786125313" target="_blank" rel="noopener noreferrer"
+              >WhatsApp</a
+            >
+            <a href="#home">Retour en haut</a>
+          </div>
+          <div class="social-links" aria-label="Réseaux sociaux">
+            <a
+              class="social-link"
+              href="https://www.instagram.com/pixeloria.fr"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              title="Instagram"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5Zm8.9 1.45a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3ZM12 7.2A4.8 4.8 0 1 1 7.2 12 4.8 4.8 0 0 1 12 7.2Zm0 1.8A3 3 0 1 0 15 12a3 3 0 0 0-3-3Z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              class="social-link"
+              href="https://www.linkedin.com/company/pixeloria"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              title="LinkedIn"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M6.2 8.2a1.9 1.9 0 1 1 0-3.8 1.9 1.9 0 0 1 0 3.8ZM4.6 9.7h3.1V20H4.6V9.7Zm5.1 0h3v1.4h.1c.4-.8 1.5-1.7 3.2-1.7 3.4 0 4 2.2 4 5.1V20h-3.1v-4.8c0-1.1 0-2.5-1.6-2.5s-1.8 1.2-1.8 2.4V20H9.7V9.7Z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              class="social-link"
+              href="https://www.facebook.com/pixeloria.fr"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              title="Facebook"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M13.5 21v-7h2.4l.4-2.7h-2.8V9.5c0-.8.3-1.3 1.4-1.3h1.5V5.8a18 18 0 0 0-2.3-.1c-2.3 0-3.8 1.4-3.8 4v1.6H8v2.7h2.3v7h3.2Z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
 
