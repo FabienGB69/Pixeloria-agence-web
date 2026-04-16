@@ -395,6 +395,16 @@ textarea {
   text-decoration: none;
 }
 
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-logo {
+  width: clamp(130px, 16vw, 185px);
+  height: auto;
+}
+
 .footer-links {
   display: inline-flex;
   align-items: center;
@@ -425,6 +435,15 @@ textarea {
 @media (max-width: 740px) {
   .logo-image {
     width: clamp(130px, 38vw, 176px);
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-logo {
+    width: clamp(120px, 42vw, 168px);
   }
 
   .menu-toggle {
