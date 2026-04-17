@@ -34,3 +34,34 @@ const yearElement = document.querySelector("#year");
 if (yearElement) {
   yearElement.textContent = String(new Date().getFullYear());
 }
+
+// ── Contact form — async submit ──────────────────────────
+const contactForm = document.querySelector("#contact-form");
+const formSuccess = document.querySelector("#form-success");
+
+if (contactForm && formSuccess) {
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const data = Object.fromEntries(new FormData(contactForm).entries());
+
+    try {
+      const res = await fetch("/api/submit-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        contactForm.style.display = "none";
+        formSuccess.style.display = "block";
+      } else {
+        // Fallback : soumission native si l'API renvoie une erreur
+        contactForm.submit();
+      }
+    } catch {
+      // Pas de réseau ou API absente : soumission native
+      contactForm.submit();
+    }
+  });
+}
