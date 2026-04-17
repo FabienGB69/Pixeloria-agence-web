@@ -122,22 +122,6 @@ function animateCounter(el) {
   requestAnimationFrame(step);
 }
 
-const metricEls = qsa(".metric-value[data-target]");
-if (metricEls.length && "IntersectionObserver" in window) {
-  const cObs = new IntersectionObserver(
-    (entries, obs) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          animateCounter(entry.target);
-          obs.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
-  metricEls.forEach((el) => cObs.observe(el));
-}
-
 /* ------------------------------------------------------------------
    Custom cursor (desktop only)
 ------------------------------------------------------------------ */
@@ -148,7 +132,6 @@ if (window.matchMedia("(pointer: fine)").matches && !prefersReducedMotion) {
   if (cursor && follower) {
     let mx = -100, my = -100;
     let fx = -100, fy = -100;
-    let rafId;
 
     const moveCursor = (e) => {
       mx = e.clientX;
@@ -162,13 +145,12 @@ if (window.matchMedia("(pointer: fine)").matches && !prefersReducedMotion) {
       fy += (my - fy) * 0.14;
       follower.style.left = fx + "px";
       follower.style.top  = fy + "px";
-      rafId = requestAnimationFrame(animateFollower);
+      requestAnimationFrame(animateFollower);
     };
 
     document.addEventListener("mousemove", moveCursor, { passive: true });
     animateFollower();
 
-    /* Hover state on interactive elements */
     const hoverEls = "a, button, input, textarea, select, [data-cursor-hover]";
     document.querySelectorAll(hoverEls).forEach((el) => {
       el.addEventListener("mouseenter", () =>
@@ -191,7 +173,7 @@ if (window.matchMedia("(pointer: fine)").matches && !prefersReducedMotion) {
 }
 
 /* ------------------------------------------------------------------
-   Contact form — client-side feedback
+   Contact form — validated async submit to /api/submit-lead
 ------------------------------------------------------------------ */
 const form        = qs("#contact-form");
 const formSuccess = qs("#form-success");
@@ -201,7 +183,7 @@ if (form && formSuccess && submitBtn) {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    /* Validate */
+    /* Client-side validation */
     const requiredFields = qsa("[required]", form);
     let valid = true;
     requiredFields.forEach((field) => {
@@ -210,8 +192,7 @@ if (form && formSuccess && submitBtn) {
       if (!ok) valid = false;
     });
     if (!valid) {
-      const firstInvalid = qs("[aria-invalid='true']", form);
-      firstInvalid?.focus();
+      qs("[aria-invalid='true']", form)?.focus();
       return;
     }
 
@@ -219,11 +200,26 @@ if (form && formSuccess && submitBtn) {
     submitBtn.classList.add("is-loading");
     submitBtn.disabled = true;
 
-    /* Simulate async submission (replace with real fetch) */
-    await new Promise((r) => setTimeout(r, 1400));
+    const data = Object.fromEntries(new FormData(form).entries());
 
-    form.setAttribute("hidden", "");
-    formSuccess.removeAttribute("hidden");
+    try {
+      const res = await fetch("/api/submit-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        form.setAttribute("hidden", "");
+        formSuccess.removeAttribute("hidden");
+      } else {
+        /* API error — fall back to native submit so data isn't lost */
+        form.submit();
+      }
+    } catch {
+      /* No network / API absent — fall back to native submit */
+      form.submit();
+    }
   });
 
   /* Live validation feedback */
@@ -249,7 +245,6 @@ if (yearEl) yearEl.textContent = new Date().getFullYear().toString();
 
 /* ------------------------------------------------------------------
    Smooth anchor scroll with offset compensation
-   (handles browsers that don't support scroll-padding-top)
 ------------------------------------------------------------------ */
 qsa('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", (e) => {
