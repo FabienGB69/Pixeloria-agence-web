@@ -11,7 +11,7 @@ test.describe("Pixeloria homepage smoke tests", () => {
     await expect(
       page.getByRole("heading", {
         level: 1,
-        name: /transforment/i,
+        name: /am.nent/i,
       }),
     ).toBeVisible();
   });

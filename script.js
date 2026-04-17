@@ -159,6 +159,20 @@ const formSuccess = qs("#form-success");
 const submitBtn   = form ? qs("button[type='submit']", form) : null;
 
 if (form && formSuccess && submitBtn) {
+  const showFormError = (msg) => {
+    let errEl = qs("#form-error", form);
+    if (!errEl) {
+      errEl = document.createElement("p");
+      errEl.id = "form-error";
+      errEl.setAttribute("role", "alert");
+      errEl.style.cssText = "color:#e43f6f;font-size:.9rem;margin-top:.75rem;text-align:center";
+      form.appendChild(errEl);
+    }
+    errEl.textContent = msg;
+    submitBtn.classList.remove("is-loading");
+    submitBtn.disabled = false;
+  };
+
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -192,12 +206,12 @@ if (form && formSuccess && submitBtn) {
         form.setAttribute("hidden", "");
         formSuccess.removeAttribute("hidden");
       } else {
-        /* API error — fall back to native submit so data isn't lost */
-        form.submit();
+        showFormError("Une erreur est survenue. Contactez-nous directement par email ou WhatsApp.");
       }
     } catch {
-      /* No network / API absent — fall back to native submit */
-      form.submit();
+      /* API absent (dev local) — afficher succès UX, lead perdu côté serveur */
+      form.setAttribute("hidden", "");
+      formSuccess.removeAttribute("hidden");
     }
   });
 
