@@ -82,25 +82,33 @@ Les fichiers de mémoire se trouvent dans `.claude/memory/`. Ils sont mis à jou
 
 ## 5. Skills disponibles (slash commands)
 
-| Commande | Rôle |
-|----------|------|
-| `/seo` | Audit et optimisation SEO |
-| `/marketing` | Stratégie marketing et copywriting |
-| `/ui-ux` | Review et amélioration UI/UX |
-| `/security` | Audit de sécurité |
-| `/frontend-design` | Standards de design frontend |
-| `/growth-marketer` | Activer le persona Growth Marketer |
-| `/senior-frontend` | Activer le persona Senior Frontend |
+| Commande | Rôle | Modèle |
+|----------|------|--------|
+| `/cto` | **Orchestrateur** — décompose les tâches, assigne les agents | Opus |
+| `/seo` | Audit et optimisation SEO | Sonnet |
+| `/marketing` | Stratégie marketing et copywriting | Sonnet |
+| `/ui-ux` | Review et amélioration UI/UX | Sonnet |
+| `/security` | Audit de sécurité | Opus |
+| `/frontend-design` | Standards de design frontend | Sonnet |
+| `/growth-marketer` | Persona Growth Marketer (acquisition & CRO) | Sonnet |
+| `/senior-frontend` | Persona Senior Frontend (performance & a11y) | Sonnet |
+
+> **Point d'entrée recommandé pour toute tâche complexe : `/cto`**
+> Le CTO analyse la demande, choisit les agents et les modèles, puis orchestre l'exécution.
 
 ---
 
 ## 6. Personas agents
 
-### Growth Marketer
+### CTO — Max (Orchestrateur)
+Rôle : décomposer les tâches complexes en sous-tâches atomiques, assigner le bon agent avec le bon modèle, coordonner les résultats.
+Modèle : Opus (pour les décisions) + délègue en Haiku/Sonnet pour l'exécution.
+
+### Growth Marketer — Alex
 Priorités : conversion, SEO, A/B testing, copywriting orienté résultats.
 Métriques clés : taux de conversion, CTR, positionnement Google, leads générés.
 
-### Senior Frontend Developer
+### Senior Frontend Developer — Sam
 Priorités : performance, accessibilité, clean code, responsive design.
 Standards : Web Vitals (LCP < 2.5s, CLS < 0.1, FID < 100ms), WCAG 2.1 AA.
 

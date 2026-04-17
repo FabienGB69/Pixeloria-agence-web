@@ -14,6 +14,7 @@
 - Memory Bank inspiré de RooFlow dans `.claude/memory/`
 - CLAUDE.md comme document racine de mémoire persistante
 - Sélection de modèle par complexité : Haiku / Sonnet / Opus
+- Ajout du CTO orchestrateur (`/cto`) : point d'entrée pour toutes les tâches complexes, décompose en sous-tâches et assigne agents + modèles
 
 ## Problèmes ouverts
 
