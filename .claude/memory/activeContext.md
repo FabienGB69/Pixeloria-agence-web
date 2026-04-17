@@ -5,8 +5,8 @@
 ## Session actuelle
 
 **Date :** 2026-04-17
-**Branche :** `claude/add-skills-personas-8Lww2`
-**Tâche :** Setup initial — création des skills, personas, mémoire, configuration Claude Code
+**Branche active :** `feat/sales-funnel-refonte`
+**Tâche en pause :** Création du tunnel de vente `refonte.html` (vanilla JS)
 
 ## Décisions prises
 
@@ -20,12 +20,15 @@
 
 - Aucun pour l'instant — session de setup
 
-## Prochaines étapes possibles
+## Prochaines étapes (reprendre ici)
 
-1. Démarrer la session de travail sur le site
-2. Audit SEO avec `/seo`
-3. Audit UX avec `/ui-ux`
-4. Amélioration marketing avec `/marketing`
+1. **URGENT — `refonte.html`** : créer le tunnel de vente vanilla JS complet (React → HTML/CSS/JS)
+   - 4 steps : Diagnostic → Objectifs/ROI → Formule → Contact + écran succès
+   - Données : PAIN_POINTS, OBJECTIVES, REFONTE_OFFERS déjà définies dans le plan
+   - Fixer le bug ROI du React original (set non passé en prop)
+2. Commit + push `feat/sales-funnel-refonte`
+3. Batch 2 parallèle : SEO audit · vercel.json · Formspree · images · 404.html
+4. Commit final + PR → validation utilisateur
 
 ## Contexte à retenir
 

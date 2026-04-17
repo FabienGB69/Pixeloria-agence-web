@@ -18,6 +18,16 @@
   box-sizing: border-box;
 }
 
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   margin: 0;
@@ -657,5 +667,124 @@ textarea {
     transform: scaleY(1);
     opacity: 1;
     pointer-events: auto;
+  }
+}
+
+/* ── Audit teaser ─────────────────────────────────────── */
+.audit-teaser {
+  padding: 4rem 1.5rem;
+}
+
+.audit-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 3rem 2.5rem;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.audit-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  padding: 1px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.audit-card h2 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin: 0.5rem 0 1rem;
+}
+
+.audit-card p:not(.eyebrow) {
+  color: var(--text-muted);
+  max-width: 480px;
+  margin: 0 auto 1.75rem;
+  line-height: 1.6;
+}
+
+/* ── Pricing cards ──────────────────────────────────────── */
+.pricing-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 700px;
+  margin: 2rem auto 0;
+}
+.pricing-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem 1.75rem;
+  position: relative;
+}
+.pricing-card--featured {
+  border-color: var(--primary);
+  box-shadow: 0 0 30px rgba(122,92,255,0.15);
+}
+.pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 14px;
+  border-radius: 99px;
+  white-space: nowrap;
+}
+.pricing-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 8px;
+}
+.pricing-price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 1.25rem;
+  font-family: 'Space Grotesk', sans-serif;
+}
+.pricing-price span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+.pricing-card ul li {
+  padding: 6px 0;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+.pricing-card ul li::before {
+  content: '✓ ';
+  color: #10b981;
+  font-weight: 700;
+}
+@media (max-width: 600px) {
+  .pricing-cards { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
 }

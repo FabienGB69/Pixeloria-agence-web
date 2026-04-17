@@ -96,25 +96,24 @@
             >
             <h1>Assemblez un design qui transforme vos visiteurs en clients.</h1>
             <p>
-              Pixeloria fusionne branding, UI/UX et développement front pour
-              créer des expériences web rapides, belles et mémorables.
+              Pixeloria crée des sites web qui génèrent des leads — design premium, SEO optimisé, livré en 5 jours. À partir de 490 € TTC ou 49 €/mois sans engagement.
             </p>
             <div class="hero-actions">
-              <a href="#contact" class="btn btn-primary">Lancer mon projet</a>
+              <a href="refonte.html" class="btn btn-primary">Lancer mon projet</a>
               <a href="#portfolio" class="btn btn-secondary">Voir le design</a>
             </div>
             <div class="hero-metrics">
               <article>
-                <strong>+120</strong>
-                <span>sites au design unique</span>
+                <strong>490 €</strong>
+                <span>site one-shot TTC</span>
               </article>
               <article>
-                <strong>98%</strong>
-                <span>clients satisfaits</span>
+                <strong>49 €</strong>
+                <span>/ mois sans engagement</span>
               </article>
               <article>
-                <strong>x3.2</strong>
-                <span>engagement moyen</span>
+                <strong>48h</strong>
+                <span>délai de réponse audit</span>
               </article>
             </div>
           </div>
@@ -137,6 +136,31 @@
           <div class="section-heading reveal">
             <span class="eyebrow">Services</span>
             <h2>Un studio complet pour assembler votre design</h2>
+          </div>
+          <div class="pricing-cards">
+            <div class="pricing-card">
+              <p class="pricing-label">One-Shot</p>
+              <p class="pricing-price">490 € <span>TTC</span></p>
+              <ul>
+                <li>Site livré en 5 jours</li>
+                <li>Design sur-mesure</li>
+                <li>SEO technique de base</li>
+                <li>Domaine conservé</li>
+              </ul>
+              <a href="refonte.html" class="btn btn-secondary">Démarrer →</a>
+            </div>
+            <div class="pricing-card pricing-card--featured">
+              <span class="pricing-badge">Recommandé</span>
+              <p class="pricing-label">Maintenance</p>
+              <p class="pricing-price">49 € <span>/ mois</span></p>
+              <ul>
+                <li>Même site inclus</li>
+                <li>Hébergement inclus</li>
+                <li>Mises à jour mensuelles</li>
+                <li>Support réactif</li>
+              </ul>
+              <a href="refonte.html" class="btn btn-primary">Démarrer →</a>
+            </div>
           </div>
           <div class="cards-grid">
             <article class="card reveal">
@@ -345,6 +369,20 @@
         </div>
       </section>
 
+      <section class="section audit-teaser reveal">
+        <div class="container">
+          <div class="audit-card">
+            <p class="eyebrow">🔍 Audit SEO offert</p>
+            <h2>Votre site perd des clients chaque jour.</h2>
+            <p>En 48h, recevez un rapport complet : performance, SEO, conversion, accessibilité — avec les 5 actions prioritaires à fort ROI.</p>
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem">
+              <a href="refonte.html" class="btn btn-primary">Obtenir mon audit gratuit →</a>
+            </div>
+            <p style="font-size:0.8rem;color:var(--text-muted);margin-top:1rem">Sans engagement · Réponse sous 48h · 100% personnalisé</p>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" class="section">
         <div class="container cta reveal">
           <div>
@@ -362,7 +400,7 @@
               >
             </div>
           </div>
-          <form class="contact-form" action="#" method="post">
+          <form class="contact-form" id="contact-form" action="/api/submit-lead" method="post">
             <label>
               Prénom
               <input type="text" name="first_name" placeholder="Votre prénom" required />
@@ -394,6 +432,10 @@
             </label>
             <button type="submit" class="btn btn-primary">Envoyer le brief</button>
           </form>
+          <div id="form-success" style="display:none;text-align:center;padding:2rem">
+            <p style="font-size:1.2rem;font-weight:600;color:#10b981">✓ Audit demandé !</p>
+            <p style="color:var(--text-muted)">Vous recevrez votre rapport complet sous 48h.</p>
+          </div>
         </div>
       </section>
     </main>
