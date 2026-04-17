@@ -11,7 +11,7 @@ test.describe("Pixeloria homepage smoke tests", () => {
     await expect(
       page.getByRole("heading", {
         level: 1,
-        name: /Assemblez un design/i,
+        name: /transforment/i,
       }),
     ).toBeVisible();
   });
@@ -58,7 +58,7 @@ test.describe("Pixeloria homepage smoke tests", () => {
   test("contact form has required inputs", async ({ page }) => {
     const form = page.locator("form.contact-form");
     await expect(form).toBeVisible();
-    for (const name of ["first_name", "name", "email", "message"]) {
+    for (const name of ["prenom", "nom", "email", "message"]) {
       await expect(form.locator(`[name="${name}"]`)).toHaveAttribute(
         "required",
         "",

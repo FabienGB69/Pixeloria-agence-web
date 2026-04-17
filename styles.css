@@ -46,6 +46,13 @@
 
   /* Layout */
   --header-h: 72px;
+
+  /* Compatibility aliases — used by pricing/audit components merged from main */
+  --primary:      var(--mint);
+  --accent:       var(--green);
+  --radius:       var(--r-lg);
+  --shadow:       var(--shadow-md);
+  --primary-strong: var(--cyan);
 }
 
 /* ============================================================

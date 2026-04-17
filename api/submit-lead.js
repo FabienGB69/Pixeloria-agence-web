@@ -7,8 +7,11 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   const {
-    prenom = '', nom = '', email = '', phone = '',
-    url = '', offre = '', message = '',
+    // Champs du formulaire contact principal (index.html)
+    prenom = '', nom = '', email = '', company = '',
+    offre = '', message = '',
+    // Champs étendus provenant du tunnel refonte (refonte.html)
+    phone = '', url = '',
     painPoints = [], objectives = [],
     visiteurs = '', leads: leadsCount = '',
   } = req.body || {};
@@ -20,19 +23,31 @@ export default async function handler(req, res) {
 
   if (!NOTION_TOKEN || !NOTION_DB_ID) {
     console.error('Missing NOTION_TOKEN or NOTION_DB_ID');
-    // Retourner succès pour ne pas bloquer UX — lead perdu côté Notion mais form validé
-    return res.status(200).json({ success: true, warning: 'Notion not configured' });
+    return res.status(503).json({ error: 'Service temporairement indisponible. Contactez-nous par email.' });
   }
 
-  const offreLabel = offre === 'oneshot' ? 'One-Shot 490€ TTC' : 'Maintenance 49€/mois';
+  const OFFRE_LABELS = {
+    oneshot:     'One-Shot 490€ TTC',
+    maintenance: 'Maintenance 49€/mois',
+    branding:    'Branding digital',
+    'ui-ux':     'UI / UX design',
+    integration: 'Intégration web',
+    full:        'Projet complet',
+  };
+  const offreLabel = OFFRE_LABELS[offre] || offre || 'Non précisé';
+
+  const fullName = [prenom, nom].filter(Boolean).join(' ') || company || 'Anonyme';
 
   const notionBody = {
     parent: { database_id: NOTION_DB_ID },
     properties: {
       'Nom': {
-        title: [{ text: { content: [prenom, nom].filter(Boolean).join(' ') || 'Anonyme' } }]
+        title: [{ text: { content: fullName } }]
       },
       'Email': { email: email },
+      'Entreprise': {
+        rich_text: [{ text: { content: String(company).slice(0, 200) } }]
+      },
       'Téléphone': { phone_number: phone || null },
       'Site web': { url: url || null },
       'Offre': { select: { name: offreLabel } },
