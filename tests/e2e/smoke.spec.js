@@ -17,7 +17,7 @@ test.describe("Pixeloria homepage smoke tests", () => {
   });
 
   test("primary navigation anchors resolve to sections", async ({ page }) => {
-    const sections = ["services", "marketing", "portfolio", "process", "contact"];
+    const sections = ["services", "marketing", "portfolio", "process", "testimonials", "contact"];
     for (const id of sections) {
       const link = page.locator(`.site-nav a[href="#${id}"]`);
       await expect(link).toBeVisible();
@@ -48,11 +48,7 @@ test.describe("Pixeloria homepage smoke tests", () => {
   test("footer year is populated by script.js", async ({ page }) => {
     const year = await page.locator("#year").textContent();
     const currentYear = new Date().getFullYear();
-    // Allow the current year or the year immediately after, to avoid
-    // end-of-year timezone flakiness when CI/browser differ by one day.
-    expect([String(currentYear), String(currentYear + 1)]).toContain(
-      (year || "").trim(),
-    );
+    expect((year || "").trim()).toBe(String(currentYear));
   });
 
   test("contact form has required inputs", async ({ page }) => {

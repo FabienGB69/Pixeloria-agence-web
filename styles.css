@@ -1944,6 +1944,21 @@ select {
   line-height: 1.6;
 }
 
+.audit-card-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.audit-card-note {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 1rem !important;
+  margin-bottom: 0 !important;
+}
+
 /* ── Pricing cards ──────────────────────────────────────── */
 .pricing-cards {
   display: grid;
