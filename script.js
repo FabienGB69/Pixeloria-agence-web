@@ -52,6 +52,7 @@ if (menuToggle && nav) {
     if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
       nav.classList.remove("is-open");
       menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Ouvrir le menu");
     }
   });
 }
@@ -98,28 +99,6 @@ if ("IntersectionObserver" in window && !prefersReducedMotion) {
   revealEls.forEach((el) => observer.observe(el));
 } else {
   revealEls.forEach((el) => el.classList.add("is-visible"));
-}
-
-/* ------------------------------------------------------------------
-   Animated counters (hero metrics)
------------------------------------------------------------------- */
-function animateCounter(el) {
-  const target  = parseFloat(el.dataset.target);
-  const decimal = parseInt(el.dataset.decimal || "0", 10);
-  const duration = 1600;
-  const start = performance.now();
-
-  const step = (now) => {
-    const progress = Math.min((now - start) / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 3);
-    const value = eased * target;
-    el.textContent = decimal
-      ? (value / 10).toFixed(1)
-      : Math.floor(value).toString();
-    if (progress < 1) requestAnimationFrame(step);
-    else el.textContent = decimal ? (target / 10).toFixed(1) : target.toString();
-  };
-  requestAnimationFrame(step);
 }
 
 /* ------------------------------------------------------------------
@@ -251,6 +230,7 @@ qsa('a[href^="#"]').forEach((anchor) => {
     const id     = anchor.getAttribute("href").slice(1);
     const target = id ? document.getElementById(id) : null;
     if (!target) return;
+    e.preventDefault();
 
     const headerOffset = parseInt(
       getComputedStyle(document.documentElement)
