@@ -321,6 +321,55 @@ p {
   font-weight: 700;
 }
 
+.audit-teaser {
+  padding-top: 1.6rem;
+}
+
+.audit-card {
+  position: relative;
+  isolation: isolate;
+  margin-inline: auto;
+  max-width: 760px;
+  text-align: center;
+  background: var(--surface);
+  border-radius: calc(var(--radius) + 2px);
+  padding: clamp(1.5rem, 3.5vw, 2.4rem);
+  box-shadow: var(--shadow);
+}
+
+.audit-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(53, 227, 143, 0.46),
+    rgba(44, 167, 255, 0.36),
+    rgba(38, 216, 190, 0.28)
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.audit-card h2 {
+  margin: 0.9rem 0 0;
+  font-size: clamp(1.5rem, 4.2vw, 2.1rem);
+}
+
+.audit-card p + p {
+  margin-top: 0.7rem;
+}
+
+.audit-card .btn {
+  margin-top: 1.2rem;
+}
+
 .cta {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -634,6 +683,10 @@ textarea {
 
   .menu-toggle {
     display: inline-flex;
+  }
+
+  .audit-card {
+    padding: 1.35rem 1.05rem;
   }
 
   .site-nav {
