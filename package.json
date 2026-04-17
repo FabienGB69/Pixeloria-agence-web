@@ -9,7 +9,7 @@
     "lint:html": "htmlhint \"**/*.html\"",
     "lint:css": "stylelint \"**/*.css\"",
     "lint:js": "eslint .",
-    "linkcheck": "linkinator ./index.html --silent --skip \"^https://(fonts\\.(googleapis|gstatic)\\.com|wa\\.me|www\\.(instagram|linkedin|facebook)\\.com|pixeloria\\.fr)\" --skip \"^/_vercel/\"",
+    "linkcheck": "linkinator ./index.html --silent --skip \"^https://(fonts\\.(googleapis|gstatic)\\.com|wa\\.me|www\\.(instagram|linkedin|facebook)\\.com|pixeloria\\.fr)\" --skip \"_vercel/insights\"",
     "test:e2e": "playwright test",
     "test:e2e:install": "playwright install --with-deps chromium",
     "ci": "npm run lint && npm run linkcheck"

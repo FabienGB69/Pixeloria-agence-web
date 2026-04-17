@@ -18,5 +18,14 @@
   "rules": {
     "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
     "no-console": "off"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["playwright.config.js", "*.config.js"],
+      "env": {
+        "node": true,
+        "browser": false
+      }
+    }
+  ]
 }
