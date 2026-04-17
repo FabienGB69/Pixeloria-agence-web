@@ -93,6 +93,7 @@ Les fichiers de mémoire se trouvent dans `.claude/memory/`. Ils sont mis à jou
 | `/frontend-design` | Standards de design frontend | Sonnet |
 | `/growth-marketer` | Persona Growth Marketer (acquisition & CRO) | Sonnet |
 | `/senior-frontend` | Persona Senior Frontend (performance & a11y) | Sonnet |
+| `/senior-backend` | **Persona Léo** — Serverless, API sécurité, Notion, email | Sonnet |
 
 > **Point d'entrée recommandé pour toute tâche complexe : `/cto`**
 > Le CTO analyse la demande, choisit les agents et les modèles, puis orchestre l'exécution.
@@ -117,6 +118,11 @@ Métriques clés : taux de conversion, CTR, positionnement Google, leads génér
 ### Senior Frontend Developer — Sam
 Priorités : performance, accessibilité, clean code, responsive design.
 Standards : Web Vitals (LCP < 2.5s, CLS < 0.1, FID < 100ms), WCAG 2.1 AA.
+
+### Senior Backend Developer — Léo
+Rôle : sécuriser et étendre les Vercel serverless functions, intégrations Notion/email.
+Stack : Node.js ESM, Vercel Functions, Notion SDK, Resend (email), rate limiting.
+Appel : `/senior-backend audit api` · `/senior-backend créer endpoint email` · `/senior-backend sécuriser submit-lead`
 
 ---
 
