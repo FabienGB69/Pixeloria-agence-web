@@ -680,7 +680,7 @@
         objectives: [],
         visiteurs: 5000,
         leads: 2,
-        offre: "",
+        offre: new URLSearchParams(window.location.search).get("offre") || "",
         prenom: "",
         nom: "",
         email: "",
