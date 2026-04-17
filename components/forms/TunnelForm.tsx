@@ -3,6 +3,7 @@
 import { useState, useCallback } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
+import { getStoredUtm } from '@/lib/utm';
 
 /* ── Data catalogues ───────────────────────────────────────── */
 const PAIN_CATALOG = [
@@ -154,6 +155,7 @@ export default function TunnelForm() {
           prenom: s.prenom, nom: s.nom, email: s.email, phone: s.phone, message: s.message,
           url: s.url, offre: s.offre, painPoints: s.painPoints, objectives: s.objectives,
           visiteurs: s.visiteurs, leads: s.leads,
+          ...getStoredUtm(),
         }),
       });
       if (res.ok) { update({ done: true, submitting: false }); }

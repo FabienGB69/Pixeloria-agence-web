@@ -9,6 +9,7 @@ import Testimonials from '@/components/sections/Testimonials';
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
+import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Pixeloria | Agence web créative – Design, Marketing & SEO',
@@ -38,6 +39,7 @@ export default function HomePage() {
   return (
     <>
       <ClientEffects />
+      <JsonLd />
       <Header />
       <main id="home">
         <Hero />

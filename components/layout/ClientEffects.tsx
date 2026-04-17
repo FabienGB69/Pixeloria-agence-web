@@ -1,11 +1,17 @@
 'use client';
 
+import { useEffect } from 'react';
 import { useReveal } from '@/hooks/useReveal';
 import { useCursor } from '@/hooks/useCursor';
+import { captureUtm } from '@/lib/utm';
 
 export default function ClientEffects() {
   useReveal();
   useCursor();
+
+  useEffect(() => {
+    captureUtm();
+  }, []);
 
   return (
     <>

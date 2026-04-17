@@ -4,6 +4,7 @@ import Header from '@/components/layout/Header';
 import TunnelForm from '@/components/forms/TunnelForm';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
+import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Audit & Refonte de Site — Pixeloria',
@@ -15,6 +16,7 @@ export default function RefontePage() {
   return (
     <>
       <ClientEffects />
+      <JsonLd type="refonte" />
       <Header />
       <main className="shell" style={{ marginTop: '5rem' }}>
         <div className="topline">
