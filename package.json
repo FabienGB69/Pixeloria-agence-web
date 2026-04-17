@@ -5,6 +5,7 @@
   "description": "Static site for Pixeloria – web agency.",
   "scripts": {
     "start": "npx --yes http-server . -p 8080 -c-1 -s",
+    "dev": "vercel dev",
     "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
     "lint:html": "htmlhint \"**/*.html\"",
     "lint:css": "stylelint \"**/*.css\"",
