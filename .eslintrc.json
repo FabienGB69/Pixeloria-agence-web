@@ -21,6 +21,18 @@
   },
   "overrides": [
     {
+      "files": ["api/**/*.js"],
+      "env": {
+        "node": true,
+        "browser": false,
+        "es2022": true
+      },
+      "parserOptions": {
+        "ecmaVersion": 2022,
+        "sourceType": "module"
+      }
+    },
+    {
       "files": ["playwright.config.js", "*.config.js"],
       "env": {
         "node": true,
