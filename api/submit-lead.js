@@ -1,3 +1,4 @@
+import { Client } from '@notionhq/client';
 import { Resend } from 'resend';
 
 // In-memory rate limit: max 5 requests per IP per 10 minutes.
@@ -174,6 +175,8 @@ export default async function handler(req, res) {
     return res.status(503).json({ error: 'Service temporairement indisponible. Contactez-nous par email.' });
   }
 
+  const notion = new Client({ auth: NOTION_TOKEN });
+
   const offreLabel = OFFRE_LABELS[offre] || safe(offre, 100) || 'Non précisé';
   const fullName   = [safe(prenom, 100), safe(nom, 100)].filter(Boolean).join(' ') || safe(company, 100) || 'Anonyme';
   const source     = offre ? 'Tunnel refonte' : 'Contact direct';
@@ -182,44 +185,28 @@ export default async function handler(req, res) {
     ts: new Date().toISOString(), ip, source, offre: offreLabel, email: cleanEmail,
   }));
 
-  const notionBody = {
-    parent: { database_id: NOTION_DB_ID },
-    properties: {
-      'Nom':            { title:        [{ text: { content: fullName } }] },
-      'Email':          { email:        cleanEmail },
-      'Entreprise':     { rich_text:    [{ text: { content: safe(company) } }] },
-      'Téléphone':      { phone_number: safe(phone, 30) || null },
-      'Site web':       { url:          safe(url, 500) || null },
-      'Offre':          { select:       { name: offreLabel } },
-      'Statut':         { select:       { name: 'Nouveau' } },
-      'Source':         { select:       { name: source } },
-      'Visiteurs/mois': { number:       parseInt(visiteurs) || null },
-      'Leads/mois':     { number:       parseInt(leadsCount) || null },
-      'Problèmes':      { multi_select: (Array.isArray(painPoints) ? painPoints : []).map(p => ({ name: safe(p, 50) })) },
-      'Objectifs':      { multi_select: (Array.isArray(objectives) ? objectives : []).map(o => ({ name: safe(o, 100) })) },
-      'Message':        { rich_text:    [{ text: { content: safe(message, 2000) } }] },
-      'Date':           { date:         { start: new Date().toISOString().split('T')[0] } },
-    },
-  };
-
   try {
-    const notionRes = await fetch('https://api.notion.com/v1/pages', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${NOTION_TOKEN}`,
-        'Content-Type': 'application/json',
-        'Notion-Version': '2022-06-28',
+    await notion.pages.create({
+      parent: { database_id: NOTION_DB_ID },
+      properties: {
+        'Nom':            { title:        [{ text: { content: fullName } }] },
+        'Email':          { email:        cleanEmail },
+        'Entreprise':     { rich_text:    [{ text: { content: safe(company) } }] },
+        'Téléphone':      { phone_number: safe(phone, 30) || null },
+        'Site web':       { url:          safe(url, 500) || null },
+        'Offre':          { select:       { name: offreLabel } },
+        'Statut':         { select:       { name: 'Nouveau' } },
+        'Source':         { select:       { name: source } },
+        'Visiteurs/mois': { number:       parseInt(visiteurs) || null },
+        'Leads/mois':     { number:       parseInt(leadsCount) || null },
+        'Problèmes':      { multi_select: (Array.isArray(painPoints) ? painPoints : []).map(p => ({ name: safe(p, 50) })) },
+        'Objectifs':      { multi_select: (Array.isArray(objectives) ? objectives : []).map(o => ({ name: safe(o, 100) })) },
+        'Message':        { rich_text:    [{ text: { content: safe(message, 2000) } }] },
+        'Date':           { date:         { start: new Date().toISOString().split('T')[0] } },
       },
-      body: JSON.stringify(notionBody),
     });
-
-    if (!notionRes.ok) {
-      const errText = await notionRes.text();
-      console.error('[submit-lead] Notion API error:', notionRes.status, errText);
-      return res.status(502).json({ error: 'Impossible de sauvegarder le lead. Réessayez ou contactez-nous.' });
-    }
   } catch (err) {
-    console.error('[submit-lead] Notion fetch error:', err?.message);
+    console.error('[submit-lead] Notion SDK error:', err?.code, err?.message);
     return res.status(502).json({ error: 'Impossible de sauvegarder le lead. Réessayez ou contactez-nous.' });
   }
 
