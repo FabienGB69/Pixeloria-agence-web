@@ -89,6 +89,7 @@ Les fichiers de mémoire se trouvent dans `.claude/memory/`. Ils sont mis à jou
 | `/marketing` | Stratégie marketing et copywriting | Sonnet |
 | `/ui-ux` | Review et amélioration UI/UX | Sonnet |
 | `/security` | Audit de sécurité | Opus |
+| `/nyx` | **Agent Nyx** — Sécurité + correction de bugs | Opus |
 | `/frontend-design` | Standards de design frontend | Sonnet |
 | `/growth-marketer` | Persona Growth Marketer (acquisition & CRO) | Sonnet |
 | `/senior-frontend` | Persona Senior Frontend (performance & a11y) | Sonnet |
@@ -103,6 +104,11 @@ Les fichiers de mémoire se trouvent dans `.claude/memory/`. Ils sont mis à jou
 ### CTO — Max (Orchestrateur)
 Rôle : décomposer les tâches complexes en sous-tâches atomiques, assigner le bon agent avec le bon modèle, coordonner les résultats.
 Modèle : Opus (pour les décisions) + délègue en Haiku/Sonnet pour l'exécution.
+
+### Sécurité & Bugs — Nyx
+Rôle : auditer le code (HTML/CSS/JS/vercel.json) pour détecter vulnérabilités et bugs, puis corriger avec un rapport priorisé (P0 → P3).
+Modèle : Opus pour les décisions de sécurité, Sonnet pour les corrections.
+Appel : `/nyx audit complet` · `/nyx fix bugs CSS` · `/nyx rapport sécurité`
 
 ### Growth Marketer — Alex
 Priorités : conversion, SEO, A/B testing, copywriting orienté résultats.
