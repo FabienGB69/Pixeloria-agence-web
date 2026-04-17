@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixeloria | Audit de refonte</title>
+    <meta
+      name="description"
+      content="Tunnel de vente Pixeloria : audit de refonte en 4 étapes pour identifier vos freins de conversion."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f6fffd;
+        --surface: #ffffff;
+        --surface-soft: #ecfcf7;
+        --text: #000c48;
+        --text-muted: #335170;
+        --border: rgba(17, 91, 132, 0.2);
+        --primary: #26d8be;
+        --primary-strong: #2ca7ff;
+        --accent: #35e38f;
+        --danger: #e43f6f;
+        --radius-lg: 22px;
+        --radius-md: 14px;
+        --shadow: 0 20px 52px rgba(3, 20, 73, 0.14);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        font-family: "Inter", sans-serif;
+        color: var(--text);
+        line-height: 1.45;
+        background:
+          radial-gradient(circle at 10% 5%, rgba(53, 227, 143, 0.16), transparent 32%),
+          radial-gradient(circle at 95% 95%, rgba(44, 167, 255, 0.14), transparent 32%),
+          var(--bg);
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Syne", sans-serif;
+        margin: 0;
+        line-height: 1.15;
+      }
+
+      p {
+        margin: 0;
+        color: var(--text-muted);
+      }
+
+      .shell {
+        width: min(980px, calc(100% - 2rem));
+        margin: 1.25rem auto 3rem;
+      }
+
+      .topline {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0.8rem;
+        margin-bottom: 1rem;
+      }
+
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.45rem 0.75rem;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        color: #0f5f84;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 600;
+        background: #ffffffbf;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        color: #0f5f84;
+        font-size: 0.86rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .brand-dot {
+        width: 0.6rem;
+        height: 0.6rem;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--accent), var(--primary-strong));
+      }
+
+      .wizard {
+        background: linear-gradient(160deg, #ffffff, #f2fdff);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .wizard-head {
+        padding: 1.35rem 1.35rem 1rem;
+        border-bottom: 1px solid rgba(17, 91, 132, 0.14);
+        background: linear-gradient(180deg, rgba(38, 216, 190, 0.09), rgba(44, 167, 255, 0.04));
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        margin-bottom: 0.55rem;
+        border-radius: 999px;
+        border: 1px solid rgba(38, 216, 190, 0.45);
+        padding: 0.24rem 0.65rem;
+        color: #0b718e;
+        background: rgba(38, 216, 190, 0.12);
+        font-size: 0.78rem;
+        font-weight: 700;
+      }
+
+      .wizard-title {
+        font-size: clamp(1.4rem, 2.4vw, 1.95rem);
+        margin-bottom: 0.45rem;
+      }
+
+      .progress {
+        list-style: none;
+        margin: 1rem 0 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.5rem;
+      }
+
+      .progress li {
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 0.5rem;
+        text-align: center;
+        font-size: 0.78rem;
+        color: #51718f;
+        background: #ffffff9c;
+      }
+
+      .progress li.is-active {
+        color: var(--text);
+        border-color: rgba(44, 167, 255, 0.45);
+        background: rgba(44, 167, 255, 0.12);
+        font-weight: 700;
+      }
+
+      .progress li.is-done {
+        color: #0d6f89;
+        border-color: rgba(53, 227, 143, 0.45);
+        background: rgba(53, 227, 143, 0.14);
+        font-weight: 700;
+      }
+
+      .wizard-body {
+        padding: 1.35rem;
+        display: grid;
+        gap: 1rem;
+      }
+
+      .step-lead h2 {
+        font-size: clamp(1.2rem, 1.9vw, 1.6rem);
+        margin-bottom: 0.35rem;
+      }
+
+      .field-grid {
+        display: grid;
+        gap: 0.9rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      label {
+        display: grid;
+        gap: 0.4rem;
+        color: #0e3f61;
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        border-radius: 11px;
+        border: 1px solid var(--border);
+        padding: 0.72rem 0.78rem;
+        font: inherit;
+        color: var(--text);
+        background: #ffffff;
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: 2px solid rgba(44, 167, 255, 0.35);
+        border-color: rgba(44, 167, 255, 0.45);
+      }
+
+      .block-label {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 0.6rem;
+        margin-top: 0.15rem;
+      }
+
+      .counter {
+        font-size: 0.8rem;
+        color: #0b6f87;
+        font-weight: 700;
+      }
+
+      .pain-grid,
+      .chip-grid,
+      .offer-grid {
+        display: grid;
+        gap: 0.75rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .pain-card,
+      .objective-chip {
+        width: 100%;
+        text-align: left;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        background: var(--surface);
+        color: var(--text);
+        font: inherit;
+        cursor: pointer;
+        transition: transform 0.15s ease, border-color 0.15s ease;
+      }
+
+      .pain-card {
+        padding: 0.85rem;
+        display: grid;
+        gap: 0.42rem;
+      }
+
+      .pain-card:hover,
+      .objective-chip:hover,
+      .offer-card:hover {
+        transform: translateY(-1px);
+      }
+
+      .pain-title {
+        font-weight: 700;
+      }
+
+      .pain-detail {
+        color: var(--text-muted);
+        font-size: 0.85rem;
+      }
+
+      .pain-toggle {
+        justify-self: start;
+        margin-top: 0.2rem;
+        border-radius: 999px;
+        border: 1px solid rgba(44, 167, 255, 0.25);
+        padding: 0.2rem 0.55rem;
+        color: #0f6687;
+        font-size: 0.77rem;
+        font-weight: 700;
+      }
+
+      .pain-card.is-active,
+      .objective-chip.is-active {
+        border-color: rgba(53, 227, 143, 0.6);
+        background: linear-gradient(140deg, rgba(53, 227, 143, 0.16), rgba(44, 167, 255, 0.11));
+      }
+
+      .pain-card.is-active .pain-toggle,
+      .objective-chip.is-active .chip-state {
+        background: rgba(53, 227, 143, 0.2);
+        border-color: rgba(53, 227, 143, 0.4);
+        color: #0b6f70;
+      }
+
+      .objective-chip {
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+        padding: 0.8rem;
+      }
+
+      .chip-label {
+        font-weight: 700;
+      }
+
+      .chip-state {
+        align-self: flex-start;
+        border: 1px solid rgba(44, 167, 255, 0.2);
+        border-radius: 999px;
+        padding: 0.17rem 0.55rem;
+        color: #0f6687;
+        font-size: 0.76rem;
+        font-weight: 700;
+      }
+
+      .roi-panel,
+      .comparison-panel,
+      .summary-panel {
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        background: #ffffff;
+        padding: 0.95rem;
+      }
+
+      .roi-inputs {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+      }
+
+      #roi-result {
+        margin-top: 0.75rem;
+      }
+
+      .roi-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.6rem;
+      }
+
+      .roi-item {
+        border: 1px solid rgba(17, 91, 132, 0.14);
+        border-radius: 12px;
+        padding: 0.7rem;
+        background: #fbffff;
+      }
+
+      .roi-item strong {
+        display: block;
+        font-size: 1.08rem;
+        color: var(--text);
+      }
+
+      .roi-item span {
+        color: var(--text-muted);
+        font-size: 0.8rem;
+      }
+
+      .offer-card {
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        background: #ffffff;
+        padding: 0.9rem;
+        display: grid;
+        gap: 0.55rem;
+      }
+
+      .offer-card.is-selected {
+        border-color: rgba(53, 227, 143, 0.6);
+        background: linear-gradient(140deg, rgba(53, 227, 143, 0.15), rgba(44, 167, 255, 0.1));
+      }
+
+      .offer-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .offer-status {
+        border-radius: 999px;
+        border: 1px solid rgba(44, 167, 255, 0.25);
+        padding: 0.18rem 0.56rem;
+        font-size: 0.74rem;
+        color: #0f6687;
+        font-weight: 700;
+      }
+
+      .offer-price {
+        color: #0f6687;
+        font-size: 0.9rem;
+        font-weight: 700;
+      }
+
+      .offer-card ul {
+        margin: 0.1rem 0 0;
+        padding-left: 1.1rem;
+        color: var(--text-muted);
+        font-size: 0.88rem;
+      }
+
+      .offer-picked {
+        margin-top: 0.5rem;
+        color: #0f6687;
+        font-size: 0.88rem;
+        font-weight: 700;
+      }
+
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.86rem;
+      }
+
+      .comparison-table th,
+      .comparison-table td {
+        border-bottom: 1px solid rgba(17, 91, 132, 0.14);
+        text-align: left;
+        padding: 0.55rem 0.35rem;
+      }
+
+      .comparison-table th {
+        color: #0e3f61;
+      }
+
+      .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+      }
+
+      .summary-item {
+        border: 1px solid rgba(17, 91, 132, 0.14);
+        border-radius: 11px;
+        background: #fcfffe;
+        padding: 0.68rem;
+      }
+
+      .summary-item strong {
+        display: block;
+        margin-bottom: 0.22rem;
+        font-size: 0.85rem;
+        color: #0e3f61;
+      }
+
+      .summary-item span {
+        color: var(--text-muted);
+        font-size: 0.86rem;
+      }
+
+      .step-warning {
+        display: none;
+        margin: 0;
+        border-radius: 12px;
+        border: 1px solid rgba(228, 63, 111, 0.38);
+        background: rgba(228, 63, 111, 0.1);
+        color: #a11d46;
+        padding: 0.68rem 0.78rem;
+        font-weight: 600;
+        font-size: 0.87rem;
+      }
+
+      .step-warning.is-visible {
+        display: block;
+      }
+
+      .step-nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.7rem;
+        margin-top: 0.2rem;
+      }
+
+      .btn {
+        border: 0;
+        border-radius: 11px;
+        padding: 0.72rem 0.95rem;
+        font: inherit;
+        font-weight: 700;
+        cursor: pointer;
+        transition: transform 0.15s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+
+      .btn-primary {
+        color: #fff;
+        background: linear-gradient(140deg, var(--accent), var(--primary-strong));
+      }
+
+      .btn-secondary {
+        color: var(--text);
+        background: #ffffff;
+        border: 1px solid var(--border);
+      }
+
+      .success-card {
+        padding: 1.45rem;
+        display: grid;
+        gap: 1rem;
+      }
+
+      .success-card h2 {
+        font-size: clamp(1.45rem, 2.6vw, 2rem);
+      }
+
+      .deliverables {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 0.55rem;
+      }
+
+      .deliverables li {
+        border: 1px solid rgba(17, 91, 132, 0.16);
+        background: #ffffff;
+        border-radius: 11px;
+        padding: 0.65rem 0.75rem;
+      }
+
+      @media (max-width: 720px) {
+        .progress {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .field-grid,
+        .summary-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .roi-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .shell {
+          width: calc(100% - 1rem);
+          margin-top: 0.75rem;
+        }
+
+        .wizard-head,
+        .wizard-body,
+        .success-card {
+          padding: 0.95rem;
+        }
+
+        .pain-grid,
+        .chip-grid,
+        .offer-grid,
+        .field-grid,
+        .summary-grid,
+        .roi-inputs {
+          grid-template-columns: 1fr;
+        }
+
+        .step-nav {
+          flex-direction: column-reverse;
+        }
+
+        .btn {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <div class="topline">
+        <a class="back-link" href="index.html">← Retour au site Pixeloria</a>
+        <div class="brand"><span class="brand-dot"></span> Pixeloria</div>
+      </div>
+      <div id="app"></div>
+    </main>
+
+    <script>
+      const painCatalog = [
+        {
+          id: "slow-speed",
+          title: "Site lent",
+          detail: "Le temps de chargement freine vos conversions."
+        },
+        {
+          id: "weak-message",
+          title: "Message flou",
+          detail: "Votre proposition de valeur n'est pas comprise."
+        },
+        {
+          id: "low-mobile",
+          title: "Expérience mobile faible",
+          detail: "Le parcours mobile n'est pas assez fluide."
+        },
+        {
+          id: "seo-drop",
+          title: "Trafic SEO en baisse",
+          detail: "Vos pages peinent à se positionner durablement."
+        },
+        {
+          id: "poor-cta",
+          title: "CTA peu visibles",
+          detail: "Les actions clés manquent d'impact."
+        },
+        {
+          id: "trust-gap",
+          title: "Manque de preuves",
+          detail: "Témoignages et éléments de réassurance insuffisants."
+        },
+        {
+          id: "content-chaos",
+          title: "Contenu désorganisé",
+          detail: "L'information est difficile à parcourir."
+        },
+        {
+          id: "no-funnel",
+          title: "Tunnel incomplet",
+          detail: "Votre capture de leads n'est pas optimisée."
+        }
+      ];
+
+      const objectiveCatalog = [
+        { id: "more-leads", label: "Générer plus de leads" },
+        { id: "higher-cr", label: "Améliorer le taux de conversion" },
+        { id: "seo-growth", label: "Booster le trafic SEO" },
+        { id: "premium-image", label: "Monter en gamme" },
+        { id: "better-retention", label: "Augmenter la rétention" },
+        { id: "faster-sales", label: "Raccourcir le cycle de vente" },
+        { id: "higher-aov", label: "Augmenter le panier moyen" },
+        { id: "launch-offer", label: "Lancer une nouvelle offre" }
+      ];
+
+      const offerCatalog = {
+        audit-boost: {
+          title: "Audit Boost",
+          price: "1 900€ HT",
+          summary: "Diagnostic + quick wins activables sous 30 jours.",
+          features: [
+            "Audit UX + conversion complet",
+            "Plan d'optimisation SEO technique",
+            "Roadmap priorisée et chiffrée"
+          ],
+          rateBonus: 0.8
+        },
+        growth-engine: {
+          title: "Growth Engine",
+          price: "3 900€ HT",
+          summary: "Accompagnement stratégique pour accélérer sur 12 mois.",
+          features: [
+            "Tout le pack Audit Boost",
+            "Wireframes de la refonte de pages clés",
+            "Plan éditorial et conversion 90 jours"
+          ],
+          rateBonus: 2.2
+        }
+      };
+
+      const painById = Object.fromEntries(painCatalog.map((pain) => [pain.id, pain]));
+      const objectiveById = Object.fromEntries(objectiveCatalog.map((obj) => [obj.id, obj]));
+
+      const state = {
+        url: "",
+        techno: "",
+        anciennete: "",
+        painPoints: [],
+        objectives: [],
+        visiteurs: 5000,
+        leads: 2,
+        offre: "",
+        prenom: "",
+        nom: "",
+        email: "",
+        phone: "",
+        message: "",
+        step: 1,
+        done: false
+      };
+
+      const app = document.getElementById("app");
+
+      function escapeHtml(value) {
+        const map = {
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#039;"
+        };
+        return String(value ?? "").replace(/[&<>"']/g, (char) => map[char]);
+      }
+
+      function formatInt(value) {
+        return new Intl.NumberFormat("fr-FR").format(Math.round(value || 0));
+      }
+
+      function formatCurrency(value) {
+        return new Intl.NumberFormat("fr-FR", {
+          style: "currency",
+          currency: "EUR",
+          maximumFractionDigits: 0
+        }).format(Math.max(0, value || 0));
+      }
+
+      function getGrowthMetrics() {
+        const visitors = Math.max(Number(state.visiteurs) || 0, 0);
+        const currentRate = Math.max(Number(state.leads) || 0, 0);
+        const strategyLift = 0.9 + state.objectives.length * 0.45 + state.painPoints.length * 0.15;
+        const projectedRate = Math.min(currentRate + strategyLift, 35);
+        const currentLeadsMonthly = visitors * (currentRate / 100);
+        const projectedLeadsMonthly = visitors * (projectedRate / 100);
+        return {
+          visitors,
+          currentRate,
+          projectedRate,
+          currentLeadsMonthly,
+          projectedLeadsMonthly
+        };
+      }
+
+      function getOfferProjection(offerId) {
+        const metrics = getGrowthMetrics();
+        const offer = offerCatalog[offerId];
+        const finalRate = Math.min(metrics.projectedRate + (offer ? offer.rateBonus : 0), 40);
+        const annualLeads = metrics.visitors * (finalRate / 100) * 12;
+        return {
+          finalRate,
+          annualLeads,
+          annualRevenue: annualLeads * 280
+        };
+      }
+
+      function renderProgress() {
+        const labels = ["Contexte", "Objectifs", "Offre", "Coordonnées"];
+        return `
+          <ol class="progress">
+            ${labels
+              .map((label, index) => {
+                const num = index + 1;
+                const statusClass =
+                  num < state.step
+                    ? "is-done"
+                    : num === state.step
+                      ? "is-active"
+                      : "";
+                return `<li class="${statusClass}">Étape ${num}<br />${label}</li>`;
+              })
+              .join("")}
+          </ol>
+        `;
+      }
+
+      function renderStepIntro(title, subtitle) {
+        return `
+          <div class="step-lead">
+            <h2>${title}</h2>
+            <p>${subtitle}</p>
+          </div>
+        `;
+      }
+
+      function renderStepOne() {
+        const pains = painCatalog
+          .map((pain) => {
+            const active = state.painPoints.includes(pain.id);
+            return `
+              <button
+                type="button"
+                class="pain-card ${active ? "is-active" : ""}"
+                data-action="toggle-pain"
+                data-id="${pain.id}"
+                data-pain-id="${pain.id}"
+                aria-pressed="${active ? "true" : "false"}"
+              >
+                <span class="pain-title">${pain.title}</span>
+                <span class="pain-detail">${pain.detail}</span>
+                <span class="pain-toggle">${active ? "Sélectionnée" : "Sélectionner"}</span>
+              </button>
+            `;
+          })
+          .join("");
+
+        return `
+          ${renderStepIntro(
+            "Analyse de votre situation actuelle",
+            "Partagez votre contexte digital pour cadrer l'audit Pixeloria."
+          )}
+          <div class="field-grid">
+            <label>
+              URL du site
+              <input
+                type="text"
+                data-bind="url"
+                value="${escapeHtml(state.url)}"
+                placeholder="ex: https://votresite.fr"
+              />
+            </label>
+            <label>
+              Technologie principale
+              <select data-bind="techno">
+                <option value="">Sélectionner</option>
+                <option value="WordPress" ${state.techno === "WordPress" ? "selected" : ""}>WordPress</option>
+                <option value="Webflow" ${state.techno === "Webflow" ? "selected" : ""}>Webflow</option>
+                <option value="Shopify" ${state.techno === "Shopify" ? "selected" : ""}>Shopify</option>
+                <option value="Custom" ${state.techno === "Custom" ? "selected" : ""}>Développement custom</option>
+                <option value="Autre" ${state.techno === "Autre" ? "selected" : ""}>Autre</option>
+              </select>
+            </label>
+            <label>
+              Ancienneté du site
+              <select data-bind="anciennete">
+                <option value="">Sélectionner</option>
+                <option value="Moins de 1 an" ${state.anciennete === "Moins de 1 an" ? "selected" : ""}>Moins de 1 an</option>
+                <option value="1 à 3 ans" ${state.anciennete === "1 à 3 ans" ? "selected" : ""}>1 à 3 ans</option>
+                <option value="3 à 5 ans" ${state.anciennete === "3 à 5 ans" ? "selected" : ""}>3 à 5 ans</option>
+                <option value="Plus de 5 ans" ${state.anciennete === "Plus de 5 ans" ? "selected" : ""}>Plus de 5 ans</option>
+              </select>
+            </label>
+          </div>
+          <div class="block-label">
+            <h3>Vos douleurs actuelles</h3>
+            <span class="counter"><span id="pain-count">${state.painPoints.length}</span>/8 sélectionnées</span>
+          </div>
+          <div class="pain-grid">${pains}</div>
+          <p class="step-warning" id="step-warning" aria-live="polite"></p>
+          <div class="step-nav">
+            <span></span>
+            <button class="btn btn-primary" type="button" data-action="next-step">Continuer</button>
+          </div>
+        `;
+      }
+
+      function renderStepTwo() {
+        const chips = objectiveCatalog
+          .map((objective) => {
+            const active = state.objectives.includes(objective.id);
+            return `
+              <button
+                type="button"
+                class="objective-chip ${active ? "is-active" : ""}"
+                data-action="toggle-objective"
+                data-value="${objective.id}"
+                data-objective-value="${objective.id}"
+                aria-pressed="${active ? "true" : "false"}"
+              >
+                <span class="chip-label">${objective.label}</span>
+                <span class="chip-state">${active ? "Ajouté" : "Choisir"}</span>
+              </button>
+            `;
+          })
+          .join("");
+
+        return `
+          ${renderStepIntro(
+            "Objectifs & projection de ROI",
+            "Définissez vos priorités et estimez le potentiel de croissance mensuel."
+          )}
+          <div class="block-label">
+            <h3>Objectifs stratégiques</h3>
+            <span class="counter"><span id="objective-count">${state.objectives.length}</span> sélectionnés</span>
+          </div>
+          <div class="chip-grid">${chips}</div>
+          <div class="roi-panel">
+            <h3>Calculateur ROI (live)</h3>
+            <p>Modifiez les valeurs : la projection est mise à jour en temps réel.</p>
+            <div class="roi-inputs">
+              <label>
+                Visiteurs / mois
+                <input
+                  type="number"
+                  min="0"
+                  step="50"
+                  data-bind="visiteurs"
+                  value="${escapeHtml(state.visiteurs)}"
+                />
+              </label>
+              <label>
+                Taux de conversion actuel (%)
+                <input
+                  type="number"
+                  min="0"
+                  max="100"
+                  step="0.1"
+                  data-bind="leads"
+                  value="${escapeHtml(state.leads)}"
+                />
+              </label>
+            </div>
+            <div id="roi-result" aria-live="polite"></div>
+          </div>
+          <p class="step-warning" id="step-warning" aria-live="polite"></p>
+          <div class="step-nav">
+            <button class="btn btn-secondary" type="button" data-action="prev-step">Retour</button>
+            <button class="btn btn-primary" type="button" data-action="next-step">Continuer</button>
+          </div>
+        `;
+      }
+
+      function renderStepThree() {
+        const currentAnnualLeads = getGrowthMetrics().currentLeadsMonthly * 12;
+        const auditProjection = getOfferProjection("audit-boost");
+        const growthProjection = getOfferProjection("growth-engine");
+
+        return `
+          ${renderStepIntro(
+            "Choisissez votre offre Pixeloria",
+            "Comparez les scénarios sur 12 mois et sélectionnez l'option adaptée."
+          )}
+          <div id="offers-zone" class="offer-grid">
+            ${Object.entries(offerCatalog)
+              .map(([offerId, offer]) => {
+                const selected = state.offre === offerId;
+                return `
+                  <article class="offer-card ${selected ? "is-selected" : ""}" data-offer-card="${offerId}">
+                    <div class="offer-head">
+                      <h3>${offer.title}</h3>
+                      <span class="offer-status">${selected ? "Sélectionnée" : "Disponible"}</span>
+                    </div>
+                    <p>${offer.summary}</p>
+                    <div class="offer-price">${offer.price}</div>
+                    <ul>
+                      ${offer.features.map((feature) => `<li>${feature}</li>`).join("")}
+                    </ul>
+                    <button
+                      type="button"
+                      class="btn ${selected ? "btn-primary" : "btn-secondary"}"
+                      data-action="choose-offer"
+                      data-offre="${offerId}"
+                    >
+                      ${selected ? "Offre choisie" : "Choisir cette offre"}
+                    </button>
+                  </article>
+                `;
+              })
+              .join("")}
+          </div>
+          <p class="offer-picked" id="offer-picked">
+            ${
+              state.offre
+                ? `Offre retenue : ${offerCatalog[state.offre].title}`
+                : "Aucune offre sélectionnée pour le moment."
+            }
+          </p>
+          <div class="comparison-panel">
+            <h3>Comparaison 12 mois</h3>
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Scénario</th>
+                  <th>Leads/an estimés</th>
+                  <th>CA potentiel</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Situation actuelle</td>
+                  <td>${formatInt(currentAnnualLeads)}</td>
+                  <td>${formatCurrency(currentAnnualLeads * 280)}</td>
+                </tr>
+                <tr>
+                  <td>Offre Audit Boost</td>
+                  <td>${formatInt(auditProjection.annualLeads)}</td>
+                  <td>${formatCurrency(auditProjection.annualRevenue)}</td>
+                </tr>
+                <tr>
+                  <td>Offre Growth Engine</td>
+                  <td>${formatInt(growthProjection.annualLeads)}</td>
+                  <td>${formatCurrency(growthProjection.annualRevenue)}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="step-warning" id="step-warning" aria-live="polite"></p>
+          <div class="step-nav">
+            <button class="btn btn-secondary" type="button" data-action="prev-step">Retour</button>
+            <button class="btn btn-primary" type="button" data-action="next-step">Continuer</button>
+          </div>
+        `;
+      }
+
+      function renderStepFour() {
+        const selectedPains = state.painPoints.map((id) => painById[id]?.title).filter(Boolean).join(", ");
+        const selectedObjectives = state.objectives
+          .map((id) => objectiveById[id]?.label)
+          .filter(Boolean)
+          .join(", ");
+        const offerTitle = state.offre ? offerCatalog[state.offre].title : "—";
+        const metrics = getGrowthMetrics();
+        const monthlyGain = Math.max(0, metrics.projectedLeadsMonthly - metrics.currentLeadsMonthly);
+
+        return `
+          ${renderStepIntro(
+            "Vos coordonnées",
+            "Dernière étape : recevez votre audit et plan d'actions personnalisé."
+          )}
+          <div class="field-grid">
+            <label>
+              Prénom
+              <input type="text" data-bind="prenom" value="${escapeHtml(state.prenom)}" placeholder="Prénom" />
+            </label>
+            <label>
+              Nom
+              <input type="text" data-bind="nom" value="${escapeHtml(state.nom)}" placeholder="Nom" />
+            </label>
+            <label>
+              Email pro
+              <input
+                type="email"
+                data-bind="email"
+                value="${escapeHtml(state.email)}"
+                placeholder="vous@entreprise.fr"
+              />
+            </label>
+            <label>
+              Téléphone
+              <input type="tel" data-bind="phone" value="${escapeHtml(state.phone)}" placeholder="06 00 00 00 00" />
+            </label>
+          </div>
+          <label>
+            Message (facultatif)
+            <textarea data-bind="message" placeholder="Contexte complémentaire">${escapeHtml(
+              state.message
+            )}</textarea>
+          </label>
+          <div class="summary-panel">
+            <h3>Récapitulatif</h3>
+            <div class="summary-grid">
+              <div class="summary-item">
+                <strong>URL</strong>
+                <span>${escapeHtml(state.url || "—")}</span>
+              </div>
+              <div class="summary-item">
+                <strong>Stack & ancienneté</strong>
+                <span>${escapeHtml(state.techno || "—")} · ${escapeHtml(state.anciennete || "—")}</span>
+              </div>
+              <div class="summary-item">
+                <strong>Douleurs</strong>
+                <span>${escapeHtml(selectedPains || "—")}</span>
+              </div>
+              <div class="summary-item">
+                <strong>Objectifs</strong>
+                <span>${escapeHtml(selectedObjectives || "—")}</span>
+              </div>
+              <div class="summary-item">
+                <strong>Offre retenue</strong>
+                <span>${escapeHtml(offerTitle)}</span>
+              </div>
+              <div class="summary-item">
+                <strong>Potentiel mensuel estimé</strong>
+                <span>+${formatInt(monthlyGain)} leads / mois</span>
+              </div>
+            </div>
+          </div>
+          <p class="step-warning" id="step-warning" aria-live="polite"></p>
+          <div class="step-nav">
+            <button class="btn btn-secondary" type="button" data-action="prev-step">Retour</button>
+            <button class="btn btn-primary" type="button" data-action="submit-funnel">Recevoir mon audit</button>
+          </div>
+        `;
+      }
+
+      function renderSuccess() {
+        return `
+          <section class="wizard success-card">
+            <div class="eyebrow">Audit confirmé</div>
+            <h2>Merci ${escapeHtml(state.prenom || "")}, votre audit Pixeloria est réservé.</h2>
+            <p>
+              Nous revenons vers vous sous 24h ouvrées à l'adresse <strong>${escapeHtml(
+                state.email || "renseignée"
+              )}</strong>.
+            </p>
+            <p>Vous allez recevoir 4 livrables clés :</p>
+            <ul class="deliverables">
+              <li>1. Diagnostic UX & conversion détaillé</li>
+              <li>2. Score SEO technique avec priorités</li>
+              <li>3. Roadmap d'actions 30 / 60 / 90 jours</li>
+              <li>4. Proposition de refonte + planning de lancement</li>
+            </ul>
+            <div class="step-nav">
+              <a class="btn btn-secondary" href="index.html">Retour à l'accueil</a>
+              <button class="btn btn-primary" type="button" data-action="restart">Recommencer</button>
+            </div>
+          </section>
+        `;
+      }
+
+      function renderCurrentStep() {
+        switch (state.step) {
+          case 1:
+            return renderStepOne();
+          case 2:
+            return renderStepTwo();
+          case 3:
+            return renderStepThree();
+          case 4:
+            return renderStepFour();
+          default:
+            state.step = 1;
+            return renderStepOne();
+        }
+      }
+
+      function render() {
+        if (state.done) {
+          app.innerHTML = renderSuccess();
+          return;
+        }
+        app.innerHTML = `
+          <section class="wizard">
+            <header class="wizard-head">
+              <div class="eyebrow">Tunnel de vente Pixeloria</div>
+              <h1 class="wizard-title">Audit de refonte en 4 étapes</h1>
+              ${renderProgress()}
+            </header>
+            <div class="wizard-body">${renderCurrentStep()}</div>
+          </section>
+        `;
+        if (state.step === 2) {
+          updateROI();
+        }
+        if (state.step === 3) {
+          updateOfferCards();
+        }
+      }
+
+      function setStateValue(key, value) {
+        if (key === "visiteurs" || key === "leads") {
+          const parsed = Number(String(value).replace(",", "."));
+          state[key] = Number.isFinite(parsed) ? parsed : 0;
+          return;
+        }
+        const raw = String(value ?? "");
+        state[key] = key === "message" ? raw : raw.trim();
+      }
+
+      function syncInputs() {
+        const nodes = document.querySelectorAll("#app [data-bind]");
+        nodes.forEach((node) => {
+          setStateValue(node.dataset.bind, node.value);
+        });
+      }
+
+      function getValidationMessage() {
+        if (state.step === 1) {
+          const url = state.url.trim();
+          if (!url) return "Ajoutez l'URL de votre site pour continuer.";
+          if (!state.techno) return "Sélectionnez votre technologie principale.";
+          if (!state.anciennete) return "Indiquez l'ancienneté de votre site.";
+          if (state.painPoints.length === 0) return "Sélectionnez au moins une douleur prioritaire.";
+          return "";
+        }
+        if (state.step === 2) {
+          if (state.objectives.length === 0) return "Choisissez au moins un objectif de croissance.";
+          if (!(state.visiteurs > 0)) return "Renseignez un volume de visiteurs supérieur à 0.";
+          if (!(state.leads > 0)) return "Renseignez un taux de conversion actuel supérieur à 0%.";
+          return "";
+        }
+        if (state.step === 3) {
+          if (!state.offre) return "Sélectionnez une offre pour comparer votre trajectoire 12 mois.";
+          return "";
+        }
+        if (state.step === 4) {
+          if (!state.prenom) return "Le prénom est requis.";
+          if (!state.nom) return "Le nom est requis.";
+          if (!state.email) return "L'email est requis.";
+          const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(state.email);
+          if (!emailOk) return "Format d'email invalide.";
+          if (!state.phone) return "Le téléphone est requis.";
+          return "";
+        }
+        return "";
+      }
+
+      function canContinue() {
+        return getValidationMessage() === "";
+      }
+
+      function showWarning(message) {
+        const warning = document.getElementById("step-warning");
+        if (!warning) return;
+        warning.textContent = message;
+        warning.classList.add("is-visible");
+      }
+
+      function clearWarning() {
+        const warning = document.getElementById("step-warning");
+        if (!warning) return;
+        warning.textContent = "";
+        warning.classList.remove("is-visible");
+      }
+
+      function updateROI() {
+        const resultNode = document.getElementById("roi-result");
+        if (!resultNode) return;
+        const metrics = getGrowthMetrics();
+        const monthlyGain = Math.max(0, metrics.projectedLeadsMonthly - metrics.currentLeadsMonthly);
+        const annualRevenueGain = monthlyGain * 12 * 280;
+        resultNode.innerHTML = `
+          <div class="roi-grid">
+            <article class="roi-item">
+              <strong>${formatInt(metrics.currentLeadsMonthly)}</strong>
+              <span>Leads actuels / mois</span>
+            </article>
+            <article class="roi-item">
+              <strong>${formatInt(metrics.projectedLeadsMonthly)}</strong>
+              <span>Leads projetés / mois</span>
+            </article>
+            <article class="roi-item">
+              <strong>${formatCurrency(annualRevenueGain)}</strong>
+              <span>Potentiel additionnel / an</span>
+            </article>
+          </div>
+        `;
+      }
+
+      function updatePainCard(id) {
+        const alreadyActive = state.painPoints.includes(id);
+        if (alreadyActive) {
+          state.painPoints = state.painPoints.filter((painId) => painId !== id);
+        } else {
+          state.painPoints = [...state.painPoints, id];
+        }
+
+        const card = document.querySelector(`[data-pain-id="${id}"]`);
+        if (card) {
+          const selected = state.painPoints.includes(id);
+          card.classList.toggle("is-active", selected);
+          card.setAttribute("aria-pressed", selected ? "true" : "false");
+          const toggleNode = card.querySelector(".pain-toggle");
+          if (toggleNode) toggleNode.textContent = selected ? "Sélectionnée" : "Sélectionner";
+        }
+
+        const counter = document.getElementById("pain-count");
+        if (counter) counter.textContent = String(state.painPoints.length);
+      }
+
+      function updateChip(value) {
+        const alreadyActive = state.objectives.includes(value);
+        if (alreadyActive) {
+          state.objectives = state.objectives.filter((objective) => objective !== value);
+        } else {
+          state.objectives = [...state.objectives, value];
+        }
+
+        const chip = document.querySelector(`[data-objective-value="${value}"]`);
+        if (chip) {
+          const selected = state.objectives.includes(value);
+          chip.classList.toggle("is-active", selected);
+          chip.setAttribute("aria-pressed", selected ? "true" : "false");
+          const stateNode = chip.querySelector(".chip-state");
+          if (stateNode) stateNode.textContent = selected ? "Ajouté" : "Choisir";
+        }
+
+        const counter = document.getElementById("objective-count");
+        if (counter) counter.textContent = String(state.objectives.length);
+        updateROI();
+      }
+
+      function updateOfferCards() {
+        const zone = document.getElementById("offers-zone");
+        if (!zone) return;
+
+        zone.querySelectorAll("[data-offer-card]").forEach((card) => {
+          const offerId = card.dataset.offerCard;
+          const selected = state.offre === offerId;
+          card.classList.toggle("is-selected", selected);
+          const statusNode = card.querySelector(".offer-status");
+          if (statusNode) statusNode.textContent = selected ? "Sélectionnée" : "Disponible";
+          const buttonNode = card.querySelector('[data-action="choose-offer"]');
+          if (buttonNode) {
+            buttonNode.textContent = selected ? "Offre choisie" : "Choisir cette offre";
+            buttonNode.classList.toggle("btn-primary", selected);
+            buttonNode.classList.toggle("btn-secondary", !selected);
+          }
+        });
+
+        const pickedNode = document.getElementById("offer-picked");
+        if (pickedNode) {
+          pickedNode.textContent = state.offre
+            ? `Offre retenue : ${offerCatalog[state.offre].title}`
+            : "Aucune offre sélectionnée pour le moment.";
+        }
+      }
+
+      function handleClick(event) {
+        const actionNode = event.target.closest("[data-action]");
+        if (!actionNode) return;
+
+        const action = actionNode.dataset.action;
+
+        if (action === "toggle-pain") {
+          updatePainCard(actionNode.dataset.id);
+          clearWarning();
+          return;
+        }
+
+        if (action === "toggle-objective") {
+          updateChip(actionNode.dataset.value);
+          clearWarning();
+          return;
+        }
+
+        if (action === "choose-offer") {
+          state.offre = actionNode.dataset.offre || "";
+          updateOfferCards();
+          clearWarning();
+          return;
+        }
+
+        if (action === "prev-step") {
+          syncInputs();
+          state.step = Math.max(1, state.step - 1);
+          render();
+          return;
+        }
+
+        if (action === "next-step") {
+          syncInputs();
+          if (!canContinue()) {
+            showWarning(getValidationMessage());
+            return;
+          }
+          state.step = Math.min(4, state.step + 1);
+          render();
+          return;
+        }
+
+        if (action === "submit-funnel") {
+          syncInputs();
+          if (!canContinue()) {
+            showWarning(getValidationMessage());
+            return;
+          }
+          state.done = true;
+          render();
+          return;
+        }
+
+        if (action === "restart") {
+          state.url = "";
+          state.techno = "";
+          state.anciennete = "";
+          state.painPoints = [];
+          state.objectives = [];
+          state.visiteurs = 5000;
+          state.leads = 2;
+          state.offre = "";
+          state.prenom = "";
+          state.nom = "";
+          state.email = "";
+          state.phone = "";
+          state.message = "";
+          state.step = 1;
+          state.done = false;
+          render();
+        }
+      }
+
+      function handleBoundInput(event) {
+        const target = event.target;
+        if (!target || !target.dataset || !target.dataset.bind) return;
+        setStateValue(target.dataset.bind, target.value);
+        if (state.step === 2 && (target.dataset.bind === "visiteurs" || target.dataset.bind === "leads")) {
+          updateROI();
+        }
+      }
+
+      document.body.addEventListener("click", handleClick);
+      document.body.addEventListener("input", handleBoundInput);
+      document.body.addEventListener("change", handleBoundInput);
+
+      render();
+    </script>
+  </body>
+</html>

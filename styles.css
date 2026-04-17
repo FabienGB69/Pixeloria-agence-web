@@ -1839,6 +1839,10 @@ select {
 @media (max-width: 580px) {
   .menu-toggle { display: flex; }
 
+  .audit-card {
+    padding: 1.35rem 1.05rem;
+  }
+
   .site-nav {
     position: absolute;
     top: var(--header-h);
