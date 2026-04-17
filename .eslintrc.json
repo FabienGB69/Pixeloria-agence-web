@@ -26,6 +26,16 @@
         "node": true,
         "browser": false
       }
+    },
+    {
+      "files": ["api/**/*.js"],
+      "env": {
+        "node": true,
+        "browser": false
+      },
+      "parserOptions": {
+        "sourceType": "module"
+      }
     }
   ]
 }
