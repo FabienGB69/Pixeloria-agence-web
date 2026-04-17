@@ -1,53 +1,14 @@
 {
   "root": true,
-  "env": {
-    "browser": true,
-    "es2022": true
-  },
-  "parserOptions": {
-    "ecmaVersion": 2022,
-    "sourceType": "script"
-  },
-  "extends": ["eslint:recommended"],
-  "ignorePatterns": [
-    "node_modules/",
-    "test-results/",
-    "playwright-report/",
-    "tests/e2e/**"
-  ],
+  "extends": ["next/core-web-vitals"],
   "rules": {
     "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
     "no-console": "off"
   },
   "overrides": [
     {
-      "files": ["api/**/*.js"],
-      "env": {
-        "node": true,
-        "browser": false,
-        "es2022": true
-      },
-      "parserOptions": {
-        "ecmaVersion": 2022,
-        "sourceType": "module"
-      }
-    },
-    {
-      "files": ["playwright.config.js", "*.config.js"],
-      "env": {
-        "node": true,
-        "browser": false
-      }
-    },
-    {
-      "files": ["api/**/*.js"],
-      "env": {
-        "node": true,
-        "browser": false
-      },
-      "parserOptions": {
-        "sourceType": "module"
-      }
+      "files": ["tests/e2e/**"],
+      "env": { "node": true }
     }
   ]
 }
