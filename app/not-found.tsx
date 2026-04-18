@@ -4,10 +4,10 @@ export default function NotFound() {
   return (
     <html lang="fr">
       <body style={{ background: '#050f1a', color: '#f0faf8', fontFamily: 'sans-serif', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', gap: '1.5rem' }}>
-        <p style={{ fontSize: '7rem', fontWeight: 900, background: 'linear-gradient(135deg,#35e38f,#26d8be,#2ca7ff)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+        <h1 style={{ fontSize: '7rem', fontWeight: 900, background: 'linear-gradient(135deg,#35e38f,#26d8be,#2ca7ff)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', margin: 0 }}>
           404
-        </p>
-        <h1 style={{ fontSize: '1.5rem', fontWeight: 700 }}>Page introuvable</h1>
+        </h1>
+        <p style={{ fontSize: '1.5rem', fontWeight: 700 }}>Page introuvable</p>
         <p style={{ color: 'rgba(240,250,248,0.6)', textAlign: 'center', maxWidth: '400px' }}>
           Cette page n&apos;existe pas ou a été déplacée.
         </p>
