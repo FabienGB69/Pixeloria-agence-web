@@ -124,6 +124,9 @@ export default function TunnelForm() {
   const initialOffre = searchParams.get('offre') ?? '';
   const [s, setS] = useState<TunnelState>(() => makeInitialState(initialOffre));
   const [warning, setWarning] = useState('');
+  const [turnstileToken, setTurnstileToken] = useState('');
+  const onTurnstileVerify = useCallback((token: string) => setTurnstileToken(token), []);
+  const onTurnstileExpire = useCallback(() => setTurnstileToken(''), []);
 
   const update = useCallback((patch: Partial<TunnelState>) => setS(prev => ({ ...prev, ...patch })), []);
 
@@ -153,6 +156,8 @@ export default function TunnelForm() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          _hp: '',
+          _turnstile: turnstileToken,
           prenom: s.prenom, nom: s.nom, email: s.email, phone: s.phone, message: s.message,
           url: s.url, offre: s.offre, painPoints: s.painPoints, objectives: s.objectives,
           visiteurs: s.visiteurs, leads: s.leads,
@@ -339,6 +344,7 @@ export default function TunnelForm() {
               <label>Téléphone<input type="tel" placeholder="06 00 00 00 00" value={s.phone} onChange={e => update({ phone: e.target.value })} /></label>
             </div>
             <label>Message (facultatif)<textarea placeholder="Contexte complémentaire" rows={3} value={s.message} onChange={e => update({ message: e.target.value })} /></label>
+            <TurnstileWidget onVerify={onTurnstileVerify} onExpire={onTurnstileExpire} />
             {s.error && <p role="alert" style={{ color: '#e43f6f', fontSize: '.9rem' }}>{s.error}</p>}
           </>
         )}
