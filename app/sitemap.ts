@@ -7,5 +7,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://pixeloria.fr/agence-web-drome', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: 'https://pixeloria.fr/agence-web-ardeche', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: 'https://pixeloria.fr/agence-web-isere', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://pixeloria.fr/agence-web-rhone', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://pixeloria.fr/agence-web-ain', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://pixeloria.fr/agence-web-loire', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://pixeloria.fr/agence-web-savoie', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://pixeloria.fr/agence-web-haute-savoie', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
   ];
 }

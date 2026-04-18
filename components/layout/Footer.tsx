@@ -30,9 +30,14 @@ export default function Footer() {
 
         <nav className="footer-nav" aria-label="Pages locales">
           <strong>Zones desservies</strong>
+          <Link href="/agence-web-rhone">Agence web Lyon / Rhône</Link>
+          <Link href="/agence-web-isere">Agence web Isère</Link>
+          <Link href="/agence-web-haute-savoie">Agence web Haute-Savoie</Link>
+          <Link href="/agence-web-savoie">Agence web Savoie</Link>
+          <Link href="/agence-web-ain">Agence web Ain</Link>
           <Link href="/agence-web-drome">Agence web Drôme</Link>
           <Link href="/agence-web-ardeche">Agence web Ardèche</Link>
-          <Link href="/agence-web-isere">Agence web Isère</Link>
+          <Link href="/agence-web-loire">Agence web Loire</Link>
         </nav>
 
         <nav className="footer-nav" aria-label="Contact pied de page">
