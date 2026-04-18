@@ -11,66 +11,67 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  typecheck:
+    name: TypeScript check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      - run: npm ci
+      - run: npm run typecheck
+
   lint:
-    name: Lint (HTML / CSS / JS)
+    name: Lint (ESLint / Stylelint)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: "npm"
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run lint:css
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Lint HTML
-        run: npm run lint:html
-
-      - name: Lint CSS
-        run: npm run lint:css
-
-      - name: Lint JS
-        run: npm run lint:js
-
-  linkcheck:
-    name: Link check
+  build:
+    name: Next.js build
     runs-on: ubuntu-latest
+    needs: [typecheck, lint]
+    env:
+      NOTION_TOKEN: ${{ secrets.NOTION_TOKEN || 'placeholder' }}
+      NOTION_DB_ID: ${{ secrets.NOTION_DB_ID || 'placeholder' }}
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY || 'placeholder' }}
+      OWNER_EMAIL: contact@pixeloria.fr
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: "npm"
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Check links
-        run: npm run linkcheck
+      - run: npm ci
+      - run: npm run build
 
   e2e:
     name: Playwright smoke tests
     runs-on: ubuntu-latest
+    needs: [build]
+    env:
+      NOTION_TOKEN: ${{ secrets.NOTION_TOKEN || 'placeholder' }}
+      NOTION_DB_ID: ${{ secrets.NOTION_DB_ID || 'placeholder' }}
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY || 'placeholder' }}
+      OWNER_EMAIL: contact@pixeloria.fr
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: "npm"
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Install Playwright browsers
-        run: npx playwright install --with-deps chromium
-
-      - name: Run Playwright tests
-        run: npm run test:e2e
-
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
       - name: Upload Playwright report
         if: always()
         uses: actions/upload-artifact@v4
