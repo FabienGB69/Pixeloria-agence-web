@@ -22,6 +22,7 @@ export default function MentionsLegalesPage() {
             Le présent site <strong>pixeloria.fr</strong> est édité par :<br />
             <strong>GOMES FABIEN</strong> — exploitant sous l&apos;enseigne commerciale <strong>Pixeloria</strong><br />
             Forme juridique : Entrepreneur individuel<br />
+            Adresse : 61 C Avenue Gabriel Péri, 26600 Tain-l&apos;Hermitage<br />
             SIREN : 798 262 416<br />
             Numéro RCS : 798 262 416 R.C.S. Lyon<br />
             Inscription au RCS : Greffe de Lyon, le 19/01/2015<br />

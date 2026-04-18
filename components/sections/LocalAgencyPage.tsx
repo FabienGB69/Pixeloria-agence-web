@@ -19,7 +19,10 @@ export default function LocalAgencyPage({ data }: Props) {
     email: 'contact@pixeloria.fr',
     address: {
       '@type': 'PostalAddress',
-      addressRegion: data.region,
+      streetAddress: '61 C Avenue Gabriel Péri',
+      addressLocality: 'Tain-l\'Hermitage',
+      postalCode: '26600',
+      addressRegion: 'Auvergne-Rhône-Alpes',
       addressCountry: 'FR',
     },
     areaServed: {

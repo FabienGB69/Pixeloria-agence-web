@@ -21,7 +21,7 @@ export default function CGVPage() {
           <h2>1. Objet</h2>
           <p>
             Les présentes Conditions Générales de Vente (CGV) régissent les relations contractuelles entre
-            GOMES FABIEN (Pixeloria, EI — SIREN 798 262 416) ci-après « le Prestataire », et toute personne
+            GOMES FABIEN (Pixeloria, EI — SIREN 798 262 416 — 61 C Avenue Gabriel Péri, 26600 Tain-l&apos;Hermitage) ci-après « le Prestataire », et toute personne
             physique ou morale, ci-après « le Client », souhaitant acquérir ses services de création, refonte
             ou optimisation de sites web.
           </p>
