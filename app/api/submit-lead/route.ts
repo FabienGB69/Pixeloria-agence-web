@@ -3,6 +3,7 @@ import { LeadSchema } from '@/lib/validation';
 import { saveLead, resolveOffreAndSource } from '@/lib/notion';
 import { sendConfirmation, notifyOwner } from '@/lib/resend';
 import { safe } from '@/lib/validation';
+import { isHoneypot, verifyTurnstile, checkRateLimit } from '@/lib/security';
 
 // ─── CORS ─────────────────────────────────────────────────────────────────────
 
@@ -14,36 +15,6 @@ const CORS_HEADERS = {
   'Access-Control-Allow-Headers': 'Content-Type',
 } as const;
 
-// ─── Rate limiting in-memory ──────────────────────────────────────────────────
-// Max 5 requêtes par IP sur une fenêtre de 10 minutes.
-// Note: se réinitialise au cold start — remplacer par Upstash Redis pour la
-// persistance multi-instances en production.
-
-interface RateEntry {
-  count: number;
-  start: number;
-}
-
-const RATE_MAP = new Map<string, RateEntry>();
-const RATE_LIMIT = 5;
-const RATE_WINDOW_MS = 10 * 60 * 1000;
-
-function isRateLimited(ip: string): boolean {
-  const now = Date.now();
-  const entry = RATE_MAP.get(ip) ?? { count: 0, start: now };
-
-  if (now - entry.start > RATE_WINDOW_MS) {
-    RATE_MAP.set(ip, { count: 1, start: now });
-    return false;
-  }
-
-  if (entry.count >= RATE_LIMIT) return true;
-
-  entry.count += 1;
-  RATE_MAP.set(ip, entry);
-  return false;
-}
-
 // ─── Handlers ─────────────────────────────────────────────────────────────────
 
 export function OPTIONS(): NextResponse {
@@ -51,20 +22,20 @@ export function OPTIONS(): NextResponse {
 }
 
 export async function POST(req: NextRequest): Promise<NextResponse> {
-  // 1. Rate limiting
+  // 1. Rate limiting (Upstash Redis si configuré, sinon in-memory)
   const ip =
     req.headers.get('x-forwarded-for')?.split(',')[0].trim() ??
     'unknown';
 
-  if (isRateLimited(ip)) {
+  if (await checkRateLimit(ip)) {
     return NextResponse.json(
       { error: 'Trop de tentatives. Réessayez dans quelques minutes.' },
       { status: 429, headers: CORS_HEADERS }
     );
   }
 
-  // 2. Parse & validate body
-  let rawBody: unknown;
+  // 2. Parse body
+  let rawBody: Record<string, unknown>;
   try {
     rawBody = await req.json();
   } catch {
@@ -74,6 +45,21 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     );
   }
 
+  // 3. Honeypot — répondre 200 sans traitement pour tromper les bots
+  if (isHoneypot(rawBody)) {
+    return NextResponse.json({ success: true }, { status: 200, headers: CORS_HEADERS });
+  }
+
+  // 4. Cloudflare Turnstile (skip si CLOUDFLARE_TURNSTILE_SECRET_KEY absent)
+  const turnstileValid = await verifyTurnstile(rawBody['_turnstile'] as string | undefined);
+  if (!turnstileValid) {
+    return NextResponse.json(
+      { error: 'Vérification de sécurité échouée. Rechargez la page et réessayez.' },
+      { status: 403, headers: CORS_HEADERS }
+    );
+  }
+
+  // 5. Validate body avec Zod
   const parsed = LeadSchema.safeParse(rawBody);
   if (!parsed.success) {
     const firstError = parsed.error.errors[0]?.message ?? 'Données invalides';
@@ -85,7 +71,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
 
   const data = parsed.data;
 
-  // 3. Vérification des variables d'environnement Notion
+  // 6. Vérification des variables d'environnement Notion
   if (!process.env.NOTION_TOKEN || !process.env.NOTION_DB_ID) {
     console.error('[submit-lead] Missing NOTION_TOKEN or NOTION_DB_ID');
     return NextResponse.json(
@@ -94,10 +80,10 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     );
   }
 
-  // 4. Calcul des métadonnées partagées
+  // 7. Calcul des métadonnées partagées
   const { offreLabel, source } = resolveOffreAndSource(data.offre);
 
-  // 5. Log structuré
+  // 8. Log structuré
   console.log(
     JSON.stringify({
       ts:    new Date().toISOString(),
@@ -108,7 +94,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     })
   );
 
-  // 6. Sauvegarde Notion — bloquante
+  // 9. Sauvegarde Notion — bloquante
   try {
     await saveLead(data);
   } catch (err) {
@@ -120,7 +106,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     );
   }
 
-  // 7. Envoi des emails — non-bloquant (echecs silencieux loggés)
+  // 10. Envoi des emails — non-bloquant (echecs silencieux loggés)
   const emailResults = await Promise.allSettled([
     sendConfirmation({
       email:      safe(data.email, 254),
@@ -147,7 +133,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     }
   });
 
-  // 8. Réponse succès
+  // 11. Réponse succès
   return NextResponse.json(
     { success: true },
     { status: 200, headers: CORS_HEADERS }

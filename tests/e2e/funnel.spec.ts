@@ -50,7 +50,7 @@ test.describe('Tunnel de vente /refonte', () => {
 
     /* ── Étape 3 : Offre ── */
     await expect(page.locator('.progress li.is-active')).toContainText('Offre');
-    await page.locator('.offer-card, [class*="offer"]').first().click();
+    await page.locator('.offer-card button').first().click();
     await page.locator('.step-nav button').last().click();
 
     /* ── Étape 4 : Coordonnées ── */
