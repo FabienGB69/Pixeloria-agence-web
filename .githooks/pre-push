@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+# Bloque le push si typecheck, lint ou build échoue.
+# Pour bypasser en urgence : git push --no-verify
+
+set -e
+
+echo ""
+echo "╔═══════════════════════════════════════════╗"
+echo "║  Pixeloria — vérifications pré-push        ║"
+echo "╚═══════════════════════════════════════════╝"
+echo ""
+
+run_check() {
+  local label="$1"
+  local cmd="$2"
+  printf "  %-20s " "$label"
+  if output=$(eval "$cmd" 2>&1); then
+    echo "✓"
+  else
+    echo "✗"
+    echo ""
+    echo "Échec : $label"
+    echo "────────────────────────────────────────────"
+    echo "$output"
+    echo "────────────────────────────────────────────"
+    echo ""
+    echo "Push annulé. Corrige les erreurs ci-dessus."
+    echo "Pour bypasser : git push --no-verify"
+    echo ""
+    exit 1
+  fi
+}
+
+run_check "TypeScript"   "npm run typecheck --silent"
+run_check "ESLint"       "npm run lint --silent"
+run_check "Next build"   "npm run build 2>&1 | tail -5"
+
+echo ""
+echo "  Toutes les vérifications sont passées. Push en cours…"
+echo ""

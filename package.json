@@ -12,7 +12,8 @@
     "typecheck": "tsc --noEmit",
     "test:e2e": "playwright test",
     "test:e2e:install": "playwright install --with-deps chromium",
-    "ci": "npm run typecheck && npm run lint && npm run build"
+    "ci": "npm run typecheck && npm run lint && npm run build",
+    "prepare": "git config core.hooksPath .githooks || true"
   },
   "dependencies": {
     "@notionhq/client": "^5.18.0",
