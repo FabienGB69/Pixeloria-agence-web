@@ -1,0 +1,76 @@
+import { test, expect } from '@playwright/test';
+
+test.describe('Pixeloria homepage — smoke tests', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/');
+  });
+
+  test('title et H1 hero corrects', async ({ page }) => {
+    await expect(page).toHaveTitle(/Pixeloria/);
+    await expect(
+      page.getByRole('heading', { level: 1, name: /am.nent/i }),
+    ).toBeVisible();
+  });
+
+  test('liens de navigation résolvent vers les sections', async ({ page }) => {
+    const sections = ['services', 'marketing', 'portfolio', 'process', 'testimonials', 'contact'];
+    for (const id of sections) {
+      const link = page.locator(`.site-nav a[href="#${id}"]`);
+      await expect(link).toBeVisible();
+    }
+    for (const id of sections) {
+      await expect(page.locator(`#${id}`)).toBeAttached();
+    }
+  });
+
+  test('menu mobile — toggle ouvre/ferme la nav', async ({ page }) => {
+    await page.setViewportSize({ width: 420, height: 800 });
+    const toggle = page.locator('.menu-toggle');
+    const nav = page.locator('.site-nav');
+
+    await expect(toggle).toBeVisible();
+    await expect(toggle).toHaveAttribute('aria-expanded', 'false');
+
+    await toggle.click();
+    await expect(toggle).toHaveAttribute('aria-expanded', 'true');
+    await expect(nav).toHaveClass(/is-open/);
+
+    await toggle.click();
+    await expect(toggle).toHaveAttribute('aria-expanded', 'false');
+    await expect(nav).not.toHaveClass(/is-open/);
+  });
+
+  test('footer affiche l\'année courante', async ({ page }) => {
+    const year = String(new Date().getFullYear());
+    await expect(page.locator('.footer-bottom p')).toContainText(year);
+  });
+
+  test('formulaire contact — champs obligatoires présents', async ({ page }) => {
+    const form = page.locator('form.contact-form');
+    await expect(form).toBeVisible();
+    for (const name of ['prenom', 'nom', 'email', 'message']) {
+      await expect(form.locator(`[name="${name}"]`)).toHaveAttribute('required', '');
+    }
+  });
+
+  test('aucune erreur console au chargement', async ({ page }) => {
+    const errors: string[] = [];
+    page.on('pageerror', (err) => errors.push(err.message));
+    page.on('console', (msg) => {
+      if (msg.type() === 'error') {
+        const text = msg.text();
+        if (/_vercel\/insights|Failed to load resource/i.test(text)) return;
+        errors.push(text);
+      }
+    });
+    await page.reload();
+    await page.waitForLoadState('domcontentloaded');
+    expect(errors).toEqual([]);
+  });
+
+  test('page 404 branded', async ({ page }) => {
+    await page.goto('/cette-page-n-existe-pas');
+    await expect(page.getByRole('heading', { name: /404/i })).toBeVisible();
+    await expect(page.getByRole('link', { name: /accueil/i })).toBeVisible();
+  });
+});

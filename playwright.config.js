@@ -1,15 +1,15 @@
 // @ts-check
 const { defineConfig, devices } = require("@playwright/test");
 
-const PORT = process.env.PORT || 8080;
-const BASE_URL = process.env.BASE_URL || `http://127.0.0.1:${PORT}`;
+const PORT = process.env.PORT || 3000;
+const BASE_URL = process.env.BASE_URL || `http://localhost:${PORT}`;
 
 module.exports = defineConfig({
   testDir: "./tests/e2e",
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 2 : undefined,
+  workers: process.env.CI ? 1 : undefined,
   reporter: process.env.CI ? [["github"], ["html", { open: "never" }]] : "list",
   use: {
     baseURL: BASE_URL,
@@ -22,9 +22,9 @@ module.exports = defineConfig({
     },
   ],
   webServer: {
-    command: `npx --yes http-server . -p ${PORT} -c-1 -s`,
+    command: 'npm run dev',
     url: BASE_URL,
     reuseExistingServer: !process.env.CI,
-    timeout: 60_000,
+    timeout: 120_000,
   },
 });
