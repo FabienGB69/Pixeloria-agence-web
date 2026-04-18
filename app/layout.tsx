@@ -1,13 +1,20 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Playfair_Display, Plus_Jakarta_Sans } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import '@/styles/globals.css';
 
-const inter = Inter({
+const playfair = Playfair_Display({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
+  weight: ['400', '500', '600', '700', '800'],
   display: 'swap',
-  variable: '--font-inter',
+  variable: '--font-serif',
+});
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  display: 'swap',
+  variable: '--font-sans',
 });
 
 export const metadata: Metadata = {
@@ -37,7 +44,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" className={inter.variable}>
+    <html lang="fr" className={`${playfair.variable} ${jakarta.variable}`}>
       <body>{children}<Analytics /></body>
     </html>
   );
