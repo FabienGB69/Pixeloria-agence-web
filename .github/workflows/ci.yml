@@ -58,6 +58,11 @@ jobs:
     name: Playwright smoke tests
     runs-on: ubuntu-latest
     needs: [build]
+    env:
+      NOTION_TOKEN: ${{ secrets.NOTION_TOKEN || 'placeholder' }}
+      NOTION_DB_ID: ${{ secrets.NOTION_DB_ID || 'placeholder' }}
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY || 'placeholder' }}
+      OWNER_EMAIL: contact@pixeloria.fr
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
