@@ -3,6 +3,7 @@
 import { useState, useCallback } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
+import { track } from '@vercel/analytics';
 import { getStoredUtm } from '@/lib/utm';
 import TurnstileWidget from '@/components/forms/TurnstileWidget';
 
@@ -143,7 +144,9 @@ export default function TunnelForm() {
     const err = validate(s);
     if (err) { setWarning(err); return; }
     setWarning('');
-    update({ step: Math.min(s.step + 1, 4) as TunnelState['step'] });
+    const nextStep = Math.min(s.step + 1, 4) as TunnelState['step'];
+    track('funnel_step', { from: s.step, to: nextStep });
+    update({ step: nextStep });
   };
   const prev = () => { setWarning(''); update({ step: Math.max(s.step - 1, 1) as TunnelState['step'] }); };
 
@@ -164,8 +167,10 @@ export default function TunnelForm() {
           ...getStoredUtm(),
         }),
       });
-      if (res.ok) { update({ done: true, submitting: false }); }
-      else { update({ error: 'Une erreur est survenue. Réessayez ou contactez-nous.', submitting: false }); }
+      if (res.ok) {
+        track('funnel_submit', { offre: s.offre });
+        update({ done: true, submitting: false });
+      } else { update({ error: 'Une erreur est survenue. Réessayez ou contactez-nous.', submitting: false }); }
     } catch {
       update({ done: true, submitting: false });
     }

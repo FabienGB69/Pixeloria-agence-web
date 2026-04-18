@@ -10,6 +10,7 @@
     "lint": "next lint",
     "lint:css": "stylelint \"**/*.css\" --ignore-pattern=\".next/**\"",
     "typecheck": "tsc --noEmit",
+    "test:unit": "vitest run",
     "test:e2e": "playwright test",
     "test:e2e:install": "playwright install --with-deps chromium",
     "ci": "npm run typecheck && npm run lint && npm run build",
@@ -27,14 +28,17 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.11.2",
     "@playwright/test": "^1.48.0",
     "@types/node": "^20.17.6",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "@vitest/coverage-v8": "^4.1.4",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.2.29",
     "stylelint": "^16.10.0",
     "stylelint-config-standard": "^36.0.1",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "vitest": "^4.1.4"
   }
 }

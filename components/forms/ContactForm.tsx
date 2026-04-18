@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useCallback } from 'react';
+import { track } from '@vercel/analytics';
 import TurnstileWidget from '@/components/forms/TurnstileWidget';
 
 interface FormState {
@@ -53,6 +54,7 @@ export default function ContactForm() {
       });
 
       if (res.ok) {
+        track('contact_form_submit', { offre: (data.offre as string) || 'none' });
         setFormState({ loading: false, success: true, error: null });
       } else {
         setFormState({
