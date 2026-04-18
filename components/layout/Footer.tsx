@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -81,7 +82,14 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <div className="container footer-bottom-inner">
-          <p>© {year} Pixeloria. Tous droits réservés.</p>
+          <p>
+            © {year} Pixeloria. Tous droits réservés.{' '}
+            <Link href="/mentions-legales">Mentions légales</Link>
+            {' · '}
+            <Link href="/cgv">CGV</Link>
+            {' · '}
+            <Link href="/cgu">CGU</Link>
+          </p>
           <a href="#home" className="back-top" aria-label="Retour en haut">
             <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
               <path
