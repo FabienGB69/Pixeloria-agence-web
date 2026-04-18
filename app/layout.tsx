@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { Playfair_Display, Plus_Jakarta_Sans } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
-import '@/styles/globals.css';
+import '../styles.css';        // composants hérités (header, nav, sections, forms…)
+import '@/styles/globals.css'; // tokens sober theme — écrase les anciens `:root`
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
