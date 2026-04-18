@@ -2620,8 +2620,13 @@ select {
   justify-content: center;
   color: var(--primary);
 }
-.review-cta-icon svg { width: 28px; height: 28px; }
-.review-cta-content { flex: 1; }
+.review-cta-icon svg {
+  width: 28px;
+  height: 28px;
+}
+.review-cta-content {
+  flex: 1;
+}
 .review-cta-content h3 {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
@@ -2637,8 +2642,16 @@ select {
   font-size: 0.78rem !important;
   color: var(--text-subtle, #9C9892) !important;
 }
-.review-note a { color: var(--primary); text-decoration: underline; }
+.review-note a {
+  color: var(--primary);
+  text-decoration: underline;
+}
 @media (max-width: 560px) {
-  .review-cta-inner { flex-direction: column; }
-  .review-cta-icon { width: 44px; height: 44px; }
+  .review-cta-inner {
+    flex-direction: column;
+  }
+  .review-cta-icon {
+    width: 44px;
+    height: 44px;
+  }
 }
