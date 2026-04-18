@@ -22,9 +22,9 @@ module.exports = defineConfig({
     },
   ],
   webServer: {
-    command: process.env.CI ? 'npm run build && npm run start' : 'npm run dev',
+    command: process.env.CI ? 'npm run start' : 'npm run dev',
     url: BASE_URL,
     reuseExistingServer: !process.env.CI,
-    timeout: 180_000,
+    timeout: 60_000,
   },
 });

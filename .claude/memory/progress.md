@@ -26,3 +26,27 @@
 ## PR ouverte 🔄
 
 - PR #27 : branch claude/add-skills-personas-8Lww2 → main (draft)
+
+## Plan de rollback (Phase 4.6)
+
+### Stratégie de bascule sans downtime
+
+1. **Déploiement sur branch feature** → Vercel Preview URL distincte
+2. **Validation Preview** : tester manuellement la Preview URL avant de merger
+3. **Merge vers main** → Vercel déploie automatiquement en production
+4. **Si régression critique :** Vercel Dashboard → Deployments → "Promote to Production" sur le déploiement précédent (rollback instantané < 30s)
+5. **En dernier recours :** `git revert HEAD && git push origin main`
+
+### Tags de versions stables
+
+```bash
+# Tagger avant chaque merge important
+git tag v2.0.0-stable && git push origin v2.0.0-stable
+```
+
+### Commandes Vercel CLI de rollback
+
+```bash
+vercel rollback [deployment-url]  # Rollback vers un déploiement précédent
+vercel ls                         # Lister les déploiements récents
+```
