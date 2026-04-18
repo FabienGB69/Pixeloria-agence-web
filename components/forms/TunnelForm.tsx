@@ -4,6 +4,7 @@ import { useState, useCallback } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { getStoredUtm } from '@/lib/utm';
+import TurnstileWidget from '@/components/forms/TurnstileWidget';
 
 /* ── Data catalogues ───────────────────────────────────────── */
 const PAIN_CATALOG = [

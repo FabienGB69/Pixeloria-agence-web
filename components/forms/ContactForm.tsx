@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useCallback } from 'react';
+import TurnstileWidget from '@/components/forms/TurnstileWidget';
 
 interface FormState {
   loading: boolean;
@@ -14,6 +15,9 @@ export default function ContactForm() {
     success: false,
     error: null,
   });
+  const [turnstileToken, setTurnstileToken] = useState<string>('');
+  const onTurnstileVerify = useCallback((token: string) => setTurnstileToken(token), []);
+  const onTurnstileExpire = useCallback(() => setTurnstileToken(''), []);
 
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -45,7 +49,7 @@ export default function ContactForm() {
       const res = await fetch('/api/submit-lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, _turnstile: turnstileToken }),
       });
 
       if (res.ok) {
@@ -100,6 +104,16 @@ export default function ContactForm() {
       onSubmit={handleSubmit}
       ref={formRef}
     >
+      {/* Honeypot — invisible pour les humains, rempli par les bots */}
+      <input
+        type="text"
+        name="_hp"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        style={{ display: 'none' }}
+      />
+
       <div className="form-row">
         <label>
           <span>Prénom <abbr title="requis">*</abbr></span>
@@ -179,6 +193,8 @@ export default function ContactForm() {
           onInput={handleInput}
         ></textarea>
       </label>
+
+      <TurnstileWidget onVerify={onTurnstileVerify} onExpire={onTurnstileExpire} />
 
       <button
         type="submit"
