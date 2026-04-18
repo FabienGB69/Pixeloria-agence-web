@@ -28,6 +28,13 @@ export default function Footer() {
           <a href="#testimonials">Avis clients</a>
         </nav>
 
+        <nav className="footer-nav" aria-label="Pages locales">
+          <strong>Zones desservies</strong>
+          <Link href="/agence-web-drome">Agence web Drôme</Link>
+          <Link href="/agence-web-ardeche">Agence web Ardèche</Link>
+          <Link href="/agence-web-isere">Agence web Isère</Link>
+        </nav>
+
         <nav className="footer-nav" aria-label="Contact pied de page">
           <strong>Contact</strong>
           <a href="tel:+33786125313">07 86 12 53 13</a>
