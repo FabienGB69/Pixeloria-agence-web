@@ -1,92 +1,105 @@
 export default function Portfolio() {
+  const projects = [
+    {
+      type: 'Refonte',
+      year: '2025',
+      client: 'Escalee & Goûts',
+      sector: 'Conciergerie / Tourisme',
+      url: 'https://www.escaleetgouts.fr/',
+      summary: 'Refonte complète d\'un site de conciergerie pour une expérience haut de gamme.',
+      bullets: [
+        'Design premium orienté conversion',
+        'Navigation simplifiée sur mobile',
+        'SEO technique revu de zéro',
+        'Pages de destination locales',
+      ],
+    },
+    {
+      type: 'Refonte',
+      year: '2025',
+      client: 'Lenora Conciergerie',
+      sector: 'Conciergerie',
+      url: 'https://lenora-conciergerie.vercel.app/',
+      summary: 'Modernisation d\'un site de conciergerie pour renforcer la crédibilité et les prises de contact.',
+      bullets: [
+        'Identité visuelle épurée et professionnelle',
+        'Formulaire de contact optimisé',
+        'Responsive mobile-first',
+        'Temps de chargement divisé par 2',
+      ],
+    },
+    {
+      type: 'Création',
+      year: '2025',
+      client: 'Content by Denise',
+      sector: 'Rédaction & Contenu',
+      url: 'https://contentbydenise.vercel.app/',
+      summary: 'Création d\'un portfolio professionnel pour une rédactrice freelance.',
+      bullets: [
+        'Branding unique et mémorable',
+        'Portfolio de contenus mis en valeur',
+        'Appels à l\'action orientés leads',
+        'Optimisation SEO dès le lancement',
+      ],
+    },
+  ];
+
   return (
     <section id="portfolio" className="section section-dark">
       <div className="container">
         <div className="section-heading reveal">
           <span className="eyebrow eyebrow-dark">Portfolio</span>
-          <h2 className="text-light">Designs assemblés pour des marques ambitieuses</h2>
+          <h2 className="text-light">Sites réalisés pour nos clients</h2>
           <p className="section-sub text-light-muted">
-            Chaque projet est une collaboration unique pour atteindre des
-            résultats mesurables.
+            Des projets concrets, des résultats mesurables —{' '}
+            projetez-vous sur ce qu&apos;on peut faire pour vous.
           </p>
         </div>
 
         <div className="portfolio-grid">
-          <article className="project-card reveal">
-            <div className="project-meta">
-              <span className="tag">SaaS</span>
-              <span className="project-year">2024</span>
-            </div>
-            <div className="project-visual pv-1" aria-hidden="true">
-              <div className="pv-bar" style={{ ['--w' as string]: '75%' }}></div>
-              <div className="pv-bar" style={{ ['--w' as string]: '55%' }}></div>
-              <div className="pv-bar" style={{ ['--w' as string]: '90%' }}></div>
-              <div className="pv-circles">
-                <span></span><span></span><span></span>
+          {projects.map((p, i) => (
+            <article
+              key={p.client}
+              className={`project-card reveal${i === 1 ? ' project-card-lg' : ''}`}
+            >
+              <div className="project-meta">
+                <span className="tag">{p.type}</span>
+                <span className="project-year">{p.year}</span>
               </div>
-            </div>
-            <h3>Nebula CRM</h3>
-            <p>Refonte complète du dashboard avec +45&nbsp;% de rétention.</p>
-            <a href="#contact" className="project-link">
-              Discuter de votre projet
-              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </a>
-          </article>
 
-          <article className="project-card project-card-lg reveal">
-            <div className="project-meta">
-              <span className="tag">E-commerce</span>
-              <span className="project-year">2024</span>
-            </div>
-            <div className="project-visual pv-2" aria-hidden="true">
-              <div className="pv-phone">
-                <div className="pv-phone-inner">
-                  <div className="pv-block"></div>
-                  <div className="pv-block pv-block-sm"></div>
-                  <div className="pv-block pv-block-img"></div>
-                  <div className="pv-btn"></div>
-                </div>
+              <div className="project-sector text-light-muted" style={{ fontSize: '0.78rem', marginBottom: '0.5rem' }}>
+                {p.sector}
               </div>
-            </div>
-            <h3>Studio Vanta</h3>
-            <p>Expérience premium mobile-first et tunnel d&apos;achat simplifié.</p>
-            <a href="#contact" className="project-link">
-              Discuter de votre projet
-              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </a>
-          </article>
 
-          <article className="project-card reveal">
-            <div className="project-meta">
-              <span className="tag">Media</span>
-              <span className="project-year">2023</span>
-            </div>
-            <div className="project-visual pv-3" aria-hidden="true">
-              <div className="pv-lines">
-                <span style={{ ['--w' as string]: '80%' }}></span>
-                <span style={{ ['--w' as string]: '60%' }}></span>
-                <span style={{ ['--w' as string]: '70%' }}></span>
-                <span style={{ ['--w' as string]: '45%' }}></span>
-              </div>
-            </div>
-            <h3>Pulse Magazine</h3>
-            <p>Design éditorial moderne et architecture de contenu optimisée.</p>
-            <a href="#contact" className="project-link">
-              Discuter de votre projet
-              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </a>
-          </article>
+              <h3 className="text-light">{p.client}</h3>
+              <p className="text-light-muted" style={{ fontSize: '0.875rem', marginBottom: '0.75rem' }}>
+                {p.summary}
+              </p>
+
+              <ul className="project-bullets">
+                {p.bullets.map((b) => (
+                  <li key={b}>{b}</li>
+                ))}
+              </ul>
+
+              <a
+                href={p.url}
+                className="project-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Voir le site
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </a>
+            </article>
+          ))}
         </div>
 
         <div className="portfolio-cta reveal">
           <a href="#contact" className="btn btn-outline-light">
-            Voir tous les projets
+            Lancer mon projet
             <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
               <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
