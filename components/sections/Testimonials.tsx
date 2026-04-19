@@ -42,7 +42,7 @@ export default function Testimonials() {
               <p className="review-note">
                 Vous êtes déjà client et vos avis n&apos;apparaissent pas encore ici.
                 Contactez-nous à{' '}
-                <a href="mailto:contact@pixeloria.fr">contact@pixeloria.fr</a>{' '}
+                <a href="mailto:contact@pixeloria.fr?subject=Demande%20de%20devis%20%E2%80%94%20Pixeloria&body=Bonjour%2C%0A%0AJe%20souhaite%20obtenir%20un%20devis%20pour%20mon%20projet%20web.%0A%0ACordialement%2C">contact@pixeloria.fr</a>{' '}
                 pour les mettre en avant.
               </p>
             </div>

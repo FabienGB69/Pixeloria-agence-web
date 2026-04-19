@@ -93,7 +93,7 @@ export default function CGVPage() {
             Les données personnelles collectées lors de la relation commerciale sont traitées conformément au
             RGPD. Elles sont conservées pendant la durée légale applicable et ne sont pas transmises à des
             tiers. Pour exercer vos droits :{' '}
-            <a href="mailto:contact@pixeloria.fr">contact@pixeloria.fr</a>.
+            <a href="mailto:contact@pixeloria.fr?subject=Demande%20de%20devis%20%E2%80%94%20Pixeloria&body=Bonjour%2C%0A%0AJe%20souhaite%20obtenir%20un%20devis%20pour%20mon%20projet%20web.%0A%0ACordialement%2C">contact@pixeloria.fr</a>.
           </p>
 
           <h2>10. Droit applicable et juridiction</h2>

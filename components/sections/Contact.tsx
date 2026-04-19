@@ -26,7 +26,7 @@ export default function Contact() {
                 </div>
               </a>
 
-              <a href="mailto:contact@pixeloria.fr" className="channel-item">
+              <a href="mailto:contact@pixeloria.fr?subject=Demande%20de%20devis%20%E2%80%94%20Pixeloria&body=Bonjour%2C%0A%0AJe%20souhaite%20obtenir%20un%20devis%20pour%20mon%20projet%20web.%0A%0ACordialement%2C" className="channel-item">
                 <div className="channel-icon">
                   <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
                     <rect x="2" y="4" width="20" height="16" rx="3" stroke="currentColor" strokeWidth="1.8" />
