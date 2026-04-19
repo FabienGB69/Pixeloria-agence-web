@@ -14,7 +14,7 @@ export default function Services() {
         <div className="pricing-cards">
           <div className="pricing-card">
             <p className="pricing-label">One-Shot</p>
-            <p className="pricing-price">490 € <span>TTC</span></p>
+            <p className="pricing-price"><small className="pricing-from">à partir de</small> 490 € <span>TTC</span></p>
             <ul>
               <li>Site livré en 5 jours</li>
               <li>Design sur-mesure</li>

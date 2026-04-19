@@ -1,9 +1,9 @@
 interface JsonLdProps {
-  type?: 'home' | 'refonte';
+  type?: 'home' | 'refonte' | 'creation';
 }
 
 export default function JsonLd({ type = 'home' }: JsonLdProps) {
-  if (type === 'refonte') {
+  if (type === 'refonte' || type === 'creation') {
     const serviceSchema = {
       '@context': 'https://schema.org',
       '@type': 'Service',

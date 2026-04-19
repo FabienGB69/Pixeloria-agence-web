@@ -865,7 +865,7 @@ abbr[title] {
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.2rem;
+  gap: 1.75rem;
 }
 
 .service-card {
@@ -873,7 +873,7 @@ abbr[title] {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
-  padding: 1.8rem;
+  padding: 2.25rem;
   transition: transform 0.3s var(--ease-spring), box-shadow 0.3s ease, border-color 0.3s;
   overflow: hidden;
 }
@@ -2183,7 +2183,7 @@ select {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 2rem 1.75rem;
+  padding: 2.5rem 2rem;
   position: relative;
 }
 .pricing-card--featured {
@@ -2203,6 +2203,15 @@ select {
   border-radius: 99px;
   white-space: nowrap;
 }
+.pricing-from {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+  font-style: normal;
+}
+
 .pricing-label {
   font-size: 12px;
   font-weight: 700;
@@ -2228,7 +2237,7 @@ select {
   margin: 0 0 1.5rem;
 }
 .pricing-card ul li {
-  padding: 6px 0;
+  padding: 10px 0;
   font-size: 14px;
   color: var(--text-muted);
 }
@@ -2735,5 +2744,98 @@ select {
   .review-cta-icon {
     width: 44px;
     height: 44px;
+  }
+}
+
+/* ============================================================
+   CREATION PAGE & FORM
+============================================================ */
+.creation-page-header {
+  max-width: 580px;
+  margin: 2.5rem auto 2rem;
+  text-align: center;
+  padding-inline: 1rem;
+}
+
+.creation-page-header h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin-bottom: 0.75rem;
+}
+
+.creation-page-header p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+/* Wizard step label */
+.wizard-steps-label {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+/* Form field helpers */
+.field-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+
+.field-error {
+  display: block;
+  font-size: 0.8rem;
+  color: #e43f6f;
+  margin-top: 0.3rem;
+}
+
+/* Site type selection grid */
+.creation-type-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.creation-type-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1.1rem 1.25rem;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: var(--r-md);
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.creation-type-card:hover {
+  border-color: var(--primary-light);
+}
+
+.creation-type-card.is-selected {
+  border-color: var(--primary);
+  background: var(--primary-faint);
+  box-shadow: 0 0 0 3px rgba(91,63,212,0.12);
+}
+
+.creation-type-label {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.creation-type-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+@media (max-width: 480px) {
+  .creation-type-grid {
+    grid-template-columns: 1fr;
   }
 }
