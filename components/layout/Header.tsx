@@ -36,7 +36,7 @@ export default function Header() {
   return (
     <header className={`site-header${scrolled ? ' scrolled' : ''}`} id="site-header">
       <div className="container nav-wrapper">
-        <a href="#home" className="logo" aria-label="Pixeloria accueil">
+        <a href="/" className="logo" aria-label="Pixeloria accueil">
           <Image
             src="/assets/pixeloria-logo.svg"
             className="logo-image"

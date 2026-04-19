@@ -47,13 +47,6 @@ export default function Marketing() {
                   <span>Nurturing, onboarding, relance panier</span>
                 </div>
               </li>
-              <li>
-                <span className="feature-dot" aria-hidden="true"></span>
-                <div>
-                  <strong>Social media &amp; ads</strong>
-                  <span>Captions, scripts vidéo, copies publicitaires</span>
-                </div>
-              </li>
             </ul>
           </div>
 
