@@ -975,11 +975,10 @@ abbr[title] {
 
 .project-card {
   position: relative;
-  border: 1px solid var(--border-dark);
+  border: 1px solid var(--border);
   border-radius: var(--r-lg);
   padding: 1.6rem;
-  background: rgba(255,255,255,0.04);
-  backdrop-filter: blur(6px);
+  background: var(--surface);
   overflow: hidden;
   transition: transform 0.3s var(--ease-spring), box-shadow 0.3s, border-color 0.3s;
   display: flex;
@@ -988,9 +987,9 @@ abbr[title] {
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 24px 56px rgba(0,0,0,0.4), 0 0 30px rgba(38,216,190,0.12);
-  border-color: rgba(38,216,190,0.35);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-light);
 }
 
 .project-meta {
@@ -1010,14 +1009,14 @@ abbr[title] {
 
 .project-year {
   font-size: 0.78rem;
-  color: rgba(255,255,255,0.35);
+  color: var(--text-muted);
 }
 
 .project-visual {
   height: 120px;
   border-radius: var(--r-md);
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: var(--surface-tinted);
+  border: 1px solid var(--border);
   display: flex;
   align-items: flex-end;
   padding: 0.8rem;
@@ -1075,10 +1074,10 @@ abbr[title] {
 .pv-phone {
   width: 55px;
   height: 95px;
-  border: 1.5px solid rgba(255,255,255,0.18);
+  border: 1.5px solid var(--border);
   border-radius: 12px;
   padding: 6px 5px;
-  background: rgba(255,255,255,0.04);
+  background: var(--surface);
 }
 
 .pv-phone-inner {
@@ -1129,11 +1128,11 @@ abbr[title] {
 .project-card h3 {
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--text-light);
+  color: var(--text);
 }
 
 .project-card p {
-  color: var(--text-light-muted);
+  color: var(--text-muted);
   font-size: 0.91rem;
   flex: 1;
 }
@@ -1144,7 +1143,7 @@ abbr[title] {
   gap: 0.4rem;
   font-size: 0.86rem;
   font-weight: 600;
-  color: var(--mint);
+  color: var(--primary);
   transition: gap 0.2s;
 }
 
@@ -1161,7 +1160,7 @@ abbr[title] {
 }
 .project-bullets li {
   font-size: 0.8rem;
-  color: rgba(240, 250, 248, 0.65);
+  color: var(--text-muted);
   padding: 0.25rem 0 0.25rem 1.1rem;
   position: relative;
 }
@@ -1169,7 +1168,7 @@ abbr[title] {
   content: '→';
   position: absolute;
   left: 0;
-  color: var(--mint);
+  color: var(--primary);
   font-weight: 700;
 }
 .project-sector {
