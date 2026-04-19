@@ -343,10 +343,10 @@ export default function TunnelForm() {
           <>
             <div className="step-lead"><h2>Vos coordonnées</h2><p>Dernière étape : recevez votre audit et plan d&apos;actions personnalisé.</p></div>
             <div className="field-grid">
-              <label>Prénom<input type="text" placeholder="Prénom" value={s.prenom} onChange={e => update({ prenom: e.target.value })} /></label>
-              <label>Nom<input type="text" placeholder="Nom" value={s.nom} onChange={e => update({ nom: e.target.value })} /></label>
-              <label>Email pro<input type="email" placeholder="vous@entreprise.fr" value={s.email} onChange={e => update({ email: e.target.value })} /></label>
-              <label>Téléphone<input type="tel" placeholder="06 00 00 00 00" value={s.phone} onChange={e => update({ phone: e.target.value })} /></label>
+              <label>Prénom<input type="text" name="prenom" placeholder="Prénom" value={s.prenom} onChange={e => update({ prenom: e.target.value })} /></label>
+              <label>Nom<input type="text" name="nom" placeholder="Nom" value={s.nom} onChange={e => update({ nom: e.target.value })} /></label>
+              <label>Email pro<input type="email" name="email" placeholder="vous@entreprise.fr" value={s.email} onChange={e => update({ email: e.target.value })} /></label>
+              <label>Téléphone<input type="tel" name="phone" placeholder="06 00 00 00 00" value={s.phone} onChange={e => update({ phone: e.target.value })} /></label>
             </div>
             <label>Message (facultatif)<textarea placeholder="Contexte complémentaire" rows={3} value={s.message} onChange={e => update({ message: e.target.value })} /></label>
             <TurnstileWidget onVerify={onTurnstileVerify} onExpire={onTurnstileExpire} />

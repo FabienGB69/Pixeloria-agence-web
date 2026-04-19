@@ -45,7 +45,7 @@ test.describe('Formulaire contact', () => {
 
     await form.locator('button[type="submit"]').click();
 
-    await expect(page.locator('[role="alert"]')).toBeVisible({ timeout: 5000 });
+    await expect(page.locator('form.contact-form [role="alert"]')).toBeVisible({ timeout: 5000 });
   });
 
   test('email invalide déclenche aria-invalid', async ({ page }) => {
