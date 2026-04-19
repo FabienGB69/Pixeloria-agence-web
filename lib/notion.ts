@@ -22,6 +22,7 @@ export const OFFRE_LABELS: Record<string, string> = {
   'ui-ux':     'UI / UX design',
   integration: 'Intégration web',
   full:        'Projet complet',
+  creation:    'Création de site',
 };
 
 /**
@@ -84,6 +85,8 @@ export function resolveOffreAndSource(offre: string): {
 } {
   const offreLabel =
     OFFRE_LABELS[offre] ?? (safe(offre, 100) || 'Non précisé');
-  const source = offre ? 'Tunnel refonte' : 'Contact direct';
+  const source = offre === 'creation' ? 'Tunnel création'
+               : offre               ? 'Tunnel refonte'
+               :                       'Contact direct';
   return { offreLabel, source };
 }

@@ -14,7 +14,7 @@ export default function Services() {
         <div className="pricing-cards">
           <div className="pricing-card">
             <p className="pricing-label">One-Shot</p>
-            <p className="pricing-price">490 € <span>TTC</span></p>
+            <p className="pricing-price"><small className="pricing-from">à partir de</small> 490 € <span>TTC</span></p>
             <ul>
               <li>Site livré en 5 jours</li>
               <li>Design sur-mesure</li>
@@ -25,13 +25,14 @@ export default function Services() {
           </div>
           <div className="pricing-card pricing-card--featured">
             <span className="pricing-badge">Recommandé</span>
-            <p className="pricing-label">Maintenance</p>
-            <p className="pricing-price">49 € <span>/ mois</span></p>
+            <p className="pricing-label">Refonte · Maintenance · SEO</p>
+            <p className="pricing-price">89 € <span>/ mois</span></p>
             <ul>
-              <li>Même site inclus</li>
-              <li>Hébergement inclus</li>
-              <li>Mises à jour mensuelles</li>
-              <li>Support réactif</li>
+              <li>Site refait sur-mesure inclus</li>
+              <li>Hébergement + domaine offerts</li>
+              <li>SEO optimisé chaque mois</li>
+              <li>Modifications illimitées mineures</li>
+              <li>Support WhatsApp sous 24 h</li>
             </ul>
             <a href="/refonte?offre=abo" className="btn btn-primary">Démarrer →</a>
           </div>
