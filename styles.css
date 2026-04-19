@@ -313,7 +313,7 @@ abbr[title] {
   background: var(--surface-glass);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(255,255,255,0.6);
+  border: 1px solid var(--border);
   border-radius: var(--r-lg);
   box-shadow: var(--shadow-md);
 }
@@ -1184,6 +1184,88 @@ abbr[title] {
   text-align: center;
 }
 
+/* Before / After comparison */
+.portfolio-comparison {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.portfolio-thumb-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background: var(--surface-tinted);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 0.6rem;
+  min-width: 0;
+}
+
+.portfolio-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: calc(var(--r-md) - 4px);
+  display: block;
+}
+
+.portfolio-thumb--link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-faint);
+  border: 1px solid var(--primary-light);
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.portfolio-thumb--link:hover {
+  background: var(--primary);
+  color: var(--surface);
+}
+
+.thumb-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--r-full);
+  align-self: flex-start;
+}
+
+.thumb-label--before {
+  background: var(--surface);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+
+.thumb-label--after {
+  background: var(--primary-faint);
+  color: var(--primary);
+  border: 1px solid var(--primary-light);
+}
+
+.portfolio-creation-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--r-full);
+  background: var(--primary-faint);
+  color: var(--primary);
+  border: 1px solid var(--primary-light);
+  margin-top: 0.25rem;
+}
+
 /* ============================================================
    PROCESS
 ============================================================ */
@@ -1572,7 +1654,7 @@ select {
   background: var(--surface-glass);
   backdrop-filter: blur(12px);
   border-radius: var(--r-lg);
-  border: 1px solid rgba(255,255,255,0.6);
+  border: 1px solid var(--border);
   text-align: center;
   padding: 2rem;
   animation: fadeIn 0.5s var(--ease-out) both;
