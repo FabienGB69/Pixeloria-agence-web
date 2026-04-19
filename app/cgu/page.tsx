@@ -58,7 +58,7 @@ export default function CGUPage() {
             <li>Droit à la portabilité</li>
           </ul>
           <p>
-            Pour exercer ces droits : <a href="mailto:contact@pixeloria.fr">contact@pixeloria.fr</a>.
+            Pour exercer ces droits : <a href="mailto:contact@pixeloria.fr?subject=Demande%20de%20devis%20%E2%80%94%20Pixeloria&body=Bonjour%2C%0A%0AJe%20souhaite%20obtenir%20un%20devis%20pour%20mon%20projet%20web.%0A%0ACordialement%2C">contact@pixeloria.fr</a>.
             En cas de réclamation non résolue, vous pouvez saisir la CNIL (
             <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer">www.cnil.fr</a>).
           </p>

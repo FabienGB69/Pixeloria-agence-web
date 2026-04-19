@@ -28,7 +28,7 @@ export default function MentionsLegalesPage() {
             Inscription au RCS : Greffe de Lyon, le 19/01/2015<br />
             Inscription au RNE : 15/01/2015<br />
             Numéro de TVA intracommunautaire : FR44798262416<br />
-            Email : <a href="mailto:contact@pixeloria.fr">contact@pixeloria.fr</a><br />
+            Email : <a href="mailto:contact@pixeloria.fr?subject=Demande%20de%20devis%20%E2%80%94%20Pixeloria&body=Bonjour%2C%0A%0AJe%20souhaite%20obtenir%20un%20devis%20pour%20mon%20projet%20web.%0A%0ACordialement%2C">contact@pixeloria.fr</a><br />
             Téléphone : <a href="tel:+33786125313">07 86 12 53 13</a>
           </p>
 
@@ -54,7 +54,7 @@ export default function MentionsLegalesPage() {
             à vos demandes et ne sont jamais cédées à des tiers. Conformément au Règlement Général sur la
             Protection des Données (RGPD), vous disposez d&apos;un droit d&apos;accès, de rectification et de
             suppression de vos données. Pour exercer ces droits, contactez :{' '}
-            <a href="mailto:contact@pixeloria.fr">contact@pixeloria.fr</a>.
+            <a href="mailto:contact@pixeloria.fr?subject=Demande%20de%20devis%20%E2%80%94%20Pixeloria&body=Bonjour%2C%0A%0AJe%20souhaite%20obtenir%20un%20devis%20pour%20mon%20projet%20web.%0A%0ACordialement%2C">contact@pixeloria.fr</a>.
           </p>
 
           <h2>5. Cookies</h2>

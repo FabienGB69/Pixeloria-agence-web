@@ -43,7 +43,7 @@ export default function Footer() {
         <nav className="footer-nav" aria-label="Contact pied de page">
           <strong>Contact</strong>
           <a href="tel:+33786125313">07 86 12 53 13</a>
-          <a href="mailto:contact@pixeloria.fr">contact@pixeloria.fr</a>
+          <a href="mailto:contact@pixeloria.fr?subject=Demande%20de%20devis%20%E2%80%94%20Pixeloria&body=Bonjour%2C%0A%0AJe%20souhaite%20obtenir%20un%20devis%20pour%20mon%20projet%20web.%0A%0ACordialement%2C">contact@pixeloria.fr</a>
           <a href="https://wa.me/33786125313" target="_blank" rel="noopener noreferrer">
             WhatsApp
           </a>

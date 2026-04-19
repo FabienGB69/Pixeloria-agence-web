@@ -57,11 +57,12 @@ export default function ContactForm() {
         track('contact_form_submit', { offre: (data.offre as string) || 'none' });
         setFormState({ loading: false, success: true, error: null });
       } else {
-        setFormState({
-          loading: false,
-          success: false,
-          error: 'Une erreur est survenue. Contactez-nous directement par email ou WhatsApp.',
-        });
+        let errMsg = 'Une erreur est survenue. Contactez-nous directement.';
+        try {
+          const body = await res.json() as { error?: string };
+          if (body.error) errMsg = body.error;
+        } catch { /* ignore */ }
+        setFormState({ loading: false, success: false, error: errMsg });
       }
     } catch {
       // API absent (dev local) — afficher succès UX
@@ -213,9 +214,15 @@ export default function ContactForm() {
       {formState.error && (
         <p
           role="alert"
-          style={{ color: '#e43f6f', fontSize: '0.9rem', marginTop: '0.75rem', textAlign: 'center' }}
+          style={{ color: '#e43f6f', fontSize: '0.9rem', marginTop: '0.75rem', textAlign: 'center', lineHeight: 1.5 }}
         >
-          {formState.error}
+          {formState.error}{' '}
+          <a
+            href="mailto:contact@pixeloria.fr?subject=Demande%20de%20devis%20%E2%80%94%20Pixeloria&body=Bonjour%2C%0A%0AJe%20souhaite%20obtenir%20un%20devis%20pour%20mon%20projet%20web.%0A%0ACordialement%2C"
+            style={{ color: 'inherit', textDecoration: 'underline', whiteSpace: 'nowrap' }}
+          >
+            contact@pixeloria.fr
+          </a>
         </p>
       )}
 
