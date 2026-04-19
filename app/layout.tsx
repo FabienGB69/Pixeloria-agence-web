@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: '%s | Pixeloria',
   },
   description:
-    'Des sites qui amènent des clients. Création et refonte de sites web pour artisans et PME. Offres à partir de 49€/mois.',
+    'Des sites qui amènent des clients. Création et refonte de sites web pour artisans et PME. Offres à partir de 89€/mois.',
   metadataBase: new URL('https://pixeloria.fr'),
   openGraph: {
     type: 'website',

@@ -18,7 +18,7 @@ export default function Hero() {
           <p className="hero-sub">
             Pixeloria crée des sites web qui génèrent des leads — design
             premium, SEO optimisé, livré en 5 jours. À partir de
-            490&nbsp;€&nbsp;TTC ou 49&nbsp;€/mois sans engagement.
+            À partir de 490&nbsp;€&nbsp;TTC ou 89&nbsp;€/mois sans engagement.
           </p>
 
           <div className="hero-actions">
@@ -40,11 +40,11 @@ export default function Hero() {
           <div className="hero-metrics">
             <div className="metric">
               <strong className="metric-value">490 €</strong>
-              <span>site one-shot TTC</span>
+              <span>à partir de · TTC</span>
             </div>
             <div className="metric-divider" aria-hidden="true"></div>
             <div className="metric">
-              <strong className="metric-value">49 €</strong>
+              <strong className="metric-value">89 €</strong>
               <span>/ mois sans engagement</span>
             </div>
             <div className="metric-divider" aria-hidden="true"></div>

@@ -1696,8 +1696,9 @@ select {
    FOOTER
 ============================================================ */
 .site-footer {
-  background: var(--text);
-  color: rgba(255,255,255,0.7);
+  background: var(--surface-tinted);
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
 }
 
 .footer-inner {
@@ -1717,8 +1718,7 @@ select {
 .footer-logo {
   width: clamp(130px, 14vw, 185px);
   height: auto;
-  filter: brightness(0) invert(1);
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .footer-nav {
@@ -1732,24 +1732,24 @@ select {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: rgba(255,255,255,0.5);
+  color: var(--text);
   margin-bottom: 0.3rem;
 }
 
 .footer-nav a {
   font-size: 0.9rem;
-  color: rgba(255,255,255,0.65);
+  color: var(--text-muted);
   transition: color 0.2s;
 }
 
-.footer-nav a:hover { color: #fff; }
+.footer-nav a:hover { color: var(--text); }
 
 .footer-social strong {
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: rgba(255,255,255,0.5);
+  color: var(--text);
   display: block;
   margin-bottom: 0.8rem;
 }
@@ -1766,9 +1766,9 @@ select {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.2);
-  background: rgba(255,255,255,0.06);
-  color: rgba(255,255,255,0.65);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-muted);
   transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s var(--ease-spring);
 }
 
@@ -1786,7 +1786,7 @@ select {
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid var(--border);
 }
 
 .footer-bottom-inner {
@@ -1798,7 +1798,7 @@ select {
 
 .footer-bottom p {
   font-size: 0.84rem;
-  color: rgba(255,255,255,0.4);
+  color: var(--text-subtle);
 }
 
 /* ─── Marketing section ─── */
@@ -1968,14 +1968,16 @@ select {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.15);
-  color: rgba(255,255,255,0.6);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
   transition: background 0.2s, transform 0.2s var(--ease-spring);
 }
 
 .back-top:hover {
-  background: rgba(91,63,212,0.16);
+  background: var(--primary-faint);
+  border-color: var(--primary-light);
+  color: var(--primary);
   transform: translateY(-3px);
 }
 
