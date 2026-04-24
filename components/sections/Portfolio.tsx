@@ -24,7 +24,7 @@ export default function Portfolio() {
         'SEO technique revu de zéro',
         'Pages de destination locales',
       ],
-      beforeImage: '/assets/portfolio/escalee-avant.jpg',
+      beforeImage: '/assets/portfolio/escalee-avant.png',
     },
     {
       type: 'Refonte',
@@ -39,7 +39,7 @@ export default function Portfolio() {
         'Responsive mobile-first',
         'Temps de chargement divisé par 2',
       ],
-      beforeImage: '/assets/portfolio/lenora-avant.jpg',
+      beforeImage: '/assets/portfolio/lenora-avant.png',
     },
     {
       type: 'Création',
@@ -99,6 +99,7 @@ export default function Portfolio() {
                 <div className="portfolio-comparison">
                   <div className="portfolio-thumb-wrap">
                     <span className="thumb-label thumb-label--before">Avant</span>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       className="portfolio-thumb"
                       src={p.beforeImage}
