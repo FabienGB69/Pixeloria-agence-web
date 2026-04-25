@@ -5,56 +5,65 @@ import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Réalisations — sites internet créés par Pixeloria | Pixeloria',
+  title: 'Études de cas client — transformations réalisées par Pixeloria | Pixeloria',
   description:
-    'Découvrez les sites internet créés par Pixeloria pour artisans, TPE et PME : design responsive, SEO local, formulaire de contact. Exemples concrets de réalisations.',
+    'Découvrez comment Pixeloria transforme des sites existants ou crée des sites vitrines pour des conciergeries, freelances et TPE. Études de cas avec contexte, problèmes identifiés et résultats.',
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/realisations',
-    title: 'Réalisations — sites internet créés par Pixeloria | Pixeloria',
+    title: 'Études de cas client — transformations réalisées par Pixeloria | Pixeloria',
     description:
-      'Exemples de sites internet créés par Pixeloria pour artisans, TPE et PME. Design responsive et SEO local.',
+      'Refonte et création de sites pour conciergeries, freelances et TPE locales. Études de cas détaillées.',
     locale: 'fr_FR',
     siteName: 'Pixeloria',
   },
 };
 
-const realisations = [
+const etudes = [
   {
-    client: 'Plombier Paris 15e',
-    description:
-      'Site vitrine 4 pages avec bouton d\'appel direct, formulaire de contact et galerie de chantiers. Référencement local dans le 15e arrondissement.',
-    tags: ['Artisan', 'Site Sérénité'],
+    type: 'Refonte',
+    year: '2026',
+    sector: 'Conciergerie / Tourisme',
+    client: 'Escalee & Goûts',
+    slug: 'escalee-gouts',
+    url: 'https://www.escaleetgouts.fr/',
+    summary: 'Refonte complète d\'un site de conciergerie haut de gamme pour améliorer l\'image, la lisibilité mobile et les demandes de contact.',
+    axes: [
+      'Design haut de gamme aligné avec le positionnement',
+      'Expérience mobile pensée pour faciliter la prise de contact',
+      'Base SEO restructurée pour une meilleure visibilité locale',
+      'Parcours de contact simplifié',
+    ],
   },
   {
-    client: 'Électricien Lyon',
-    description:
-      'Site 3 pages présentant les services, les zones d\'intervention et un formulaire de devis rapide. Optimisé pour la recherche locale sur l\'agglomération lyonnaise.',
-    tags: ['Artisan', 'Site Essentiel'],
+    type: 'Refonte',
+    year: '2026',
+    sector: 'Conciergerie',
+    client: 'Lenora Conciergerie',
+    slug: 'lenora-conciergerie',
+    url: 'https://lenora-conciergerie.vercel.app/',
+    summary: 'Modernisation d\'un site de conciergerie pour renforcer la crédibilité, clarifier l\'offre et faciliter les prises de contact.',
+    axes: [
+      'Identité visuelle épurée et professionnelle',
+      'Offre de services lisible dès l\'accueil',
+      'Navigation simplifiée',
+      'Parcours de contact simplifié pour réduire les frictions',
+    ],
   },
   {
-    client: 'Cabinet de kinésithérapie Grenoble',
-    description:
-      'Site professionnel avec prise de contact en ligne, présentation de l\'équipe et des spécialités. Adapté à une patientèle locale exigeante.',
-    tags: ['TPE', 'Site Sérénité'],
-  },
-  {
-    client: 'Menuiserie Favre (Drôme)',
-    description:
-      'Site vitrine valorisant les savoir-faire artisanaux avec galerie photo de créations sur-mesure. SEO renforcé sur le département de la Drôme.',
-    tags: ['Artisan', 'Site Croissance'],
-  },
-  {
-    client: 'Agence immobilière Valence',
-    description:
-      'Site présentant l\'agence, les biens disponibles et l\'équipe de conseillers. Formulaire de contact et intégration d\'un outil d\'estimation en ligne.',
-    tags: ['PME', 'Site Sérénité'],
-  },
-  {
-    client: 'Restaurant Le Mas des Oliviers',
-    description:
-      'Site vitrine mettant en avant la carte, les menus et les événements. Réservation par téléphone facilitée grâce au bouton d\'appel direct.',
-    tags: ['TPE', 'Site Essentiel'],
+    type: 'Création complète',
+    year: '2026',
+    sector: 'Rédaction & Contenu',
+    client: 'Content by Denise',
+    slug: 'content-by-denise',
+    url: 'https://contentbydenise.vercel.app/',
+    summary: 'Création d\'un portfolio professionnel pour une rédactrice freelance : identité visuelle, mise en valeur des travaux, appels à l\'action orientés leads.',
+    axes: [
+      'Branding sur-mesure adapté au positionnement créatif',
+      'Portfolio de contenus structuré',
+      'Appels à l\'action orientés demandes de mission',
+      'Base SEO posée dès le lancement',
+    ],
   },
 ];
 
@@ -72,14 +81,14 @@ export default function RealisationsPage() {
               <nav className="breadcrumb" aria-label="Fil d'Ariane">
                 <Link href="/">Accueil</Link>
                 <span aria-hidden="true"> › </span>
-                <span>Réalisations</span>
+                <span>Études de cas</span>
               </nav>
-              <span className="eyebrow">Notre portfolio</span>
-              <h1>Sites internet créés par Pixeloria</h1>
+              <span className="eyebrow">Preuve d&apos;expertise</span>
+              <h1>Études de cas client</h1>
               <p className="page-hero-sub">
-                Des exemples concrets de sites réalisés pour des artisans, des TPE et des PME.
-                Design responsive, SEO local et formulaire de contact : des sites pensés pour
-                générer de vrais contacts.
+                Découvrez comment Pixeloria transforme des sites existants ou crée des sites
+                vitrines plus clairs, plus modernes et mieux structurés pour inspirer confiance
+                et générer davantage de demandes de contact.
               </p>
               <div className="page-hero-actions">
                 <a href="/#contact" className="btn btn-primary btn-lg">
@@ -93,67 +102,58 @@ export default function RealisationsPage() {
           </div>
         </section>
 
-        {/* Portfolio grid */}
+        {/* Grille études de cas */}
         <section className="section">
           <div className="container">
-            <div className="section-heading">
-              <span className="eyebrow">Exemples de projets</span>
-              <h2>Quelques-unes de nos réalisations</h2>
-              <p className="section-sub">
-                Chaque site est conçu sur-mesure selon l&apos;activité, la zone géographique
-                et les objectifs du client. Voici une sélection représentative.
-              </p>
-            </div>
-            <div className="portfolio-grid">
-              {realisations.map((item) => (
-                <div key={item.client} className="portfolio-card">
-                  <div
-                    className="portfolio-card-img"
-                    style={{
-                      background: 'linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%)',
-                      minHeight: '180px',
-                      borderRadius: 'var(--radius) var(--radius) 0 0',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                    }}
-                  >
-                    <span
-                      style={{
-                        color: '#fff',
-                        fontWeight: 700,
-                        fontSize: '1rem',
-                        textAlign: 'center',
-                        padding: '1rem',
-                      }}
+            <div className="etude-grid">
+              {etudes.map((e) => (
+                <article key={e.slug} className="etude-card">
+                  <div className="etude-meta">
+                    <span className="tag">{e.type}</span>
+                    <span className="etude-year">{e.year}</span>
+                    <span className="etude-sector">{e.sector}</span>
+                  </div>
+
+                  <h2 className="etude-title">{e.client}</h2>
+                  <p className="etude-summary">{e.summary}</p>
+
+                  <ul className="etude-axes">
+                    {e.axes.map((axe) => (
+                      <li key={axe}>{axe}</li>
+                    ))}
+                  </ul>
+
+                  <div className="etude-actions">
+                    <Link href={`/realisations/${e.slug}`} className="btn btn-primary">
+                      Voir la transformation
+                      <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                        <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </Link>
+                    <a
+                      href={e.url}
+                      className="etude-link-secondary"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      {item.client}
-                    </span>
+                      Voir le site final ↗
+                    </a>
                   </div>
-                  <div className="portfolio-card-body">
-                    <h3>{item.client}</h3>
-                    <p>{item.description}</p>
-                    <div className="portfolio-tags">
-                      {item.tags.map((tag) => (
-                        <span key={tag} className="portfolio-tag">{tag}</span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+                </article>
               ))}
             </div>
           </div>
         </section>
 
-        {/* CTA bloc */}
+        {/* CTA global — Partie 10 */}
         <section className="section section-tinted">
           <div className="container">
             <div className="page-cta-block">
-              <h2>Votre site pourrait être ici</h2>
+              <h2>Vous voulez savoir ce qui bloque votre site actuel&nbsp;?</h2>
               <p>
-                Pixeloria accompagne artisans, TPE et PME de A à Z&nbsp;: conception,
-                développement, mise en ligne et suivi. Obtenez un premier retour gratuit
-                sur votre projet ou votre site actuel.
+                Pixeloria peut analyser votre site et vous transmettre 3 à 5 pistes concrètes
+                pour améliorer sa clarté, sa crédibilité et sa capacité à générer des demandes
+                de contact.
               </p>
               <a href="/#contact" className="btn btn-primary btn-lg">
                 Demander un audit gratuit
