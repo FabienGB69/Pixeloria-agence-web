@@ -53,12 +53,12 @@ export default function Header() {
           aria-label="Navigation principale"
           ref={navRef}
         >
-          <a href="#services" className="nav-link" onClick={closeMenu}>Services</a>
-          <a href="#marketing" className="nav-link" onClick={closeMenu}>Marketing</a>
+          <a href="#services" className="nav-link" onClick={closeMenu}>Offres</a>
           <a href="#portfolio" className="nav-link" onClick={closeMenu}>Portfolio</a>
           <a href="#process" className="nav-link" onClick={closeMenu}>Process</a>
           <a href="#testimonials" className="nav-link" onClick={closeMenu}>Avis</a>
-          <a href="#contact" className="btn btn-nav" onClick={closeMenu}>Lancer mon projet</a>
+          <a href="#faq" className="nav-link" onClick={closeMenu}>FAQ</a>
+          <a href="#contact" className="btn btn-nav" onClick={closeMenu}>Audit gratuit</a>
         </nav>
 
         <button

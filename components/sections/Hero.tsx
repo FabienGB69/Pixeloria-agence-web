@@ -6,34 +6,33 @@ export default function Hero() {
         <div className="hero-text reveal">
           <div className="hero-badge">
             <span className="badge-dot"></span>
-            Spécialiste web pour artisans &amp; PME
+            Spécialiste web pour TPE, PME &amp; artisans
           </div>
 
           <h1>
-            Des sites qui{' '}
-            <em className="gradient-text">amènent</em>{' '}
-            des clients.
+            Création et refonte de sites internet pour{' '}
+            <em className="gradient-text">TPE, PME et artisans</em>{' '}
+            locaux.
           </h1>
 
           <p className="hero-sub">
-            Pixeloria crée des sites web qui génèrent des leads — design
-            premium, SEO optimisé, livré en 5 jours. À partir de
-            À partir de 490&nbsp;€&nbsp;TTC ou 89&nbsp;€/mois sans engagement.
+            Un site professionnel, moderne et optimisé pour Google, sans gros
+            budget de départ. Pixeloria vous accompagne de A à Z pour attirer
+            de nouveaux clients en ligne.
           </p>
 
           <div className="hero-actions">
-            <a href="/refonte" className="btn btn-primary">
-              <span>Lancer mon projet</span>
+            <a href="#contact" className="btn btn-primary">
+              <span>Demander un audit gratuit</span>
               <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                 <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </a>
-            <a href="#portfolio" className="btn btn-ghost">
-              <svg className="btn-icon-left" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                <circle cx="10" cy="10" r="8" stroke="currentColor" strokeWidth="1.6" />
-                <path d="M8 7l5 3-5 3V7Z" fill="currentColor" />
+            <a href="#services" className="btn btn-ghost">
+              Voir les offres
+              <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M10 4v12M4 10l6 6 6-6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-              Voir les designs
             </a>
           </div>
 
@@ -45,7 +44,7 @@ export default function Hero() {
             <div className="metric-divider" aria-hidden="true"></div>
             <div className="metric">
               <strong className="metric-value">89 €</strong>
-              <span>/ mois sans engagement</span>
+              <span>/ mois · formule mensuelle</span>
             </div>
             <div className="metric-divider" aria-hidden="true"></div>
             <div className="metric">
@@ -58,47 +57,47 @@ export default function Hero() {
         <div className="hero-visual reveal reveal-right">
           <div className="hero-card glass-card">
             <div className="hero-card-header">
-              <span className="chip">Design Assembly</span>
+              <span className="chip">Votre site en ligne</span>
               <div className="traffic-lights" aria-hidden="true">
                 <span></span><span></span><span></span>
               </div>
             </div>
-            <h2>Pixeloria Dashboard</h2>
-            <p>Direction artistique + UI kit + intégration responsive.</p>
+            <h2>Site Sérénité</h2>
+            <p>Design sur-mesure · SEO local · Support réactif</p>
 
             <ul className="feature-list">
               <li>
                 <svg viewBox="0 0 20 20" aria-hidden="true">
                   <path d="M4 10l4 4 8-8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
                 </svg>
-                Système visuel cohérent
+                Jusqu&apos;à 5 pages sur-mesure
               </li>
               <li>
                 <svg viewBox="0 0 20 20" aria-hidden="true">
                   <path d="M4 10l4 4 8-8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
                 </svg>
-                Composants prêts à évoluer
+                SEO local de base inclus
               </li>
               <li>
                 <svg viewBox="0 0 20 20" aria-hidden="true">
                   <path d="M4 10l4 4 8-8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
                 </svg>
-                Animations fluides
+                Hébergement + domaine offerts
               </li>
               <li>
                 <svg viewBox="0 0 20 20" aria-hidden="true">
                   <path d="M4 10l4 4 8-8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
                 </svg>
-                Performance Lighthouse 95+
+                Support WhatsApp sous 24 h
               </li>
             </ul>
 
             <div className="mini-chart" aria-hidden="true">
-              <div className="chart-bar" style={{ ['--h' as string]: '40%' }}></div>
-              <div className="chart-bar" style={{ ['--h' as string]: '65%' }}></div>
-              <div className="chart-bar" style={{ ['--h' as string]: '50%' }}></div>
-              <div className="chart-bar" style={{ ['--h' as string]: '80%' }}></div>
-              <div className="chart-bar" style={{ ['--h' as string]: '60%' }}></div>
+              <div className="chart-bar" style={{ ['--h' as string]: '30%' }}></div>
+              <div className="chart-bar" style={{ ['--h' as string]: '45%' }}></div>
+              <div className="chart-bar" style={{ ['--h' as string]: '55%' }}></div>
+              <div className="chart-bar" style={{ ['--h' as string]: '70%' }}></div>
+              <div className="chart-bar" style={{ ['--h' as string]: '82%' }}></div>
               <div className="chart-bar" style={{ ['--h' as string]: '95%' }} data-active></div>
             </div>
           </div>
@@ -108,14 +107,14 @@ export default function Hero() {
             <svg viewBox="0 0 20 20" fill="none">
               <path d="M10 2l2.4 5 5.6.8-4 3.9.9 5.5L10 14.7l-5 2.5.9-5.5L2 7.8 7.6 7z" fill="currentColor" />
             </svg>
-            98% satisfaction
+            100% satisfaction
           </div>
           <div className="float-badge float-badge-2" aria-hidden="true">
             <svg viewBox="0 0 20 20" fill="none">
               <circle cx="10" cy="10" r="8" stroke="currentColor" strokeWidth="1.8" />
               <path d="M10 6v4l3 3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
             </svg>
-            Livraison rapide
+            Livré en 5–10 jours
           </div>
         </div>
       </div>

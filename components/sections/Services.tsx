@@ -3,98 +3,76 @@ export default function Services() {
     <section id="services" className="section">
       <div className="container">
         <div className="section-heading reveal">
-          <span className="eyebrow">Services</span>
-          <h2>Un studio complet pour assembler votre design</h2>
+          <span className="eyebrow">Nos offres</span>
+          <h2>Une offre adaptée à chaque étape de votre développement</h2>
           <p className="section-sub">
-            De l&apos;identité de marque à l&apos;expérience utilisateur, nous créons
-            des produits digitaux qui convertissent.
+            Que vous partiez de zéro ou que vous refassiez un site existant,
+            nous avons la formule qui correspond à votre budget et vos objectifs.
           </p>
         </div>
 
-        <div className="pricing-cards">
+        <div className="pricing-cards pricing-cards--three">
+          {/* Offre 1 — Site Essentiel */}
           <div className="pricing-card">
-            <p className="pricing-label">One-Shot</p>
-            <p className="pricing-price"><small className="pricing-from">à partir de</small> 490 € <span>TTC</span></p>
+            <p className="pricing-label">Site Essentiel</p>
+            <p className="pricing-price">
+              <small className="pricing-from">à partir de</small> 490 € <span>TTC</span>
+            </p>
+            <p className="pricing-sublabel">Paiement unique · sans abonnement</p>
             <ul>
-              <li>Site livré en 5 jours</li>
-              <li>Design sur-mesure</li>
-              <li>SEO technique de base</li>
-              <li>Domaine conservé</li>
+              <li>3 pages (Accueil, Services, Contact)</li>
+              <li>Design responsive sur-mesure</li>
+              <li>Formulaire de contact inclus</li>
+              <li>Mise en ligne sur votre domaine</li>
+              <li>Optimisation vitesse de base</li>
             </ul>
-            <a href="/refonte?offre=oneshot" className="btn btn-secondary">Démarrer →</a>
+            <p className="pricing-note">Idéal pour démarrer avec un site propre et professionnel.</p>
+            <a href="#contact" className="btn btn-secondary">Demander un devis →</a>
           </div>
+
+          {/* Offre 2 — Site Sérénité */}
           <div className="pricing-card pricing-card--featured">
             <span className="pricing-badge">Recommandé</span>
-            <p className="pricing-label">Refonte · Maintenance · SEO</p>
-            <p className="pricing-price">89 € <span>/ mois</span></p>
+            <p className="pricing-label">Site Sérénité</p>
+            <p className="pricing-price">89 € <span>/ mois TTC</span></p>
+            <p className="pricing-sublabel">Engagement 12 mois recommandé</p>
             <ul>
-              <li>Site refait sur-mesure inclus</li>
+              <li>Jusqu&apos;à 5 pages sur-mesure</li>
               <li>Hébergement + domaine offerts</li>
-              <li>SEO optimisé chaque mois</li>
-              <li>Modifications illimitées mineures</li>
+              <li>Maintenance &amp; mises à jour incluses</li>
+              <li>Sauvegardes automatiques</li>
+              <li>SEO local de base inclus</li>
+              <li>Indexation Google &amp; Bing</li>
               <li>Support WhatsApp sous 24 h</li>
             </ul>
-            <a href="/refonte?offre=abo" className="btn btn-primary">Démarrer →</a>
+            <p className="pricing-note">La formule complète pour les artisans et PME qui veulent être trouvés sur Google.</p>
+            <a href="#contact" className="btn btn-primary">Choisir cette offre →</a>
+          </div>
+
+          {/* Offre 3 — Site Croissance */}
+          <div className="pricing-card">
+            <p className="pricing-label">Site Croissance</p>
+            <p className="pricing-price">
+              <small className="pricing-from">à partir de</small> 149 € <span>/ mois TTC</span>
+            </p>
+            <p className="pricing-sublabel">Tout Sérénité +</p>
+            <ul>
+              <li>SEO local renforcé chaque mois</li>
+              <li>Google Business Profile optimisé</li>
+              <li>Search Console &amp; Analytics configurés</li>
+              <li>1 article de blog / mois</li>
+              <li>Reporting mensuel de performance</li>
+              <li>Modifications illimitées mineures</li>
+            </ul>
+            <p className="pricing-note">Pour les entreprises qui veulent dominer les résultats Google dans leur zone.</p>
+            <a href="#contact" className="btn btn-secondary">Choisir cette offre →</a>
           </div>
         </div>
 
-        <div className="services-grid">
-          <article className="service-card reveal" data-index="0">
-            <div className="service-icon">
-              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
-                <rect x="6" y="6" width="36" height="36" rx="10" stroke="currentColor" strokeWidth="2.2" />
-                <circle cx="24" cy="24" r="7" stroke="currentColor" strokeWidth="2.2" />
-                <path d="M24 6v5M24 37v5M6 24h5M37 24h5" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-              </svg>
-            </div>
-            <h3>Branding digital</h3>
-            <p>
-              Positionnement, système de logo, palette, tone of voice et
-              assets social media — une identité qui marque les esprits.
-            </p>
-            <ul className="card-tags">
-              <li>Logo</li><li>Charte</li><li>Motion</li>
-            </ul>
-          </article>
-
-          <article className="service-card service-card-featured reveal" data-index="1">
-            <div className="service-icon">
-              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
-                <rect x="4" y="8" width="40" height="28" rx="6" stroke="currentColor" strokeWidth="2.2" />
-                <path d="M16 40h16M24 36v4" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-                <rect x="12" y="16" width="8" height="8" rx="2" stroke="currentColor" strokeWidth="1.8" />
-                <rect x="28" y="16" width="8" height="4" rx="2" stroke="currentColor" strokeWidth="1.8" />
-                <rect x="28" y="24" width="8" height="4" rx="2" stroke="currentColor" strokeWidth="1.8" />
-              </svg>
-            </div>
-            <div className="badge-featured">Plus demandé</div>
-            <h3>UI / UX design</h3>
-            <p>
-              Wireframes, prototypes interactifs et interfaces modernes
-              optimisées pour la conversion et l&apos;expérience utilisateur.
-            </p>
-            <ul className="card-tags">
-              <li>Figma</li><li>Prototype</li><li>UX Research</li>
-            </ul>
-          </article>
-
-          <article className="service-card reveal" data-index="2">
-            <div className="service-icon">
-              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
-                <path d="M16 20l-6 4 6 4M32 20l6 4-6 4M26 14l-4 20" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-                <rect x="4" y="4" width="40" height="40" rx="10" stroke="currentColor" strokeWidth="2.2" />
-              </svg>
-            </div>
-            <h3>Intégration web</h3>
-            <p>
-              Pages ultra-rapides, optimisées SEO et maintenables avec des
-              composants réutilisables et du code propre.
-            </p>
-            <ul className="card-tags">
-              <li>HTML/CSS</li><li>React</li><li>Perf</li>
-            </ul>
-          </article>
-        </div>
+        <p className="pricing-disclaimer reveal">
+          Tous les prix sont TTC · TVA applicable selon votre situation ·{' '}
+          <a href="#contact">Contactez-nous</a> pour un devis personnalisé gratuit.
+        </p>
       </div>
     </section>
   );

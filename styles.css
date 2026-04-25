@@ -2180,6 +2180,10 @@ select {
   max-width: 700px;
   margin: 2rem auto 0;
 }
+.pricing-cards--three {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1040px;
+}
 .pricing-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -2246,6 +2250,31 @@ select {
   content: '✓ ';
   color: #10b981;
   font-weight: 700;
+}
+.pricing-sublabel {
+  font-size: 0.78rem;
+  color: var(--text-subtle);
+  margin: -0.75rem 0 1rem;
+}
+.pricing-note {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin: 0 0 1.25rem;
+  font-style: italic;
+}
+.pricing-disclaimer {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-subtle);
+  margin-top: 2rem;
+}
+.pricing-disclaimer a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+@media (max-width: 900px) {
+  .pricing-cards--three { grid-template-columns: 1fr; max-width: 480px; }
 }
 @media (max-width: 600px) {
   .pricing-cards { grid-template-columns: 1fr; }
@@ -2838,5 +2867,236 @@ select {
 @media (max-width: 480px) {
   .creation-type-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   WHY PIXELORIA — section "Pourquoi nous choisir"
+============================================================ */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.why-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem;
+}
+.why-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+.why-icon svg {
+  width: 100%;
+  height: 100%;
+}
+.why-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  color: var(--text);
+}
+.why-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .why-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .why-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   FOR WHO — section "Pour qui ?"
+============================================================ */
+.forwho-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+.forwho-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.forwho-card:hover {
+  border-color: var(--primary-light);
+  box-shadow: 0 4px 20px rgba(91,63,212,0.08);
+}
+.forwho-emoji {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.forwho-card h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+  color: var(--text);
+}
+.forwho-card p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.4;
+}
+.forwho-cta {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  background: var(--surface-tinted);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+.forwho-cta p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 0 0 1.25rem;
+}
+@media (max-width: 900px) {
+  .forwho-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .forwho-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ============================================================
+   FAQ — accordion
+============================================================ */
+.faq-list {
+  max-width: 760px;
+  margin: 3rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.faq-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) * 0.7);
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.faq-item--open {
+  border-color: var(--primary-light);
+}
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.15rem 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  font-family: inherit;
+  line-height: 1.4;
+}
+.faq-question:hover {
+  color: var(--primary);
+}
+.faq-chevron {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--text-muted);
+  transition: transform 0.25s ease;
+}
+.faq-item--open .faq-chevron {
+  transform: rotate(180deg);
+  color: var(--primary);
+}
+.faq-answer {
+  padding: 0 1.5rem 1.25rem;
+}
+.faq-answer p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ============================================================
+   SITE WORKS — "Un site doit travailler pour vous"
+============================================================ */
+.siteworks-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  margin-top: 3rem;
+}
+.siteworks-intro {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+.siteworks-text p:not(.siteworks-intro) {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+.siteworks-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.siteworks-pillar {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.siteworks-pillar-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: var(--primary-faint);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+.siteworks-pillar-icon svg {
+  width: 22px;
+  height: 22px;
+}
+.siteworks-pillar strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+.siteworks-pillar p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .siteworks-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 }
