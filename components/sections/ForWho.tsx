@@ -1,25 +1,25 @@
-export default function ForWho() {
-  const profiles = [
-    { emoji: '🔨', label: 'Artisan du bâtiment', desc: 'Plombier, électricien, maçon, menuisier…' },
-    { emoji: '🍽️', label: 'Restaurant & traiteur', desc: 'Café, pizzeria, food truck, chef à domicile…' },
-    { emoji: '💆', label: 'Bien-être & beauté', desc: 'Coiffeur, esthéticien, coach sportif, kiné…' },
-    { emoji: '🏡', label: 'Immobilier local', desc: "Agent immo, conciergerie, location saisonnière…" },
-    { emoji: '⚖️', label: 'Professions libérales', desc: 'Comptable, avocat, notaire, consultant…' },
-    { emoji: '🛒', label: 'Commerce local', desc: 'Boutique de quartier, fleuriste, librairie…' },
-    { emoji: '🚗', label: 'Auto & mécanique', desc: 'Garage, carrosserie, auto-école…' },
-    { emoji: '📦', label: 'Prestataire de services', desc: 'Déménageur, nettoyage, informatique…' },
-    { emoji: '🎨', label: 'Créatif & freelance', desc: 'Graphiste, photographe, rédacteur…' },
-  ];
+const profiles = [
+  { emoji: '🔨', label: 'Artisans du bâtiment', desc: 'Plombier, électricien, maçon, peintre, menuisier…' },
+  { emoji: '🏗️', label: 'Entreprises de rénovation', desc: 'Rénovation intérieure, isolation, carrelage…' },
+  { emoji: '🛒', label: 'Commerçants locaux', desc: 'Boutique de quartier, fleuriste, librairie…' },
+  { emoji: '🤝', label: 'Professions de service', desc: 'Nettoyage, déménagement, informatique…' },
+  { emoji: '🏢', label: 'TPE et PME', desc: 'Toute entreprise locale souhaitant plus de visibilité.' },
+  { emoji: '💼', label: 'Indépendants', desc: 'Freelance, consultant, coach, formateur…' },
+  { emoji: '🏡', label: 'Conciergeries', desc: 'Location saisonnière, conciergerie privée…' },
+  { emoji: '🏠', label: 'Agences immobilières', desc: 'Agent immo, mandataire, promoteur local…' },
+  { emoji: '📦', label: 'Prestataires locaux', desc: 'Tout professionnel cherchant à être trouvé en ligne.' },
+];
 
+export default function ForWho() {
   return (
     <section id="for-who" className="section">
       <div className="container">
         <div className="section-heading reveal">
           <span className="eyebrow">Pour qui&nbsp;?</span>
-          <h2>Fait pour les entreprises qui ont besoin d&apos;être trouvées en ligne</h2>
+          <h2>Pour qui sont nos offres&nbsp;?</h2>
           <p className="section-sub">
-            Vous avez une activité locale, vous voulez plus de clients — et vous n&apos;avez
-            pas le temps de gérer un site vous-même. On s&apos;occupe de tout.
+            Pixeloria accompagne les entreprises locales qui veulent moderniser leur image,
+            améliorer leur présence en ligne et recevoir plus de demandes de contact.
           </p>
         </div>
 

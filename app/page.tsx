@@ -1,10 +1,14 @@
 import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
+import LaunchBanner from '@/components/ui/LaunchBanner';
 import Hero from '@/components/sections/Hero';
+import Intro from '@/components/sections/Intro';
 import Services from '@/components/sections/Services';
+import ComparisonTable from '@/components/sections/ComparisonTable';
 import WhyPixeloria from '@/components/sections/WhyPixeloria';
 import SiteWorks from '@/components/sections/SiteWorks';
 import ForWho from '@/components/sections/ForWho';
+import AuditGratuit from '@/components/sections/AuditGratuit';
 import Marketing from '@/components/sections/Marketing';
 import Portfolio from '@/components/sections/Portfolio';
 import Process from '@/components/sections/Process';
@@ -16,15 +20,15 @@ import ClientEffects from '@/components/layout/ClientEffects';
 import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Pixeloria | Création & refonte de sites web pour TPE, PME et artisans',
+  title: 'Création et refonte de sites internet pour TPE, PME et artisans | Pixeloria',
   description:
-    'Pixeloria crée des sites internet professionnels pour TPE, PME, artisans et commerces locaux. Design sur-mesure, SEO local inclus, livraison en 5 jours. À partir de 490 € TTC ou 89 €/mois.',
+    'Pixeloria crée et refond des sites vitrines pour TPE, PME et artisans. Offre one-shot à 490 € TTC ou accompagnement mensuel dès 89 € TTC/mois avec maintenance et SEO local de base.',
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/',
-    title: 'Pixeloria | Création & refonte de sites web pour TPE, PME et artisans',
+    title: 'Création et refonte de sites internet pour TPE, PME et artisans | Pixeloria',
     description:
-      'Sites internet professionnels pour TPE, PME et artisans locaux. SEO local inclus, livraison rapide, prix transparents. À partir de 490 € TTC.',
+      'Un site professionnel, moderne et optimisé pour le SEO local, sans gros budget de départ.',
     images: [{ url: 'https://pixeloria.fr/assets/pixeloria-logo.svg' }],
     locale: 'fr_FR',
     siteName: 'Pixeloria',
@@ -32,7 +36,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@pixeloria_fr',
-    title: 'Pixeloria | Création & refonte de sites web pour TPE, PME et artisans',
+    title: 'Création et refonte de sites internet pour TPE, PME et artisans | Pixeloria',
     description:
       'Sites internet professionnels pour artisans et PME. SEO local, livraison rapide, à partir de 490 € TTC.',
     images: ['https://pixeloria.fr/assets/pixeloria-logo.svg'],
@@ -44,13 +48,17 @@ export default function HomePage() {
     <>
       <ClientEffects />
       <JsonLd />
+      <LaunchBanner />
       <Header />
       <main id="home">
         <Hero />
+        <Intro />
         <Services />
+        <ComparisonTable />
         <WhyPixeloria />
         <SiteWorks />
         <ForWho />
+        <AuditGratuit />
         <Marketing />
         <Portfolio />
         <Process />

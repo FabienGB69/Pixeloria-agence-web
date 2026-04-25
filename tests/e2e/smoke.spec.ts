@@ -48,7 +48,7 @@ test.describe('Pixeloria homepage — smoke tests', () => {
   test('formulaire contact — champs obligatoires présents', async ({ page }) => {
     const form = page.locator('form.contact-form');
     await expect(form).toBeAttached();
-    for (const name of ['prenom', 'nom', 'email', 'message']) {
+    for (const name of ['nom', 'email', 'message']) {
       await expect(form.locator(`[name="${name}"]`)).toHaveAttribute('required', '');
     }
   });

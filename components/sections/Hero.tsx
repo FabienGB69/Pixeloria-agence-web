@@ -16,9 +16,11 @@ export default function Hero() {
           </h1>
 
           <p className="hero-sub">
-            Un site professionnel, moderne et optimisé pour Google, sans gros
-            budget de départ. Pixeloria vous accompagne de A à Z pour attirer
-            de nouveaux clients en ligne.
+            Un site professionnel, clair et efficace pour rassurer vos prospects, améliorer votre visibilité locale et générer plus de demandes de contact.
+          </p>
+
+          <p className="hero-reassurance">
+            Sans gros budget de départ. Offres simples. Accompagnement clair. Site maintenu selon l&apos;offre choisie.
           </p>
 
           <div className="hero-actions">
@@ -35,6 +37,21 @@ export default function Hero() {
               </svg>
             </a>
           </div>
+
+          <ul className="hero-microbene">
+            <li>
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              Site vitrine professionnel
+            </li>
+            <li>
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              Budget maîtrisé
+            </li>
+            <li>
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              SEO local selon l&apos;offre choisie
+            </li>
+          </ul>
 
           <div className="hero-metrics">
             <div className="metric">

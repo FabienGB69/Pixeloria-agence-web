@@ -119,18 +119,6 @@ export default function ContactForm() {
 
       <div className="form-row">
         <label>
-          <span>Prénom <abbr title="requis">*</abbr></span>
-          <input
-            type="text"
-            name="prenom"
-            placeholder="Votre prénom"
-            required
-            autoComplete="given-name"
-            onBlur={handleBlur}
-            onInput={handleInput}
-          />
-        </label>
-        <label>
           <span>Nom <abbr title="requis">*</abbr></span>
           <input
             type="text"
@@ -142,42 +130,56 @@ export default function ContactForm() {
             onInput={handleInput}
           />
         </label>
+        <label>
+          <span>Entreprise <span className="optional">(facultatif)</span></span>
+          <input
+            type="text"
+            name="company"
+            placeholder="Nom de votre entreprise"
+            autoComplete="organization"
+            onBlur={handleBlur}
+            onInput={handleInput}
+          />
+        </label>
+      </div>
+
+      <div className="form-row">
+        <label>
+          <span>Email <abbr title="requis">*</abbr></span>
+          <input
+            type="email"
+            name="email"
+            placeholder="vous@entreprise.fr"
+            required
+            autoComplete="email"
+            onBlur={handleBlur}
+            onInput={handleInput}
+          />
+        </label>
+        <label>
+          <span>Téléphone <span className="optional">(facultatif)</span></span>
+          <input
+            type="tel"
+            name="telephone"
+            placeholder="06 00 00 00 00"
+            autoComplete="tel"
+            onBlur={handleBlur}
+            onInput={handleInput}
+          />
+        </label>
       </div>
 
       <label>
-        <span>Entreprise <span className="optional">(facultatif)</span></span>
-        <input
-          type="text"
-          name="company"
-          placeholder="Nom de votre entreprise"
-          autoComplete="organization"
-          onBlur={handleBlur}
-          onInput={handleInput}
-        />
-      </label>
-
-      <label>
-        <span>Email <abbr title="requis">*</abbr></span>
-        <input
-          type="email"
-          name="email"
-          placeholder="vous@marque.com"
-          required
-          autoComplete="email"
-          onBlur={handleBlur}
-          onInput={handleInput}
-        />
-      </label>
-
-      <label>
-        <span>Type de projet</span>
+        <span>Type de besoin</span>
         <div className="select-wrap">
           <select name="offre" onBlur={handleBlur} onChange={handleInput}>
-            <option value="">Choisissez un service…</option>
-            <option value="branding">Branding digital</option>
-            <option value="ui-ux">UI / UX design</option>
-            <option value="integration">Intégration web</option>
-            <option value="full">Projet complet</option>
+            <option value="">Choisissez votre besoin…</option>
+            <option value="creation">Création de site internet</option>
+            <option value="refonte">Refonte de site internet</option>
+            <option value="maintenance">Maintenance</option>
+            <option value="seo">SEO local</option>
+            <option value="audit">Audit gratuit</option>
+            <option value="unknown">Je ne sais pas encore</option>
           </select>
           <svg className="select-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
             <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
@@ -186,11 +188,11 @@ export default function ContactForm() {
       </label>
 
       <label>
-        <span>Brief <abbr title="requis">*</abbr></span>
+        <span>Message <abbr title="requis">*</abbr></span>
         <textarea
           name="message"
           rows={4}
-          placeholder="Parlez-nous de votre projet, vos objectifs, votre budget…"
+          placeholder="Décrivez votre projet, vos objectifs, vos questions…"
           required
           onBlur={handleBlur}
           onInput={handleInput}
@@ -204,7 +206,7 @@ export default function ContactForm() {
         className={`btn btn-primary btn-full${formState.loading ? ' is-loading' : ''}`}
         disabled={formState.loading}
       >
-        <span className="btn-label">Envoyer le brief</span>
+        <span className="btn-label">Envoyer ma demande</span>
         <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
           <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
@@ -230,7 +232,7 @@ export default function ContactForm() {
         <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
           <path d="M8 2l5 2v4c0 3-2 5.5-5 7C6 14 4 12.5 3 11V4L8 2Z" stroke="currentColor" strokeWidth="1.4" />
         </svg>
-        Vos données sont protégées et ne seront jamais partagées.
+        Vos données sont protégées et ne seront jamais partagées. Réponse rapide avec une première orientation claire selon votre besoin.
       </p>
     </form>
   );

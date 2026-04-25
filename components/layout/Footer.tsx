@@ -17,15 +17,16 @@ export default function Footer() {
               height={32}
             />
           </a>
-          <p>Studio digital premium — branding, UI/UX &amp; intégration web.</p>
+          <p>Création &amp; refonte de sites internet pour artisans, TPE et PME locales.</p>
         </div>
 
         <nav className="footer-nav" aria-label="Navigation pied de page">
           <strong>Navigation</strong>
-          <a href="#services">Services</a>
+          <a href="#services">Offres</a>
           <a href="#portfolio">Portfolio</a>
           <a href="#process">Process</a>
           <a href="#testimonials">Avis clients</a>
+          <a href="#faq">FAQ</a>
         </nav>
 
         <nav className="footer-nav" aria-label="Pages locales">
@@ -101,6 +102,8 @@ export default function Footer() {
             <Link href="/cgv">CGV</Link>
             {' · '}
             <Link href="/cgu">CGU</Link>
+            {' · '}
+            <Link href="/politique-confidentialite">Politique de confidentialité</Link>
           </p>
           <a href="#home" className="back-top" aria-label="Retour en haut">
             <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">

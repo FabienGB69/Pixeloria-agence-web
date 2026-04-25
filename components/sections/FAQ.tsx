@@ -4,28 +4,32 @@ import { useState } from 'react';
 
 const faqs = [
   {
-    q: 'Combien de temps faut-il pour créer mon site&nbsp;?',
-    a: 'Entre 5 et 10 jours ouvrés selon la formule choisie et la complexité du projet. Nous vous remettons un calendrier précis dès le démarrage. Votre site sera en ligne rapidement, sans délais interminables.',
+    q: 'Est-ce que le site m\'appartient ?',
+    a: 'Oui, selon l\'offre choisie et les conditions prévues au contrat. Les modalités de propriété, d\'hébergement et de récupération du site sont précisées avant le lancement du projet.',
   },
   {
-    q: 'Est-ce que mon site sera bien positionné sur Google&nbsp;?',
-    a: 'Nous optimisons chaque site pour le référencement local (SEO on-page, balises, vitesse, indexation). Les formules Sérénité et Croissance incluent un suivi SEO mensuel. Aucune agence ne peut garantir la première position, mais nous mettons toutes les chances de votre côté.',
+    q: 'Qu\'est-ce qui est inclus dans le SEO ?',
+    a: 'Le SEO inclus correspond à une optimisation locale de base : structure des pages, titres, balises, mots-clés métier, zones d\'intervention et indexation Google. L\'offre Croissance ajoute un accompagnement SEO local renforcé avec contenu mensuel et suivi.',
   },
   {
-    q: 'Puis-je modifier mon site moi-même après la livraison&nbsp;?',
-    a: 'Oui. Nous vous livrons un accès simplifié pour les modifications de texte ou d\'images. Pour les évolutions plus importantes, nos formules avec maintenance incluent des modifications illimitées mineures — sans avoir à apprendre à coder.',
+    q: 'Quelle est la différence entre l\'offre à 490 € et l\'offre à 89 €/mois ?',
+    a: 'L\'offre à 490 € est une création simple, livrée en une fois, sans maintenance ni suivi mensuel. L\'offre à 89 €/mois inclut la création ou refonte, la maintenance, les petites modifications et le SEO local de base.',
   },
   {
-    q: 'Que se passe-t-il si je veux arrêter l\'abonnement mensuel&nbsp;?',
-    a: 'Vous pouvez résilier à tout moment (préavis 1 mois). Le site vous appartient : vous repartez avec vos fichiers et votre nom de domaine. Nous recommandons 12 mois pour des résultats SEO durables, mais il n\'y a aucun engagement forcé.',
+    q: 'Quelle est la différence entre Site Sérénité et Site Croissance ?',
+    a: 'Site Sérénité est conçu pour avoir un site professionnel maintenu dans le temps. Site Croissance va plus loin avec du SEO local renforcé, un contenu optimisé par mois, un suivi Search Console, une optimisation Google Business Profile et un reporting mensuel simple.',
   },
   {
-    q: 'Est-ce que vous vous occupez du nom de domaine et de l\'hébergement&nbsp;?',
-    a: 'Oui. Dans les formules Sérénité et Croissance, le nom de domaine et l\'hébergement sont inclus. Pour la formule Essentielle, nous vous guidons pour choisir et configurer votre hébergement si vous n\'en avez pas déjà un.',
+    q: 'Puis-je modifier mon site après livraison ?',
+    a: 'Oui. Les petites modifications sont incluses dans les offres mensuelles. Pour l\'offre Site Essentiel, les modifications après livraison peuvent être proposées en option.',
   },
   {
-    q: 'Comment se déroule le suivi après la mise en ligne&nbsp;?',
-    a: 'Vous disposez d\'un accès direct à votre interlocuteur via WhatsApp. Réponse garantie sous 24h. Pour les formules Sérénité et Croissance, un point mensuel est inclus pour suivre les performances et ajuster la stratégie si besoin.',
+    q: 'Combien de temps faut-il pour créer un site ?',
+    a: 'Le délai dépend du nombre de pages, des contenus disponibles et des échanges nécessaires. Un site vitrine simple peut être préparé rapidement si les textes, photos et informations sont fournis dès le départ.',
+  },
+  {
+    q: 'Est-ce que Pixeloria garantit la première position sur Google ?',
+    a: 'Non. Personne ne peut garantir une première position sur Google. Pixeloria travaille sur une base saine : structure du site, contenu clair, optimisation locale, performance et cohérence des informations.',
   },
 ];
 
@@ -39,7 +43,7 @@ export default function FAQ() {
           <span className="eyebrow">FAQ</span>
           <h2>Questions fréquentes</h2>
           <p className="section-sub">
-            Vous avez une question qui ne figure pas ici&nbsp;?{' '}
+            Vous avez une autre question ?{' '}
             <a href="#contact">Contactez-nous directement.</a>
           </p>
         </div>
