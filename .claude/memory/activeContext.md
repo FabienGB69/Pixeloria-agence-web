@@ -1,38 +1,49 @@
 # Active Context — Pixeloria
 
-> Mis à jour à chaque session. Décrit la tâche en cours et les décisions récentes.
+> Mis à jour le 2026-04-25.
 
 ## Session actuelle
 
-**Date :** 2026-04-17
-**Branche active :** `feat/sales-funnel-refonte`
-**Tâche en pause :** Création du tunnel de vente `refonte.html` (vanilla JS)
+**Date :** 2026-04-25
+**Branche active :** `feat/seo-pages-supplementaires`
+**Tâche en cours :** Ajout 4 pages SEO supplémentaires + refonte section AuditGratuit
 
-## Décisions prises
+## Stack technique
 
-- Architecture skills dans `.claude/commands/` (slash commands Claude Code)
-- Memory Bank inspiré de RooFlow dans `.claude/memory/`
-- CLAUDE.md comme document racine de mémoire persistante
-- Sélection de modèle par complexité : Haiku / Sonnet / Opus
-- Ajout du CTO orchestrateur (`/cto`) : point d'entrée pour toutes les tâches complexes, décompose en sous-tâches et assigne agents + modèles
+- Next.js 14 App Router (TypeScript)
+- CSS global `styles.css` (pas de Tailwind) — variables CSS dans `:root`
+- Déploiement : Vercel (auto sur push main)
+- CI : GitHub Actions (typecheck → lint → unit-tests → build → e2e)
+
+## Variables CSS principales
+
+```css
+--bg: #080810
+--surface: #111123
+--primary: #7a5cff   /* violet */
+--accent: #00d1ff    /* cyan */
+--radius: 18px
+--text: #f0f0f8
+--text-muted: #9898b8
+--text-subtle: #5a5a7a
+--border: rgba(255,255,255,0.08)
+--primary-faint: rgba(122,92,255,0.08)
+```
+
+## Décisions d'architecture
+
+- Server Components par défaut ; `'use client'` uniquement si interactivité (FAQ accordion, ContactForm, Header mobile, TunnelForm)
+- 1 fichier = 1 section (components/sections/) ou 1 page (app/[slug]/page.tsx)
+- CSS : classes utilitaires partagées dans styles.css, pas de modules CSS
+- Les nouvelles pages standalone importent Header + Footer + JsonLd directement
 
 ## Problèmes ouverts
 
-- Aucun pour l'instant — session de setup
+- Image OG (1200×630) : utilisateur en cours de création
+- Env vars Vercel (NOTION_TOKEN, NOTION_DB_ID) : utilisateur en cours d'ajout
 
-## Prochaines étapes (reprendre ici)
+## Prochaines étapes
 
-1. **URGENT — `refonte.html`** : créer le tunnel de vente vanilla JS complet (React → HTML/CSS/JS)
-   - 4 steps : Diagnostic → Objectifs/ROI → Formule → Contact + écran succès
-   - Données : PAIN_POINTS, OBJECTIVES, REFONTE_OFFERS déjà définies dans le plan
-   - Fixer le bug ROI du React original (set non passé en prop)
-2. Commit + push `feat/sales-funnel-refonte`
-3. Batch 2 parallèle : SEO audit · vercel.json · Formspree · images · 404.html
-4. Commit final + PR → validation utilisateur
-
-## Contexte à retenir
-
-- Le site est entièrement statique, pas de backend
-- La langue de l'UI est le français
-- Le formulaire de contact ne traite pas les données (action="#")
-- Vercel Analytics génère une 404 en local — c'est normal
+1. ~~Build check + commit + push `feat/seo-pages-supplementaires`~~  (en cours)
+2. Refonte section AuditGratuit (demande utilisateur reçue)
+3. Vérifier formulaire contact en prod une fois env vars Vercel actives
