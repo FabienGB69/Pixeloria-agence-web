@@ -8,12 +8,12 @@ test.describe('Pixeloria homepage — smoke tests', () => {
   test('title et H1 hero corrects', async ({ page }) => {
     await expect(page).toHaveTitle(/Pixeloria/);
     await expect(
-      page.getByRole('heading', { level: 1, name: /am.nent/i }),
+      page.getByRole('heading', { level: 1, name: /TPE|PME|artisans/i }),
     ).toBeVisible();
   });
 
   test('liens de navigation résolvent vers les sections', async ({ page }) => {
-    const sections = ['services', 'marketing', 'portfolio', 'process', 'testimonials', 'contact'];
+    const sections = ['services', 'portfolio', 'process', 'testimonials', 'faq', 'contact'];
     for (const id of sections) {
       const link = page.locator(`.site-nav a[href="#${id}"]`);
       await expect(link).toBeVisible();
