@@ -3,6 +3,7 @@
 import { useEffect, useRef, useCallback } from 'react';
 
 declare global {
+  // eslint-disable-next-line no-unused-vars
   interface Window {
     turnstile?: {
       render: (_el: HTMLElement, _opts: {
