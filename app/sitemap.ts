@@ -3,6 +3,9 @@ import { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: 'https://pixeloria.fr', lastModified: new Date(), changeFrequency: 'monthly', priority: 1 },
+    { url: 'https://pixeloria.fr/offres', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: 'https://pixeloria.fr/creation-site-internet-artisan', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://pixeloria.fr/refonte-site-internet', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://pixeloria.fr/refonte', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://pixeloria.fr/agence-web-drome', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: 'https://pixeloria.fr/agence-web-ardeche', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
