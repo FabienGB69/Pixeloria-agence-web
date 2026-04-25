@@ -3,22 +3,23 @@
 import { useEffect, useRef, useCallback } from 'react';
 
 declare global {
+  // eslint-disable-next-line no-unused-vars
   interface Window {
     turnstile?: {
-      render: (el: HTMLElement, opts: {
+      render: (_el: HTMLElement, _opts: {
         sitekey: string;
-        callback: (token: string) => void;
+        callback: (_token: string) => void;
         'expired-callback': () => void;
         theme: 'light' | 'dark' | 'auto';
         size: 'normal' | 'compact';
       }) => string;
-      reset: (widgetId: string) => void;
+      reset: (_widgetId: string) => void;
     };
   }
 }
 
 interface Props {
-  onVerify: (token: string) => void;
+  onVerify: (_token: string) => void;
   onExpire?: () => void;
 }
 

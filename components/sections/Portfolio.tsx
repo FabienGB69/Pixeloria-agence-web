@@ -99,6 +99,7 @@ export default function Portfolio() {
                 <div className="portfolio-comparison">
                   <div className="portfolio-thumb-wrap">
                     <span className="thumb-label thumb-label--before">Avant</span>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       className="portfolio-thumb"
                       src={p.beforeImage}
