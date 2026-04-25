@@ -2274,7 +2274,10 @@ select {
   text-decoration: underline;
 }
 @media (max-width: 900px) {
-  .pricing-cards--three { grid-template-columns: 1fr; max-width: 480px; }
+  .pricing-cards--three {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
 }
 @media (max-width: 600px) {
   .pricing-cards { grid-template-columns: 1fr; }
