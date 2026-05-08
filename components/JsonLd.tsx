@@ -29,17 +29,21 @@ export default function JsonLd({ type = 'home' }: JsonLdProps) {
     '@type': 'ProfessionalService',
     name: 'Pixeloria',
     url: 'https://pixeloria.fr',
-    logo: 'https://pixeloria.fr/assets/pixeloria-logo.svg',
-    image: 'https://pixeloria.fr/assets/pixeloria-logo.svg',
     description: 'Création et refonte de sites internet pour TPE, PME, artisans et entreprises locales.',
     telephone: '+33786125313',
     email: 'contact@pixeloria.fr',
-    areaServed: 'France',
-    priceRange: '€€',
-    sameAs: [
-      'https://www.instagram.com/pixeloria.fr',
-      'https://www.linkedin.com/company/pixeloria',
+    areaServed: [
+      'France',
+      'Drôme',
+      'Valence',
+      'Montélimar',
+      'Romans-sur-Isère',
+      'TPE',
+      'PME',
+      'Artisans',
+      'Entreprises locales',
     ],
+    sameAs: [],
   };
 
   const websiteSchema = {

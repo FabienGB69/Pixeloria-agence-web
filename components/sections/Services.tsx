@@ -1,3 +1,7 @@
+'use client';
+
+import { trackOfferSelect } from '@/lib/gtm';
+
 export default function Services() {
   return (
     <section id="services" className="section">
@@ -39,7 +43,13 @@ export default function Services() {
               <li>Modifications après livraison</li>
             </ul>
             <p className="pricing-note">Idéal si vous souhaitez une présence en ligne professionnelle, sans suivi mensuel.</p>
-            <a href="#contact" className="btn btn-secondary">Choisir Site Essentiel →</a>
+            <a
+              href="#contact"
+              className="btn btn-secondary"
+              onClick={() => trackOfferSelect('Site Essentiel', '490 TTC')}
+            >
+              Choisir Site Essentiel →
+            </a>
           </div>
 
           {/* Offre 2 — Site Sérénité */}
@@ -68,7 +78,13 @@ export default function Services() {
               <li>Indexation Google</li>
             </ul>
             <p className="pricing-note">Idéal pour les entreprises qui veulent un site professionnel maintenu dans le temps, avec un budget mensuel maîtrisé.</p>
-            <a href="#contact" className="btn btn-primary">Choisir Site Sérénité →</a>
+            <a
+              href="#contact"
+              className="btn btn-primary"
+              onClick={() => trackOfferSelect('Site Sérénité', '89 TTC / mois')}
+            >
+              Choisir Site Sérénité →
+            </a>
           </div>
 
           {/* Offre 3 — Site Croissance */}
@@ -92,7 +108,13 @@ export default function Services() {
               <li>Accompagnement visibilité locale</li>
             </ul>
             <p className="pricing-note">Idéal pour les TPE, PME et artisans qui veulent faire de leur site un vrai levier de visibilité et de prospection locale.</p>
-            <a href="#contact" className="btn btn-secondary">Choisir Site Croissance →</a>
+            <a
+              href="#contact"
+              className="btn btn-secondary"
+              onClick={() => trackOfferSelect('Site Croissance', '159 TTC / mois')}
+            >
+              Choisir Site Croissance →
+            </a>
           </div>
 
         </div>
