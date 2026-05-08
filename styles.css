@@ -2188,7 +2188,10 @@ select {
 
   .services-grid    { grid-template-columns: 1fr; }
   .portfolio-grid   { grid-template-columns: 1fr; }
-  .testimonials-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .testimonials-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
   .contact-grid     { grid-template-columns: 1fr; }
   .form-row         { grid-template-columns: 1fr; }
 
