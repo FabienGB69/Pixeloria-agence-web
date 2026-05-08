@@ -1,52 +1,109 @@
+const trustPoints = [
+  {
+    title: 'Interlocuteur unique',
+    desc: 'Vous échangez directement avec la personne qui comprend votre besoin et pilote votre projet.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="12" cy="8" r="4" stroke="currentColor" strokeWidth="1.8"/>
+        <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
+      </svg>
+    ),
+  },
+  {
+    title: 'Offres lisibles',
+    desc: "Vous savez ce qui est inclus, ce qui ne l'est pas, et quelle formule correspond à votre situation.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <rect x="4" y="4" width="16" height="16" rx="4" stroke="currentColor" strokeWidth="1.8"/>
+        <path d="M8 10h8M8 14h5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
+      </svg>
+    ),
+  },
+  {
+    title: 'Design professionnel',
+    desc: 'Votre site doit inspirer confiance dès les premières secondes, sur ordinateur comme sur mobile.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <rect x="2" y="4" width="20" height="14" rx="3" stroke="currentColor" strokeWidth="1.8"/>
+        <path d="M8 22h8M12 18v4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
+      </svg>
+    ),
+  },
+  {
+    title: 'Vision métier',
+    desc: 'Pixeloria comprend les contraintes des artisans, TPE et PME : temps limité, besoin de clarté, budget maîtrisé.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M3 21V9l9-6 9 6v12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+        <rect x="9" y="14" width="6" height="7" rx="1" stroke="currentColor" strokeWidth="1.8"/>
+      </svg>
+    ),
+  },
+];
+
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="section section-tinted">
-      <div className="container">
-        <div className="section-heading reveal">
-          <span className="eyebrow">Témoignages</span>
-          <h2>Ce que disent nos clients</h2>
-          <p className="section-sub">
-            Nos clients sont les meilleurs ambassadeurs de notre travail.
-            Découvrez leurs retours ou laissez le vôtre.
-          </p>
-        </div>
+    <section id="testimonials" className="section testimonials-section">
+      <div className="testimonials-halo testimonials-halo--top" aria-hidden="true" />
+      <div className="testimonials-halo testimonials-halo--bottom" aria-hidden="true" />
 
-        {/* Review request CTA */}
-        <div className="review-cta reveal">
-          <div className="review-cta-inner glass-card">
-            <div className="review-cta-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none">
-                <path d="M24 6l4.2 8.8L38 16.2l-7 6.8 1.6 9.6L24 28.2l-8.6 4.4 1.6-9.6-7-6.8 9.8-1.4z"
-                  stroke="currentColor" strokeWidth="2" strokeLinejoin="round" fill="none" />
-              </svg>
-            </div>
-            <div className="review-cta-content">
-              <h3>Vous avez travaillé avec nous ?</h3>
-              <p>
-                Votre avis compte énormément — il aide d&apos;autres artisans et PME
-                à choisir le bon partenaire web.
-                Laissez un avis Google en 30 secondes.
-              </p>
-              <a
-                href="https://g.page/r/PIXELORIA/review"
-                className="btn btn-primary"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <svg className="btn-icon-left" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                  <path d="M10 2l2.4 5 5.6.8-4 3.9.9 5.5L10 14.7l-5 2.5.9-5.5L2 7.8 7.6 7z"
-                    fill="currentColor" />
-                </svg>
-                Laisser un avis Google
+      <div className="container">
+        <div className="testimonials-layout">
+
+          {/* Left editorial */}
+          <div className="testimonials-editorial reveal">
+            <span className="testimonials-badge">Confiance</span>
+            <h2>Pourquoi nous faire confiance&nbsp;?</h2>
+            <p className="testimonials-sub">
+              Pixeloria accompagne les artisans, indépendants et PME avec une approche simple,
+              claire et orientée résultat.
+            </p>
+            <p className="testimonials-body">
+              Un site web ne doit pas seulement être joli. Il doit être clair, rapide à comprendre,
+              adapté à votre métier et pensé pour transformer vos visiteurs en demandes de contact.
+              Avec Pixeloria, vous avancez étape par étape, avec un interlocuteur unique, une méthode
+              simple et des offres lisibles.
+            </p>
+            <div className="testimonials-cta-group">
+              <a href="#contact" className="btn btn-primary">
+                Discuter de mon projet
               </a>
-              <p className="review-note">
-                Vous êtes déjà client et vos avis n&apos;apparaissent pas encore ici.
-                Contactez-nous à{' '}
-                <a href="mailto:contact@pixeloria.fr?subject=Demande%20de%20devis%20%E2%80%94%20Pixeloria&body=Bonjour%2C%0A%0AJe%20souhaite%20obtenir%20un%20devis%20pour%20mon%20projet%20web.%0A%0ACordialement%2C">contact@pixeloria.fr</a>{' '}
-                pour les mettre en avant.
-              </p>
+              <a href="#services" className="btn btn-secondary">
+                Voir les offres
+              </a>
             </div>
           </div>
+
+          {/* Right trust card */}
+          <div className="trust-card reveal">
+            <div className="tc-halo" aria-hidden="true" />
+            <div className="tc-card-header">
+              <div className="tc-shield-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2l7 3v5c0 5-3.5 9-7 10C8.5 19 5 15 5 10V5l7-3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round"/>
+                  <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <p className="tc-label">Méthode Pixeloria</p>
+                <h3>Une approche pensée pour les pros</h3>
+              </div>
+            </div>
+            <p className="tc-intro">
+              Pixeloria privilégie les sites utiles, crédibles et faciles à faire évoluer,
+              sans complexité inutile.
+            </p>
+            <div className="tc-grid">
+              {trustPoints.map((pt) => (
+                <div key={pt.title} className="tc-point">
+                  <div className="tc-point-icon" aria-hidden="true">{pt.icon}</div>
+                  <strong>{pt.title}</strong>
+                  <p>{pt.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
