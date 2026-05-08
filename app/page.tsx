@@ -63,8 +63,8 @@ export default function HomePage() {
         <Portfolio />
         <Process />
         <Testimonials />
-        <FAQ />
         <Contact />
+        <FAQ />
       </main>
       <Footer />
     </>
