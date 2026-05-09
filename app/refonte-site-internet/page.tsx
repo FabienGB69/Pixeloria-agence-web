@@ -174,15 +174,15 @@ export default function RefontePageInternet() {
               <h2>Le déroulement d&apos;une refonte avec Pixeloria</h2>
             </div>
             <div className="process-grid">
-              {steps.map((step, i) => (
-                <div key={step.num} className="process-step" data-step={step.num}>
+              {steps.map((step) => (
+                <div key={step.num} className="process-card" data-step={step.num}>
+                  <span className="process-num" aria-hidden="true">{step.num}</span>
                   <div className="process-icon">
                     <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
                       <circle cx="24" cy="24" r="18" stroke="currentColor" strokeWidth="2.2"/>
-                      <text x="24" y="30" textAnchor="middle" fontSize="14" fontWeight="700" fill="currentColor">{i + 1}</text>
+                      <path d="M16 24l6 6 10-10" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
-                  {i < steps.length - 1 && <div className="process-connector" aria-hidden="true"></div>}
                   <h3>{step.title}</h3>
                   <p>{step.desc}</p>
                 </div>
