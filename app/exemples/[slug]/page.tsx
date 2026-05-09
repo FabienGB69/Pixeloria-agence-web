@@ -6,6 +6,8 @@ import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/JsonLd';
 import { industryPages, getIndustryPage } from '@/lib/industry-pages';
 
+export const dynamicParams = false;
+
 interface Props {
   params: { slug: string };
 }
@@ -43,6 +45,9 @@ export default function ExempleMetierPage({ params }: Props) {
 
   const isConciergerie = page.slug === 'conciergerie';
 
+  // SECURITE : serviceSchema doit uniquement contenir des données
+  // issues de industryPages (tableau statique). Ne jamais injecter
+  // de données utilisateur ou externe dans cet objet.
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
