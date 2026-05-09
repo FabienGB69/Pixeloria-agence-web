@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://pixeloria.fr/refonte-site-internet', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://pixeloria.fr/maintenance-site-web', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://pixeloria.fr/seo-local', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: 'https://pixeloria.fr/realisations', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://pixeloria.fr/a-propos', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://pixeloria.fr/realisations', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://pixeloria.fr/realisations/escalee-gouts', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
     { url: 'https://pixeloria.fr/realisations/lenora-conciergerie', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },

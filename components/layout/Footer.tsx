@@ -27,6 +27,7 @@ export default function Footer() {
           <a href="#process">Process</a>
           <a href="#testimonials">Avis clients</a>
           <a href="#faq">FAQ</a>
+          <Link href="/a-propos">À propos</Link>
         </nav>
 
         <nav className="footer-nav" aria-label="Pages locales">
