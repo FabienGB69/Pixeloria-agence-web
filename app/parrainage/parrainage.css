@@ -10,20 +10,16 @@
   --bg-subtle:     #091628;
   --border:        rgba(139, 92, 246, 0.18);
   --border-light:  rgba(139, 92, 246, 0.30);
-
   --purple-deep:   #5b3fd4;
   --purple:        #7c3aed;
   --purple-mid:    #8b5cf6;
   --purple-light:  #a78bfa;
   --purple-pale:   rgba(139, 92, 246, 0.12);
-
   --teal:          #26d8be;
   --teal-pale:     rgba(38, 216, 190, 0.12);
   --green:         #10b981;
-
   --gold:          #f59e0b;
   --gold-pale:     rgba(245, 158, 11, 0.12);
-
   --text-primary:  #f0f2f7;
   --text-secondary:#c4cede;
   --text-muted:    #7a8ba0;
@@ -68,9 +64,15 @@
   line-height: 1.2;
 }
 
-.prrn-page a { color: inherit; text-decoration: none; }
+.prrn-page a {
+  color: inherit;
+  text-decoration: none;
+}
 
-.prrn-page img { max-width: 100%; display: block; }
+.prrn-page img {
+  max-width: 100%;
+  display: block;
+}
 
 .prrn-page .container {
   max-width: 1120px;
@@ -486,7 +488,10 @@
 /* ============================================================
    SECTION : COMMENT CA MARCHE
 ============================================================ */
-.prrn-page .steps { padding: var(--section-py) 0; background: var(--bg-deep); }
+.prrn-page .steps {
+  padding: var(--section-py) 0;
+  background: var(--bg-deep);
+}
 
 .prrn-page .steps__grid {
   display: grid;
@@ -548,7 +553,10 @@
 /* ============================================================
    SECTION : RECOMPENSES
 ============================================================ */
-.prrn-page .rewards { padding: var(--section-py) 0; background: var(--bg-subtle); }
+.prrn-page .rewards {
+  padding: var(--section-py) 0;
+  background: var(--bg-subtle);
+}
 
 .prrn-page .rewards__grid {
   display: grid;
@@ -804,7 +812,10 @@
 /* ============================================================
    SECTION : DEUX FACONS D'ETRE RECOMPENSE
 ============================================================ */
-.prrn-page .reward-choice { padding: var(--section-py) 0; background: var(--bg-subtle); }
+.prrn-page .reward-choice {
+  padding: var(--section-py) 0;
+  background: var(--bg-subtle);
+}
 
 .prrn-page .reward-choice__grid {
   display: grid;
@@ -935,7 +946,10 @@
 /* ============================================================
    SECTION : CONDITIONS
 ============================================================ */
-.prrn-page .conditions { padding: var(--section-py) 0; background: var(--bg-subtle); }
+.prrn-page .conditions {
+  padding: var(--section-py) 0;
+  background: var(--bg-subtle);
+}
 
 .prrn-page .conditions__box {
   background: var(--bg-card);
@@ -1007,7 +1021,10 @@
 /* ============================================================
    SECTION : FAQ
 ============================================================ */
-.prrn-page .faq { padding: var(--section-py) 0; background: var(--bg-deep); }
+.prrn-page .faq {
+  padding: var(--section-py) 0;
+  background: var(--bg-deep);
+}
 
 .prrn-page .faq__grid {
   display: grid;
@@ -1144,12 +1161,22 @@
 @media (max-width: 900px) {
   .prrn-page { --section-py: 72px; }
 
-  .prrn-page .hero__inner { grid-template-columns: 1fr; gap: 48px; }
-  .prrn-page .hero__visual { display: grid; grid-template-columns: 1fr 1fr; }
+  .prrn-page .hero__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .prrn-page .hero__visual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 
   .prrn-page .steps__grid { grid-template-columns: 1fr; }
 
-  .prrn-page .rewards__grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+  .prrn-page .rewards__grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
 
   .prrn-page .audience__inner { grid-template-columns: 1fr; }
   .prrn-page .audience__visual { display: none; }
