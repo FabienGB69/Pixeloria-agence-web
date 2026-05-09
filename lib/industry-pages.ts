@@ -1,1 +1,235 @@
-ZXhwb3J0IGludGVyZmFjZSBJbmR1c3RyeVBhZ2UgewogIHNsdWc6IHN0cmluZzsKICBiYWRnZTogc3RyaW5nOwogIHRpdGxlOiBzdHJpbmc7CiAgc3VidGl0bGU6IHN0cmluZzsKICBzZW9UaXRsZTogc3RyaW5nOwogIHNlb0Rlc2NyaXB0aW9uOiBzdHJpbmc7CiAgb2JqZWN0aXZlVGl0bGU6IHN0cmluZzsKICBvYmplY3RpdmVUZXh0OiBzdHJpbmc7CiAgc2VjdGlvbnM6IHN0cmluZ1tdOwogIGZlYXR1cmVzOiBzdHJpbmdbXTsKICByZWNvbW1lbmRlZE9mZmVyOiBzdHJpbmc7CiAgcmVjb21tZW5kZWRQcmljZTogc3RyaW5nOwogIG9mZmVyUmVhc29uOiBzdHJpbmc7CiAgcHJpbWFyeUN0YTogc3RyaW5nOwp9CgpleHBvcnQgY29uc3QgaW5kdXN0cnlQYWdlczogSW5kdXN0cnlQYWdlW10gPSBbCiAgewogICAgc2x1ZzogJ2FydGlzYW4tYmF0aW1lbnQnLAogICAgYmFkZ2U6ICdFeGVtcGxlIG3DqXRpZXInLAogICAgdGl0bGU6ICdFeGVtcGxlIGRlIHNpdGUgd2ViIHBvdXIgYXJ0aXNhbiBkdSBiw6J0aW1lbnQnLAogICAgc3VidGl0bGU6CiAgICAgICdVbiBzaXRlIGNsYWlyLCBwcm9mZXNzaW9ubmVsIGV0IHBlbnPDqSBwb3VyIGfDqW7DqXJlciBkZXMgZGVtYW5kZXMgZGUgZGV2aXMgbG9jYWxlcy4nLAogICAgc2VvVGl0bGU6ICdFeGVtcGxlIGRlIHNpdGUgd2ViIHBvdXIgYXJ0aXNhbiBkdSBiw6J0aW1lbnQgfCBQaXhlbG9yaWEnLAogICAgc2VvRGVzY3JpcHRpb246CiAgICAgICdEw6ljb3V2cmV6IHVuIGV4ZW1wbGUgZGUgc2l0ZSB3ZWIgcGVuc8OpIHBvdXIgbGVzIGFydGlzYW5zIGR1IGLDonRpbWVudCA6IHByw6lzZW50YXRpb24gZGVzIHNlcnZpY2VzLCByw6lhbGlzYXRpb25zLCBkZW1hbmRlcyBkZSBkZXZpcyBldCBTRU8gbG9jYWwuJywKICAgIG9iamVjdGl2ZVRpdGxlOiAnVW4gc2l0ZSBxdWkgcmFzc3VyZSBsZSBwcm9zcGVjdCBhdmFudCBtw6ptZSBsZSBwcmVtaWVyIGFwcGVsJywKICAgIG9iamVjdGl2ZVRleHQ6CiAgICAgICJQb3VyIHVuIGFydGlzYW4sIGxlIHNpdGUgZG9pdCByYXNzdXJlciByYXBpZGVtZW50LiBMZSBwcm9zcGVjdCBkb2l0IGNvbXByZW5kcmUgdm90cmUgbcOpdGllciwgdm90cmUgem9uZSBkJ2ludGVydmVudGlvbiwgdm9zIGdhcmFudGllcyBldCBwb3V2b2lyIGRlbWFuZGVyIHVuIGRldmlzIGVuIHF1ZWxxdWVzIHNlY29uZGVzLiIsCiAgICBzZWN0aW9uczogWwogICAgICAiQWNjdWVpbCDigJQgU3DDqWNpYWxpdMOpIGV0IHpvbmUgZCdpbnRlcnZlbnRpb24gY2xhaXJlbWVudCBhZmZpY2jDqWVzIiwKICAgICAgJ1NlcnZpY2VzIOKAlCBEw6l0YWlsIGRlIHZvcyBwcmVzdGF0aW9ucyBhdmVjIHRhcmlmcyBpbmRpY2F0aWZzIHNpIHNvdWhhaXTDqScsCiAgICAgICdSw6lhbGlzYXRpb25zIOKAlCBHYWxlcmllIGF2YW50IC8gYXByw6hzIGRlIHZvcyBjaGFudGllcnMgdGVybWluw6lzJywKICAgICAgIkdhcmFudGllcyDigJQgQXNzdXJhbmNlIGTDqWNlbm5hbGUsIHF1YWxpZmljYXRpb25zIGV0IMOpbMOpbWVudHMgZGUgcsOpYXNzdXJhbmNlIiwKICAgICAgIkF2aXMgY2xpZW50cyDigJQgQXZpcyBHb29nbGUgaW50w6lncsOpcyBwb3VyIHJlbmZvcmNlciBsYSBjb25maWFuY2UiLAogICAgICAnRm9ybXVsYWlyZSBkZSBkZXZpcyDigJQgRGVtYW5kZSByYXBpZGUgZW4gbGlnbmUnLAogICAgICAnQm91dG9uIGFwcGVsIOKAlCBWaXNpYmxlIGV0IGNsaXF1YWJsZSBkZXB1aXMgbW9iaWxlJywKICAgIF0sCiAgICBmZWF0dXJlczogWwogICAgICAnQm91dG9uIHTDqWzDqXBob25lIHN0aWNreSBzdXIgbW9iaWxlJywKICAgICAgJ0Zvcm11bGFpcmUgZGUgZGVtYW5kZSBkZSBkZXZpcycsCiAgICAgICdHYWxlcmllIHLDqWFsaXNhdGlvbnMnLAogICAgICAnU0VPIGxvY2FsIHBhciB2aWxsZSBvdSB6b25lIGRcJ2ludGVydmVudGlvbicsCiAgICAgICdDb25uZXhpb24gR29vZ2xlIEJ1c2luZXNzIFByb2ZpbGUnLAogICAgICAnQW5hbHl0aWNzIGV0IHN1aXZpIGRlcyBjb252ZXJzaW9ucycsCiAgICBdLAogICAgcmVjb21tZW5kZWRPZmZlcjogJ1NpdGUgQ3JvaXNzYW5jZScsCiAgICByZWNvbW1lbmRlZFByaWNlOiAnMTU5IOKCrCBUVEMgLyBtb2lzJywKICAgIG9mZmVyUmVhc29uOgogICAgICAiTGVzIGFydGlzYW5zIG9udCBiZXNvaW4gZCd1biBzaXRlIHF1aSDDqXZvbHVlIGF2ZWMgbGV1cnMgcsOpYWxpc2F0aW9ucywgbGV1cnMgcHJlc3RhdGlvbnMgZXQgbGV1ciB2aXNpYmlsaXTDqSBsb2NhbGUuIEwnb2ZmcmUgQ3JvaXNzYW5jZSBlc3QgbGEgcGx1cyBwZXJ0aW5lbnRlIGNhciBlbGxlIHBlcm1ldCBkZSB0cmF2YWlsbGVyIGxlIFNFTywgbGVzIGNvbnRlbnVzLCBsZXMgbWlzZXMgw6Agam91ciBldCBsJ2Ftw6lsaW9yYXRpb24gY29udGludWUgZHUgc2l0ZS4iLAogICAgcHJpbWFyeUN0YTogIkplIHZldXggdW4gc2l0ZSBkJ2FydGlzYW4gY29tbWUgY2VsdWktY2kiLAogIH0sCiAgewogICAgc2x1ZzogJ2VudHJlcHJpc2UtcmVub3ZhdGlvbicsCiAgICBiYWRnZTogJ0V4ZW1wbGUgbcOpdGllcicsCiAgICB0aXRsZTogJ0V4ZW1wbGUgZGUgc2l0ZSB3ZWIgcG91ciBlbnRyZXByaXNlIGRlIHLDqW5vdmF0aW9uJywKICAgIHN1YnRpdGxlOgogICAgICAnVW4gc2l0ZSBwZW5zw6kgcG91ciBwcsOpc2VudGVyIHZvcyBzYXZvaXItZmFpcmUsIHJhc3N1cmVyIHZvcyBwcm9zcGVjdHMgZXQgZ8OpbsOpcmVyIGRlcyBkZW1hbmRlcyBxdWFsaWZpw6llcy4nLAogICAgc2VvVGl0bGU6ICdFeGVtcGxlIGRlIHNpdGUgd2ViIHBvdXIgZW50cmVwcmlzZSBkZSByw6lub3ZhdGlvbiB8IFBpeGVsb3JpYScsCiAgICBzZW9EZXNjcmlwdGlvbjoKICAgICAgIkTDqWNvdXZyZXogdW4gZXhlbXBsZSBkZSBzaXRlIHdlYiBwb3VyIGVudHJlcHJpc2UgZGUgcsOpbm92YXRpb24gOiBzZXJ2aWNlcywgcsOpYWxpc2F0aW9ucywgYXZhbnQvYXByw6hzLCByw6lhc3N1cmFuY2UgZXQgZGVtYW5kZXMgZGUgZGV2aXMuIiwKICAgIG9iamVjdGl2ZVRpdGxlOiAnRG9ubmVyIGNvbmZpYW5jZSBhdmFudCBsZSBwcmVtaWVyIHJlbmRlei12b3VzJywKICAgIG9iamVjdGl2ZVRleHQ6CiAgICAgICJVbmUgZW50cmVwcmlzZSBkZSByw6lub3ZhdGlvbiBkb2l0IG1vbnRyZXIgc29uIHPDqXJpZXV4LCBsYSBxdWFsaXTDqSBkZSBzZXMgcsOpYWxpc2F0aW9ucyBldCBzYSBjYXBhY2l0w6kgw6AgcGlsb3RlciBkZXMgcHJvamV0cyBjb21wbGV0cy4gTGUgc2l0ZSBkb2l0IGRvbm5lciBjb25maWFuY2UgYXZhbnQgbGUgcHJlbWllciByZW5kZXotdm91cy4iLAogICAgc2VjdGlvbnM6IFsKICAgICAgIlByw6lzZW50YXRpb24g4oCUIEwnZW50cmVwcmlzZSwgc2VzIHZhbGV1cnMgZXQgc29uIHBvc2l0aW9ubmVtZW50IiwKICAgICAgJ1ByZXN0YXRpb25zIOKAlCBEw6l0YWlsIHBhciBtw6l0aWVyIChjYXJyZWxhZ2UsIGlzb2xhdGlvbiwgc2Vjb25kIMWTdXZyZS4uLiknLAogICAgICAnUsOpYWxpc2F0aW9ucyDigJQgR2FsZXJpZSBhdmFudCAvIGFwcsOocyBkZSB2b3MgY2hhbnRpZXJzJywKICAgICAgJ1Byb2Nlc3MgcHJvamV0IOKAlCBMZXMgw6l0YXBlcyBkdSBjaGFudGllciBkZSBBIMOgIFonLAogICAgICAnR2FyYW50aWVzIOKAlCBBc3N1cmFuY2UgZMOpY2VubmFsZSwgY2VydGlmaWNhdGlvbnMsIHLDqWFzc3VyYW5jZScsCiAgICAgICJab25lcyBkJ2ludGVydmVudGlvbiDigJQgQ2FydGUgb3UgbGlzdGUgZGVzIHNlY3RldXJzIGNvdXZlcnRzIiwKICAgICAgJ0RlbWFuZGUgZGUgZGV2aXMg4oCUIEZvcm11bGFpcmUgcHJvamV0IGTDqXRhaWxsw6knLAogICAgXSwKICAgIGZlYXR1cmVzOiBbCiAgICAgICdQYWdlcyBwcmVzdGF0aW9ucyBvcHRpbWlzw6llcyBTRU8gcGFyIHNww6ljaWFsaXTDqScsCiAgICAgICdHYWxlcmllIGNoYW50aWVyIGF2ZWMgcGhvdG9zIGF2YW50IC8gYXByw6hzJywKICAgICAgJ0Zvcm11bGFpcmUgcHJvamV0IGTDqXRhaWxsw6kgKHR5cGUgZGUgdHJhdmF1eCwgc3VyZmFjZSwgYnVkZ2V0KScsCiAgICAgICdNaXNlIGVuIGF2YW50IGRlcyBnYXJhbnRpZXMgZXQgY2VydGlmaWNhdGlvbnMnLAogICAgICAnUGhvdG9zIGF2YW50IC8gYXByw6hzIGludMOpZ3LDqWVzIGF1eCByw6lhbGlzYXRpb25zJywKICAgICAgJ1RyYWNraW5nIGRlcyBkZW1hbmRlcyBkZSBkZXZpcycsCiAgICBdLAogICAgcmVjb21tZW5kZWRPZmZlcjogJ1NpdGUgQ3JvaXNzYW5jZScsCiAgICByZWNvbW1lbmRlZFByaWNlOiAnMTU5IOKCrCBUVEMgLyBtb2lzJywKICAgIG9mZmVyUmVhc29uOgogICAgICAiTGEgcsOpbm92YXRpb24gZGVtYW5kZSBwbHVzIGRlIGNvbnRlbnUsIHBsdXMgZGUgcsOpYXNzdXJhbmNlIGV0IHBsdXMgZGUgdmlzaWJpbGl0w6kgbG9jYWxlLiBMJ29mZnJlIENyb2lzc2FuY2UgcGVybWV0IGQnYW3DqWxpb3JlciBwcm9ncmVzc2l2ZW1lbnQgbGUgc2l0ZSwgZCdham91dGVyIGRlcyByw6lhbGlzYXRpb25zIGV0IGRlIHRyYXZhaWxsZXIgbGVzIHBhZ2VzIFNFTyBwYXIgcHJlc3RhdGlvbi4iLAogICAgcHJpbWFyeUN0YTogJ0plIHZldXggdW4gc2l0ZSBkZSByw6lub3ZhdGlvbiBjb21tZSBjZWx1aS1jaScsCiAgfSwKICB7CiAgICBzbHVnOiAnY29uY2llcmdlcmllJywKICAgIGJhZGdlOiAnRXhlbXBsZSBhbm9ueW1pc8OpJywKICAgIHRpdGxlOiAnRXhlbXBsZSBkZSBzaXRlIHdlYiBwb3VyIGNvbmNpZXJnZXJpZScsCiAgICBzdWJ0aXRsZToKICAgICAgJ1VuIHNpdGUgc29icmUgZXQgcHJvZmVzc2lvbm5lbCBwb3VyIHByw6lzZW50ZXIgdm9zIHNlcnZpY2VzIGRlIGdlc3Rpb24gbG9jYXRpdmUsIHJhc3N1cmVyIGxlcyBwcm9wcmnDqXRhaXJlcyBldCByZWNldm9pciBkZXMgbWFuZGF0cy4nLAogICAgc2VvVGl0bGU6ICdFeGVtcGxlIGRlIHNpdGUgd2ViIHBvdXIgY29uY2llcmdlcmllIHwgUGl4ZWxvcmlhJywKICAgIHNlb0Rlc2NyaXB0aW9uOgogICAgICAiRXhlbXBsZSBkZSBzaXRlIHdlYiBwb3VyIHVuZSBjb25jaWVyZ2VyaWUgZGUgbG9jYXRpb24gc2Fpc29ubmnDqHJlIDogcHLDqXNlbnRhdGlvbiBkZXMgc2VydmljZXMsIHpvbmUgZCdpbnRlcnZlbnRpb24sIGNvbnRhY3QgcHJvcHJpw6l0YWlyZXMuIFBhciBQaXhlbG9yaWEuIiwKICAgIG9iamVjdGl2ZVRpdGxlOiAnUmFzc3VyZXogbGVzIHByb3ByacOpdGFpcmVzIGF2YW50IG3Dqm1lIGxlIHByZW1pZXIgw6ljaGFuZ2UnLAogICAgb2JqZWN0aXZlVGV4dDoKICAgICAgIlVuIHByb3ByacOpdGFpcmUgcXVpIGNvbmZpZSBzb24gYmllbiDDoCB1bmUgY29uY2llcmdlcmllIGNoZXJjaGUgYXZhbnQgdG91dCBsYSBjb25maWFuY2UgZXQgbGEgdHJhbnNwYXJlbmNlLiBWb3RyZSBzaXRlIGRvaXQgZXhwbGlxdWVyIGNsYWlyZW1lbnQgdm9zIHNlcnZpY2VzLCB2b3RyZSBmb25jdGlvbm5lbWVudCBldCB2b3RyZSB6b25lIGQnaW50ZXJ2ZW50aW9uIOKAlCBzYW5zIGphcmdvbiwgc2FucyBzdXItdmVudGUuIFBpeGVsb3JpYSBjcsOpZSBkZXMgc2l0ZXMgc29icmVzIGV0IGxpc2libGVzIHF1aSBjb252ZXJ0aXNzZW50IGxlcyBwcm9wcmnDqXRhaXJlcyBow6lzaXRhbnRzIGVuIGNvbnRhY3RzIHF1YWxpZmnDqXMuIiwKICAgIHNlY3Rpb25zOiBbCiAgICAgICJBY2N1ZWlsIOKAlCBWb3RyZSBwcm9tZXNzZSBldCB6b25lIGQnaW50ZXJ2ZW50aW9uIiwKICAgICAgJ05vcyBzZXJ2aWNlcyDigJQgQWNjdWVpbCB2b3lhZ2V1cnMsIG3DqW5hZ2UsIGdlc3Rpb24gY2FsZW5kcmllciwgdXJnZW5jZXMnLAogICAgICAnQ29tbWVudCDDp2EgbWFyY2hlIOKAlCBQcm9jZXNzdXMgZW4gMyDDqXRhcGVzIHNpbXBsZXMnLAogICAgICAiWm9uZSBjb3V2ZXJ0ZSDigJQgQ2FydGUgb3UgbGlzdGUgZGVzIHNlY3RldXJzIGQnaW50ZXJ2ZW50aW9uIiwKICAgICAgIkNvbnRhY3QgcHJvcHJpw6l0YWlyZXMg4oCUIEZvcm11bGFpcmUgZGUgcHJpc2UgZGUgY29udGFjdCBvdSBkJ2VzdGltYXRpb24iLAogICAgXSwKICAgIGZlYXR1cmVzOiBbCiAgICAgICdQcsOpc2VudGF0aW9uIGNsYWlyZSBkZXMgc2VydmljZXMgaW5jbHVzJywKICAgICAgIkNhcnRlIG91IGxpc3RlIGRlIHZvdHJlIHpvbmUgZCdpbnRlcnZlbnRpb24iLAogICAgICAnRm9ybXVsYWlyZSBkZSBkZW1hbmRlIGRlIG1hbmRhdCBvdSBkXCdlc3RpbWF0aW9uJywKICAgICAgJ1TDqW1vaWduYWdlcyBwcm9wcmnDqXRhaXJlcyAoYW5vbnltaXPDqXMgc2kgc291aGFpdMOpKScsCiAgICAgICdCb3V0b24gdMOpbMOpcGhvbmUgZXQgZW1haWwgZGlyZWN0JywKICAgICAgJ0Rlc2lnbiBzb2JyZSBldCBwcm9mZXNzaW9ubmVsIGFkYXB0w6kgYXUgc2VjdGV1cicsCiAgICBdLAogICAgcmVjb21tZW5kZWRPZmZlcjogJ1NpdGUgU8OpcsOpbml0w6knLAogICAgcmVjb21tZW5kZWRQcmljZTogJzg5IOKCrCBUVEMgLyBtb2lzJywKICAgIG9mZmVyUmVhc29uOgogICAgICAiTCdvZmZyZSBTw6lyw6luaXTDqSBjb252aWVudCDDoCB1bmUgY29uY2llcmdlcmllIHF1aSB2ZXV0IHVuIHNpdGUgbWFpbnRlbnUsIHPDqWN1cmlzw6kgZXQgdmlzaWJsZSBsb2NhbGVtZW50IOKAlCBhdmVjIGxlcyBwZXRpdGVzIG1vZGlmaWNhdGlvbnMgbWVuc3VlbGxlcyBpbmNsdXNlcyBwb3VyIG1ldHRyZSDDoCBqb3VyIHZvcyBpbmZvcy4iLAogICAgcHJpbWFyeUN0YTogJ0plIHZldXggdW4gc2l0ZSBjb21tZSBjZWx1aS1jaScsCiAgfSwKICB7CiAgICBzbHVnOiAnYWdlbmNlLWltbW9iaWxpZXJlJywKICAgIGJhZGdlOiAnRXhlbXBsZSBtw6l0aWVyJywKICAgIHRpdGxlOiAnRXhlbXBsZSBkZSBzaXRlIHdlYiBwb3VyIGFnZW5jZSBpbW1vYmlsacOocmUnLAogICAgc3VidGl0bGU6CiAgICAgICdVbiBzaXRlIHF1aSBwcsOpc2VudGUgdm90cmUgYWdlbmNlLCB2b3MgYmllbnMgZXQgZ8OpbsOocmUgZGVzIHByaXNlcyBkZSBjb250YWN0IHF1YWxpZmnDqWVzIOKAlCBhZ2VudHMgaW1tb2JpbGllcnMsIG1hbmRhdGFpcmVzIGV0IHByb21vdGV1cnMgbG9jYXV4LicsCiAgICBzZW9UaXRsZTogJ0V4ZW1wbGUgZGUgc2l0ZSB3ZWIgcG91ciBhZ2VuY2UgaW1tb2JpbGnDqHJlIHwgUGl4ZWxvcmlhJywKICAgIHNlb0Rlc2NyaXB0aW9uOgogICAgICAnRXhlbXBsZSBkZSBzaXRlIHdlYiBwb3VyIHVuZSBhZ2VuY2UgaW1tb2JpbGnDqHJlIGxvY2FsZSA6IHByw6lzZW50YXRpb24gZGUgbFwnYWdlbmNlLCBiaWVucyDDoCB2ZW5kcmUsIGVzdGltYXRpb24gZ3JhdHVpdGUsIFNFTyBsb2NhbC4gUGFyIFBpeGVsb3JpYS4nLAogICAgb2JqZWN0aXZlVGl0bGU6ICdVbiBzaXRlIHF1aSB0cmF2YWlsbGUgcG91ciB2b3VzIGVudHJlIGRldXggcmVuZGV6LXZvdXMnLAogICAgb2JqZWN0aXZlVGV4dDoKICAgICAgIlZvcyBjbGllbnRzIHZvdXMgY2hlcmNoZW50IHN1ciBHb29nbGUgYXZhbnQgZGUgdm91cyBhcHBlbGVyLiBWb3RyZSBzaXRlIGRvaXQgbGV1ciBkb25uZXIgZW52aWUgZGUgdm91cyBjb250YWN0ZXIgOiBwcsOpc2VudGVyIHZvdHJlIMOpcXVpcGUsIHZvcyBiaWVucyBkaXNwb25pYmxlcywgdm9zIGF2aXMgY2xpZW50cyBldCB1biBmb3JtdWxhaXJlIGQnZXN0aW1hdGlvbiBzaW1wbGUuIFBpeGVsb3JpYSBzdHJ1Y3R1cmUgdm90cmUgcHLDqXNlbmNlIGVuIGxpZ25lIHBvdXIgY2FwdGVyIGRlcyB2ZW5kZXVycyBldCBkZXMgYWNoZXRldXJzIGVuIGxvY2FsLiIsCiAgICBzZWN0aW9uczogWwogICAgICAiQWNjdWVpbCDigJQgTCdhZ2VuY2UsIHNlcyB2YWxldXJzIGV0IHNvbiBzZWN0ZXVyIGQnZXhwZXJ0aXNlIiwKICAgICAgJ0JpZW5zIMOgIHZlbmRyZSDigJQgU8OpbGVjdGlvbiBkZSBiaWVucyBtaXMgZW4gYXZhbnQnLAogICAgICAnQmllbnMgZW4gbG9jYXRpb24g4oCUIFPDqWxlY3Rpb24gbG9jYXRpdmUgc2kgYXBwbGljYWJsZScsCiAgICAgICJOb3RyZSDDqXF1aXBlIOKAlCBQaG90b3MsIHByw6lzZW50YXRpb25zIGV0IHpvbmVzIGQnZXhwZXJ0aXNlIiwKICAgICAgJ0VzdGltYXRpb24gZ3JhdHVpdGUg4oCUIEZvcm11bGFpcmUgZGUgZGVtYW5kZSBlbiBsaWduZScsCiAgICBdLAogICAgZmVhdHVyZXM6IFsKICAgICAgJ1NlY3Rpb24gYmllbnMgw6AgdmVuZHJlIGV0IMOgIGxvdWVyJywKICAgICAgIlByw6lzZW50YXRpb24gZGUgbCfDqXF1aXBlIGF2ZWMgcGhvdG9zIiwKICAgICAgIkZvcm11bGFpcmUgZCdlc3RpbWF0aW9uIGdyYXR1aXRlIGVuIGxpZ25lIiwKICAgICAgJ0ludMOpZ3JhdGlvbiBkZSB2b3MgYXZpcyBHb29nbGUnLAogICAgICAnU0VPIGxvY2FsIHBvdXIgdm90cmUgdmlsbGUgZXQgdm90cmUgc3DDqWNpYWxpdMOpJywKICAgICAgJ0JvdXRvbiBkXCdhcHBlbCBkaXJlY3QgZXQgcHJpc2UgZGUgcmVuZGV6LXZvdXMnLAogICAgXSwKICAgIHJlY29tbWVuZGVkT2ZmZXI6ICdTaXRlIENyb2lzc2FuY2UnLAogICAgcmVjb21tZW5kZWRQcmljZTogJzE1OSDigqwgVFRDIC8gbW9pcycsCiAgICBvZmZlclJlYXNvbjoKICAgICAgIkwnb2ZmcmUgQ3JvaXNzYW5jZSBlc3QgcmVjb21tYW5kw6llIHBvdXIgdW5lIGFnZW5jZSBpbW1vYmlsacOocmUgcXVpIHZldXQgZMOpdmVsb3BwZXIgc2EgdmlzaWJpbGl0w6kgbG9jYWxlLCBjcsOpZXIgZHUgY29udGVudSByw6lndWxpZXIgKGNvbnNlaWxzIGFjaGV0ZXVycy92ZW5kZXVycykgZXQgc3VpdnJlIHNvbiBwb3NpdGlvbm5lbWVudCBHb29nbGUuIiwKICAgIHByaW1hcnlDdGE6ICdKZSB2ZXV4IHVuIHNpdGUgY29tbWUgY2VsdWktY2knLAogIH0sCiAgewogICAgc2x1ZzogJ2NvbW1lcmNlLWxvY2FsJywKICAgIGJhZGdlOiAnRXhlbXBsZSBtw6l0aWVyJywKICAgIHRpdGxlOiAnRXhlbXBsZSBkZSBzaXRlIHdlYiBwb3VyIGNvbW1lcmNlIGxvY2FsJywKICAgIHN1YnRpdGxlOgogICAgICAnVW4gc2l0ZSBzaW1wbGUgZXQgcHJvZmVzc2lvbm5lbCBwb3VyIHZvdHJlIGJvdXRpcXVlIGRlIHF1YXJ0aWVyIOKAlCBmbGV1cmlzdGUsIGxpYnJhaXJpZSwgw6lwaWNlcmllIGZpbmUgb3UgdG91dCBjb21tZXJjZSBkZSBwcm94aW1pdMOpLicsCiAgICBzZW9UaXRsZTogJ0V4ZW1wbGUgZGUgc2l0ZSB3ZWIgcG91ciBjb21tZXJjZSBsb2NhbCB8IFBpeGVsb3JpYScsCiAgICBzZW9EZXNjcmlwdGlvbjoKICAgICAgJ0V4ZW1wbGUgZGUgc2l0ZSB3ZWIgcG91ciB1biBjb21tZXJjZSBsb2NhbCA6IHByw6lzZW50YXRpb24gZGUgbGEgYm91dGlxdWUsIGhvcmFpcmVzLCBwcm9kdWl0cyBwaGFyZXMsIGxvY2FsaXNhdGlvbi4gQ3LDqcOpIHBhciBQaXhlbG9yaWEuJywKICAgIG9iamVjdGl2ZVRpdGxlOiAnVm90cmUgYm91dGlxdWUgdmlzaWJsZSBlbiBsaWduZSwgZMOocyBkZW1haW4nLAogICAgb2JqZWN0aXZlVGV4dDoKICAgICAgIlVuIGNsaWVudCBxdWkgY2hlcmNoZSB1biBmbGV1cmlzdGUsIHVuZSBsaWJyYWlyaWUgb3UgdW4gY29tbWVyY2UgZGUgcXVhcnRpZXIgY29tbWVuY2UgcGFyIEdvb2dsZS4gVm90cmUgc2l0ZSBkb2l0IHLDqXBvbmRyZSDDoCBzZXMgcXVlc3Rpb25zIGVuIHF1ZWxxdWVzIHNlY29uZGVzIDogcXVpIHZvdXMgw6p0ZXMsIG/DuSB2b3VzIMOqdGVzLCBxdWFuZCB2b3VzIG91dnJleiBldCBjZSBxdWUgdm91cyBwcm9wb3Nlei4gUGl4ZWxvcmlhIGNyw6llIGRlcyBzaXRlcyBhY2Nlc3NpYmxlcyBldCBjbGFpcnMgcXVpIGRvbm5lbnQgZW52aWUgZGUgdmVuaXIgdm91cyByZW5kcmUgdmlzaXRlLiIsCiAgICBzZWN0aW9uczogWwogICAgICAiQWNjdWVpbCDigJQgVm90cmUgYm91dGlxdWUgZW4gaW1hZ2UgZXQgdm90cmUgYWNjcm9jaGUiLAogICAgICAnTm9zIHByb2R1aXRzIOKAlCBNaXNlIGVuIGF2YW50IGRlIHZvcyBzcMOpY2lhbGl0w6lzIG91IGdhbW1lcyBwaGFyZXMnLAogICAgICAnSG9yYWlyZXMgJiBhY2PDqHMg4oCUIEpvdXJzIGRcJ291dmVydHVyZSBldCBhZHJlc3NlIHZpc2libGUnLAogICAgICAnQWN0dWFsaXTDqXMg4oCUIFByb21vdGlvbnMsIMOpdsOpbmVtZW50cyBvdSBub3V2ZWF1dMOpcycsCiAgICAgICdDb250YWN0ICYgcGxhbiDigJQgRm9ybXVsYWlyZSArIGludMOpZ3JhdGlvbiBHb29nbGUgTWFwcycsCiAgICBdLAogICAgZmVhdHVyZXM6IFsKICAgICAgIkFmZmljaGFnZSBkZXMgaG9yYWlyZXMgZCdvdXZlcnR1cmUiLAogICAgICAnSW50w6lncmF0aW9uIEdvb2dsZSBNYXBzIHBvdXIgbG9jYWxpc2VyIGxhIGJvdXRpcXVlJywKICAgICAgJ1NlY3Rpb24gcHJvZHVpdHMgb3Ugc3DDqWNpYWxpdMOpcyBhdmVjIHBob3RvcycsCiAgICAgICdCb3V0b24gdMOpbMOpcGhvbmUgY2xpcXVhYmxlIHN1ciBtb2JpbGUnLAogICAgICAiUGFnZSBkJ2FjdHVhbGl0w6lzIHBvdXIgcHJvbW90aW9ucyBldCDDqXbDqW5lbWVudHMiLAogICAgICAnRm9ybXVsYWlyZSBkZSBjb250YWN0IHNpbXBsZScsCiAgICBdLAogICAgcmVjb21tZW5kZWRPZmZlcjogJ1NpdGUgRXNzZW50aWVsJywKICAgIHJlY29tbWVuZGVkUHJpY2U6ICc0OTAg4oKsIFRUQycsCiAgICBvZmZlclJlYXNvbjoKICAgICAgIkwnb2ZmcmUgRXNzZW50aWVsIGVzdCBpZMOpYWxlIHBvdXIgdW4gY29tbWVyY2UgbG9jYWwgcXVpIHZldXQgdW5lIHByw6lzZW5jZSBlbiBsaWduZSBzaW1wbGUgZXQgcHJvZmVzc2lvbm5lbGxlLCBzYW5zIGFib25uZW1lbnQgbWVuc3VlbC4gVW4gaW52ZXN0aXNzZW1lbnQgdW5pcXVlIHBvdXIgdW5lIHZpc2liaWxpdMOpIGR1cmFibGUuIiwKICAgIHByaW1hcnlDdGE6ICdKZSB2ZXV4IHVuIHNpdGUgY29tbWUgY2VsdWktY2knLAogIH0sCiAgewogICAgc2x1ZzogJ2luZGVwZW5kYW50JywKICAgIGJhZGdlOiAnRXhlbXBsZSBtw6l0aWVyJywKICAgIHRpdGxlOiAnRXhlbXBsZSBkZSBzaXRlIHdlYiBwb3VyIGluZMOpcGVuZGFudCcsCiAgICBzdWJ0aXRsZToKICAgICAgJ1VuIGVzcGFjZSBwcm9mZXNzaW9ubmVsIHF1aSB2b3VzIHJlcHLDqXNlbnRlLCBwcsOpc2VudGUgdm9zIG9mZnJlcyBldCB0cmFuc2Zvcm1lIHZvcyB2aXNpdGV1cnMgZW4gY2xpZW50cyDigJQgY29uc3VsdGFudCwgY29hY2gsIGZvcm1hdGV1ciBvdSBmcmVlbGFuY2UuJywKICAgIHNlb1RpdGxlOiAnRXhlbXBsZSBkZSBzaXRlIHdlYiBwb3VyIGluZMOpcGVuZGFudCB8IFBpeGVsb3JpYScsCiAgICBzZW9EZXNjcmlwdGlvbjoKICAgICAgJ0V4ZW1wbGUgZGUgc2l0ZSB3ZWIgcG91ciB1biBpbmTDqXBlbmRhbnQsIGNvbnN1bHRhbnQgb3UgZnJlZWxhbmNlIDogcHLDqXNlbnRhdGlvbiBkZXMgc2VydmljZXMsIGJpbywgdMOpbW9pZ25hZ2VzLCBwcmlzZSBkZSBjb250YWN0LiBQYXIgUGl4ZWxvcmlhLicsCiAgICBvYmplY3RpdmVUaXRsZTogJ1ZvdHJlIGNyw6lkaWJpbGl0w6kgZW4gbGlnbmUsIHNhbnMgZWZmb3J0IHRlY2huaXF1ZScsCiAgICBvYmplY3RpdmVUZXh0OgogICAgICAiUG91ciB1biBpbmTDqXBlbmRhbnQsIGxlIHNpdGUgcGVyc29ubmVsIGVzdCBzb3V2ZW50IGxlIHByZW1pZXIgZmlsdHJlIDogdm9zIHByb3NwZWN0cyBsZSBjb25zdWx0ZW50IGF2YW50IGRlIHZvdXMgcsOpcG9uZHJlLiBJbCBkb2l0IMOqdHJlIGNsYWlyLCBwcm9mZXNzaW9ubmVsIGV0IHJlZmzDqXRlciB2b3RyZSBwb3NpdGlvbm5lbWVudC4gUGl4ZWxvcmlhIGNyw6llIGRlcyBzaXRlcyBxdWkgcHLDqXNlbnRlbnQgdm9zIG9mZnJlcywgdm90cmUgcGFyY291cnMgZXQgdm9zIHTDqW1vaWduYWdlcyBjbGllbnRzIOKAlCBwb3VyIHF1ZSBjaGFxdWUgdmlzaXRldXIgc2FjaGUgaW1tw6lkaWF0ZW1lbnQgc2kgdm91cyBwb3V2ZXogbGVzIGFpZGVyLiIsCiAgICBzZWN0aW9uczogWwogICAgICAnQWNjdWVpbCDigJQgUXVpIHZvdXMgw6p0ZXMgZXQgY2UgcXVlIHZvdXMgYXBwb3J0ZXonLAogICAgICAiU2VydmljZXMgLyBPZmZyZXMg4oCUIENlIHF1ZSB2b3VzIHByb3Bvc2V6LCBwb3VyIHF1aSwgZXQgY29tbWVudCIsCiAgICAgICdQYXJjb3VycyAvIEJpbyDigJQgVm90cmUgZXhww6lyaWVuY2UsIHZvcyBmb3JtYXRpb25zLCB2b3RyZSBhcHByb2NoZScsCiAgICAgICdUw6ltb2lnbmFnZXMg4oCUIEF2aXMgZGUgY2xpZW50cyBwYXNzw6lzIHBvdXIgcmVuZm9yY2VyIGxhIGNvbmZpYW5jZScsCiAgICAgICdDb250YWN0IC8gUmVuZGV6LXZvdXMg4oCUIEZvcm11bGFpcmUgb3UgbGllbiB2ZXJzIHZvdHJlIGNhbGVuZHJpZXInLAogICAgXSwKICAgIGZlYXR1cmVzOiBbCiAgICAgICdTZWN0aW9uIG9mZnJlcyBjbGFpcmUgYXZlYyB0YXJpZnMgaW5kaWNhdGlmcyBzaSBzb3VoYWl0w6knLAogICAgICAnQmlvIHByb2Zlc3Npb25uZWxsZSBhdmVjIHBob3RvJywKICAgICAgIlTDqW1vaWduYWdlcyBjbGllbnRzIG1pcyBlbiBhdmFudCIsCiAgICAgICdGb3JtdWxhaXJlIGRlIGNvbnRhY3Qgb3UgbGllbiB2ZXJzIENhbGVuZGx5JywKICAgICAgJ0JvdXRvbiBkXCdhcHBlbCBkaXJlY3Qgc3VyIG1vYmlsZScsCiAgICAgICdPcHRpbWlzYXRpb24gdGVjaG5pcXVlIGRlIGJhc2UgcG91ciBHb29nbGUnLAogICAgXSwKICAgIHJlY29tbWVuZGVkT2ZmZXI6ICdTaXRlIEVzc2VudGllbCcsCiAgICByZWNvbW1lbmRlZFByaWNlOiAnNDkwIOKCrCBUVEMnLAogICAgb2ZmZXJSZWFzb246CiAgICAgICJMJ29mZnJlIEVzc2VudGllbCBlc3QgaWTDqWFsZSBwb3VyIHVuIGluZMOpcGVuZGFudCBxdWkgdmV1dCB1biBzaXRlIHZpdHJpbmUgcHJvZmVzc2lvbm5lbCBlbiBwYWllbWVudCB1bmlxdWUuIFNpbXBsZSwgbGlzaWJsZSBldCBsaXZyw6kgY2zDqSBlbiBtYWluIOKAlCBzYW5zIGFib25uZW1lbnQgbmkgZ2VzdGlvbiB0ZWNobmlxdWUuIiwKICAgIHByaW1hcnlDdGE6ICdKZSB2ZXV4IHVuIHNpdGUgY29tbWUgY2VsdWktY2knLAogIH0sCl07CgpleHBvcnQgZnVuY3Rpb24gZ2V0SW5kdXN0cnlQYWdlKHNsdWc6IHN0cmluZyk6IEluZHVzdHJ5UGFnZSB8IHVuZGVmaW5lZCB7CiAgcmV0dXJuIGluZHVzdHJ5UGFnZXMuZmluZCgocCkgPT4gcC5zbHVnID09PSBzbHVnKTsKfQo=
+export interface IndustryPage {
+  slug: string;
+  badge: string;
+  title: string;
+  subtitle: string;
+  seoTitle: string;
+  seoDescription: string;
+  objectiveTitle: string;
+  objectiveText: string;
+  sections: string[];
+  features: string[];
+  recommendedOffer: string;
+  recommendedPrice: string;
+  offerReason: string;
+  primaryCta: string;
+}
+
+export const industryPages: IndustryPage[] = [
+  {
+    slug: 'artisan-batiment',
+    badge: 'Exemple métier',
+    title: 'Exemple de site web pour artisan du bâtiment',
+    subtitle:
+      'Un site clair, professionnel et pensé pour générer des demandes de devis locales.',
+    seoTitle: 'Exemple de site web pour artisan du bâtiment | Pixeloria',
+    seoDescription:
+      'Découvrez un exemple de site web pensé pour les artisans du bâtiment : présentation des services, réalisations, demandes de devis et SEO local.',
+    objectiveTitle: 'Un site qui rassure le prospect avant même le premier appel',
+    objectiveText:
+      "Pour un artisan, le site doit rassurer rapidement. Le prospect doit comprendre votre métier, votre zone d'intervention, vos garanties et pouvoir demander un devis en quelques secondes.",
+    sections: [
+      "Accueil — Spécialité et zone d'intervention clairement affichées",
+      'Services — Détail de vos prestations avec tarifs indicatifs si souhaité',
+      'Réalisations — Galerie avant / après de vos chantiers terminés',
+      "Garanties — Assurance décennale, qualifications et éléments de réassurance",
+      "Avis clients — Avis Google intégrés pour renforcer la confiance",
+      'Formulaire de devis — Demande rapide en ligne',
+      'Bouton appel — Visible et cliquable depuis mobile',
+    ],
+    features: [
+      'Bouton téléphone sticky sur mobile',
+      'Formulaire de demande de devis',
+      'Galerie réalisations',
+      "SEO local par ville ou zone d'intervention",
+      'Connexion Google Business Profile',
+      'Analytics et suivi des conversions',
+    ],
+    recommendedOffer: 'Site Croissance',
+    recommendedPrice: '159 € TTC / mois',
+    offerReason:
+      "Les artisans ont besoin d'un site qui évolue avec leurs réalisations, leurs prestations et leur visibilité locale. L'offre Croissance est la plus pertinente car elle permet de travailler le SEO, les contenus, les mises à jour et l'amélioration continue du site.",
+    primaryCta: "Je veux un site d'artisan comme celui-ci",
+  },
+  {
+    slug: 'entreprise-renovation',
+    badge: 'Exemple métier',
+    title: 'Exemple de site web pour entreprise de rénovation',
+    subtitle:
+      'Un site pensé pour présenter vos savoir-faire, rassurer vos prospects et générer des demandes qualifiées.',
+    seoTitle: 'Exemple de site web pour entreprise de rénovation | Pixeloria',
+    seoDescription:
+      "Découvrez un exemple de site web pour entreprise de rénovation : services, réalisations, avant/après, réassurance et demandes de devis.",
+    objectiveTitle: 'Donner confiance avant le premier rendez-vous',
+    objectiveText:
+      "Une entreprise de rénovation doit montrer son sérieux, la qualité de ses réalisations et sa capacité à piloter des projets complets. Le site doit donner confiance avant le premier rendez-vous.",
+    sections: [
+      "Présentation — L'entreprise, ses valeurs et son positionnement",
+      'Prestations — Détail par métier (carrelage, isolation, second œuvre...)',
+      'Réalisations — Galerie avant / après de vos chantiers',
+      'Process projet — Les étapes du chantier de A à Z',
+      'Garanties — Assurance décennale, certifications, réassurance',
+      "Zones d'intervention — Carte ou liste des secteurs couverts",
+      'Demande de devis — Formulaire projet détaillé',
+    ],
+    features: [
+      'Pages prestations optimisées SEO par spécialité',
+      'Galerie chantier avec photos avant / après',
+      'Formulaire projet détaillé (type de travaux, surface, budget)',
+      'Mise en avant des garanties et certifications',
+      'Photos avant / après intégrées aux réalisations',
+      'Tracking des demandes de devis',
+    ],
+    recommendedOffer: 'Site Croissance',
+    recommendedPrice: '159 € TTC / mois',
+    offerReason:
+      "La rénovation demande plus de contenu, plus de réassurance et plus de visibilité locale. L'offre Croissance permet d'améliorer progressivement le site, d'ajouter des réalisations et de travailler les pages SEO par prestation.",
+    primaryCta: 'Je veux un site de rénovation comme celui-ci',
+  },
+  {
+    slug: 'conciergerie',
+    badge: 'Exemple anonymisé',
+    title: 'Exemple de site web pour conciergerie',
+    subtitle:
+      'Un site professionnel pour décrocher des mandats propriétaires, présenter vos services et rassurer voyageurs comme propriétaires.',
+    seoTitle: 'Exemple de site web pour conciergerie Airbnb et location courte durée | Pixeloria',
+    seoDescription:
+      "Exemple de site web pour une conciergerie Airbnb et location courte durée : services propriétaires, gestion voyageurs, automatisations et demande de mandat. Par Pixeloria.",
+    objectiveTitle: 'Rassurez les propriétaires, impressionnez vos voyageurs',
+    objectiveText:
+      "Une conciergerie performante doit convaincre deux audiences : les propriétaires qui confient leur bien, et les voyageurs qui cherchent une expérience soignée. Votre site doit montrer votre sérieux, votre organisation et votre zone d'intervention — clairement, sans jargon. Pixeloria crée des sites sobres et professionnels qui génèrent des mandats qualifiés.",
+    sections: [
+      "Accueil — Votre promesse et zone d'intervention pour les propriétaires",
+      'Nos services — Accueil voyageurs, ménage, gestion calendrier, urgences',
+      'Gestion voyageurs — Arrivée autonome, livret numérique, support client',
+      "Optimisation des annonces — Photos professionnelles, tarification dynamique",
+      'Automatisation — Outils et process pour une gestion sans friction',
+      'Process onboarding — Les étapes pour confier votre bien en 3 jours',
+      'FAQ propriétaires — Réponses aux questions les plus fréquentes',
+      "Formulaire de contact — Demande de mandat ou estimation de revenus",
+      "Exemple anonymisé — Présentation d'un site de conciergerie type",
+    ],
+    features: [
+      "Formulaire de demande de mandat ou d'estimation de revenus",
+      'Bouton WhatsApp direct pour contact rapide',
+      'FAQ propriétaires intégrée',
+      'Présentation des automatisations et outils utilisés',
+      'Tracking des leads propriétaires',
+      'Page services détaillée avec tarifs indicatifs',
+      "SEO local par destination ou secteur géographique",
+    ],
+    recommendedOffer: 'Site Croissance',
+    recommendedPrice: '159 € TTC / mois',
+    offerReason:
+      "L'offre Croissance convient à une conciergerie qui veut développer sa visibilité locale, ajouter des destinations ou secteurs d'intervention et travailler son positionnement Google dans le temps.",
+    primaryCta: 'Je veux un site conciergerie comme celui-ci',
+  },
+  {
+    slug: 'agence-immobiliere',
+    badge: 'Exemple métier',
+    title: 'Exemple de site web pour agence immobilière',
+    subtitle:
+      'Un site pensé pour générer des contacts vendeurs, rassurer les acheteurs et renforcer votre image locale.',
+    seoTitle: 'Exemple de site web pour agence immobilière | Pixeloria',
+    seoDescription:
+      "Découvrez un exemple de site web pour agence immobilière ou mandataire : estimation, biens, services, preuve locale et prise de contact.",
+    objectiveTitle: 'Inspirez confiance avant le premier contact vendeur',
+    objectiveText:
+      "Une agence immobilière doit inspirer confiance rapidement. Le site doit valoriser l'expertise locale, les biens disponibles, les services d'estimation et la capacité à accompagner les vendeurs comme les acheteurs.",
+    sections: [
+      "Présentation de l'agence — Expertise, valeurs et secteur géographique",
+      "Estimation immobilière — Formulaire de demande d'estimation gratuite",
+      'Biens à vendre ou à louer — Sélection mise en avant avec photos',
+      'Services vendeurs — Accompagnement, valorisation, délai de vente',
+      "Expertise locale — Connaissance du marché, quartiers et communes",
+      'Avis clients — Témoignages vendeurs et acheteurs satisfaits',
+      'Contact rapide — Formulaire, téléphone, prise de rendez-vous',
+    ],
+    features: [
+      "Formulaire d'estimation gratuite en ligne",
+      'Pages quartiers ou villes pour le SEO local',
+      'Mise en avant des biens disponibles',
+      'Connexion CRM possible ultérieurement',
+      'SEO local pour votre ville et votre spécialité',
+      'Tracking des leads vendeurs',
+    ],
+    recommendedOffer: 'Site Croissance',
+    recommendedPrice: '159 € TTC / mois',
+    offerReason:
+      "L'immobilier nécessite une présence locale forte et des contenus réguliers pour capter des vendeurs. L'offre Croissance est recommandée car elle permet de travailler les pages locales, les services, les contenus et les optimisations dans le temps.",
+    primaryCta: 'Je veux un site immobilier comme celui-ci',
+  },
+  {
+    slug: 'commerce-local',
+    badge: 'Exemple métier',
+    title: 'Exemple de site web pour commerce local',
+    subtitle:
+      'Un site simple, clair et efficace pour aider vos clients à vous trouver, vous comprendre et vous contacter.',
+    seoTitle: 'Exemple de site web pour commerce local | Pixeloria',
+    seoDescription:
+      'Découvrez un exemple de site web pour commerce local : horaires, produits, services, Google Business, contact et visibilité locale.',
+    objectiveTitle: 'Visible en 3 secondes, compris en 5',
+    objectiveText:
+      "Un commerce local a besoin d'être visible rapidement. Le site doit afficher les informations essentielles : activité, horaires, adresse, produits ou services, contact et lien Google Maps. Pixeloria crée des sites clairs et accessibles qui donnent envie de venir vous rendre visite.",
+    sections: [
+      "Présentation du commerce — Votre activité, votre histoire et vos valeurs",
+      'Produits ou services — Mise en avant de vos spécialités ou gammes phares',
+      'Horaires et adresse — Jours et heures visibles, accès facilité',
+      'Galerie photos — Ambiance du commerce, produits, équipe',
+      'Avis clients — Témoignages et avis Google intégrés',
+      'Accès Google Maps — Localisation intégrée pour vous trouver facilement',
+      'Contact rapide — Formulaire + bouton appel mobile',
+    ],
+    features: [
+      'Bouton appel cliquable sur mobile',
+      'Intégration Google Maps',
+      "Affichage des horaires d'ouverture",
+      'Galerie photos de la boutique',
+      'SEO local pour votre ville',
+      'Connexion Google Business Profile',
+    ],
+    recommendedOffer: 'Site Sérénité',
+    recommendedPrice: '89 € TTC / mois',
+    offerReason:
+      "Un commerce local a souvent besoin d'un site simple, rapide et rassurant. L'offre Sérénité est adaptée si vous voulez éviter un gros paiement initial et garder maintenance + SEO de base inclus. L'offre Essentiel à 490 € convient si vous préférez un site simple sans abonnement.",
+    primaryCta: 'Je veux un site de commerce local comme celui-ci',
+  },
+  {
+    slug: 'independant',
+    badge: 'Exemple métier',
+    title: 'Exemple de site web pour indépendant',
+    subtitle:
+      'Un site professionnel pour présenter votre expertise, vos offres et transformer vos visiteurs en prospects.',
+    seoTitle: 'Exemple de site web pour indépendant, consultant ou coach | Pixeloria',
+    seoDescription:
+      'Découvrez un exemple de site web pour indépendant : personal branding, offres, prise de contact, crédibilité et conversion.',
+    objectiveTitle: 'Clarifiez votre offre, captez vos premiers prospects',
+    objectiveText:
+      "Un indépendant doit rapidement expliquer qui il aide, comment il travaille et pourquoi lui faire confiance. Le site doit clarifier l'offre et faciliter la prise de rendez-vous. Pixeloria crée des sites clairs et professionnels qui transforment vos visiteurs en contacts qualifiés.",
+    sections: [
+      'Positionnement clair — Qui vous êtes, qui vous aidez et comment',
+      "Présentation de l'expertise — Parcours, formations, approche et valeurs",
+      'Offres ou accompagnements — Ce que vous proposez, pour qui et à quel prix',
+      'Preuves de compétence — Témoignages, cas clients, certifications',
+      'FAQ — Réponses aux questions les plus fréquentes',
+      'Prise de rendez-vous ou contact — Formulaire ou lien vers votre calendrier',
+    ],
+    features: [
+      'Bouton prise de rendez-vous (Calendly ou formulaire)',
+      'Formulaire de contact optimisé conversion',
+      'Pages offres ou accompagnements',
+      'Témoignages clients mis en avant',
+      'Blog ou ressources si besoin',
+      'SEO personnel ou métier',
+    ],
+    recommendedOffer: 'Site Sérénité',
+    recommendedPrice: '89 € TTC / mois',
+    offerReason:
+      "Un indépendant a souvent besoin d'un site clair, professionnel et simple à maintenir. L'offre Sérénité est adaptée pour lancer une présence solide. L'offre Croissance devient pertinente si le site doit devenir un canal d'acquisition régulier.",
+    primaryCta: "Je veux un site d'indépendant comme celui-ci",
+  },
+];
+
+export function getIndustryPage(slug: string): IndustryPage | undefined {
+  return industryPages.find((p) => p.slug === slug);
+}
