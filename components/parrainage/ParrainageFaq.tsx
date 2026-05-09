@@ -1,0 +1,97 @@
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
+
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+const faqItems: FaqItem[] = [
+  {
+    question: "Quand la récompense est-elle versée ?",
+    answer: "Pour l'offre One Shot, la récompense est déclenchée après paiement validé. Pour les abonnements Essentiel et Croissance, elle est déclenchée après 3 paiements mensuels réussis et un abonnement toujours actif.",
+  },
+  {
+    question: "Puis-je parrainer plusieurs entreprises ?",
+    answer: "Oui, sans limite. Chaque nouveau client parrainé peut générer une récompense indépendante. Vous suivez l'ensemble de vos filleuls dans votre espace affilié.",
+  },
+  {
+    question: "Le filleul bénéficie-t-il aussi d'un avantage ?",
+    answer: "Oui. Le filleul bénéficie automatiquement d'une remise sur son offre : −50 € sur le One Shot, premier mois à 39 € sur l'Essentiel, premier mois à 79 € sur le Croissance.",
+  },
+  {
+    question: "Puis-je choisir entre argent et crédit Pixeloria ?",
+    answer: "Oui. Dans votre espace parrain, vous choisissez librement entre une récompense financière ou un crédit Pixeloria utilisable sur n'importe quelle prestation web.",
+  },
+  {
+    question: "Le programme est-il réservé aux clients Pixeloria ?",
+    answer: "Non. Clients, partenaires, professionnels et particuliers peuvent tous devenir parrains et recommander Pixeloria à leur réseau.",
+  },
+  {
+    question: "Que se passe-t-il si le filleul annule son abonnement ?",
+    answer: "Si l'abonnement est annulé avant les 3 premiers paiements, la commission est annulée. Pour l'offre One Shot, une annulation après paiement validé entraîne un ajustement de la commission selon les conditions de remboursement.",
+  },
+  {
+    question: "Comment obtenir mon code personnel ?",
+    answer: "En rejoignant le programme via le bouton \"Devenir parrain\", vous créez votre compte dans l'espace affilié. Un code personnalisé au format PIXELORIA-PRENOM vous est attribué automatiquement.",
+  },
+  {
+    question: "Comment suivre mes parrainages et récompenses ?",
+    answer: "Tout est visible dans votre espace affilié : filleuls actifs, commissions en attente, commissions validées, historique des paiements. Aucune gestion manuelle n'est nécessaire.",
+  },
+];
+
+export default function ParrainageFaq() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const gridRef = useRef<HTMLDivElement>(null);
+
+  const toggle = (i: number) => setOpenIndex(prev => (prev === i ? null : i));
+
+  useEffect(() => {
+    const grid = gridRef.current;
+    if (!grid) return;
+
+    const items = Array.from(grid.querySelectorAll<HTMLElement>('.faq-item'));
+    if (items.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' },
+    );
+
+    items.forEach((item) => observer.observe(item));
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div className="faq__grid" ref={gridRef}>
+      {faqItems.map((item, i) => (
+        <div key={i} className={`faq-item${openIndex === i ? ' open' : ''}`}>
+          <button
+            className="faq-item__question"
+            aria-expanded={openIndex === i}
+            onClick={() => toggle(i)}
+            type="button"
+          >
+            {item.question}
+            <span className="faq-item__icon" aria-hidden="true">+</span>
+          </button>
+          <div className="faq-item__answer" role="region">
+            <div className="faq-item__answer-inner">
+              {item.answer}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
