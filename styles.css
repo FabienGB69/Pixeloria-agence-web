@@ -4425,7 +4425,10 @@ select {
   border-radius: 4px;
 }
 .emh-h1--1 { width: 88%; }
-.emh-h1--2 { width: 65%; margin-top: 2px; }
+.emh-h1--2 {
+  width: 65%;
+  margin-top: 2px;
+}
 .emh-sub {
   height: 6px;
   background: #c4cede;
@@ -4443,8 +4446,15 @@ select {
   height: 22px;
   border-radius: 11px;
 }
-.emh-btn--solid { width: 88px; background: var(--mint); }
-.emh-btn--ghost { width: 64px; background: transparent; border: 1.5px solid #c4cede; }
+.emh-btn--solid {
+  width: 88px;
+  background: var(--mint);
+}
+.emh-btn--ghost {
+  width: 64px;
+  background: transparent;
+  border: 1.5px solid #c4cede;
+}
 .exemple-mockup-hero-img {
   background: linear-gradient(135deg, #ddeef8 0%, #c8e0f4 100%);
   border-radius: 8px;
