@@ -28,6 +28,7 @@ export default function Footer() {
           <a href="#testimonials">Avis clients</a>
           <a href="#faq">FAQ</a>
           <Link href="/a-propos">À propos</Link>
+          <Link href="/parrainage">🤝 Parrainage</Link>
         </nav>
 
         <nav className="footer-nav" aria-label="Pages locales">
