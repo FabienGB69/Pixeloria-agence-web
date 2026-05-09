@@ -505,31 +505,31 @@ export default function ParrainagePage() {
             <ul className="conditions__list">
               <li className="conditions__item">
                 <span className="conditions__item-icon">✦</span>
-                La récompense est réservée aux parrainages de <strong>nouveaux clients Pixeloria</strong> uniquement.
+                <p>La récompense est réservée aux parrainages de <strong>nouveaux clients Pixeloria</strong> uniquement.</p>
               </li>
               <li className="conditions__item">
                 <span className="conditions__item-icon">✦</span>
-                Le code parrainage doit être utilisé <strong>avant la validation du devis ou du paiement Stripe</strong>.
+                <p>Le code parrainage doit être utilisé <strong>avant la validation du devis ou du paiement Stripe</strong>.</p>
               </li>
               <li className="conditions__item">
                 <span className="conditions__item-icon">✦</span>
-                Pour l&apos;offre One Shot, la récompense est déclenchée après <strong>paiement effectif</strong> de la prestation.
+                <p>Pour l&apos;offre One Shot, la récompense est déclenchée après <strong>paiement effectif de la prestation</strong>.</p>
               </li>
               <li className="conditions__item">
                 <span className="conditions__item-icon">✦</span>
-                Pour les offres en abonnement, la récompense est déclenchée après <strong>3 paiements mensuels réussis</strong> et un abonnement toujours actif.
+                <p>Pour les offres en abonnement, la récompense est déclenchée après <strong>3 paiements mensuels réussis</strong> et un abonnement toujours actif.</p>
               </li>
               <li className="conditions__item">
                 <span className="conditions__item-icon">✦</span>
-                En cas d&apos;annulation, de remboursement, de litige ou de paiement échoué, la récompense peut être <strong>annulée ou ajustée</strong>.
+                <p>En cas d&apos;annulation, de remboursement, de litige ou de paiement échoué, la récompense peut être <strong>annulée ou ajustée</strong>.</p>
               </li>
               <li className="conditions__item">
                 <span className="conditions__item-icon">✦</span>
-                Le parrain peut choisir entre une <strong>récompense financière</strong> ou un <strong>crédit Pixeloria</strong>.
+                <p>Le parrain peut choisir entre une <strong>récompense financière</strong> ou un <strong>crédit Pixeloria</strong>.</p>
               </li>
               <li className="conditions__item">
                 <span className="conditions__item-icon">✦</span>
-                Pixeloria se réserve le droit de refuser tout parrainage <strong>abusif, frauduleux ou non conforme</strong>.
+                <p>Pixeloria se réserve le droit de refuser tout parrainage <strong>abusif, frauduleux ou non conforme</strong>.</p>
               </li>
             </ul>
           </div>
