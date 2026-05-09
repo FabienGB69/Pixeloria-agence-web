@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -58,6 +59,7 @@ export default function Header() {
           <a href="#process" className="nav-link" onClick={closeMenu}>Process</a>
           <a href="#testimonials" className="nav-link" onClick={closeMenu}>Avis</a>
           <a href="#faq" className="nav-link" onClick={closeMenu}>FAQ</a>
+          <Link href="/a-propos" className="nav-link" onClick={closeMenu}>À propos</Link>
           <a href="#contact" className="btn btn-nav" onClick={closeMenu}>Audit gratuit</a>
         </nav>
 
