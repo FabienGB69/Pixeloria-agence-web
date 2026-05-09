@@ -31,5 +31,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://pixeloria.fr/agence-web-loire', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: 'https://pixeloria.fr/agence-web-savoie', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: 'https://pixeloria.fr/agence-web-haute-savoie', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://pixeloria.fr/parrainage', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
   ];
 }
