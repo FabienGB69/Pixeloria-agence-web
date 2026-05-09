@@ -1,1 +1,1 @@
-ZGVjbGFyZSBtb2R1bGUgJyouY3NzJzsK
+declare module '*.css';
