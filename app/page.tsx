@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import Header from '@/components/layout/Header';
 import LaunchBanner from '@/components/ui/LaunchBanner';
 import Hero from '@/components/sections/Hero';
@@ -10,14 +11,15 @@ import SiteWorks from '@/components/sections/SiteWorks';
 import ForWho from '@/components/sections/ForWho';
 import AuditGratuit from '@/components/sections/AuditGratuit';
 import Marketing from '@/components/sections/Marketing';
-import Portfolio from '@/components/sections/Portfolio';
 import Process from '@/components/sections/Process';
 import Testimonials from '@/components/sections/Testimonials';
-import FAQ from '@/components/sections/FAQ';
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
 import JsonLd from '@/components/JsonLd';
+
+const Portfolio = dynamic(() => import('@/components/sections/Portfolio'));
+const FAQ = dynamic(() => import('@/components/sections/FAQ'));
 
 export const metadata: Metadata = {
   title: 'Création et refonte de sites internet pour TPE, PME et artisans | Pixeloria',

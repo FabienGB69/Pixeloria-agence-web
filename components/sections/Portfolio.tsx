@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { trackCaseStudyClick } from '@/lib/gtm';
 
@@ -109,11 +110,12 @@ export default function Portfolio() {
                 <div className="portfolio-comparison">
                   <div className="portfolio-thumb-wrap">
                     <span className="thumb-label thumb-label--before">Avant</span>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <Image
                       className="portfolio-thumb"
                       src={p.beforeImage}
                       alt={`Site avant refonte — ${p.client}`}
+                      width={600}
+                      height={450}
                       onError={(e) => {
                         (e.currentTarget.closest('.portfolio-thumb-wrap') as HTMLElement | null)?.style.setProperty('display', 'none');
                       }}
