@@ -60,6 +60,7 @@ export default function Header() {
           <a href="#testimonials" className="nav-link" onClick={closeMenu}>Avis</a>
           <a href="#faq" className="nav-link" onClick={closeMenu}>FAQ</a>
           <Link href="/a-propos" className="nav-link" onClick={closeMenu}>À propos</Link>
+          <Link href="/parrainage" className="nav-link" onClick={closeMenu}>Parrainage</Link>
           <a href="#contact" className="btn btn-nav" onClick={closeMenu}>Audit gratuit</a>
         </nav>
 
