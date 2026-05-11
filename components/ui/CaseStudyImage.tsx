@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 interface Props {
   src: string;
   alt: string;
@@ -8,11 +10,12 @@ interface Props {
 
 export default function CaseStudyImage({ src, alt, className }: Props) {
   return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
+    <Image
       src={src}
       alt={alt}
       className={className}
+      width={1200}
+      height={900}
       onError={(e) => {
         (e.currentTarget.parentElement as HTMLElement | null)?.style.setProperty('display', 'none');
       }}
