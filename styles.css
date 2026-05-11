@@ -81,7 +81,7 @@ html {
 }
 
 body {
-  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-family: var(--font-sans, system-ui, sans-serif);
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.65;
@@ -1450,7 +1450,7 @@ abbr[title] {
 
 .testimonials-editorial h2 {
   font-size: clamp(1.75rem, 3vw, 2.4rem);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.15;
   color: var(--text);
 }
@@ -2402,9 +2402,9 @@ select {
 }
 .pricing-price {
   font-size: 2.5rem;
-  font-weight: 800;
+  font-weight: 700;
   margin: 0 0 1.25rem;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-sans, system-ui, sans-serif);
 }
 .pricing-price span {
   font-size: 1rem;
@@ -2774,7 +2774,7 @@ select {
 }
 .offer-price {
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--text);
   margin-block: 0.75rem;
   font-family: var(--font-serif, Georgia, serif);

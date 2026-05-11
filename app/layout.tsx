@@ -7,15 +7,16 @@ import '@/styles/globals.css'; // tokens sober theme — écrase les anciens `:r
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ['700'],
   display: 'swap',
   variable: '--font-serif',
 });
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
+  preload: true,
   variable: '--font-sans',
 });
 
