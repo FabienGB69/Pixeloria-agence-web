@@ -758,13 +758,13 @@ abbr[title] {
 .float-badge-1 {
   top: -18px;
   right: -20px;
-  animation: floatBadge 4s ease-in-out infinite alternate;
+  animation: floatBadge 4s 2.5s ease-in-out infinite alternate;
 }
 
 .float-badge-2 {
   bottom: -18px;
   left: -20px;
-  animation: floatBadge 5s ease-in-out infinite alternate-reverse;
+  animation: floatBadge 5s 2.5s ease-in-out infinite alternate-reverse;
 }
 
 @keyframes floatBadge {

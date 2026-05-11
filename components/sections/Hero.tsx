@@ -3,7 +3,7 @@ export default function Hero() {
     <section className="hero section">
       <div className="container hero-inner">
 
-        <div className="hero-text reveal">
+        <div className="hero-text">
           <div className="hero-badge">
             <span className="badge-dot"></span>
             Spécialiste web pour TPE, PME &amp; artisans
@@ -71,7 +71,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="hero-visual reveal reveal-right">
+        <div className="hero-visual">
           <div className="hero-card glass-card">
             <div className="hero-card-header">
               <span className="chip">Votre site en ligne</span>
