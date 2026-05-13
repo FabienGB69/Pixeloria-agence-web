@@ -64,6 +64,21 @@ const projects: Project[] = [
       'Optimisation SEO dès le lancement',
     ],
   },
+  {
+    type: 'Création complète',
+    year: '2026',
+    client: 'Qit Concierge',
+    sector: 'CONCIERGERIE COURTE DURÉE',
+    slug: 'qit-concierge',
+    url: 'https://qitconcierge.fr',
+    summary: 'Création complète d\'un site internet professionnel pour une conciergerie spécialisée en location courte durée.',
+    bullets: [
+      'Design professionnel orienté propriétaires',
+      'Présentation claire des services de gestion locative',
+      'Parcours de contact simplifié pour générer des leads',
+      'Base SEO locale posée dès le lancement',
+    ],
+  },
 ];
 
 export default function Portfolio() {

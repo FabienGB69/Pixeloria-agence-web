@@ -65,6 +65,21 @@ const etudes = [
       'Base SEO posée dès le lancement',
     ],
   },
+  {
+    type: 'Création complète',
+    year: '2026',
+    sector: 'Conciergerie courte durée',
+    client: 'Qit Concierge',
+    slug: 'qit-concierge',
+    url: 'https://qitconcierge.fr',
+    summary: 'Création d\'un site internet professionnel pour présenter une offre de conciergerie spécialisée dans la location courte durée, avec un positionnement clair et des appels à l\'action orientés propriétaires.',
+    axes: [
+      'Design professionnel adapté aux propriétaires Airbnb / Booking',
+      'Présentation structurée des services de gestion locative',
+      'Parcours de contact simplifié pour générer des leads qualifiés',
+      'Base SEO locale posée dès le lancement',
+    ],
+  },
 ];
 
 export default function RealisationsPage() {
