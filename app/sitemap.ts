@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://pixeloria.fr/realisations/escalee-gouts', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
     { url: 'https://pixeloria.fr/realisations/lenora-conciergerie', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
     { url: 'https://pixeloria.fr/realisations/content-by-denise', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
+    { url: 'https://pixeloria.fr/realisations/qit-concierge', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
     { url: 'https://pixeloria.fr/creation', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
     { url: 'https://pixeloria.fr/refonte', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
     { url: 'https://pixeloria.fr/exemples/artisan-batiment', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
