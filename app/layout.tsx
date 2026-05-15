@@ -22,25 +22,32 @@ const jakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Pixeloria — Agence Web pour Artisans & PME',
+    default: 'Pixeloria — Création & refonte de sites internet pour artisans et PME',
     template: '%s | Pixeloria',
   },
   description:
-    'Des sites qui amènent des clients. Création et refonte de sites web pour artisans et PME. Offres à partir de 89€/mois.',
+    'Création et refonte de sites internet professionnels pour artisans, TPE et PME. Offre one shot dès 490 € ou abonnement dès 89 €/mois avec maintenance et SEO inclus.',
   metadataBase: new URL('https://pixeloria.fr'),
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
     url: 'https://pixeloria.fr',
     siteName: 'Pixeloria',
-    title: 'Pixeloria — Agence Web pour Artisans & PME',
-    description: 'Des sites qui amènent des clients. Création et refonte de sites web pour artisans et PME.',
-    images: [{ url: '/assets/pixeloria-logo.svg', width: 1200, height: 630, alt: 'Pixeloria' }],
+    title: 'Pixeloria — Création & refonte de sites internet pour artisans et PME',
+    description: 'Création et refonte de sites internet professionnels pour artisans, TPE et PME. Offre one shot dès 490 € ou abonnement dès 89 €/mois avec maintenance et SEO inclus.',
+    images: [{
+      url: 'https://pixeloria.fr/og/pixeloria-og-image.png',
+      secureUrl: 'https://pixeloria.fr/og/pixeloria-og-image.png',
+      width: 1200,
+      height: 630,
+      alt: 'Pixeloria — Création et refonte de sites internet pour artisans et PME',
+    }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Pixeloria — Agence Web pour Artisans & PME',
-    description: 'Des sites qui amènent des clients. Création et refonte de sites web pour artisans et PME.',
+    title: 'Pixeloria — Création & refonte de sites internet pour artisans et PME',
+    description: 'Création et refonte de sites internet professionnels pour artisans, TPE et PME. Offre one shot dès 490 € ou abonnement dès 89 €/mois avec maintenance et SEO inclus.',
+    images: ['https://pixeloria.fr/og/pixeloria-og-image.png'],
   },
   robots: { index: true, follow: true },
   icons: {

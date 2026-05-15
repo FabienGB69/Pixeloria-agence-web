@@ -22,26 +22,32 @@ const Portfolio = dynamic(() => import('@/components/sections/Portfolio'));
 const FAQ = dynamic(() => import('@/components/sections/FAQ'));
 
 export const metadata: Metadata = {
-  title: 'Création et refonte de sites internet pour TPE, PME et artisans | Pixeloria',
+  title: 'Pixeloria — Création & refonte de sites internet pour artisans et PME',
   description:
-    'Pixeloria crée et refond des sites vitrines pour TPE, PME et artisans. Offre one-shot à 490 € TTC ou accompagnement mensuel dès 89 € TTC/mois avec maintenance et SEO local de base.',
+    'Création et refonte de sites internet professionnels pour artisans, TPE et PME. Offre one shot dès 490 € ou abonnement dès 89 €/mois avec maintenance et SEO inclus.',
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/',
-    title: 'Création et refonte de sites internet pour TPE, PME et artisans | Pixeloria',
-    description:
-      'Un site professionnel, moderne et optimisé pour le SEO local, sans gros budget de départ.',
-    images: [{ url: 'https://pixeloria.fr/assets/pixeloria-logo.svg' }],
-    locale: 'fr_FR',
     siteName: 'Pixeloria',
+    locale: 'fr_FR',
+    title: 'Pixeloria — Création & refonte de sites internet pour artisans et PME',
+    description:
+      'Création et refonte de sites internet professionnels pour artisans, TPE et PME. Offre one shot dès 490 € ou abonnement dès 89 €/mois avec maintenance et SEO inclus.',
+    images: [{
+      url: 'https://pixeloria.fr/og/pixeloria-og-image.png',
+      secureUrl: 'https://pixeloria.fr/og/pixeloria-og-image.png',
+      width: 1200,
+      height: 630,
+      alt: 'Pixeloria — Création et refonte de sites internet pour artisans et PME',
+    }],
   },
   twitter: {
     card: 'summary_large_image',
     site: '@pixeloria_fr',
-    title: 'Création et refonte de sites internet pour TPE, PME et artisans | Pixeloria',
+    title: 'Pixeloria — Création & refonte de sites internet pour artisans et PME',
     description:
-      'Sites internet professionnels pour artisans et PME. SEO local, livraison rapide, à partir de 490 € TTC.',
-    images: ['https://pixeloria.fr/assets/pixeloria-logo.svg'],
+      'Création et refonte de sites internet professionnels pour artisans, TPE et PME. Offre one shot dès 490 € ou abonnement dès 89 €/mois avec maintenance et SEO inclus.',
+    images: ['https://pixeloria.fr/og/pixeloria-og-image.png'],
   },
 };
 
