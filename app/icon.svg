@@ -1,0 +1,41 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 200 200"
+  width="200"
+  height="200"
+  fill="none"
+>
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#35e38f" />
+      <stop offset="100%" stop-color="#24d7db" />
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#26d8be" />
+      <stop offset="100%" stop-color="#2ca7ff" />
+    </linearGradient>
+  </defs>
+
+  <!-- Dark background matching Pixeloria brand -->
+  <rect width="200" height="200" rx="20" fill="#080810" />
+
+  <!-- Pixel icon — 5 columns × 3 rows, each block 35×35, gap 2px -->
+  <!-- Col 1, Row 2 -->
+  <rect x="9"   y="83"  width="35" height="35" rx="4" fill="url(#g1)" />
+  <!-- Col 2, Row 1 -->
+  <rect x="46"  y="46"  width="35" height="35" rx="4" fill="url(#g1)" />
+  <!-- Col 2, Row 2 (white) -->
+  <rect x="46"  y="83"  width="35" height="35" rx="4" fill="#ffffff" />
+  <!-- Col 2, Row 3 -->
+  <rect x="46"  y="120" width="35" height="35" rx="4" fill="url(#g2)" />
+  <!-- Col 3, Row 2 -->
+  <rect x="83"  y="83"  width="35" height="35" rx="4" fill="url(#g1)" />
+  <!-- Col 4, Row 1 -->
+  <rect x="120" y="46"  width="35" height="35" rx="4" fill="url(#g1)" />
+  <!-- Col 4, Row 2 (white) -->
+  <rect x="120" y="83"  width="35" height="35" rx="4" fill="#ffffff" />
+  <!-- Col 4, Row 3 -->
+  <rect x="120" y="120" width="35" height="35" rx="4" fill="url(#g2)" />
+  <!-- Col 5, Row 2 -->
+  <rect x="157" y="83"  width="35" height="35" rx="4" fill="url(#g2)" />
+</svg>

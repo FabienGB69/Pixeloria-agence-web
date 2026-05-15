@@ -43,6 +43,13 @@ export const metadata: Metadata = {
     description: 'Des sites qui amènent des clients. Création et refonte de sites web pour artisans et PME.',
   },
   robots: { index: true, follow: true },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/favicon.ico',
+  },
 };
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
