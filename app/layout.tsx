@@ -46,8 +46,11 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Pixeloria — Création & refonte de sites internet pour artisans et PME',
-    description: 'Création et refonte de sites internet professionnels pour artisans, TPE et PME. Offre one shot dès 490 € ou abonnement dès 89 €/mois avec maintenance et SEO inclus.',
-    images: ['https://pixeloria.fr/og/pixeloria-og-image.png'],
+    description: 'Sites internet professionnels pour artisans, TPE et PME. Création, refonte, maintenance et SEO.',
+    images: [{
+      url: 'https://pixeloria.fr/og/pixeloria-og-image.png',
+      alt: 'Pixeloria — Création et refonte de sites internet pour artisans et PME',
+    }],
   },
   robots: { index: true, follow: true },
   icons: {
