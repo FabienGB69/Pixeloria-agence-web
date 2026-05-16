@@ -2,27 +2,30 @@
    CONFIG — modifier facilement les données du programme
 ============================================================ */
 .prrn-page {
-  /* Couleurs Pixeloria */
-  --bg-deep:       #030e28;
-  --bg-dark:       #050f1a;
-  --bg-card:       #0a1f3c;
-  --bg-card-light: #0d2448;
-  --bg-subtle:     #091628;
-  --border:        rgba(139, 92, 246, 0.18);
-  --border-light:  rgba(139, 92, 246, 0.30);
-  --purple-deep:   #5b3fd4;
-  --purple:        #7c3aed;
-  --purple-mid:    #8b5cf6;
-  --purple-light:  #a78bfa;
-  --purple-pale:   rgba(139, 92, 246, 0.12);
-  --teal:          #26d8be;
-  --teal-pale:     rgba(38, 216, 190, 0.12);
-  --green:         #10b981;
-  --gold:          #f59e0b;
-  --gold-pale:     rgba(245, 158, 11, 0.12);
-  --text-primary:  #f0f2f7;
-  --text-secondary:#c4cede;
-  --text-muted:    #7a8ba0;
+  /* Fonds clairs — identité Pixeloria */
+  --bg-deep:       #f7f3ee;
+  --bg-dark:       #f2ede7;
+  --bg-card:       #ffffff;
+  --bg-card-light: #faf8ff;
+  --bg-subtle:     #f0ecf8;
+  --border:        rgba(122, 92, 255, 0.14);
+  --border-light:  rgba(122, 92, 255, 0.28);
+  /* Violet Pixeloria */
+  --purple-deep:   #6441e8;
+  --purple:        #7a5cff;
+  --purple-mid:    #8b6fff;
+  --purple-light:  #7c3aed;  /* violet-600 — lisible sur fond clair */
+  --purple-pale:   rgba(122, 92, 255, 0.08);
+  /* Accents */
+  --teal:          #00b8a0;
+  --teal-pale:     rgba(0, 184, 160, 0.08);
+  --green:         #059669;
+  --gold:          #d97706;
+  --gold-pale:     rgba(217, 119, 6, 0.08);
+  /* Textes — palette home page Pixeloria */
+  --text-primary:  #111111;   /* neutral-950 */
+  --text-secondary:#525252;   /* neutral-600 */
+  --text-muted:    #737373;   /* neutral-500 */
 
   /* Espacements */
   --section-py: 96px;
@@ -93,17 +96,18 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(3, 14, 40, 0.88);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
+  background: rgba(247, 243, 238, 0.90);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
 }
 
 .prrn-page .nav__inner {
   max-width: 1120px;
   margin: 0 auto;
   padding: 0 24px;
-  height: 64px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -134,27 +138,30 @@
 
 .prrn-page .nav__link {
   font-size: 0.875rem;
-  color: var(--text-secondary);
+  color: #525252;
   transition: var(--transition);
   padding: 6px 12px;
   border-radius: 8px;
+  font-weight: 500;
 }
 
-.prrn-page .nav__link:hover { color: var(--text-primary); }
+.prrn-page .nav__link:hover { color: #111111; }
 
 .prrn-page .nav__cta {
   font-size: 0.875rem;
   font-weight: 600;
-  padding: 8px 18px;
+  padding: 9px 20px;
   background: var(--purple);
   color: #fff;
   border-radius: var(--btn-radius);
   transition: var(--transition);
   white-space: nowrap;
+  box-shadow: 0 2px 10px rgba(122, 92, 255, 0.25);
 }
 
 .prrn-page .nav__cta:hover {
   background: var(--purple-mid);
+  box-shadow: 0 4px 16px rgba(122, 92, 255, 0.35);
   transform: translateY(-1px);
 }
 
@@ -204,13 +211,13 @@
 
 .prrn-page .btn--teal {
   background: var(--teal);
-  color: var(--bg-deep);
-  box-shadow: 0 4px 24px rgba(38, 216, 190, 0.30);
+  color: #fff;
+  box-shadow: 0 4px 24px rgba(0, 184, 160, 0.25);
 }
 
 .prrn-page .btn--teal:hover {
-  background: #2ee8cc;
-  box-shadow: 0 6px 32px rgba(38, 216, 190, 0.45);
+  background: #00cdb0;
+  box-shadow: 0 6px 32px rgba(0, 184, 160, 0.38);
   transform: translateY(-2px);
 }
 
@@ -321,8 +328,8 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 60% -10%, rgba(124, 58, 237, 0.22) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 50% at -10% 80%, rgba(38, 216, 190, 0.10) 0%, transparent 55%);
+    radial-gradient(ellipse 70% 50% at 70% -10%, rgba(122, 92, 255, 0.10) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at -10% 90%, rgba(0, 209, 255, 0.05) 0%, transparent 55%);
   pointer-events: none;
 }
 
@@ -420,6 +427,7 @@
   padding: 24px 28px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 .prrn-page .hero-card::before {
@@ -506,6 +514,7 @@
   padding: 36px 28px;
   position: relative;
   transition: var(--transition);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
 }
 
 .prrn-page .step:hover {
@@ -574,6 +583,7 @@
   display: flex;
   flex-direction: column;
   transition: var(--transition);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
 }
 
 .prrn-page .reward-card:hover {
@@ -591,8 +601,8 @@
 }
 
 .prrn-page .reward-card--highlight {
-  border-color: rgba(139, 92, 246, 0.45);
-  background: linear-gradient(160deg, rgba(91, 63, 212, 0.14) 0%, var(--bg-card) 60%);
+  border-color: rgba(122, 92, 255, 0.35);
+  background: linear-gradient(160deg, rgba(122, 92, 255, 0.06) 0%, var(--bg-card) 60%);
 }
 
 .prrn-page .reward-card--highlight .reward-card__stripe {
@@ -757,7 +767,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(124, 58, 237, 0.15) 0%, transparent 65%);
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(122, 92, 255, 0.06) 0%, transparent 65%);
 }
 
 .prrn-page .audience__visual-title {
@@ -915,7 +925,7 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 70% 80% at 50% 50%, rgba(124, 58, 237, 0.12) 0%, transparent 70%);
+    radial-gradient(ellipse 70% 80% at 50% 50%, rgba(122, 92, 255, 0.05) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -986,7 +996,7 @@
 }
 
 .prrn-page .conditions__item:hover {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(122, 92, 255, 0.05);
 }
 
 .prrn-page .conditions__item p {
@@ -1399,7 +1409,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(124, 58, 237, 0.12) 0%, transparent 65%);
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(122, 92, 255, 0.05) 0%, transparent 65%);
   pointer-events: none;
 }
 
