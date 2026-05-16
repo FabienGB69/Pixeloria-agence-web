@@ -57,13 +57,12 @@ export default function ParrainagePage() {
             </div>
 
             <h1 className="hero__title" id="hero-title">
-              Recommandez Pixeloria.
-              <span>Gagnez jusqu&apos;à 150 €.</span>
+              Recommandez Pixeloria et gagnez jusqu&apos;à 150 €.
             </h1>
 
             <p className="hero__subtitle">
               Vous connaissez un artisan, une TPE ou une PME qui a besoin d&apos;un site web professionnel ?
-              Partagez votre code parrainage et recevez une récompense quand votre filleul devient client Pixeloria.
+              Partagez votre lien de parrainage et recevez une récompense dès que le projet est validé.
             </p>
 
             <div className="hero__actions">
