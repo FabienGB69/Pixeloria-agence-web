@@ -12,3 +12,6 @@ yarn-error.log*
 .vercel
 .next/
 tsconfig.tsbuildinfo
+
+# agentmemory runtime data
+data/
