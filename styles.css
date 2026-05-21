@@ -4793,3 +4793,47 @@ select {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================================
+   EN PAGE — details/summary FAQ & trust items
+============================================================ */
+details.faq-item summary {
+  list-style: none;
+}
+details.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+details.faq-item[open] {
+  border-color: rgba(139,92,246,0.35);
+  background: rgba(139,92,246,0.02);
+}
+details.faq-item[open] .faq-chevron {
+  transform: rotate(180deg);
+  color: var(--purple);
+}
+
+.trust-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.trust-item strong {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+.trust-item span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.lang-switcher {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  opacity: 0.75;
+  transition: opacity 0.2s;
+}
+.lang-switcher:hover {
+  opacity: 1;
+}
