@@ -86,12 +86,12 @@ export default function OffresPage() {
                 Demandez un audit gratuit de votre situation. Nous vous orientons vers la formule
                 la plus adaptée à votre activité et à votre budget.
               </p>
-              <a href="/#contact" className="btn btn-primary btn-lg">
+              <Link href="/#contact" className="btn btn-primary btn-lg">
                 Demander un audit gratuit
                 <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                   <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-              </a>
+              </Link>
               <p className="page-cta-note">Réponse rapide avec une orientation claire selon votre besoin.</p>
             </div>
           </div>

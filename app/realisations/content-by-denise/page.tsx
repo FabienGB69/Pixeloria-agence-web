@@ -45,7 +45,7 @@ export default function ContentByDenisePage() {
                 pour valoriser son expertise et générer des demandes de mission.
               </p>
               <div className="page-hero-actions">
-                <a href="/#contact" className="btn btn-primary btn-lg">
+                <Link href="/#contact" className="btn btn-primary btn-lg">
                   Demander un audit gratuit
                   <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                     <path
@@ -56,7 +56,7 @@ export default function ContentByDenisePage() {
                       strokeLinejoin="round"
                     />
                   </svg>
-                </a>
+                </Link>
                 <a
                   href="https://contentbydenise.vercel.app/"
                   target="_blank"
@@ -293,7 +293,7 @@ export default function ContentByDenisePage() {
                 Pixeloria crée des sites web sur-mesure adaptés à votre activité, votre
                 positionnement et vos objectifs. Demandez un premier échange gratuit.
               </p>
-              <a href="/#contact" className="btn btn-primary btn-lg">
+              <Link href="/#contact" className="btn btn-primary btn-lg">
                 Demander un audit gratuit
                 <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                   <path
@@ -304,7 +304,7 @@ export default function ContentByDenisePage() {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </a>
+              </Link>
               <p className="page-cta-note">
                 <a href="tel:+33786125313">07 86 12 53 13</a>
                 {' · '}

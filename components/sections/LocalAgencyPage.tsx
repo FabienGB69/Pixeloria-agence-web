@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { LocalSeoData } from '@/lib/local-seo';
 import ContactForm from '@/components/forms/ContactForm';
 
@@ -70,7 +71,7 @@ export default function LocalAgencyPage({ data }: Props) {
           <p className="local-hero__sub">{data.heroSubtitle}</p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '2rem' }}>
             <a href="#contact-local" className="btn btn-primary">Devis gratuit</a>
-            <a href="/refonte" className="btn btn-secondary">Voir nos offres</a>
+            <Link href="/refonte" className="btn btn-secondary">Voir nos offres</Link>
           </div>
           <p style={{ marginTop: '1.5rem', fontSize: '0.85rem', opacity: 0.5 }}>
             Villes desservies : {data.mainCities.join(' · ')}
