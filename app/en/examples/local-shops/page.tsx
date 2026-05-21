@@ -110,12 +110,12 @@ export default function LocalShopsPage() {
               </p>
 
               <div className="page-hero-actions">
-                <a href="/en#contact" className="btn btn-primary btn-lg">
+                <Link href="/en#contact" className="btn btn-primary btn-lg">
                   Discuss my project
                   <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                     <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                </a>
+                </Link>
                 <Link href="/en#packages" className="btn btn-ghost btn-lg">
                   View packages
                 </Link>
@@ -217,9 +217,9 @@ export default function LocalShopsPage() {
                 regular content updates on request. Most local shops find the Care plan more practical over time.
               </p>
               <div className="examples-offer-actions">
-                <a href="/en#contact" className="btn btn-primary">
+                <Link href="/en#contact" className="btn btn-primary">
                   Find the right package →
-                </a>
+                </Link>
                 <Link href="/en#packages" className="btn btn-ghost btn-lg">
                   Compare all packages
                 </Link>
@@ -254,12 +254,12 @@ export default function LocalShopsPage() {
                 More visibility, more footfall.
               </p>
               <div className="page-hero-actions">
-                <a href="/en#contact" className="btn btn-primary btn-lg">
+                <Link href="/en#contact" className="btn btn-primary btn-lg">
                   Discuss my project
                   <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                     <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                </a>
+                </Link>
                 <Link href="/en#packages" className="btn btn-ghost btn-lg">
                   View packages
                 </Link>

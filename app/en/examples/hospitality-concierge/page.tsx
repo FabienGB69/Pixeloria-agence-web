@@ -112,12 +112,12 @@ export default function HospitalityConciergePage() {
               </p>
 
               <div className="page-hero-actions">
-                <a href="/en#contact" className="btn btn-primary btn-lg">
+                <Link href="/en#contact" className="btn btn-primary btn-lg">
                   Discuss my project
                   <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                     <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                </a>
+                </Link>
                 <Link href="/en#packages" className="btn btn-ghost btn-lg">
                   View packages
                 </Link>
@@ -218,9 +218,9 @@ export default function HospitalityConciergePage() {
                 — your website evolves with it. All maintenance and updates are included.
               </p>
               <div className="examples-offer-actions">
-                <a href="/en#contact" className="btn btn-primary">
+                <Link href="/en#contact" className="btn btn-primary">
                   Get started with Growth →
-                </a>
+                </Link>
                 <Link href="/en#packages" className="btn btn-ghost btn-lg">
                   Compare all packages
                 </Link>
@@ -255,12 +255,12 @@ export default function HospitalityConciergePage() {
                 Premium design, real results.
               </p>
               <div className="page-hero-actions">
-                <a href="/en#contact" className="btn btn-primary btn-lg">
+                <Link href="/en#contact" className="btn btn-primary btn-lg">
                   Discuss my project
                   <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                     <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                </a>
+                </Link>
                 <Link href="/en#packages" className="btn btn-ghost btn-lg">
                   View packages
                 </Link>

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
@@ -419,7 +420,7 @@ export default function EnHomePage() {
                 { label: 'Local Shops & Retail', desc: 'Bring footfall online — showcase products, opening hours and special offers.', href: '/en/examples/local-shops' },
                 { label: 'Freelancers & Consultants', desc: 'Position yourself as the expert clients want to hire — not just another profile.', href: '/en/examples/freelancers-consultants' },
               ].map(({ label, desc, href }) => (
-                <a
+                <Link
                   key={href}
                   href={href}
                   className="why-card"
@@ -443,7 +444,7 @@ export default function EnHomePage() {
                       <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </span>
-                </a>
+                </Link>
               ))}
             </div>
           </div>
