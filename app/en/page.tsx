@@ -310,7 +310,7 @@ export default function EnHomePage() {
                   <li>Dedicated account manager</li>
                 </ul>
                 <a href="#contact" className="btn btn-outline-light" style={{ width: '100%', textAlign: 'center' }}>
-                  Let's talk growth
+                  Let&apos;s talk growth
                 </a>
                 <p className="pricing-note">Best for: businesses ready to actively grow their customer base through search and local visibility.</p>
               </div>
