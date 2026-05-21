@@ -7,7 +7,7 @@ import { isHoneypot, verifyTurnstile, checkRateLimit } from '@/lib/security';
 
 // ─── CORS ─────────────────────────────────────────────────────────────────────
 
-const ALLOWED_ORIGIN = process.env.ALLOWED_ORIGIN ?? '*';
+const ALLOWED_ORIGIN = process.env.ALLOWED_ORIGIN ?? 'https://pixeloria.fr';
 
 const CORS_HEADERS = {
   'Access-Control-Allow-Origin':  ALLOWED_ORIGIN,
