@@ -109,12 +109,12 @@ export default function MaintenanceSiteWebPage() {
                 pour que vous puissiez vous concentrer sur votre activité.
               </p>
               <div className="page-hero-actions">
-                <a href="/#contact" className="btn btn-primary">
+                <Link href="/#contact" className="btn btn-primary">
                   Demander un audit gratuit
                   <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                     <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                </a>
+                </Link>
                 <Link href="/offres" className="btn btn-secondary">Voir les offres</Link>
               </div>
             </div>
@@ -144,9 +144,9 @@ export default function MaintenanceSiteWebPage() {
               ))}
             </ul>
             <p style={{ textAlign: 'center', marginTop: '2rem' }}>
-              <a href="/#contact" className="btn btn-primary">
+              <Link href="/#contact" className="btn btn-primary">
                 Confier la maintenance de mon site
-              </a>
+              </Link>
             </p>
           </div>
         </section>
@@ -228,7 +228,7 @@ export default function MaintenanceSiteWebPage() {
                   <li>Jusqu&apos;à 5 pages</li>
                   <li>SEO local de base</li>
                 </ul>
-                <a href="/#contact" className="btn btn-primary">Choisir Sérénité →</a>
+                <Link href="/#contact" className="btn btn-primary">Choisir Sérénité →</Link>
               </div>
               <div className="pricing-card">
                 <p className="pricing-label">Croissance</p>
@@ -240,7 +240,7 @@ export default function MaintenanceSiteWebPage() {
                   <li>Contenu mensuel (article ou actualité)</li>
                   <li>Rapport mensuel d&apos;activité détaillé</li>
                 </ul>
-                <a href="/#contact" className="btn btn-secondary">Choisir Croissance →</a>
+                <Link href="/#contact" className="btn btn-secondary">Choisir Croissance →</Link>
               </div>
             </div>
             <p style={{ textAlign: 'center', marginTop: '1.5rem' }}>
@@ -261,12 +261,12 @@ export default function MaintenanceSiteWebPage() {
                 Mises à jour, sécurité, hébergement — on s&apos;occupe de tout, vous vous
                 concentrez sur votre activité.
               </p>
-              <a href="/#contact" className="btn btn-primary btn-lg">
+              <Link href="/#contact" className="btn btn-primary btn-lg">
                 Demander un audit gratuit
                 <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                   <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-              </a>
+              </Link>
               <p className="page-cta-note">
                 <a href="tel:+33786125313">07 86 12 53 13</a>
                 {' · '}

@@ -88,12 +88,12 @@ export default function CreationSiteArtisanPage() {
                 À partir de 490&nbsp;€&nbsp;TTC ou 89&nbsp;€/mois.
               </p>
               <div className="page-hero-actions">
-                <a href="/#contact" className="btn btn-primary">
+                <Link href="/#contact" className="btn btn-primary">
                   Demander un audit gratuit
                   <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                     <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                </a>
+                </Link>
                 <Link href="/offres" className="btn btn-secondary">Voir les offres</Link>
               </div>
             </div>
@@ -193,7 +193,7 @@ export default function CreationSiteArtisanPage() {
                   <li>Mise en ligne incluse</li>
                   <li>Optimisation technique de base</li>
                 </ul>
-                <a href="/#contact" className="btn btn-secondary">Choisir Site Essentiel →</a>
+                <Link href="/#contact" className="btn btn-secondary">Choisir Site Essentiel →</Link>
               </div>
               <div className="pricing-card pricing-card--featured">
                 <span className="pricing-badge">Recommandé</span>
@@ -209,7 +209,7 @@ export default function CreationSiteArtisanPage() {
                   <li>SEO local de base inclus</li>
                   <li>Support WhatsApp sous 24 h</li>
                 </ul>
-                <a href="/#contact" className="btn btn-primary">Choisir Site Sérénité →</a>
+                <Link href="/#contact" className="btn btn-primary">Choisir Site Sérénité →</Link>
               </div>
             </div>
             <p style={{ textAlign: 'center', marginTop: '1.5rem' }}>
@@ -229,12 +229,12 @@ export default function CreationSiteArtisanPage() {
                 Dites-nous en quelques mots votre activité et votre zone d&apos;intervention.
                 Nous vous répondons rapidement avec une première orientation.
               </p>
-              <a href="/#contact" className="btn btn-primary btn-lg">
+              <Link href="/#contact" className="btn btn-primary btn-lg">
                 Demander un audit gratuit
                 <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                   <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-              </a>
+              </Link>
               <p className="page-cta-note">
                 <a href="tel:+33786125313">07 86 12 53 13</a>
                 {' · '}

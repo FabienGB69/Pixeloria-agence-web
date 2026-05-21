@@ -106,12 +106,12 @@ export default function RealisationsPage() {
                 et générer davantage de demandes de contact.
               </p>
               <div className="page-hero-actions">
-                <a href="/#contact" className="btn btn-primary btn-lg">
+                <Link href="/#contact" className="btn btn-primary btn-lg">
                   Demander un audit gratuit
                   <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                     <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -170,12 +170,12 @@ export default function RealisationsPage() {
                 pour améliorer sa clarté, sa crédibilité et sa capacité à générer des demandes
                 de contact.
               </p>
-              <a href="/#contact" className="btn btn-primary btn-lg">
+              <Link href="/#contact" className="btn btn-primary btn-lg">
                 Demander un audit gratuit
                 <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                   <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-              </a>
+              </Link>
               <p className="page-cta-note">
                 <a href="tel:+33786125313">07 86 12 53 13</a>
                 {' · '}

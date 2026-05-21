@@ -63,9 +63,9 @@ export default function QitConciergePage() {
                     />
                   </svg>
                 </a>
-                <a href="/#contact" className="btn btn-secondary btn-lg">
+                <Link href="/#contact" className="btn btn-secondary btn-lg">
                   Créer un site similaire
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -302,7 +302,7 @@ export default function QitConciergePage() {
                 Pixeloria crée votre site internet professionnel rapidement, avec une approche
                 claire, moderne et pensée pour générer des contacts qualifiés.
               </p>
-              <a href="/#contact" className="btn btn-primary btn-lg">
+              <Link href="/#contact" className="btn btn-primary btn-lg">
                 Demander mon site
                 <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                   <path
@@ -313,7 +313,7 @@ export default function QitConciergePage() {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </a>
+              </Link>
               <p className="page-cta-note">
                 <a href="tel:+33786125313">07 86 12 53 13</a>
                 {' · '}

@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Header() {
+export default function HeaderEn() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const navRef = useRef<HTMLElement>(null);
@@ -37,7 +37,7 @@ export default function Header() {
   return (
     <header className={`site-header${scrolled ? ' scrolled' : ''}`} id="site-header">
       <div className="container nav-wrapper">
-        <Link href="/" className="logo" aria-label="Pixeloria accueil">
+        <Link href="/en" className="logo" aria-label="Pixeloria home">
           <Image
             src="/assets/pixeloria-logo.svg"
             className="logo-image"
@@ -51,17 +51,17 @@ export default function Header() {
         <nav
           id="site-nav"
           className={`site-nav${isOpen ? ' is-open' : ''}`}
-          aria-label="Navigation principale"
+          aria-label="Main navigation"
           ref={navRef}
         >
-          <a href="#services" className="nav-link" onClick={closeMenu}>Offres</a>
-          <a href="#portfolio" className="nav-link" onClick={closeMenu}>Portfolio</a>
-          <a href="#process" className="nav-link" onClick={closeMenu}>Process</a>
-          <a href="#testimonials" className="nav-link" onClick={closeMenu}>Avis</a>
+          <a href="#packages" className="nav-link" onClick={closeMenu}>Packages</a>
+          <a href="#why" className="nav-link" onClick={closeMenu}>Why us</a>
+          <a href="#process" className="nav-link" onClick={closeMenu}>How it works</a>
           <a href="#faq" className="nav-link" onClick={closeMenu}>FAQ</a>
-          <Link href="/a-propos" className="nav-link" onClick={closeMenu}>À propos</Link>
-          <Link href="/parrainage" className="nav-link" onClick={closeMenu}>Parrainage</Link>
-          <a href="#contact" className="btn btn-nav" onClick={closeMenu}>Audit gratuit</a>
+          <Link href="/" className="nav-link lang-switcher" onClick={closeMenu} aria-label="Version française">
+            🇫🇷 FR
+          </Link>
+          <a href="#contact" className="btn btn-nav" onClick={closeMenu}>Free audit</a>
         </nav>
 
         <button
@@ -69,7 +69,7 @@ export default function Header() {
           type="button"
           aria-expanded={isOpen}
           aria-controls="site-nav"
-          aria-label={isOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+          aria-label={isOpen ? 'Close menu' : 'Open menu'}
           onClick={() => setIsOpen((prev) => !prev)}
           ref={toggleRef}
         >

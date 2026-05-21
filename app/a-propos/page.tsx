@@ -97,12 +97,12 @@ export default function AProposPage() {
                 sérieuse — sans se noyer dans la technique.
               </p>
               <div className="page-hero-actions">
-                <a href="/#contact" className="btn btn-primary">
+                <Link href="/#contact" className="btn btn-primary">
                   Discuter de votre projet
                   <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                     <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                </a>
+                </Link>
                 <Link href="/offres" className="btn btn-secondary">
                   Voir les offres
                 </Link>
@@ -200,12 +200,12 @@ export default function AProposPage() {
                 et vous proposer une solution adaptée.
               </p>
               <div className="page-cta-block-actions">
-                <a href="/#contact" className="btn btn-primary btn-lg">
+                <Link href="/#contact" className="btn btn-primary btn-lg">
                   Nous contacter
                   <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                     <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                </a>
+                </Link>
                 <Link href="/offres" className="btn btn-secondary">
                   Voir nos offres
                 </Link>

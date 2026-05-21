@@ -54,12 +54,12 @@ export default function SeoLocalPage() {
                 Être trouvé sur Google par vos clients locaux — sans attendre des mois.
               </p>
               <div className="page-hero-actions">
-                <a href="/#contact" className="btn btn-primary btn-lg">
+                <Link href="/#contact" className="btn btn-primary btn-lg">
                   Demander un audit gratuit
                   <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                     <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                </a>
+                </Link>
                 <Link href="/offres" className="btn btn-secondary btn-lg">
                   Voir nos offres
                 </Link>
@@ -239,12 +239,12 @@ export default function SeoLocalPage() {
               <p>
                 On analyse votre visibilité actuelle et on vous dit exactement ce qu&apos;on peut améliorer — sans engagement.
               </p>
-              <a href="/#contact" className="btn btn-primary btn-lg">
+              <Link href="/#contact" className="btn btn-primary btn-lg">
                 Demander mon audit gratuit
                 <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                   <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-              </a>
+              </Link>
               <p className="page-cta-note">
                 📞 06 00 00 00 00 &nbsp;·&nbsp; ✉️ contact@pixeloria.fr
               </p>

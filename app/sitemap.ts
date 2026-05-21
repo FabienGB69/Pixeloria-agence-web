@@ -33,5 +33,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://pixeloria.fr/agence-web-savoie', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: 'https://pixeloria.fr/agence-web-haute-savoie', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: 'https://pixeloria.fr/parrainage', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
+    { url: 'https://pixeloria.fr/en', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: 'https://pixeloria.fr/en/examples/contractors', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://pixeloria.fr/en/examples/renovation-companies', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://pixeloria.fr/en/examples/hospitality-concierge', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://pixeloria.fr/en/examples/real-estate', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://pixeloria.fr/en/examples/local-shops', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://pixeloria.fr/en/examples/freelancers-consultants', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
   ];
 }

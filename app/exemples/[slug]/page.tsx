@@ -97,12 +97,12 @@ export default function ExempleMetierPage({ params }: Props) {
               )}
 
               <div className="page-hero-actions">
-                <a href="/#contact" className="btn btn-primary">
+                <Link href="/#contact" className="btn btn-primary">
                   {page.primaryCta}
                   <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                     <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                </a>
+                </Link>
                 <Link href="/offres" className="btn btn-secondary">
                   Voir les offres Pixeloria
                 </Link>
@@ -214,9 +214,9 @@ export default function ExempleMetierPage({ params }: Props) {
               </div>
               <p className="exemple-offer-reason">{page.offerReason}</p>
               <div className="exemple-offer-actions">
-                <a href="/#contact" className="btn btn-primary">
+                <Link href="/#contact" className="btn btn-primary">
                   Choisir {page.recommendedOffer} →
-                </a>
+                </Link>
                 <Link href="/offres" className="btn btn-secondary">
                   Comparer toutes les offres
                 </Link>
@@ -235,12 +235,12 @@ export default function ExempleMetierPage({ params }: Props) {
                 générer plus de demandes de contact.
               </p>
               <div className="page-cta-block-actions">
-                <a href="/#contact" className="btn btn-primary btn-lg">
+                <Link href="/#contact" className="btn btn-primary btn-lg">
                   Discuter de mon projet
                   <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                     <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                </a>
+                </Link>
                 <Link href="/#services" className="btn btn-secondary">
                   Retour aux offres
                 </Link>
