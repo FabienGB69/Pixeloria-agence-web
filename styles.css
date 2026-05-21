@@ -4800,9 +4800,6 @@ select {
 details.faq-item summary {
   list-style: none;
 }
-details.faq-item summary::-webkit-details-marker {
-  display: none;
-}
 details.faq-item[open] {
   border-color: rgba(139,92,246,0.35);
   background: rgba(139,92,246,0.02);
