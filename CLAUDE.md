@@ -84,6 +84,7 @@ Les fichiers de mémoire se trouvent dans `.claude/memory/`. Ils sont mis à jou
 
 | Commande | Rôle | Modèle |
 |----------|------|--------|
+| `/orchestrate` | **Routage 3 tiers** — Haiku / Sonnet / Opus selon complexité | Auto |
 | `/cto` | **Orchestrateur** — décompose les tâches, assigne les agents | Opus |
 | `/seo` | Audit et optimisation SEO | Sonnet |
 | `/marketing` | Stratégie marketing et copywriting | Sonnet |
@@ -95,8 +96,8 @@ Les fichiers de mémoire se trouvent dans `.claude/memory/`. Ils sont mis à jou
 | `/senior-frontend` | Persona Senior Frontend (performance & a11y) | Sonnet |
 | `/senior-backend` | **Persona Léo** — Serverless, API sécurité, Notion, email | Sonnet |
 
-> **Point d'entrée recommandé pour toute tâche complexe : `/cto`**
-> Le CTO analyse la demande, choisit les agents et les modèles, puis orchestre l'exécution.
+> **Point d'entrée recommandé pour toute tâche complexe : `/cto` ou `/orchestrate`**
+> `/orchestrate` choisit automatiquement le bon tier (Haiku/Sonnet/Opus) et produit un plan avant d'agir.
 
 ---
 
@@ -147,7 +148,31 @@ python3 -m http.server 8080
 
 ---
 
-## 9. Conventions de code
+## 9. Principes de travail (Karpathy)
+
+Ces 4 règles s'appliquent à chaque tâche, sans exception.
+
+### Penser avant de coder
+Rendre les hypothèses explicites. Si incertain, poser la question — ne jamais décider en silence.
+> "State your assumptions explicitly. If uncertain, ask."
+
+### Simplicité d'abord
+Code minimal qui résout le problème. Rien de spéculatif.
+> "Minimum code that solves the problem. Nothing speculative."
+Pas d'abstractions non demandées, pas de flexibilité anticipée, pas de gestion d'erreurs pour des cas improbables.
+
+### Changements chirurgicaux
+Toucher uniquement ce que la tâche requiert. Ne pas "améliorer" le code adjacent, les commentaires ou le formatage.
+> "Don't 'improve' adjacent code, comments, or formatting."
+Supprimer uniquement le code rendu obsolète par ses propres modifications.
+
+### Exécution orientée objectifs
+Convertir chaque tâche en objectif vérifiable avec critères de succès clairs avant de commencer.
+Transformer les demandes vagues en résultats testables.
+
+---
+
+## 10. Conventions de code
 
 - **HTML** : sémantique, `lang="fr"`, balises ARIA sur éléments interactifs
 - **CSS** : variables CSS dans `:root`, mobile-first, pas de `!important`
@@ -157,7 +182,7 @@ python3 -m http.server 8080
 
 ---
 
-## 10. Tokens design
+## 11. Tokens design
 
 ```css
 --bg: #080810        /* Fond page */
