@@ -84,6 +84,7 @@ Les fichiers de mémoire se trouvent dans `.claude/memory/`. Ils sont mis à jou
 
 | Commande | Rôle | Modèle |
 |----------|------|--------|
+| `/orchestrate` | **Routage 3 tiers** — Haiku / Sonnet / Opus selon complexité | Auto |
 | `/cto` | **Orchestrateur** — décompose les tâches, assigne les agents | Opus |
 | `/seo` | Audit et optimisation SEO | Sonnet |
 | `/marketing` | Stratégie marketing et copywriting | Sonnet |
@@ -95,8 +96,8 @@ Les fichiers de mémoire se trouvent dans `.claude/memory/`. Ils sont mis à jou
 | `/senior-frontend` | Persona Senior Frontend (performance & a11y) | Sonnet |
 | `/senior-backend` | **Persona Léo** — Serverless, API sécurité, Notion, email | Sonnet |
 
-> **Point d'entrée recommandé pour toute tâche complexe : `/cto`**
-> Le CTO analyse la demande, choisit les agents et les modèles, puis orchestre l'exécution.
+> **Point d'entrée recommandé pour toute tâche complexe : `/cto` ou `/orchestrate`**
+> `/orchestrate` choisit automatiquement le bon tier (Haiku/Sonnet/Opus) et produit un plan avant d'agir.
 
 ---
 
