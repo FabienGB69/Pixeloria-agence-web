@@ -31,7 +31,7 @@ const projects: Project[] = [
       'Base SEO restructurée pour une meilleure visibilité locale',
       'Pages de destination locales',
     ],
-    beforeImage: '/assets/portfolio/escalee-avant.png',
+    beforeImage: '/assets/portfolio/escalee-avant.webp',
   },
   {
     type: 'Refonte',
@@ -47,7 +47,7 @@ const projects: Project[] = [
       'Expérience mobile pensée pour faciliter la prise de contact',
       'Temps de chargement optimisé',
     ],
-    beforeImage: '/assets/portfolio/lenora-avant.png',
+    beforeImage: '/assets/portfolio/lenora-avant.webp',
   },
   {
     type: 'Création complète',
@@ -131,6 +131,8 @@ export default function Portfolio() {
                       alt={`Site avant refonte — ${p.client}`}
                       width={600}
                       height={450}
+                      sizes="(max-width: 768px) 100vw, 300px"
+                      loading="lazy"
                       onError={(e) => {
                         (e.currentTarget.closest('.portfolio-thumb-wrap') as HTMLElement | null)?.style.setProperty('display', 'none');
                       }}

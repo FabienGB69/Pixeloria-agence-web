@@ -44,6 +44,7 @@ const faqItems: FaqItem[] = [
 
 export default function ParrainageFaq() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [visibleSet, setVisibleSet] = useState<Set<number>>(new Set());
   const gridRef = useRef<HTMLDivElement>(null);
 
   const toggle = (i: number) => setOpenIndex(prev => (prev === i ? null : i));
@@ -59,7 +60,13 @@ export default function ParrainageFaq() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+            const index = Number((entry.target as HTMLElement).dataset.index);
+            setVisibleSet(prev => {
+              if (prev.has(index)) return prev;
+              const next = new Set(prev);
+              next.add(index);
+              return next;
+            });
             observer.unobserve(entry.target);
           }
         });
@@ -75,7 +82,11 @@ export default function ParrainageFaq() {
   return (
     <div className="faq__grid" ref={gridRef}>
       {faqItems.map((item, i) => (
-        <div key={i} className={`faq-item${openIndex === i ? ' open' : ''}`}>
+        <div
+          key={i}
+          data-index={i}
+          className={`faq-item${openIndex === i ? ' open' : ''}${visibleSet.has(i) ? ' visible' : ''}`}
+        >
           <button
             className="faq-item__question"
             aria-expanded={openIndex === i}

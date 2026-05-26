@@ -143,7 +143,7 @@ export default function EscaleeGoutsPage() {
               <div className="case-study-col case-study-col--before">
                 <span className="case-study-badge">Avant</span>
                 <CaseStudyImage
-                  src="/assets/portfolio/escalee-avant.png"
+                  src="/assets/portfolio/escalee-avant.webp"
                   alt="Site Escalee & Goûts avant refonte"
                   className="case-study-img"
                 />
