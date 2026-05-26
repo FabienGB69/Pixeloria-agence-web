@@ -123,7 +123,7 @@ export default function LenoraConciergeriePage() {
               <div className="case-study-col case-study-col--before">
                 <span className="case-study-badge">Avant</span>
                 <CaseStudyImage
-                  src="/assets/portfolio/lenora-avant.png"
+                  src="/assets/portfolio/lenora-avant.webp"
                   alt="Capture de l'ancien site Lenora Conciergerie avant la refonte"
                   className="case-study-img"
                 />
