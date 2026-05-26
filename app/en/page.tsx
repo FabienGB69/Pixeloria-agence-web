@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import HeaderEn from '@/components/layout/HeaderEn';
+import LaunchBannerEn from '@/components/ui/LaunchBannerEn';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
 import ContactFormEn from './ContactFormEn';
@@ -190,51 +191,150 @@ export default function EnHomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <ClientEffects />
+      <LaunchBannerEn />
       <HeaderEn />
       <main id="home">
 
         {/* ── HERO ── */}
-        <section className="page-hero section" id="hero">
-          <div className="container">
-            <div className="page-hero-inner">
-              <span className="eyebrow reveal">Website Design · Small Businesses</span>
-              <h1 className="reveal">
-                Professional websites for small businesses, contractors and local&nbsp;brands.
+        <section className="hero section" id="hero">
+          <div className="container hero-inner">
+
+            <div className="hero-text">
+              <div className="hero-badge">
+                <span className="badge-dot"></span>
+                Website design for small businesses &amp; tradespeople
+              </div>
+
+              <h1>
+                Professional websites for{' '}
+                <em className="gradient-text">small businesses, contractors and local&nbsp;brands.</em>
               </h1>
-              <p className="page-hero-sub reveal">
-                Fixed pricing, no jargon, no surprises. A website built the way your business actually works — clear, fast and built to bring in customers.
+
+              <p className="hero-sub">
+                A professional, clear and effective website to reassure your prospects, improve your local visibility and generate more customer enquiries.
               </p>
-              <div className="page-hero-actions reveal">
-                <a href="#contact" className="btn btn-primary btn-lg">
-                  Get a free audit
-                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" className="btn-icon">
+
+              <p className="hero-reassurance">
+                No large upfront budget. Simple packages. Clear support. Site maintained according to the chosen plan.
+              </p>
+
+              <div className="hero-actions">
+                <a href="#contact" className="btn btn-primary">
+                  <span>Get a free audit</span>
+                  <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                     <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </a>
-                <a href="#packages" className="btn btn-outline-light btn-lg">
+                <a href="#packages" className="btn btn-ghost">
                   View packages
+                  <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M10 4v12M4 10l6 6 6-6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
                 </a>
               </div>
 
-              <div className="hero-trust reveal" style={{ marginTop: '2.5rem', display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
-                <div className="trust-item">
-                  <strong>48h</strong>
-                  <span>first response</span>
+              <ul className="hero-microbene">
+                <li>
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  Professional business website
+                </li>
+                <li>
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  Controlled budget
+                </li>
+                <li>
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  Local SEO included on eligible plans
+                </li>
+              </ul>
+
+              <div className="hero-metrics">
+                <div className="metric">
+                  <strong className="metric-value">€490</strong>
+                  <span>starting price · inc. VAT</span>
                 </div>
-                <div className="trust-item">
-                  <strong>€490</strong>
-                  <span>starting price</span>
+                <div className="metric-divider" aria-hidden="true"></div>
+                <div className="metric">
+                  <strong className="metric-value">€89</strong>
+                  <span>/ month · monthly plan</span>
                 </div>
-                <div className="trust-item">
-                  <strong>No</strong>
-                  <span>long-term lock-in</span>
-                </div>
-                <div className="trust-item">
-                  <strong>✓</strong>
-                  <span>English-speaking team</span>
+                <div className="metric-divider" aria-hidden="true"></div>
+                <div className="metric">
+                  <strong className="metric-value">48h</strong>
+                  <span>audit response time</span>
                 </div>
               </div>
             </div>
+
+            <div className="hero-visual">
+              <div className="hero-card glass-card">
+                <div className="hero-card-header">
+                  <span className="chip">Your site online</span>
+                  <div className="traffic-lights" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                  </div>
+                </div>
+                <h2>Serenity Website</h2>
+                <p>Custom design · Local SEO · Reactive support</p>
+
+                <ul className="feature-list">
+                  <li>
+                    <svg viewBox="0 0 20 20" aria-hidden="true">
+                      <path d="M4 10l4 4 8-8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                    </svg>
+                    Up to 5 custom pages
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 20 20" aria-hidden="true">
+                      <path d="M4 10l4 4 8-8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                    </svg>
+                    Basic local SEO included
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 20 20" aria-hidden="true">
+                      <path d="M4 10l4 4 8-8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                    </svg>
+                    Hosting + domain included
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 20 20" aria-hidden="true">
+                      <path d="M4 10l4 4 8-8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                    </svg>
+                    WhatsApp support within 24h
+                  </li>
+                </ul>
+
+                <div className="mini-chart" aria-hidden="true">
+                  <div className="chart-bar" style={{ ['--h' as string]: '30%' }}></div>
+                  <div className="chart-bar" style={{ ['--h' as string]: '45%' }}></div>
+                  <div className="chart-bar" style={{ ['--h' as string]: '55%' }}></div>
+                  <div className="chart-bar" style={{ ['--h' as string]: '70%' }}></div>
+                  <div className="chart-bar" style={{ ['--h' as string]: '82%' }}></div>
+                  <div className="chart-bar" style={{ ['--h' as string]: '95%' }} data-active></div>
+                </div>
+              </div>
+
+              {/* Floating badges */}
+              <div className="float-badge float-badge-1" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none">
+                  <path d="M10 2l2.4 5 5.6.8-4 3.9.9 5.5L10 14.7l-5 2.5.9-5.5L2 7.8 7.6 7z" fill="currentColor" />
+                </svg>
+                100% satisfaction
+              </div>
+              <div className="float-badge float-badge-2" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none">
+                  <circle cx="10" cy="10" r="8" stroke="currentColor" strokeWidth="1.8" />
+                  <path d="M10 6v4l3 3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+                </svg>
+                Delivered in 5–10 days
+              </div>
+            </div>
+          </div>
+
+          {/* Scroll hint */}
+          <div className="scroll-hint" aria-hidden="true">
+            <span>Scroll</span>
+            <div className="scroll-line"></div>
           </div>
         </section>
 
