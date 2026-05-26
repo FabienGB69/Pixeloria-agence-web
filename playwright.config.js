@@ -14,6 +14,12 @@ module.exports = defineConfig({
   use: {
     baseURL: BASE_URL,
     trace: "on-first-retry",
+    // Force French locale so the lang-detection middleware never redirects
+    // '/' → '/en' during tests (Chromium defaults to Accept-Language: en)
+    locale: "fr-FR",
+    extraHTTPHeaders: {
+      "Accept-Language": "fr-FR,fr;q=0.9",
+    },
   },
   projects: [
     {
