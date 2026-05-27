@@ -4,16 +4,16 @@ import { useState } from 'react';
 
 const faqs = [
   {
-    q: "Est-ce que le site m'appartient ?",
+    q: "Est-ce que le site m’appartient ?",
     a: "Oui. Le site, les contenus et les accès vous appartiennent. Pixeloria vous accompagne dans la création ou la refonte, mais vous restez propriétaire de votre présence en ligne.",
   },
   {
     q: "Qu'est-ce qui est inclus dans le SEO ?",
-    a: "Le SEO inclus correspond aux bases essentielles : structure claire des pages, titres optimisés, balises principales, vitesse, responsive mobile et cohérence des contenus. L'objectif est de partir sur une base saine pour être compris par Google.",
+    a: "Le SEO inclus correspond aux bases essentielles : structure claire des pages, titres optimisés, balises principales, vitesse, responsive mobile et cohérence des contenus. L’objectif est de partir sur une base saine pour être compris par Google.",
   },
   {
-    q: "Quelle est la différence entre l'offre à 490 € et l'offre à 89 €/mois ?",
-    a: "L'offre à 490 € est une création ou refonte en paiement unique, sans suivi mensuel. L'offre à 89 €/mois inclut la création ou refonte du site, la maintenance et le SEO de base dans un abonnement sans engagement.",
+    q: "Quelle est la différence entre l’offre à 490 € et l’offre à 89 €/mois ?",
+    a: "L’offre à 490 € est une création ou refonte en paiement unique, sans suivi mensuel. L’offre à 89 €/mois inclut la création ou refonte du site, la maintenance et le SEO de base dans un abonnement sans engagement.",
   },
   {
     q: "Quelle est la différence entre Site Sérénité et Site Croissance ?",
@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: "Puis-je modifier mon site après livraison ?",
-    a: "Oui. Selon l'offre choisie, vous pouvez demander des ajustements ou gérer certaines modifications vous-même. L'objectif est que le site reste simple à faire évoluer.",
+    a: "Oui. Selon l’offre choisie, vous pouvez demander des ajustements ou gérer certaines modifications vous-même. L’objectif est que le site reste simple à faire évoluer.",
   },
   {
     q: "Combien de temps faut-il pour créer un site ?",

@@ -220,7 +220,7 @@ export default function LenoraConciergeriePage() {
             <h2 className="section-heading">Voir d&apos;autres transformations</h2>
             <div className="page-hero-actions">
               <Link href="/realisations/escalee-gouts" className="btn btn-secondary">
-                Escalée Goûts
+                Escalee &amp; Goûts
               </Link>
               <Link href="/realisations/content-by-denise" className="btn btn-secondary">
                 Content by Denise

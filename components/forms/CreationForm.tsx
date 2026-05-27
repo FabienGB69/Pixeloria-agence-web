@@ -19,7 +19,7 @@ const BUDGETS = [
 ] as const;
 
 const DELAYS = [
-  { id: 'urgent',   label: "Moins d'un mois" },
+  { id: 'urgent',   label: "Moins d’un mois" },
   { id: 'normal',   label: '1 à 3 mois'       },
   { id: 'flexible', label: '3 à 6 mois'        },
   { id: 'no-rush',  label: 'Pas de date fixe'  },

@@ -35,7 +35,7 @@ const OFFER_CATALOG = {
     title: 'Audit Boost',
     price: '1 900 € HT',
     summary: 'Diagnostic + quick wins activables sous 30 jours.',
-    features: ["Audit UX + conversion complet", "Plan d'optimisation SEO technique", "Roadmap priorisée et chiffrée"],
+    features: ["Audit UX + conversion complet", "Plan d’optimisation SEO technique", "Roadmap priorisée et chiffrée"],
     rateBonus: 0.8,
   },
   'growth-engine': {
@@ -98,9 +98,9 @@ const fmtCur = (v: number) => new Intl.NumberFormat('fr-FR', { style: 'currency'
 
 function validate(s: TunnelState): string {
   if (s.step === 1) {
-    if (!s.url.trim()) return "Ajoutez l'URL de votre site pour continuer.";
+    if (!s.url.trim()) return "Ajoutez l’URL de votre site pour continuer.";
     if (!s.techno) return 'Sélectionnez votre technologie principale.';
-    if (!s.anciennete) return "Indiquez l'ancienneté de votre site.";
+    if (!s.anciennete) return "Indiquez l’ancienneté de votre site.";
     if (s.painPoints.length === 0) return 'Sélectionnez au moins une douleur prioritaire.';
   }
   if (s.step === 2) {
@@ -112,8 +112,8 @@ function validate(s: TunnelState): string {
   if (s.step === 4) {
     if (!s.prenom) return 'Le prénom est requis.';
     if (!s.nom) return 'Le nom est requis.';
-    if (!s.email) return "L'email est requis.";
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(s.email)) return "Format d'email invalide.";
+    if (!s.email) return "L’email est requis.";
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(s.email)) return "Format d’email invalide.";
     if (!s.phone) return 'Le téléphone est requis.';
   }
   return '';
