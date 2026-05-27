@@ -184,7 +184,7 @@ export default function TunnelForm() {
         <div className="eyebrow">Audit confirmé</div>
         <h2>Merci {s.prenom || ''}, votre audit Pixeloria est réservé.</h2>
         <p>Nous revenons vers vous sous 24&nbsp;h ouvrées à l&apos;adresse <strong>{s.email}</strong>.</p>
-        <p>Vous allez recevoir 4 livrables clés :</p>
+        <p>Vous allez recevoir 4 livrables clés&nbsp;:</p>
         <ul className="deliverables">
           <li>1. Diagnostic UX &amp; conversion détaillé</li>
           <li>2. Score SEO technique avec priorités</li>
@@ -341,7 +341,7 @@ export default function TunnelForm() {
         {/* ── Step 4 ── */}
         {s.step === 4 && (
           <>
-            <div className="step-lead"><h2>Vos coordonnées</h2><p>Dernière étape : recevez votre audit et plan d&apos;actions personnalisé.</p></div>
+            <div className="step-lead"><h2>Vos coordonnées</h2><p>Dernière étape&nbsp;: recevez votre audit et plan d&apos;actions personnalisé.</p></div>
             <div className="field-grid">
               <label>Prénom<input type="text" name="prenom" placeholder="Prénom" value={s.prenom} onChange={e => update({ prenom: e.target.value })} /></label>
               <label>Nom<input type="text" name="nom" placeholder="Nom" value={s.nom} onChange={e => update({ nom: e.target.value })} /></label>

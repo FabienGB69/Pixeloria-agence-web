@@ -34,7 +34,7 @@ const steps = [
   {
     num: '01',
     title: 'Audit de votre site actuel',
-    desc: 'Nous analysons rapidement votre site existant : contenu, structure, mobile, vitesse et SEO local.',
+    desc: 'Nous analysons rapidement votre site existant&nbsp;: contenu, structure, mobile, vitesse et SEO local.',
   },
   {
     num: '02',
@@ -220,7 +220,7 @@ export default function RefontePageInternet() {
                 <span className="pricing-badge">Recommandé</span>
                 <p className="pricing-label">Refonte Sérénité</p>
                 <p className="pricing-price">89 € <span>TTC / mois</span></p>
-                <p className="pricing-sublabel">Engagement recommandé : 12 mois</p>
+                <p className="pricing-sublabel">Engagement recommandé&nbsp;: 12 mois</p>
                 <ul>
                   <li>Refonte complète jusqu&apos;à 5 pages</li>
                   <li>Maintenance &amp; mises à jour incluses</li>

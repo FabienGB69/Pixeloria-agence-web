@@ -93,8 +93,8 @@ export default function ContactForm() {
             <path d="M15 24l7 7 11-11" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </div>
-        <h3>Message envoyé !</h3>
-        <p>Nous vous répondons sous 48&nbsp;h. À très bientôt !</p>
+        <h3>Message envoyé&nbsp;!</h3>
+        <p>Nous vous répondons sous 48&nbsp;h. À très bientôt&nbsp;!</p>
       </div>
     );
   }
