@@ -17,7 +17,7 @@ const faqItems: FaqItem[] = [
     answer: "Oui, sans limite. Chaque nouveau client parrainé peut générer une récompense indépendante. Vous suivez l’ensemble de vos filleuls dans votre espace affilié.",
   },
   {
-    question: "Le filleul bénéficie-t-il aussi d'un avantage ?",
+    question: "Le filleul bénéficie-t-il aussi d’un avantage ?",
     answer: "Oui. Le filleul bénéficie automatiquement d’une remise sur son offre : −50 € sur le One Shot, premier mois à 39 € sur l’Essentiel, premier mois à 79 € sur le Croissance.",
   },
   {
