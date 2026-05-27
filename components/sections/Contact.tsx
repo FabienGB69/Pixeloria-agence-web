@@ -56,11 +56,6 @@ export default function Contact() {
                 </div>
               </a>
             </div>
-
-            <div className="contact-availability">
-              <span className="avail-dot"></span>
-              Disponible pour de nouveaux projets&nbsp;—&nbsp;mai 2026
-            </div>
           </div>
 
           <div className="contact-form-wrapper reveal reveal-right">
