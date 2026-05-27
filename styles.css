@@ -5205,8 +5205,14 @@ details.faq-item[open] .faq-chevron {
   border-color: rgba(255,255,255,0.4);
   background: rgba(255,255,255,0.04);
 }
-.demo-btn--lg { padding: 0.9rem 1.8rem; font-size: 0.95rem; }
-.demo-btn--full { width: 100%; justify-content: center; }
+.demo-btn--lg {
+  padding: 0.9rem 1.8rem;
+  font-size: 0.95rem;
+}
+.demo-btn--full {
+  width: 100%;
+  justify-content: center;
+}
 
 /* ── Demo sections ── */
 .demo-section {
@@ -5278,7 +5284,10 @@ details.faq-item[open] .faq-chevron {
   color: var(--dz-primary);
   margin-bottom: 1rem;
 }
-.demo-service-icon svg { width: 22px; height: 22px; }
+.demo-service-icon svg {
+  width: 22px;
+  height: 22px;
+}
 .demo-service-card h3 {
   font-size: 1rem;
   font-weight: 700;
@@ -5481,7 +5490,10 @@ details.faq-item[open] .faq-chevron {
   font-weight: 600;
   color: var(--dz-text-muted);
 }
-.demo-guarantee svg { color: var(--dz-primary); flex-shrink: 0; }
+.demo-guarantee svg {
+  color: var(--dz-primary);
+  flex-shrink: 0;
+}
 
 /* ── Zone d'intervention ── */
 .demo-zone-layout {
@@ -5534,9 +5546,20 @@ details.faq-item[open] .faq-chevron {
   color: var(--dz-text-muted);
   text-align: center;
 }
-.demo-map-placeholder svg { color: var(--dz-primary); margin-bottom: 0.25rem; }
-.demo-map-placeholder span { font-size: 0.9rem; font-weight: 600; color: var(--dz-text); }
-.demo-map-radius { font-size: 0.75rem; color: var(--dz-text-muted); font-weight: 500; }
+.demo-map-placeholder svg {
+  color: var(--dz-primary);
+  margin-bottom: 0.25rem;
+}
+.demo-map-placeholder span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--dz-text);
+}
+.demo-map-radius {
+  font-size: 0.75rem;
+  color: var(--dz-text-muted);
+  font-weight: 500;
+}
 
 /* ── Contact form ── */
 .demo-contact-grid {
@@ -5655,7 +5678,10 @@ details.faq-item[open] .faq-chevron {
   box-shadow: 0 0 0 3px rgba(249,115,22,0.12);
 }
 .demo-input::placeholder { color: var(--dz-text-dim); }
-.demo-textarea { resize: vertical; min-height: 110px; }
+.demo-textarea {
+  resize: vertical;
+  min-height: 110px;
+}
 .demo-form-note {
   font-size: 0.75rem;
   color: var(--dz-text-dim);
@@ -5711,7 +5737,10 @@ details.faq-item[open] .faq-chevron {
   font-size: 0.78rem;
   color: var(--dz-text-dim);
 }
-.demo-footer-bottom a { color: var(--dz-primary); text-decoration: none; }
+.demo-footer-bottom a {
+  color: var(--dz-primary);
+  text-decoration: none;
+}
 
 /* ── Back to Pixeloria CTA ── */
 .demo-back-cta {
@@ -5777,22 +5806,43 @@ details.faq-item[open] .faq-chevron {
   .demo-services-grid { grid-template-columns: repeat(2, 1fr); }
   .demo-reviews-grid { grid-template-columns: repeat(2, 1fr); }
   .demo-zone-layout { grid-template-columns: 1fr; }
-  .demo-zone-map { max-width: 300px; aspect-ratio: 1; }
-  .demo-contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .demo-zone-map {
+    max-width: 300px;
+    aspect-ratio: 1;
+  }
+  .demo-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
   .demo-footer-inner { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 640px) {
-  .demo-header-inner { flex-wrap: wrap; gap: 0.75rem; }
+  .demo-header-inner {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
   .demo-nav { display: none; }
-  .demo-hero { padding: 4rem 1rem; min-height: 100svh; }
+  .demo-hero {
+    padding: 4rem 1rem;
+    min-height: 100svh;
+  }
   .demo-hero-ctas { flex-direction: column; }
   .demo-services-grid { grid-template-columns: 1fr; }
   .demo-gallery-grid { grid-template-columns: 1fr; }
   .demo-reviews-grid { grid-template-columns: 1fr; }
-  .demo-stats-bar { gap: 1.25rem; padding: 1.5rem 1rem; }
+  .demo-stats-bar {
+    gap: 1.25rem;
+    padding: 1.5rem 1rem;
+  }
   .demo-stat-sep { display: none; }
   .demo-guarantees-bar { gap: 1.25rem; }
   .demo-form-row { grid-template-columns: 1fr; }
-  .demo-footer-inner { grid-template-columns: 1fr; gap: 2rem; }
-  .demo-banner-inner { flex-direction: column; align-items: flex-start; }
+  .demo-footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .demo-banner-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
