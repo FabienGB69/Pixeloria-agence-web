@@ -167,7 +167,7 @@ export default function ParrainagePage() {
               <div className="step__number">03</div>
               <div className="step__title">Vous recevez votre récompense</div>
               <p className="step__text">
-                Dès que les conditions sont validées, votre récompense est déclenchée automatiquement dans votre espace affilié. Argent ou crédit Pixeloria : vous choisissez.
+                Dès que les conditions sont validées, votre récompense est déclenchée automatiquement dans votre espace affilié. Argent ou crédit Pixeloria&nbsp;: vous choisissez.
               </p>
             </div>
           </div>
@@ -376,7 +376,7 @@ export default function ParrainagePage() {
           <div className="section-header section-header--center">
             <p className="section-label">Votre récompense</p>
             <h2 className="section-title" id="choice-title">
-              Cash ou crédit Pixeloria : <em>vous choisissez</em>
+              Cash ou crédit Pixeloria&nbsp;: <em>vous choisissez</em>
             </h2>
             <p className="section-subtitle" style={{ margin: '0 auto' }}>
               Chaque parrain choisit librement la forme de sa récompense dans son espace affilié.

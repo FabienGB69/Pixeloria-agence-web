@@ -39,7 +39,7 @@ export default function LenoraConciergeriePage() {
                 <span>Lenora Conciergerie</span>
               </nav>
               <span className="eyebrow">Refonte · Conciergerie · 2026</span>
-              <h1>Avant / Après : refonte du site Lenora Conciergerie</h1>
+              <h1>Avant / Après&nbsp;: refonte du site Lenora Conciergerie</h1>
               <p className="page-hero-sub">
                 Lenora Conciergerie propose des services à domicile et d&apos;assistance pour particuliers. Leur site existant manquait de clarté et de modernité pour convaincre de nouveaux clients.
               </p>

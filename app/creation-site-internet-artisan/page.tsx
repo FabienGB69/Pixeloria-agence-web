@@ -199,7 +199,7 @@ export default function CreationSiteArtisanPage() {
                 <span className="pricing-badge">Recommandé</span>
                 <p className="pricing-label">Site Sérénité</p>
                 <p className="pricing-price">89 € <span>TTC / mois</span></p>
-                <p className="pricing-sublabel">Engagement recommandé : 12 mois</p>
+                <p className="pricing-sublabel">Engagement recommandé&nbsp;: 12 mois</p>
                 <ul>
                   <li>Jusqu&apos;à 5 pages sur-mesure</li>
                   <li>Maintenance &amp; mises à jour incluses</li>

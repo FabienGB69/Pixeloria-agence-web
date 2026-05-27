@@ -84,7 +84,7 @@ export default function QitConciergePage() {
             </p>
             <p style={{ marginTop: '1rem' }}>
               L&apos;enjeu était de créer une présence en ligne crédible, lisible et orientée
-              conversion, avec une présentation simple des services proposés aux propriétaires :
+              conversion, avec une présentation simple des services proposés aux propriétaires&nbsp;:
               optimisation des annonces, gestion des voyageurs, check-in / check-out, ménage,
               communication, tarification et suivi opérationnel.
             </p>
@@ -137,7 +137,7 @@ export default function QitConciergePage() {
                 <span className="benefit-num">03</span>
                 <h3>Présentation des services</h3>
                 <p>
-                  Mise en avant claire des prestations : gestion des annonces, accueil voyageurs,
+                  Mise en avant claire des prestations&nbsp;: gestion des annonces, accueil voyageurs,
                   ménage, communication et tarification.
                 </p>
               </div>
