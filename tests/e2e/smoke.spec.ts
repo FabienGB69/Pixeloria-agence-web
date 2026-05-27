@@ -13,12 +13,22 @@ test.describe('Pixeloria homepage — smoke tests', () => {
   });
 
   test('liens de navigation résolvent vers les sections', async ({ page }) => {
-    const sections = ['services', 'portfolio', 'process', 'testimonials', 'faq', 'contact'];
-    for (const id of sections) {
-      const link = page.locator(`.site-nav a[href="#${id}"]`);
+    const expectedNavLinks = [
+      { label: 'Offres', href: '/#services' },
+      { label: 'Portfolio', href: '/#portfolio' },
+      { label: 'Process', href: '/#process' },
+      { label: 'Avis', href: '/#testimonials' },
+      { label: 'FAQ', href: '/#faq' },
+      { label: 'Audit gratuit', href: '/#contact' },
+    ];
+
+    for (const { label, href } of expectedNavLinks) {
+      const link = page.getByRole('link', { name: label });
       await expect(link).toBeVisible();
+      await expect(link).toHaveAttribute('href', href);
     }
-    for (const id of sections) {
+
+    for (const id of ['services', 'portfolio', 'process', 'testimonials', 'faq', 'contact']) {
       await expect(page.locator(`#${id}`)).toBeAttached();
     }
   });
