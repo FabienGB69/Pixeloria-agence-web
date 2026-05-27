@@ -69,7 +69,7 @@ const values = [
     number: '02',
     title: 'Résultats concrets',
     description:
-      "On ne fait pas des sites « jolis ». On fait des sites qui génèrent des appels, des devis et des clients.",
+      "On ne fait pas de sites « jolis ». On fait des sites qui génèrent des appels, des devis et des clients.",
   },
   {
     number: '03',

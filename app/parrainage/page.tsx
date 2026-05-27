@@ -359,7 +359,7 @@ export default function ParrainagePage() {
                 </div>
                 <div className="audience__num">
                   <div className="audience__num-value audience__num-value--green">∞</div>
-                  <div className="audience__num-label">parrainages possible</div>
+                  <div className="audience__num-label">parrainages possibles</div>
                 </div>
               </div>
             </div>
