@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
+import { getDemoImages } from '@/lib/demo-images';
 
 export const metadata: Metadata = {
   title: 'Demo website for building contractors | Pixeloria',
@@ -172,7 +174,8 @@ function Stars() {
 }
 
 export default function ContractorsDemoPage() {
-  return (
+
+  const demoImages = getDemoImages('contractors');  return (
     <div className="demo-root">
 
       {/* ── Pixeloria demo banner ── */}
@@ -255,6 +258,10 @@ export default function ContractorsDemoPage() {
                 Local building contractor for renovation, repairs and home improvements.
                 Request a clear quote and get a quick callback.
               </p>
+
+              <div className="demo-hero-visual">
+                <Image src={demoImages.hero.src} alt={demoImages.hero.alt} width={900} height={560} className="demo-hero-inline-image" />
+              </div>
 
               <div className="demo-hero-ctas">
                 <a href="#demo-contact" className="demo-btn demo-btn--primary demo-btn--lg">

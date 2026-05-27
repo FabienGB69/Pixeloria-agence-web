@@ -47,15 +47,12 @@ export default function Footer({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
         </div>
 
         <nav className="footer-nav" aria-label="Navigation pied de page">
-          <strong>Navigation</strong>
-          <Link href="/">Accueil</Link>
-          <a href="/#services">Offres</a>
-          <a href="/#portfolio">Portfolio</a>
-          <a href="/#process">Process</a>
-          <a href="/#testimonials">Avis clients</a>
-          <a href="/#faq">FAQ</a>
-          <Link href="/a-propos">À propos</Link>
-          <Link href="/parrainage">🤝 Parrainage</Link>
+          <strong>{locale === 'en' ? 'Useful links' : 'Liens utiles'}</strong>
+          <Link href={locale === 'en' ? '/en' : '/'}>{locale === 'en' ? 'Home' : 'Accueil'}</Link>
+          <Link href={locale === 'en' ? '/en/examples/contractors' : '/exemples/artisan-batiment'}>{locale === 'en' ? 'Examples' : 'Exemples'}</Link>
+          <Link href={locale === 'en' ? '/en#packages' : '/offres'}>{locale === 'en' ? 'Packages' : 'Offres'}</Link>
+          <Link href={locale === 'en' ? '/en#contact' : '/#contact'}>Contact</Link>
+          <Link href="/mentions-legales">{locale === 'en' ? 'Legal notice' : 'Mentions légales'}</Link>
         </nav>
 
         <nav className="footer-nav" aria-label="Pages locales">
