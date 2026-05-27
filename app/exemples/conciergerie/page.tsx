@@ -139,7 +139,7 @@ const reviews = [
   {
     author: 'Marina D.',
     location: 'Mougins',
-    text: 'Mauvaise expérience avec un autre gestionnaire, puis j\'ai découvert Blue Prestige. Différence de jour et nuit. Communication parfaite, comptes rendus mensuels.',
+    text: 'Mauvaise expérience avec un autre gestionnaire, puis j\'ai découvert Blue Prestige. La différence est flagrante. Communication parfaite, comptes rendus mensuels.',
     date: 'il y a 6 semaines',
   },
   {
