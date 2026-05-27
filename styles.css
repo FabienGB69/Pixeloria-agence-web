@@ -56,6 +56,12 @@
 
   /* Semantic accent text token (replaces scattered #0a6b82 / #0c7b90 / #0b7088) */
   --accent-text: #0a6b82;
+
+  /* Derived tints used by form/button components */
+  --primary-faint:  rgba(38, 216, 190, 0.07);
+  --primary-light:  rgba(38, 216, 190, 0.30);
+  --border-soft:    rgba(17, 91, 132, 0.10);
+  --text-subtle:    rgba(3, 14, 40, 0.45);
 }
 
 /* ============================================================
