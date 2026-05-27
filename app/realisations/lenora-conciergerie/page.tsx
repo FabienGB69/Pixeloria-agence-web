@@ -65,7 +65,7 @@ export default function LenoraConciergeriePage() {
           <div className="container">
             <h2 className="section-heading">Contexte du projet</h2>
             <p className="section-sub">
-              Lenora Conciergerie accompagne des particuliers dans la gestion de leurs tâches du quotidien — assistance administrative, coordination de services, soutien à domicile. La société avait un site web existant mais son design vieillissant et sa structure peu claire rendaient difficile la conversion des visiteurs en clients.
+              Lenora Conciergerie accompagne des particuliers dans la gestion de leurs tâches du quotidien — assistance administrative, coordination de services, soutien à domicile. La société avait un site web existant, mais son design vieillissant et sa structure peu claire rendaient difficile la conversion des visiteurs en clients.
             </p>
           </div>
         </section>

@@ -147,7 +147,7 @@ export default function CreationForm() {
             <path d="M15 24l7 7 11-11" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </div>
-        <h3>Projet reçu !</h3>
+        <h3>Projet reçu&nbsp;!</h3>
         <p>Nous étudions votre demande et revenons vers vous sous 48&nbsp;h.</p>
       </div>
     );
