@@ -56,6 +56,12 @@
 
   /* Semantic accent text token (replaces scattered #0a6b82 / #0c7b90 / #0b7088) */
   --accent-text: #0a6b82;
+
+  /* Derived tints used by form/button components */
+  --primary-faint:  rgba(38, 216, 190, 0.07);
+  --primary-light:  rgba(38, 216, 190, 0.30);
+  --border-soft:    rgba(17, 91, 132, 0.10);
+  --text-subtle:    rgba(3, 14, 40, 0.45);
 }
 
 /* ============================================================
@@ -477,6 +483,7 @@ abbr[title] {
   color: var(--text-muted);
   border-radius: var(--r-sm);
   transition: color 0.2s, background 0.2s;
+  white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -1845,6 +1852,35 @@ select {
   background: var(--surface-tinted);
   color: var(--text-muted);
   border-top: 1px solid var(--border);
+}
+
+.footer-cta-block {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.footer-cta-title {
+  margin: 0 0 0.45rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.footer-cta-text {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.footer-cta-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.footer-brand-contact a {
+  color: var(--text-muted);
 }
 
 .footer-inner {

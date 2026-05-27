@@ -109,7 +109,7 @@ const realisations = [
     gradientBefore: 'linear-gradient(160deg, #6b7280 0%, #9ca3af 40%, #71717a 100%)',
     gradientAfter: 'linear-gradient(160deg, #fef3c7 0%, #fde68a 30%, #fbbf24 60%, #f59e0b 100%)',
     labelBefore: 'Avant — Façade fissurée et décollée',
-    labelAfter: 'Après — Enduit talochée ton pierre',
+    labelAfter: 'Après — Enduit taloché ton pierre',
   },
   {
     label: 'Mur de clôture',

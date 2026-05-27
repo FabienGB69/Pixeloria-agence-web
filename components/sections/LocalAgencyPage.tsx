@@ -113,7 +113,7 @@ export default function LocalAgencyPage({ data }: Props) {
                 { stat: '< 2.5s', label: 'Temps de chargement cible' },
                 { stat: '90+', label: 'Score Lighthouse minimum' },
                 { stat: '3–6 sem.', label: 'Délai de livraison moyen' },
-                { stat: '89€/mois', label: 'À partir de (abonnement)' },
+                { stat: '89 €/mois', label: 'À partir de (abonnement)' },
               ].map((item) => (
                 <div key={item.stat}>
                   <div className="gradient-text" style={{ fontSize: '2rem', fontWeight: 800 }}>{item.stat}</div>
@@ -147,7 +147,7 @@ export default function LocalAgencyPage({ data }: Props) {
           <div className="section-eyebrow">Contact</div>
           <h2>Un projet en {data.department} ?</h2>
           <p style={{ opacity: 0.75, marginBottom: '2rem' }}>
-            Réponse sous 48h. Audit gratuit de votre site actuel inclus.
+            Réponse sous 48&nbsp;h. Audit gratuit de votre site actuel inclus.
           </p>
           <ContactForm />
         </div>

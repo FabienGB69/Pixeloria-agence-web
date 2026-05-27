@@ -8,7 +8,7 @@ const miniCards = [
     desc: 'Votre site inspire-t-il confiance sur smartphone ?',
   },
   {
-    title: "Appels à l'action",
+    title: "Appels à l’action",
     desc: 'Vos visiteurs savent-ils quoi faire ensuite ?',
   },
   {

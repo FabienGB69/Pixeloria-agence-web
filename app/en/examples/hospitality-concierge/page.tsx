@@ -294,7 +294,7 @@ export default function HospitalityConciergeDemoPage() {
               <div className="demo-section-heading">
                 <span className="demo-eyebrow">Managed properties</span>
                 <h2 id="demo-real-title">Before &amp; after management</h2>
-                <p>The difference professional management makes. Our owners see an average 40% revenue increase after handing over their property to us.</p>
+                <p>The difference professional management makes. Our owners see an average 40% revenue increase after entrusting their property to us.</p>
               </div>
               <div className="demo-gallery-grid">
                 {projects.map((r) => (

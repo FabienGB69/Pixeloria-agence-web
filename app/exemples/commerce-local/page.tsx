@@ -96,7 +96,7 @@ const realisations = [
     gradientBefore: "linear-gradient(135deg, #374151 0%, #4b5563 40%, #6b7280 100%)",
     gradientAfter: "linear-gradient(135deg, #22c55e 0%, #16a34a 40%, #15803d 100%)",
     labelBefore: "Avant — Cave désorganisée, accès difficile",
-    labelAfter: "Après — Cave curatée, 80+ références commentées",
+    labelAfter: "Après — Cave organisée, 80+ références commentées",
   },
   {
     label: "Comptoir traiteur",

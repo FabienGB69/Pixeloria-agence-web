@@ -243,7 +243,7 @@ export default function EntrepriseRenovationDemoPage() {
           <div className="demo-hero-inner">
             <div className="demo-hero-content">
               <div className="demo-hero-badge">
-                <span>✓ RGE certifiée</span>
+                <span>✓ RGE certifié</span>
                 <span className="demo-badge-sep" aria-hidden="true">·</span>
                 <span>✓ Assurance décennale</span>
                 <span className="demo-badge-sep" aria-hidden="true">·</span>
@@ -346,7 +346,7 @@ export default function EntrepriseRenovationDemoPage() {
             <div className="demo-section-heading">
               <span className="demo-eyebrow">Chantiers terminés</span>
               <h2 id="demo-real-title">Nos réalisations</h2>
-              <p>Photos avant / après de chantiers récents dans la Bordeaux Métropole. Chaque projet est unique — voici quelques exemples concrets.</p>
+              <p>Photos avant / après de chantiers récents dans la métropole de Bordeaux. Chaque projet est unique — voici quelques exemples concrets.</p>
             </div>
 
             <div className="demo-gallery-grid">
@@ -465,7 +465,7 @@ export default function EntrepriseRenovationDemoPage() {
                 <span className="demo-eyebrow">Où j&apos;interviens</span>
                 <h2 id="demo-zone-title">Zone d&apos;intervention</h2>
                 <p>
-                  Artisan basé à Bordeaux, j&apos;interviens dans toute la Bordeaux Métropole et les communes limitrophes.
+                  Artisan basé à Bordeaux, j&apos;interviens dans toute la métropole de Bordeaux et les communes limitrophes.
                   Déplacement inclus dans un rayon de 40 km autour de Bordeaux.
                 </p>
                 <div className="demo-zone-chips">

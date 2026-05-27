@@ -56,7 +56,7 @@ export const demoImages: Record<string, DemoImageSet> = {
     gallery: [
       { src: '/images/exemples/independant/gallery-1.svg', alt: 'Session de travail et conseil personnalisé' },
       { src: '/images/exemples/independant/gallery-2.svg', alt: 'Accompagnement projet pour client local' },
-      { src: '/images/exemples/independant/gallery-3.svg', alt: 'Résultats concrets d’une mission indépendante' },
+      { src: '/images/exemples/independant/gallery-3.svg', alt: 'Résultats concrets d\'une mission indépendante' },
     ],
   },
   contractors: { hero: { src: '/images/exemples/contractors/hero.svg', alt: 'Building contractor on renovation site' }, gallery: fallback.gallery },
