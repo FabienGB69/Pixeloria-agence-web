@@ -240,7 +240,7 @@ export default function EntrepriseRenovationDemoPage() {
           <div className="demo-hero-inner">
             <div className="demo-hero-content">
               <div className="demo-hero-badge">
-                <span>✓ RGE certifiée</span>
+                <span>✓ RGE certifié</span>
                 <span className="demo-badge-sep" aria-hidden="true">·</span>
                 <span>✓ Assurance décennale</span>
                 <span className="demo-badge-sep" aria-hidden="true">·</span>
@@ -331,7 +331,7 @@ export default function EntrepriseRenovationDemoPage() {
             <div className="demo-section-heading">
               <span className="demo-eyebrow">Chantiers terminés</span>
               <h2 id="demo-real-title">Nos réalisations</h2>
-              <p>Photos avant / après de chantiers récents dans la Bordeaux Métropole. Chaque projet est unique — voici quelques exemples concrets.</p>
+              <p>Photos avant / après de chantiers récents dans la métropole de Bordeaux. Chaque projet est unique — voici quelques exemples concrets.</p>
             </div>
 
             <div className="demo-gallery-grid">
