@@ -187,7 +187,7 @@ export default function FreelancersConsultantsDemoPage() {
       </div>
 
       <div
-        className="demo-site"
+        className="demo-site demo-site--artisan-clear"
         lang="en"
         style={{ '--dz-primary': '#7C3AED', '--dz-primary-dark': '#6D28D9' } as React.CSSProperties}
       >
@@ -242,7 +242,7 @@ export default function FreelancersConsultantsDemoPage() {
                       <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </a>
-                  <a href="#demo-realisations" className="demo-btn demo-btn--outline">
+                  <a href="tel:+33782345690" className="demo-btn demo-btn--outline">
                     See the results
                     <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" width="18" height="18">
                       <path d="M10 4v12M4 10l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -410,7 +410,7 @@ export default function FreelancersConsultantsDemoPage() {
             </div>
           </section>
 
-          <section className="demo-section demo-section--dark" id="demo-contact" aria-labelledby="demo-contact-title">
+          <section className="demo-section demo-section--tinted" id="demo-contact" aria-labelledby="demo-contact-title">
             <div className="demo-container">
               <div className="demo-contact-grid">
                 <div className="demo-contact-info">

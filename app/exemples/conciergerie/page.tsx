@@ -196,7 +196,7 @@ export default function ConciergeriedemoPage() {
           FAKE CLIENT SITE — Blue Prestige Conciergerie
           ══════════════════════════════════════ */}
       <div
-        className="demo-site"
+        className="demo-site demo-site--artisan-clear"
         lang="fr"
         style={{ '--dz-primary': '#0D9488', '--dz-primary-dark': '#0F766E' } as React.CSSProperties}
       >
@@ -262,7 +262,7 @@ export default function ConciergeriedemoPage() {
                     <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </a>
-                <a href="#demo-realisations" className="demo-btn demo-btn--outline">
+                <a href="tel:0693456789" className="demo-btn demo-btn--outline">
                   Voir nos biens gérés
                   <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" width="18" height="18">
                     <path d="M10 4v12M4 10l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -472,7 +472,7 @@ export default function ConciergeriedemoPage() {
         </section>
 
         {/* ── Contact ── */}
-        <section className="demo-section demo-section--dark" id="demo-contact" aria-labelledby="demo-contact-title">
+        <section className="demo-section demo-section--tinted" id="demo-contact" aria-labelledby="demo-contact-title">
           <div className="demo-container">
             <div className="demo-contact-grid">
               <div className="demo-contact-info">
