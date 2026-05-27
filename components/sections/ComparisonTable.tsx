@@ -41,7 +41,7 @@ export default function ComparisonTable() {
       <div className="container">
         <div className="section-heading reveal">
           <span className="eyebrow">Comparatif</span>
-          <h2>Comparer les formules</h2>
+          <h2>Comparez les formules</h2>
           <p className="section-sub">Choisissez en un coup d&apos;œil la formule qui correspond à votre situation.</p>
         </div>
 

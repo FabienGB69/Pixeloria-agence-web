@@ -57,7 +57,7 @@ const jsonLd = {
           name: 'Do I own my website?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Yes. You own your website, your content and all your accesses. Pixeloria helps you build it, but it's entirely yours.",
+            text: "Yes. You own your website, your content and all your login credentials. Pixeloria helps you build it, but it's entirely yours.",
           },
         },
         {
@@ -144,7 +144,7 @@ const faqs = [
   },
   {
     q: 'Do I own my website?',
-    a: "Yes. You own your website, your content and all your accesses. Pixeloria helps you build it, but it's entirely yours.",
+    a: "Yes. You own your website, your content and all your login credentials. Pixeloria helps you build it, but it's entirely yours.",
   },
   {
     q: 'How long does it take to build a website?',
@@ -331,7 +331,7 @@ const trustPoints = [
   },
   {
     title: 'Business understanding',
-    desc: 'Pixeloria understands the constraints of small businesses: limited time, need for clarity and controlled budget.',
+    desc: 'Pixeloria understands the constraints of small businesses: limited time, a need for clarity and a controlled budget.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path d="M3 21V9l9-6 9 6v12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
@@ -440,7 +440,7 @@ export default function EnHomePage() {
                   </div>
                 </div>
                 <h2>Serenity Website</h2>
-                <p>Custom design · Local SEO · Reactive support</p>
+                <p>Custom design · Local SEO · Responsive support</p>
 
                 <ul className="feature-list">
                   <li>
