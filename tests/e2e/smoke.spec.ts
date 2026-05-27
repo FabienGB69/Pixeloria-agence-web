@@ -15,7 +15,7 @@ test.describe('Pixeloria homepage — smoke tests', () => {
   test('liens de navigation résolvent vers les sections', async ({ page }) => {
     const sections = ['services', 'portfolio', 'process', 'testimonials', 'faq', 'contact'];
     for (const id of sections) {
-      const link = page.locator(`.site-nav a[href="#${id}"]`);
+      const link = page.locator(`.site-nav a[href="/#${id}"]`);
       await expect(link).toBeVisible();
     }
     for (const id of sections) {
