@@ -1848,6 +1848,35 @@ select {
   border-top: 1px solid var(--border);
 }
 
+.footer-cta-block {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.footer-cta-title {
+  margin: 0 0 0.45rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.footer-cta-text {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.footer-cta-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.footer-brand-contact a {
+  color: var(--text-muted);
+}
+
 .footer-inner {
   display: grid;
   grid-template-columns: 1.8fr 1fr 1fr 1fr;

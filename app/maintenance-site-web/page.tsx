@@ -191,7 +191,7 @@ export default function MaintenanceSiteWebPage() {
                 { icon: '🌐', label: 'Domaine inclus', desc: 'Votre nom de domaine est renouvelé automatiquement, sans rupture.' },
                 { icon: '💾', label: 'Sauvegardes régulières', desc: 'Vos données sont sauvegardées régulièrement pour une restauration rapide si besoin.' },
                 { icon: '💬', label: 'Support WhatsApp 24 h', desc: 'Contactez-nous directement sur WhatsApp, réponse sous 24 heures ouvrées.' },
-                { icon: '📊', label: 'Rapport mensuel d\'activité', desc: 'Un bilan mensuel clair : visites, actions réalisées, état de votre site.' },
+                { icon: '📊', label: 'Rapport mensuel d\'activité', desc: 'Un bilan mensuel clair&nbsp;: visites, actions réalisées, état de votre site.' },
               ].map((item) => (
                 <div key={item.label} className="include-item">
                   <span className="include-icon" aria-hidden="true">{item.icon}</span>
@@ -218,7 +218,7 @@ export default function MaintenanceSiteWebPage() {
                 <span className="pricing-badge">Recommandé</span>
                 <p className="pricing-label">Sérénité</p>
                 <p className="pricing-price">89 € <span>TTC / mois</span></p>
-                <p className="pricing-sublabel">Engagement recommandé : 12 mois</p>
+                <p className="pricing-sublabel">Engagement recommandé&nbsp;: 12 mois</p>
                 <ul>
                   <li>Maintenance &amp; mises à jour incluses</li>
                   <li>Hébergement inclus</li>
@@ -233,7 +233,7 @@ export default function MaintenanceSiteWebPage() {
               <div className="pricing-card">
                 <p className="pricing-label">Croissance</p>
                 <p className="pricing-price">159 € <span>TTC / mois</span></p>
-                <p className="pricing-sublabel">Engagement recommandé : 12 mois</p>
+                <p className="pricing-sublabel">Engagement recommandé&nbsp;: 12 mois</p>
                 <ul>
                   <li>Tout ce qui est inclus dans Sérénité</li>
                   <li>SEO renforcé</li>
