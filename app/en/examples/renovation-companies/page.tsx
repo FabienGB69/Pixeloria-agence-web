@@ -60,7 +60,7 @@ const services = [
   },
   {
     title: 'Interior Joinery',
-    desc: 'Doors, built-in wardrobes, staircases, custom bespoke pieces crafted to your space.',
+    desc: 'Doors, built-in wardrobes, staircases, bespoke pieces crafted to your space.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <rect x="3" y="3" width="8" height="18" rx="1" stroke="currentColor" strokeWidth="1.8" />

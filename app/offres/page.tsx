@@ -60,7 +60,7 @@ export default function OffresPage() {
             <div className="reassurance-band">
               <div className="reassurance-item">
                 <strong>Pas d&apos;engagement caché</strong>
-                <p>Les conditions sont claires avant le lancement. Résiliation possible sur préavis 1 mois.</p>
+                <p>Les conditions sont claires avant le lancement. Résiliation possible sur préavis de 1 mois.</p>
               </div>
               <div className="reassurance-item">
                 <strong>Site livré clé en main</strong>

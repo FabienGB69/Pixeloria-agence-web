@@ -220,7 +220,7 @@ export default function CreationSiteTpePmePage() {
             </div>
             <p style={{ textAlign: 'center', marginTop: '1.5rem' }}>
               <Link href="/offres" style={{ color: 'var(--primary)', textDecoration: 'underline', fontSize: '0.9rem' }}>
-                Voir toutes les offres dont Site Croissance à 159 €/mois →
+                Voir toutes les offres, dont le Site Croissance à 159 €/mois →
               </Link>
             </p>
           </div>

@@ -10,13 +10,13 @@ import TurnstileWidget from '@/components/forms/TurnstileWidget';
 /* ── Data catalogues ───────────────────────────────────────── */
 const PAIN_CATALOG = [
   { id: 'slow-speed',    title: 'Vitesse insuffisante',   detail: 'Votre site charge trop lentement.' },
-  { id: 'weak-message',  title: 'Message flou',           detail: "Votre proposition de valeur n'est pas comprise." },
-  { id: 'low-mobile',    title: 'Expérience mobile faible', detail: "Le parcours mobile n'est pas assez fluide." },
+  { id: 'weak-message',  title: 'Message flou',           detail: "Votre proposition de valeur n’est pas comprise." },
+  { id: 'low-mobile',    title: 'Expérience mobile faible', detail: "Le parcours mobile n’est pas assez fluide." },
   { id: 'seo-drop',      title: 'Trafic SEO en baisse',   detail: 'Vos pages peinent à se positionner durablement.' },
-  { id: 'poor-cta',      title: 'CTA peu visibles',       detail: 'Les actions clés manquent d\'impact.' },
+  { id: 'poor-cta',      title: 'CTA peu visibles',       detail: "Les actions clés manquent d’impact." },
   { id: 'trust-gap',     title: 'Manque de preuves',      detail: 'Témoignages et éléments de réassurance insuffisants.' },
-  { id: 'content-chaos', title: 'Contenu désorganisé',   detail: 'L\'information est difficile à parcourir.' },
-  { id: 'no-funnel',     title: 'Tunnel incomplet',       detail: 'Votre capture de leads n\'est pas optimisée.' },
+  { id: 'content-chaos', title: 'Contenu désorganisé',   detail: "L’information est difficile à parcourir." },
+  { id: 'no-funnel',     title: 'Tunnel incomplet',       detail: "Votre capture de leads n’est pas optimisée." },
 ] as const;
 
 const OBJECTIVE_CATALOG = [
@@ -33,16 +33,16 @@ const OBJECTIVE_CATALOG = [
 const OFFER_CATALOG = {
   'audit-boost': {
     title: 'Audit Boost',
-    price: '1 900€ HT',
+    price: '1 900 € HT',
     summary: 'Diagnostic + quick wins activables sous 30 jours.',
-    features: ['Audit UX + conversion complet', 'Plan d\'optimisation SEO technique', 'Roadmap priorisée et chiffrée'],
+    features: ["Audit UX + conversion complet", "Plan d’optimisation SEO technique", "Roadmap priorisée et chiffrée"],
     rateBonus: 0.8,
   },
   'growth-engine': {
     title: 'Growth Engine',
-    price: '3 900€ HT',
+    price: '3 900 € HT',
     summary: 'Accompagnement stratégique pour accélérer sur 12 mois.',
-    features: ['Tout le pack Audit Boost', 'Wireframes de la refonte de pages clés', 'Plan éditorial et conversion 90 jours'],
+    features: ["Tout le pack Audit Boost", "Wireframes de la refonte de pages clés", "Plan éditorial et conversion 90 jours"],
     rateBonus: 2.2,
   },
 } as const;
@@ -98,9 +98,9 @@ const fmtCur = (v: number) => new Intl.NumberFormat('fr-FR', { style: 'currency'
 
 function validate(s: TunnelState): string {
   if (s.step === 1) {
-    if (!s.url.trim()) return 'Ajoutez l\'URL de votre site pour continuer.';
+    if (!s.url.trim()) return "Ajoutez l’URL de votre site pour continuer.";
     if (!s.techno) return 'Sélectionnez votre technologie principale.';
-    if (!s.anciennete) return 'Indiquez l\'ancienneté de votre site.';
+    if (!s.anciennete) return "Indiquez l’ancienneté de votre site.";
     if (s.painPoints.length === 0) return 'Sélectionnez au moins une douleur prioritaire.';
   }
   if (s.step === 2) {
@@ -112,8 +112,8 @@ function validate(s: TunnelState): string {
   if (s.step === 4) {
     if (!s.prenom) return 'Le prénom est requis.';
     if (!s.nom) return 'Le nom est requis.';
-    if (!s.email) return 'L\'email est requis.';
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(s.email)) return 'Format d\'email invalide.';
+    if (!s.email) return "L’email est requis.";
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(s.email)) return "Format d’email invalide.";
     if (!s.phone) return 'Le téléphone est requis.';
   }
   return '';
@@ -183,7 +183,7 @@ export default function TunnelForm() {
       <div className="wizard success-card">
         <div className="eyebrow">Audit confirmé</div>
         <h2>Merci {s.prenom || ''}, votre audit Pixeloria est réservé.</h2>
-        <p>Nous revenons vers vous sous 24h ouvrées à l&apos;adresse <strong>{s.email}</strong>.</p>
+        <p>Nous revenons vers vous sous 24&nbsp;h ouvrées à l&apos;adresse <strong>{s.email}</strong>.</p>
         <p>Vous allez recevoir 4 livrables clés :</p>
         <ul className="deliverables">
           <li>1. Diagnostic UX &amp; conversion détaillé</li>
@@ -236,7 +236,7 @@ export default function TunnelForm() {
                 Ancienneté du site
                 <select value={s.anciennete} onChange={e => update({ anciennete: e.target.value })}>
                   <option value="">Sélectionner…</option>
-                  {['Moins d\'1 an', '1 à 3 ans', '3 à 5 ans', 'Plus de 5 ans'].map(a => <option key={a}>{a}</option>)}
+                  {["Moins d'1 an", '1 à 3 ans', '3 à 5 ans', 'Plus de 5 ans'].map(a => <option key={a}>{a}</option>)}
                 </select>
               </label>
             </div>
