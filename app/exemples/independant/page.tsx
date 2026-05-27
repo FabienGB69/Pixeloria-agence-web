@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
+import { getDemoImages } from '@/lib/demo-images';
 
 export const metadata: Metadata = {
   title: 'Exemple de site pour indépendant consultant — Démo Pixeloria',
@@ -171,6 +173,7 @@ function Stars() {
 }
 
 export default function IndependantDemoPage() {
+  const demoImages = getDemoImages('independant');
   return (
     <div className="demo-root">
 
@@ -187,8 +190,8 @@ export default function IndependantDemoPage() {
             <Link href="/#contact" className="demo-banner-cta">
               Demander mon site →
             </Link>
-            <Link href="/exemples/independant" className="demo-banner-back" aria-label="Retour à la page métier">
-              ← Retour
+            <Link href="/" className="demo-banner-back" aria-label="Retour à l&apos;accueil">
+              ← Retour à l&apos;accueil
             </Link>
           </div>
         </div>
@@ -198,7 +201,7 @@ export default function IndependantDemoPage() {
           FAKE CLIENT SITE — Sophie Martin Digital
           ══════════════════════════════════════ */}
       <div
-        className="demo-site"
+        className="demo-site demo-site--artisan-clear"
         lang="fr"
         style={{ '--dz-primary': '#7C3AED', '--dz-primary-dark': '#6D28D9' } as React.CSSProperties}
       >
@@ -257,6 +260,10 @@ export default function IndependantDemoPage() {
                 en ligne et à trouver de nouveaux clients grâce au digital.
               </p>
 
+              <div className="demo-hero-visual">
+                <Image src={demoImages.hero.src} alt={demoImages.hero.alt} width={900} height={560} className="demo-hero-inline-image" />
+              </div>
+
               <div className="demo-hero-ctas">
                 <a href="#demo-contact" className="demo-btn demo-btn--primary demo-btn--lg">
                   Parler de votre projet
@@ -264,7 +271,7 @@ export default function IndependantDemoPage() {
                     <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </a>
-                <a href="#demo-realisations" className="demo-btn demo-btn--outline">
+                <a href="tel:0782345690" className="demo-btn demo-btn--outline">
                   Voir les résultats
                   <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" width="18" height="18">
                     <path d="M10 4v12M4 10l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -322,6 +329,14 @@ export default function IndependantDemoPage() {
                   <div className="demo-service-icon">{s.icon}</div>
                   <h3>{s.title}</h3>
                   <p>{s.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="demo-illustrations-grid" aria-label="Illustrations métier">
+              {demoImages.gallery.map((img) => (
+                <div key={img.src} className="demo-illustration-card">
+                  <Image src={img.src} alt={img.alt} width={520} height={360} className="demo-illustration-image" />
                 </div>
               ))}
             </div>
@@ -481,7 +496,7 @@ export default function IndependantDemoPage() {
         </section>
 
         {/* ── Contact / Mission ── */}
-        <section className="demo-section demo-section--dark" id="demo-contact" aria-labelledby="demo-contact-title">
+        <section className="demo-section demo-section--tinted" id="demo-contact" aria-labelledby="demo-contact-title">
           <div className="demo-container">
             <div className="demo-contact-grid">
               <div className="demo-contact-info">

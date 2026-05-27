@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
+import { getDemoImages } from '@/lib/demo-images';
 
 export const metadata: Metadata = {
   title: 'Exemple de site pour conciergerie — Démo Pixeloria',
@@ -169,6 +171,7 @@ function Stars() {
 }
 
 export default function ConciergeriedemoPage() {
+  const demoImages = getDemoImages('conciergerie');
   return (
     <div className="demo-root">
 
@@ -185,8 +188,8 @@ export default function ConciergeriedemoPage() {
             <Link href="/#contact" className="demo-banner-cta">
               Demander mon site →
             </Link>
-            <Link href="/exemples/conciergerie" className="demo-banner-back" aria-label="Retour à la page métier">
-              ← Retour
+            <Link href="/" className="demo-banner-back" aria-label="Retour à l&apos;accueil">
+              ← Retour à l&apos;accueil
             </Link>
           </div>
         </div>
@@ -196,7 +199,7 @@ export default function ConciergeriedemoPage() {
           FAKE CLIENT SITE — Blue Prestige Conciergerie
           ══════════════════════════════════════ */}
       <div
-        className="demo-site"
+        className="demo-site demo-site--artisan-clear"
         lang="fr"
         style={{ '--dz-primary': '#0D9488', '--dz-primary-dark': '#0F766E' } as React.CSSProperties}
       >
@@ -255,6 +258,10 @@ export default function ConciergeriedemoPage() {
                 Nous gérons tout, vous encaissez.
               </p>
 
+              <div className="demo-hero-visual">
+                <Image src={demoImages.hero.src} alt={demoImages.hero.alt} width={900} height={560} className="demo-hero-inline-image" />
+              </div>
+
               <div className="demo-hero-ctas">
                 <a href="#demo-contact" className="demo-btn demo-btn--primary demo-btn--lg">
                   Confier mon bien
@@ -262,7 +269,7 @@ export default function ConciergeriedemoPage() {
                     <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </a>
-                <a href="#demo-realisations" className="demo-btn demo-btn--outline">
+                <a href="tel:0693456789" className="demo-btn demo-btn--outline">
                   Voir nos biens gérés
                   <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" width="18" height="18">
                     <path d="M10 4v12M4 10l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -317,6 +324,14 @@ export default function ConciergeriedemoPage() {
                   <div className="demo-service-icon">{s.icon}</div>
                   <h3>{s.title}</h3>
                   <p>{s.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="demo-illustrations-grid" aria-label="Illustrations métier">
+              {demoImages.gallery.map((img) => (
+                <div key={img.src} className="demo-illustration-card">
+                  <Image src={img.src} alt={img.alt} width={520} height={360} className="demo-illustration-image" />
                 </div>
               ))}
             </div>
@@ -472,7 +487,7 @@ export default function ConciergeriedemoPage() {
         </section>
 
         {/* ── Contact ── */}
-        <section className="demo-section demo-section--dark" id="demo-contact" aria-labelledby="demo-contact-title">
+        <section className="demo-section demo-section--tinted" id="demo-contact" aria-labelledby="demo-contact-title">
           <div className="demo-container">
             <div className="demo-contact-grid">
               <div className="demo-contact-info">

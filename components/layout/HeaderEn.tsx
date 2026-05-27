@@ -54,14 +54,15 @@ export default function HeaderEn() {
           aria-label="Main navigation"
           ref={navRef}
         >
-          <a href="#packages" className="nav-link" onClick={closeMenu}>Packages</a>
-          <a href="#why" className="nav-link" onClick={closeMenu}>Why us</a>
-          <a href="#process" className="nav-link" onClick={closeMenu}>How it works</a>
-          <a href="#faq" className="nav-link" onClick={closeMenu}>FAQ</a>
+          <Link href="/en" className="nav-link" onClick={closeMenu}>Home</Link>
+          <a href="/en#packages" className="nav-link" onClick={closeMenu}>Packages</a>
+          <a href="/en#why" className="nav-link" onClick={closeMenu}>Why us</a>
+          <a href="/en#process" className="nav-link" onClick={closeMenu}>How it works</a>
+          <a href="/en#faq" className="nav-link" onClick={closeMenu}>FAQ</a>
           <Link href="/?setlang=fr" className="nav-link lang-switcher" onClick={closeMenu} aria-label="Version française">
             🇫🇷 FR
           </Link>
-          <a href="#contact" className="btn btn-nav" onClick={closeMenu}>Free audit</a>
+          <a href="/en#contact" className="btn btn-nav" onClick={closeMenu}>Free audit</a>
         </nav>
 
         <button

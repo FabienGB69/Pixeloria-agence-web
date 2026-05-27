@@ -188,7 +188,7 @@ export default function ContractorsDemoPage() {
             <Link href="/en#contact" className="demo-banner-cta">
               Get my website →
             </Link>
-            <Link href="/en/examples/contractors" className="demo-banner-back" aria-label="Back to examples page">
+            <Link href="/en" className="demo-banner-back" aria-label="Back to examples page">
               ← Back
             </Link>
           </div>
@@ -198,7 +198,7 @@ export default function ContractorsDemoPage() {
       {/* ══════════════════════════════════════
           FAKE CLIENT SITE — Johnson Building
           ══════════════════════════════════════ */}
-      <div className="demo-site" lang="en">
+      <div className="demo-site demo-site--artisan-clear" lang="en">
 
         {/* ── Fake header ── */}
         <header className="demo-header" id="demo-top">
@@ -236,22 +236,24 @@ export default function ContractorsDemoPage() {
           <div className="demo-hero-inner">
             <div className="demo-hero-content">
               <div className="demo-hero-badge">
-                <span>✓ Qualibat certified</span>
+                <span>✓ Free quote</span>
+                <span className="demo-badge-sep" aria-hidden="true">·</span>
+                <span>✓ Quick response</span>
                 <span className="demo-badge-sep" aria-hidden="true">·</span>
                 <span>✓ Decennial insurance</span>
                 <span className="demo-badge-sep" aria-hidden="true">·</span>
-                <span>✓ 12 years experience</span>
+                <span>✓ Local coverage</span>
               </div>
 
               <h1 className="demo-hero-craft">
-                Bricklaying · Tiling · Renovation
+                Your renovation work in safe hands
               </h1>
 
               <p className="demo-hero-name">Johnson Building</p>
 
               <p className="demo-hero-sub">
-                Building and tiling contractor based in Aix-en-Provence since 2012.
-                Your projects delivered to the highest standards.
+                Local building contractor for renovation, repairs and home improvements.
+                Request a clear quote and get a quick callback.
               </p>
 
               <div className="demo-hero-ctas">
@@ -261,10 +263,10 @@ export default function ContractorsDemoPage() {
                     <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </a>
-                <a href="#demo-realisations" className="demo-btn demo-btn--outline">
-                  View our projects
+                <a href="tel:+33612345678" className="demo-btn demo-btn--outline">
+                  Call the contractor
                   <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" width="18" height="18">
-                    <path d="M10 4v12M4 10l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </a>
               </div>
@@ -307,7 +309,7 @@ export default function ContractorsDemoPage() {
             <div className="demo-section-heading">
               <span className="demo-eyebrow">What we do</span>
               <h2 id="demo-services-title">Our services</h2>
-              <p>Versatile contractor covering all your bricklaying, tiling and interior &amp; exterior renovation work.</p>
+              <p>Planning work at home? Ask for your free quote.</p>
             </div>
 
             <div className="demo-services-grid">
@@ -328,7 +330,7 @@ export default function ContractorsDemoPage() {
             <div className="demo-section-heading">
               <span className="demo-eyebrow">Completed work</span>
               <h2 id="demo-real-title">Our projects</h2>
-              <p>Before &amp; after photos from recent jobs in Aix-en-Provence and the Bouches-du-Rhône. Every project is unique — here are a few concrete examples.</p>
+              <p>Clean sites, realistic timelines and clear quotes.</p>
             </div>
 
             <div className="demo-gallery-grid">
@@ -382,8 +384,8 @@ export default function ContractorsDemoPage() {
           <div className="demo-container">
             <div className="demo-section-heading">
               <span className="demo-eyebrow">Google Reviews</span>
-              <h2 id="demo-avis-title">Our customers trust us</h2>
-              <p>38 verified customer reviews on Google — average rating 4.9 / 5.</p>
+              <h2 id="demo-avis-title">Need reassurance before starting work?</h2>
+              <p>Read recent reviews from homeowners in your area.</p>
             </div>
 
             <div className="demo-reviews-grid">
@@ -447,8 +449,8 @@ export default function ContractorsDemoPage() {
                 <span className="demo-eyebrow">Where I work</span>
                 <h2 id="demo-zone-title">Coverage area</h2>
                 <p>
-                  Builder based in Aix-en-Provence. I work across Bouches-du-Rhône within a 35 km radius.
-                  Travel costs included.
+                  We cover Aix-en-Provence and nearby towns.
+                  Travel included within a 35 km radius.
                 </p>
                 <div className="demo-zone-chips">
                   {zones.map((z) => (
@@ -471,13 +473,13 @@ export default function ContractorsDemoPage() {
         </section>
 
         {/* ── Contact / Quote ── */}
-        <section className="demo-section demo-section--dark" id="demo-contact" aria-labelledby="demo-contact-title">
+        <section className="demo-section demo-section--tinted" id="demo-contact" aria-labelledby="demo-contact-title">
           <div className="demo-container">
             <div className="demo-contact-grid">
               <div className="demo-contact-info">
                 <span className="demo-eyebrow">Free &amp; no obligation</span>
                 <h2 id="demo-contact-title">Request a quote</h2>
-                <p>Response within 48h. Detailed, transparent quote — no hidden extras.</p>
+                <p>Tell us about your project and we’ll call you back quickly.</p>
 
                 <div className="demo-contact-channels">
                   <a href="tel:+33612345678" className="demo-channel">

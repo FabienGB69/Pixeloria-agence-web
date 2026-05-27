@@ -54,15 +54,16 @@ export default function Header() {
           aria-label="Navigation principale"
           ref={navRef}
         >
-          <a href="#services" className="nav-link" onClick={closeMenu}>Offres</a>
-          <a href="#portfolio" className="nav-link" onClick={closeMenu}>Portfolio</a>
-          <a href="#process" className="nav-link" onClick={closeMenu}>Process</a>
-          <a href="#testimonials" className="nav-link" onClick={closeMenu}>Avis</a>
-          <a href="#faq" className="nav-link" onClick={closeMenu}>FAQ</a>
+          <Link href="/" className="nav-link" onClick={closeMenu}>Accueil</Link>
+          <a href="/#services" className="nav-link" onClick={closeMenu}>Offres</a>
+          <a href="/#portfolio" className="nav-link" onClick={closeMenu}>Portfolio</a>
+          <a href="/#process" className="nav-link" onClick={closeMenu}>Process</a>
+          <a href="/#testimonials" className="nav-link" onClick={closeMenu}>Avis</a>
+          <a href="/#faq" className="nav-link" onClick={closeMenu}>FAQ</a>
           <Link href="/a-propos" className="nav-link" onClick={closeMenu}>À propos</Link>
           <Link href="/parrainage" className="nav-link" onClick={closeMenu}>Parrainage</Link>
           <Link href="/en" className="nav-link lang-switcher" onClick={closeMenu} aria-label="English version">🇬🇧 EN</Link>
-          <a href="#contact" className="btn btn-nav" onClick={closeMenu}>Audit gratuit</a>
+          <a href="/#contact" className="btn btn-nav" onClick={closeMenu}>Audit gratuit</a>
         </nav>
 
         <button
