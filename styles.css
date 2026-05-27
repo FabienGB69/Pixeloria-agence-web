@@ -477,6 +477,7 @@ abbr[title] {
   color: var(--text-muted);
   border-radius: var(--r-sm);
   transition: color 0.2s, background 0.2s;
+  white-space: nowrap;
 }
 
 .nav-link:hover {
