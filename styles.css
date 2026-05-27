@@ -5950,3 +5950,38 @@ details.faq-item[open] .faq-chevron {
     font-size: 1rem;
   }
 }
+
+.demo-hero-visual {
+  margin: 1rem 0 1.25rem;
+}
+.demo-hero-inline-image {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid var(--dz-border-subtle);
+  background: #fff;
+}
+.demo-illustrations-grid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.demo-illustration-card {
+  background: #fff;
+  border: 1px solid var(--dz-border-subtle);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.demo-illustration-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media (max-width: 900px) {
+  .demo-illustrations-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .demo-illustrations-grid { grid-template-columns: 1fr; }
+}

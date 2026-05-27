@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
+import { getDemoImages } from '@/lib/demo-images';
 
 export const metadata: Metadata = {
   title: "Exemple de site pour commerce local — Démo Pixeloria",
@@ -168,6 +170,7 @@ function Stars() {
 }
 
 export default function CommerceLocalDemoPage() {
+  const demoImages = getDemoImages('commerce-local');
   return (
     <div className="demo-root">
       <div className="demo-banner" role="banner" aria-label="Aperçu créé par Pixeloria">
@@ -225,6 +228,9 @@ export default function CommerceLocalDemoPage() {
                 <h1 className="demo-hero-craft">Épicerie Fine &amp; Saveurs Locales</h1>
                 <p className="demo-hero-name">L&apos;Épicerie de Marie</p>
                 <p className="demo-hero-sub">Votre épicerie de quartier à Annecy depuis 2015. Sélection rigoureuse de produits locaux, bio et artisanaux de la région.</p>
+                <div className="demo-hero-visual">
+                  <Image src={demoImages.hero.src} alt={demoImages.hero.alt} width={900} height={560} className="demo-hero-inline-image" />
+                </div>
                 <div className="demo-hero-ctas">
                   <a href="#demo-contact" className="demo-btn demo-btn--primary demo-btn--lg">
                     Commander ou nous contacter
@@ -272,6 +278,13 @@ export default function CommerceLocalDemoPage() {
                     <div className="demo-service-icon">{s.icon}</div>
                     <h3>{s.title}</h3>
                     <p>{s.desc}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="demo-illustrations-grid" aria-label="Illustrations métier">
+                {demoImages.gallery.map((img) => (
+                  <div key={img.src} className="demo-illustration-card">
+                    <Image src={img.src} alt={img.alt} width={520} height={360} className="demo-illustration-image" />
                   </div>
                 ))}
               </div>
