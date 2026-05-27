@@ -178,12 +178,12 @@ export default function CommerceLocalDemoPage() {
           </div>
           <div className="demo-banner-actions">
             <Link href="/#contact" className="demo-banner-cta">Demander mon site →</Link>
-            <Link href="/exemples/commerce-local" className="demo-banner-back" aria-label="Retour à la page métier">← Retour</Link>
+            <Link href="/" className="demo-banner-back" aria-label="Retour à la page métier">← Retour</Link>
           </div>
         </div>
       </div>
 
-      <div className="demo-site" lang="fr" style={{ '--dz-primary': '#16A34A', '--dz-primary-dark': '#15803D' } as React.CSSProperties}>
+      <div className="demo-site demo-site--artisan-clear" lang="fr" style={{ '--dz-primary': '#16A34A', '--dz-primary-dark': '#15803D' } as React.CSSProperties}>
         <header className="demo-header" id="demo-top">
           <div className="demo-header-inner">
             <div className="demo-brand">
@@ -232,8 +232,8 @@ export default function CommerceLocalDemoPage() {
                       <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </a>
-                  <a href="#demo-realisations" className="demo-btn demo-btn--outline">
-                    Voir nos réalisations
+                  <a href="tel:0450123456" className="demo-btn demo-btn--outline">
+                    Appeler
                     <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" width="18" height="18">
                       <path d="M10 4v12M4 10l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
@@ -411,7 +411,7 @@ export default function CommerceLocalDemoPage() {
             </div>
           </section>
 
-          <section className="demo-section demo-section--dark" id="demo-contact" aria-labelledby="demo-contact-title">
+          <section className="demo-section demo-section--tinted" id="demo-contact" aria-labelledby="demo-contact-title">
             <div className="demo-container">
               <div className="demo-contact-grid">
                 <div className="demo-contact-info">

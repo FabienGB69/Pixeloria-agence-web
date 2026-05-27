@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 const services = [
   {
     title: 'Maçonnerie',
-    desc: 'Murs, fondations, chapes, dalles, murets. Travaux neufs et rénovation sur mesure.',
+    desc: 'Murs porteurs, dalles, chapes et murets. Intervention propre et chantier sécurisé.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <rect x="2" y="14" width="20" height="6" rx="1" stroke="currentColor" strokeWidth="1.8" />
@@ -30,7 +30,7 @@ const services = [
   },
   {
     title: 'Carrelage',
-    desc: 'Pose de carrelage sol et mur, toutes surfaces. Grès cérame, marbre, faïence.',
+    desc: 'Pose de carrelage sol et mur pour cuisine, salle de bain, entrée ou terrasse.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <rect x="2" y="2" width="9" height="9" rx="1" stroke="currentColor" strokeWidth="1.8" />
@@ -42,7 +42,7 @@ const services = [
   },
   {
     title: 'Rénovation',
-    desc: 'Restructuration complète, second œuvre, aménagement intérieur tous corps d\'état.',
+    desc: 'Rénovation de pièces de vie avec coordination claire et planning respecté.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path d="M3 21V9l9-6 9 6v12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
@@ -52,7 +52,7 @@ const services = [
   },
   {
     title: 'Isolation',
-    desc: 'ITE, isolation intérieure, combles perdus et aménagés. Éligible CEE et MaPrimeRénov\'.',
+    desc: 'Isolation des murs et combles pour améliorer le confort et réduire la facture chauffage.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path d="M3 12h18M3 7h18M3 17h18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
@@ -62,7 +62,7 @@ const services = [
   },
   {
     title: 'Plâtrerie',
-    desc: 'Cloisons, enduits de finition, plafonds, doublages. Résultat soigné et lisse.',
+    desc: 'Cloisons, doublages et enduits prêts à peindre pour un rendu net et durable.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path d="M12 3l9 5v8l-9 5-9-5V8l9-5z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
@@ -72,7 +72,7 @@ const services = [
   },
   {
     title: 'Dallage extérieur',
-    desc: 'Terrasses, allées, cours et abords. Pavés, dalles béton, opus incertum.',
+    desc: 'Création de terrasse, allée ou cour avec finitions antidérapantes et faciles d\'entretien.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path d="M2 12h20M2 17h20M7 12V7M12 12V7M17 12V7M4 7h16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
@@ -188,8 +188,8 @@ export default function ArtisanBatimentDemoPage() {
             <Link href="/#contact" className="demo-banner-cta">
               Demander mon site →
             </Link>
-            <Link href="/exemples/artisan-batiment" className="demo-banner-back" aria-label="Retour à la page métier">
-              ← Retour
+            <Link href="/" className="demo-banner-back" aria-label="Retour à l&apos;accueil">
+              ← Retour à l&apos;accueil
             </Link>
           </div>
         </div>
@@ -198,7 +198,7 @@ export default function ArtisanBatimentDemoPage() {
       {/* ══════════════════════════════════════
           FAKE CLIENT SITE — Lebrun Bâtiment
           ══════════════════════════════════════ */}
-      <div className="demo-site" lang="fr">
+      <div className="demo-site demo-site--artisan-clear" lang="fr">
 
         {/* ── Fake header ── */}
         <header className="demo-header" id="demo-top">
@@ -236,22 +236,23 @@ export default function ArtisanBatimentDemoPage() {
           <div className="demo-hero-inner">
             <div className="demo-hero-content">
               <div className="demo-hero-badge">
-                <span>✓ Qualibat certifié</span>
+                <span>✓ Devis gratuit</span>
+                <span className="demo-badge-sep" aria-hidden="true">·</span>
+                <span>✓ Réponse rapide</span>
                 <span className="demo-badge-sep" aria-hidden="true">·</span>
                 <span>✓ Assurance décennale</span>
                 <span className="demo-badge-sep" aria-hidden="true">·</span>
-                <span>✓ 15 ans d&apos;expérience</span>
+                <span>✓ Intervention locale</span>
               </div>
 
               <h1 className="demo-hero-craft">
-                Maçonnerie · Carrelage · Rénovation
+                Vos travaux de rénovation entre de bonnes mains
               </h1>
 
               <p className="demo-hero-name">Lebrun Bâtiment</p>
 
               <p className="demo-hero-sub">
-                Artisan maçon-carreleur à Lyon et dans le Rhône depuis 2009.
-                Vos travaux réalisés dans les règles de l&apos;art, avec des matériaux de qualité.
+                Artisan du bâtiment, nous intervenons pour vos projets de rénovation, réparation et aménagement. Demandez un devis clair et rapide.
               </p>
 
               <div className="demo-hero-ctas">
@@ -261,10 +262,10 @@ export default function ArtisanBatimentDemoPage() {
                     <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </a>
-                <a href="#demo-realisations" className="demo-btn demo-btn--outline">
-                  Voir nos réalisations
+                <a href="tel:0612345678" className="demo-btn demo-btn--outline">
+                  Appeler l&apos;artisan
                   <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" width="18" height="18">
-                    <path d="M10 4v12M4 10l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </a>
               </div>
@@ -305,9 +306,9 @@ export default function ArtisanBatimentDemoPage() {
         <section className="demo-section" id="demo-services" aria-labelledby="demo-services-title">
           <div className="demo-container">
             <div className="demo-section-heading">
-              <span className="demo-eyebrow">Ce que nous faisons</span>
+              <span className="demo-eyebrow">Prestations claires</span>
               <h2 id="demo-services-title">Nos prestations</h2>
-              <p>Artisan polyvalent intervenant sur tous vos travaux de maçonnerie, carrelage et rénovation intérieure et extérieure.</p>
+              <p>Des travaux à prévoir ? Demandez votre devis gratuit.</p>
             </div>
 
             <div className="demo-services-grid">
@@ -326,9 +327,9 @@ export default function ArtisanBatimentDemoPage() {
         <section className="demo-section demo-section--tinted" id="demo-realisations" aria-labelledby="demo-real-title">
           <div className="demo-container">
             <div className="demo-section-heading">
-              <span className="demo-eyebrow">Chantiers terminés</span>
+              <span className="demo-eyebrow">Preuves concrètes</span>
               <h2 id="demo-real-title">Nos réalisations</h2>
-              <p>Photos avant / après de chantiers récents dans le Grand Lyon. Chaque projet est unique — voici quelques exemples concrets.</p>
+              <p>Des chantiers propres, des délais annoncés, un devis clair.</p>
             </div>
 
             <div className="demo-gallery-grid">
@@ -382,8 +383,8 @@ export default function ArtisanBatimentDemoPage() {
           <div className="demo-container">
             <div className="demo-section-heading">
               <span className="demo-eyebrow">Avis Google</span>
-              <h2 id="demo-avis-title">Ils nous font confiance</h2>
-              <p>47 avis clients vérifiés sur Google — note moyenne 4,9 / 5.</p>
+              <h2 id="demo-avis-title">Besoin d&apos;un avis avant de lancer les travaux ?</h2>
+              <p>Lisez les retours de clients proches de chez vous avant de demander votre devis.</p>
             </div>
 
             <div className="demo-reviews-grid">
@@ -447,8 +448,8 @@ export default function ArtisanBatimentDemoPage() {
                 <span className="demo-eyebrow">Où j&apos;interviens</span>
                 <h2 id="demo-zone-title">Zone d&apos;intervention</h2>
                 <p>
-                  Artisan basé à Lyon, j&apos;interviens dans tout le Grand Lyon et les communes limitrophes.
-                  Déplacement inclus dans un rayon de 40 km autour de Lyon.
+                  Intervention autour de Lyon et dans les communes voisines.
+                  Déplacement inclus dans un rayon de 40 km.
                 </p>
                 <div className="demo-zone-chips">
                   {zones.map((z) => (
@@ -471,13 +472,13 @@ export default function ArtisanBatimentDemoPage() {
         </section>
 
         {/* ── Contact / Devis ── */}
-        <section className="demo-section demo-section--dark" id="demo-contact" aria-labelledby="demo-contact-title">
+        <section className="demo-section demo-section--tinted" id="demo-contact" aria-labelledby="demo-contact-title">
           <div className="demo-container">
             <div className="demo-contact-grid">
               <div className="demo-contact-info">
                 <span className="demo-eyebrow">Gratuit &amp; sans engagement</span>
                 <h2 id="demo-contact-title">Demander un devis</h2>
-                <p>Réponse sous 48h. Devis détaillé, clair et sans surprise.</p>
+                <p>Expliquez-nous votre projet, on vous rappelle rapidement.</p>
 
                 <div className="demo-contact-channels">
                   <a href="tel:0612345678" className="demo-channel">
@@ -555,7 +556,7 @@ export default function ArtisanBatimentDemoPage() {
                       <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </button>
-                  <p className="demo-form-note">Réponse garantie sous 48h · Aucune avance demandée</p>
+                  <p className="demo-form-note">Réponse sous 48h · Devis gratuit · Sans engagement</p>
                 </form>
               </div>
             </div>
@@ -608,7 +609,7 @@ export default function ArtisanBatimentDemoPage() {
       <section className="demo-back-cta" aria-label="Créez votre site avec Pixeloria">
         <div className="demo-back-cta-inner">
           <div className="demo-back-cta-badge">✦ Aperçu créé par Pixeloria</div>
-          <h2>Vous voulez un site comme celui-ci pour votre activité&nbsp;?</h2>
+          <h2>Vous voulez plus d&apos;appels et plus de demandes de devis&nbsp;?</h2>
           <p>
             Cette démo illustre ce que Pixeloria peut créer pour vous — avec votre nom, vos photos,
             vos services et votre zone d&apos;intervention. Chaque site est fait sur mesure.
