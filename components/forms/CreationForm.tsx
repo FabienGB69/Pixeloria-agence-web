@@ -19,7 +19,7 @@ const BUDGETS = [
 ] as const;
 
 const DELAYS = [
-  { id: 'urgent',   label: 'Moins d\'un mois' },
+  { id: 'urgent',   label: "Moins d’un mois" },
   { id: 'normal',   label: '1 à 3 mois'       },
   { id: 'flexible', label: '3 à 6 mois'        },
   { id: 'no-rush',  label: 'Pas de date fixe'  },
@@ -148,7 +148,7 @@ export default function CreationForm() {
           </svg>
         </div>
         <h3>Projet reçu !</h3>
-        <p>Nous étudions votre demande et revenons vers vous sous 48 h.</p>
+        <p>Nous étudions votre demande et revenons vers vous sous 48&nbsp;h.</p>
       </div>
     );
   }
@@ -283,7 +283,7 @@ export default function CreationForm() {
         {/* ── Étape 3 : Contact ─────────────────────────────────── */}
         {step === 2 && (
           <>
-            <h2 className="wizard-title">On vous recontacte sous 48 h</h2>
+            <h2 className="wizard-title">On vous recontacte sous 48&nbsp;h</h2>
             <p className="step-lead">Un échange de 20 minutes suffit pour poser les bases de votre projet.</p>
 
             <div className="field-grid">

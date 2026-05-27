@@ -40,7 +40,7 @@ const benefits = [
   },
   {
     title: 'Valoriser vos réalisations',
-    desc: 'Une galerie photo de vos chantiers, c\'est la preuve de votre savoir-faire. Bien plus convaincant qu\'un simple texte.',
+    desc: 'Une galerie photo de vos chantiers, c\'est la preuve de votre savoir-faire. Bien plus convaincante qu\'un simple texte.',
   },
 ];
 
@@ -214,7 +214,7 @@ export default function CreationSiteArtisanPage() {
             </div>
             <p style={{ textAlign: 'center', marginTop: '1.5rem' }}>
               <Link href="/offres" style={{ color: 'var(--primary)', textDecoration: 'underline', fontSize: '0.9rem' }}>
-                Voir toutes les offres dont Site Croissance à 159 €/mois →
+                Voir toutes les offres, dont le Site Croissance à 159 €/mois →
               </Link>
             </p>
           </div>
