@@ -199,7 +199,7 @@ export default function EntrepriseRenovationDemoPage() {
           FAKE CLIENT SITE — Moreau Rénovation
           ══════════════════════════════════════ */}
       <div
-        className="demo-site"
+        className="demo-site demo-site--artisan-clear"
         lang="fr"
         style={{ '--dz-primary': '#D97706', '--dz-primary-dark': '#B45309' } as React.CSSProperties}
       >
@@ -264,8 +264,8 @@ export default function EntrepriseRenovationDemoPage() {
                     <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </a>
-                <a href="#demo-realisations" className="demo-btn demo-btn--outline">
-                  Voir nos réalisations
+                <a href="tel:0556789012" className="demo-btn demo-btn--outline">
+                  Appeler
                   <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" width="18" height="18">
                     <path d="M10 4v12M4 10l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
@@ -474,7 +474,7 @@ export default function EntrepriseRenovationDemoPage() {
         </section>
 
         {/* ── Contact / Devis ── */}
-        <section className="demo-section demo-section--dark" id="demo-contact" aria-labelledby="demo-contact-title">
+        <section className="demo-section demo-section--tinted" id="demo-contact" aria-labelledby="demo-contact-title">
           <div className="demo-container">
             <div className="demo-contact-grid">
               <div className="demo-contact-info">
@@ -510,7 +510,7 @@ export default function EntrepriseRenovationDemoPage() {
 
                 <p className="demo-contact-avail">
                   <span className="demo-avail-dot" aria-hidden="true" />
-                  Disponible — réponse rapide sous 48h
+                  Disponible — on vous rappelle rapidement
                 </p>
               </div>
 
@@ -558,7 +558,7 @@ export default function EntrepriseRenovationDemoPage() {
                       <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </button>
-                  <p className="demo-form-note">Réponse garantie sous 48h · Aucune avance demandée</p>
+                  <p className="demo-form-note">Réponse sous 48h · Devis gratuit · Sans engagement</p>
                 </form>
               </div>
             </div>
