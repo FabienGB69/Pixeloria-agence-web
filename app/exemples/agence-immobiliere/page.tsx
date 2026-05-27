@@ -2,80 +2,78 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Demo website for building contractors | Pixeloria',
+  title: 'Exemple de site pour agence immobilière — Démo Pixeloria',
   description:
-    'See what a professional website looks like for a building contractor, created by Pixeloria. Full demo with header, hero, services, gallery, reviews and contact form.',
+    "Visualisez à quoi ressemble un site professionnel pour agence immobilière créé par Pixeloria : vente, location, gestion locative, estimation et contact.",
   openGraph: {
     type: 'website',
-    url: 'https://pixeloria.fr/en/examples/contractors',
-    title: 'Demo website for building contractors | Pixeloria',
+    url: 'https://pixeloria.fr/exemples/agence-immobiliere',
+    title: 'Exemple de site pour agence immobilière — Démo Pixeloria',
     description:
-      'See what a professional website looks like for a building contractor — created by Pixeloria.',
-    locale: 'en_GB',
+      'Visualisez à quoi ressemble un site professionnel pour agence immobilière créé par Pixeloria.',
+    locale: 'fr_FR',
     siteName: 'Pixeloria',
   },
 };
 
 const services = [
   {
-    title: 'Bricklaying',
-    desc: 'Walls, foundations, screed slabs, partitions. New builds and renovation handled with care.',
+    title: 'Vente Immobilière',
+    desc: 'Estimation gratuite, mandat simple ou exclusif, diffusion sur tous les portails, suivi personnalisé jusqu\'à la signature.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <rect x="2" y="14" width="20" height="6" rx="1" stroke="currentColor" strokeWidth="1.8" />
-        <rect x="4" y="8" width="16" height="5" rx="1" stroke="currentColor" strokeWidth="1.8" />
-        <rect x="6" y="3" width="12" height="4" rx="1" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="currentColor" strokeWidth="1.8" fill="none"/>
+        <polyline points="9 22 9 12 15 12 15 22" stroke="currentColor" strokeWidth="1.8" fill="none"/>
       </svg>
     ),
   },
   {
-    title: 'Tiling',
-    desc: 'Floor and wall tiling, all surfaces. Porcelain stoneware, marble, ceramic.',
+    title: 'Location Longue Durée',
+    desc: 'Constitution du dossier locataire, état des lieux, rédaction du bail, encaissement des loyers et quittances.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <rect x="2" y="2" width="9" height="9" rx="1" stroke="currentColor" strokeWidth="1.8" />
-        <rect x="13" y="2" width="9" height="9" rx="1" stroke="currentColor" strokeWidth="1.8" />
-        <rect x="2" y="13" width="9" height="9" rx="1" stroke="currentColor" strokeWidth="1.8" />
-        <rect x="13" y="13" width="9" height="9" rx="1" stroke="currentColor" strokeWidth="1.8" />
+        <rect x="1" y="3" width="15" height="13" rx="1" stroke="currentColor" strokeWidth="1.8" fill="none"/>
+        <path d="M16 8l5 3-5 3V8z" stroke="currentColor" strokeWidth="1.8" fill="none"/>
       </svg>
     ),
   },
   {
-    title: 'Renovation',
-    desc: 'Full structural refurbishment, second fix, interior fit-out across all trades.',
+    title: 'Gestion Locative',
+    desc: 'Encaissement des loyers, quittances, déclaration fiscale, suivi des réparations. Tranquillité d\'esprit garantie.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M3 21V9l9-6 9 6v12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-        <rect x="9" y="14" width="6" height="7" rx="1" stroke="currentColor" strokeWidth="1.8" />
+        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.8" fill="none"/>
+        <path d="M12 8v4l3 3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
       </svg>
     ),
   },
   {
-    title: 'Insulation',
-    desc: 'External insulation, loft and under-floor insulation. Eligible for energy grants.',
+    title: 'Estimation Gratuite',
+    desc: 'Évaluation précise de votre bien selon les données du marché local. Rapport détaillé remis sous 48h.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M3 12h18M3 7h18M3 17h18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-        <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M9 11l3 3L22 4" stroke="currentColor" strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="currentColor" strokeWidth="1.8" fill="none"/>
       </svg>
     ),
   },
   {
-    title: 'Plastering',
-    desc: 'Stud walls, skim coat, ceilings, dry lining. Smooth, clean finish every time.',
+    title: 'Home Staging',
+    desc: 'Valorisation de votre bien avant la mise en vente ou en location. Photos professionnelles incluses.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M12 3l9 5v8l-9 5-9-5V8l9-5z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-        <path d="M12 3v13M3 8l9 5 9-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <path d="M12 3l9 5v8l-9 5-9-5V8l9-5z" stroke="currentColor" strokeWidth="1.8" fill="none" strokeLinejoin="round"/>
+        <path d="M12 3v13" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
       </svg>
     ),
   },
   {
-    title: 'External Paving',
-    desc: 'Terraces, driveways, courtyards and paths. Paving slabs, block paving, natural stone.',
+    title: 'Conseil en Investissement',
+    desc: 'Sélection de biens rentables, calcul du rendement locatif, accompagnement juridique et fiscal.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M2 12h20M2 17h20M7 12V7M12 12V7M17 12V7M4 7h16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" stroke="currentColor" strokeWidth="1.8" fill="none" strokeLinecap="round"/>
+        <polyline points="16 7 22 7 22 13" stroke="currentColor" strokeWidth="1.8" fill="none" strokeLinecap="round"/>
       </svg>
     ),
   },
@@ -83,86 +81,86 @@ const services = [
 
 const realisations = [
   {
-    label: 'Garden terrace',
-    location: 'Meyreuil',
-    surface: '50 m²',
+    label: 'Appartement T3',
+    location: 'Nantes Centre',
+    surface: '65 m²',
     gradientBefore: 'linear-gradient(135deg, #44403c 0%, #57534e 40%, #3d3835 100%)',
-    gradientAfter: 'linear-gradient(135deg, #d97706 0%, #b45309 30%, #92400e 70%, #78350f 100%)',
-    labelBefore: 'Before — Cracked, mossy slab',
-    labelAfter: 'After — New stone terrace',
+    gradientAfter: 'linear-gradient(135deg, #2563eb 0%, #1d4ed8 40%, #1e40af 100%)',
+    labelBefore: 'Avant — Bien en attente, visite peu convaincante',
+    labelAfter: 'Après — Vendu en 18 jours au prix demandé',
   },
   {
-    label: 'Bathroom',
-    location: 'Aix Centre',
-    surface: '9 m²',
+    label: 'Maison 5 pièces',
+    location: 'Rezé',
+    surface: '110 m²',
     gradientBefore: 'linear-gradient(135deg, #374151 0%, #4b5563 40%, #6b7280 100%)',
-    gradientAfter: 'linear-gradient(135deg, #e7e5e4 0%, #d6d3d1 30%, #a8a29e 70%, #78716c 100%)',
-    labelBefore: 'Before — Worn tiles, black grout',
-    labelAfter: 'After — Large-format tiling',
+    gradientAfter: 'linear-gradient(135deg, #3b82f6 0%, #2563eb 40%, #1d4ed8 100%)',
+    labelBefore: 'Avant — Présentation non valorisée',
+    labelAfter: 'Après — Home staging, vendu +5% vs estimation',
   },
   {
-    label: 'Rendered facade',
-    location: 'Pertuis',
-    surface: '130 m²',
+    label: 'Studio meublé',
+    location: 'Saint-Herblain',
+    surface: '28 m²',
     gradientBefore: 'linear-gradient(160deg, #6b7280 0%, #9ca3af 40%, #71717a 100%)',
-    gradientAfter: 'linear-gradient(160deg, #fef3c7 0%, #fde68a 30%, #fbbf24 60%, #f59e0b 100%)',
-    labelBefore: 'Before — Cracked, peeling render',
-    labelAfter: 'After — Stone-effect textured render',
+    gradientAfter: 'linear-gradient(160deg, #60a5fa 0%, #3b82f6 40%, #2563eb 100%)',
+    labelBefore: 'Avant — Vacant depuis 3 mois',
+    labelAfter: 'Après — Loué en 8 jours, locataire qualifié',
   },
   {
-    label: 'Boundary wall',
-    location: 'Venelles',
-    surface: '32 ml',
-    gradientBefore: 'linear-gradient(180deg, #78716c 0%, #57534e 50%, #44403c 100%)',
-    gradientAfter: 'linear-gradient(180deg, #d6d3d1 0%, #a8a29e 40%, #78716c 100%)',
-    labelBefore: 'Before — Bare concrete blocks',
-    labelAfter: 'After — Rendered masonry wall',
+    label: 'Local commercial',
+    location: 'Orvault',
+    surface: '85 m²',
+    gradientBefore: 'linear-gradient(180deg, #292524 0%, #3d3834 50%, #44403c 100%)',
+    gradientAfter: 'linear-gradient(180deg, #1d4ed8 0%, #1e40af 50%, #1e3a8a 100%)',
+    labelBefore: 'Avant — Non occupé depuis 8 mois',
+    labelAfter: 'Après — Bailleur commercial signé, gestion assurée',
   },
 ];
 
 const reviews = [
   {
-    author: 'Mark T.',
-    location: 'Aix Centre',
-    text: 'Excellent work on our 50 m² garden terrace. David was punctual, tidy and the result is exactly what we wanted. Would not hesitate to recommend.',
-    date: '2 weeks ago',
+    author: 'Céline M.',
+    location: 'Nantes',
+    text: 'Vente de mon appartement en 3 semaines au prix demandé. Marie de l\'agence est une vraie professionnelle, toujours disponible et très rassurante.',
+    date: 'il y a 2 semaines',
   },
   {
-    author: 'Christine L.',
-    location: 'Meyreuil',
-    text: 'Full bathroom renovation — stripping, drainage, tiling and plastering. Timelines met, professional team. Delighted with the result.',
-    date: '1 month ago',
+    author: 'Thomas R.',
+    location: 'Rezé',
+    text: 'Gestion locative depuis 3 ans, zéro impayé, locataires sélectionnés avec soin. La tranquillité d\'esprit à un prix très raisonnable.',
+    date: 'il y a 1 mois',
   },
   {
-    author: 'Pierre-André G.',
-    location: 'Pertuis',
-    text: 'Facade render on a 130 m² house. Precise quote, no nasty surprises. The neighbours asked for his card. Excellent tradesman.',
-    date: '6 weeks ago',
+    author: 'Fatima O.',
+    location: 'Saint-Herblain',
+    text: 'Location de mon studio en 8 jours. État des lieux très précis, contrat clair, suivi parfait depuis. Je recommande Dumont Immobilier.',
+    date: 'il y a 5 semaines',
   },
   {
-    author: 'Emma V.',
-    location: 'Venelles',
-    text: 'Loft insulation and kitchen tiling done in the same visit. Very professional, explains things clearly. Excellent value.',
-    date: '2 months ago',
+    author: 'David L.',
+    location: 'Orvault',
+    text: 'Investissement locatif conseillé par Dumont. Rendement meilleur que prévu, accompagnement complet de A à Z. Agence sérieuse et compétente.',
+    date: 'il y a 3 mois',
   },
   {
-    author: 'James B.',
-    location: 'Aix-les-Milles',
-    text: '25-metre boundary wall built in 3 days. Neat finish, good pointing. A craftsman who really takes pride in his work.',
-    date: '3 months ago',
+    author: 'Pauline F.',
+    location: 'Nantes',
+    text: 'Achat de notre première maison facilité par toute l\'équipe Dumont. Toujours disponibles, très pédagogiques avec les primo-accédants.',
+    date: 'il y a 4 mois',
   },
 ];
 
 const zones = [
-  'Aix-en-Provence', 'Meyreuil', 'Pertuis', 'Venelles', 'Puyricard',
-  'Gardanne', 'Rousset', 'Trets', 'Fuveau', 'Bouc-Bel-Air',
-  'Vitrolles', 'Marignane', 'Cabriès', 'Les Milles', 'La Barque',
+  'Nantes', 'Rezé', 'Saint-Herblain', 'Orvault', 'Carquefou',
+  'Sainte-Luce-sur-Loire', 'La Chapelle-sur-Erdre', 'Vertou', 'Bouguenais', 'Couëron',
+  'Saint-Sébastien-sur-Loire', 'Brains', 'Sucé-sur-Erdre', 'Treillières',
 ];
 
 function Stars() {
   return (
-    <div className="demo-stars" aria-label="5 stars out of 5">
-      {[1, 2, 3, 4, 5].map((i) => (
+    <div className="demo-stars" aria-label="5 étoiles sur 5">
+      {[1,2,3,4,5].map((i) => (
         <svg key={i} viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
           <path d="M10 1l2.4 5.4 5.6.8-4 3.9.9 5.5L10 13.8l-5 2.8.9-5.5-4-3.9 5.6-.8z" />
         </svg>
@@ -171,98 +169,102 @@ function Stars() {
   );
 }
 
-export default function ContractorsDemoPage() {
+export default function AgenceImmobiliereDemoPage() {
   return (
     <div className="demo-root">
 
       {/* ── Pixeloria demo banner ── */}
-      <div className="demo-banner" role="banner" aria-label="Preview created by Pixeloria">
+      <div className="demo-banner" role="banner" aria-label="Aperçu créé par Pixeloria">
         <div className="demo-banner-inner">
           <div className="demo-banner-text">
-            <span className="demo-banner-pill">✦ Pixeloria Preview</span>
+            <span className="demo-banner-pill">✦ Aperçu Pixeloria</span>
             <span className="demo-banner-msg">
-              This is what your website would look like — every element is customised for your trade
+              Voici à quoi ressemblerait votre site — chaque élément est personnalisé pour votre activité
             </span>
           </div>
           <div className="demo-banner-actions">
-            <Link href="/en#contact" className="demo-banner-cta">
-              Get my website →
+            <Link href="/#contact" className="demo-banner-cta">
+              Demander mon site →
             </Link>
-            <Link href="/en/examples/contractors" className="demo-banner-back" aria-label="Back to examples page">
-              ← Back
+            <Link href="/exemples/agence-immobiliere" className="demo-banner-back" aria-label="Retour à la page métier">
+              ← Retour
             </Link>
           </div>
         </div>
       </div>
 
       {/* ══════════════════════════════════════
-          FAKE CLIENT SITE — Johnson Building
+          FAKE CLIENT SITE — Dumont Immobilier
           ══════════════════════════════════════ */}
-      <div className="demo-site" lang="en">
+      <div
+        className="demo-site"
+        lang="fr"
+        style={{ '--dz-primary': '#2563EB', '--dz-primary-dark': '#1D4ED8' } as React.CSSProperties}
+      >
 
         {/* ── Fake header ── */}
         <header className="demo-header" id="demo-top">
           <div className="demo-header-inner">
             <div className="demo-brand">
-              <div className="demo-brand-mono" aria-hidden="true">JB</div>
+              <div className="demo-brand-mono" aria-hidden="true">DI</div>
               <div>
-                <span className="demo-brand-name">Johnson Building</span>
-                <span className="demo-brand-tagline">Builder · Tiler · Aix-en-Provence</span>
+                <span className="demo-brand-name">Dumont Immobilier</span>
+                <span className="demo-brand-tagline">Vente · Location · Gestion · Nantes</span>
               </div>
             </div>
 
-            <nav className="demo-nav" aria-label="Demo site navigation">
+            <nav className="demo-nav" aria-label="Navigation du site démo">
               <a href="#demo-services">Services</a>
-              <a href="#demo-realisations">Projects</a>
-              <a href="#demo-avis">Reviews</a>
-              <a href="#demo-zone">Coverage</a>
+              <a href="#demo-realisations">Réalisations</a>
+              <a href="#demo-avis">Avis</a>
+              <a href="#demo-zone">Zone</a>
               <a href="#demo-contact">Contact</a>
             </nav>
 
-            <a href="tel:+33612345678" className="demo-phone-cta" aria-label="Call +33 6 12 34 56 78">
+            <a href="tel:0240123456" className="demo-phone-cta" aria-label="Appeler le 02 40 12 34 56">
               <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" width="16" height="16">
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
               </svg>
-              +33 6 12 34 56 78
+              02 40 12 34 56
             </a>
           </div>
         </header>
 
         {/* ── Hero ── */}
-        <section className="demo-hero" id="demo-hero" aria-label="Main section">
+        <section className="demo-hero" id="demo-hero" aria-label="Section principale">
           <div className="demo-hero-bg" aria-hidden="true" />
           <div className="demo-hero-overlay" aria-hidden="true" />
 
           <div className="demo-hero-inner">
             <div className="demo-hero-content">
               <div className="demo-hero-badge">
-                <span>✓ Qualibat certified</span>
+                <span>✓ Agent certifié loi Hoguet</span>
                 <span className="demo-badge-sep" aria-hidden="true">·</span>
-                <span>✓ Decennial insurance</span>
+                <span>✓ Adhérent FNAIM</span>
                 <span className="demo-badge-sep" aria-hidden="true">·</span>
-                <span>✓ 12 years experience</span>
+                <span>✓ Cartes T &amp; G</span>
               </div>
 
               <h1 className="demo-hero-craft">
-                Bricklaying · Tiling · Renovation
+                Vente, Location &amp; Gestion Immobilière
               </h1>
 
-              <p className="demo-hero-name">Johnson Building</p>
+              <p className="demo-hero-name">Dumont Immobilier</p>
 
               <p className="demo-hero-sub">
-                Building and tiling contractor based in Aix-en-Provence since 2012.
-                Your projects delivered to the highest standards.
+                Votre agence immobilière à Nantes depuis 2001.
+                22 ans d&apos;expérience au service de vos projets immobiliers.
               </p>
 
               <div className="demo-hero-ctas">
                 <a href="#demo-contact" className="demo-btn demo-btn--primary demo-btn--lg">
-                  Request a free quote
+                  Demander une estimation
                   <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" width="18" height="18">
                     <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </a>
                 <a href="#demo-realisations" className="demo-btn demo-btn--outline">
-                  View our projects
+                  Voir nos réalisations
                   <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" width="18" height="18">
                     <path d="M10 4v12M4 10l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
@@ -274,26 +276,26 @@ export default function ContractorsDemoPage() {
               <div className="demo-hero-card-inner">
                 <div className="demo-google-rating">
                   <Stars />
-                  <strong>4.9 / 5</strong>
-                  <span>38 Google reviews</span>
+                  <strong>4,8 / 5</strong>
+                  <span>104 avis Google</span>
                 </div>
                 <div className="demo-hero-card-divider" />
                 <div className="demo-hero-trust-list">
                   <div className="demo-trust-row">
                     <span className="demo-trust-dot" />
-                    Free quote within 48h
+                    Estimation gratuite sous 48h
                   </div>
                   <div className="demo-trust-row">
                     <span className="demo-trust-dot" />
-                    Available Mon to Sat
+                    Diffusion sur tous les portails
                   </div>
                   <div className="demo-trust-row">
                     <span className="demo-trust-dot" />
-                    No upfront payment required
+                    Gestion locative sans stress
                   </div>
                   <div className="demo-trust-row">
                     <span className="demo-trust-dot" />
-                    Decennial guarantee included
+                    22 ans d&apos;expertise locale
                   </div>
                 </div>
               </div>
@@ -305,9 +307,9 @@ export default function ContractorsDemoPage() {
         <section className="demo-section" id="demo-services" aria-labelledby="demo-services-title">
           <div className="demo-container">
             <div className="demo-section-heading">
-              <span className="demo-eyebrow">What we do</span>
-              <h2 id="demo-services-title">Our services</h2>
-              <p>Versatile contractor covering all your bricklaying, tiling and interior &amp; exterior renovation work.</p>
+              <span className="demo-eyebrow">Ce que nous proposons</span>
+              <h2 id="demo-services-title">Nos services</h2>
+              <p>De l&apos;estimation à la signature, en passant par la gestion locative et le conseil en investissement, nous vous accompagnons à chaque étape.</p>
             </div>
 
             <div className="demo-services-grid">
@@ -322,13 +324,13 @@ export default function ContractorsDemoPage() {
           </div>
         </section>
 
-        {/* ── Projects / Gallery ── */}
+        {/* ── Réalisations ── */}
         <section className="demo-section demo-section--tinted" id="demo-realisations" aria-labelledby="demo-real-title">
           <div className="demo-container">
             <div className="demo-section-heading">
-              <span className="demo-eyebrow">Completed work</span>
-              <h2 id="demo-real-title">Our projects</h2>
-              <p>Before &amp; after photos from recent jobs in Aix-en-Provence and the Bouches-du-Rhône. Every project is unique — here are a few concrete examples.</p>
+              <span className="demo-eyebrow">Résultats concrets</span>
+              <h2 id="demo-real-title">Nos réalisations</h2>
+              <p>Quelques exemples de biens que nous avons vendus, loués ou mis en gestion. Chaque transaction est unique — voici les résultats obtenus.</p>
             </div>
 
             <div className="demo-gallery-grid">
@@ -336,11 +338,11 @@ export default function ContractorsDemoPage() {
                 <div key={r.label} className="demo-gallery-card">
                   <div className="demo-gallery-photos">
                     <div className="demo-gallery-photo demo-gallery-photo--before" style={{ background: r.gradientBefore }}>
-                      <span className="demo-gallery-photo-label demo-gallery-photo-label--before">Before</span>
+                      <span className="demo-gallery-photo-label demo-gallery-photo-label--before">Avant</span>
                       <span className="demo-gallery-photo-desc">{r.labelBefore}</span>
                     </div>
                     <div className="demo-gallery-photo demo-gallery-photo--after" style={{ background: r.gradientAfter }}>
-                      <span className="demo-gallery-photo-label demo-gallery-photo-label--after">After</span>
+                      <span className="demo-gallery-photo-label demo-gallery-photo-label--after">Après</span>
                       <span className="demo-gallery-photo-desc">{r.labelAfter}</span>
                     </div>
                   </div>
@@ -355,35 +357,35 @@ export default function ContractorsDemoPage() {
         </section>
 
         {/* ── Stats bar ── */}
-        <div className="demo-stats-bar" aria-label="Key figures">
+        <div className="demo-stats-bar" aria-label="Chiffres clés">
           <div className="demo-stat">
-            <strong>12 years</strong>
-            <span>experience</span>
+            <strong>22 ans</strong>
+            <span>d&apos;activité</span>
           </div>
           <div className="demo-stat-sep" aria-hidden="true" />
           <div className="demo-stat">
-            <strong>150+</strong>
-            <span>projects completed</span>
+            <strong>1 200+</strong>
+            <span>transactions</span>
           </div>
           <div className="demo-stat-sep" aria-hidden="true" />
           <div className="demo-stat">
-            <strong>4.9 ★</strong>
-            <span>Google reviews</span>
+            <strong>4,8 ★</strong>
+            <span>avis Google</span>
           </div>
           <div className="demo-stat-sep" aria-hidden="true" />
           <div className="demo-stat">
-            <strong>Insured</strong>
-            <span>Decennial + public liability</span>
+            <strong>FNAIM</strong>
+            <span>membre adhérent</span>
           </div>
         </div>
 
-        {/* ── Reviews ── */}
+        {/* ── Avis clients ── */}
         <section className="demo-section" id="demo-avis" aria-labelledby="demo-avis-title">
           <div className="demo-container">
             <div className="demo-section-heading">
-              <span className="demo-eyebrow">Google Reviews</span>
-              <h2 id="demo-avis-title">Our customers trust us</h2>
-              <p>38 verified customer reviews on Google — average rating 4.9 / 5.</p>
+              <span className="demo-eyebrow">Avis Google</span>
+              <h2 id="demo-avis-title">Ils nous font confiance</h2>
+              <p>104 avis clients vérifiés sur Google — note moyenne 4,8 / 5.</p>
             </div>
 
             <div className="demo-reviews-grid">
@@ -407,48 +409,48 @@ export default function ContractorsDemoPage() {
           </div>
         </section>
 
-        {/* ── Guarantees bar ── */}
-        <div className="demo-guarantees-bar" aria-label="Certifications and guarantees">
+        {/* ── Garanties ── */}
+        <div className="demo-guarantees-bar" aria-label="Certifications et garanties">
           <div className="demo-guarantee">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" width="20" height="20">
               <path d="M12 2l7 3v5c0 5-3.5 9-7 10C8.5 19 5 15 5 10V5l7-3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
               <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            Decennial insurance
+            Carte professionnelle T
+          </div>
+          <div className="demo-guarantee">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" width="20" height="20">
+              <path d="M12 2l7 3v5c0 5-3.5 9-7 10C8.5 19 5 15 5 10V5l7-3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+              <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            Carte professionnelle G
           </div>
           <div className="demo-guarantee">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" width="20" height="20">
               <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.8" />
               <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            Qualibat No. 4142
-          </div>
-          <div className="demo-guarantee">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" width="20" height="20">
-              <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" strokeWidth="1.8" />
-              <path d="M8 21h8M12 17v4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-            </svg>
-            SIRET verified
+            Adhérent FNAIM
           </div>
           <div className="demo-guarantee">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" width="20" height="20">
               <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" stroke="currentColor" strokeWidth="1.8" />
               <path d="M12 6v6l4 2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
             </svg>
-            Quote within 48h
+            Estimation sous 48h
           </div>
         </div>
 
-        {/* ── Coverage area ── */}
+        {/* ── Zone d'intervention ── */}
         <section className="demo-section demo-section--tinted" id="demo-zone" aria-labelledby="demo-zone-title">
           <div className="demo-container">
             <div className="demo-zone-layout">
               <div className="demo-zone-text">
-                <span className="demo-eyebrow">Where I work</span>
-                <h2 id="demo-zone-title">Coverage area</h2>
+                <span className="demo-eyebrow">Où nous intervenons</span>
+                <h2 id="demo-zone-title">Zone d&apos;intervention</h2>
                 <p>
-                  Builder based in Aix-en-Provence. I work across Bouches-du-Rhône within a 35 km radius.
-                  Travel costs included.
+                  Agence basée à Nantes, nous intervenons dans tout le Grand Nantes et les communes
+                  de Loire-Atlantique. Connaissance approfondie du marché local.
                 </p>
                 <div className="demo-zone-chips">
                   {zones.map((z) => (
@@ -462,36 +464,36 @@ export default function ContractorsDemoPage() {
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" strokeWidth="1.5" />
                     <circle cx="12" cy="10" r="3" stroke="currentColor" strokeWidth="1.5" />
                   </svg>
-                  <span>Aix-en-Provence area</span>
-                  <span className="demo-map-radius">35 km radius</span>
+                  <span>Grand Nantes</span>
+                  <span className="demo-map-radius">Loire-Atlantique</span>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── Contact / Quote ── */}
+        {/* ── Contact ── */}
         <section className="demo-section demo-section--dark" id="demo-contact" aria-labelledby="demo-contact-title">
           <div className="demo-container">
             <div className="demo-contact-grid">
               <div className="demo-contact-info">
-                <span className="demo-eyebrow">Free &amp; no obligation</span>
-                <h2 id="demo-contact-title">Request a quote</h2>
-                <p>Response within 48h. Detailed, transparent quote — no hidden extras.</p>
+                <span className="demo-eyebrow">Gratuit &amp; sans engagement</span>
+                <h2 id="demo-contact-title">Demander une estimation</h2>
+                <p>Réponse sous 48h. Estimation gratuite et rapport détaillé du marché local.</p>
 
                 <div className="demo-contact-channels">
-                  <a href="tel:+33612345678" className="demo-channel">
+                  <a href="tel:0240123456" className="demo-channel">
                     <div className="demo-channel-icon">
                       <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                         <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                       </svg>
                     </div>
                     <div>
-                      <strong>Direct call</strong>
-                      <span>+33 6 12 34 56 78</span>
+                      <strong>Appel direct</strong>
+                      <span>02 40 12 34 56</span>
                     </div>
                   </a>
-                  <a href="mailto:info@johnsonbuilding.fr" className="demo-channel">
+                  <a href="mailto:contact@dumont-immobilier.fr" className="demo-channel">
                     <div className="demo-channel-icon">
                       <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                         <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
@@ -500,62 +502,61 @@ export default function ContractorsDemoPage() {
                     </div>
                     <div>
                       <strong>Email</strong>
-                      <span>info@johnsonbuilding.fr</span>
+                      <span>contact@dumont-immobilier.fr</span>
                     </div>
                   </a>
                 </div>
 
                 <p className="demo-contact-avail">
                   <span className="demo-avail-dot" aria-hidden="true" />
-                  Available — quick response within 48h
+                  Disponible du lundi au samedi, 9h–19h
                 </p>
               </div>
 
               <div className="demo-form-wrapper">
-                <form className="demo-form" aria-label="Quote request form">
+                <form className="demo-form" aria-label="Formulaire de demande">
                   <div className="demo-form-row">
                     <div className="demo-form-group">
-                      <label htmlFor="demo-nom">Full name</label>
-                      <input id="demo-nom" type="text" className="demo-input" placeholder="John Smith" />
+                      <label htmlFor="demo-nom">Nom complet</label>
+                      <input id="demo-nom" type="text" className="demo-input" placeholder="Jean Dupont" />
                     </div>
                     <div className="demo-form-group">
-                      <label htmlFor="demo-tel">Phone</label>
-                      <input id="demo-tel" type="tel" className="demo-input" placeholder="+33 6 12 34 56 78" />
+                      <label htmlFor="demo-tel">Téléphone</label>
+                      <input id="demo-tel" type="tel" className="demo-input" placeholder="06 12 34 56 78" />
                     </div>
                   </div>
                   <div className="demo-form-group">
                     <label htmlFor="demo-email">Email</label>
-                    <input id="demo-email" type="email" className="demo-input" placeholder="john@example.com" />
+                    <input id="demo-email" type="email" className="demo-input" placeholder="jean@exemple.fr" />
                   </div>
                   <div className="demo-form-group">
-                    <label htmlFor="demo-travaux">Type of work</label>
-                    <select id="demo-travaux" className="demo-input demo-select">
-                      <option value="">Choose a service…</option>
-                      <option>Bricklaying</option>
-                      <option>Tiling</option>
-                      <option>Full renovation</option>
-                      <option>Insulation</option>
-                      <option>Plastering</option>
-                      <option>External paving</option>
-                      <option>Other</option>
+                    <label htmlFor="demo-type">Type de demande</label>
+                    <select id="demo-type" className="demo-input demo-select">
+                      <option value="">Choisir…</option>
+                      <option>Vente de bien</option>
+                      <option>Location longue durée</option>
+                      <option>Gestion locative</option>
+                      <option>Achat / Investissement</option>
+                      <option>Estimation gratuite</option>
+                      <option>Autre</option>
                     </select>
                   </div>
                   <div className="demo-form-group">
-                    <label htmlFor="demo-message">Project description</label>
+                    <label htmlFor="demo-message">Votre projet</label>
                     <textarea
                       id="demo-message"
                       className="demo-input demo-textarea"
                       rows={4}
-                      placeholder="Describe your project: surface area, location, any particular constraints…"
+                      placeholder="Décrivez votre projet : type de bien, surface, localisation, objectifs…"
                     />
                   </div>
                   <button type="button" className="demo-btn demo-btn--primary demo-btn--full">
-                    Send my quote request
+                    Envoyer ma demande
                     <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" width="18" height="18">
                       <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </button>
-                  <p className="demo-form-note">Response guaranteed within 48h · No upfront payment required</p>
+                  <p className="demo-form-note">Estimation gratuite · Réponse sous 48h · Sans engagement</p>
                 </form>
               </div>
             </div>
@@ -567,67 +568,67 @@ export default function ContractorsDemoPage() {
           <div className="demo-container demo-footer-inner">
             <div>
               <div className="demo-brand demo-brand--footer">
-                <div className="demo-brand-mono" aria-hidden="true">JB</div>
+                <div className="demo-brand-mono" aria-hidden="true">DI</div>
                 <div>
-                  <span className="demo-brand-name">Johnson Building</span>
-                  <span className="demo-brand-tagline">Builder · Tiler · Aix-en-Provence</span>
+                  <span className="demo-brand-name">Dumont Immobilier</span>
+                  <span className="demo-brand-tagline">Vente · Location · Gestion · Nantes</span>
                 </div>
               </div>
-              <p className="demo-footer-siret">SIRET: 412 345 678 00010 — Trade register Aix-en-Provence</p>
-              <p className="demo-footer-siret">Decennial insurance AXA ref. XXXXXXXXXX</p>
+              <p className="demo-footer-siret">SIRET : 234 567 890 00015 — RCS Nantes</p>
+              <p className="demo-footer-siret">Carte professionnelle T n° CPI 44012 2021 000 047 XXX</p>
             </div>
 
             <div>
-              <p className="demo-footer-col-title">Services</p>
+              <p className="demo-footer-col-title">Nos services</p>
               <ul className="demo-footer-links">
-                <li><a href="#demo-services">Bricklaying</a></li>
-                <li><a href="#demo-services">Tiling</a></li>
-                <li><a href="#demo-services">Renovation</a></li>
-                <li><a href="#demo-services">Insulation</a></li>
+                <li><a href="#demo-services">Vente</a></li>
+                <li><a href="#demo-services">Location</a></li>
+                <li><a href="#demo-services">Gestion locative</a></li>
+                <li><a href="#demo-services">Estimation</a></li>
               </ul>
             </div>
 
             <div>
               <p className="demo-footer-col-title">Contact</p>
               <ul className="demo-footer-links">
-                <li><a href="tel:+33612345678">+33 6 12 34 56 78</a></li>
-                <li><a href="mailto:info@johnsonbuilding.fr">info@johnsonbuilding.fr</a></li>
-                <li>Aix-en-Provence &amp; Bouches-du-Rhône</li>
+                <li><a href="tel:0240123456">02 40 12 34 56</a></li>
+                <li><a href="mailto:contact@dumont-immobilier.fr">contact@dumont-immobilier.fr</a></li>
+                <li>Nantes et Grand Nantes</li>
               </ul>
             </div>
           </div>
           <div className="demo-footer-bottom">
-            <p>© 2025 Johnson Building · <span>Site created by <Link href="/en">Pixeloria</Link></span></p>
+            <p>© 2025 Dumont Immobilier · <span>Site créé par <Link href="/">Pixeloria</Link></span></p>
           </div>
         </footer>
 
       </div>
-      {/* ── end demo-site ── */}
+      {/* ── fin demo-site ── */}
 
       {/* ── Back to Pixeloria CTA ── */}
-      <section className="demo-back-cta" aria-label="Create your site with Pixeloria">
+      <section className="demo-back-cta" aria-label="Créez votre site avec Pixeloria">
         <div className="demo-back-cta-inner">
-          <div className="demo-back-cta-badge">✦ Preview created by Pixeloria</div>
-          <h2>Want a website like this for your trade business?</h2>
+          <div className="demo-back-cta-badge">✦ Aperçu créé par Pixeloria</div>
+          <h2>Vous voulez un site comme celui-ci pour votre agence immobilière&nbsp;?</h2>
           <p>
-            This demo shows what Pixeloria can create for you — with your name, your photos,
-            your services and your coverage area. Every site is tailor-made.
+            Cette démo illustre ce que Pixeloria peut créer pour vous — avec votre identité visuelle,
+            vos services et votre zone. Chaque site est fait sur mesure.
           </p>
           <div className="demo-back-cta-actions">
-            <Link href="/en#contact" className="btn btn-primary btn-lg">
-              Get my tailor-made website
+            <Link href="/#contact" className="btn btn-primary btn-lg">
+              Demander mon site sur mesure
               <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" className="btn-icon">
                 <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </Link>
-            <Link href="/en#services" className="btn btn-secondary">
-              View Pixeloria packages
+            <Link href="/#services" className="btn btn-secondary">
+              Voir les offres Pixeloria
             </Link>
           </div>
           <div className="demo-back-cta-trust">
-            <span>✓ Free quote within 48h</span>
-            <span>✓ Site delivered in 5–10 days</span>
-            <span>✓ From €89/month all-inclusive</span>
+            <span>✓ Devis gratuit sous 48h</span>
+            <span>✓ Site livré en 5–10 jours</span>
+            <span>✓ Dès 89 €/mois tout inclus</span>
           </div>
         </div>
       </section>
