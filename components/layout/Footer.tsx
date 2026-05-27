@@ -1,14 +1,35 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Footer() {
+export default function Footer({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
   const year = new Date().getFullYear();
 
   return (
     <footer className="site-footer">
+      <div className="container footer-cta-block">
+        <p className="footer-cta-title">
+          {locale === 'en'
+            ? 'Do you want a clear website that brings you quote requests?'
+            : 'Vous voulez un site clair qui vous apporte des demandes de devis ?'}
+        </p>
+        <p className="footer-cta-text">
+          {locale === 'en'
+            ? 'Pixeloria builds simple, readable websites designed to convert visitors into contacts.'
+            : 'Pixeloria crée des sites simples, lisibles et pensés pour convertir vos visiteurs en contacts.'}
+        </p>
+        <div className="footer-cta-actions">
+          <Link href={locale === 'en' ? '/en#contact' : '/#contact'} className="btn btn-primary">
+            {locale === 'en' ? 'Request a quote' : 'Demander un devis'}
+          </Link>
+          <Link href={locale === 'en' ? '/en/examples/contractors' : '/exemples/artisan-batiment'} className="btn btn-secondary">
+            {locale === 'en' ? 'View examples' : 'Voir les exemples'}
+          </Link>
+        </div>
+      </div>
+
       <div className="container footer-inner">
         <div className="footer-brand">
-          <a href="#home" aria-label="Pixeloria accueil">
+          <Link href="/" aria-label="Pixeloria accueil">
             <Image
               src="/assets/pixeloria-logo.svg"
               className="footer-logo"
@@ -16,19 +37,22 @@ export default function Footer() {
               width={120}
               height={32}
             />
-          </a>
-          <p>Création &amp; refonte de sites internet pour artisans, TPE et PME locales.</p>
+          </Link>
+          <p>{locale === 'en' ? 'Website creation and redesign for local businesses and trades.' : 'Création &amp; refonte de sites internet pour artisans, TPE et PME locales.'}</p>
+          <p className="footer-brand-contact">
+            <a href="tel:+33786125313">07 86 12 53 13</a><br />
+            <a href="mailto:contact@pixeloria.fr">contact@pixeloria.fr</a><br />
+            <a href="https://pixeloria.fr" target="_blank" rel="noopener noreferrer">pixeloria.fr</a>
+          </p>
         </div>
 
         <nav className="footer-nav" aria-label="Navigation pied de page">
-          <strong>Navigation</strong>
-          <a href="#services">Offres</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#process">Process</a>
-          <a href="#testimonials">Avis clients</a>
-          <a href="#faq">FAQ</a>
-          <Link href="/a-propos">À propos</Link>
-          <Link href="/parrainage">🤝 Parrainage</Link>
+          <strong>{locale === 'en' ? 'Useful links' : 'Liens utiles'}</strong>
+          <Link href={locale === 'en' ? '/en' : '/'}>{locale === 'en' ? 'Home' : 'Accueil'}</Link>
+          <Link href={locale === 'en' ? '/en/examples/contractors' : '/exemples/artisan-batiment'}>{locale === 'en' ? 'Examples' : 'Exemples'}</Link>
+          <Link href={locale === 'en' ? '/en#packages' : '/offres'}>{locale === 'en' ? 'Packages' : 'Offres'}</Link>
+          <Link href={locale === 'en' ? '/en#contact' : '/#contact'}>Contact</Link>
+          <Link href="/mentions-legales">{locale === 'en' ? 'Legal notice' : 'Mentions légales'}</Link>
         </nav>
 
         <nav className="footer-nav" aria-label="Pages locales">
@@ -107,7 +131,7 @@ export default function Footer() {
             {' · '}
             <Link href="/politique-confidentialite">Politique de confidentialité</Link>
           </p>
-          <a href="#home" className="back-top" aria-label="Retour en haut">
+          <Link href="/" className="back-top" aria-label="Retour à l'accueil">
             <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
               <path
                 d="M10 16V4M5 9l5-5 5 5"
@@ -117,7 +141,7 @@ export default function Footer() {
                 strokeLinejoin="round"
               />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </footer>

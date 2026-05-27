@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
+import { getDemoImages } from '@/lib/demo-images';
 
 export const metadata: Metadata = {
   title: 'Demo website for estate agents | Pixeloria',
@@ -170,7 +172,8 @@ function Stars() {
 }
 
 export default function RealEstateDemoPage() {
-  return (
+
+  const demoImages = getDemoImages('real-estate');  return (
     <div className="demo-root">
 
       <div className="demo-banner" role="banner" aria-label="Preview by Pixeloria">
@@ -181,13 +184,13 @@ export default function RealEstateDemoPage() {
           </div>
           <div className="demo-banner-actions">
             <Link href="/en#contact" className="demo-banner-cta">Get my website →</Link>
-            <Link href="/en/examples/real-estate" className="demo-banner-back" aria-label="Back to industry page">← Back</Link>
+            <Link href="/en" className="demo-banner-back" aria-label="Back to industry page">← Back</Link>
           </div>
         </div>
       </div>
 
       <div
-        className="demo-site"
+        className="demo-site demo-site--artisan-clear"
         lang="en"
         style={{ '--dz-primary': '#2563EB', '--dz-primary-dark': '#1D4ED8' } as React.CSSProperties}
       >
@@ -235,6 +238,9 @@ export default function RealEstateDemoPage() {
                   Independent estate agency based in Paris since 1998.
                   26 years of expertise in the Paris property market.
                 </p>
+                <div className="demo-hero-visual">
+                  <Image src={demoImages.hero.src} alt={demoImages.hero.alt} width={900} height={560} className="demo-hero-inline-image" />
+                </div>
                 <div className="demo-hero-ctas">
                   <a href="#demo-contact" className="demo-btn demo-btn--primary demo-btn--lg">
                     Request a free valuation
@@ -242,7 +248,7 @@ export default function RealEstateDemoPage() {
                       <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </a>
-                  <a href="#demo-realisations" className="demo-btn demo-btn--outline">
+                  <a href="tel:+33142345678" className="demo-btn demo-btn--outline">
                     See our transactions
                     <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" width="18" height="18">
                       <path d="M10 4v12M4 10l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -285,6 +291,14 @@ export default function RealEstateDemoPage() {
                   </div>
                 ))}
               </div>
+            </div>
+
+            <div className="demo-illustrations-grid" aria-label="Business illustrations">
+              {demoImages.gallery.map((img) => (
+                <div key={img.src} className="demo-illustration-card">
+                  <Image src={img.src} alt={img.alt} width={520} height={360} className="demo-illustration-image" />
+                </div>
+              ))}
             </div>
           </section>
 
@@ -410,7 +424,7 @@ export default function RealEstateDemoPage() {
             </div>
           </section>
 
-          <section className="demo-section demo-section--dark" id="demo-contact" aria-labelledby="demo-contact-title">
+          <section className="demo-section demo-section--tinted" id="demo-contact" aria-labelledby="demo-contact-title">
             <div className="demo-container">
               <div className="demo-contact-grid">
                 <div className="demo-contact-info">

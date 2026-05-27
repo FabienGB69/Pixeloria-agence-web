@@ -1390,7 +1390,7 @@ export default function EnHomePage() {
         </section>
 
       </main>
-      <Footer />
+      <Footer locale="en" />
     </>
   );
 }

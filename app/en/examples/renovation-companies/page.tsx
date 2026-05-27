@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
+import { getDemoImages } from '@/lib/demo-images';
 
 export const metadata: Metadata = {
   title: 'Demo website for renovation companies | Pixeloria',
@@ -171,7 +173,8 @@ function Stars() {
 }
 
 export default function RenovationCompaniesDemoPage() {
-  return (
+
+  const demoImages = getDemoImages('renovation-companies');  return (
     <div className="demo-root">
 
       {/* ── Pixeloria demo banner ── */}
@@ -187,8 +190,8 @@ export default function RenovationCompaniesDemoPage() {
             <Link href="/en#contact" className="demo-banner-cta">
               Get my website →
             </Link>
-            <Link href="/en/examples/renovation-companies" className="demo-banner-back" aria-label="Back to industry page">
-              ← Back
+            <Link href="/en" className="demo-banner-back" aria-label="Back to home">
+              ← Back to home
             </Link>
           </div>
         </div>
@@ -198,7 +201,7 @@ export default function RenovationCompaniesDemoPage() {
           FAKE CLIENT SITE — Harrison Renovations
           ══════════════════════════════════════ */}
       <div
-        className="demo-site"
+        className="demo-site demo-site--artisan-clear"
         lang="en"
         style={{ '--dz-primary': '#D97706', '--dz-primary-dark': '#B45309' } as React.CSSProperties}
       >
@@ -257,6 +260,10 @@ export default function RenovationCompaniesDemoPage() {
                 one point of contact from quote to handover.
               </p>
 
+              <div className="demo-hero-visual">
+                <Image src={demoImages.hero.src} alt={demoImages.hero.alt} width={900} height={560} className="demo-hero-inline-image" />
+              </div>
+
               <div className="demo-hero-ctas">
                 <a href="#demo-contact" className="demo-btn demo-btn--primary demo-btn--lg">
                   Request a free quote
@@ -264,7 +271,7 @@ export default function RenovationCompaniesDemoPage() {
                     <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </a>
-                <a href="#demo-realisations" className="demo-btn demo-btn--outline">
+                <a href="tel:+33472123456" className="demo-btn demo-btn--outline">
                   See our work
                   <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" width="18" height="18">
                     <path d="M10 4v12M4 10l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -451,7 +458,7 @@ export default function RenovationCompaniesDemoPage() {
         </section>
 
         {/* ── Contact ── */}
-        <section className="demo-section demo-section--dark" id="demo-contact" aria-labelledby="demo-contact-title">
+        <section className="demo-section demo-section--tinted" id="demo-contact" aria-labelledby="demo-contact-title">
           <div className="demo-container">
             <div className="demo-contact-grid">
               <div className="demo-contact-info">
