@@ -184,7 +184,7 @@ export default function LocalShopsDemoPage() {
           </div>
           <div className="demo-banner-actions">
             <Link href="/en#contact" className="demo-banner-cta">Get my website →</Link>
-            <Link href="/en/examples/local-shops" className="demo-banner-back" aria-label="Back to industry page">← Back</Link>
+            <Link href="/en" className="demo-banner-back" aria-label="Back to industry page">← Back</Link>
           </div>
         </div>
       </div>

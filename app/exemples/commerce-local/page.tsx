@@ -178,7 +178,7 @@ export default function CommerceLocalDemoPage() {
           </div>
           <div className="demo-banner-actions">
             <Link href="/#contact" className="demo-banner-cta">Demander mon site →</Link>
-            <Link href="/exemples/commerce-local" className="demo-banner-back" aria-label="Retour à la page métier">← Retour</Link>
+            <Link href="/" className="demo-banner-back" aria-label="Retour à la page métier">← Retour</Link>
           </div>
         </div>
       </div>

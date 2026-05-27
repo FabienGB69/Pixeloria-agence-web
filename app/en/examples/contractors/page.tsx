@@ -188,7 +188,7 @@ export default function ContractorsDemoPage() {
             <Link href="/en#contact" className="demo-banner-cta">
               Get my website →
             </Link>
-            <Link href="/en/examples/contractors" className="demo-banner-back" aria-label="Back to examples page">
+            <Link href="/en" className="demo-banner-back" aria-label="Back to examples page">
               ← Back
             </Link>
           </div>

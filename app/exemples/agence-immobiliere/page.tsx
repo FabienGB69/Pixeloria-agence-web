@@ -186,8 +186,8 @@ export default function AgenceImmobiliereDemoPage() {
             <Link href="/#contact" className="demo-banner-cta">
               Demander mon site →
             </Link>
-            <Link href="/exemples/agence-immobiliere" className="demo-banner-back" aria-label="Retour à la page métier">
-              ← Retour
+            <Link href="/" className="demo-banner-back" aria-label="Retour à l&apos;accueil">
+              ← Retour à l&apos;accueil
             </Link>
           </div>
         </div>
