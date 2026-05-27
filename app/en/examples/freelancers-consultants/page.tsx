@@ -249,7 +249,7 @@ export default function FreelancersConsultantsDemoPage() {
                     </svg>
                   </a>
                   <a href="tel:+33782345690" className="demo-btn demo-btn--outline">
-                    See the results
+                    Talk about my project
                     <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" width="18" height="18">
                       <path d="M10 4v12M4 10l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>

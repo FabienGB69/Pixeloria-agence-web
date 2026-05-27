@@ -272,7 +272,7 @@ export default function IndependantDemoPage() {
                   </svg>
                 </a>
                 <a href="tel:0782345690" className="demo-btn demo-btn--outline">
-                  Voir les résultats
+                  Échanger sur mon projet
                   <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" width="18" height="18">
                     <path d="M10 4v12M4 10l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
