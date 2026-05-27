@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
-import { getDemoImages } from '@/lib/demo-images';
 
 export const metadata: Metadata = {
   title: 'Demo website for holiday rental concierge | Pixeloria',
@@ -171,8 +169,7 @@ function Stars() {
 }
 
 export default function HospitalityConciergeDemoPage() {
-
-  const demoImages = getDemoImages('hospitality-concierge');  return (
+  return (
     <div className="demo-root">
 
       <div className="demo-banner" role="banner" aria-label="Preview by Pixeloria">
@@ -239,9 +236,6 @@ export default function HospitalityConciergeDemoPage() {
                   Full-service Airbnb and holiday rental management on the French Riviera.
                   We handle everything — you collect the income.
                 </p>
-                <div className="demo-hero-visual">
-                  <Image src={demoImages.hero.src} alt={demoImages.hero.alt} width={900} height={560} className="demo-hero-inline-image" />
-                </div>
                 <div className="demo-hero-ctas">
                   <a href="#demo-contact" className="demo-btn demo-btn--primary demo-btn--lg">
                     Enquire about management
@@ -250,7 +244,7 @@ export default function HospitalityConciergeDemoPage() {
                     </svg>
                   </a>
                   <a href="tel:+33693456789" className="demo-btn demo-btn--outline">
-                    Call now
+                    See managed properties
                     <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" width="18" height="18">
                       <path d="M10 4v12M4 10l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
@@ -293,14 +287,6 @@ export default function HospitalityConciergeDemoPage() {
                 ))}
               </div>
             </div>
-
-            <div className="demo-illustrations-grid" aria-label="Business illustrations">
-              {demoImages.gallery.map((img) => (
-                <div key={img.src} className="demo-illustration-card">
-                  <Image src={img.src} alt={img.alt} width={520} height={360} className="demo-illustration-image" />
-                </div>
-              ))}
-            </div>
           </section>
 
           <section className="demo-section demo-section--tinted" id="demo-realisations" aria-labelledby="demo-real-title">
@@ -308,7 +294,7 @@ export default function HospitalityConciergeDemoPage() {
               <div className="demo-section-heading">
                 <span className="demo-eyebrow">Managed properties</span>
                 <h2 id="demo-real-title">Before &amp; after management</h2>
-                <p>The difference professional management makes. Our owners see an average 40% revenue increase after handing over their property to us.</p>
+                <p>The difference professional management makes. Our owners see an average 40% revenue increase after entrusting their property to us.</p>
               </div>
               <div className="demo-gallery-grid">
                 {projects.map((r) => (

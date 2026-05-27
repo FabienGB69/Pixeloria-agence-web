@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
-import { getDemoImages } from '@/lib/demo-images';
 
 export const metadata: Metadata = {
   title: 'Demo website for estate agents | Pixeloria',
@@ -172,8 +170,7 @@ function Stars() {
 }
 
 export default function RealEstateDemoPage() {
-
-  const demoImages = getDemoImages('real-estate');  return (
+  return (
     <div className="demo-root">
 
       <div className="demo-banner" role="banner" aria-label="Preview by Pixeloria">
@@ -238,9 +235,6 @@ export default function RealEstateDemoPage() {
                   Independent estate agency based in Paris since 1998.
                   26 years of expertise in the Paris property market.
                 </p>
-                <div className="demo-hero-visual">
-                  <Image src={demoImages.hero.src} alt={demoImages.hero.alt} width={900} height={560} className="demo-hero-inline-image" />
-                </div>
                 <div className="demo-hero-ctas">
                   <a href="#demo-contact" className="demo-btn demo-btn--primary demo-btn--lg">
                     Request a free valuation
@@ -249,7 +243,7 @@ export default function RealEstateDemoPage() {
                     </svg>
                   </a>
                   <a href="tel:+33142345678" className="demo-btn demo-btn--outline">
-                    Call now
+                    See our transactions
                     <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" width="18" height="18">
                       <path d="M10 4v12M4 10l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
@@ -291,14 +285,6 @@ export default function RealEstateDemoPage() {
                   </div>
                 ))}
               </div>
-            </div>
-
-            <div className="demo-illustrations-grid" aria-label="Business illustrations">
-              {demoImages.gallery.map((img) => (
-                <div key={img.src} className="demo-illustration-card">
-                  <Image src={img.src} alt={img.alt} width={520} height={360} className="demo-illustration-image" />
-                </div>
-              ))}
             </div>
           </section>
 

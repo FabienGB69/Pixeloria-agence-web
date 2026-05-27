@@ -141,7 +141,7 @@ const reviews = [
   {
     author: 'Marina D.',
     location: 'Mougins',
-    text: 'Mauvaise expérience avec un autre gestionnaire, puis j\'ai découvert Blue Prestige. Différence de jour et nuit. Communication parfaite, comptes rendus mensuels.',
+    text: 'Mauvaise expérience avec un autre gestionnaire, puis j\'ai découvert Blue Prestige. La différence est flagrante. Communication parfaite, comptes rendus mensuels.',
     date: 'il y a 6 semaines',
   },
   {
@@ -270,7 +270,7 @@ export default function ConciergeriedemoPage() {
                   </svg>
                 </a>
                 <a href="tel:0693456789" className="demo-btn demo-btn--outline">
-                  Appeler maintenant
+                  Voir nos biens gérés
                   <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" width="18" height="18">
                     <path d="M10 4v12M4 10l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
@@ -343,7 +343,7 @@ export default function ConciergeriedemoPage() {
           <div className="demo-container">
             <div className="demo-section-heading">
               <span className="demo-eyebrow">Biens gérés</span>
-              <h2 id="demo-real-title">Avant / après confiage</h2>
+              <h2 id="demo-real-title">Avant / après prise en gestion</h2>
               <p>La différence que fait une gestion professionnelle. Nos propriétaires constatent en moyenne +40% de revenus après nous avoir confié leur bien.</p>
             </div>
 

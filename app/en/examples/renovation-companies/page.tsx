@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
-import { getDemoImages } from '@/lib/demo-images';
 
 export const metadata: Metadata = {
   title: 'Demo website for renovation companies | Pixeloria',
@@ -62,7 +60,7 @@ const services = [
   },
   {
     title: 'Interior Joinery',
-    desc: 'Doors, built-in wardrobes, staircases, custom bespoke pieces crafted to your space.',
+    desc: 'Doors, built-in wardrobes, staircases, bespoke pieces crafted to your space.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <rect x="3" y="3" width="8" height="18" rx="1" stroke="currentColor" strokeWidth="1.8" />
@@ -173,8 +171,7 @@ function Stars() {
 }
 
 export default function RenovationCompaniesDemoPage() {
-
-  const demoImages = getDemoImages('renovation-companies');  return (
+  return (
     <div className="demo-root">
 
       {/* ── Pixeloria demo banner ── */}
@@ -260,10 +257,6 @@ export default function RenovationCompaniesDemoPage() {
                 one point of contact from quote to handover.
               </p>
 
-              <div className="demo-hero-visual">
-                <Image src={demoImages.hero.src} alt={demoImages.hero.alt} width={900} height={560} className="demo-hero-inline-image" />
-              </div>
-
               <div className="demo-hero-ctas">
                 <a href="#demo-contact" className="demo-btn demo-btn--primary demo-btn--lg">
                   Request a free quote
@@ -272,7 +265,7 @@ export default function RenovationCompaniesDemoPage() {
                   </svg>
                 </a>
                 <a href="tel:+33472123456" className="demo-btn demo-btn--outline">
-                  Call the company
+                  See our work
                   <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" width="18" height="18">
                     <path d="M10 4v12M4 10l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>

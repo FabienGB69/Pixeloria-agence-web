@@ -10,19 +10,19 @@ interface FaqItem {
 const faqItems: FaqItem[] = [
   {
     question: "Quand la récompense est-elle versée ?",
-    answer: "Pour l'offre One Shot, la récompense est déclenchée après paiement validé. Pour les abonnements Essentiel et Croissance, elle est déclenchée après 3 paiements mensuels réussis et un abonnement toujours actif.",
+    answer: "Pour l’offre One Shot, la récompense est déclenchée après paiement validé. Pour les abonnements Essentiel et Croissance, elle est déclenchée après 3 paiements mensuels réussis et un abonnement toujours actif.",
   },
   {
     question: "Puis-je parrainer plusieurs entreprises ?",
-    answer: "Oui, sans limite. Chaque nouveau client parrainé peut générer une récompense indépendante. Vous suivez l'ensemble de vos filleuls dans votre espace affilié.",
+    answer: "Oui, sans limite. Chaque nouveau client parrainé peut générer une récompense indépendante. Vous suivez l’ensemble de vos filleuls dans votre espace affilié.",
   },
   {
-    question: "Le filleul bénéficie-t-il aussi d'un avantage ?",
-    answer: "Oui. Le filleul bénéficie automatiquement d'une remise sur son offre : −50 € sur le One Shot, premier mois à 39 € sur l'Essentiel, premier mois à 79 € sur le Croissance.",
+    question: "Le filleul bénéficie-t-il aussi d’un avantage ?",
+    answer: "Oui. Le filleul bénéficie automatiquement d’une remise sur son offre : −50 € sur le One Shot, premier mois à 39 € sur l’Essentiel, premier mois à 79 € sur le Croissance.",
   },
   {
     question: "Puis-je choisir entre argent et crédit Pixeloria ?",
-    answer: "Oui. Dans votre espace parrain, vous choisissez librement entre une récompense financière ou un crédit Pixeloria utilisable sur n'importe quelle prestation web.",
+    answer: "Oui. Dans votre espace parrain, vous choisissez librement entre une récompense financière ou un crédit Pixeloria utilisable sur n’importe quelle prestation web.",
   },
   {
     question: "Le programme est-il réservé aux clients Pixeloria ?",
@@ -30,15 +30,15 @@ const faqItems: FaqItem[] = [
   },
   {
     question: "Que se passe-t-il si le filleul annule son abonnement ?",
-    answer: "Si l'abonnement est annulé avant les 3 premiers paiements, la commission est annulée. Pour l'offre One Shot, une annulation après paiement validé entraîne un ajustement de la commission selon les conditions de remboursement.",
+    answer: "Si l’abonnement est annulé avant les 3 premiers paiements, la commission est annulée. Pour l’offre One Shot, une annulation après paiement validé entraîne un ajustement de la commission selon les conditions de remboursement.",
   },
   {
     question: "Comment obtenir mon code personnel ?",
-    answer: "En rejoignant le programme via le bouton \"Devenir parrain\", vous créez votre compte dans l'espace affilié. Un code personnalisé au format PIXELORIA-PRENOM vous est attribué automatiquement.",
+    answer: "En rejoignant le programme via le bouton « Devenir parrain », vous créez votre compte dans l’espace affilié. Un code personnalisé au format PIXELORIA-PRENOM vous est attribué automatiquement.",
   },
   {
     question: "Comment suivre mes parrainages et récompenses ?",
-    answer: "Tout est visible dans votre espace affilié : filleuls actifs, commissions en attente, commissions validées, historique des paiements. Aucune gestion manuelle n'est nécessaire.",
+    answer: "Tout est visible dans votre espace affilié : filleuls actifs, commissions en attente, commissions validées, historique des paiements. Aucune gestion manuelle n’est nécessaire.",
   },
 ];
 

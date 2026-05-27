@@ -57,7 +57,7 @@ const jsonLd = {
           name: 'Do I own my website?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Yes. You own your website, your content and all your accesses. Pixeloria helps you build it, but it's entirely yours.",
+            text: "Yes. You own your website, your content and all your login credentials. Pixeloria helps you build it, but it's entirely yours.",
           },
         },
         {
@@ -144,7 +144,7 @@ const faqs = [
   },
   {
     q: 'Do I own my website?',
-    a: "Yes. You own your website, your content and all your accesses. Pixeloria helps you build it, but it's entirely yours.",
+    a: "Yes. You own your website, your content and all your login credentials. Pixeloria helps you build it, but it's entirely yours.",
   },
   {
     q: 'How long does it take to build a website?',
@@ -331,7 +331,7 @@ const trustPoints = [
   },
   {
     title: 'Business understanding',
-    desc: 'Pixeloria understands the constraints of small businesses: limited time, need for clarity and controlled budget.',
+    desc: 'Pixeloria understands the constraints of small businesses: limited time, a need for clarity and a controlled budget.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path d="M3 21V9l9-6 9 6v12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
@@ -380,7 +380,7 @@ export default function EnHomePage() {
               </p>
 
               <p className="hero-reassurance">
-                No large upfront budget. Simple packages. Clear support. Site maintained according to the chosen plan.
+                No large upfront budget. Simple packages. Clear support. Maintenance included on your chosen plan.
               </p>
 
               <div className="hero-actions">
@@ -440,7 +440,7 @@ export default function EnHomePage() {
                   </div>
                 </div>
                 <h2>Serenity Website</h2>
-                <p>Custom design · Local SEO · Reactive support</p>
+                <p>Custom design · Local SEO · Responsive design</p>
 
                 <ul className="feature-list">
                   <li>
@@ -586,7 +586,7 @@ export default function EnHomePage() {
                   <li>Basic local SEO included</li>
                   <li>Google indexing</li>
                 </ul>
-                <p className="pricing-note">Ideal for businesses that want a professional, maintained website over time with a controlled monthly budget.</p>
+                <p className="pricing-note">Ideal for businesses that want a professional, well-maintained website with a predictable monthly budget.</p>
                 <a href="#contact" className="btn btn-primary">
                   Choose Care →
                 </a>
@@ -599,7 +599,7 @@ export default function EnHomePage() {
                 <p className="pricing-price">€159 <span>inc. VAT / month</span></p>
                 <p className="pricing-sublabel">Recommended commitment: 12 months</p>
                 <p className="pricing-accroche">
-                  For businesses that want to develop their local visibility with a site, monthly support and a content strategy.
+                  For businesses that want to grow their local visibility with a site, monthly support and a content strategy.
                 </p>
                 <p className="pricing-list-title">Everything in Care, plus:</p>
                 <ul>
@@ -676,7 +676,7 @@ export default function EnHomePage() {
               <span className="eyebrow">Why Pixeloria</span>
               <h2>A website that actually works for your business</h2>
               <p className="section-sub">
-                Not just a pretty page. A site designed to be found, trusted and to convert visitors into customers.
+                Not just a pretty page. A site designed to be found, earn trust and convert visitors into customers.
               </p>
             </div>
 
@@ -896,7 +896,7 @@ export default function EnHomePage() {
                 </a>
 
                 <p className="audit-cta-reassurance">
-                  Quick response with a clear first recommendation based on your needs.
+                  A quick, clear first recommendation tailored to your needs.
                 </p>
               </div>
             </div>
@@ -1016,7 +1016,7 @@ export default function EnHomePage() {
                 <span>conversion rate on sales pages</span>
               </div>
             </div>
-            <p className="marketing-disclaimer">Results observed with our clients — vary by sector and competition.</p>
+            <p className="marketing-disclaimer">Results from actual clients — individual outcomes vary by sector and competition.</p>
 
             {/* CTA */}
             <div className="marketing-cta reveal">

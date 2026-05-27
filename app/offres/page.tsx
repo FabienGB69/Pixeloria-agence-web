@@ -40,7 +40,7 @@ export default function OffresPage() {
               <span className="eyebrow">Tarifs &amp; formules</span>
               <h1>Des offres claires pour créer ou refondre votre site internet</h1>
               <p className="page-hero-sub">
-                Choisissez la formule adaptée à votre situation : une création simple en paiement
+                Choisissez la formule adaptée à votre situation&nbsp;: une création simple en paiement
                 unique, ou un accompagnement mensuel avec maintenance, SEO local et suivi.
                 Tous les prix sont TTC, sans frais cachés.
               </p>
@@ -60,7 +60,7 @@ export default function OffresPage() {
             <div className="reassurance-band">
               <div className="reassurance-item">
                 <strong>Pas d&apos;engagement caché</strong>
-                <p>Les conditions sont claires avant le lancement. Résiliation possible sur préavis 1 mois.</p>
+                <p>Les conditions sont claires avant le lancement. Résiliation possible sur préavis de 1 mois.</p>
               </div>
               <div className="reassurance-item">
                 <strong>Site livré clé en main</strong>
@@ -68,7 +68,7 @@ export default function OffresPage() {
               </div>
               <div className="reassurance-item">
                 <strong>Support réactif</strong>
-                <p>Une question ? Un problème ? Réponse via WhatsApp sous 24 h ouvrées.</p>
+                <p>Une question&nbsp;? Un problème&nbsp;? Réponse via WhatsApp sous 24&nbsp;h ouvrées.</p>
               </div>
             </div>
           </div>

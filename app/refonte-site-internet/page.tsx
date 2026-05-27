@@ -34,7 +34,7 @@ const steps = [
   {
     num: '01',
     title: 'Audit de votre site actuel',
-    desc: 'Nous analysons rapidement votre site existant : contenu, structure, mobile, vitesse et SEO local.',
+    desc: 'Nous analysons rapidement votre site existant&nbsp;: contenu, structure, mobile, vitesse et SEO local.',
   },
   {
     num: '02',
@@ -154,7 +154,7 @@ export default function RefontePageInternet() {
                 { icon: '⚡', label: 'Vitesse optimisée', desc: 'Un site rapide, pour ne pas perdre les visiteurs impatients.' },
                 { icon: '🔍', label: 'SEO local de base', desc: 'Structure, balises et contenu pensés pour votre zone d\'intervention.' },
                 { icon: '🔗', label: 'Conservation du domaine', desc: 'Votre nom de domaine est conservé, sans rupture de visibilité.' },
-                { icon: '📞', label: 'CTAs optimisés', desc: 'Formulaire, bouton d\'appel, WhatsApp — faciliter le contact à chaque étape.' },
+                { icon: '📞', label: 'CTAs optimisés', desc: 'Formulaire, bouton d\'appel, WhatsApp — pour faciliter le contact à chaque étape.' },
               ].map((item) => (
                 <div key={item.label} className="include-item">
                   <span className="include-icon" aria-hidden="true">{item.icon}</span>
@@ -220,7 +220,7 @@ export default function RefontePageInternet() {
                 <span className="pricing-badge">Recommandé</span>
                 <p className="pricing-label">Refonte Sérénité</p>
                 <p className="pricing-price">89 € <span>TTC / mois</span></p>
-                <p className="pricing-sublabel">Engagement recommandé : 12 mois</p>
+                <p className="pricing-sublabel">Engagement recommandé&nbsp;: 12 mois</p>
                 <ul>
                   <li>Refonte complète jusqu&apos;à 5 pages</li>
                   <li>Maintenance &amp; mises à jour incluses</li>

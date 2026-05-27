@@ -39,7 +39,7 @@ export default function LenoraConciergeriePage() {
                 <span>Lenora Conciergerie</span>
               </nav>
               <span className="eyebrow">Refonte · Conciergerie · 2026</span>
-              <h1>Avant / Après : refonte du site Lenora Conciergerie</h1>
+              <h1>Avant / Après&nbsp;: refonte du site Lenora Conciergerie</h1>
               <p className="page-hero-sub">
                 Lenora Conciergerie propose des services à domicile et d&apos;assistance pour particuliers. Leur site existant manquait de clarté et de modernité pour convaincre de nouveaux clients.
               </p>
@@ -65,7 +65,7 @@ export default function LenoraConciergeriePage() {
           <div className="container">
             <h2 className="section-heading">Contexte du projet</h2>
             <p className="section-sub">
-              Lenora Conciergerie accompagne des particuliers dans la gestion de leurs tâches du quotidien — assistance administrative, coordination de services, soutien à domicile. La société avait un site web existant mais son design vieillissant et sa structure peu claire rendaient difficile la conversion des visiteurs en clients.
+              Lenora Conciergerie accompagne des particuliers dans la gestion de leurs tâches du quotidien — assistance administrative, coordination de services, soutien à domicile. La société avait un site web existant, mais son design vieillissant et sa structure peu claire rendaient difficile la conversion des visiteurs en clients.
             </p>
           </div>
         </section>
@@ -220,7 +220,7 @@ export default function LenoraConciergeriePage() {
             <h2 className="section-heading">Voir d&apos;autres transformations</h2>
             <div className="page-hero-actions">
               <Link href="/realisations/escalee-gouts" className="btn btn-secondary">
-                Escalée Goûts
+                Escalee &amp; Goûts
               </Link>
               <Link href="/realisations/content-by-denise" className="btn btn-secondary">
                 Content by Denise

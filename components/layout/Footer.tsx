@@ -10,7 +10,7 @@ export default function Footer({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
         <p className="footer-cta-title">
           {locale === 'en'
             ? 'Do you want a clear website that brings you quote requests?'
-            : 'Vous voulez un site clair qui vous apporte des demandes de devis ?'}
+            : 'Vous voulez un site clair qui vous apporte des demandes de devis ?'}
         </p>
         <p className="footer-cta-text">
           {locale === 'en'
