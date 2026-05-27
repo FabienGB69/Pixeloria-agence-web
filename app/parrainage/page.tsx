@@ -61,7 +61,7 @@ export default function ParrainagePage() {
             </h1>
 
             <p className="hero__subtitle">
-              Vous connaissez un artisan, une TPE ou une PME qui a besoin d&apos;un site web professionnel ?
+              Vous connaissez un artisan, une TPE ou une PME qui a besoin d&apos;un site web professionnel&nbsp;?
               Partagez votre lien de parrainage et recevez une récompense dès que le projet est validé.
             </p>
 
@@ -328,7 +328,7 @@ export default function ParrainagePage() {
             <div>
               <p className="section-label">À qui recommander Pixeloria ?</p>
               <h2 className="section-title" id="audience-title" style={{ marginBottom: '32px' }}>
-                Qui pouvez-vous <em>recommander</em> ?
+                Qui pouvez-vous <em>recommander</em>&nbsp;?
               </h2>
               <ul className="audience__list">
                 <li className="audience__item"><span className="audience__item-icon">🔨</span> Un artisan du bâtiment</li>
@@ -427,7 +427,7 @@ export default function ParrainagePage() {
               Rejoindre le programme
             </p>
             <h2 className="section-title cta-section__title" id="cta-title">
-              Vous voulez devenir parrain ou<br />utiliser un code ?
+              Vous voulez devenir parrain ou<br />utiliser un code&nbsp;?
             </h2>
             <p className="cta-section__sub">
               Deux parcours, une seule page. Choisissez votre situation.

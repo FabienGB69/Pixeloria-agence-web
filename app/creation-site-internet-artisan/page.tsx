@@ -176,7 +176,7 @@ export default function CreationSiteArtisanPage() {
               <span className="eyebrow">Tarifs</span>
               <h2>Choisissez votre formule</h2>
               <p className="section-sub">
-                Deux approches selon votre besoin : un site livré en une fois, ou un
+                Deux approches selon votre besoin&nbsp;: un site livré en une fois, ou un
                 accompagnement mensuel avec maintenance et SEO local.
               </p>
             </div>

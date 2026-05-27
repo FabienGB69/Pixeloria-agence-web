@@ -119,13 +119,13 @@ export default function AProposPage() {
                 <span className="eyebrow">Notre approche</span>
                 <h2>Un site web, c&apos;est un outil commercial. Pas une vitrine.</h2>
                 <p>
-                  Chez Pixeloria, on part d&apos;un principe simple : votre site doit travailler pour vous.
+                  Chez Pixeloria, on part d&apos;un principe simple&nbsp;: votre site doit travailler pour vous.
                   Pas juste exister. Chaque projet commence par une question — &laquo;&nbsp;quel résultat
                   concret voulez-vous obtenir&nbsp;?&nbsp;&raquo; — et se construit autour de la réponse.
                 </p>
                 <p>
                   On travaille avec des professionnels locaux qui n&apos;ont pas le temps de gérer leur
-                  site au quotidien. Alors on s&apos;en charge : création, mise en ligne, mises à jour,
+                  site au quotidien. Alors on s&apos;en charge&nbsp;: création, mise en ligne, mises à jour,
                   SEO. Vous vous concentrez sur votre métier.
                 </p>
               </div>

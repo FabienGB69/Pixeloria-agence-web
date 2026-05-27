@@ -184,7 +184,7 @@ export default function TunnelForm() {
         <div className="eyebrow">Audit confirmé</div>
         <h2>Merci {s.prenom || ''}, votre audit Pixeloria est réservé.</h2>
         <p>Nous revenons vers vous sous 24&nbsp;h ouvrées à l&apos;adresse <strong>{s.email}</strong>.</p>
-        <p>Vous allez recevoir 4 livrables clés :</p>
+        <p>Vous allez recevoir 4 livrables clés&nbsp;:</p>
         <ul className="deliverables">
           <li>1. Diagnostic UX &amp; conversion détaillé</li>
           <li>2. Score SEO technique avec priorités</li>

@@ -94,7 +94,7 @@ export default function ContactForm() {
           </svg>
         </div>
         <h3>Message envoyé !</h3>
-        <p>Nous vous répondons sous 48&nbsp;h. À très bientôt !</p>
+        <p>Nous vous répondons sous 48&nbsp;h. À très bientôt&nbsp;!</p>
       </div>
     );
   }

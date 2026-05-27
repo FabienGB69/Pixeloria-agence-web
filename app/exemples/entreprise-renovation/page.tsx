@@ -450,7 +450,7 @@ export default function EntrepriseRenovationDemoPage() {
                 <span className="demo-eyebrow">Où j&apos;interviens</span>
                 <h2 id="demo-zone-title">Zone d&apos;intervention</h2>
                 <p>
-                  Artisan basé à Bordeaux, j&apos;interviens dans toute la Bordeaux Métropole et les communes limitrophes.
+                  Artisan basé à Bordeaux, j&apos;interviens dans toute la métropole de Bordeaux et les communes limitrophes.
                   Déplacement inclus dans un rayon de 40 km autour de Bordeaux.
                 </p>
                 <div className="demo-zone-chips">

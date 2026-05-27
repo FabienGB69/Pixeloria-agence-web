@@ -59,7 +59,7 @@ export default function Contact() {
 
             <div className="contact-availability">
               <span className="avail-dot"></span>
-              Disponible pour de nouveaux projets — mai 2026
+              Disponible pour de nouveaux projets&nbsp;—&nbsp;mai 2026
             </div>
           </div>
 

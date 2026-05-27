@@ -274,7 +274,7 @@ export default function FreelancersConsultantsDemoPage() {
               <div className="demo-section-heading">
                 <span className="demo-eyebrow">What I offer</span>
                 <h2 id="demo-services-title">My services</h2>
-                <p>Independent consultant offering bespoke engagements adapted to the size and objectives of every business.</p>
+                <p>Independent consultant offering bespoke engagements tailored to the size and goals of every business.</p>
               </div>
               <div className="demo-services-grid">
                 {services.map((s) => (
