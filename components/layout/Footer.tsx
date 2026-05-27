@@ -1,11 +1,32 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Footer() {
+export default function Footer({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
   const year = new Date().getFullYear();
 
   return (
     <footer className="site-footer">
+      <div className="container footer-cta-block">
+        <p className="footer-cta-title">
+          {locale === 'en'
+            ? 'Do you want a clear website that brings you quote requests?'
+            : 'Vous voulez un site clair qui vous apporte des demandes de devis ?'}
+        </p>
+        <p className="footer-cta-text">
+          {locale === 'en'
+            ? 'Pixeloria builds simple, readable websites designed to convert visitors into contacts.'
+            : 'Pixeloria crée des sites simples, lisibles et pensés pour convertir vos visiteurs en contacts.'}
+        </p>
+        <div className="footer-cta-actions">
+          <Link href={locale === 'en' ? '/en#contact' : '/#contact'} className="btn btn-primary">
+            {locale === 'en' ? 'Request a quote' : 'Demander un devis'}
+          </Link>
+          <Link href={locale === 'en' ? '/en/examples/contractors' : '/exemples/artisan-batiment'} className="btn btn-secondary">
+            {locale === 'en' ? 'View examples' : 'Voir les exemples'}
+          </Link>
+        </div>
+      </div>
+
       <div className="container footer-inner">
         <div className="footer-brand">
           <Link href="/" aria-label="Pixeloria accueil">
@@ -17,7 +38,12 @@ export default function Footer() {
               height={32}
             />
           </Link>
-          <p>Création &amp; refonte de sites internet pour artisans, TPE et PME locales.</p>
+          <p>{locale === 'en' ? 'Website creation and redesign for local businesses and trades.' : 'Création &amp; refonte de sites internet pour artisans, TPE et PME locales.'}</p>
+          <p className="footer-brand-contact">
+            <a href="tel:+33786125313">07 86 12 53 13</a><br />
+            <a href="mailto:contact@pixeloria.fr">contact@pixeloria.fr</a><br />
+            <a href="https://pixeloria.fr" target="_blank" rel="noopener noreferrer">pixeloria.fr</a>
+          </p>
         </div>
 
         <nav className="footer-nav" aria-label="Navigation pied de page">

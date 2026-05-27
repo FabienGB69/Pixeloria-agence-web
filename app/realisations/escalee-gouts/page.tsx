@@ -40,7 +40,7 @@ export default function EscaleeGoutsPage() {
 
             <div className="page-hero-inner">
               <p className="eyebrow">Refonte · Conciergerie / Tourisme · 2026</p>
-              <h1>Avant / Après : refonte du site Escalee &amp; Goûts</h1>
+              <h1>Avant / Après&nbsp;: refonte du site Escalee &amp; Goûts</h1>
               <p className="page-hero-sub">
                 Escalee &amp; Goûts propose des expériences de conciergerie haut de gamme. Leur ancien
                 site ne reflétait pas le niveau de service proposé et rendait difficile la prise de

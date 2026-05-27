@@ -341,7 +341,7 @@ export default function TunnelForm() {
         {/* ── Step 4 ── */}
         {s.step === 4 && (
           <>
-            <div className="step-lead"><h2>Vos coordonnées</h2><p>Dernière étape : recevez votre audit et plan d&apos;actions personnalisé.</p></div>
+            <div className="step-lead"><h2>Vos coordonnées</h2><p>Dernière étape&nbsp;: recevez votre audit et plan d&apos;actions personnalisé.</p></div>
             <div className="field-grid">
               <label>Prénom<input type="text" name="prenom" placeholder="Prénom" value={s.prenom} onChange={e => update({ prenom: e.target.value })} /></label>
               <label>Nom<input type="text" name="nom" placeholder="Nom" value={s.nom} onChange={e => update({ nom: e.target.value })} /></label>
