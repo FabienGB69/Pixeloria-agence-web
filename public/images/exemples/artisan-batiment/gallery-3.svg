@@ -1,9 +1,124 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Confiance artisan-batiment">
-  <rect width="1200" height="800" fill="#FFFFFF"/>
-  <rect x="80" y="80" width="1040" height="640" rx="32" fill="#ffffff" stroke="#D6CFC4"/>
-  <circle cx="220" cy="220" r="70" fill="#D97706" opacity="0.15"/>
-  <rect x="330" y="180" width="650" height="26" rx="13" fill="#1F2933" opacity="0.15"/>
-  <rect x="330" y="230" width="520" height="22" rx="11" fill="#5F6B7A" opacity="0.18"/>
-  <rect x="170" y="360" width="860" height="250" rx="24" fill="#F8F5EF" stroke="#E5E0D8"/>
-  <text x="600" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#1F2933">Confiance artisan-batiment</text>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" role="img" aria-label="Résultat final de rénovation intérieure soignée">
+  <defs>
+    <linearGradient id="roomBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F8F5F0"/>
+      <stop offset="100%" stop-color="#EDE8E0"/>
+    </linearGradient>
+    <linearGradient id="floorWood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4B896"/>
+      <stop offset="100%" stop-color="#C4A882"/>
+    </linearGradient>
+    <linearGradient id="windowLight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF8E8"/>
+      <stop offset="100%" stop-color="#FFE8B4"/>
+    </linearGradient>
+    <linearGradient id="sunbeam" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF4D0" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FFF4D0" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="couchGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7A6355"/>
+      <stop offset="100%" stop-color="#5A4335"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Room walls -->
+  <rect width="520" height="360" fill="url(#roomBg)"/>
+
+  <!-- Back wall -->
+  <rect x="60" y="20" width="400" height="260" fill="#F5F2EE"/>
+
+  <!-- Ceiling -->
+  <polygon points="0,0 520,0 460,20 60,20" fill="#FAFAF8"/>
+
+  <!-- Left wall -->
+  <polygon points="0,0 60,20 60,280 0,360" fill="#EDE8E2"/>
+
+  <!-- Right wall -->
+  <polygon points="520,0 460,20 460,280 520,360" fill="#EDE8E2"/>
+
+  <!-- Floor - perspective wood-look tiles -->
+  <polygon points="0,360 520,360 460,280 60,280" fill="url(#floorWood)"/>
+  <!-- Floor planks -->
+  <line x1="60" y1="280" x2="0" y2="360" stroke="#B89870" stroke-width="1.5" opacity="0.4"/>
+  <line x1="115" y1="280" x2="70" y2="360" stroke="#B89870" stroke-width="1.5" opacity="0.4"/>
+  <line x1="170" y1="280" x2="140" y2="360" stroke="#B89870" stroke-width="1.5" opacity="0.4"/>
+  <line x1="225" y1="280" x2="210" y2="360" stroke="#B89870" stroke-width="1.5" opacity="0.4"/>
+  <line x1="280" y1="280" x2="280" y2="360" stroke="#B89870" stroke-width="1.5" opacity="0.4"/>
+  <line x1="335" y1="280" x2="350" y2="360" stroke="#B89870" stroke-width="1.5" opacity="0.4"/>
+  <line x1="390" y1="280" x2="420" y2="360" stroke="#B89870" stroke-width="1.5" opacity="0.4"/>
+  <line x1="445" y1="280" x2="490" y2="360" stroke="#B89870" stroke-width="1.5" opacity="0.4"/>
+  <!-- Floor plank horizontal lines (depth) -->
+  <path d="M60 295 l400 0" stroke="#B89870" stroke-width="1" opacity="0.3" transform="skewX(-2)"/>
+  <path d="M50 310 l420 0" stroke="#B89870" stroke-width="1" opacity="0.3" transform="skewX(-1)"/>
+  <path d="M40 328 l440 0" stroke="#B89870" stroke-width="1" opacity="0.3" transform="skewX(0)"/>
+  <path d="M20 348 l480 0" stroke="#B89870" stroke-width="1" opacity="0.3"/>
+
+  <!-- Window in back wall -->
+  <rect x="185" y="45" width="150" height="160" fill="url(#windowLight)" rx="4"/>
+  <!-- Window frame -->
+  <rect x="183" y="43" width="154" height="164" fill="none" stroke="#D8D0C8" stroke-width="5" rx="4"/>
+  <!-- Window cross -->
+  <line x1="260" y1="43" x2="260" y2="207" stroke="#D8D0C8" stroke-width="4"/>
+  <line x1="183" y1="120" x2="337" y2="120" stroke="#D8D0C8" stroke-width="4"/>
+  <!-- Window sill -->
+  <rect x="178" y="205" width="164" height="10" fill="#E8E0D4" rx="2"/>
+  <!-- Sunbeam from window -->
+  <polygon points="260,207 180,280 340,280" fill="url(#sunbeam)"/>
+
+  <!-- Baseboard (left) -->
+  <polygon points="60,270 60,280 0,360 0,350" fill="#E0D8D0"/>
+  <!-- Baseboard (right) -->
+  <polygon points="460,270 460,280 520,360 520,350" fill="#E0D8D0"/>
+  <!-- Baseboard (back wall bottom) -->
+  <rect x="60" y="272" width="400" height="8" fill="#E0D8D0"/>
+
+  <!-- Couch silhouette -->
+  <rect x="100" y="225" width="240" height="60" fill="url(#couchGrad)" rx="8"/>
+  <!-- Couch back -->
+  <rect x="95" y="195" width="250" height="38" fill="#6A5345" rx="8"/>
+  <!-- Couch seat division -->
+  <line x1="220" y1="225" x2="220" y2="285" stroke="#4A3325" stroke-width="2" opacity="0.5"/>
+  <!-- Couch cushion tops -->
+  <rect x="100" y="195" width="115" height="8" fill="#7A6355" rx="4"/>
+  <rect x="225" y="195" width="115" height="8" fill="#7A6355" rx="4"/>
+  <!-- Couch arms -->
+  <rect x="88" y="200" width="20" height="75" fill="#5A4335" rx="8"/>
+  <rect x="332" y="200" width="20" height="75" fill="#5A4335" rx="8"/>
+  <!-- Couch legs -->
+  <rect x="108" y="282" width="12" height="14" fill="#3A2318" rx="2"/>
+  <rect x="220" y="282" width="12" height="14" fill="#3A2318" rx="2"/>
+  <rect x="320" y="282" width="12" height="14" fill="#3A2318" rx="2"/>
+
+  <!-- Decorative pillow on couch -->
+  <rect x="148" y="198" width="44" height="30" fill="#F97316" rx="5" opacity="0.9"/>
+  <line x1="148" y1="213" x2="192" y2="213" stroke="#E06010" stroke-width="1"/>
+  <line x1="170" y1="198" x2="170" y2="228" stroke="#E06010" stroke-width="1"/>
+  <!-- Corner diamond -->
+  <polygon points="170,200 178,213 170,226 162,213" fill="#E06010" opacity="0.4"/>
+
+  <!-- Small plant on floor -->
+  <rect x="406" y="248" width="22" height="28" fill="#8B6B4A" rx="3"/>
+  <rect x="402" y="242" width="30" height="10" fill="#7A5A3A" rx="2"/>
+  <!-- Plant leaves -->
+  <ellipse cx="417" cy="230" rx="16" ry="20" fill="#4A7A4A"/>
+  <ellipse cx="403" cy="240" rx="12" ry="16" fill="#3A6A3A" transform="rotate(-20 403 240)"/>
+  <ellipse cx="431" cy="238" rx="12" ry="16" fill="#3A6A3A" transform="rotate(20 431 238)"/>
+  <line x1="417" y1="242" x2="417" y2="218" stroke="#2A5A2A" stroke-width="1.5"/>
+
+  <!-- Wall art / painting above couch -->
+  <rect x="178" y="135" width="80" height="56" fill="#F0EBE3" stroke="#D8D0C8" stroke-width="2" rx="2"/>
+  <rect x="268" y="138" width="56" height="50" fill="#EAE0D4" stroke="#D8D0C8" stroke-width="2" rx="2"/>
+  <!-- Abstract shapes in paintings -->
+  <circle cx="218" cy="163" r="18" fill="#F97316" opacity="0.3"/>
+  <circle cx="218" cy="163" r="10" fill="#F97316" opacity="0.5"/>
+  <rect x="282" y="148" width="28" height="30" fill="#8B7355" opacity="0.3" rx="2"/>
+
+  <!-- Checkmark badge -->
+  <circle cx="462" cy="48" r="30" fill="#3A8A6A"/>
+  <path d="M447 48 l10 12 l20 -22" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- "Avant/Après" banner -->
+  <rect x="60" y="20" width="100" height="28" fill="#F97316" rx="0 0 8 0"/>
+  <text x="110" y="39" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">RÉSULTAT</text>
+</svg>
