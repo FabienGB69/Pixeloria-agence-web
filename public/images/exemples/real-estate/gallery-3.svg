@@ -1,9 +1,87 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Confiance real-estate">
-  <rect width="1200" height="800" fill="#FFFFFF"/>
-  <rect x="80" y="80" width="1040" height="640" rx="32" fill="#ffffff" stroke="#D6CFC4"/>
-  <circle cx="220" cy="220" r="70" fill="#D97706" opacity="0.15"/>
-  <rect x="330" y="180" width="650" height="26" rx="13" fill="#1F2933" opacity="0.15"/>
-  <rect x="330" y="230" width="520" height="22" rx="11" fill="#5F6B7A" opacity="0.18"/>
-  <rect x="170" y="360" width="860" height="250" rx="24" fill="#F8F5EF" stroke="#E5E0D8"/>
-  <text x="600" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#1F2933">Confiance real-estate</text>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFBEB"/>
+      <stop offset="100%" stop-color="#f0ecd8"/>
+    </linearGradient>
+    <linearGradient id="streetG" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#7a8a9a"/>
+    </linearGradient>
+    <linearGradient id="goldG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f0c96a"/>
+      <stop offset="100%" stop-color="#CA8A04"/>
+    </linearGradient>
+    <filter id="pinShadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#00000040"/>
+    </filter>
+  </defs>
+  <!-- Background map -->
+  <rect width="520" height="360" fill="url(#bgG)"/>
+  <!-- Map base - city blocks -->
+  <rect x="0" y="0" width="520" height="320" fill="#e8e4d8"/>
+  <!-- Parks (green blocks) -->
+  <rect x="40" y="40" width="100" height="80" rx="4" fill="#90c870" opacity="0.7"/>
+  <rect x="44" y="44" width="92" height="72" fill="none" stroke="#70a850" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="90" y="86" text-anchor="middle" font-size="8" fill="#2a6a2a" font-weight="bold">PARK</text>
+  <rect x="360" y="180" width="80" height="60" rx="4" fill="#90c870" opacity="0.7"/>
+  <text x="400" y="214" text-anchor="middle" font-size="8" fill="#2a6a2a" font-weight="bold">PARK</text>
+  <!-- Streets - horizontal -->
+  <rect x="0" y="130" width="520" height="18" fill="url(#streetG)"/>
+  <line x1="0" y1="139" x2="520" y2="139" stroke="#ffffff" stroke-width="1" stroke-dasharray="20,10" opacity="0.6"/>
+  <rect x="0" y="230" width="520" height="16" fill="url(#streetG)"/>
+  <line x1="0" y1="238" x2="520" y2="238" stroke="#ffffff" stroke-width="1" stroke-dasharray="20,10" opacity="0.6"/>
+  <!-- Streets - vertical -->
+  <rect x="160" y="0" width="18" height="320" fill="url(#streetG)"/>
+  <line x1="169" y1="0" x2="169" y2="320" stroke="#ffffff" stroke-width="1" stroke-dasharray="20,10" opacity="0.6"/>
+  <rect x="330" y="0" width="18" height="320" fill="url(#streetG)"/>
+  <line x1="339" y1="0" x2="339" y2="320" stroke="#ffffff" stroke-width="1" stroke-dasharray="20,10" opacity="0.6"/>
+  <!-- Building blocks -->
+  <rect x="185" y="10" width="60" height="50" rx="3" fill="#c8c0b0" opacity="0.8"/>
+  <rect x="255" y="10" width="65" height="50" rx="3" fill="#c0b8a8" opacity="0.8"/>
+  <rect x="185" y="155" width="55" height="65" rx="3" fill="#c8c0b0" opacity="0.8"/>
+  <rect x="255" y="155" width="65" height="65" rx="3" fill="#bfb8a8" opacity="0.8"/>
+  <rect x="50" y="155" width="100" height="65" rx="3" fill="#c8c0b0" opacity="0.8"/>
+  <rect x="365" y="10" width="70" height="110" rx="3" fill="#b8b0a0" opacity="0.8"/>
+  <rect x="445" y="10" width="65" height="60" rx="3" fill="#c0b8a8" opacity="0.8"/>
+  <rect x="50" y="255" width="100" height="55" rx="3" fill="#c8c0b0" opacity="0.8"/>
+  <rect x="185" y="255" width="55" height="55" rx="3" fill="#c8c0b0" opacity="0.8"/>
+  <rect x="255" y="255" width="65" height="55" rx="3" fill="#bfb8a8" opacity="0.8"/>
+  <rect x="365" y="255" width="145" height="55" rx="3" fill="#b8b0a0" opacity="0.8"/>
+  <!-- School icon -->
+  <rect x="60" y="168" width="80" height="40" rx="3" fill="#dfeaff" opacity="0.9"/>
+  <polygon points="60,168 100,148 140,168" fill="#4a7ad8" opacity="0.8"/>
+  <text x="100" y="195" text-anchor="middle" font-size="8" fill="#1a3a8a" font-weight="bold">SCHOOL</text>
+  <!-- Transit icon -->
+  <circle cx="412" cy="100" r="18" fill="#DC2626" opacity="0.9"/>
+  <text x="412" y="105" text-anchor="middle" font-size="10" fill="#ffffff" font-weight="bold">M</text>
+  <text x="412" y="118" text-anchor="middle" font-size="7" fill="#DC2626" font-weight="bold">METRO</text>
+  <!-- Property pin (main) -->
+  <path d="M260 170 Q260 140 285 140 Q310 140 310 165 Q310 185 285 200 Q260 185 260 170 Z" fill="#CA8A04" filter="url(#pinShadow)"/>
+  <circle cx="285" cy="165" r="10" fill="#FFFBEB"/>
+  <text x="285" y="169" text-anchor="middle" font-size="9" fill="#CA8A04" font-weight="bold">H</text>
+  <!-- Walking distance circles -->
+  <circle cx="285" cy="175" r="50" fill="none" stroke="#14532D" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5"/>
+  <circle cx="285" cy="175" r="90" fill="none" stroke="#14532D" stroke-width="1" stroke-dasharray="5,5" opacity="0.3"/>
+  <!-- Distance labels -->
+  <text x="285" y="130" text-anchor="middle" font-size="7" fill="#14532D" opacity="0.7">5 min walk</text>
+  <text x="285" y="92" text-anchor="middle" font-size="7" fill="#14532D" opacity="0.5">15 min walk</text>
+  <!-- Street names -->
+  <text x="260" y="143" text-anchor="middle" font-size="7" fill="#ffffff" opacity="0.8">MAPLE AVE</text>
+  <text x="169" y="80" text-anchor="middle" font-size="7" fill="#ffffff" opacity="0.8" transform="rotate(-90 169 80)">ELM ST</text>
+  <text x="339" y="80" text-anchor="middle" font-size="7" fill="#ffffff" opacity="0.8" transform="rotate(-90 339 80)">OAK BLVD</text>
+  <!-- Legend panel -->
+  <rect x="14" y="288" width="492" height="30" rx="5" fill="#ffffff" opacity="0.8"/>
+  <circle cx="36" cy="303" r="5" fill="#CA8A04"/>
+  <text x="46" y="307" font-size="8" fill="#1E293B">Your Property</text>
+  <circle cx="140" cy="303" r="5" fill="#DC2626"/>
+  <text x="150" y="307" font-size="8" fill="#1E293B">Metro Station</text>
+  <rect x="236" y="298" width="10" height="10" rx="2" fill="#dfeaff" stroke="#4a7ad8" stroke-width="1"/>
+  <text x="250" y="307" font-size="8" fill="#1E293B">School</text>
+  <rect x="310" y="298" width="10" height="10" rx="2" fill="#90c870" opacity="0.7"/>
+  <text x="324" y="307" font-size="8" fill="#1E293B">Park</text>
+  <!-- Label -->
+  <rect x="0" y="330" width="520" height="30" fill="#14532D"/>
+  <rect x="0" y="328" width="520" height="4" fill="url(#goldG)"/>
+  <text x="260" y="350" text-anchor="middle" font-size="14" fill="#FFFBEB" font-weight="bold" letter-spacing="2">LOCATION</text>
+</svg>

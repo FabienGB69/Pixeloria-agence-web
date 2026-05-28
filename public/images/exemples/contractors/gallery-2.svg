@@ -1,9 +1,161 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Realisation contractors">
-  <rect width="1200" height="800" fill="#E5E0D8"/>
-  <rect x="80" y="80" width="1040" height="640" rx="32" fill="#ffffff" stroke="#D6CFC4"/>
-  <circle cx="220" cy="220" r="70" fill="#D97706" opacity="0.15"/>
-  <rect x="330" y="180" width="650" height="26" rx="13" fill="#1F2933" opacity="0.15"/>
-  <rect x="330" y="230" width="520" height="22" rx="11" fill="#5F6B7A" opacity="0.18"/>
-  <rect x="170" y="360" width="860" height="250" rx="24" fill="#F8F5EF" stroke="#E5E0D8"/>
-  <text x="600" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#1F2933">Realisation contractors</text>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" width="520" height="360">
+  <defs>
+    <linearGradient id="ct-g2-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E3A5F"/>
+      <stop offset="100%" style="stop-color:#162d4a"/>
+    </linearGradient>
+    <filter id="ct-g2-shadow">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-color="#00000066"/>
+    </filter>
+    <filter id="ct-g2-lineShadow">
+      <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#00000088"/>
+    </filter>
+  </defs>
+
+  <!-- Blueprint background -->
+  <rect x="0" y="0" width="520" height="360" fill="url(#ct-g2-bg)"/>
+
+  <!-- Blueprint grid (small dots) -->
+  <g fill="#3a6090" opacity="0.5">
+    <circle cx="26" cy="26" r="0.8"/><circle cx="52" cy="26" r="0.8"/><circle cx="78" cy="26" r="0.8"/>
+    <circle cx="104" cy="26" r="0.8"/><circle cx="130" cy="26" r="0.8"/><circle cx="156" cy="26" r="0.8"/>
+    <circle cx="182" cy="26" r="0.8"/><circle cx="208" cy="26" r="0.8"/><circle cx="234" cy="26" r="0.8"/>
+    <circle cx="260" cy="26" r="0.8"/><circle cx="286" cy="26" r="0.8"/><circle cx="312" cy="26" r="0.8"/>
+    <circle cx="338" cy="26" r="0.8"/><circle cx="364" cy="26" r="0.8"/><circle cx="390" cy="26" r="0.8"/>
+    <circle cx="416" cy="26" r="0.8"/><circle cx="442" cy="26" r="0.8"/><circle cx="468" cy="26" r="0.8"/>
+    <circle cx="494" cy="26" r="0.8"/><circle cx="26" cy="52" r="0.8"/><circle cx="52" cy="52" r="0.8"/>
+    <circle cx="78" cy="52" r="0.8"/><circle cx="104" cy="52" r="0.8"/><circle cx="130" cy="52" r="0.8"/>
+    <circle cx="156" cy="52" r="0.8"/><circle cx="182" cy="52" r="0.8"/><circle cx="208" cy="52" r="0.8"/>
+    <circle cx="234" cy="52" r="0.8"/><circle cx="260" cy="52" r="0.8"/><circle cx="286" cy="52" r="0.8"/>
+    <circle cx="312" cy="52" r="0.8"/><circle cx="338" cy="52" r="0.8"/><circle cx="364" cy="52" r="0.8"/>
+    <circle cx="390" cy="52" r="0.8"/><circle cx="416" cy="52" r="0.8"/><circle cx="442" cy="52" r="0.8"/>
+    <circle cx="468" cy="52" r="0.8"/><circle cx="494" cy="52" r="0.8"/>
+  </g>
+  <!-- Grid lines (light blueprint) -->
+  <g stroke="#2a5080" stroke-width="0.4" fill="none" opacity="0.4">
+    <line x1="0" y1="52" x2="520" y2="52"/><line x1="0" y1="104" x2="520" y2="104"/>
+    <line x1="0" y1="156" x2="520" y2="156"/><line x1="0" y1="208" x2="520" y2="208"/>
+    <line x1="0" y1="260" x2="520" y2="260"/><line x1="0" y1="312" x2="520" y2="312"/>
+    <line x1="52" y1="0" x2="52" y2="360"/><line x1="104" y1="0" x2="104" y2="360"/>
+    <line x1="156" y1="0" x2="156" y2="360"/><line x1="208" y1="0" x2="208" y2="360"/>
+    <line x1="260" y1="0" x2="260" y2="360"/><line x1="312" y1="0" x2="312" y2="360"/>
+    <line x1="364" y1="0" x2="364" y2="360"/><line x1="416" y1="0" x2="416" y2="360"/>
+    <line x1="468" y1="0" x2="468" y2="360"/>
+  </g>
+
+  <!-- TOP LABEL (blueprint title block) -->
+  <rect x="0" y="0" width="520" height="40" fill="#162d4a"/>
+  <rect x="0" y="37" width="520" height="3" fill="#F97316"/>
+  <text x="260" y="27" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" letter-spacing="2">FLOOR PLANS</text>
+
+  <!-- ===== FLOOR PLAN DRAWING ===== -->
+  <!-- Outer walls (thick) -->
+  <rect x="42" y="56" width="436" height="278" fill="none" stroke="white" stroke-width="5"/>
+  <!-- Outer wall fill (hatching to show wall thickness) -->
+  <rect x="42" y="56" width="436" height="12" fill="#4a80b0" opacity="0.3"/>
+  <rect x="42" y="322" width="436" height="12" fill="#4a80b0" opacity="0.3"/>
+  <rect x="42" y="56" width="12" height="278" fill="#4a80b0" opacity="0.3"/>
+  <rect x="466" y="56" width="12" height="278" fill="#4a80b0" opacity="0.3"/>
+
+  <!-- Interior walls -->
+  <!-- Vertical center wall (left of living) -->
+  <line x1="195" y1="68" x2="195" y2="310" stroke="white" stroke-width="4"/>
+  <!-- Horizontal wall separating kitchen from bath -->
+  <line x1="195" y1="185" x2="478" y2="185" stroke="white" stroke-width="4"/>
+  <!-- Bedroom wall (right side top) -->
+  <line x1="340" y1="68" x2="340" y2="185" stroke="white" stroke-width="4"/>
+  <!-- Bathroom wall partition (bottom right) -->
+  <line x1="340" y1="185" x2="340" y2="322" stroke="white" stroke-width="4"/>
+  <!-- Hallway wall segment -->
+  <line x1="195" y1="230" x2="260" y2="230" stroke="white" stroke-width="3"/>
+
+  <!-- Door swings (arc) -->
+  <!-- Front door -->
+  <path d="M100 322 A28 28 0 0 0 128 294" stroke="white" stroke-width="1.5" fill="none" stroke-dasharray="2,2" opacity="0.7"/>
+  <line x1="100" y1="322" x2="100" y2="294" stroke="white" stroke-width="2.5"/>
+  <!-- Living room door -->
+  <path d="M195 180 A26 26 0 0 0 221 154" stroke="white" stroke-width="1.5" fill="none" stroke-dasharray="2,2" opacity="0.7"/>
+  <line x1="195" y1="180" x2="221" y2="180" stroke="white" stroke-width="2.5"/>
+  <!-- Bedroom door -->
+  <path d="M340 110 A24 24 0 0 0 364 134" stroke="white" stroke-width="1.5" fill="none" stroke-dasharray="2,2" opacity="0.7"/>
+  <line x1="340" y1="110" x2="340" y2="134" stroke="white" stroke-width="2.5"/>
+  <!-- Bath door -->
+  <path d="M340 280 A22 22 0 0 1 362 258" stroke="white" stroke-width="1.5" fill="none" stroke-dasharray="2,2" opacity="0.7"/>
+  <line x1="340" y1="280" x2="362" y2="280" stroke="white" stroke-width="2.5"/>
+
+  <!-- Window indicators on walls -->
+  <!-- Living/front windows -->
+  <rect x="130" y="321" width="55" height="5" fill="#87ceeb" opacity="0.8"/>
+  <rect x="200" y="321" width="55" height="5" fill="#87ceeb" opacity="0.8"/>
+  <!-- Kitchen window -->
+  <rect x="200" y="55" width="50" height="5" fill="#87ceeb" opacity="0.8"/>
+  <!-- Bedroom window -->
+  <rect x="370" y="55" width="50" height="5" fill="#87ceeb" opacity="0.8"/>
+
+  <!-- ===== ROOM LABELS ===== -->
+  <!-- Kitchen (top-right zone) -->
+  <text x="340" y="96" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#F97316" letter-spacing="1">KITCHEN</text>
+  <!-- Kitchen fixtures (counter L-shape outline) -->
+  <rect x="208" y="68" width="122" height="22" fill="none" stroke="#87ceeb" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.7"/>
+  <rect x="208" y="68" width="22" height="100" fill="none" stroke="#87ceeb" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.7"/>
+  <!-- Sink icon in kitchen -->
+  <rect x="228" y="74" width="32" height="22" rx="2" fill="none" stroke="#87ceeb" stroke-width="1" opacity="0.6"/>
+  <ellipse cx="244" cy="85" rx="10" ry="8" fill="none" stroke="#87ceeb" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Living Room (large left zone) -->
+  <text x="118" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#F97316" letter-spacing="1">LIVING</text>
+  <!-- Sofa symbol -->
+  <rect x="62" y="220" width="80" height="30" rx="4" fill="none" stroke="#87ceeb" stroke-width="1.2" opacity="0.6"/>
+  <rect x="62" y="220" width="80" height="10" rx="3" fill="none" stroke="#87ceeb" stroke-width="1" opacity="0.5"/>
+  <rect x="58" y="220" width="8" height="30" rx="2" fill="none" stroke="#87ceeb" stroke-width="1" opacity="0.5"/>
+  <rect x="138" y="220" width="8" height="30" rx="2" fill="none" stroke="#87ceeb" stroke-width="1" opacity="0.5"/>
+  <!-- Coffee table -->
+  <rect x="78" y="256" width="48" height="26" rx="3" fill="none" stroke="#87ceeb" stroke-width="1" stroke-dasharray="2,2" opacity="0.5"/>
+
+  <!-- Bedroom (top-right) -->
+  <text x="410" y="113" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#F97316" letter-spacing="1">BEDROOM</text>
+  <!-- Bed symbol -->
+  <rect x="356" y="125" width="105" height="52" rx="3" fill="none" stroke="#87ceeb" stroke-width="1.2" opacity="0.6"/>
+  <rect x="356" y="125" width="105" height="14" rx="3" fill="none" stroke="#87ceeb" stroke-width="1" opacity="0.5"/>
+  <ellipse cx="374" cy="132" rx="10" ry="7" fill="none" stroke="#87ceeb" stroke-width="0.8" opacity="0.5"/>
+  <ellipse cx="444" cy="132" rx="10" ry="7" fill="none" stroke="#87ceeb" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Bath (bottom-right) -->
+  <text x="410" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#F97316" letter-spacing="1">BATH</text>
+  <!-- Tub symbol -->
+  <rect x="352" y="258" width="55" height="35" rx="10" fill="none" stroke="#87ceeb" stroke-width="1.2" opacity="0.6"/>
+  <rect x="356" y="262" width="47" height="27" rx="8" fill="none" stroke="#87ceeb" stroke-width="0.8" opacity="0.4"/>
+  <!-- Toilet -->
+  <ellipse cx="437" cy="302" rx="12" ry="14" fill="none" stroke="#87ceeb" stroke-width="1" opacity="0.6"/>
+  <rect x="430" y="286" width="14" height="8" rx="2" fill="none" stroke="#87ceeb" stroke-width="1" opacity="0.5"/>
+  <!-- Sink -->
+  <ellipse cx="465" cy="280" rx="10" ry="10" fill="none" stroke="#87ceeb" stroke-width="1" opacity="0.6"/>
+  <rect x="457" y="278" width="16" height="10" rx="3" fill="none" stroke="#87ceeb" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Dimension lines -->
+  <!-- Width dimension (bottom) -->
+  <line x1="42" y1="342" x2="478" y2="342" stroke="#F97316" stroke-width="1" marker-end="url(#arrowEnd)" opacity="0.8"/>
+  <line x1="42" y1="336" x2="42" y2="348" stroke="#F97316" stroke-width="1" opacity="0.8"/>
+  <line x1="478" y1="336" x2="478" y2="348" stroke="#F97316" stroke-width="1" opacity="0.8"/>
+  <text x="260" y="356" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#F97316">12.50 m</text>
+  <!-- Height dimension (right) -->
+  <line x1="494" y1="56" x2="494" y2="322" stroke="#F97316" stroke-width="1" opacity="0.8"/>
+  <line x1="488" y1="56" x2="500" y2="56" stroke="#F97316" stroke-width="1" opacity="0.8"/>
+  <line x1="488" y1="322" x2="500" y2="322" stroke="#F97316" stroke-width="1" opacity="0.8"/>
+  <text x="510" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#F97316" transform="rotate(-90, 510, 192)">8.40 m</text>
+
+  <!-- North indicator -->
+  <g transform="translate(22, 75)">
+    <circle cx="0" cy="0" r="10" fill="none" stroke="#87ceeb" stroke-width="1" opacity="0.7"/>
+    <polygon points="0,-9 -4,3 0,1 4,3" fill="white" opacity="0.85"/>
+    <text x="0" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#87ceeb">N</text>
+  </g>
+
+  <!-- Scale indicator -->
+  <g transform="translate(18, 330)">
+    <rect x="0" y="0" width="10" height="4" fill="white" opacity="0.8"/>
+    <rect x="10" y="0" width="10" height="4" fill="#1E3A5F" stroke="white" stroke-width="0.5"/>
+    <rect x="20" y="0" width="10" height="4" fill="white" opacity="0.8"/>
+    <text x="0" y="12" font-family="Arial, sans-serif" font-size="7" fill="#87ceeb">1:50</text>
+  </g>
+</svg>

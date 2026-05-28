@@ -1,9 +1,94 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Service freelancers-consultants">
-  <rect width="1200" height="800" fill="#F8F5EF"/>
-  <rect x="80" y="80" width="1040" height="640" rx="32" fill="#ffffff" stroke="#D6CFC4"/>
-  <circle cx="220" cy="220" r="70" fill="#D97706" opacity="0.15"/>
-  <rect x="330" y="180" width="650" height="26" rx="13" fill="#1F2933" opacity="0.15"/>
-  <rect x="330" y="230" width="520" height="22" rx="11" fill="#5F6B7A" opacity="0.18"/>
-  <rect x="170" y="360" width="860" height="250" rx="24" fill="#F8F5EF" stroke="#E5E0D8"/>
-  <text x="600" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#1F2933">Service freelancers-consultants</text>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1a2540"/>
+    </linearGradient>
+    <linearGradient id="slide1G" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3050"/>
+      <stop offset="100%" stop-color="#162240"/>
+    </linearGradient>
+    <linearGradient id="blueG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1a50d0"/>
+    </linearGradient>
+    <linearGradient id="orangeG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#EA580C"/>
+      <stop offset="100%" stop-color="#c04a08"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="3" dy="4" stdDeviation="6" flood-color="#00000060"/>
+    </filter>
+    <filter id="bigShadow">
+      <feDropShadow dx="4" dy="6" stdDeviation="10" flood-color="#00000070"/>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="520" height="360" fill="url(#bgG)"/>
+  <!-- Deck/slides fanned out (background) -->
+  <!-- Slide 4 (farthest back) -->
+  <rect x="260" y="56" width="200" height="140" rx="5" fill="#1a2a45" transform="rotate(12 360 126)" filter="url(#shadow)"/>
+  <!-- Slide 3 -->
+  <rect x="250" y="58" width="200" height="140" rx="5" fill="#1e3050" transform="rotate(7 350 128)" filter="url(#shadow)"/>
+  <!-- Slide 2 -->
+  <rect x="240" y="60" width="200" height="140" rx="5" fill="#223050" transform="rotate(3 340 130)" filter="url(#shadow)"/>
+  <!-- Title slide (background) -->
+  <rect x="60" y="52" width="200" height="140" rx="5" fill="#1e3050" transform="rotate(-6 160 122)" filter="url(#shadow)"/>
+  <rect x="64" y="56" width="192" height="136" rx="4" fill="none" stroke="#2563EB" stroke-width="1" opacity="0.5" transform="rotate(-6 160 122)"/>
+  <text x="100" y="118" font-size="12" fill="#F8FAFC" font-weight="bold" transform="rotate(-6 160 122)">Strategy</text>
+  <text x="100" y="133" font-size="9" fill="#2563EB" transform="rotate(-6 160 122)">Q3 Report</text>
+  <!-- Main/highlighted slide (front) -->
+  <rect x="160" y="120" width="260" height="190" rx="8" fill="url(#slide1G)" filter="url(#bigShadow)"/>
+  <rect x="160" y="120" width="260" height="8" rx="4" fill="url(#blueG)"/>
+  <rect x="158" y="118" width="264" height="194" rx="9" fill="none" stroke="#2563EB" stroke-width="1.5"/>
+  <!-- Slide title -->
+  <text x="175" y="145" font-size="10" fill="#2563EB" font-weight="bold" letter-spacing="1">PERFORMANCE OVERVIEW</text>
+  <line x1="168" y1="150" x2="412" y2="150" stroke="#2563EB" stroke-width="0.5" opacity="0.4"/>
+  <!-- Bar chart on main slide -->
+  <text x="175" y="165" font-size="7" fill="#F8FAFC" opacity="0.6">Revenue · Q1-Q4 Comparison</text>
+  <!-- Chart axes -->
+  <line x1="180" y1="210" x2="402" y2="210" stroke="#F8FAFC" stroke-width="0.8" opacity="0.3"/>
+  <line x1="180" y1="170" x2="180" y2="212" stroke="#F8FAFC" stroke-width="0.8" opacity="0.3"/>
+  <!-- Grid lines -->
+  <line x1="180" y1="195" x2="402" y2="195" stroke="#F8FAFC" stroke-width="0.5" opacity="0.15"/>
+  <line x1="180" y1="180" x2="402" y2="180" stroke="#F8FAFC" stroke-width="0.5" opacity="0.15"/>
+  <!-- Bars - Q1 to Q4 pairs (this/last year) -->
+  <rect x="194" y="185" width="16" height="25" fill="#2563EB" opacity="0.7"/>
+  <rect x="212" y="190" width="16" height="20" fill="#EA580C" opacity="0.6"/>
+  <rect x="238" y="178" width="16" height="32" fill="#2563EB" opacity="0.7"/>
+  <rect x="256" y="183" width="16" height="27" fill="#EA580C" opacity="0.6"/>
+  <rect x="282" y="174" width="16" height="36" fill="#2563EB" opacity="0.7"/>
+  <rect x="300" y="186" width="16" height="24" fill="#EA580C" opacity="0.6"/>
+  <rect x="326" y="170" width="16" height="40" fill="#2563EB" opacity="0.9"/>
+  <rect x="344" y="180" width="16" height="30" fill="#EA580C" opacity="0.8"/>
+  <!-- X axis labels -->
+  <text x="202" y="220" text-anchor="middle" font-size="6" fill="#F8FAFC" opacity="0.5">Q1</text>
+  <text x="246" y="220" text-anchor="middle" font-size="6" fill="#F8FAFC" opacity="0.5">Q2</text>
+  <text x="290" y="220" text-anchor="middle" font-size="6" fill="#F8FAFC" opacity="0.5">Q3</text>
+  <text x="334" y="220" text-anchor="middle" font-size="6" fill="#F8FAFC" opacity="0.5">Q4</text>
+  <!-- Legend -->
+  <rect x="175" y="226" width="8" height="5" fill="#2563EB" opacity="0.8"/>
+  <text x="186" y="231" font-size="6" fill="#F8FAFC" opacity="0.6">2024</text>
+  <rect x="215" y="226" width="8" height="5" fill="#EA580C" opacity="0.7"/>
+  <text x="226" y="231" font-size="6" fill="#F8FAFC" opacity="0.6">2023</text>
+  <!-- Key metrics row -->
+  <line x1="168" y1="240" x2="412" y2="240" stroke="#2563EB" stroke-width="0.5" opacity="0.3"/>
+  <text x="175" y="256" font-size="7" fill="#2563EB">+34%</text>
+  <text x="175" y="266" font-size="6" fill="#F8FAFC" opacity="0.5">Revenue</text>
+  <text x="238" y="256" font-size="7" fill="#EA580C">+18%</text>
+  <text x="238" y="266" font-size="6" fill="#F8FAFC" opacity="0.5">Clients</text>
+  <text x="300" y="256" font-size="7" fill="#2563EB">98%</text>
+  <text x="300" y="266" font-size="6" fill="#F8FAFC" opacity="0.5">Satisfaction</text>
+  <text x="360" y="256" font-size="7" fill="#EA580C">4.9★</text>
+  <text x="360" y="266" font-size="6" fill="#F8FAFC" opacity="0.5">Rating</text>
+  <!-- Slide counter -->
+  <text x="405" y="300" text-anchor="end" font-size="7" fill="#F8FAFC" opacity="0.4">3 of 12</text>
+  <!-- Dot navigation -->
+  <circle cx="280" cy="305" r="4" fill="#2563EB"/>
+  <circle cx="294" cy="305" r="3" fill="#F8FAFC" opacity="0.3"/>
+  <circle cx="306" cy="305" r="3" fill="#F8FAFC" opacity="0.3"/>
+  <!-- Label -->
+  <rect x="0" y="316" width="520" height="44" fill="#0F172A"/>
+  <rect x="0" y="314" width="520" height="4" fill="url(#blueG)"/>
+  <text x="260" y="343" text-anchor="middle" font-size="15" fill="#F8FAFC" font-weight="bold" letter-spacing="2">DELIVERABLES</text>
+</svg>

@@ -1,9 +1,166 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Service contractors">
-  <rect width="1200" height="800" fill="#F8F5EF"/>
-  <rect x="80" y="80" width="1040" height="640" rx="32" fill="#ffffff" stroke="#D6CFC4"/>
-  <circle cx="220" cy="220" r="70" fill="#D97706" opacity="0.15"/>
-  <rect x="330" y="180" width="650" height="26" rx="13" fill="#1F2933" opacity="0.15"/>
-  <rect x="330" y="230" width="520" height="22" rx="11" fill="#5F6B7A" opacity="0.18"/>
-  <rect x="170" y="360" width="860" height="250" rx="24" fill="#F8F5EF" stroke="#E5E0D8"/>
-  <text x="600" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#1F2933">Service contractors</text>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" width="520" height="360">
+  <defs>
+    <linearGradient id="ct-g1-sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3a6a9a"/>
+      <stop offset="100%" style="stop-color:#6a9ac8"/>
+    </linearGradient>
+    <linearGradient id="ct-g1-ground" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#7a6040"/>
+      <stop offset="100%" style="stop-color:#5a4530"/>
+    </linearGradient>
+    <linearGradient id="ct-g1-concrete" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#94A3B8"/>
+      <stop offset="100%" style="stop-color:#7a8898"/>
+    </linearGradient>
+    <linearGradient id="ct-g1-wood" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c8944a"/>
+      <stop offset="50%" style="stop-color:#d8a050"/>
+      <stop offset="100%" style="stop-color:#b88038"/>
+    </linearGradient>
+    <linearGradient id="ct-g1-scaffold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#64748B"/>
+      <stop offset="100%" style="stop-color:#7a8898"/>
+    </linearGradient>
+    <linearGradient id="ct-g1-crane" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F97316"/>
+      <stop offset="100%" style="stop-color:#e06010"/>
+    </linearGradient>
+    <filter id="ct-g1-shadow">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#00000055"/>
+    </filter>
+  </defs>
+
+  <!-- Background sky -->
+  <rect x="0" y="0" width="520" height="360" fill="url(#ct-g1-sky)"/>
+  <!-- Sky haze near horizon -->
+  <rect x="0" y="220" width="520" height="40" fill="#7aaad8" opacity="0.4"/>
+
+  <!-- Ground / dirt -->
+  <rect x="0" y="255" width="520" height="105" fill="url(#ct-g1-ground)"/>
+  <!-- Muddy ground texture -->
+  <g stroke="#5a4030" stroke-width="0.5" fill="none" opacity="0.4">
+    <path d="M0 270 Q50 265 100 270 Q150 275 200 268 Q250 263 300 270 Q350 277 400 268 Q450 261 520 268"/>
+    <path d="M0 285 Q60 280 120 285 Q180 290 240 282 Q300 275 360 282 Q420 289 520 282"/>
+    <path d="M0 300 Q80 295 160 300 Q240 305 320 298 Q400 291 520 298"/>
+  </g>
+  <!-- Foundation trench/edge -->
+  <rect x="60" y="252" width="400" height="8" fill="#64748B"/>
+  <rect x="60" y="252" width="400" height="3" fill="#7a8898"/>
+
+  <!-- ===== FOUNDATION ===== -->
+  <rect x="60" y="220" width="400" height="40" fill="url(#ct-g1-concrete)"/>
+  <!-- Concrete texture blocks -->
+  <g stroke="#7a8898" stroke-width="0.7" fill="none" opacity="0.6">
+    <line x1="60" y1="240" x2="460" y2="240"/>
+    <line x1="150" y1="220" x2="150" y2="260"/>
+    <line x1="240" y1="220" x2="240" y2="260"/>
+    <line x1="330" y1="220" x2="330" y2="260"/>
+    <line x1="420" y1="220" x2="420" y2="260"/>
+  </g>
+
+  <!-- ===== STRUCTURAL FRAME ===== -->
+  <!-- Vertical beams -->
+  <rect x="80" y="80" width="14" height="145" fill="url(#ct-g1-wood)" rx="2"/>
+  <rect x="160" y="65" width="14" height="160" fill="url(#ct-g1-wood)" rx="2"/>
+  <rect x="240" y="55" width="14" height="170" fill="url(#ct-g1-wood)" rx="2"/>
+  <rect x="320" y="65" width="14" height="160" fill="url(#ct-g1-wood)" rx="2"/>
+  <rect x="400" y="80" width="14" height="145" fill="url(#ct-g1-wood)" rx="2"/>
+  <!-- Horizontal beams (floor level) -->
+  <rect x="78" y="140" width="338" height="12" fill="url(#ct-g1-wood)" rx="2"/>
+  <rect x="78" y="190" width="338" height="12" fill="url(#ct-g1-wood)" rx="2"/>
+  <!-- Diagonal cross bracing -->
+  <line x1="80" y1="80" x2="174" y2="220" stroke="#b88038" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+  <line x1="174" y1="80" x2="80" y2="220" stroke="#b88038" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+  <line x1="254" y1="60" x2="334" y2="220" stroke="#b88038" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+  <line x1="334" y1="60" x2="254" y2="220" stroke="#b88038" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+  <!-- Top beam -->
+  <rect x="78" y="74" width="338" height="12" fill="url(#ct-g1-wood)" rx="2"/>
+  <!-- Roof ridge start -->
+  <rect x="78" y="40" width="338" height="8" fill="#c88a40" rx="2" opacity="0.8"/>
+  <polygon points="78,50 260,12 416,50" fill="#b88038" opacity="0.6"/>
+
+  <!-- ===== SCAFFOLDING (right side) ===== -->
+  <!-- Main vertical poles -->
+  <rect x="436" y="40" width="6" height="220" rx="3" fill="url(#ct-g1-scaffold)"/>
+  <rect x="478" y="40" width="6" height="220" rx="3" fill="url(#ct-g1-scaffold)"/>
+  <!-- Horizontal scaffold planks -->
+  <rect x="432" y="88" width="56" height="8" rx="2" fill="#c8944a"/>
+  <rect x="432" y="140" width="56" height="8" rx="2" fill="#c8944a"/>
+  <rect x="432" y="192" width="56" height="8" rx="2" fill="#c8944a"/>
+  <!-- Cross diagonal bracing on scaffold -->
+  <line x1="436" y1="88" x2="484" y2="140" stroke="#5a6878" stroke-width="2" opacity="0.7"/>
+  <line x1="484" y1="88" x2="436" y2="140" stroke="#5a6878" stroke-width="2" opacity="0.7"/>
+  <line x1="436" y1="140" x2="484" y2="192" stroke="#5a6878" stroke-width="2" opacity="0.7"/>
+  <line x1="484" y1="140" x2="436" y2="192" stroke="#5a6878" stroke-width="2" opacity="0.7"/>
+  <!-- Scaffold base plates -->
+  <rect x="430" y="255" width="18" height="6" rx="2" fill="#5a6878"/>
+  <rect x="472" y="255" width="18" height="6" rx="2" fill="#5a6878"/>
+
+  <!-- ===== CRANE ARM ===== -->
+  <!-- Crane tower -->
+  <rect x="6" y="32" width="16" height="230" rx="2" fill="url(#ct-g1-crane)"/>
+  <!-- Tower lattice -->
+  <g stroke="#cc5500" stroke-width="1" fill="none" opacity="0.5">
+    <line x1="6" y1="50" x2="22" y2="70"/><line x1="22" y1="50" x2="6" y2="70"/>
+    <line x1="6" y1="70" x2="22" y2="90"/><line x1="22" y1="70" x2="6" y2="90"/>
+    <line x1="6" y1="90" x2="22" y2="110"/><line x1="22" y1="90" x2="6" y2="110"/>
+    <line x1="6" y1="110" x2="22" y2="130"/><line x1="22" y1="110" x2="6" y2="130"/>
+    <line x1="6" y1="130" x2="22" y2="150"/><line x1="22" y1="130" x2="6" y2="150"/>
+    <line x1="6" y1="150" x2="22" y2="170"/><line x1="22" y1="150" x2="6" y2="170"/>
+    <line x1="6" y1="170" x2="22" y2="190"/><line x1="22" y1="170" x2="6" y2="190"/>
+    <line x1="6" y1="190" x2="22" y2="210"/><line x1="22" y1="190" x2="6" y2="210"/>
+  </g>
+  <!-- Crane horizontal jib -->
+  <rect x="6" y="26" width="200" height="10" rx="2" fill="url(#ct-g1-crane)"/>
+  <!-- Counter jib -->
+  <rect x="-20" y="26" width="30" height="8" rx="2" fill="#e06010"/>
+  <!-- Crane cable + hook -->
+  <line x1="140" y1="36" x2="140" y2="100" stroke="#888" stroke-width="1.5"/>
+  <path d="M135 100 Q140 108 145 100" stroke="#888" stroke-width="2" fill="none"/>
+  <!-- Crane load (small box) -->
+  <rect x="126" y="90" width="28" height="20" rx="2" fill="#64748B" stroke="#5a6878" stroke-width="1"/>
+  <line x1="130" y1="90" x2="134" y2="110" stroke="#5a6878" stroke-width="0.8"/>
+  <line x1="150" y1="90" x2="146" y2="110" stroke="#5a6878" stroke-width="0.8"/>
+
+  <!-- ===== HARD HATS silhouettes ===== -->
+  <!-- Worker 1 -->
+  <g transform="translate(188, 210)">
+    <rect x="-10" y="0" width="20" height="30" rx="3" fill="#334155" opacity="0.85"/>
+    <circle cx="0" cy="-8" r="10" fill="#64748B"/>
+    <ellipse cx="0" cy="2" rx="14" ry="5" fill="#F97316"/>
+    <path d="-14,2 Q0,-8 14,2" fill="#e06010"/>
+  </g>
+  <!-- Worker 2 -->
+  <g transform="translate(290, 205)">
+    <rect x="-10" y="0" width="20" height="30" rx="3" fill="#2a3548" opacity="0.85"/>
+    <circle cx="0" cy="-8" r="10" fill="#64748B"/>
+    <ellipse cx="0" cy="2" rx="14" ry="5" fill="#F97316"/>
+    <path d="-14,2 Q0,-8 14,2" fill="#e06010"/>
+  </g>
+
+  <!-- ===== SAFETY SIGN ===== -->
+  <g filter="url(#ct-g1-shadow)">
+    <rect x="20" y="255" width="34" height="45" rx="1" fill="#F97316"/>
+    <rect x="23" y="258" width="28" height="39" rx="1" fill="#ff8c3a"/>
+    <!-- Hard hat icon on sign -->
+    <ellipse cx="37" cy="268" rx="10" ry="4" fill="#cc5500"/>
+    <path d="M28,268 Q37,260 46,268 Z" fill="white" opacity="0.9"/>
+    <rect x="27" y="267" width="20" height="3" rx="1.5" fill="#cc5500"/>
+    <!-- Warning text lines -->
+    <rect x="24" y="275" width="26" height="2.5" rx="1" fill="white" opacity="0.8"/>
+    <rect x="24" y="280" width="26" height="2.5" rx="1" fill="white" opacity="0.8"/>
+    <rect x="24" y="285" width="20" height="2.5" rx="1" fill="white" opacity="0.8"/>
+    <text x="37" y="296" text-anchor="middle" font-family="Arial, sans-serif" font-size="5.5" font-weight="bold" fill="white">SAFETY</text>
+    <!-- Post -->
+    <rect x="35" y="300" width="4" height="20" fill="#7a8898"/>
+  </g>
+
+  <!-- TOP LABEL -->
+  <rect x="0" y="0" width="520" height="40" fill="#1E3A5F"/>
+  <rect x="0" y="37" width="520" height="3" fill="#F97316"/>
+  <text x="260" y="27" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" letter-spacing="2">ON-SITE</text>
+
+  <!-- Status badge -->
+  <rect x="185" y="310" width="150" height="20" rx="5" fill="#1E3A5F" opacity="0.9"/>
+  <text x="260" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#F97316" font-weight="bold">ACTIVE CONSTRUCTION</text>
+</svg>

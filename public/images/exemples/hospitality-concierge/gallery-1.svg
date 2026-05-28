@@ -1,9 +1,91 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Service hospitality-concierge">
-  <rect width="1200" height="800" fill="#F8F5EF"/>
-  <rect x="80" y="80" width="1040" height="640" rx="32" fill="#ffffff" stroke="#D6CFC4"/>
-  <circle cx="220" cy="220" r="70" fill="#D97706" opacity="0.15"/>
-  <rect x="330" y="180" width="650" height="26" rx="13" fill="#1F2933" opacity="0.15"/>
-  <rect x="330" y="230" width="520" height="22" rx="11" fill="#5F6B7A" opacity="0.18"/>
-  <rect x="170" y="360" width="860" height="250" rx="24" fill="#F8F5EF" stroke="#E5E0D8"/>
-  <text x="600" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#1F2933">Service hospitality-concierge</text>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFDF5"/>
+      <stop offset="100%" stop-color="#f0e8d8"/>
+    </linearGradient>
+    <linearGradient id="trayG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8e0d0"/>
+      <stop offset="100%" stop-color="#c8bca8"/>
+    </linearGradient>
+    <linearGradient id="clocheG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f0ece4"/>
+      <stop offset="100%" stop-color="#d8d0c4"/>
+    </linearGradient>
+    <linearGradient id="wineG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7B2D42"/>
+      <stop offset="100%" stop-color="#4a1828"/>
+    </linearGradient>
+    <linearGradient id="goldG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0c96a"/>
+      <stop offset="100%" stop-color="#D4A853"/>
+    </linearGradient>
+    <radialGradient id="clothShadow" cx="50%" cy="80%" r="50%">
+      <stop offset="0%" stop-color="#c8bca8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#c8bca8" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softShadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="5" flood-color="#00000033"/>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="520" height="360" fill="url(#bgG)"/>
+  <!-- Table surface -->
+  <ellipse cx="260" cy="310" rx="230" ry="40" fill="#e8dcc8" opacity="0.7"/>
+  <rect x="40" y="290" width="440" height="70" fill="#e0d4be"/>
+  <rect x="40" y="288" width="440" height="5" fill="#c8b89a"/>
+  <!-- Tray -->
+  <ellipse cx="260" cy="295" rx="200" ry="25" fill="#d8cdb8" opacity="0.5"/>
+  <rect x="70" y="220" width="380" height="80" rx="8" fill="url(#trayG)" filter="url(#softShadow)"/>
+  <rect x="72" y="222" width="376" height="6" rx="3" fill="#e8e0d2" opacity="0.8"/>
+  <rect x="68" y="218" width="384" height="84" rx="10" fill="none" stroke="url(#goldG)" stroke-width="2"/>
+  <!-- Tray handles -->
+  <path d="M68 258 Q40 258 40 268 Q40 278 68 278" fill="none" stroke="url(#goldG)" stroke-width="3"/>
+  <path d="M452 258 Q480 258 480 268 Q480 278 452 278" fill="none" stroke="url(#goldG)" stroke-width="3"/>
+  <!-- White tablecloth/napkin base -->
+  <rect x="85" y="226" width="180" height="70" rx="4" fill="#FFFDF5" opacity="0.9"/>
+  <!-- Cloche (dome cover) -->
+  <ellipse cx="175" cy="240" rx="75" ry="10" fill="#c8c0b0" opacity="0.7"/>
+  <path d="M100 240 Q100 185 175 178 Q250 185 250 240" fill="url(#clocheG)" filter="url(#softShadow)"/>
+  <path d="M100 240 Q100 185 175 178 Q250 185 250 240" fill="none" stroke="#b8b0a0" stroke-width="1.5"/>
+  <!-- Cloche handle/knob -->
+  <ellipse cx="175" cy="178" rx="10" ry="5" fill="url(#goldG)"/>
+  <rect x="172" y="172" width="6" height="8" rx="3" fill="url(#goldG)"/>
+  <circle cx="175" cy="170" r="5" fill="url(#goldG)"/>
+  <!-- Highlight on cloche -->
+  <path d="M120 210 Q140 195 160 205" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+  <!-- Wine glass -->
+  <path d="M360 230 Q380 230 385 250 Q388 265 378 268 L378 285 L368 285 L368 268 Q358 265 361 250 Q364 230 360 230" fill="none" stroke="#b8c8d8" stroke-width="2"/>
+  <path d="M352 285 L386 285" stroke="url(#goldG)" stroke-width="2"/>
+  <!-- Wine in glass -->
+  <path d="M364 255 Q373 255 380 260 Q382 266 378 268 L368 268 Q362 265 361 258 Z" fill="url(#wineG)" opacity="0.85"/>
+  <!-- Glass stem -->
+  <line x1="373" y1="268" x2="373" y2="285" stroke="#c8d8e8" stroke-width="2.5"/>
+  <!-- Glass base -->
+  <ellipse cx="373" cy="285" rx="16" ry="4" fill="#c8d8e8" opacity="0.6"/>
+  <!-- Fan folded napkin -->
+  <g opacity="0.95">
+    <path d="M290 280 L310 230 L315 280 Z" fill="#FFFDF5" stroke="#e8e0d8" stroke-width="0.5"/>
+    <path d="M298 280 L316 232 L322 280 Z" fill="#FFFDF5" stroke="#e8e0d8" stroke-width="0.5"/>
+    <path d="M306 280 L322 234 L329 280 Z" fill="#f8f4ee" stroke="#e8e0d8" stroke-width="0.5"/>
+    <path d="M314 280 L328 236 L336 280 Z" fill="#FFFDF5" stroke="#e8e0d8" stroke-width="0.5"/>
+    <path d="M322 280 L334 238 L342 280 Z" fill="#f8f4ee" stroke="#e8e0d8" stroke-width="0.5"/>
+    <ellipse cx="316" cy="280" rx="26" ry="6" fill="#D4A853" opacity="0.55"/>
+  </g>
+  <!-- Small flower -->
+  <circle cx="430" cy="245" r="12" fill="#7B2D42" opacity="0.8"/>
+  <circle cx="420" cy="238" r="9" fill="#a04060" opacity="0.75"/>
+  <circle cx="440" cy="240" r="8" fill="#c85070" opacity="0.7"/>
+  <circle cx="430" cy="255" r="6" fill="#7B2D42" opacity="0.65"/>
+  <circle cx="430" cy="244" r="5" fill="#f5e070" opacity="0.9"/>
+  <!-- Stem of flower -->
+  <line x1="430" y1="258" x2="430" y2="290" stroke="#2a6a2a" stroke-width="2"/>
+  <ellipse cx="420" cy="272" rx="10" ry="5" fill="#2a6a2a" opacity="0.6" transform="rotate(-20 420 272)"/>
+  <!-- Gold plate under cloche -->
+  <ellipse cx="175" cy="292" rx="78" ry="8" fill="url(#goldG)" opacity="0.6"/>
+  <ellipse cx="175" cy="292" rx="75" ry="6" fill="#f0c96a" opacity="0.4"/>
+  <!-- Label -->
+  <rect x="0" y="316" width="520" height="44" fill="#7B2D42"/>
+  <rect x="0" y="314" width="520" height="4" fill="url(#goldG)"/>
+  <text x="260" y="343" text-anchor="middle" font-size="16" fill="#FFFDF5" font-weight="bold" letter-spacing="3">ROOM SERVICE</text>
+</svg>

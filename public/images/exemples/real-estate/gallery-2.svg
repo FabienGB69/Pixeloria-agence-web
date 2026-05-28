@@ -1,9 +1,109 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Realisation real-estate">
-  <rect width="1200" height="800" fill="#E5E0D8"/>
-  <rect x="80" y="80" width="1040" height="640" rx="32" fill="#ffffff" stroke="#D6CFC4"/>
-  <circle cx="220" cy="220" r="70" fill="#D97706" opacity="0.15"/>
-  <rect x="330" y="180" width="650" height="26" rx="13" fill="#1F2933" opacity="0.15"/>
-  <rect x="330" y="230" width="520" height="22" rx="11" fill="#5F6B7A" opacity="0.18"/>
-  <rect x="170" y="360" width="860" height="250" rx="24" fill="#F8F5EF" stroke="#E5E0D8"/>
-  <text x="600" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#1F2933">Realisation real-estate</text>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0f1928"/>
+    </linearGradient>
+    <linearGradient id="cardG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#263248"/>
+      <stop offset="100%" stop-color="#1a2438"/>
+    </linearGradient>
+    <linearGradient id="goldG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f0c96a"/>
+      <stop offset="100%" stop-color="#CA8A04"/>
+    </linearGradient>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000050"/>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="520" height="360" fill="url(#bgG)"/>
+  <!-- Header -->
+  <rect x="0" y="0" width="520" height="40" fill="#0f1928"/>
+  <rect x="0" y="38" width="520" height="2" fill="url(#goldG)"/>
+  <text x="20" y="25" font-size="13" fill="#CA8A04" font-weight="bold">PRIME LISTINGS</text>
+  <rect x="380" y="10" width="80" height="22" rx="11" fill="#14532D" opacity="0.9"/>
+  <text x="420" y="25" text-anchor="middle" font-size="9" fill="#FFFBEB" font-weight="bold">+ New Search</text>
+  <text x="480" y="25" font-size="11" fill="#FFFBEB" opacity="0.5">&#9776;</text>
+  <!-- Listing card 1 -->
+  <rect x="14" y="52" width="152" height="190" rx="10" fill="url(#cardG)" filter="url(#cardShadow)"/>
+  <!-- House image placeholder -->
+  <rect x="14" y="52" width="152" height="100" rx="10" fill="#2a5a8a"/>
+  <rect x="14" y="132" width="152" height="20" fill="#2a5a8a"/>
+  <!-- House drawing in card -->
+  <polygon points="50,90 90,60 130,90" fill="#1a3a6a"/>
+  <rect x="56" y="90" width="68" height="42" fill="#1e4080"/>
+  <rect x="66" y="100" width="18" height="18" fill="#5090c0" opacity="0.8"/>
+  <rect x="96" y="100" width="18" height="18" fill="#5090c0" opacity="0.8"/>
+  <rect x="79" y="104" width="10" height="28" fill="#c09840"/>
+  <rect x="80" y="85" width="8" height="8" fill="#8a8078"/>
+  <!-- Price badge -->
+  <rect x="20" y="58" width="72" height="18" rx="9" fill="#14532D" opacity="0.9"/>
+  <text x="56" y="70" text-anchor="middle" font-size="8" fill="#FFFBEB" font-weight="bold">$845,000</text>
+  <!-- Card info -->
+  <rect x="22" y="158" width="90" height="6" rx="3" fill="#FFFBEB" opacity="0.7"/>
+  <rect x="22" y="170" width="68" height="5" rx="2" fill="#FFFBEB" opacity="0.4"/>
+  <rect x="22" y="181" width="78" height="5" rx="2" fill="#FFFBEB" opacity="0.3"/>
+  <!-- Bed/bath icons -->
+  <text x="22" y="206" font-size="9" fill="#CA8A04">&#9744;</text>
+  <text x="32" y="206" font-size="8" fill="#FFFBEB" opacity="0.8">4 bd</text>
+  <text x="70" y="206" font-size="9" fill="#CA8A04">&#9633;</text>
+  <text x="80" y="206" font-size="8" fill="#FFFBEB" opacity="0.8">3 ba</text>
+  <rect x="22" y="212" width="120" height="22" rx="6" fill="#14532D" opacity="0.85"/>
+  <text x="82" y="227" text-anchor="middle" font-size="9" fill="#FFFBEB" font-weight="bold">View Details</text>
+  <!-- Listing card 2 -->
+  <rect x="184" y="52" width="152" height="190" rx="10" fill="url(#cardG)" filter="url(#cardShadow)"/>
+  <rect x="184" y="52" width="152" height="100" rx="10" fill="#4a5a3a"/>
+  <rect x="184" y="132" width="152" height="20" fill="#4a5a3a"/>
+  <polygon points="220,90 260,56 300,90" fill="#3a4a2a"/>
+  <rect x="226" y="90" width="68" height="42" fill="#3e5030"/>
+  <rect x="236" y="100" width="18" height="18" fill="#70a050" opacity="0.8"/>
+  <rect x="266" y="100" width="18" height="18" fill="#70a050" opacity="0.8"/>
+  <rect x="249" y="104" width="10" height="28" fill="#c09840"/>
+  <rect x="250" y="82" width="8" height="10" fill="#8a8078"/>
+  <rect x="190" y="58" width="72" height="18" rx="9" fill="#14532D" opacity="0.9"/>
+  <text x="226" y="70" text-anchor="middle" font-size="8" fill="#FFFBEB" font-weight="bold">$1,120,000</text>
+  <rect x="192" y="158" width="90" height="6" rx="3" fill="#FFFBEB" opacity="0.7"/>
+  <rect x="192" y="170" width="72" height="5" rx="2" fill="#FFFBEB" opacity="0.4"/>
+  <rect x="192" y="181" width="64" height="5" rx="2" fill="#FFFBEB" opacity="0.3"/>
+  <text x="192" y="206" font-size="9" fill="#CA8A04">&#9744;</text>
+  <text x="202" y="206" font-size="8" fill="#FFFBEB" opacity="0.8">5 bd</text>
+  <text x="240" y="206" font-size="9" fill="#CA8A04">&#9633;</text>
+  <text x="250" y="206" font-size="8" fill="#FFFBEB" opacity="0.8">4 ba</text>
+  <rect x="192" y="212" width="120" height="22" rx="6" fill="#14532D" opacity="0.85"/>
+  <text x="252" y="227" text-anchor="middle" font-size="9" fill="#FFFBEB" font-weight="bold">View Details</text>
+  <!-- Listing card 3 -->
+  <rect x="354" y="52" width="152" height="190" rx="10" fill="url(#cardG)" filter="url(#cardShadow)"/>
+  <rect x="354" y="52" width="152" height="100" rx="10" fill="#5a4a3a"/>
+  <rect x="354" y="132" width="152" height="20" fill="#5a4a3a"/>
+  <polygon points="390,90 430,58 470,90" fill="#4a3828"/>
+  <rect x="396" y="90" width="68" height="42" fill="#4e3e2c"/>
+  <rect x="406" y="100" width="18" height="18" fill="#90a0b8" opacity="0.8"/>
+  <rect x="436" y="100" width="18" height="18" fill="#90a0b8" opacity="0.8"/>
+  <rect x="419" y="104" width="10" height="28" fill="#c09840"/>
+  <rect x="420" y="82" width="8" height="10" fill="#8a8078"/>
+  <rect x="360" y="58" width="80" height="18" rx="9" fill="#14532D" opacity="0.9"/>
+  <text x="400" y="70" text-anchor="middle" font-size="8" fill="#FFFBEB" font-weight="bold">$1,875,000</text>
+  <rect x="362" y="158" width="90" height="6" rx="3" fill="#FFFBEB" opacity="0.7"/>
+  <rect x="362" y="170" width="68" height="5" rx="2" fill="#FFFBEB" opacity="0.4"/>
+  <rect x="362" y="181" width="80" height="5" rx="2" fill="#FFFBEB" opacity="0.3"/>
+  <text x="362" y="206" font-size="9" fill="#CA8A04">&#9744;</text>
+  <text x="372" y="206" font-size="8" fill="#FFFBEB" opacity="0.8">6 bd</text>
+  <text x="410" y="206" font-size="9" fill="#CA8A04">&#9633;</text>
+  <text x="420" y="206" font-size="8" fill="#FFFBEB" opacity="0.8">5 ba</text>
+  <rect x="362" y="212" width="120" height="22" rx="6" fill="#CA8A04" opacity="0.85"/>
+  <text x="422" y="227" text-anchor="middle" font-size="9" fill="#0f1928" font-weight="bold">FEATURED</text>
+  <!-- Bottom filter/sort bar -->
+  <rect x="14" y="254" width="492" height="36" rx="8" fill="#263248"/>
+  <text x="30" y="277" font-size="9" fill="#CA8A04" font-weight="bold">SORT:</text>
+  <text x="72" y="277" font-size="9" fill="#FFFBEB" opacity="0.7">Price &#9660;</text>
+  <line x1="110" y1="262" x2="110" y2="280" stroke="#CA8A04" stroke-width="1" opacity="0.4"/>
+  <text x="120" y="277" font-size="9" fill="#FFFBEB" opacity="0.7">Newest</text>
+  <line x1="168" y1="262" x2="168" y2="280" stroke="#CA8A04" stroke-width="1" opacity="0.4"/>
+  <text x="178" y="277" font-size="9" fill="#FFFBEB" opacity="0.7">Size</text>
+  <text x="400" y="277" font-size="9" fill="#FFFBEB" opacity="0.5">1-3 of 48 results</text>
+  <!-- Label -->
+  <rect x="0" y="316" width="520" height="44" fill="#14532D"/>
+  <rect x="0" y="314" width="520" height="4" fill="url(#goldG)"/>
+  <text x="260" y="343" text-anchor="middle" font-size="15" fill="#FFFBEB" font-weight="bold" letter-spacing="2">LISTINGS</text>
+</svg>

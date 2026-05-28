@@ -1,9 +1,164 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Realisation independant">
-  <rect width="1200" height="800" fill="#E5E0D8"/>
-  <rect x="80" y="80" width="1040" height="640" rx="32" fill="#ffffff" stroke="#D6CFC4"/>
-  <circle cx="220" cy="220" r="70" fill="#D97706" opacity="0.15"/>
-  <rect x="330" y="180" width="650" height="26" rx="13" fill="#1F2933" opacity="0.15"/>
-  <rect x="330" y="230" width="520" height="22" rx="11" fill="#5F6B7A" opacity="0.18"/>
-  <rect x="170" y="360" width="860" height="250" rx="24" fill="#F8F5EF" stroke="#E5E0D8"/>
-  <text x="600" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#1F2933">Realisation independant</text>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#EEF4FF"/>
+    </linearGradient>
+    <linearGradient id="filledPolygon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#1E3A5F" stop-opacity="0.55"/>
+    </linearGradient>
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000015"/>
+    </filter>
+    <filter id="polygonGlow">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#2563EB" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="520" height="360" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="260" y="28" text-anchor="middle" font-size="15" fill="#1E3A5F" font-weight="bold" letter-spacing="0.5">Profil de Compétences</text>
+  <line x1="160" y1="34" x2="360" y2="34" stroke="#2563EB" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Chart center: cx=220 cy=185 -->
+  <!-- Radar grid rings (hexagonal, 3 rings at r=50, 75, 100) -->
+  <!-- Ring 3 outer (r=100) -->
+  <polygon points="220,85 306.6,135 306.6,235 220,285 133.4,235 133.4,135" fill="none" stroke="#CBD5E1" stroke-width="1.5" opacity="0.6"/>
+  <!-- Ring 2 mid (r=75) -->
+  <polygon points="220,110 285,147.5 285,222.5 220,260 155,222.5 155,147.5" fill="none" stroke="#CBD5E1" stroke-width="1" opacity="0.5"/>
+  <!-- Ring 1 inner (r=50) -->
+  <polygon points="220,135 263.3,160 263.3,210 220,235 176.7,210 176.7,160" fill="none" stroke="#CBD5E1" stroke-width="1" opacity="0.4"/>
+
+  <!-- Radar axes (6 axes from center) -->
+  <line x1="220" y1="185" x2="220" y2="85" stroke="#CBD5E1" stroke-width="1" opacity="0.5"/>
+  <line x1="220" y1="185" x2="306.6" y2="135" stroke="#CBD5E1" stroke-width="1" opacity="0.5"/>
+  <line x1="220" y1="185" x2="306.6" y2="235" stroke="#CBD5E1" stroke-width="1" opacity="0.5"/>
+  <line x1="220" y1="185" x2="220" y2="285" stroke="#CBD5E1" stroke-width="1" opacity="0.5"/>
+  <line x1="220" y1="185" x2="133.4" y2="235" stroke="#CBD5E1" stroke-width="1" opacity="0.5"/>
+  <line x1="220" y1="185" x2="133.4" y2="135" stroke="#CBD5E1" stroke-width="1" opacity="0.5"/>
+
+  <!-- Center glow -->
+  <circle cx="220" cy="185" r="80" fill="url(#centerGlow)"/>
+
+  <!-- FILLED COMPETENCY POLYGON
+    Axes (from center 220,185, radius=100 for 100%):
+    Top (Design=90%):       220, 185-90 = 220, 95
+    Top-Right (Dev=95%):    220+95*sin60, 185-95*cos60 = 220+82.3, 185-47.5 = 302.3, 137.5
+    Bot-Right (SEO=80%):    220+80*sin60, 185+80*cos60 = 220+69.3, 185+40 = 289.3, 225
+    Bottom (Marketing=75%): 220, 185+75 = 220, 260
+    Bot-Left (Conseil=88%): 220-88*sin60, 185+88*cos60 = 220-76.2, 185+44 = 143.8, 229
+    Top-Left (Formation=70%): 220-70*sin60, 185-70*cos60 = 220-60.6, 185-35 = 159.4, 150
+  -->
+  <polygon
+    points="220,95 302.3,137.5 289.3,225 220,260 143.8,229 159.4,150"
+    fill="url(#filledPolygon)"
+    stroke="#2563EB"
+    stroke-width="2.5"
+    filter="url(#polygonGlow)"
+  />
+
+  <!-- Inner highlight polygon (slightly smaller, lighter) -->
+  <polygon
+    points="220,112 295,147 283,219 220,253 148,221 163,155"
+    fill="#2563EB"
+    opacity="0.08"
+  />
+
+  <!-- Center dot -->
+  <circle cx="220" cy="185" r="5" fill="#F59E0B"/>
+  <circle cx="220" cy="185" r="3" fill="white"/>
+
+  <!-- Vertex dots on polygon -->
+  <circle cx="220" cy="95" r="5" fill="#F59E0B" stroke="white" stroke-width="1.5"/>
+  <circle cx="302.3" cy="137.5" r="5" fill="#F59E0B" stroke="white" stroke-width="1.5"/>
+  <circle cx="289.3" cy="225" r="5" fill="#F59E0B" stroke="white" stroke-width="1.5"/>
+  <circle cx="220" cy="260" r="5" fill="#F59E0B" stroke="white" stroke-width="1.5"/>
+  <circle cx="143.8" cy="229" r="5" fill="#F59E0B" stroke="white" stroke-width="1.5"/>
+  <circle cx="159.4" cy="150" r="5" fill="#F59E0B" stroke="white" stroke-width="1.5"/>
+
+  <!-- AXIS LABELS with score badges -->
+  <!-- TOP: Design (90%) -->
+  <rect x="196" y="66" width="48" height="22" rx="11" fill="#1E3A5F"/>
+  <text x="220" y="81" text-anchor="middle" font-size="9.5" fill="#F8FAFC" font-weight="bold">Design</text>
+  <rect x="240" y="62" width="24" height="14" rx="7" fill="#F59E0B"/>
+  <text x="252" y="72" text-anchor="middle" font-size="7.5" fill="white" font-weight="bold">90%</text>
+
+  <!-- TOP-RIGHT: Dev (95%) -->
+  <rect x="307" y="120" width="48" height="22" rx="11" fill="#1E3A5F"/>
+  <text x="331" y="135" text-anchor="middle" font-size="9.5" fill="#F8FAFC" font-weight="bold">Dev</text>
+  <rect x="347" y="116" width="24" height="14" rx="7" fill="#F59E0B"/>
+  <text x="359" y="126" text-anchor="middle" font-size="7.5" fill="white" font-weight="bold">95%</text>
+
+  <!-- BOT-RIGHT: SEO (80%) -->
+  <rect x="308" y="222" width="40" height="22" rx="11" fill="#1E3A5F"/>
+  <text x="328" y="237" text-anchor="middle" font-size="9.5" fill="#F8FAFC" font-weight="bold">SEO</text>
+  <rect x="340" y="218" width="24" height="14" rx="7" fill="#2563EB"/>
+  <text x="352" y="228" text-anchor="middle" font-size="7.5" fill="white" font-weight="bold">80%</text>
+
+  <!-- BOTTOM: Marketing (75%) -->
+  <rect x="175" y="268" width="70" height="22" rx="11" fill="#1E3A5F"/>
+  <text x="210" y="283" text-anchor="middle" font-size="9.5" fill="#F8FAFC" font-weight="bold">Marketing</text>
+  <rect x="175" y="290" width="24" height="14" rx="7" fill="#2563EB"/>
+  <text x="187" y="300" text-anchor="middle" font-size="7.5" fill="white" font-weight="bold">75%</text>
+
+  <!-- BOT-LEFT: Conseil (88%) -->
+  <rect x="78" y="222" width="56" height="22" rx="11" fill="#1E3A5F"/>
+  <text x="106" y="237" text-anchor="middle" font-size="9.5" fill="#F8FAFC" font-weight="bold">Conseil</text>
+  <rect x="70" y="218" width="24" height="14" rx="7" fill="#F59E0B"/>
+  <text x="82" y="228" text-anchor="middle" font-size="7.5" fill="white" font-weight="bold">88%</text>
+
+  <!-- TOP-LEFT: Formation (70%) -->
+  <rect x="88" y="120" width="70" height="22" rx="11" fill="#1E3A5F"/>
+  <text x="123" y="135" text-anchor="middle" font-size="9.5" fill="#F8FAFC" font-weight="bold">Formation</text>
+  <rect x="78" y="116" width="24" height="14" rx="7" fill="#2563EB"/>
+  <text x="90" y="126" text-anchor="middle" font-size="7.5" fill="white" font-weight="bold">70%</text>
+
+  <!-- LEGEND (right side) -->
+  <rect x="390" y="95" width="118" height="180" rx="8" fill="white" opacity="0.85" filter="url(#shadow)"/>
+  <text x="449" y="114" text-anchor="middle" font-size="9" fill="#1E3A5F" font-weight="bold">Légende</text>
+  <line x1="398" y1="118" x2="500" y2="118" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- Legend items -->
+  <rect x="400" y="125" width="12" height="12" rx="3" fill="#2563EB" opacity="0.7"/>
+  <text x="418" y="135" font-size="8" fill="#374151">Design</text>
+  <text x="496" y="135" text-anchor="end" font-size="8" fill="#F59E0B" font-weight="bold">90%</text>
+
+  <rect x="400" y="143" width="12" height="12" rx="3" fill="#2563EB" opacity="0.7"/>
+  <text x="418" y="153" font-size="8" fill="#374151">Développement</text>
+  <text x="496" y="153" text-anchor="end" font-size="8" fill="#F59E0B" font-weight="bold">95%</text>
+
+  <rect x="400" y="161" width="12" height="12" rx="3" fill="#2563EB" opacity="0.7"/>
+  <text x="418" y="171" font-size="8" fill="#374151">SEO</text>
+  <text x="496" y="171" text-anchor="end" font-size="8" fill="#2563EB" font-weight="bold">80%</text>
+
+  <rect x="400" y="179" width="12" height="12" rx="3" fill="#2563EB" opacity="0.7"/>
+  <text x="418" y="189" font-size="8" fill="#374151">Marketing</text>
+  <text x="496" y="189" text-anchor="end" font-size="8" fill="#2563EB" font-weight="bold">75%</text>
+
+  <rect x="400" y="197" width="12" height="12" rx="3" fill="#2563EB" opacity="0.7"/>
+  <text x="418" y="207" font-size="8" fill="#374151">Conseil</text>
+  <text x="496" y="207" text-anchor="end" font-size="8" fill="#F59E0B" font-weight="bold">88%</text>
+
+  <rect x="400" y="215" width="12" height="12" rx="3" fill="#2563EB" opacity="0.7"/>
+  <text x="418" y="225" font-size="8" fill="#374151">Formation</text>
+  <text x="496" y="225" text-anchor="end" font-size="8" fill="#2563EB" font-weight="bold">70%</text>
+
+  <!-- Scale indicator -->
+  <line x1="398" y1="235" x2="500" y2="235" stroke="#E2E8F0" stroke-width="1"/>
+  <rect x="398" y="241" width="50" height="6" rx="3" fill="#E2E8F0"/>
+  <rect x="398" y="241" width="43" height="6" rx="3" fill="#2563EB" opacity="0.5"/>
+  <text x="453" y="250" font-size="6.5" fill="#2563EB" font-weight="bold">Moy: 83%</text>
+  <text x="398" y="262" font-size="6.5" fill="#94A3B8">Échelle: 0 – 100%</text>
+  <text x="398" y="272" font-size="6.5" fill="#94A3B8">Basé sur 50+ projets</text>
+
+  <!-- COMPÉTENCES label -->
+  <rect x="135" y="325" width="250" height="26" rx="13" fill="#1E3A5F" filter="url(#shadow)"/>
+  <text x="260" y="342" text-anchor="middle" font-size="12" font-weight="bold" fill="#F8FAFC" letter-spacing="1.5">COMPÉTENCES</text>
+</svg>
