@@ -30,7 +30,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "FILE=$(jq -r '.tool_response.filePath // .tool_input.file_path') && if [[ \"$FILE\" =~ \\.(ts|tsx)$ ]]; then python3 - \"$FILE\" << 'PYSCRIPT'\nimport sys, os\nf = sys.argv[1]\nif not os.path.exists(f): exit(0)\nwith open(f, 'rb') as file: content = file.read()\nif b'\\xe2\\x80\\x98' in content or b'\\xe2\\x80\\x99' in content:\n  new_content = content.replace(b'\\xe2\\x80\\x98', b\"'\").replace(b'\\xe2\\x80\\x99', b\"'\")\n  with open(f, 'wb') as file: file.write(new_content)\nPYSCRIPT\nfi",
+            "command": "FILE=$(jq -r '.tool_response.filePath // .tool_input.file_path') && python3 \"$PWD/.claude/fix-curly-quotes.py\" \"$FILE\" 2>/dev/null || true",
             "timeout": 10,
             "statusMessage": "Checking for curly quote corruption..."
           }
