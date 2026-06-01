@@ -22,8 +22,9 @@ test.describe('Pixeloria homepage — smoke tests', () => {
       { label: 'Audit gratuit', href: '/#contact' },
     ];
 
+    const nav = page.getByRole('navigation', { name: 'Navigation principale' });
     for (const { label, href } of expectedNavLinks) {
-      const link = page.getByRole('link', { name: label });
+      const link = nav.getByRole('link', { name: label });
       await expect(link).toBeVisible();
       await expect(link).toHaveAttribute('href', href);
     }
