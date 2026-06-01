@@ -1,9 +1,198 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Hero renovation-companies">
-  <rect width="1200" height="800" fill="#EFE7DA"/>
-  <rect x="80" y="80" width="1040" height="640" rx="32" fill="#ffffff" stroke="#D6CFC4"/>
-  <circle cx="220" cy="220" r="70" fill="#D97706" opacity="0.15"/>
-  <rect x="330" y="180" width="650" height="26" rx="13" fill="#1F2933" opacity="0.15"/>
-  <rect x="330" y="230" width="520" height="22" rx="11" fill="#5F6B7A" opacity="0.18"/>
-  <rect x="170" y="360" width="860" height="250" rx="24" fill="#F8F5EF" stroke="#E5E0D8"/>
-  <text x="600" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#1F2933">Hero renovation-companies</text>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="beforeSkyG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a3a4a"/>
+      <stop offset="100%" stop-color="#6a6a7a"/>
+    </linearGradient>
+    <linearGradient id="afterSkyG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a7ad8"/>
+      <stop offset="70%" stop-color="#87CEEB"/>
+      <stop offset="100%" stop-color="#c8e8f8"/>
+    </linearGradient>
+    <linearGradient id="beforeHouseG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6a6258"/>
+      <stop offset="100%" stop-color="#5a5248"/>
+    </linearGradient>
+    <linearGradient id="afterHouseG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FAFAF9"/>
+      <stop offset="100%" stop-color="#e8e4de"/>
+    </linearGradient>
+    <linearGradient id="beforeRoofG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a4038"/>
+      <stop offset="100%" stop-color="#3a3028"/>
+    </linearGradient>
+    <linearGradient id="afterRoofG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="orangeG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#ea6010"/>
+    </linearGradient>
+    <linearGradient id="grassG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a6a2a"/>
+      <stop offset="100%" stop-color="#2a5020"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="4" dy="6" stdDeviation="8" flood-color="#00000050"/>
+    </filter>
+  </defs>
+  <!-- BEFORE SIDE (left) -->
+  <!-- Before sky -->
+  <rect x="0" y="0" width="450" height="560" fill="url(#beforeSkyG)"/>
+  <!-- Overcast clouds -->
+  <g fill="#7a7888" opacity="0.5">
+    <ellipse cx="100" cy="70" rx="80" ry="28"/>
+    <ellipse cx="140" cy="58" rx="55" ry="20"/>
+    <ellipse cx="60" cy="62" rx="40" ry="16"/>
+    <ellipse cx="350" cy="90" rx="70" ry="24"/>
+    <ellipse cx="380" cy="78" rx="45" ry="18"/>
+    <ellipse cx="320" cy="84" rx="35" ry="14"/>
+  </g>
+  <!-- Before ground -->
+  <rect x="0" y="400" width="450" height="160" fill="#4a4830" opacity="0.8"/>
+  <!-- Overgrown lawn -->
+  <g fill="#3a5a20" opacity="0.6">
+    <ellipse cx="50" cy="400" rx="30" ry="8"/>
+    <ellipse cx="120" cy="398" rx="25" ry="7"/>
+    <ellipse cx="200" cy="402" rx="35" ry="9"/>
+    <ellipse cx="300" cy="399" rx="28" ry="7"/>
+    <ellipse cx="380" cy="401" rx="32" ry="8"/>
+    <ellipse cx="440" cy="398" rx="20" ry="6"/>
+  </g>
+  <!-- Before house: old style, dark -->
+  <rect x="60" y="240" width="340" height="180" fill="url(#beforeHouseG)" filter="url(#shadow)"/>
+  <!-- Old weathered siding lines -->
+  <g stroke="#4a4238" stroke-width="1.5" opacity="0.5">
+    <line x1="60" y1="258" x2="400" y2="258"/>
+    <line x1="60" y1="276" x2="400" y2="276"/>
+    <line x1="60" y1="294" x2="400" y2="294"/>
+    <line x1="60" y1="312" x2="400" y2="312"/>
+    <line x1="60" y1="330" x2="400" y2="330"/>
+    <line x1="60" y1="348" x2="400" y2="348"/>
+    <line x1="60" y1="366" x2="400" y2="366"/>
+  </g>
+  <!-- Old roof -->
+  <polygon points="40,242 230,120 420,242" fill="url(#beforeRoofG)"/>
+  <!-- Damaged shingles texture -->
+  <g fill="#3a3028" opacity="0.4">
+    <rect x="80" y="180" width="30" height="12" rx="1" transform="rotate(-30 95 186)"/>
+    <rect x="140" y="155" width="30" height="12" rx="1" transform="rotate(-25 155 161)"/>
+    <rect x="200" y="145" width="30" height="12" rx="1" transform="rotate(-20 215 151)"/>
+    <rect x="260" y="152" width="30" height="12" rx="1" transform="rotate(20 275 158)"/>
+    <rect x="316" y="168" width="30" height="12" rx="1" transform="rotate(26 331 174)"/>
+  </g>
+  <!-- Old windows (small, dingy) -->
+  <rect x="80" y="264" width="60" height="50" fill="#4a5850" opacity="0.6"/>
+  <rect x="80" y="264" width="60" height="50" fill="none" stroke="#3a3828" stroke-width="3"/>
+  <line x1="110" y1="264" x2="110" y2="314" stroke="#3a3828" stroke-width="2"/>
+  <rect x="270" y="264" width="60" height="50" fill="#4a5850" opacity="0.6"/>
+  <rect x="270" y="264" width="60" height="50" fill="none" stroke="#3a3828" stroke-width="3"/>
+  <line x1="300" y1="264" x2="300" y2="314" stroke="#3a3828" stroke-width="2"/>
+  <!-- Old door -->
+  <rect x="170" y="310" width="70" height="110" fill="#5a4830"/>
+  <rect x="172" y="312" width="30" height="50" fill="#4a3820" opacity="0.6"/>
+  <rect x="208" y="312" width="30" height="50" fill="#4a3820" opacity="0.6"/>
+  <!-- Old peeling paint on door -->
+  <path d="M175 340 Q180 335 185 342" fill="none" stroke="#3a2810" stroke-width="1" opacity="0.7"/>
+  <!-- Cracked chimney -->
+  <rect x="290" y="145" width="30" height="60" fill="#5a5048"/>
+  <line x1="300" y1="148" x2="305" y2="200" stroke="#3a3028" stroke-width="1.5" opacity="0.6"/>
+  <!-- LABEL: BEFORE -->
+  <rect x="0" y="10" width="90" height="28" rx="0" fill="#1E293B" opacity="0.85"/>
+  <text x="45" y="29" text-anchor="middle" font-size="13" fill="#78716C" font-weight="bold" letter-spacing="2">BEFORE</text>
+
+  <!-- DIVIDER -->
+  <rect x="440" y="0" width="20" height="560" fill="#F97316"/>
+  <rect x="447" y="0" width="6" height="560" fill="#FAFAF9" opacity="0.3"/>
+  <!-- Divider label -->
+  <rect x="426" y="240" width="48" height="80" rx="6" fill="#1E293B"/>
+  <text x="450" y="273" text-anchor="middle" font-size="7" fill="#F97316" font-weight="bold" transform="rotate(90 450 280)">BEFORE</text>
+  <line x1="450" y1="265" x2="450" y2="320" stroke="#F97316" stroke-width="1" opacity="0.3"/>
+  <text x="450" y="307" text-anchor="middle" font-size="7" fill="#FAFAF9" font-weight="bold" transform="rotate(90 450 307)">AFTER</text>
+
+  <!-- AFTER SIDE (right) -->
+  <!-- After sky -->
+  <rect x="460" y="0" width="440" height="560" fill="url(#afterSkyG)"/>
+  <!-- Bright clouds -->
+  <g fill="#ffffff" opacity="0.7">
+    <ellipse cx="560" cy="70" rx="70" ry="24"/>
+    <ellipse cx="600" cy="60" rx="48" ry="20"/>
+    <ellipse cx="525" cy="66" rx="36" ry="16"/>
+    <ellipse cx="780" cy="90" rx="65" ry="22"/>
+    <ellipse cx="818" cy="80" rx="42" ry="18"/>
+  </g>
+  <!-- After ground: lush lawn -->
+  <rect x="460" y="400" width="440" height="160" fill="url(#grassG)"/>
+  <rect x="460" y="396" width="440" height="8" fill="#4a8a30"/>
+  <!-- Neat hedges -->
+  <ellipse cx="490" cy="400" rx="28" ry="12" fill="#2a7a1a" opacity="0.8"/>
+  <ellipse cx="840" cy="400" rx="28" ry="12" fill="#2a7a1a" opacity="0.8"/>
+  <!-- Flower bed -->
+  <rect x="550" y="395" width="60" height="10" rx="3" fill="#8B4513" opacity="0.6"/>
+  <g fill="#F97316" opacity="0.8">
+    <circle cx="562" cy="392" r="5"/>
+    <circle cx="574" cy="390" r="5"/>
+    <circle cx="586" cy="392" r="5"/>
+    <circle cx="598" cy="390" r="5"/>
+  </g>
+  <g fill="#ea3a8a" opacity="0.7">
+    <circle cx="568" cy="388" r="4"/>
+    <circle cx="580" cy="386" r="4"/>
+    <circle cx="592" cy="388" r="4"/>
+  </g>
+  <!-- After house: modern, bright -->
+  <rect x="510" y="240" width="380" height="180" fill="url(#afterHouseG)" filter="url(#shadow)"/>
+  <!-- Clean horizontal lines / cladding -->
+  <g stroke="#d8d4ce" stroke-width="1" opacity="0.5">
+    <line x1="510" y1="255" x2="890" y2="255"/>
+    <line x1="510" y1="270" x2="890" y2="270"/>
+    <line x1="510" y1="285" x2="890" y2="285"/>
+    <line x1="510" y1="300" x2="890" y2="300"/>
+    <line x1="510" y1="315" x2="890" y2="315"/>
+    <line x1="510" y1="330" x2="890" y2="330"/>
+    <line x1="510" y1="345" x2="890" y2="345"/>
+    <line x1="510" y1="360" x2="890" y2="360"/>
+    <line x1="510" y1="375" x2="890" y2="375"/>
+  </g>
+  <!-- New roof (sharp, modern) -->
+  <polygon points="490,242 700,108 890,242" fill="url(#afterRoofG)"/>
+  <!-- Clean roof edge trim -->
+  <line x1="490" y1="242" x2="890" y2="242" stroke="#334155" stroke-width="3"/>
+  <!-- Clean chimney -->
+  <rect x="770" y="130" width="34" height="68" fill="#78716C"/>
+  <rect x="766" y="126" width="42" height="10" fill="#9a9088"/>
+  <!-- Large modern windows -->
+  <rect x="540" y="258" width="90" height="80" rx="4" fill="#7EAECF" opacity="0.85"/>
+  <rect x="540" y="258" width="90" height="80" rx="4" fill="none" stroke="#334155" stroke-width="2.5"/>
+  <line x1="585" y1="258" x2="585" y2="338" stroke="#334155" stroke-width="1.5"/>
+  <line x1="540" y1="298" x2="630" y2="298" stroke="#334155" stroke-width="1.5"/>
+  <path d="M544 262 L564 262 L544 282 Z" fill="#ffffff" opacity="0.3"/>
+  <rect x="660" y="258" width="90" height="80" rx="4" fill="#7EAECF" opacity="0.85"/>
+  <rect x="660" y="258" width="90" height="80" rx="4" fill="none" stroke="#334155" stroke-width="2.5"/>
+  <line x1="705" y1="258" x2="705" y2="338" stroke="#334155" stroke-width="1.5"/>
+  <line x1="660" y1="298" x2="750" y2="298" stroke="#334155" stroke-width="1.5"/>
+  <path d="M664 262 L684 262 L664 282 Z" fill="#ffffff" opacity="0.3"/>
+  <!-- Modern front door -->
+  <rect x="800" y="306" width="70" height="114" rx="5" fill="#334155"/>
+  <rect x="803" y="309" width="28" height="60" rx="3" fill="#3d5068" opacity="0.7"/>
+  <rect x="836" y="309" width="28" height="60" rx="3" fill="#3d5068" opacity="0.7"/>
+  <!-- Door hardware -->
+  <rect x="834" y="354" width="3" height="14" rx="1" fill="#F97316"/>
+  <!-- Door sidelights -->
+  <rect x="793" y="306" width="8" height="114" fill="#5a7090" opacity="0.4"/>
+  <rect x="869" y="306" width="8" height="114" fill="#5a7090" opacity="0.4"/>
+  <!-- Porch light -->
+  <rect x="796" y="295" width="6" height="12" rx="2" fill="#F97316"/>
+  <circle cx="799" cy="294" r="4" fill="#f0d050" opacity="0.8"/>
+  <!-- LABEL: AFTER -->
+  <rect x="810" y="10" width="82" height="28" rx="0" fill="#1E293B" opacity="0.85"/>
+  <text x="851" y="29" text-anchor="middle" font-size="13" fill="#F97316" font-weight="bold" letter-spacing="2">AFTER</text>
+  <!-- Badge -->
+  <rect x="28" y="490" width="220" height="50" rx="9" fill="#1E293B" opacity="0.93" filter="url(#shadow)"/>
+  <rect x="28" y="490" width="220" height="50" rx="9" fill="none" stroke="#F97316" stroke-width="1.5"/>
+  <text x="48" y="512" font-size="10" fill="#F97316" font-weight="bold" letter-spacing="1">RENOVATION</text>
+  <text x="48" y="530" font-size="16" fill="#FAFAF9" font-weight="bold">Experts</text>
+  <circle cx="232" cy="515" r="9" fill="#F97316"/>
+  <text x="232" y="519" text-anchor="middle" font-size="10" fill="#FAFAF9" font-weight="bold">&#9998;</text>
+</svg>

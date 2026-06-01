@@ -1,9 +1,245 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Service artisan-batiment">
-  <rect width="1200" height="800" fill="#F8F5EF"/>
-  <rect x="80" y="80" width="1040" height="640" rx="32" fill="#ffffff" stroke="#D6CFC4"/>
-  <circle cx="220" cy="220" r="70" fill="#D97706" opacity="0.15"/>
-  <rect x="330" y="180" width="650" height="26" rx="13" fill="#1F2933" opacity="0.15"/>
-  <rect x="330" y="230" width="520" height="22" rx="11" fill="#5F6B7A" opacity="0.18"/>
-  <rect x="170" y="360" width="860" height="250" rx="24" fill="#F8F5EF" stroke="#E5E0D8"/>
-  <text x="600" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#1F2933">Service artisan-batiment</text>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" role="img" aria-label="Travaux de maçonnerie — pose de briques en cours avec mortier et truelle">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EFE7DA"/>
+      <stop offset="100%" stop-color="#E0D4C4"/>
+    </linearGradient>
+    <linearGradient id="brickFace" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#CC7858"/>
+      <stop offset="100%" stop-color="#B86840"/>
+    </linearGradient>
+    <linearGradient id="brickFace2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C87050"/>
+      <stop offset="100%" stop-color="#B06038"/>
+    </linearGradient>
+    <linearGradient id="brickFace3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D08060"/>
+      <stop offset="100%" stop-color="#C07048"/>
+    </linearGradient>
+    <linearGradient id="mortarTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D8D0C2"/>
+      <stop offset="100%" stop-color="#C8C0B2"/>
+    </linearGradient>
+    <linearGradient id="trowelMetal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D8D8D8"/>
+      <stop offset="50%" stop-color="#B0B0B0"/>
+      <stop offset="100%" stop-color="#909090"/>
+    </linearGradient>
+    <linearGradient id="trowelHandle" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C87050"/>
+      <stop offset="100%" stop-color="#8B4525"/>
+    </linearGradient>
+    <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D8CFC0"/>
+      <stop offset="100%" stop-color="#C0B8A8"/>
+    </linearGradient>
+    <filter id="wallShadow">
+      <feDropShadow dx="4" dy="6" stdDeviation="6" flood-color="#1C1917" flood-opacity="0.3"/>
+    </filter>
+    <filter id="trowelShadow">
+      <feDropShadow dx="5" dy="8" stdDeviation="5" flood-color="#1C1917" flood-opacity="0.35"/>
+    </filter>
+    <filter id="mortarBlob">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur"/>
+    </filter>
+    <!-- Brick texture pattern for top surface -->
+    <linearGradient id="sideGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#A05838"/>
+      <stop offset="100%" stop-color="#904828"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background — construction site interior -->
+  <rect width="520" height="360" fill="url(#bgGrad)"/>
+
+  <!-- Back wall texture (rough plaster) -->
+  <rect x="0" y="0" width="520" height="200" fill="#E8DDD0" opacity="0.6"/>
+  <!-- Wall texture lines -->
+  <line x1="0" y1="40" x2="520" y2="42" stroke="#D0C8B8" stroke-width="1" opacity="0.5"/>
+  <line x1="0" y1="85" x2="520" y2="87" stroke="#D0C8B8" stroke-width="1" opacity="0.4"/>
+  <line x1="0" y1="130" x2="520" y2="132" stroke="#D0C8B8" stroke-width="1" opacity="0.4"/>
+  <line x1="0" y1="175" x2="520" y2="177" stroke="#D0C8B8" stroke-width="1" opacity="0.3"/>
+
+  <!-- Floor -->
+  <rect x="0" y="270" width="520" height="90" fill="url(#floorGrad)"/>
+  <!-- Floor boards or tiles hint -->
+  <rect x="0" y="270" width="520" height="3" fill="#B0A898" opacity="0.6"/>
+  <line x1="0" y1="290" x2="520" y2="290" stroke="#B0A898" stroke-width="1" opacity="0.35"/>
+  <line x1="0" y1="315" x2="520" y2="315" stroke="#B0A898" stroke-width="1" opacity="0.3"/>
+  <line x1="130" y1="270" x2="130" y2="360" stroke="#B0A898" stroke-width="1" opacity="0.3"/>
+  <line x1="260" y1="270" x2="260" y2="360" stroke="#B0A898" stroke-width="1" opacity="0.3"/>
+  <line x1="390" y1="270" x2="390" y2="360" stroke="#B0A898" stroke-width="1" opacity="0.3"/>
+
+  <!-- BRICK WALL — staggered pattern, 6 rows -->
+  <!-- Mortar base / wall base -->
+  <rect x="30" y="85" width="380" height="190" fill="#A89880" filter="url(#wallShadow)"/>
+
+  <!-- === ROW 1 (bottom, y=250) === -->
+  <!-- Row 1 mortar bed -->
+  <rect x="30" y="248" width="380" height="6" fill="url(#mortarTop)"/>
+  <!-- Row 1 bricks -->
+  <rect x="32" y="222" width="80" height="28" fill="url(#brickFace)" rx="1"/>
+  <rect x="32" y="222" width="80" height="2" fill="#E09070" opacity="0.4"/>
+  <rect x="116" y="222" width="80" height="28" fill="url(#brickFace3)" rx="1"/>
+  <rect x="116" y="222" width="80" height="2" fill="#E09070" opacity="0.4"/>
+  <rect x="200" y="222" width="80" height="28" fill="url(#brickFace2)" rx="1"/>
+  <rect x="200" y="222" width="80" height="2" fill="#E09070" opacity="0.4"/>
+  <rect x="284" y="222" width="80" height="28" fill="url(#brickFace)" rx="1"/>
+  <rect x="284" y="222" width="80" height="2" fill="#E09070" opacity="0.4"/>
+  <rect x="368" y="222" width="40" height="28" fill="url(#brickFace3)" rx="1"/>
+  <!-- Row 1 vertical joints -->
+  <rect x="114" y="222" width="4" height="28" fill="#9A8870"/>
+  <rect x="198" y="222" width="4" height="28" fill="#9A8870"/>
+  <rect x="282" y="222" width="4" height="28" fill="#9A8870"/>
+  <rect x="366" y="222" width="4" height="28" fill="#9A8870"/>
+
+  <!-- === ROW 2 (y=190) — offset bricks === -->
+  <rect x="30" y="218" width="380" height="6" fill="url(#mortarTop)"/>
+  <rect x="32" y="192" width="40" height="28" fill="url(#brickFace2)" rx="1"/>
+  <rect x="32" y="192" width="40" height="2" fill="#E09070" opacity="0.4"/>
+  <rect x="76" y="192" width="80" height="28" fill="url(#brickFace)" rx="1"/>
+  <rect x="76" y="192" width="80" height="2" fill="#E09070" opacity="0.4"/>
+  <rect x="160" y="192" width="80" height="28" fill="url(#brickFace3)" rx="1"/>
+  <rect x="160" y="192" width="80" height="2" fill="#E09070" opacity="0.4"/>
+  <rect x="244" y="192" width="80" height="28" fill="url(#brickFace2)" rx="1"/>
+  <rect x="244" y="192" width="80" height="2" fill="#E09070" opacity="0.4"/>
+  <rect x="328" y="192" width="80" height="28" fill="url(#brickFace)" rx="1"/>
+  <rect x="328" y="192" width="80" height="2" fill="#E09070" opacity="0.4"/>
+  <!-- Row 2 vertical joints -->
+  <rect x="74" y="192" width="4" height="28" fill="#9A8870"/>
+  <rect x="158" y="192" width="4" height="28" fill="#9A8870"/>
+  <rect x="242" y="192" width="4" height="28" fill="#9A8870"/>
+  <rect x="326" y="192" width="4" height="28" fill="#9A8870"/>
+
+  <!-- === ROW 3 (y=162) === -->
+  <rect x="30" y="188" width="380" height="6" fill="url(#mortarTop)"/>
+  <rect x="32" y="162" width="80" height="28" fill="url(#brickFace3)" rx="1"/>
+  <rect x="32" y="162" width="80" height="2" fill="#E09070" opacity="0.4"/>
+  <rect x="116" y="162" width="80" height="28" fill="url(#brickFace)" rx="1"/>
+  <rect x="116" y="162" width="80" height="2" fill="#E09070" opacity="0.4"/>
+  <rect x="200" y="162" width="80" height="28" fill="url(#brickFace2)" rx="1"/>
+  <rect x="200" y="162" width="80" height="2" fill="#E09070" opacity="0.4"/>
+  <rect x="284" y="162" width="80" height="28" fill="url(#brickFace3)" rx="1"/>
+  <rect x="284" y="162" width="80" height="2" fill="#E09070" opacity="0.4"/>
+  <rect x="368" y="162" width="40" height="28" fill="url(#brickFace)" rx="1"/>
+  <!-- Row 3 vertical joints -->
+  <rect x="114" y="162" width="4" height="28" fill="#9A8870"/>
+  <rect x="198" y="162" width="4" height="28" fill="#9A8870"/>
+  <rect x="282" y="162" width="4" height="28" fill="#9A8870"/>
+  <rect x="366" y="162" width="4" height="28" fill="#9A8870"/>
+
+  <!-- === ROW 4 (y=132) — offset === -->
+  <rect x="30" y="158" width="380" height="6" fill="url(#mortarTop)"/>
+  <rect x="32" y="132" width="40" height="28" fill="url(#brickFace)" rx="1"/>
+  <rect x="32" y="132" width="40" height="2" fill="#E09070" opacity="0.4"/>
+  <rect x="76" y="132" width="80" height="28" fill="url(#brickFace2)" rx="1"/>
+  <rect x="76" y="132" width="80" height="2" fill="#E09070" opacity="0.4"/>
+  <rect x="160" y="132" width="80" height="28" fill="url(#brickFace3)" rx="1"/>
+  <rect x="160" y="132" width="80" height="2" fill="#E09070" opacity="0.4"/>
+  <rect x="244" y="132" width="80" height="28" fill="url(#brickFace)" rx="1"/>
+  <rect x="244" y="132" width="80" height="2" fill="#E09070" opacity="0.4"/>
+  <rect x="328" y="132" width="80" height="28" fill="url(#brickFace2)" rx="1"/>
+  <rect x="328" y="132" width="80" height="2" fill="#E09070" opacity="0.4"/>
+  <!-- Row 4 vertical joints -->
+  <rect x="74" y="132" width="4" height="28" fill="#9A8870"/>
+  <rect x="158" y="132" width="4" height="28" fill="#9A8870"/>
+  <rect x="242" y="132" width="4" height="28" fill="#9A8870"/>
+  <rect x="326" y="132" width="4" height="28" fill="#9A8870"/>
+
+  <!-- === ROW 5 (y=102) === -->
+  <rect x="30" y="128" width="380" height="6" fill="url(#mortarTop)"/>
+  <rect x="32" y="102" width="80" height="28" fill="url(#brickFace2)" rx="1"/>
+  <rect x="32" y="102" width="80" height="2" fill="#E09070" opacity="0.4"/>
+  <rect x="116" y="102" width="80" height="28" fill="url(#brickFace3)" rx="1"/>
+  <rect x="116" y="102" width="80" height="2" fill="#E09070" opacity="0.4"/>
+  <rect x="200" y="102" width="80" height="28" fill="url(#brickFace)" rx="1"/>
+  <rect x="200" y="102" width="80" height="2" fill="#E09070" opacity="0.4"/>
+  <rect x="284" y="102" width="80" height="28" fill="url(#brickFace2)" rx="1"/>
+  <rect x="284" y="102" width="80" height="2" fill="#E09070" opacity="0.4"/>
+  <rect x="368" y="102" width="40" height="28" fill="url(#brickFace3)" rx="1"/>
+  <!-- Row 5 vertical joints -->
+  <rect x="114" y="102" width="4" height="28" fill="#9A8870"/>
+  <rect x="198" y="102" width="4" height="28" fill="#9A8870"/>
+  <rect x="282" y="102" width="4" height="28" fill="#9A8870"/>
+  <rect x="366" y="102" width="4" height="28" fill="#9A8870"/>
+
+  <!-- === TOP ROW 6 — partial, with mortar being spread === -->
+  <rect x="30" y="98" width="380" height="6" fill="url(#mortarTop)"/>
+  <!-- Mortar blob on top of wall (freshly applied) -->
+  <rect x="32" y="82" width="195" height="18" fill="#D0C8B2" rx="2" opacity="0.9"/>
+  <!-- Mortar smear / rough texture -->
+  <path d="M32 82 Q80 78 130 83 Q180 79 227 82 L227 100 L32 100Z" fill="#C8C0AA" opacity="0.7"/>
+  <!-- Mortar squeezing out at top -->
+  <ellipse cx="75" cy="82" rx="12" ry="4" fill="#D8D0C0" opacity="0.8"/>
+  <ellipse cx="145" cy="80" rx="14" ry="5" fill="#D8D0C0" opacity="0.75"/>
+  <!-- Partial brick top row -->
+  <rect x="32" y="72" width="80" height="28" fill="url(#brickFace)" rx="1"/>
+  <rect x="32" y="72" width="80" height="2" fill="#E09070" opacity="0.4"/>
+  <rect x="116" y="72" width="80" height="28" fill="url(#brickFace3)" rx="1"/>
+  <rect x="116" y="72" width="80" height="2" fill="#E09070" opacity="0.4"/>
+  <!-- Only 2 bricks placed on this row, rest is open -->
+  <rect x="114" y="72" width="4" height="28" fill="#9A8870"/>
+  <!-- Unplaced brick area -->
+  <rect x="200" y="88" width="210" height="12" fill="#D0C8B2" rx="2" opacity="0.5"/>
+
+  <!-- Top surface of brick row 6 — orange accent highlight -->
+  <rect x="32" y="70" width="164" height="4" fill="#F97316" opacity="0.25" rx="1"/>
+
+  <!-- TROWEL in foreground — applying mortar -->
+  <!-- Trowel blade -->
+  <path d="M310 280 L420 190 L440 210 L380 260 L370 290 Z" fill="url(#trowelMetal)" filter="url(#trowelShadow)"/>
+  <!-- Trowel blade shine -->
+  <line x1="320" y1="275" x2="425" y2="196" stroke="#FFFFFF" stroke-width="2" opacity="0.5"/>
+  <line x1="330" y1="285" x2="435" y2="205" stroke="#E0E0E0" stroke-width="1" opacity="0.35"/>
+  <!-- Mortar on trowel -->
+  <path d="M318 278 L405 208 L420 220 L375 258 L362 284 Z" fill="#D0C8B0" opacity="0.75"/>
+  <path d="M325 272 L400 215 L408 226 L378 250 L368 276 Z" fill="#E0D8C0" opacity="0.5"/>
+  <!-- Trowel neck (metal collar) -->
+  <rect x="365" y="280" width="18" height="22" fill="#A0A0A0" rx="2" transform="rotate(-45 374 291)"/>
+  <!-- Trowel handle (wood) -->
+  <rect x="365" y="290" width="80" height="18" fill="url(#trowelHandle)" rx="8" transform="rotate(40 365 299)"/>
+  <!-- Handle grip lines -->
+  <line x1="380" y1="294" x2="390" y2="306" stroke="#7B3A18" stroke-width="1.5" opacity="0.5" transform="rotate(40 385 300)"/>
+  <line x1="395" y1="294" x2="405" y2="306" stroke="#7B3A18" stroke-width="1.5" opacity="0.5" transform="rotate(40 400 300)"/>
+  <line x1="410" y1="294" x2="420" y2="306" stroke="#7B3A18" stroke-width="1.5" opacity="0.5" transform="rotate(40 415 300)"/>
+  <!-- Trowel end cap -->
+  <circle cx="432" cy="316" r="9" fill="#8B4525" transform="rotate(40 432 316)"/>
+
+  <!-- Mortar drips from trowel -->
+  <ellipse cx="300" cy="272" rx="8" ry="5" fill="#D0C8B2" opacity="0.8" transform="rotate(-15 300 272)"/>
+  <ellipse cx="288" cy="268" rx="5" ry="3" fill="#C8C0AA" opacity="0.6" transform="rotate(-15 288 268)"/>
+  <circle cx="275" cy="260" r="4" fill="#D0C8B2" opacity="0.5"/>
+
+  <!-- Mortar splatter on floor -->
+  <ellipse cx="150" cy="278" rx="18" ry="6" fill="#C8C0A8" opacity="0.6"/>
+  <ellipse cx="175" cy="285" rx="10" ry="4" fill="#C8C0A8" opacity="0.5"/>
+  <circle cx="190" cy="275" r="5" fill="#C8C0A8" opacity="0.45"/>
+  <circle cx="135" cy="290" r="4" fill="#C8C0A8" opacity="0.4"/>
+  <ellipse cx="80" cy="295" rx="14" ry="5" fill="#C8C0A8" opacity="0.5"/>
+
+  <!-- Wall side shadow (left) -->
+  <rect x="22" y="72" width="12" height="210" fill="#7B6A55" opacity="0.4" rx="2"/>
+
+  <!-- Orange accent — construction line / chalk mark on wall -->
+  <line x1="30" y1="162" x2="412" y2="162" stroke="#F97316" stroke-width="2" stroke-dasharray="8,6" opacity="0.5"/>
+
+  <!-- Spirit level on wall -->
+  <rect x="140" y="155" width="120" height="14" fill="#1C1917" rx="3" opacity="0.85"/>
+  <rect x="145" y="158" width="110" height="8" fill="#2D3A3A" rx="2"/>
+  <!-- Level bubble vial -->
+  <rect x="190" y="159" width="30" height="6" fill="#B8D4E8" rx="3" opacity="0.8"/>
+  <circle cx="205" cy="162" r="3" fill="#FFFFFF" opacity="0.9"/>
+  <!-- Orange end caps -->
+  <rect x="140" y="155" width="10" height="14" fill="#F97316" rx="3" opacity="0.9"/>
+  <rect x="250" y="155" width="10" height="14" fill="#F97316" rx="3" opacity="0.9"/>
+
+  <!-- Brick corner detail (right side) showing wall depth) -->
+  <rect x="408" y="72" width="14" height="210" fill="url(#sideGrad)" opacity="0.8"/>
+  <!-- Mortar lines on side -->
+  <line x1="408" y1="102" x2="422" y2="102" stroke="#8A7060" stroke-width="2"/>
+  <line x1="408" y1="132" x2="422" y2="132" stroke="#8A7060" stroke-width="2"/>
+  <line x1="408" y1="162" x2="422" y2="162" stroke="#8A7060" stroke-width="2"/>
+  <line x1="408" y1="192" x2="422" y2="192" stroke="#8A7060" stroke-width="2"/>
+  <line x1="408" y1="222" x2="422" y2="222" stroke="#8A7060" stroke-width="2"/>
+</svg>

@@ -1,9 +1,170 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Service conciergerie">
-  <rect width="1200" height="800" fill="#F8F5EF"/>
-  <rect x="80" y="80" width="1040" height="640" rx="32" fill="#ffffff" stroke="#D6CFC4"/>
-  <circle cx="220" cy="220" r="70" fill="#D97706" opacity="0.15"/>
-  <rect x="330" y="180" width="650" height="26" rx="13" fill="#1F2933" opacity="0.15"/>
-  <rect x="330" y="230" width="520" height="22" rx="11" fill="#5F6B7A" opacity="0.18"/>
-  <rect x="170" y="360" width="860" height="250" rx="24" fill="#F8F5EF" stroke="#E5E0D8"/>
-  <text x="600" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#1F2933">Service conciergerie</text>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="wallConcierge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F8F4EE"/>
+      <stop offset="100%" stop-color="#F0EAE2"/>
+    </linearGradient>
+    <linearGradient id="floorConc" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8DDD0"/>
+      <stop offset="100%" stop-color="#D8CEC0"/>
+    </linearGradient>
+    <linearGradient id="tableGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4C8B0"/>
+      <stop offset="100%" stop-color="#C4B8A0"/>
+    </linearGradient>
+    <linearGradient id="vaseGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8E4DC"/>
+      <stop offset="100%" stop-color="#D0CCC4"/>
+    </linearGradient>
+    <linearGradient id="goldAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#D4A853"/>
+      <stop offset="100%" stop-color="#F0C870"/>
+    </linearGradient>
+    <radialGradient id="entryLight" cx="55%" cy="20%" r="65%">
+      <stop offset="0%" stop-color="#FFF8F0" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#F8F0E8" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="concShadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+    <filter id="keyShadow">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Background wall -->
+  <rect width="520" height="360" fill="url(#wallConcierge)"/>
+  <!-- Light overlay from above -->
+  <rect width="520" height="360" fill="url(#entryLight)"/>
+
+  <!-- Floor -->
+  <rect x="0" y="290" width="520" height="70" fill="url(#floorConc)"/>
+  <!-- Floor tiles -->
+  <line x1="0" y1="305" x2="520" y2="305" stroke="#C0B4A4" stroke-width="0.8" opacity="0.5"/>
+  <line x1="0" y1="320" x2="520" y2="320" stroke="#C0B4A4" stroke-width="0.8" opacity="0.5"/>
+  <line x1="0" y1="335" x2="520" y2="335" stroke="#C0B4A4" stroke-width="0.8" opacity="0.4"/>
+  <line x1="0" y1="350" x2="520" y2="350" stroke="#C0B4A4" stroke-width="0.8" opacity="0.4"/>
+  <line x1="130" y1="290" x2="130" y2="360" stroke="#C0B4A4" stroke-width="0.8" opacity="0.4"/>
+  <line x1="260" y1="290" x2="260" y2="360" stroke="#C0B4A4" stroke-width="0.8" opacity="0.4"/>
+  <line x1="390" y1="290" x2="390" y2="360" stroke="#C0B4A4" stroke-width="0.8" opacity="0.4"/>
+  <!-- Baseboard -->
+  <rect x="0" y="282" width="520" height="10" rx="1" fill="#D8D0C8" opacity="0.6"/>
+
+  <!-- Wall paneling / wainscoting -->
+  <rect x="0" y="0" width="520" height="50" fill="#EEE8E0" opacity="0.5"/>
+  <!-- Horizontal molding line -->
+  <rect x="0" y="48" width="520" height="3" rx="1" fill="#D0C8BC" opacity="0.6"/>
+  <!-- Lower wainscoting panels -->
+  <rect x="0" y="230" width="520" height="52" fill="#EAE4DC" opacity="0.4"/>
+  <rect x="0" y="228" width="520" height="4" rx="1" fill="#D0C8BC" opacity="0.5"/>
+  <!-- Wainscoting vertical dividers -->
+  <rect x="130" y="228" width="2" height="54" fill="#D0C8BC" opacity="0.4"/>
+  <rect x="260" y="228" width="2" height="54" fill="#D0C8BC" opacity="0.4"/>
+  <rect x="390" y="228" width="2" height="54" fill="#D0C8BC" opacity="0.4"/>
+
+  <!-- Entry door (right side) -->
+  <rect x="378" y="52" width="108" height="230" rx="4" fill="#2A1E14"/>
+  <!-- Door panels -->
+  <rect x="388" y="62" width="40" height="90" rx="3" fill="#352818"/>
+  <rect x="436" y="62" width="40" height="90" rx="3" fill="#352818"/>
+  <rect x="388" y="158" width="40" height="112" rx="3" fill="#352818"/>
+  <rect x="436" y="158" width="40" height="112" rx="3" fill="#352818"/>
+  <!-- Door frame -->
+  <rect x="374" y="48" width="116" height="234" rx="5" fill="none" stroke="#C4B498" stroke-width="3"/>
+  <!-- Door knob -->
+  <circle cx="386" cy="178" r="6" fill="url(#goldAccent)"/>
+  <!-- Door top arch -->
+  <ellipse cx="432" cy="50" rx="58" ry="14" fill="#2A1E14"/>
+  <ellipse cx="432" cy="50" rx="58" ry="14" fill="none" stroke="#C4B498" stroke-width="2.5"/>
+  <!-- Door transom window -->
+  <ellipse cx="432" cy="50" rx="50" ry="10" fill="#C8E0F8" opacity="0.25"/>
+
+  <!-- Side table (console) with key -->
+  <rect x="120" y="220" width="160" height="12" rx="3" fill="url(#tableGrad)" filter="url(#concShadow)"/>
+  <!-- Table legs -->
+  <rect x="128" y="230" width="8" height="62" rx="3" fill="#C0B49A"/>
+  <rect x="162" y="230" width="8" height="62" rx="3" fill="#C0B49A"/>
+  <rect x="196" y="230" width="8" height="62" rx="3" fill="#C0B49A"/>
+  <rect x="230" y="230" width="8" height="62" rx="3" fill="#C0B49A"/>
+  <!-- Table stretcher bar -->
+  <rect x="130" y="268" width="112" height="4" rx="2" fill="#C4B89E" opacity="0.7"/>
+  <!-- Table top surface detail -->
+  <rect x="122" y="215" width="156" height="6" rx="2" fill="#D8CCB4"/>
+  <!-- Gold edge trim on table -->
+  <rect x="120" y="218" width="160" height="2" rx="1" fill="#D4A853" opacity="0.5"/>
+
+  <!-- KEY on table -->
+  <!-- Key ring -->
+  <circle cx="200" cy="205" r="16" fill="none" stroke="#D4A853" stroke-width="6" filter="url(#keyShadow)"/>
+  <circle cx="200" cy="205" r="8" fill="none" stroke="#D4A853" stroke-width="3"/>
+  <!-- Key shaft -->
+  <rect x="196" y="218" width="8" height="38" rx="3" fill="#D4A853"/>
+  <!-- Key teeth -->
+  <rect x="204" y="232" width="10" height="5" rx="1.5" fill="#D4A853"/>
+  <rect x="204" y="243" width="8" height="4" rx="1.5" fill="#D4A853"/>
+  <rect x="204" y="252" width="10" height="4" rx="1.5" fill="#D4A853"/>
+  <!-- Key shine -->
+  <line x1="198" y1="220" x2="198" y2="254" stroke="#F0D070" stroke-width="1.5" opacity="0.5"/>
+  <!-- Key tag -->
+  <rect x="208" y="196" width="36" height="22" rx="4" fill="#0F1E38" opacity="0.9"/>
+  <text x="226" y="211" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" font-weight="700" fill="#D4A853">APT 12</text>
+
+  <!-- Welcome bouquet of flowers on table -->
+  <!-- Vase -->
+  <ellipse cx="155" cy="222" rx="16" ry="6" fill="url(#vaseGrad)"/>
+  <path d="M142,222 C140,208 144,198 155,195 C166,198 170,208 168,222Z" fill="url(#vaseGrad)"/>
+  <ellipse cx="155" cy="195" rx="13" ry="5" fill="#D8D4CC"/>
+  <!-- Flower stems -->
+  <line x1="155" y1="195" x2="148" y2="168" stroke="#6A8A50" stroke-width="2"/>
+  <line x1="155" y1="195" x2="158" y2="162" stroke="#5A7A42" stroke-width="2"/>
+  <line x1="155" y1="195" x2="165" y2="170" stroke="#6A8A50" stroke-width="2"/>
+  <line x1="155" y1="195" x2="143" y2="172" stroke="#5A7A42" stroke-width="1.5"/>
+  <line x1="155" y1="195" x2="168" y2="175" stroke="#6A8A50" stroke-width="1.5"/>
+  <line x1="155" y1="195" x2="152" y2="158" stroke="#5A7A42" stroke-width="1.5"/>
+  <!-- Leaves -->
+  <ellipse cx="150" cy="182" rx="7" ry="4" fill="#7AAA5A" transform="rotate(-25, 150, 182)" opacity="0.8"/>
+  <ellipse cx="164" cy="178" rx="7" ry="4" fill="#6A9A4A" transform="rotate(20, 164, 178)" opacity="0.8"/>
+  <!-- Flower heads - pink/coral -->
+  <circle cx="148" cy="166" r="9" fill="#FF9090" opacity="0.85"/>
+  <circle cx="148" cy="166" r="5" fill="#FF6B6B" opacity="0.9"/>
+  <circle cx="148" cy="166" r="2.5" fill="#FFCC80"/>
+  <!-- White flower -->
+  <circle cx="159" cy="160" r="9" fill="#FFF5F5" opacity="0.9"/>
+  <circle cx="159" cy="160" r="4.5" fill="#FFE0E0" opacity="0.8"/>
+  <circle cx="159" cy="160" r="2" fill="#FFCC80"/>
+  <!-- Yellow flower -->
+  <circle cx="166" cy="168" r="8" fill="#FFD87A" opacity="0.85"/>
+  <circle cx="166" cy="168" r="4" fill="#FFC040" opacity="0.9"/>
+  <circle cx="166" cy="168" r="2" fill="#FF9020"/>
+  <!-- Pink small -->
+  <circle cx="143" cy="170" r="6" fill="#FFB0C0" opacity="0.8"/>
+  <circle cx="143" cy="170" r="2.5" fill="#FF6B6B" opacity="0.8"/>
+  <!-- White small right -->
+  <circle cx="169" cy="173" r="5" fill="#FFFFFF" opacity="0.85"/>
+  <circle cx="169" cy="173" r="2" fill="#FFE8E8" opacity="0.8"/>
+  <!-- Lavender bud -->
+  <circle cx="152" cy="156" r="5" fill="#C8A8E0" opacity="0.8"/>
+  <circle cx="152" cy="156" r="2" fill="#B090C8" opacity="0.9"/>
+
+  <!-- Welcome note card on table -->
+  <rect x="240" y="206" width="70" height="50" rx="4" fill="#FFFFFF" filter="url(#concShadow)" transform="rotate(-5, 240, 206)"/>
+  <rect x="243" y="210" width="64" height="44" rx="3" fill="#FAFAF8" transform="rotate(-5, 243, 210)"/>
+  <!-- Note lines (text representation) -->
+  <line x1="250" y1="218" x2="298" y2="216" stroke="#D0C8BC" stroke-width="1.5" opacity="0.7"/>
+  <line x1="250" y1="226" x2="296" y2="224" stroke="#D0C8BC" stroke-width="1.5" opacity="0.6"/>
+  <line x1="250" y1="234" x2="290" y2="232" stroke="#D0C8BC" stroke-width="1.2" opacity="0.5"/>
+  <line x1="250" y1="242" x2="284" y2="240" stroke="#D0C8BC" stroke-width="1.2" opacity="0.5"/>
+  <!-- Small heart on note -->
+  <text x="292" y="256" font-family="Arial, sans-serif" font-size="12" fill="#FF6B6B" transform="rotate(-5, 292, 256)">♥</text>
+  <!-- Bienvenue text (tiny) -->
+  <text x="268" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="6.5" font-weight="700" fill="#4A3C2C" transform="rotate(-5, 268, 214)">Bienvenue !</text>
+
+  <!-- Small rug on floor -->
+  <ellipse cx="200" cy="300" rx="140" ry="18" fill="#1A2E4A" opacity="0.1"/>
+  <ellipse cx="200" cy="300" rx="130" ry="14" fill="#1A2E4A" opacity="0.06"/>
+
+  <!-- ACCUEIL VIP badge -->
+  <rect x="8" y="10" width="112" height="28" rx="5" fill="#0F1E38" opacity="0.85"/>
+  <rect x="11" y="13" width="106" height="22" rx="4" fill="none" stroke="#D4A853" stroke-width="1"/>
+  <text x="64" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="11" fill="#D4A853" letter-spacing="1">ACCUEIL VIP</text>
+</svg>

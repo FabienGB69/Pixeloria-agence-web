@@ -1,9 +1,161 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Hero freelancers-consultants">
-  <rect width="1200" height="800" fill="#EFE7DA"/>
-  <rect x="80" y="80" width="1040" height="640" rx="32" fill="#ffffff" stroke="#D6CFC4"/>
-  <circle cx="220" cy="220" r="70" fill="#D97706" opacity="0.15"/>
-  <rect x="330" y="180" width="650" height="26" rx="13" fill="#1F2933" opacity="0.15"/>
-  <rect x="330" y="230" width="520" height="22" rx="11" fill="#5F6B7A" opacity="0.18"/>
-  <rect x="170" y="360" width="860" height="250" rx="24" fill="#F8F5EF" stroke="#E5E0D8"/>
-  <text x="600" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#1F2933">Hero freelancers-consultants</text>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1a2540"/>
+    </linearGradient>
+    <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a6e"/>
+      <stop offset="60%" stop-color="#e8a060"/>
+      <stop offset="100%" stop-color="#f0c070"/>
+    </linearGradient>
+    <linearGradient id="floorG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2030"/>
+      <stop offset="100%" stop-color="#0f1520"/>
+    </linearGradient>
+    <linearGradient id="screenG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a3a6e"/>
+      <stop offset="100%" stop-color="#0a2050"/>
+    </linearGradient>
+    <linearGradient id="blueG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1a50d0"/>
+    </linearGradient>
+    <radialGradient id="deskGlow" cx="50%" cy="100%" r="70%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur"/>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#00000060"/>
+    </filter>
+  </defs>
+  <!-- Room background -->
+  <rect width="900" height="560" fill="url(#bgG)"/>
+  <!-- Window (large) - city skyline -->
+  <rect x="150" y="40" width="600" height="340" rx="6" fill="url(#skyG)"/>
+  <rect x="148" y="38" width="604" height="344" rx="8" fill="none" stroke="#2563EB" stroke-width="2" opacity="0.4"/>
+  <!-- Window frame dividers -->
+  <line x1="450" y1="40" x2="450" y2="384" stroke="#1a2a4a" stroke-width="6"/>
+  <line x1="150" y1="212" x2="750" y2="212" stroke="#1a2a4a" stroke-width="4"/>
+  <!-- City skyline silhouette -->
+  <g fill="#0F172A" opacity="0.75">
+    <rect x="170" y="250" width="20" height="130"/>
+    <rect x="196" y="220" width="30" height="160"/>
+    <rect x="232" y="200" width="40" height="180"/>
+    <rect x="278" y="230" width="20" height="150"/>
+    <rect x="304" y="195" width="50" height="185"/>
+    <rect x="360" y="215" width="30" height="165"/>
+    <rect x="396" y="180" width="46" height="200"/>
+    <rect x="472" y="210" width="35" height="170"/>
+    <rect x="514" y="190" width="50" height="190"/>
+    <rect x="570" y="225" width="25" height="155"/>
+    <rect x="602" y="200" width="40" height="180"/>
+    <rect x="648" y="220" width="30" height="160"/>
+    <rect x="686" y="240" width="25" height="140"/>
+    <rect x="717" y="210" width="22" height="170"/>
+  </g>
+  <!-- Building windows lights -->
+  <g fill="#f0d870" opacity="0.5" font-size="4">
+    <rect x="200" y="228" width="6" height="4"/>
+    <rect x="210" y="228" width="6" height="4"/>
+    <rect x="200" y="236" width="6" height="4"/>
+    <rect x="240" y="208" width="8" height="5"/>
+    <rect x="252" y="208" width="8" height="5"/>
+    <rect x="240" y="218" width="8" height="5"/>
+    <rect x="252" y="218" width="8" height="5"/>
+    <rect x="312" y="202" width="8" height="5"/>
+    <rect x="324" y="202" width="8" height="5"/>
+    <rect x="336" y="202" width="8" height="5"/>
+    <rect x="312" y="212" width="8" height="5"/>
+    <rect x="336" y="212" width="8" height="5"/>
+    <rect x="404" y="188" width="8" height="5"/>
+    <rect x="416" y="188" width="8" height="5"/>
+    <rect x="428" y="188" width="8" height="5"/>
+    <rect x="404" y="198" width="8" height="5"/>
+    <rect x="416" y="198" width="8" height="5"/>
+    <rect x="524" y="198" width="8" height="5"/>
+    <rect x="536" y="198" width="8" height="5"/>
+    <rect x="548" y="198" width="8" height="5"/>
+    <rect x="524" y="208" width="8" height="5"/>
+    <rect x="548" y="208" width="8" height="5"/>
+    <rect x="610" y="208" width="8" height="5"/>
+    <rect x="622" y="208" width="8" height="5"/>
+    <rect x="658" y="228" width="6" height="4"/>
+  </g>
+  <!-- Sunrise glow at horizon -->
+  <ellipse cx="450" cy="385" rx="300" ry="60" fill="#f0c070" opacity="0.25"/>
+  <!-- Floor/desk surface -->
+  <rect x="0" y="390" width="900" height="170" fill="url(#floorG)"/>
+  <rect x="0" y="386" width="900" height="8" fill="#1a2a40" opacity="0.8"/>
+  <!-- Desk surface -->
+  <rect x="100" y="386" width="700" height="16" rx="4" fill="#253040"/>
+  <rect x="100" y="400" width="700" height="6" fill="#1a2530"/>
+  <!-- Desk glow from laptop -->
+  <ellipse cx="450" cy="400" rx="280" ry="40" fill="url(#deskGlow)"/>
+  <!-- Person silhouette at desk -->
+  <!-- Chair back -->
+  <rect x="418" y="350" width="64" height="80" rx="8" fill="#1a2535"/>
+  <!-- Chair seat -->
+  <rect x="410" y="420" width="80" height="20" rx="4" fill="#1a2535"/>
+  <!-- Body torso -->
+  <rect x="424" y="330" width="52" height="60" rx="6" fill="#1e3050"/>
+  <!-- Head -->
+  <ellipse cx="450" cy="316" rx="24" ry="28" fill="#2a4060"/>
+  <!-- Hair suggestion -->
+  <path d="M426 306 Q450 288 474 306" fill="#1a2a40"/>
+  <!-- Arms -->
+  <rect x="400" y="356" width="26" height="12" rx="6" fill="#1e3050" transform="rotate(-15 413 362)"/>
+  <rect x="474" y="356" width="26" height="12" rx="6" fill="#1e3050" transform="rotate(15 487 362)"/>
+  <!-- Hands near keyboard -->
+  <ellipse cx="412" cy="392" rx="14" ry="8" fill="#2a4060"/>
+  <ellipse cx="488" cy="392" rx="14" ry="8" fill="#2a4060"/>
+  <!-- Laptop -->
+  <rect x="370" y="368" width="160" height="110" rx="5" fill="#1a2535" filter="url(#shadow)"/>
+  <rect x="372" y="370" width="156" height="5" fill="#253045"/>
+  <!-- Laptop screen -->
+  <rect x="375" y="375" width="150" height="95" fill="url(#screenG)"/>
+  <!-- Screen content: charts -->
+  <rect x="382" y="382" width="60" height="5" rx="2" fill="#2563EB" opacity="0.8"/>
+  <rect x="382" y="392" width="130" height="3" rx="1" fill="#F8FAFC" opacity="0.3"/>
+  <rect x="382" y="398" width="100" height="3" rx="1" fill="#F8FAFC" opacity="0.2"/>
+  <!-- Bar chart on screen -->
+  <rect x="382" y="420" width="12" height="30" fill="#2563EB" opacity="0.8"/>
+  <rect x="398" y="428" width="12" height="22" fill="#EA580C" opacity="0.7"/>
+  <rect x="414" y="414" width="12" height="36" fill="#2563EB" opacity="0.8"/>
+  <rect x="430" y="424" width="12" height="26" fill="#EA580C" opacity="0.7"/>
+  <rect x="446" y="410" width="12" height="40" fill="#2563EB" opacity="0.8"/>
+  <rect x="462" y="418" width="12" height="32" fill="#EA580C" opacity="0.7"/>
+  <line x1="382" y1="452" x2="486" y2="452" stroke="#F8FAFC" stroke-width="0.5" opacity="0.3"/>
+  <!-- Laptop hinge -->
+  <rect x="370" y="462" width="160" height="10" rx="3" fill="#253040"/>
+  <rect x="370" y="470" width="160" height="5" rx="2" fill="#1a2030"/>
+  <!-- Coffee mug -->
+  <rect x="560" y="375" width="36" height="40" rx="5" fill="#253040"/>
+  <rect x="560" y="375" width="36" height="6" rx="3" fill="#1a2030"/>
+  <ellipse cx="578" cy="381" rx="18" ry="5" fill="#2a3a50"/>
+  <path d="M596 390 Q608 390 608 400 Q608 410 596 410" fill="none" stroke="#253040" stroke-width="4"/>
+  <!-- Coffee steam -->
+  <path d="M572 370 Q568 358 572 346" fill="none" stroke="#F8FAFC" stroke-width="1.5" opacity="0.3"/>
+  <path d="M578 368 Q574 356 578 344" fill="none" stroke="#F8FAFC" stroke-width="1.5" opacity="0.3"/>
+  <!-- Notepad -->
+  <rect x="270" y="380" width="80" height="100" rx="3" fill="#F8FAFC" opacity="0.1"/>
+  <rect x="270" y="380" width="80" height="8" fill="#2563EB" opacity="0.5"/>
+  <line x1="278" y1="396" x2="342" y2="396" stroke="#F8FAFC" stroke-width="1" opacity="0.2"/>
+  <line x1="278" y1="406" x2="342" y2="406" stroke="#F8FAFC" stroke-width="1" opacity="0.2"/>
+  <line x1="278" y1="416" x2="342" y2="416" stroke="#F8FAFC" stroke-width="1" opacity="0.2"/>
+  <line x1="278" y1="426" x2="326" y2="426" stroke="#F8FAFC" stroke-width="1" opacity="0.2"/>
+  <!-- Badge -->
+  <rect x="28" y="26" width="224" height="52" rx="9" fill="#0F172A" opacity="0.94" filter="url(#shadow)"/>
+  <rect x="28" y="26" width="224" height="52" rx="9" fill="none" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="48" y="48" font-size="10" fill="#2563EB" font-weight="bold" letter-spacing="2">FREELANCE</text>
+  <text x="48" y="68" font-size="16" fill="#F8FAFC" font-weight="bold">Consultant</text>
+  <circle cx="238" cy="52" r="9" fill="#EA580C"/>
+  <text x="238" y="56" text-anchor="middle" font-size="10" fill="#F8FAFC" font-weight="bold">&#9670;</text>
+  <!-- Tagline -->
+  <text x="450" y="510" text-anchor="middle" font-size="13" fill="#2563EB" opacity="0.8" letter-spacing="3">INDEPENDENT · EXPERT · DRIVEN</text>
+  <line x1="270" y1="520" x2="630" y2="520" stroke="#2563EB" stroke-width="1" opacity="0.3"/>
+</svg>

@@ -1,9 +1,89 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Confiance hospitality-concierge">
-  <rect width="1200" height="800" fill="#FFFFFF"/>
-  <rect x="80" y="80" width="1040" height="640" rx="32" fill="#ffffff" stroke="#D6CFC4"/>
-  <circle cx="220" cy="220" r="70" fill="#D97706" opacity="0.15"/>
-  <rect x="330" y="180" width="650" height="26" rx="13" fill="#1F2933" opacity="0.15"/>
-  <rect x="330" y="230" width="520" height="22" rx="11" fill="#5F6B7A" opacity="0.18"/>
-  <rect x="170" y="360" width="860" height="250" rx="24" fill="#F8F5EF" stroke="#E5E0D8"/>
-  <text x="600" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#1F2933">Confiance hospitality-concierge</text>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFDF5"/>
+      <stop offset="100%" stop-color="#f5edd8"/>
+    </linearGradient>
+    <linearGradient id="cardG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8f2e8"/>
+    </linearGradient>
+    <linearGradient id="goldG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f0c96a"/>
+      <stop offset="100%" stop-color="#D4A853"/>
+    </linearGradient>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#00000018"/>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="520" height="360" fill="url(#bgG)"/>
+  <!-- Decorative top border -->
+  <rect x="0" y="0" width="520" height="6" fill="url(#goldG)"/>
+  <!-- Platform header -->
+  <rect x="60" y="24" width="400" height="52" rx="10" fill="#0F1E38" filter="url(#cardShadow)"/>
+  <text x="260" y="44" text-anchor="middle" font-size="11" fill="#D4A853" letter-spacing="2">GUEST EXPERIENCE PLATFORM</text>
+  <text x="260" y="62" text-anchor="middle" font-size="13" fill="#FFFDF5" font-weight="bold">Overall Rating: 4.9 / 5.0</text>
+  <!-- Stars row - large -->
+  <g fill="#D4A853">
+    <text x="136" y="118" font-size="42">&#9733;</text>
+    <text x="194" y="118" font-size="42">&#9733;</text>
+    <text x="252" y="118" font-size="42">&#9733;</text>
+    <text x="310" y="118" font-size="42">&#9733;</text>
+    <text x="368" y="118" font-size="42">&#9733;</text>
+  </g>
+  <!-- Star shimmer highlights -->
+  <text x="136" y="118" font-size="42" fill="#f5e090" opacity="0.5">&#9733;</text>
+  <!-- Rating numbers under stars -->
+  <text x="260" y="138" text-anchor="middle" font-size="12" fill="#7B2D42" font-weight="bold">5.0 · 1,284 Reviews</text>
+  <!-- Review card 1 -->
+  <rect x="20" y="152" width="224" height="120" rx="10" fill="url(#cardG)" filter="url(#cardShadow)"/>
+  <rect x="20" y="152" width="224" height="3" rx="2" fill="url(#goldG)"/>
+  <!-- Avatar circle -->
+  <circle cx="50" cy="176" r="18" fill="#7B2D42"/>
+  <text x="50" y="181" text-anchor="middle" font-size="14" fill="#FFFDF5" font-weight="bold">M</text>
+  <!-- Guest info -->
+  <text x="76" y="172" font-size="10" fill="#0F1E38" font-weight="bold">Margaret T.</text>
+  <text x="76" y="185" font-size="8" fill="#7B2D42">Deluxe Suite · 5 nights</text>
+  <!-- Stars small -->
+  <text x="76" y="200" font-size="10" fill="#D4A853">&#9733;&#9733;&#9733;&#9733;&#9733;</text>
+  <!-- Quote lines -->
+  <rect x="30" y="208" width="204" height="5" rx="2" fill="#0F1E38" opacity="0.12"/>
+  <rect x="30" y="218" width="190" height="5" rx="2" fill="#0F1E38" opacity="0.10"/>
+  <rect x="30" y="228" width="160" height="5" rx="2" fill="#0F1E38" opacity="0.08"/>
+  <text x="30" y="253" font-size="8" fill="#7B2D42" font-style="italic">"Exceptional service — truly 5 stars"</text>
+  <!-- Review card 2 -->
+  <rect x="276" y="152" width="224" height="120" rx="10" fill="url(#cardG)" filter="url(#cardShadow)"/>
+  <rect x="276" y="152" width="224" height="3" rx="2" fill="url(#goldG)"/>
+  <circle cx="306" cy="176" r="18" fill="#0F1E38"/>
+  <text x="306" y="181" text-anchor="middle" font-size="14" fill="#FFFDF5" font-weight="bold">A</text>
+  <text x="332" y="172" font-size="10" fill="#0F1E38" font-weight="bold">Alexander R.</text>
+  <text x="332" y="185" font-size="8" fill="#7B2D42">Presidential Suite · 3 nights</text>
+  <text x="332" y="200" font-size="10" fill="#D4A853">&#9733;&#9733;&#9733;&#9733;&#9733;</text>
+  <rect x="286" y="208" width="204" height="5" rx="2" fill="#0F1E38" opacity="0.12"/>
+  <rect x="286" y="218" width="186" height="5" rx="2" fill="#0F1E38" opacity="0.10"/>
+  <rect x="286" y="228" width="170" height="5" rx="2" fill="#0F1E38" opacity="0.08"/>
+  <text x="286" y="253" font-size="8" fill="#7B2D42" font-style="italic">"The concierge went beyond expectations"</text>
+  <!-- Rating breakdown bar -->
+  <rect x="20" y="284" width="480" height="46" rx="8" fill="#ffffff" opacity="0.7" filter="url(#cardShadow)"/>
+  <text x="36" y="303" font-size="8" fill="#0F1E38" opacity="0.7">Service</text>
+  <rect x="80" y="296" width="200" height="6" rx="3" fill="#e0d8c8"/>
+  <rect x="80" y="296" width="195" height="6" rx="3" fill="#D4A853"/>
+  <text x="288" y="303" font-size="8" fill="#0F1E38" opacity="0.7">4.9</text>
+  <text x="36" y="320" font-size="8" fill="#0F1E38" opacity="0.7">Comfort</text>
+  <rect x="80" y="313" width="200" height="6" rx="3" fill="#e0d8c8"/>
+  <rect x="80" y="313" width="200" height="6" rx="3" fill="#D4A853"/>
+  <text x="288" y="320" font-size="8" fill="#0F1E38" opacity="0.7">5.0</text>
+  <text x="320" y="303" font-size="8" fill="#0F1E38" opacity="0.7">Cleanliness</text>
+  <rect x="382" y="296" width="100" height="6" rx="3" fill="#e0d8c8"/>
+  <rect x="382" y="296" width="98" height="6" rx="3" fill="#D4A853"/>
+  <text x="490" y="303" font-size="8" fill="#0F1E38" opacity="0.7">4.9</text>
+  <text x="320" y="320" font-size="8" fill="#0F1E38" opacity="0.7">Location</text>
+  <rect x="382" y="313" width="100" height="6" rx="3" fill="#e0d8c8"/>
+  <rect x="382" y="313" width="100" height="6" rx="3" fill="#D4A853"/>
+  <text x="490" y="320" font-size="8" fill="#0F1E38" opacity="0.7">5.0</text>
+  <!-- Label -->
+  <rect x="0" y="336" width="520" height="24" fill="#7B2D42"/>
+  <rect x="0" y="334" width="520" height="4" fill="url(#goldG)"/>
+  <text x="260" y="353" text-anchor="middle" font-size="13" fill="#FFFDF5" font-weight="bold" letter-spacing="2">GUEST REVIEWS</text>
+</svg>

@@ -1,9 +1,145 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Hero real-estate">
-  <rect width="1200" height="800" fill="#EFE7DA"/>
-  <rect x="80" y="80" width="1040" height="640" rx="32" fill="#ffffff" stroke="#D6CFC4"/>
-  <circle cx="220" cy="220" r="70" fill="#D97706" opacity="0.15"/>
-  <rect x="330" y="180" width="650" height="26" rx="13" fill="#1F2933" opacity="0.15"/>
-  <rect x="330" y="230" width="520" height="22" rx="11" fill="#5F6B7A" opacity="0.18"/>
-  <rect x="170" y="360" width="860" height="250" rx="24" fill="#F8F5EF" stroke="#E5E0D8"/>
-  <text x="600" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#1F2933">Hero real-estate</text>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8B4513"/>
+      <stop offset="40%" stop-color="#D2691E"/>
+      <stop offset="70%" stop-color="#9370DB"/>
+      <stop offset="100%" stop-color="#4B0082"/>
+    </linearGradient>
+    <linearGradient id="houseG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8e0d4"/>
+      <stop offset="100%" stop-color="#d0c8bc"/>
+    </linearGradient>
+    <linearGradient id="roofG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="garageG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8c0b0"/>
+      <stop offset="100%" stop-color="#b0a898"/>
+    </linearGradient>
+    <linearGradient id="grassG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#16803a"/>
+      <stop offset="100%" stop-color="#14532D"/>
+    </linearGradient>
+    <linearGradient id="sunG" cx="50%" cy="50%" r="50%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#FFA500" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="houseShadow">
+      <feDropShadow dx="8" dy="8" stdDeviation="12" flood-color="#00000040"/>
+    </filter>
+    <filter id="signShadow">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#00000050"/>
+    </filter>
+  </defs>
+  <!-- Sky gradient -->
+  <rect width="900" height="420" fill="url(#skyG)"/>
+  <!-- Sun / glow on horizon -->
+  <ellipse cx="680" cy="350" rx="80" ry="80" fill="#FFD700" opacity="0.25"/>
+  <ellipse cx="680" cy="350" rx="50" ry="50" fill="#FFD700" opacity="0.3"/>
+  <ellipse cx="680" cy="350" rx="28" ry="28" fill="#FFD700" opacity="0.4"/>
+  <!-- Clouds -->
+  <g fill="#ffffff" opacity="0.2">
+    <ellipse cx="150" cy="80" rx="60" ry="22"/>
+    <ellipse cx="190" cy="72" rx="40" ry="18"/>
+    <ellipse cx="120" cy="76" rx="30" ry="14"/>
+    <ellipse cx="720" cy="100" rx="70" ry="24"/>
+    <ellipse cx="760" cy="92" rx="45" ry="20"/>
+    <ellipse cx="690" cy="98" rx="35" ry="16"/>
+  </g>
+  <!-- Ground / lawn -->
+  <rect x="0" y="390" width="900" height="170" fill="url(#grassG)"/>
+  <rect x="0" y="388" width="900" height="6" fill="#16803a"/>
+  <!-- Driveway -->
+  <path d="M480 560 L540 400 L620 400 L720 560 Z" fill="#c8bca8" opacity="0.7"/>
+  <path d="M540 400 L580 400" stroke="#a09080" stroke-width="1"/>
+  <!-- Path to front door -->
+  <path d="M380 560 L400 420 L480 420 L500 560 Z" fill="#c8bca8" opacity="0.6"/>
+  <!-- House body (2-story) -->
+  <rect x="180" y="200" width="520" height="230" fill="url(#houseG)" filter="url(#houseShadow)"/>
+  <!-- House top (2nd floor) lines -->
+  <rect x="180" y="200" width="520" height="4" fill="#c0b8a8"/>
+  <!-- Window details 2nd floor -->
+  <rect x="220" y="220" width="80" height="70" rx="3" fill="#8ab4d0" opacity="0.8"/>
+  <rect x="220" y="220" width="80" height="70" rx="3" fill="none" stroke="#a0b0c0" stroke-width="2"/>
+  <line x1="260" y1="220" x2="260" y2="290" stroke="#a0b0c0" stroke-width="1.5"/>
+  <line x1="220" y1="255" x2="300" y2="255" stroke="#a0b0c0" stroke-width="1.5"/>
+  <!-- Window highlight -->
+  <path d="M224 224 L244 224 L224 244 Z" fill="#ffffff" opacity="0.3"/>
+  <rect x="340" y="220" width="80" height="70" rx="3" fill="#8ab4d0" opacity="0.8"/>
+  <rect x="340" y="220" width="80" height="70" rx="3" fill="none" stroke="#a0b0c0" stroke-width="2"/>
+  <line x1="380" y1="220" x2="380" y2="290" stroke="#a0b0c0" stroke-width="1.5"/>
+  <line x1="340" y1="255" x2="420" y2="255" stroke="#a0b0c0" stroke-width="1.5"/>
+  <path d="M344 224 L364 224 L344 244 Z" fill="#ffffff" opacity="0.3"/>
+  <rect x="460" y="220" width="80" height="70" rx="3" fill="#8ab4d0" opacity="0.8"/>
+  <rect x="460" y="220" width="80" height="70" rx="3" fill="none" stroke="#a0b0c0" stroke-width="2"/>
+  <line x1="500" y1="220" x2="500" y2="290" stroke="#a0b0c0" stroke-width="1.5"/>
+  <line x1="460" y1="255" x2="540" y2="255" stroke="#a0b0c0" stroke-width="1.5"/>
+  <path d="M464 224 L484 224 L464 244 Z" fill="#ffffff" opacity="0.3"/>
+  <rect x="580" y="220" width="80" height="70" rx="3" fill="#8ab4d0" opacity="0.8"/>
+  <rect x="580" y="220" width="80" height="70" rx="3" fill="none" stroke="#a0b0c0" stroke-width="2"/>
+  <line x1="620" y1="220" x2="620" y2="290" stroke="#a0b0c0" stroke-width="1.5"/>
+  <line x1="580" y1="255" x2="660" y2="255" stroke="#a0b0c0" stroke-width="1.5"/>
+  <path d="M584 224 L604 224 L584 244 Z" fill="#ffffff" opacity="0.3"/>
+  <!-- Main Roof -->
+  <polygon points="160,200 450,80 740,200" fill="url(#roofG)" filter="url(#houseShadow)"/>
+  <polygon points="160,200 450,80 740,200" fill="none" stroke="#263548" stroke-width="2"/>
+  <!-- Roof ridge details -->
+  <line x1="450" y1="80" x2="450" y2="200" stroke="#263548" stroke-width="1.5" opacity="0.5"/>
+  <!-- Chimney -->
+  <rect x="540" y="90" width="36" height="70" fill="#a8a098"/>
+  <rect x="536" y="86" width="44" height="10" fill="#8a8278"/>
+  <!-- 1st floor windows -->
+  <rect x="220" y="320" width="80" height="80" rx="3" fill="#8ab4d0" opacity="0.8"/>
+  <rect x="220" y="320" width="80" height="80" rx="3" fill="none" stroke="#a0b0c0" stroke-width="2"/>
+  <line x1="260" y1="320" x2="260" y2="400" stroke="#a0b0c0" stroke-width="1.5"/>
+  <line x1="220" y1="360" x2="300" y2="360" stroke="#a0b0c0" stroke-width="1.5"/>
+  <path d="M224 324 L248 324 L224 348 Z" fill="#ffffff" opacity="0.3"/>
+  <rect x="580" y="320" width="80" height="80" rx="3" fill="#8ab4d0" opacity="0.8"/>
+  <rect x="580" y="320" width="80" height="80" rx="3" fill="none" stroke="#a0b0c0" stroke-width="2"/>
+  <line x1="620" y1="320" x2="620" y2="400" stroke="#a0b0c0" stroke-width="1.5"/>
+  <line x1="580" y1="360" x2="660" y2="360" stroke="#a0b0c0" stroke-width="1.5"/>
+  <path d="M584 324 L608 324 L584 348 Z" fill="#ffffff" opacity="0.3"/>
+  <!-- Front door -->
+  <rect x="390" y="338" width="100" height="92" rx="4" fill="#7B3820"/>
+  <rect x="390" y="338" width="100" height="4" fill="#8B4830"/>
+  <rect x="395" y="344" width="42" height="50" rx="2" fill="#8B4830" opacity="0.5"/>
+  <rect x="443" y="344" width="42" height="50" rx="2" fill="#8B4830" opacity="0.5"/>
+  <circle cx="437" cy="390" r="4" fill="#D4A853"/>
+  <circle cx="443" cy="390" r="4" fill="#D4A853"/>
+  <!-- Door arch -->
+  <path d="M388 338 Q440 310 492 338" fill="none" stroke="#7B3820" stroke-width="3"/>
+  <!-- Porch columns -->
+  <rect x="380" y="340" width="12" height="90" fill="#e0d8cc"/>
+  <rect x="488" y="340" width="12" height="90" fill="#e0d8cc"/>
+  <rect x="374" y="337" width="24" height="8" fill="#c8c0b4"/>
+  <rect x="482" y="337" width="24" height="8" fill="#c8c0b4"/>
+  <!-- Garage (attached right) -->
+  <rect x="700" y="270" width="180" height="160" fill="url(#garageG)"/>
+  <rect x="700" y="268" width="180" height="6" fill="#a8a098"/>
+  <polygon points="700,270 790,180 880,270" fill="url(#roofG)"/>
+  <rect x="708" y="310" width="164" height="100" rx="3" fill="#a89880" opacity="0.6"/>
+  <!-- Garage door lines -->
+  <line x1="708" y1="330" x2="872" y2="330" stroke="#908878" stroke-width="1.5"/>
+  <line x1="708" y1="350" x2="872" y2="350" stroke="#908878" stroke-width="1.5"/>
+  <line x1="708" y1="370" x2="872" y2="370" stroke="#908878" stroke-width="1.5"/>
+  <line x1="708" y1="390" x2="872" y2="390" stroke="#908878" stroke-width="1.5"/>
+  <!-- Hedges / bushes -->
+  <ellipse cx="180" cy="415" rx="40" ry="22" fill="#166534" opacity="0.9"/>
+  <ellipse cx="210" cy="410" rx="35" ry="20" fill="#15803d" opacity="0.85"/>
+  <ellipse cx="700" cy="415" rx="40" ry="22" fill="#166534" opacity="0.9"/>
+  <ellipse cx="680" cy="410" rx="30" ry="18" fill="#15803d" opacity="0.85"/>
+  <!-- For Sale sign -->
+  <rect x="100" y="400" width="78" height="54" rx="4" fill="#FFFBEB" filter="url(#signShadow)"/>
+  <rect x="100" y="400" width="78" height="20" rx="4" fill="#14532D"/>
+  <text x="139" y="414" text-anchor="middle" font-size="9" fill="#FFFBEB" font-weight="bold">FOR SALE</text>
+  <text x="139" y="434" text-anchor="middle" font-size="7" fill="#1E293B" font-weight="bold">4 BD · 3 BA</text>
+  <text x="139" y="445" text-anchor="middle" font-size="8" fill="#CA8A04" font-weight="bold">$1,250,000</text>
+  <line x1="139" y1="454" x2="139" y2="480" stroke="#1E293B" stroke-width="3"/>
+  <!-- Badge top-left -->
+  <rect x="20" y="20" width="160" height="44" rx="8" fill="#14532D" opacity="0.92" filter="url(#signShadow)"/>
+  <rect x="20" y="20" width="160" height="44" rx="8" fill="none" stroke="#CA8A04" stroke-width="1.5"/>
+  <text x="100" y="40" text-anchor="middle" font-size="10" fill="#CA8A04" font-weight="bold" letter-spacing="1">REAL ESTATE</text>
+  <text x="100" y="57" text-anchor="middle" font-size="13" fill="#FFFBEB" font-weight="bold">Premium Homes</text>
+</svg>

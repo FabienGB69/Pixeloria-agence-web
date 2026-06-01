@@ -1,9 +1,241 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Realisation commerce-local">
-  <rect width="1200" height="800" fill="#E5E0D8"/>
-  <rect x="80" y="80" width="1040" height="640" rx="32" fill="#ffffff" stroke="#D6CFC4"/>
-  <circle cx="220" cy="220" r="70" fill="#D97706" opacity="0.15"/>
-  <rect x="330" y="180" width="650" height="26" rx="13" fill="#1F2933" opacity="0.15"/>
-  <rect x="330" y="230" width="520" height="22" rx="11" fill="#5F6B7A" opacity="0.18"/>
-  <rect x="170" y="360" width="860" height="250" rx="24" fill="#F8F5EF" stroke="#E5E0D8"/>
-  <text x="600" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#1F2933">Realisation commerce-local</text>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="roomBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F5E6D3"/>
+      <stop offset="100%" stop-color="#E8D4BB"/>
+    </linearGradient>
+    <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C4924A"/>
+      <stop offset="100%" stop-color="#A07030"/>
+    </linearGradient>
+    <linearGradient id="counterGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8B5E3C"/>
+      <stop offset="100%" stop-color="#6B4A2A"/>
+    </linearGradient>
+    <linearGradient id="counterTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#A07050"/>
+      <stop offset="100%" stop-color="#8B5E3C"/>
+    </linearGradient>
+    <linearGradient id="shelfBg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5A3A1A"/>
+      <stop offset="100%" stop-color="#7A5020"/>
+    </linearGradient>
+    <radialGradient id="bulb1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFACC"/>
+      <stop offset="50%" stop-color="#FFE870"/>
+      <stop offset="100%" stop-color="#F0C030" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bulb2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFACC"/>
+      <stop offset="50%" stop-color="#FFE870"/>
+      <stop offset="100%" stop-color="#F0C030" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="warmLight1" cx="25%" cy="0%" r="60%">
+      <stop offset="0%" stop-color="#FFE890" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FFE890" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="warmLight2" cx="75%" cy="0%" r="60%">
+      <stop offset="0%" stop-color="#FFE890" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#FFE890" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+  </defs>
+
+  <!-- Room background: warm cream wall -->
+  <rect width="520" height="360" fill="url(#roomBg)"/>
+
+  <!-- Warm Edison light glow from top -->
+  <rect width="520" height="360" fill="url(#warmLight1)"/>
+  <rect width="520" height="360" fill="url(#warmLight2)"/>
+
+  <!-- Wall dado rail -->
+  <rect x="0" y="160" width="520" height="6" fill="#C4A882"/>
+  <rect x="0" y="162" width="520" height="2" fill="#E8D4BB"/>
+
+  <!-- Wall tiles / brick pattern upper wall -->
+  <g fill="none" stroke="#D4BFA0" stroke-width="0.8" opacity="0.35">
+    <rect x="10" y="15" width="60" height="30"/>
+    <rect x="76" y="15" width="60" height="30"/>
+    <rect x="142" y="15" width="60" height="30"/>
+    <rect x="208" y="15" width="60" height="30"/>
+    <rect x="274" y="15" width="60" height="30"/>
+    <rect x="340" y="15" width="60" height="30"/>
+    <rect x="406" y="15" width="60" height="30"/>
+    <rect x="472" y="15" width="48" height="30"/>
+    <rect x="40" y="45" width="60" height="30"/>
+    <rect x="106" y="45" width="60" height="30"/>
+    <rect x="172" y="45" width="60" height="30"/>
+    <rect x="238" y="45" width="60" height="30"/>
+    <rect x="304" y="45" width="60" height="30"/>
+    <rect x="370" y="45" width="60" height="30"/>
+    <rect x="436" y="45" width="60" height="30"/>
+    <rect x="10" y="75" width="60" height="30"/>
+    <rect x="76" y="75" width="60" height="30"/>
+    <rect x="142" y="75" width="60" height="30"/>
+    <rect x="208" y="75" width="60" height="30"/>
+    <rect x="274" y="75" width="60" height="30"/>
+    <rect x="340" y="75" width="60" height="30"/>
+    <rect x="406" y="75" width="60" height="30"/>
+    <rect x="472" y="75" width="48" height="30"/>
+    <rect x="40" y="105" width="60" height="30"/>
+    <rect x="106" y="105" width="60" height="30"/>
+    <rect x="172" y="105" width="60" height="30"/>
+    <rect x="238" y="105" width="60" height="30"/>
+    <rect x="304" y="105" width="60" height="30"/>
+    <rect x="370" y="105" width="60" height="30"/>
+    <rect x="436" y="105" width="60" height="30"/>
+    <rect x="10" y="135" width="60" height="30"/>
+    <rect x="76" y="135" width="60" height="30"/>
+    <rect x="142" y="135" width="60" height="30"/>
+    <rect x="208" y="135" width="60" height="30"/>
+    <rect x="274" y="135" width="60" height="30"/>
+    <rect x="340" y="135" width="60" height="30"/>
+    <rect x="406" y="135" width="60" height="30"/>
+    <rect x="472" y="135" width="48" height="30"/>
+  </g>
+
+  <!-- BACK WALL SHELVING UNIT -->
+  <rect x="290" y="12" width="220" height="155" rx="3" fill="url(#shelfBg)" filter="url(#shadow)"/>
+  <!-- Shelf boards -->
+  <rect x="295" y="50" width="210" height="8" rx="1" fill="#8B5E3C"/>
+  <rect x="295" y="90" width="210" height="8" rx="1" fill="#8B5E3C"/>
+  <rect x="295" y="130" width="210" height="8" rx="1" fill="#8B5E3C"/>
+  <!-- Shelf uprights -->
+  <rect x="295" y="12" width="6" height="155" rx="1" fill="#6B4A2A"/>
+  <rect x="499" y="12" width="6" height="155" rx="1" fill="#6B4A2A"/>
+  <rect x="397" y="12" width="4" height="155" rx="1" fill="#6B4A2A" opacity="0.6"/>
+
+  <!-- Shelf top row products -->
+  <rect x="303" y="22" width="18" height="28" rx="3" fill="#2D6A4F"/>
+  <rect x="306" y="25" width="12" height="16" rx="1" fill="#FFF8F0" opacity="0.8"/>
+  <text x="312" y="34" text-anchor="middle" font-size="4" fill="#2D6A4F">THÉ</text>
+  <rect x="325" y="26" width="22" height="24" rx="3" fill="#E8734A" opacity="0.9"/>
+  <rect x="328" y="29" width="16" height="13" rx="1" fill="#FFF8F0" opacity="0.8"/>
+  <text x="336" y="37" text-anchor="middle" font-size="4" fill="#E8734A">CONF.</text>
+  <ellipse cx="362" cy="47" rx="11" ry="6" fill="#D4A820"/>
+  <path d="M351 48 Q351 26 362 24 Q373 26 373 48Z" fill="#E8C030"/>
+  <rect x="379" y="24" width="16" height="26" rx="4" fill="#8B5E3C"/>
+  <rect x="381" y="28" width="12" height="14" rx="1" fill="#FFF8F0" opacity="0.7"/>
+  <rect x="405" y="22" width="20" height="28" rx="3" fill="#2D6A4F" opacity="0.9"/>
+  <rect x="432" y="26" width="24" height="24" rx="3" fill="#C4924A" opacity="0.85"/>
+  <rect x="462" y="22" width="18" height="28" rx="3" fill="#E8734A" opacity="0.8"/>
+  <rect x="484" y="26" width="14" height="24" rx="3" fill="#8B5E3C" opacity="0.75"/>
+
+  <!-- Shelf mid row products -->
+  <rect x="303" y="60" width="22" height="30" rx="3" fill="#E8734A" opacity="0.85"/>
+  <rect x="329" y="64" width="18" height="26" rx="3" fill="#2D6A4F" opacity="0.9"/>
+  <ellipse cx="360" cy="89" rx="12" ry="7" fill="#C4924A"/>
+  <path d="M348 90 Q348 66 360 64 Q372 66 372 90Z" fill="#D4A250"/>
+  <rect x="378" y="62" width="14" height="28" rx="4" fill="#2D6A4F"/>
+  <rect x="397" y="60" width="24" height="30" rx="3" fill="#8B5E3C" opacity="0.85"/>
+  <rect x="426" y="64" width="18" height="26" rx="3" fill="#E8734A" opacity="0.8"/>
+  <rect x="450" y="60" width="22" height="30" rx="3" fill="#C4924A" opacity="0.85"/>
+  <rect x="478" y="64" width="16" height="26" rx="3" fill="#2D6A4F" opacity="0.8"/>
+
+  <!-- Shelf bottom row products -->
+  <rect x="303" y="100" width="28" height="30" rx="3" fill="#C4924A" opacity="0.85"/>
+  <rect x="335" y="102" width="22" height="28" rx="3" fill="#E8734A" opacity="0.80"/>
+  <rect x="362" y="100" width="26" height="30" rx="3" fill="#8B5E3C" opacity="0.82"/>
+  <rect x="393" y="100" width="24" height="30" rx="3" fill="#2D6A4F" opacity="0.85"/>
+  <rect x="423" y="100" width="22" height="30" rx="3" fill="#E8C030" opacity="0.75"/>
+  <rect x="451" y="100" width="20" height="30" rx="3" fill="#E8734A" opacity="0.78"/>
+  <rect x="477" y="100" width="18" height="30" rx="3" fill="#C4924A" opacity="0.80"/>
+
+  <!-- WOODEN COUNTER -->
+  <path d="M0 230 L0 310 L310 310 L330 230 Z" fill="url(#counterGrad)" filter="url(#shadow)"/>
+  <path d="M0 225 L330 225 L350 228 L0 228 Z" fill="url(#counterTop)"/>
+  <!-- Counter front panel decorative lines -->
+  <line x1="0" y1="260" x2="308" y2="260" stroke="#5A3A1A" stroke-width="1" opacity="0.4"/>
+  <line x1="80" y1="228" x2="70" y2="310" stroke="#5A3A1A" stroke-width="1" opacity="0.3"/>
+  <line x1="180" y1="228" x2="165" y2="310" stroke="#5A3A1A" stroke-width="1" opacity="0.3"/>
+  <line x1="260" y1="228" x2="250" y2="310" stroke="#5A3A1A" stroke-width="1" opacity="0.3"/>
+  <!-- Counter top surface -->
+  <rect x="0" y="210" width="345" height="18" rx="3" fill="#A07050"/>
+
+  <!-- POS TABLET on counter -->
+  <rect x="188" y="168" width="88" height="62" rx="8" fill="#1A1A2E" filter="url(#shadow)"/>
+  <rect x="192" y="172" width="80" height="50" rx="5" fill="#2D4A6A"/>
+  <!-- Screen content: sale items -->
+  <rect x="196" y="176" width="72" height="8" rx="2" fill="#E8734A"/>
+  <text x="232" y="183" text-anchor="middle" font-size="6" fill="white" font-weight="bold">VENTE EN COURS</text>
+  <rect x="196" y="188" width="48" height="5" rx="1" fill="#FFF8F0" opacity="0.7"/>
+  <rect x="196" y="196" width="40" height="5" rx="1" fill="#FFF8F0" opacity="0.5"/>
+  <rect x="196" y="204" width="44" height="5" rx="1" fill="#FFF8F0" opacity="0.5"/>
+  <rect x="234" y="196" width="30" height="18" rx="3" fill="#2D6A4F"/>
+  <text x="249" y="208" text-anchor="middle" font-size="8" fill="#FFF8F0" font-weight="bold">14.90</text>
+  <text x="249" y="215" text-anchor="middle" font-size="5" fill="#FFF8F0">€</text>
+  <!-- Tablet stand -->
+  <path d="M228 230 L230 220 L240 220 L242 230Z" fill="#333" opacity="0.6"/>
+  <rect x="222" y="228" width="26" height="4" rx="2" fill="#333" opacity="0.6"/>
+
+  <!-- Small items on counter -->
+  <!-- Card reader -->
+  <rect x="130" y="196" width="44" height="26" rx="4" fill="#333"/>
+  <rect x="134" y="200" width="36" height="14" rx="2" fill="#4A4A6A"/>
+  <rect x="136" y="202" width="32" height="4" rx="1" fill="#D4C820" opacity="0.8"/>
+  <text x="152" y="220" text-anchor="middle" font-size="5" fill="#AAA">Carte bancaire</text>
+
+  <!-- Receipt paper -->
+  <rect x="90" y="205" width="30" height="20" rx="1" fill="white" opacity="0.9"/>
+  <line x1="94" y1="210" x2="116" y2="210" stroke="#AAA" stroke-width="1"/>
+  <line x1="94" y1="214" x2="110" y2="214" stroke="#AAA" stroke-width="1"/>
+  <line x1="94" y1="218" x2="114" y2="218" stroke="#AAA" stroke-width="1"/>
+
+  <!-- Small plant on counter right -->
+  <rect x="290" y="196" width="18" height="16" rx="2" fill="#E8734A"/>
+  <rect x="292" y="194" width="14" height="4" rx="1" fill="#D4623A"/>
+  <ellipse cx="299" cy="190" rx="11" ry="7" fill="#2D6A4F"/>
+  <ellipse cx="293" cy="188" rx="7" ry="5" fill="#3A8463" opacity="0.8"/>
+
+  <!-- CUSTOMER SILHOUETTE (right side) -->
+  <!-- Body -->
+  <ellipse cx="420" cy="170" rx="22" ry="26" fill="#5A3A1A" opacity="0.65"/>
+  <!-- Head -->
+  <circle cx="420" cy="138" r="18" fill="#C4924A"/>
+  <!-- Hair -->
+  <ellipse cx="420" cy="126" rx="18" ry="8" fill="#5A3A1A" opacity="0.8"/>
+  <!-- Shoulder bag strap -->
+  <path d="M400 165 Q385 185 390 210" stroke="#8B5E3C" stroke-width="3" fill="none" opacity="0.7"/>
+  <rect x="382" y="207" width="20" height="16" rx="3" fill="#8B5E3C" opacity="0.7"/>
+  <!-- Arm reaching -->
+  <path d="M440 165 Q455 175 460 195 Q445 200 440 195 Q448 178 435 170Z" fill="#5A3A1A" opacity="0.65"/>
+
+  <!-- STAFF SILHOUETTE (behind counter, left side) -->
+  <ellipse cx="58" cy="185" rx="20" ry="22" fill="#E8734A" opacity="0.75"/>
+  <circle cx="58" cy="158" r="16" fill="#C4924A"/>
+  <ellipse cx="58" cy="148" rx="16" ry="7" fill="#3A2010" opacity="0.7"/>
+  <!-- Staff apron -->
+  <rect x="44" y="185" width="28" height="35" rx="4" fill="#2D6A4F" opacity="0.7"/>
+  <rect x="52" y="183" width="12" height="4" rx="2" fill="#2D6A4F" opacity="0.7"/>
+  <!-- Arms on counter -->
+  <path d="M38 200 Q28 215 30 225" stroke="#C4924A" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.75"/>
+  <path d="M78 200 Q88 215 90 225" stroke="#C4924A" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.75"/>
+
+  <!-- FLOOR woodgrain -->
+  <rect x="0" y="308" width="520" height="52" fill="url(#floorGrad)"/>
+  <line x1="0" y1="320" x2="520" y2="320" stroke="#8B6030" stroke-width="1" opacity="0.4"/>
+  <line x1="0" y1="332" x2="520" y2="332" stroke="#8B6030" stroke-width="1" opacity="0.3"/>
+  <line x1="0" y1="344" x2="520" y2="344" stroke="#8B6030" stroke-width="1" opacity="0.3"/>
+  <line x1="90" y1="308" x2="90" y2="360" stroke="#8B6030" stroke-width="1" opacity="0.3"/>
+  <line x1="210" y1="308" x2="210" y2="360" stroke="#8B6030" stroke-width="1" opacity="0.3"/>
+  <line x1="350" y1="308" x2="350" y2="360" stroke="#8B6030" stroke-width="1" opacity="0.3"/>
+  <line x1="450" y1="308" x2="450" y2="360" stroke="#8B6030" stroke-width="1" opacity="0.3"/>
+
+  <!-- Edison bulbs ceiling -->
+  <line x1="130" y1="0" x2="130" y2="20" stroke="#5A3A1A" stroke-width="2"/>
+  <ellipse cx="130" cy="22" rx="7" ry="5" fill="#FFF0A0" filter="url(#glow)"/>
+  <circle cx="130" cy="24" r="10" fill="url(#bulb1)" opacity="0.6"/>
+  <line x1="390" y1="0" x2="390" y2="20" stroke="#5A3A1A" stroke-width="2"/>
+  <ellipse cx="390" cy="22" rx="7" ry="5" fill="#FFF0A0" filter="url(#glow)"/>
+  <circle cx="390" cy="24" r="10" fill="url(#bulb2)" opacity="0.6"/>
+
+  <!-- SERVICE CLIENT label -->
+  <rect x="130" y="320" width="260" height="28" rx="14" fill="#E8734A" filter="url(#shadow)"/>
+  <text x="260" y="338" text-anchor="middle" font-size="12" font-weight="bold" fill="#FFF8F0" letter-spacing="2">SERVICE CLIENT</text>
+</svg>

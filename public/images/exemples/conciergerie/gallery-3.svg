@@ -1,9 +1,175 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Confiance conciergerie">
-  <rect width="1200" height="800" fill="#FFFFFF"/>
-  <rect x="80" y="80" width="1040" height="640" rx="32" fill="#ffffff" stroke="#D6CFC4"/>
-  <circle cx="220" cy="220" r="70" fill="#D97706" opacity="0.15"/>
-  <rect x="330" y="180" width="650" height="26" rx="13" fill="#1F2933" opacity="0.15"/>
-  <rect x="330" y="230" width="520" height="22" rx="11" fill="#5F6B7A" opacity="0.18"/>
-  <rect x="170" y="360" width="860" height="250" rx="24" fill="#F8F5EF" stroke="#E5E0D8"/>
-  <text x="600" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#1F2933">Confiance conciergerie</text>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="reviewBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0F1E38"/>
+      <stop offset="100%" stop-color="#0A1628"/>
+    </linearGradient>
+    <linearGradient id="starGold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F8E070"/>
+      <stop offset="50%" stop-color="#D4A853"/>
+      <stop offset="100%" stop-color="#B88830"/>
+    </linearGradient>
+    <linearGradient id="cardBg1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1A2E4A"/>
+      <stop offset="100%" stop-color="#162540"/>
+    </linearGradient>
+    <linearGradient id="cardBg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#182A42"/>
+      <stop offset="100%" stop-color="#142238"/>
+    </linearGradient>
+    <linearGradient id="badgeGold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#D4A853"/>
+      <stop offset="100%" stop-color="#F0C870"/>
+    </linearGradient>
+    <!-- Platform colors (abstract) -->
+    <linearGradient id="plat1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF6B6B"/>
+      <stop offset="100%" stop-color="#FF4A4A"/>
+    </linearGradient>
+    <linearGradient id="plat2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#003580"/>
+      <stop offset="100%" stop-color="#0057B8"/>
+    </linearGradient>
+    <linearGradient id="plat3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#008009"/>
+      <stop offset="100%" stop-color="#00A30C"/>
+    </linearGradient>
+    <radialGradient id="starGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F8E070" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#F8E070" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bigScoreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D4A853" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#D4A853" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="starShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#F8E070" flood-opacity="0.4"/>
+    </filter>
+    <filter id="cardShadowDark">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="platShadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="520" height="360" fill="url(#reviewBg)"/>
+
+  <!-- Subtle grid pattern -->
+  <line x1="0" y1="90" x2="520" y2="90" stroke="#1A2E4A" stroke-width="0.5" opacity="0.5"/>
+  <line x1="0" y1="180" x2="520" y2="180" stroke="#1A2E4A" stroke-width="0.5" opacity="0.5"/>
+  <line x1="0" y1="270" x2="520" y2="270" stroke="#1A2E4A" stroke-width="0.5" opacity="0.5"/>
+  <line x1="130" y1="0" x2="130" y2="360" stroke="#1A2E4A" stroke-width="0.5" opacity="0.5"/>
+  <line x1="260" y1="0" x2="260" y2="360" stroke="#1A2E4A" stroke-width="0.5" opacity="0.5"/>
+  <line x1="390" y1="0" x2="390" y2="360" stroke="#1A2E4A" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Big score display center-top -->
+  <ellipse cx="260" cy="75" rx="90" ry="90" fill="url(#bigScoreGlow)"/>
+  <!-- Large 5.0 score -->
+  <text x="260" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="700" fill="#D4A853">5,0</text>
+  <!-- Score out of 5 -->
+  <text x="260" y="86" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#8AAFC8">sur 5 · 847 avis</text>
+
+  <!-- 5 BIG Stars (row) -->
+  <!-- Star glow -->
+  <ellipse cx="260" cy="118" rx="130" ry="25" fill="url(#starGlow)"/>
+  <!-- Star 1 -->
+  <polygon points="110,130 116,111 122,130 140,130 126,141 131,160 116,149 101,160 106,141 92,130" fill="url(#starGold)" filter="url(#starShadow)"/>
+  <!-- Star 2 -->
+  <polygon points="152,130 158,111 164,130 182,130 168,141 173,160 158,149 143,160 148,141 134,130" fill="url(#starGold)" filter="url(#starShadow)"/>
+  <!-- Star 3 -->
+  <polygon points="194,130 200,111 206,130 224,130 210,141 215,160 200,149 185,160 190,141 176,130" fill="url(#starGold)" filter="url(#starShadow)"/>
+  <!-- Star 4 -->
+  <polygon points="236,130 242,111 248,130 266,130 252,141 257,160 242,149 227,160 232,141 218,130" fill="url(#starGold)" filter="url(#starShadow)"/>
+  <!-- Star 5 -->
+  <polygon points="278,130 284,111 290,130 308,130 294,141 299,160 284,149 269,160 274,141 260,130" fill="url(#starGold)" filter="url(#starShadow)"/>
+
+  <!-- Review cards -->
+  <!-- Card 1 (left) -->
+  <rect x="12" y="178" width="158" height="110" rx="10" fill="url(#cardBg1)" stroke="#1A3050" stroke-width="1" filter="url(#cardShadowDark)"/>
+  <!-- Card 1 avatar -->
+  <circle cx="36" cy="200" r="14" fill="#D4A853" opacity="0.25"/>
+  <circle cx="36" cy="200" r="11" fill="#C9A030" opacity="0.7"/>
+  <text x="36" y="204" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#FFFFFF">MR</text>
+  <!-- Card 1 reviewer name -->
+  <text x="56" y="196" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#FFFFFF">Marie R.</text>
+  <text x="56" y="208" font-family="Arial, sans-serif" font-size="7.5" fill="#8AAFC8">Paris · 12 mai 2026</text>
+  <!-- Card 1 stars (small) -->
+  <text x="56" y="222" font-family="Arial, sans-serif" font-size="10" fill="#D4A853">★★★★★</text>
+  <!-- Card 1 review text (lines) -->
+  <rect x="22" y="232" width="138" height="5" rx="2" fill="#2A4060" opacity="0.8"/>
+  <rect x="22" y="242" width="120" height="5" rx="2" fill="#2A4060" opacity="0.8"/>
+  <rect x="22" y="252" width="130" height="5" rx="2" fill="#2A4060" opacity="0.8"/>
+  <rect x="22" y="262" width="90" height="5" rx="2" fill="#2A4060" opacity="0.7"/>
+  <!-- Quote mark -->
+  <text x="16" y="242" font-family="Arial, sans-serif" font-size="24" fill="#D4A853" opacity="0.3">"</text>
+
+  <!-- Card 2 (center) -->
+  <rect x="182" y="178" width="158" height="110" rx="10" fill="url(#cardBg2)" stroke="#1A3050" stroke-width="1" filter="url(#cardShadowDark)"/>
+  <circle cx="206" cy="200" r="14" fill="#FF6B6B" opacity="0.25"/>
+  <circle cx="206" cy="200" r="11" fill="#FF5050" opacity="0.7"/>
+  <text x="206" y="204" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#FFFFFF">JL</text>
+  <text x="226" y="196" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#FFFFFF">Jean-Luc D.</text>
+  <text x="226" y="208" font-family="Arial, sans-serif" font-size="7.5" fill="#8AAFC8">Lyon · 28 avr. 2026</text>
+  <text x="226" y="222" font-family="Arial, sans-serif" font-size="10" fill="#D4A853">★★★★★</text>
+  <rect x="192" y="232" width="138" height="5" rx="2" fill="#2A4060" opacity="0.8"/>
+  <rect x="192" y="242" width="115" height="5" rx="2" fill="#2A4060" opacity="0.8"/>
+  <rect x="192" y="252" width="132" height="5" rx="2" fill="#2A4060" opacity="0.8"/>
+  <rect x="192" y="262" width="80" height="5" rx="2" fill="#2A4060" opacity="0.7"/>
+  <text x="186" y="242" font-family="Arial, sans-serif" font-size="24" fill="#D4A853" opacity="0.3">"</text>
+
+  <!-- Card 3 (right) -->
+  <rect x="352" y="178" width="158" height="110" rx="10" fill="url(#cardBg1)" stroke="#1A3050" stroke-width="1" filter="url(#cardShadowDark)"/>
+  <circle cx="376" cy="200" r="14" fill="#5AC878" opacity="0.2"/>
+  <circle cx="376" cy="200" r="11" fill="#3AAA58" opacity="0.7"/>
+  <text x="376" y="204" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#FFFFFF">SC</text>
+  <text x="396" y="196" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#FFFFFF">Sarah C.</text>
+  <text x="396" y="208" font-family="Arial, sans-serif" font-size="7.5" fill="#8AAFC8">Berlin · 15 avr. 2026</text>
+  <text x="396" y="222" font-family="Arial, sans-serif" font-size="10" fill="#D4A853">★★★★★</text>
+  <rect x="362" y="232" width="138" height="5" rx="2" fill="#2A4060" opacity="0.8"/>
+  <rect x="362" y="242" width="125" height="5" rx="2" fill="#2A4060" opacity="0.8"/>
+  <rect x="362" y="252" width="135" height="5" rx="2" fill="#2A4060" opacity="0.8"/>
+  <rect x="362" y="262" width="95" height="5" rx="2" fill="#2A4060" opacity="0.7"/>
+  <text x="356" y="242" font-family="Arial, sans-serif" font-size="24" fill="#D4A853" opacity="0.3">"</text>
+
+  <!-- Platform logos (abstract circles) bottom row -->
+  <!-- Platform 1 - red (vacation rental style) -->
+  <circle cx="140" cy="316" r="22" fill="url(#plat1)" filter="url(#platShadow)"/>
+  <circle cx="140" cy="316" r="18" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.3"/>
+  <!-- Abstract Airbnb-style icon (simplified loop/house shape) -->
+  <ellipse cx="140" cy="310" rx="7" ry="7" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+  <path d="M133,314 C133,322 147,322 147,314" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+  <!-- Rating under -->
+  <text x="140" y="348" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#8AAFC8">4,97 ★</text>
+
+  <!-- Platform 2 - deep blue (hotel booking style) -->
+  <circle cx="220" cy="316" r="22" fill="url(#plat2)" filter="url(#platShadow)"/>
+  <circle cx="220" cy="316" r="18" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.3"/>
+  <!-- Abstract B letter/icon -->
+  <text x="220" y="321" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="900" fill="#FFFFFF">b.</text>
+  <text x="220" y="348" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#8AAFC8">9,6 / 10</text>
+
+  <!-- Platform 3 - green (vrbo/homeaway style) -->
+  <circle cx="300" cy="316" r="22" fill="url(#plat3)" filter="url(#platShadow)"/>
+  <circle cx="300" cy="316" r="18" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.3"/>
+  <!-- House icon -->
+  <polygon points="300,304 308,312 292,312" fill="#FFFFFF" opacity="0.9"/>
+  <rect x="294" y="312" width="12" height="9" rx="1" fill="#FFFFFF" opacity="0.9"/>
+  <rect x="298" y="315" width="4" height="6" rx="1" fill="url(#plat3)"/>
+  <text x="300" y="348" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#8AAFC8">4,8 ★</text>
+
+  <!-- Verified badge -->
+  <rect x="352" y="298" width="154" height="54" rx="8" fill="#1A2E4A" stroke="#D4A853" stroke-width="1" filter="url(#platShadow)"/>
+  <!-- Checkmark circle -->
+  <circle cx="374" cy="318" r="12" fill="#D4A853"/>
+  <path d="M368,318 L372,322 L381,313" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="392" y="314" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#D4A853">Superhost</text>
+  <text x="392" y="327" font-family="Arial, sans-serif" font-size="7.5" fill="#FFFFFF" opacity="0.8">847 avis vérifiés</text>
+  <!-- Stars row small -->
+  <text x="392" y="342" font-family="Arial, sans-serif" font-size="10" fill="#D4A853">★★★★★ 5,0</text>
+
+  <!-- AVIS CLIENTS label -->
+  <rect x="180" y="10" width="160" height="28" rx="5" fill="url(#badgeGold)" opacity="0.9"/>
+  <text x="260" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#0F1E38" letter-spacing="1">AVIS CLIENTS</text>
+</svg>

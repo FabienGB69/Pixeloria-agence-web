@@ -1,9 +1,140 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Confiance contractors">
-  <rect width="1200" height="800" fill="#FFFFFF"/>
-  <rect x="80" y="80" width="1040" height="640" rx="32" fill="#ffffff" stroke="#D6CFC4"/>
-  <circle cx="220" cy="220" r="70" fill="#D97706" opacity="0.15"/>
-  <rect x="330" y="180" width="650" height="26" rx="13" fill="#1F2933" opacity="0.15"/>
-  <rect x="330" y="230" width="520" height="22" rx="11" fill="#5F6B7A" opacity="0.18"/>
-  <rect x="170" y="360" width="860" height="250" rx="24" fill="#F8F5EF" stroke="#E5E0D8"/>
-  <text x="600" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#1F2933">Confiance contractors</text>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" width="520" height="360">
+  <defs>
+    <linearGradient id="ct-g3-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0e1c2e"/>
+      <stop offset="100%" style="stop-color:#162438"/>
+    </linearGradient>
+    <linearGradient id="ct-g3-shield1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E3A5F"/>
+      <stop offset="100%" style="stop-color:#243f6a"/>
+    </linearGradient>
+    <linearGradient id="ct-g3-shield2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F97316"/>
+      <stop offset="100%" style="stop-color:#e06010"/>
+    </linearGradient>
+    <linearGradient id="ct-g3-shield3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E3A5F"/>
+      <stop offset="100%" style="stop-color:#162d4a"/>
+    </linearGradient>
+    <linearGradient id="ct-g3-glow1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%" id="glow1-radial">
+      <stop offset="0%" style="stop-color:#1E3A5F;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#1E3A5F;stop-opacity:0"/>
+    </linearGradient>
+    <filter id="ct-g3-shadow">
+      <feDropShadow dx="3" dy="6" stdDeviation="8" flood-color="#00000066"/>
+    </filter>
+    <filter id="ct-g3-glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="ct-g3-innerGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="520" height="360" fill="url(#ct-g3-bg)"/>
+
+  <!-- Subtle radial glows behind each shield -->
+  <radialGradient id="ct-g3-glow1r" cx="22%" cy="55%" r="20%">
+    <stop offset="0%" style="stop-color:#1E3A5F;stop-opacity:0.5"/>
+    <stop offset="100%" style="stop-color:#1E3A5F;stop-opacity:0"/>
+  </radialGradient>
+  <radialGradient id="ct-g3-glow2r" cx="50%" cy="55%" r="22%">
+    <stop offset="0%" style="stop-color:#F97316;stop-opacity:0.35"/>
+    <stop offset="100%" style="stop-color:#F97316;stop-opacity:0"/>
+  </radialGradient>
+  <radialGradient id="ct-g3-glow3r" cx="78%" cy="55%" r="20%">
+    <stop offset="0%" style="stop-color:#1E3A5F;stop-opacity:0.5"/>
+    <stop offset="100%" style="stop-color:#1E3A5F;stop-opacity:0"/>
+  </radialGradient>
+  <ellipse cx="115" cy="195" rx="105" ry="90" fill="url(#ct-g3-glow1r)"/>
+  <ellipse cx="260" cy="195" rx="115" ry="95" fill="url(#ct-g3-glow2r)"/>
+  <ellipse cx="405" cy="195" rx="105" ry="90" fill="url(#ct-g3-glow3r)"/>
+
+  <!-- ===== LABEL TOP ===== -->
+  <rect x="0" y="0" width="520" height="40" fill="#0e1c2e"/>
+  <rect x="0" y="37" width="520" height="3" fill="#F97316"/>
+  <text x="260" y="27" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" letter-spacing="2">OUR GUARANTEE</text>
+
+  <!-- === SHIELD 1: QUALITY (left) === -->
+  <g transform="translate(115, 195)" filter="url(#ct-g3-shadow)">
+    <!-- Shield shape -->
+    <path d="M0 -105 L72 -75 L72 15 Q72 75 0 100 Q-72 75 -72 15 L-72 -75 Z" fill="url(#ct-g3-shield1)"/>
+    <path d="M0 -98 L66 -70 L66 16 Q66 70 0 93 Q-66 70 -66 16 L-66 -70 Z" fill="none" stroke="#2a4f7a" stroke-width="2"/>
+    <!-- Inner shield accent ring -->
+    <path d="M0 -85 L55 -60 L55 16 Q55 60 0 80 Q-55 60 -55 16 L-55 -60 Z" fill="none" stroke="#F97316" stroke-width="1" opacity="0.4"/>
+    <!-- STAR icon -->
+    <polygon points="0,-52 8,-28 34,-28 14,-12 22,14 0,-2 -22,14 -14,-12 -34,-28 -8,-28" fill="#F97316" filter="url(#ct-g3-innerGlow)"/>
+    <!-- Checkmark at bottom of icon -->
+    <polyline points="-14,30 -4,42 20,18" stroke="#F97316" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <!-- Label -->
+    <text x="0" y="116" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">QUALITY</text>
+    <text x="0" y="133" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94A3B8">ISO Certified</text>
+    <text x="0" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94A3B8">Standards</text>
+    <!-- Stars row -->
+    <text x="0" y="163" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#F97316">★★★★★</text>
+  </g>
+
+  <!-- === SHIELD 2: EXPERTISE (center, orange - FEATURED) === -->
+  <g transform="translate(260, 195)" filter="url(#ct-g3-shadow)">
+    <!-- Larger shield for center featured badge -->
+    <path d="M0 -115 L80 -82 L80 18 Q80 86 0 112 Q-80 86 -80 18 L-80 -82 Z" fill="url(#ct-g3-shield2)" filter="url(#ct-g3-glow)"/>
+    <path d="M0 -107 L73 -76 L73 18 Q73 79 0 104 Q-73 79 -73 18 L-73 -76 Z" fill="none" stroke="white" stroke-width="2" opacity="0.5"/>
+    <path d="M0 -96 L63 -68 L63 17 Q63 68 0 90 Q-63 68 -63 17 L-63 -68 Z" fill="none" stroke="white" stroke-width="1" opacity="0.25"/>
+    <!-- WRENCH icon -->
+    <!-- Wrench head -->
+    <ellipse cx="-12" cy="-45" rx="16" ry="16" fill="none" stroke="white" stroke-width="4"/>
+    <rect x="-24" cy="-30" width="8" height="60" rx="4" fill="white" transform="rotate(-45, -12, -30)"/>
+    <!-- Wrench tail detail -->
+    <path d="M8 -12 L28 22 Q32 28 26 32 L22 28 L2 -4 Z" fill="white" opacity="0.9"/>
+    <!-- TOP badge -->
+    <rect x="-38" y="-138" width="76" height="20" rx="5" fill="white"/>
+    <text x="0" y="-124" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#F97316">FEATURED</text>
+    <!-- Label -->
+    <text x="0" y="126" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="white">EXPERTISE</text>
+    <text x="0" y="144" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ffe0c0">Licensed &amp;</text>
+    <text x="0" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ffe0c0">Insured</text>
+    <!-- Stars row -->
+    <text x="0" y="174" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="white">★★★★★</text>
+  </g>
+
+  <!-- === SHIELD 3: TIMELY DELIVERY (right) === -->
+  <g transform="translate(405, 195)" filter="url(#ct-g3-shadow)">
+    <path d="M0 -105 L72 -75 L72 15 Q72 75 0 100 Q-72 75 -72 15 L-72 -75 Z" fill="url(#ct-g3-shield3)"/>
+    <path d="M0 -98 L66 -70 L66 16 Q66 70 0 93 Q-66 70 -66 16 L-66 -70 Z" fill="none" stroke="#2a4f7a" stroke-width="2"/>
+    <path d="M0 -85 L55 -60 L55 16 Q55 60 0 80 Q-55 60 -55 16 L-55 -60 Z" fill="none" stroke="#F97316" stroke-width="1" opacity="0.4"/>
+    <!-- CALENDAR / CLOCK icon -->
+    <!-- Clock circle -->
+    <circle cx="0" cy="-30" r="32" fill="none" stroke="white" stroke-width="3.5"/>
+    <circle cx="0" cy="-30" r="3" fill="white"/>
+    <!-- Clock hands -->
+    <line x1="0" y1="-30" x2="0" y2="-52" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    <line x1="0" y1="-30" x2="18" y2="-24" stroke="#F97316" stroke-width="3" stroke-linecap="round"/>
+    <!-- Clock tick marks -->
+    <g stroke="white" stroke-width="1.5" opacity="0.5">
+      <line x1="0" y1="-60" x2="0" y2="-55"/>
+      <line x1="0" y1="-2" x2="0" y2="-7"/>
+      <line x1="30" y1="-30" x2="25" y2="-30"/>
+      <line x1="-30" y1="-30" x2="-25" y2="-30"/>
+    </g>
+    <!-- ON TIME badge below clock -->
+    <rect x="-28" y="8" width="56" height="18" rx="4" fill="#F97316"/>
+    <text x="0" y="21" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white">ON TIME</text>
+    <!-- Label -->
+    <text x="0" y="116" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">DELIVERY</text>
+    <text x="0" y="133" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94A3B8">On-schedule</text>
+    <text x="0" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94A3B8">Guaranteed</text>
+    <!-- Stars row -->
+    <text x="0" y="163" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#F97316">★★★★★</text>
+  </g>
+
+  <!-- Connector dividers between badges -->
+  <line x1="188" y1="90" x2="188" y2="310" stroke="#2a4f7a" stroke-width="1" stroke-dasharray="4,4" opacity="0.5"/>
+  <line x1="332" y1="90" x2="332" y2="310" stroke="#2a4f7a" stroke-width="1" stroke-dasharray="4,4" opacity="0.5"/>
+
+  <!-- Bottom trust statement -->
+  <rect x="100" y="328" width="320" height="24" rx="6" fill="#1E3A5F" opacity="0.8"/>
+  <text x="260" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">Trusted by 500+ homeowners since 2005</text>
+</svg>

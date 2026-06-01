@@ -1,9 +1,200 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Realisation conciergerie">
-  <rect width="1200" height="800" fill="#E5E0D8"/>
-  <rect x="80" y="80" width="1040" height="640" rx="32" fill="#ffffff" stroke="#D6CFC4"/>
-  <circle cx="220" cy="220" r="70" fill="#D97706" opacity="0.15"/>
-  <rect x="330" y="180" width="650" height="26" rx="13" fill="#1F2933" opacity="0.15"/>
-  <rect x="330" y="230" width="520" height="22" rx="11" fill="#5F6B7A" opacity="0.18"/>
-  <rect x="170" y="360" width="860" height="250" rx="24" fill="#F8F5EF" stroke="#E5E0D8"/>
-  <text x="600" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#1F2933">Realisation conciergerie</text>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="dashBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F2F6FA"/>
+      <stop offset="100%" stop-color="#E8EFF6"/>
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0F1E38"/>
+      <stop offset="100%" stop-color="#1A3050"/>
+    </linearGradient>
+    <linearGradient id="bookedGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#D4A853"/>
+      <stop offset="100%" stop-color="#E8C870"/>
+    </linearGradient>
+    <linearGradient id="availGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5AC878"/>
+      <stop offset="100%" stop-color="#7AE890"/>
+    </linearGradient>
+    <linearGradient id="partialGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF9A60"/>
+      <stop offset="100%" stop-color="#FFB880"/>
+    </linearGradient>
+    <linearGradient id="statCardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8F4EE"/>
+    </linearGradient>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#0F1E38" flood-opacity="0.12"/>
+    </filter>
+    <filter id="panelShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0F1E38" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Dashboard background -->
+  <rect width="520" height="360" fill="url(#dashBg)"/>
+
+  <!-- Top header bar -->
+  <rect x="0" y="0" width="520" height="52" fill="url(#headerGrad)"/>
+  <!-- Header logo/title -->
+  <text x="24" y="22" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#D4A853" letter-spacing="1">PIXELORIA</text>
+  <text x="24" y="38" font-family="Arial, sans-serif" font-size="8" fill="#8AAFC8" letter-spacing="0.5">Conciergerie · Tableau de bord</text>
+  <!-- Nav items -->
+  <rect x="280" y="16" width="52" height="20" rx="4" fill="#1A2E4A"/>
+  <text x="306" y="29" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#8AAFC8">Réservations</text>
+  <rect x="340" y="16" width="44" height="20" rx="4" fill="#D4A853"/>
+  <text x="362" y="29" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#0F1E38" font-weight="700">Calendrier</text>
+  <rect x="392" y="16" width="38" height="20" rx="4" fill="#1A2E4A"/>
+  <text x="411" y="29" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#8AAFC8">Finances</text>
+  <rect x="438" y="16" width="36" height="20" rx="4" fill="#1A2E4A"/>
+  <text x="456" y="29" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#8AAFC8">Avis</text>
+  <!-- Avatar circle -->
+  <circle cx="492" cy="26" r="14" fill="#D4A853" opacity="0.2"/>
+  <circle cx="492" cy="26" r="10" fill="#D4A853" opacity="0.9"/>
+  <text x="492" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#0F1E38">LP</text>
+
+  <!-- Month heading -->
+  <text x="24" y="80" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0F1E38">Juin 2026</text>
+  <!-- Month navigation arrows -->
+  <polygon points="248,72 254,66 254,78" fill="#0F1E38" opacity="0.5"/>
+  <polygon points="270,72 264,66 264,78" fill="#D4A853"/>
+
+  <!-- Occupancy badge -->
+  <rect x="286" y="62" width="98" height="26" rx="6" fill="#0F1E38"/>
+  <text x="335" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#FFFFFF">Occupation : </text>
+  <text x="395" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#D4A853">87 %</text>
+
+  <!-- Calendar panel -->
+  <rect x="16" y="92" width="330" height="240" rx="10" fill="#FFFFFF" filter="url(#panelShadow)"/>
+
+  <!-- Day names row -->
+  <rect x="16" y="92" width="330" height="28" rx="10" fill="#F5F0EA"/>
+  <rect x="16" y="108" width="330" height="12" fill="#F5F0EA"/>
+  <!-- Day labels -->
+  <text x="40" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#8A8880">LUN</text>
+  <text x="87" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#8A8880">MAR</text>
+  <text x="134" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#8A8880">MER</text>
+  <text x="181" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#8A8880">JEU</text>
+  <text x="228" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#8A8880">VEN</text>
+  <text x="275" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#D4A853" font-weight="600">SAM</text>
+  <text x="322" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#D4A853" font-weight="600">DIM</text>
+
+  <!-- Calendar grid lines -->
+  <line x1="16" y1="120" x2="346" y2="120" stroke="#EEE8E0" stroke-width="1"/>
+  <line x1="16" y1="155" x2="346" y2="155" stroke="#EEE8E0" stroke-width="1"/>
+  <line x1="16" y1="190" x2="346" y2="190" stroke="#EEE8E0" stroke-width="1"/>
+  <line x1="16" y1="225" x2="346" y2="225" stroke="#EEE8E0" stroke-width="1"/>
+  <line x1="16" y1="260" x2="346" y2="260" stroke="#EEE8E0" stroke-width="1"/>
+  <!-- Vertical lines -->
+  <line x1="63" y1="120" x2="63" y2="330" stroke="#EEE8E0" stroke-width="0.8"/>
+  <line x1="110" y1="120" x2="110" y2="330" stroke="#EEE8E0" stroke-width="0.8"/>
+  <line x1="157" y1="120" x2="157" y2="330" stroke="#EEE8E0" stroke-width="0.8"/>
+  <line x1="204" y1="120" x2="204" y2="330" stroke="#EEE8E0" stroke-width="0.8"/>
+  <line x1="251" y1="120" x2="251" y2="330" stroke="#EEE8E0" stroke-width="0.8"/>
+  <line x1="298" y1="120" x2="298" y2="330" stroke="#EEE8E0" stroke-width="0.8"/>
+
+  <!-- Day numbers row 1 (Mon-Sun) -->
+  <!-- Row 1 day numbers -->
+  <text x="40" y="136" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4A4A50">1</text>
+  <text x="87" y="136" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4A4A50">2</text>
+  <text x="134" y="136" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4A4A50">3</text>
+  <text x="181" y="136" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4A4A50">4</text>
+  <text x="228" y="136" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4A4A50">5</text>
+  <text x="275" y="136" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#C9A030" font-weight="600">6</text>
+  <text x="322" y="136" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#C9A030" font-weight="600">7</text>
+  <!-- Booked block row 1: Tue-Fri -->
+  <rect x="68" y="122" width="180" height="30" rx="4" fill="url(#bookedGrad)" opacity="0.85"/>
+  <text x="158" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="7.5" font-weight="700" fill="#0F1E38">Réservé · M. Dupont</text>
+
+  <!-- Row 2 day numbers -->
+  <text x="40" y="171" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4A4A50">8</text>
+  <text x="87" y="171" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4A4A50">9</text>
+  <text x="134" y="171" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4A4A50">10</text>
+  <text x="181" y="171" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4A4A50">11</text>
+  <text x="228" y="171" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4A4A50">12</text>
+  <text x="275" y="171" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#C9A030" font-weight="600">13</text>
+  <text x="322" y="171" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#C9A030" font-weight="600">14</text>
+  <!-- Available blocks row 2 -->
+  <rect x="18" y="157" width="44" height="30" rx="4" fill="url(#availGrad)" opacity="0.7"/>
+  <text x="40" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#1A4A28">Libre</text>
+  <rect x="253" y="157" width="44" height="30" rx="4" fill="url(#availGrad)" opacity="0.7"/>
+  <text x="275" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#1A4A28">Libre</text>
+  <rect x="300" y="157" width="46" height="30" rx="4" fill="url(#availGrad)" opacity="0.7"/>
+  <text x="323" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#1A4A28">Libre</text>
+  <!-- Booked continued row 2 -->
+  <rect x="68" y="157" width="180" height="30" rx="4" fill="url(#bookedGrad)" opacity="0.85"/>
+  <text x="158" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="7.5" font-weight="700" fill="#0F1E38">Réservé · M. Dupont</text>
+
+  <!-- Row 3 day numbers -->
+  <text x="40" y="206" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4A4A50">15</text>
+  <text x="87" y="206" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4A4A50">16</text>
+  <text x="134" y="206" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4A4A50">17</text>
+  <text x="181" y="206" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4A4A50">18</text>
+  <text x="228" y="206" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4A4A50">19</text>
+  <text x="275" y="206" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#C9A030" font-weight="600">20</text>
+  <text x="322" y="206" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#C9A030" font-weight="600">21</text>
+  <!-- Today highlight -->
+  <circle cx="134" cy="200" r="12" fill="#0F1E38"/>
+  <text x="134" y="206" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF">17</text>
+  <!-- Partial block row 3 -->
+  <rect x="18" y="192" width="44" height="30" rx="4" fill="url(#availGrad)" opacity="0.7"/>
+  <text x="40" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#1A4A28">Libre</text>
+  <rect x="157" y="192" width="188" height="30" rx="4" fill="url(#partialGrad)" opacity="0.85"/>
+  <text x="251" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="7.5" font-weight="700" fill="#7A2800">Réservé · Mme Martin</text>
+
+  <!-- Row 4 day numbers -->
+  <text x="40" y="241" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4A4A50">22</text>
+  <text x="87" y="241" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4A4A50">23</text>
+  <text x="134" y="241" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4A4A50">24</text>
+  <text x="181" y="241" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4A4A50">25</text>
+  <text x="228" y="241" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4A4A50">26</text>
+  <text x="275" y="241" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#C9A030" font-weight="600">27</text>
+  <text x="322" y="241" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#C9A030" font-weight="600">28</text>
+  <!-- Booked block row 4 -->
+  <rect x="18" y="227" width="328" height="30" rx="4" fill="url(#bookedGrad)" opacity="0.85"/>
+  <text x="182" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="7.5" font-weight="700" fill="#0F1E38">Réservé · Famille Chen (7 nuits)</text>
+
+  <!-- Row 5 -->
+  <text x="40" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4A4A50">29</text>
+  <text x="87" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4A4A50">30</text>
+  <!-- Available end of month -->
+  <rect x="18" y="262" width="136" height="30" rx="4" fill="url(#availGrad)" opacity="0.7"/>
+  <text x="87" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#1A4A28">Disponible</text>
+
+  <!-- Legend -->
+  <rect x="18" y="300" width="12" height="12" rx="2" fill="url(#bookedGrad)"/>
+  <text x="36" y="310" font-family="Arial, sans-serif" font-size="8" fill="#4A4A50">Réservé</text>
+  <rect x="90" y="300" width="12" height="12" rx="2" fill="url(#availGrad)"/>
+  <text x="108" y="310" font-family="Arial, sans-serif" font-size="8" fill="#4A4A50">Disponible</text>
+  <rect x="176" y="300" width="12" height="12" rx="2" fill="url(#partialGrad)"/>
+  <text x="194" y="310" font-family="Arial, sans-serif" font-size="8" fill="#4A4A50">Option</text>
+  <circle cx="248" cy="306" r="6" fill="#0F1E38"/>
+  <text x="266" y="310" font-family="Arial, sans-serif" font-size="8" fill="#4A4A50">Aujourd'hui</text>
+
+  <!-- Stats sidebar -->
+  <rect x="358" y="92" width="148" height="76" rx="10" fill="url(#statCardGrad)" filter="url(#cardShadow)"/>
+  <text x="432" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#8A8880">Taux d'occupation</text>
+  <text x="432" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#D4A853">87%</text>
+  <!-- Occupancy bar -->
+  <rect x="372" y="152" width="120" height="8" rx="4" fill="#EEE8E0"/>
+  <rect x="372" y="152" width="104" height="8" rx="4" fill="url(#bookedGrad)"/>
+
+  <rect x="358" y="178" width="148" height="60" rx="10" fill="url(#statCardGrad)" filter="url(#cardShadow)"/>
+  <text x="432" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#8A8880">Revenus juin</text>
+  <text x="432" y="224" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#0F1E38">4 200 €</text>
+
+  <rect x="358" y="248" width="68" height="56" rx="10" fill="url(#statCardGrad)" filter="url(#cardShadow)"/>
+  <text x="392" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#8A8880">Séjours</text>
+  <text x="392" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#0F1E38">12</text>
+
+  <rect x="438" y="248" width="68" height="56" rx="10" fill="url(#statCardGrad)" filter="url(#cardShadow)"/>
+  <text x="472" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#8A8880">Note moy.</text>
+  <text x="472" y="286" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#D4A853">4,9</text>
+  <text x="472" y="298" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#D4A853">★★★★★</text>
+
+  <!-- GESTION LOCATIVE label -->
+  <rect x="358" y="314" width="148" height="28" rx="5" fill="#0F1E38" opacity="0.9"/>
+  <rect x="361" y="317" width="142" height="22" rx="4" fill="none" stroke="#D4A853" stroke-width="1"/>
+  <text x="432" y="332" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="10" fill="#D4A853" letter-spacing="0.5">GESTION LOCATIVE</text>
+</svg>

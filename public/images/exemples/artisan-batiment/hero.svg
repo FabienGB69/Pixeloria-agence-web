@@ -1,266 +1,289 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560" role="img" aria-label="Façade de maison en cours de rénovation avec échafaudage et ouvrier">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-label="Rénovation de façade de maison par un artisan maçon professionnel avec échafaudage">
   <defs>
-    <!-- Sky gradient -->
     <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#B8D4E8"/>
-      <stop offset="60%" stop-color="#D8E8F0"/>
+      <stop offset="0%" stop-color="#C8D8E8"/>
+      <stop offset="55%" stop-color="#D8C8A8"/>
       <stop offset="100%" stop-color="#EAD8C0"/>
     </linearGradient>
-    <!-- Old render gradient (crumbling) -->
-    <linearGradient id="oldRenderGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#C8B89A"/>
-      <stop offset="100%" stop-color="#B8A888"/>
-    </linearGradient>
-    <!-- New render gradient (fresh) -->
-    <linearGradient id="newRenderGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#F0EBE0"/>
-      <stop offset="100%" stop-color="#F5F0E8"/>
-    </linearGradient>
-    <!-- Ground gradient -->
     <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#8B7355"/>
       <stop offset="100%" stop-color="#6B5535"/>
     </linearGradient>
-    <!-- Shadow filter -->
-    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
-      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#00000030"/>
+    <linearGradient id="oldRenderGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C4B090"/>
+      <stop offset="100%" stop-color="#B8A078"/>
+    </linearGradient>
+    <linearGradient id="newRenderGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F0EBE0"/>
+      <stop offset="100%" stop-color="#F5F0E8"/>
+    </linearGradient>
+    <linearGradient id="boardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#A08060"/>
+      <stop offset="100%" stop-color="#7B6040"/>
+    </linearGradient>
+    <linearGradient id="cementGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D0C8B8"/>
+      <stop offset="100%" stop-color="#B0A898"/>
+    </linearGradient>
+    <linearGradient id="workerGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A90D9"/>
+      <stop offset="100%" stop-color="#2B6CB0"/>
+    </linearGradient>
+    <linearGradient id="roofGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A3A2A"/>
+      <stop offset="100%" stop-color="#3A2A1A"/>
+    </linearGradient>
+    <filter id="dropShadow">
+      <feDropShadow dx="3" dy="4" stdDeviation="4" flood-color="#1C1917" flood-opacity="0.25"/>
     </filter>
-    <!-- Soft shadow filter -->
-    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%">
-      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#00000025"/>
+    <filter id="softShadow">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-color="#1C1917" flood-opacity="0.20"/>
     </filter>
-    <!-- Scaffold pattern -->
-    <pattern id="woodPlanks" x="0" y="0" width="40" height="8" patternUnits="userSpaceOnUse">
-      <rect width="40" height="8" fill="#A07840"/>
-      <rect width="40" height="1" fill="#8B6830" opacity="0.5"/>
+    <pattern id="crackPat" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <line x1="5" y1="10" x2="18" y2="25" stroke="#998870" stroke-width="0.8" opacity="0.6"/>
+      <line x1="18" y1="25" x2="12" y2="38" stroke="#998870" stroke-width="0.6" opacity="0.5"/>
+      <line x1="35" y1="5" x2="45" y2="20" stroke="#998870" stroke-width="0.7" opacity="0.5"/>
+      <line x1="45" y1="20" x2="38" y2="35" stroke="#998870" stroke-width="0.5" opacity="0.4"/>
+      <line x1="10" y1="45" x2="28" y2="55" stroke="#998870" stroke-width="0.6" opacity="0.4"/>
+    </pattern>
+    <pattern id="brickPat" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect width="40" height="20" fill="#C87050"/>
+      <rect x="0.5" y="0.5" width="37" height="8.5" fill="#C07848" rx="0.5"/>
+      <rect x="20.5" y="10.5" width="37" height="8.5" fill="#C07848" rx="0.5"/>
+      <rect x="-19.5" y="10.5" width="37" height="8.5" fill="#C07848" rx="0.5"/>
+      <line x1="0" y1="10" x2="40" y2="10" stroke="#8B6545" stroke-width="1"/>
+      <line x1="20" y1="0" x2="20" y2="10" stroke="#8B6545" stroke-width="0.8"/>
+      <line x1="0" y1="10" x2="0" y2="20" stroke="#8B6545" stroke-width="0.8"/>
     </pattern>
   </defs>
 
-  <!-- SKY BACKGROUND -->
+  <!-- Sky -->
   <rect width="900" height="560" fill="url(#skyGrad)"/>
 
   <!-- Clouds -->
-  <ellipse cx="120" cy="70" rx="60" ry="22" fill="white" opacity="0.7"/>
-  <ellipse cx="160" cy="60" rx="45" ry="18" fill="white" opacity="0.7"/>
-  <ellipse cx="90" cy="75" rx="35" ry="16" fill="white" opacity="0.6"/>
+  <ellipse cx="120" cy="78" rx="70" ry="22" fill="#FFFFFF" opacity="0.5"/>
+  <ellipse cx="155" cy="70" rx="50" ry="18" fill="#FFFFFF" opacity="0.45"/>
+  <ellipse cx="85" cy="76" rx="40" ry="16" fill="#FFFFFF" opacity="0.4"/>
+  <ellipse cx="700" cy="63" rx="80" ry="24" fill="#FFFFFF" opacity="0.45"/>
+  <ellipse cx="740" cy="55" rx="55" ry="18" fill="#FFFFFF" opacity="0.4"/>
+  <ellipse cx="660" cy="61" rx="45" ry="16" fill="#FFFFFF" opacity="0.35"/>
 
-  <ellipse cx="720" cy="50" rx="70" ry="24" fill="white" opacity="0.65"/>
-  <ellipse cx="760" cy="42" rx="50" ry="18" fill="white" opacity="0.65"/>
-  <ellipse cx="690" cy="55" rx="38" ry="15" fill="white" opacity="0.55"/>
+  <!-- Sun -->
+  <circle cx="820" cy="52" r="28" fill="#FFD580" opacity="0.7"/>
+  <circle cx="820" cy="52" r="20" fill="#FFE5A0" opacity="0.8"/>
+  <line x1="820" y1="16" x2="820" y2="8" stroke="#FFD580" stroke-width="2" opacity="0.6"/>
+  <line x1="848" y1="24" x2="854" y2="18" stroke="#FFD580" stroke-width="2" opacity="0.6"/>
+  <line x1="857" y1="52" x2="865" y2="52" stroke="#FFD580" stroke-width="2" opacity="0.6"/>
+  <line x1="848" y1="80" x2="854" y2="86" stroke="#FFD580" stroke-width="2" opacity="0.6"/>
+  <line x1="792" y1="24" x2="786" y2="18" stroke="#FFD580" stroke-width="2" opacity="0.6"/>
 
-  <!-- GROUND -->
-  <rect x="0" y="440" width="900" height="120" fill="url(#groundGrad)"/>
-  <!-- Ground texture lines -->
-  <line x1="0" y1="445" x2="900" y2="445" stroke="#7A6345" stroke-width="1" opacity="0.5"/>
-  <line x1="0" y1="460" x2="900" y2="460" stroke="#7A6345" stroke-width="0.5" opacity="0.3"/>
+  <!-- Ground -->
+  <rect x="0" y="430" width="900" height="130" fill="url(#groundGrad)"/>
+  <rect x="0" y="430" width="900" height="5" fill="#9B8365" opacity="0.5"/>
 
-  <!-- HOUSE BASE STRUCTURE -->
-  <!-- House body left half (old crumbling render) -->
-  <rect x="80" y="120" width="370" height="330" fill="url(#oldRenderGrad)" filter="url(#shadow)"/>
+  <!-- House roof left -->
+  <polygon points="50,180 250,62 450,180" fill="url(#roofGrad)"/>
+  <rect x="50" y="178" width="400" height="6" fill="#2A1A0A" opacity="0.5"/>
+  <!-- House roof right -->
+  <polygon points="450,180 635,62 820,180" fill="#4A3A2A"/>
+  <rect x="450" y="178" width="370" height="6" fill="#2A1A0A" opacity="0.4"/>
 
-  <!-- House body right half (fresh new render) -->
-  <rect x="450" y="120" width="370" height="330" fill="url(#newRenderGrad)" filter="url(#shadow)"/>
+  <!-- Chimney -->
+  <rect x="180" y="82" width="30" height="58" fill="#8B7355"/>
+  <rect x="176" y="78" width="38" height="8" fill="#6B5535"/>
 
-  <!-- ROOF - left side (old tiles) -->
-  <polygon points="55,120 450,120 450,60 252,30" fill="#8B6040"/>
-  <polygon points="55,120 252,30 60,30" fill="#7A5030"/>
-  <!-- Roof tiles left -->
-  <rect x="80" y="40" width="350" height="8" fill="none" stroke="#6B4020" stroke-width="1.5" opacity="0.5"/>
-  <rect x="80" y="55" width="350" height="8" fill="none" stroke="#6B4020" stroke-width="1.5" opacity="0.5"/>
-  <rect x="80" y="70" width="350" height="8" fill="none" stroke="#6B4020" stroke-width="1.5" opacity="0.5"/>
-  <rect x="80" y="85" width="350" height="8" fill="none" stroke="#6B4020" stroke-width="1.5" opacity="0.5"/>
-  <rect x="80" y="100" width="350" height="8" fill="none" stroke="#6B4020" stroke-width="1.5" opacity="0.5"/>
-
-  <!-- ROOF - right side (new tiles) -->
-  <polygon points="450,120 845,120 840,60 648,30" fill="#A07050"/>
-  <polygon points="840,60 648,30 840,30" fill="#8B6040"/>
-  <!-- Roof tiles right -->
-  <rect x="450" y="40" width="370" height="8" fill="none" stroke="#8B6030" stroke-width="1.5" opacity="0.4"/>
-  <rect x="450" y="55" width="370" height="8" fill="none" stroke="#8B6030" stroke-width="1.5" opacity="0.4"/>
-  <rect x="450" y="70" width="370" height="8" fill="none" stroke="#8B6030" stroke-width="1.5" opacity="0.4"/>
-  <rect x="450" y="85" width="370" height="8" fill="none" stroke="#8B6030" stroke-width="1.5" opacity="0.4"/>
-  <rect x="450" y="100" width="370" height="8" fill="none" stroke="#8B6030" stroke-width="1.5" opacity="0.4"/>
-
-  <!-- CRUMBLING RENDER - left half details -->
-  <!-- Cracks and patches -->
-  <path d="M120,160 Q125,175 118,190 Q122,205 115,220" stroke="#A09080" stroke-width="1.5" fill="none" opacity="0.8"/>
-  <path d="M200,200 Q210,215 205,230 Q212,245 208,260" stroke="#A09080" stroke-width="1.5" fill="none" opacity="0.7"/>
-  <path d="M280,170 Q275,185 282,200" stroke="#A09080" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <!-- LEFT facade — old crumbling render -->
+  <rect x="80" y="180" width="340" height="250" fill="url(#oldRenderGrad)"/>
+  <rect x="80" y="180" width="340" height="250" fill="url(#crackPat)" opacity="0.9"/>
   <!-- Exposed brick patches -->
-  <rect x="130" y="280" width="16" height="9" rx="1" fill="#C87050" opacity="0.7"/>
-  <rect x="148" y="280" width="16" height="9" rx="1" fill="#C87050" opacity="0.7"/>
-  <rect x="122" y="291" width="20" height="9" rx="1" fill="#B86040" opacity="0.7"/>
-  <rect x="144" y="291" width="16" height="9" rx="1" fill="#C87050" opacity="0.6"/>
-  <rect x="162" y="291" width="10" height="9" rx="1" fill="#B86040" opacity="0.5"/>
-  <!-- Water stains -->
-  <path d="M350,130 Q348,160 345,200 Q342,240 344,280" stroke="#9A8878" stroke-width="3" fill="none" opacity="0.25"/>
-  <path d="M380,150 Q378,180 376,210" stroke="#9A8878" stroke-width="2" fill="none" opacity="0.2"/>
+  <rect x="100" y="225" width="70" height="50" fill="url(#brickPat)" opacity="0.9"/>
+  <rect x="280" y="295" width="75" height="38" fill="url(#brickPat)" opacity="0.85"/>
+  <rect x="155" y="365" width="50" height="28" fill="url(#brickPat)" opacity="0.8"/>
+  <!-- Peeling render -->
+  <path d="M170 222 Q182 212 196 226 Q185 232 170 222Z" fill="#B0A080" opacity="0.7"/>
+  <path d="M282 342 Q296 332 310 348 Q298 354 282 342Z" fill="#B0A080" opacity="0.6"/>
+  <!-- Staining -->
+  <rect x="80" y="180" width="340" height="250" fill="#7B6A50" opacity="0.08"/>
+  <!-- Efflorescence -->
+  <ellipse cx="200" cy="248" rx="28" ry="14" fill="#E0D8C0" opacity="0.3"/>
+  <ellipse cx="350" cy="332" rx="22" ry="10" fill="#E0D8C0" opacity="0.25"/>
 
-  <!-- FRESH RENDER - right half texture -->
-  <!-- Smooth texture lines for fresh render -->
-  <path d="M470,130 Q520,132 570,130" stroke="#E8E0D5" stroke-width="1" fill="none" opacity="0.6"/>
-  <path d="M470,145 Q520,147 570,145" stroke="#E8E0D5" stroke-width="1" fill="none" opacity="0.5"/>
-  <path d="M470,160 Q570,162 670,160" stroke="#E8E0D5" stroke-width="1" fill="none" opacity="0.4"/>
-  <!-- Corner bead -->
-  <rect x="820" y="120" width="6" height="330" fill="#D8D0C5" opacity="0.6"/>
+  <!-- Left windows — old dirty -->
+  <rect x="112" y="212" width="70" height="85" fill="#B8D4E8"/>
+  <rect x="112" y="212" width="70" height="85" fill="#1C1917" opacity="0.3"/>
+  <rect x="110" y="210" width="74" height="89" fill="none" stroke="#7B6345" stroke-width="4"/>
+  <line x1="147" y1="212" x2="147" y2="297" stroke="#7B6345" stroke-width="2"/>
+  <line x1="112" y1="254" x2="182" y2="254" stroke="#7B6345" stroke-width="2"/>
+  <rect x="112" y="212" width="70" height="85" fill="#8B7355" opacity="0.15"/>
 
-  <!-- LEFT WINDOW (old, weathered) -->
-  <rect x="120" y="180" width="100" height="120" rx="3" fill="#B8D4E8" opacity="0.6" filter="url(#softShadow)"/>
-  <rect x="120" y="180" width="100" height="120" rx="3" fill="none" stroke="#8B7355" stroke-width="3"/>
-  <line x1="170" y1="180" x2="170" y2="300" stroke="#8B7355" stroke-width="2"/>
-  <line x1="120" y1="240" x2="220" y2="240" stroke="#8B7355" stroke-width="2"/>
-  <!-- Window weathering -->
-  <rect x="120" y="180" width="100" height="8" fill="#8B7355" opacity="0.4"/>
-  <!-- Shutter left window -->
-  <rect x="98" y="180" width="20" height="120" rx="2" fill="#7A5535"/>
-  <line x1="103" y1="195" x2="113" y2="195" stroke="#5A3515" stroke-width="1.5"/>
-  <line x1="103" y1="210" x2="113" y2="210" stroke="#5A3515" stroke-width="1.5"/>
-  <line x1="103" y1="225" x2="113" y2="225" stroke="#5A3515" stroke-width="1.5"/>
-  <line x1="103" y1="240" x2="113" y2="240" stroke="#5A3515" stroke-width="1.5"/>
-  <line x1="103" y1="255" x2="113" y2="255" stroke="#5A3515" stroke-width="1.5"/>
-  <line x1="103" y1="270" x2="113" y2="270" stroke="#5A3515" stroke-width="1.5"/>
-  <line x1="103" y1="285" x2="113" y2="285" stroke="#5A3515" stroke-width="1.5"/>
+  <rect x="252" y="212" width="70" height="85" fill="#B8D4E8"/>
+  <rect x="252" y="212" width="70" height="85" fill="#1C1917" opacity="0.3"/>
+  <rect x="250" y="210" width="74" height="89" fill="none" stroke="#7B6345" stroke-width="4"/>
+  <line x1="287" y1="212" x2="287" y2="297" stroke="#7B6345" stroke-width="2"/>
+  <line x1="252" y1="254" x2="322" y2="254" stroke="#7B6345" stroke-width="2"/>
+  <rect x="252" y="212" width="70" height="85" fill="#8B7355" opacity="0.15"/>
 
-  <!-- RIGHT WINDOW (new, clean) -->
-  <rect x="590" y="175" width="110" height="130" rx="3" fill="#B8D4E8" opacity="0.8" filter="url(#softShadow)"/>
-  <rect x="590" y="175" width="110" height="130" rx="3" fill="none" stroke="#D0C8B8" stroke-width="3"/>
-  <line x1="645" y1="175" x2="645" y2="305" stroke="#D0C8B8" stroke-width="2"/>
-  <line x1="590" y1="240" x2="700" y2="240" stroke="#D0C8B8" stroke-width="2"/>
-  <!-- Window reflection -->
-  <path d="M598,183 Q608,193 598,203" stroke="white" stroke-width="2" fill="none" opacity="0.5"/>
-  <!-- New shutter -->
-  <rect x="702" y="175" width="22" height="130" rx="2" fill="#8B6340"/>
-  <line x1="707" y1="192" x2="719" y2="192" stroke="#6B4320" stroke-width="1.5"/>
-  <line x1="707" y1="208" x2="719" y2="208" stroke="#6B4320" stroke-width="1.5"/>
-  <line x1="707" y1="224" x2="719" y2="224" stroke="#6B4320" stroke-width="1.5"/>
-  <line x1="707" y1="240" x2="719" y2="240" stroke="#6B4320" stroke-width="1.5"/>
-  <line x1="707" y1="256" x2="719" y2="256" stroke="#6B4320" stroke-width="1.5"/>
-  <line x1="707" y1="272" x2="719" y2="272" stroke="#6B4320" stroke-width="1.5"/>
-  <line x1="707" y1="288" x2="719" y2="288" stroke="#6B4320" stroke-width="1.5"/>
+  <!-- LEFT door — old -->
+  <rect x="150" y="342" width="55" height="88" fill="#7A5A35" rx="2"/>
+  <rect x="153" y="345" width="49" height="82" fill="#6A4A25" rx="1"/>
+  <circle cx="198" cy="388" r="4" fill="#8B7355"/>
 
-  <!-- DOOR (center) -->
-  <rect x="380" y="320" width="80" height="130" rx="4" fill="#5A3515"/>
-  <rect x="385" y="325" width="32" height="55" rx="2" fill="#4A2505"/>
-  <rect x="423" y="325" width="32" height="55" rx="2" fill="#4A2505"/>
-  <rect x="385" y="388" width="32" height="55" rx="2" fill="#4A2505"/>
-  <rect x="423" y="388" width="32" height="55" rx="2" fill="#4A2505"/>
-  <!-- Door handle -->
-  <circle cx="418" cy="387" r="4" fill="#F97316"/>
+  <!-- RIGHT facade — fresh new render -->
+  <rect x="420" y="180" width="360" height="250" fill="url(#newRenderGrad)" filter="url(#dropShadow)"/>
+  <!-- Subtle trowel-stroke texture -->
+  <line x1="440" y1="198" x2="505" y2="200" stroke="#E8E0D0" stroke-width="1.5" opacity="0.55"/>
+  <line x1="440" y1="209" x2="512" y2="211" stroke="#E8E0D0" stroke-width="1" opacity="0.45"/>
+  <line x1="440" y1="220" x2="492" y2="221" stroke="#E8E0D0" stroke-width="1.5" opacity="0.38"/>
+  <line x1="525" y1="198" x2="602" y2="201" stroke="#E8E0D0" stroke-width="1.5" opacity="0.5"/>
+  <line x1="525" y1="210" x2="595" y2="212" stroke="#E8E0D0" stroke-width="1" opacity="0.38"/>
+  <line x1="440" y1="265" x2="510" y2="267" stroke="#E8E0D0" stroke-width="1" opacity="0.35"/>
+  <line x1="530" y1="260" x2="610" y2="262" stroke="#E8E0D0" stroke-width="1" opacity="0.3"/>
+  <!-- Unfinished right strip -->
+  <rect x="703" y="180" width="77" height="250" fill="#DDD0B8" opacity="0.4"/>
+  <line x1="703" y1="180" x2="703" y2="430" stroke="#D0C0A0" stroke-width="2" opacity="0.6"/>
 
-  <!-- SCAFFOLDING STRUCTURE -->
-  <!-- Vertical poles -->
-  <rect x="430" y="110" width="10" height="345" rx="3" fill="#8B6830" filter="url(#shadow)"/>
-  <rect x="460" y="110" width="10" height="345" rx="3" fill="#7A5820"/>
-  <!-- Horizontal planks at different levels -->
-  <rect x="420" y="175" width="70" height="10" rx="2" fill="url(#woodPlanks)"/>
-  <rect x="420" y="265" width="70" height="10" rx="2" fill="url(#woodPlanks)"/>
-  <rect x="420" y="355" width="70" height="10" rx="2" fill="url(#woodPlanks)"/>
-  <!-- Cross bracing -->
-  <line x1="432" y1="120" x2="468" y2="175" stroke="#6B5020" stroke-width="3" opacity="0.7"/>
-  <line x1="468" y1="120" x2="432" y2="175" stroke="#6B5020" stroke-width="3" opacity="0.7"/>
-  <line x1="432" y1="185" x2="468" y2="260" stroke="#6B5020" stroke-width="3" opacity="0.7"/>
-  <line x1="468" y1="185" x2="432" y2="260" stroke="#6B5020" stroke-width="3" opacity="0.7"/>
-  <!-- Safety clamps -->
-  <circle cx="435" cy="175" r="5" fill="#C0A060"/>
-  <circle cx="465" cy="175" r="5" fill="#C0A060"/>
-  <circle cx="435" cy="265" r="5" fill="#C0A060"/>
-  <circle cx="465" cy="265" r="5" fill="#C0A060"/>
+  <!-- Right windows — clean new -->
+  <rect x="457" y="215" width="80" height="95" fill="#B8D4E8" rx="3"/>
+  <rect x="457" y="215" width="80" height="95" fill="#FFFFFF" opacity="0.28"/>
+  <polygon points="460 218 480 218 462 248" fill="#FFFFFF" opacity="0.22"/>
+  <rect x="454" y="212" width="88" height="101" fill="none" stroke="#D0C0A0" stroke-width="5" rx="2"/>
+  <line x1="498" y1="215" x2="498" y2="311" stroke="#D0C0A0" stroke-width="2.5"/>
+  <line x1="457" y1="262" x2="537" y2="262" stroke="#D0C0A0" stroke-width="2.5"/>
 
-  <!-- WORKER SILHOUETTE on scaffolding -->
-  <!-- Body -->
-  <rect x="435" y="235" width="22" height="28" rx="4" fill="#3D2E1A"/>
+  <rect x="600" y="215" width="80" height="95" fill="#B8D4E8" rx="3"/>
+  <rect x="600" y="215" width="80" height="95" fill="#FFFFFF" opacity="0.28"/>
+  <polygon points="603 218 623 218 605 248" fill="#FFFFFF" opacity="0.22"/>
+  <rect x="597" y="212" width="88" height="101" fill="none" stroke="#D0C0A0" stroke-width="5" rx="2"/>
+  <line x1="641" y1="215" x2="641" y2="311" stroke="#D0C0A0" stroke-width="2.5"/>
+  <line x1="600" y1="262" x2="680" y2="262" stroke="#D0C0A0" stroke-width="2.5"/>
+
+  <!-- Right door — new -->
+  <rect x="490" y="342" width="60" height="88" fill="#8B6A45" rx="3"/>
+  <rect x="493" y="345" width="54" height="82" fill="#7A5A35" rx="2"/>
+  <rect x="497" y="350" width="22" height="28" fill="#8B6845" rx="1" opacity="0.7"/>
+  <rect x="523" y="350" width="22" height="28" fill="#8B6845" rx="1" opacity="0.7"/>
+  <rect x="497" y="383" width="22" height="28" fill="#8B6845" rx="1" opacity="0.7"/>
+  <rect x="523" y="383" width="22" height="28" fill="#8B6845" rx="1" opacity="0.7"/>
+  <circle cx="545" cy="390" r="4" fill="#F97316"/>
+  <rect x="487" y="338" width="68" height="94" fill="none" stroke="#D0C0A0" stroke-width="5" rx="2"/>
+
+  <!-- SCAFFOLDING vertical poles -->
+  <rect x="400" y="88" width="10" height="348" fill="#7B6040" rx="2"/>
+  <rect x="430" y="88" width="10" height="348" fill="#7B6040" rx="2"/>
+  <!-- Cross braces -->
+  <line x1="400" y1="148" x2="440" y2="198" stroke="#6B5030" stroke-width="4" stroke-linecap="round"/>
+  <line x1="400" y1="198" x2="440" y2="148" stroke="#6B5030" stroke-width="4" stroke-linecap="round"/>
+  <line x1="400" y1="278" x2="440" y2="328" stroke="#6B5030" stroke-width="4" stroke-linecap="round"/>
+  <line x1="400" y1="328" x2="440" y2="278" stroke="#6B5030" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Upper scaffold platform boards -->
+  <rect x="372" y="194" width="112" height="14" fill="url(#boardGrad)" rx="2"/>
+  <line x1="385" y1="194" x2="385" y2="208" stroke="#5B4020" stroke-width="1" opacity="0.5"/>
+  <line x1="405" y1="194" x2="405" y2="208" stroke="#5B4020" stroke-width="1" opacity="0.5"/>
+  <line x1="425" y1="194" x2="425" y2="208" stroke="#5B4020" stroke-width="1" opacity="0.5"/>
+  <line x1="445" y1="194" x2="445" y2="208" stroke="#5B4020" stroke-width="1" opacity="0.5"/>
+  <line x1="465" y1="194" x2="465" y2="208" stroke="#5B4020" stroke-width="1" opacity="0.5"/>
+
+  <!-- Lower scaffold platform boards -->
+  <rect x="372" y="318" width="112" height="14" fill="url(#boardGrad)" rx="2"/>
+  <line x1="385" y1="318" x2="385" y2="332" stroke="#5B4020" stroke-width="1" opacity="0.5"/>
+  <line x1="405" y1="318" x2="405" y2="332" stroke="#5B4020" stroke-width="1" opacity="0.5"/>
+  <line x1="425" y1="318" x2="425" y2="332" stroke="#5B4020" stroke-width="1" opacity="0.5"/>
+  <line x1="445" y1="318" x2="445" y2="332" stroke="#5B4020" stroke-width="1" opacity="0.5"/>
+
+  <!-- Safety handrail -->
+  <line x1="372" y1="174" x2="484" y2="174" stroke="#9B8060" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- WORKER on upper platform -->
   <!-- Legs -->
-  <rect x="437" y="263" width="8" height="14" rx="2" fill="#2A1F10"/>
-  <rect x="449" y="263" width="8" height="14" rx="2" fill="#2A1F10"/>
-  <!-- Head with hard hat -->
-  <circle cx="446" cy="228" r="10" fill="#3D2E1A"/>
-  <ellipse cx="446" cy="220" rx="13" ry="7" fill="#F97316"/>
-  <rect x="433" y="220" width="26" height="5" rx="2" fill="#E06010"/>
-  <!-- Trowel arm -->
-  <line x1="457" y1="245" x2="482" y2="238" stroke="#3D2E1A" stroke-width="4" stroke-linecap="round"/>
-  <!-- Trowel blade -->
-  <polygon points="482,234 492,237 488,245 478,242" fill="#A0A0A0"/>
-  <!-- Vest hi-vis stripe -->
-  <rect x="435" y="247" width="22" height="3" fill="#F97316" opacity="0.9"/>
+  <rect x="412" y="192" width="10" height="14" fill="#2D3A4A" rx="2"/>
+  <rect x="424" y="192" width="10" height="14" fill="#2D3A4A" rx="2"/>
+  <!-- Boots -->
+  <rect x="410" y="204" width="13" height="7" fill="#1C1917" rx="2"/>
+  <rect x="422" y="204" width="13" height="7" fill="#1C1917" rx="2"/>
+  <!-- Body — blue work jacket -->
+  <rect x="409" y="150" width="28" height="43" fill="url(#workerGrad)" rx="4"/>
+  <!-- Head -->
+  <ellipse cx="423" cy="138" rx="11" ry="12" fill="#D4A574"/>
+  <!-- Hard hat (orange) -->
+  <ellipse cx="423" cy="130" rx="14" ry="5" fill="#F97316"/>
+  <rect x="410" y="125" width="26" height="8" fill="#F97316" rx="4"/>
+  <!-- Left arm extended with trowel -->
+  <rect x="386" y="154" width="24" height="7" fill="#4A90D9" rx="3" transform="rotate(-25 390 157)"/>
+  <!-- Right arm -->
+  <rect x="437" y="154" width="20" height="7" fill="#4A90D9" rx="3" transform="rotate(10 437 157)"/>
+  <!-- Trowel in hand -->
+  <rect x="366" y="158" width="22" height="5" fill="#B0B0B0" rx="1" transform="rotate(-28 368 160)"/>
+  <rect x="360" y="166" width="8" height="3" fill="#7B6040" rx="1" transform="rotate(-28 362 167)"/>
+  <!-- Mortar on trowel -->
+  <ellipse cx="377" cy="157" rx="9" ry="4" fill="#D8D0C0" opacity="0.85" transform="rotate(-28 377 157)"/>
 
-  <!-- FRESH RENDER being applied (right side upper area) -->
-  <!-- Wet render patch -->
-  <rect x="480" y="215" width="180" height="60" rx="4" fill="#F0EBE0" opacity="0.7"/>
-  <path d="M480,215 Q510,213 540,217 Q570,221 600,215 Q630,210 660,216" stroke="#E0D8CA" stroke-width="2" fill="none"/>
-  <!-- Render texture marks -->
-  <path d="M495,230 Q510,228 525,232" stroke="#D8D0C0" stroke-width="1.5" fill="none" opacity="0.7"/>
-  <path d="M495,242 Q515,240 535,244" stroke="#D8D0C0" stroke-width="1.5" fill="none" opacity="0.6"/>
-  <path d="M540,228 Q560,226 580,230" stroke="#D8D0C0" stroke-width="1.5" fill="none" opacity="0.6"/>
-  <path d="M545,242 Q565,240 585,244" stroke="#D8D0C0" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <!-- Bucket on platform -->
+  <rect x="456" y="178" width="20" height="22" fill="#6B6B6B" rx="2"/>
+  <rect x="454" y="176" width="24" height="4" fill="#555" rx="1"/>
+  <ellipse cx="466" cy="178" rx="9" ry="3" fill="#C8C0B0"/>
 
-  <!-- GROUND LEVEL MATERIALS -->
-  <!-- Cement bag -->
-  <rect x="100" y="410" width="70" height="40" rx="8" fill="#D8D0C0" filter="url(#shadow)"/>
-  <rect x="108" y="418" width="54" height="24" rx="4" fill="#C8C0B0"/>
-  <line x1="120" y1="424" x2="160" y2="424" stroke="#A8A098" stroke-width="1.5" opacity="0.6"/>
-  <line x1="120" y1="430" x2="160" y2="430" stroke="#A8A098" stroke-width="1.5" opacity="0.6"/>
-  <line x1="120" y1="436" x2="160" y2="436" stroke="#A8A098" stroke-width="1.5" opacity="0.5"/>
-  <!-- Cement bag tie -->
-  <rect x="128" y="408" width="16" height="8" rx="2" fill="#B8B0A0"/>
-  <!-- Second bag leaning -->
-  <rect x="175" y="415" width="65" height="38" rx="7" fill="#C8C0B0" transform="rotate(-8 175 415)" filter="url(#shadow)"/>
-
+  <!-- GROUND OBJECTS -->
   <!-- Brick pile -->
-  <rect x="650" y="410" width="30" height="12" rx="1" fill="#C87050"/>
-  <rect x="682" y="410" width="30" height="12" rx="1" fill="#B86040"/>
-  <rect x="716" y="410" width="28" height="12" rx="1" fill="#C87050"/>
-  <rect x="655" y="422" width="28" height="12" rx="1" fill="#B86040"/>
-  <rect x="685" y="422" width="30" height="12" rx="1" fill="#C87050"/>
-  <rect x="717" y="422" width="24" height="12" rx="1" fill="#B86040"/>
-  <rect x="648" y="434" width="32" height="12" rx="1" fill="#C87050"/>
-  <rect x="682" y="434" width="28" height="12" rx="1" fill="#B86040"/>
-  <rect x="712" y="434" width="30" height="12" rx="1" fill="#C87050"/>
+  <rect x="115" y="415" width="90" height="18" fill="#C87050" rx="1" filter="url(#softShadow)"/>
+  <rect x="115" y="397" width="90" height="18" fill="#C07048" rx="1"/>
+  <rect x="120" y="379" width="80" height="18" fill="#BA6A40" rx="1"/>
+  <line x1="145" y1="415" x2="145" y2="433" stroke="#8B4525" stroke-width="1" opacity="0.5"/>
+  <line x1="170" y1="415" x2="170" y2="433" stroke="#8B4525" stroke-width="1" opacity="0.5"/>
+  <line x1="195" y1="415" x2="195" y2="433" stroke="#8B4525" stroke-width="1" opacity="0.5"/>
+  <line x1="135" y1="397" x2="135" y2="415" stroke="#8B4525" stroke-width="1" opacity="0.4"/>
+  <line x1="160" y1="397" x2="160" y2="415" stroke="#8B4525" stroke-width="1" opacity="0.4"/>
+  <line x1="185" y1="397" x2="185" y2="415" stroke="#8B4525" stroke-width="1" opacity="0.4"/>
+
+  <!-- Cement bag 1 -->
+  <rect x="222" y="396" width="65" height="38" fill="url(#cementGrad)" rx="4" filter="url(#softShadow)"/>
+  <rect x="227" y="401" width="55" height="28" fill="#C8C0B0" rx="2" opacity="0.45"/>
+  <line x1="254" y1="396" x2="254" y2="434" stroke="#A8A098" stroke-width="2" opacity="0.5"/>
+  <rect x="246" y="393" width="22" height="5" fill="#A8A098" rx="2"/>
+
+  <!-- Cement bag 2 leaning -->
+  <rect x="296" y="398" width="54" height="36" fill="#C0B8A8" rx="4" filter="url(#softShadow)" transform="rotate(7 296 434)"/>
+
+  <!-- Mixing tub -->
+  <ellipse cx="580" cy="430" rx="45" ry="13" fill="#5A5A5A" filter="url(#softShadow)"/>
+  <ellipse cx="580" cy="426" rx="42" ry="10" fill="#4A4A4A"/>
+  <ellipse cx="580" cy="426" rx="38" ry="8" fill="#C8C0B0"/>
+  <!-- Paddle -->
+  <rect x="576" y="386" width="6" height="44" fill="#7B6040" rx="2"/>
+  <ellipse cx="579" cy="389" rx="10" ry="4" fill="#6B5030" opacity="0.8"/>
 
   <!-- Toolbox -->
-  <rect x="500" y="415" width="90" height="45" rx="6" fill="#1C1917" filter="url(#shadow)"/>
-  <rect x="500" y="415" width="90" height="18" rx="6" fill="#2C2520"/>
-  <!-- Toolbox handle -->
-  <path d="M530,415 Q545,402 560,415" stroke="#F97316" stroke-width="4" fill="none" stroke-linecap="round"/>
-  <!-- Toolbox latch -->
-  <rect x="538" y="426" width="14" height="8" rx="2" fill="#F97316"/>
-  <!-- Tools in box (visible) -->
-  <line x1="515" y1="435" x2="515" y2="455" stroke="#8B7355" stroke-width="4" stroke-linecap="round"/>
-  <rect x="511" y="430" width="8" height="6" rx="1" fill="#A09080"/>
-  <line x1="535" y1="435" x2="535" y2="455" stroke="#8B7355" stroke-width="3" stroke-linecap="round"/>
-  <line x1="555" y1="432" x2="575" y2="438" stroke="#A09080" stroke-width="4" stroke-linecap="round"/>
+  <rect x="686" y="408" width="80" height="30" fill="#1C1917" rx="3" filter="url(#softShadow)"/>
+  <rect x="686" y="403" width="80" height="10" fill="#2D2D2D" rx="2"/>
+  <path d="M710 403 Q725 392 740 403" fill="none" stroke="#F97316" stroke-width="4" stroke-linecap="round"/>
+  <rect x="720" y="408" width="10" height="6" fill="#F97316" rx="1"/>
+  <rect x="696" y="390" width="4" height="18" fill="#9B9B9B" rx="1"/>
+  <rect x="704" y="393" width="4" height="14" fill="#7B7B7B" rx="1"/>
+  <rect x="752" y="392" width="5" height="16" fill="#F97316" rx="1"/>
 
-  <!-- Mortar bucket -->
-  <path d="M280,430 Q280,410 295,408 L345,408 Q360,410 360,430 Z" fill="#D0C8B5"/>
-  <rect x="281" y="430" width="78" height="20" rx="3" fill="#C0B8A5"/>
-  <!-- Mortar content -->
-  <path d="M285,410 Q320,405 355,410" stroke="#B0A895" stroke-width="2" fill="#C8C0AA" opacity="0.8"/>
-  <!-- Bucket handle -->
-  <path d="M290,408 Q320,390 350,408" stroke="#8B7355" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Water bottle -->
+  <rect x="636" y="414" width="14" height="22" fill="#B8D4E8" rx="4" opacity="0.8"/>
+  <rect x="639" y="411" width="8" height="5" fill="#90B4C8" rx="2" opacity="0.8"/>
 
-  <!-- Bottom decorative border accent -->
-  <rect x="80" y="448" width="370" height="4" fill="#8B7355" opacity="0.4"/>
-  <rect x="450" y="448" width="370" height="4" fill="#F97316" opacity="0.5"/>
+  <!-- Protective sheeting on ground -->
+  <rect x="422" y="428" width="270" height="7" fill="#B8D4E8" opacity="0.4" rx="1"/>
 
-  <!-- Construction site sign (orange) -->
-  <rect x="755" y="390" width="90" height="55" rx="4" fill="#F97316" filter="url(#shadow)"/>
-  <rect x="758" y="393" width="84" height="49" rx="3" fill="#E06010"/>
-  <!-- Hard hat symbol on sign -->
-  <ellipse cx="800" cy="408" rx="18" ry="13" fill="#F97316"/>
-  <rect x="782" y="413" width="36" height="6" rx="2" fill="#F97316"/>
-  <ellipse cx="800" cy="407" rx="14" ry="8" fill="#FFE090"/>
-  <!-- Sign pole -->
-  <rect x="797" y="445" width="6" height="40" fill="#8B7355"/>
+  <!-- Safety barrier tape -->
+  <rect x="80" y="432" width="420" height="5" fill="#F97316" opacity="0.75" rx="1"/>
+  <line x1="100" y1="432" x2="100" y2="437" stroke="#1C1917" stroke-width="3" opacity="0.5"/>
+  <line x1="155" y1="432" x2="155" y2="437" stroke="#1C1917" stroke-width="3" opacity="0.5"/>
+  <line x1="210" y1="432" x2="210" y2="437" stroke="#1C1917" stroke-width="3" opacity="0.5"/>
+  <line x1="265" y1="432" x2="265" y2="437" stroke="#1C1917" stroke-width="3" opacity="0.5"/>
+  <line x1="320" y1="432" x2="320" y2="437" stroke="#1C1917" stroke-width="3" opacity="0.5"/>
+  <line x1="375" y1="432" x2="375" y2="437" stroke="#1C1917" stroke-width="3" opacity="0.5"/>
+  <line x1="430" y1="432" x2="430" y2="437" stroke="#1C1917" stroke-width="3" opacity="0.5"/>
 
-  <!-- Orange accent stripe along scaffolding -->
-  <rect x="428" y="110" width="4" height="345" rx="2" fill="#F97316" opacity="0.6"/>
+  <!-- Warning cones -->
+  <polygon points="350,432 360,411 370,432" fill="#F97316" opacity="0.9"/>
+  <rect x="346" y="430" width="28" height="4" fill="#FFFFFF" opacity="0.7"/>
+  <polygon points="762,432 773,409 784,432" fill="#F97316" opacity="0.9"/>
+  <rect x="758" y="430" width="30" height="4" fill="#FFFFFF" opacity="0.7"/>
 
-  <!-- Sun in sky -->
-  <circle cx="820" cy="85" r="35" fill="#FFE090" opacity="0.7"/>
-  <circle cx="820" cy="85" r="28" fill="#FFD060" opacity="0.8"/>
-  <!-- Sun rays -->
-  <line x1="820" y1="40" x2="820" y2="50" stroke="#FFD060" stroke-width="3" opacity="0.5"/>
-  <line x1="855" y1="50" x2="848" y2="57" stroke="#FFD060" stroke-width="3" opacity="0.5"/>
-  <line x1="865" y1="85" x2="855" y2="85" stroke="#FFD060" stroke-width="3" opacity="0.5"/>
-  <line x1="785" y1="50" x2="792" y2="57" stroke="#FFD060" stroke-width="3" opacity="0.5"/>
-  <line x1="775" y1="85" x2="785" y2="85" stroke="#FFD060" stroke-width="3" opacity="0.5"/>
+  <!-- Ground shadow under scaffolding -->
+  <ellipse cx="420" cy="432" rx="78" ry="7" fill="#1C1917" opacity="0.15"/>
 </svg>

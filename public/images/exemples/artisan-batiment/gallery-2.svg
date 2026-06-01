@@ -1,9 +1,100 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Realisation artisan-batiment">
-  <rect width="1200" height="800" fill="#E5E0D8"/>
-  <rect x="80" y="80" width="1040" height="640" rx="32" fill="#ffffff" stroke="#D6CFC4"/>
-  <circle cx="220" cy="220" r="70" fill="#D97706" opacity="0.15"/>
-  <rect x="330" y="180" width="650" height="26" rx="13" fill="#1F2933" opacity="0.15"/>
-  <rect x="330" y="230" width="520" height="22" rx="11" fill="#5F6B7A" opacity="0.18"/>
-  <rect x="170" y="360" width="860" height="250" rx="24" fill="#F8F5EF" stroke="#E5E0D8"/>
-  <text x="600" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#1F2933">Realisation artisan-batiment</text>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" role="img" aria-label="Pose de carrelage sol avec finitions soignées">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FAFAF8"/>
+      <stop offset="100%" stop-color="#F0EDE8"/>
+    </linearGradient>
+    <linearGradient id="tile2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F0EBE3"/>
+      <stop offset="60%" stop-color="#E8E0D6"/>
+      <stop offset="100%" stop-color="#DDD4C8"/>
+    </linearGradient>
+    <linearGradient id="adhesive2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D8CFBF"/>
+      <stop offset="100%" stop-color="#C8BFAF"/>
+    </linearGradient>
+    <linearGradient id="shine2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background wall -->
+  <rect width="520" height="360" fill="url(#bg2)"/>
+
+  <!-- Wall tiles (upper area) -->
+  <rect x="0" y="0" width="520" height="180" fill="#F5F2EE"/>
+  <!-- Wall tile grout lines horizontal -->
+  <line x1="0" y1="60" x2="520" y2="60" stroke="#DDD8D0" stroke-width="1.5"/>
+  <line x1="0" y1="120" x2="520" y2="120" stroke="#DDD8D0" stroke-width="1.5"/>
+  <!-- Wall tile grout lines vertical -->
+  <line x1="80" y1="0" x2="80" y2="60" stroke="#DDD8D0" stroke-width="1.5"/>
+  <line x1="160" y1="0" x2="160" y2="60" stroke="#DDD8D0" stroke-width="1.5"/>
+  <line x1="240" y1="0" x2="240" y2="60" stroke="#DDD8D0" stroke-width="1.5"/>
+  <line x1="320" y1="0" x2="320" y2="60" stroke="#DDD8D0" stroke-width="1.5"/>
+  <line x1="400" y1="0" x2="400" y2="60" stroke="#DDD8D0" stroke-width="1.5"/>
+  <line x1="480" y1="0" x2="480" y2="60" stroke="#DDD8D0" stroke-width="1.5"/>
+  <!-- Offset row -->
+  <line x1="40" y1="60" x2="40" y2="120" stroke="#DDD8D0" stroke-width="1.5"/>
+  <line x1="120" y1="60" x2="120" y2="120" stroke="#DDD8D0" stroke-width="1.5"/>
+  <line x1="200" y1="60" x2="200" y2="120" stroke="#DDD8D0" stroke-width="1.5"/>
+  <line x1="280" y1="60" x2="280" y2="120" stroke="#DDD8D0" stroke-width="1.5"/>
+  <line x1="360" y1="60" x2="360" y2="120" stroke="#DDD8D0" stroke-width="1.5"/>
+  <line x1="440" y1="60" x2="440" y2="120" stroke="#DDD8D0" stroke-width="1.5"/>
+
+  <!-- Wall/floor junction baseboard -->
+  <rect x="0" y="178" width="520" height="12" fill="#E0D8CC"/>
+  <rect x="0" y="188" width="520" height="4" fill="#C8C0B4"/>
+
+  <!-- Floor adhesive bed (left portion being prepared) -->
+  <rect x="0" y="192" width="180" height="168" fill="url(#adhesive2)"/>
+  <!-- Notched trowel ridges -->
+  <path d="M8 205 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 10 0" stroke="#BAAE9C" stroke-width="2.5" fill="none"/>
+  <path d="M8 220 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 10 0" stroke="#BAAЕ9C" stroke-width="2.5" fill="none"/>
+  <path d="M8 235 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 10 0" stroke="#BAAЕ9C" stroke-width="2.5" fill="none"/>
+  <path d="M8 250 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 10 0" stroke="#BAAЕ9C" stroke-width="2.5" fill="none"/>
+  <path d="M8 265 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 10 0" stroke="#BAAЕ9C" stroke-width="2.5" fill="none"/>
+  <path d="M8 280 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 10 0" stroke="#BAAЕ9C" stroke-width="2.5" fill="none"/>
+  <path d="M8 295 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 10 0" stroke="#BAAЕ9C" stroke-width="2.5" fill="none"/>
+  <path d="M8 310 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 10 0" stroke="#BAAЕ9C" stroke-width="2.5" fill="none"/>
+  <path d="M8 325 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 10 0" stroke="#BAAЕ9C" stroke-width="2.5" fill="none"/>
+  <path d="M8 340 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 18 0 q9 5 18 0 q9-5 10 0" stroke="#BAAЕ9C" stroke-width="2.5" fill="none"/>
+
+  <!-- Floor tiles (right portion - already laid) -->
+  <!-- Row 1 -->
+  <rect x="184" y="194" width="78" height="78" fill="url(#tile2)" stroke="#C8C0B4" stroke-width="2"/>
+  <rect x="184" y="194" width="35" height="25" fill="url(#shine2)" rx="1"/>
+  <rect x="266" y="194" width="78" height="78" fill="url(#tile2)" stroke="#C8C0B4" stroke-width="2"/>
+  <rect x="266" y="194" width="35" height="25" fill="url(#shine2)" rx="1"/>
+  <rect x="348" y="194" width="78" height="78" fill="url(#tile2)" stroke="#C8C0B4" stroke-width="2"/>
+  <rect x="348" y="194" width="35" height="25" fill="url(#shine2)" rx="1"/>
+  <rect x="430" y="194" width="90" height="78" fill="url(#tile2)" stroke="#C8C0B4" stroke-width="2"/>
+  <!-- Row 2 -->
+  <rect x="184" y="276" width="78" height="78" fill="url(#tile2)" stroke="#C8C0B4" stroke-width="2"/>
+  <rect x="184" y="276" width="35" height="25" fill="url(#shine2)" rx="1"/>
+  <rect x="266" y="276" width="78" height="78" fill="url(#tile2)" stroke="#C8C0B4" stroke-width="2"/>
+  <rect x="348" y="276" width="78" height="78" fill="url(#tile2)" stroke="#C8C0B4" stroke-width="2"/>
+  <rect x="348" y="276" width="35" height="25" fill="url(#shine2)" rx="1"/>
+  <rect x="430" y="276" width="90" height="78" fill="url(#tile2)" stroke="#C8C0B4" stroke-width="2"/>
+
+  <!-- Tile being placed (floating, with shadow) -->
+  <rect x="182" y="352" width="82" height="8" fill="#00000018" rx="2"/>
+  <rect x="182" y="310" width="78" height="78" fill="url(#tile2)" stroke="#C8C0B4" stroke-width="2" opacity="0.95"/>
+  <rect x="182" y="310" width="35" height="25" fill="url(#shine2)" rx="1"/>
+
+  <!-- Spacers -->
+  <path d="M263 272 h6 M266 269 v6" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M345 272 h6 M348 269 v6" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M427 272 h6 M430 269 v6" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M263 354 h6 M266 351 v6" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Notched trowel -->
+  <rect x="30" y="140" width="100" height="16" fill="#9A9AA4" rx="3" transform="rotate(-30 30 140)"/>
+  <!-- Notches -->
+  <path d="M32 138 l5 8 l5-8 l5 8 l5-8 l5 8 l5-8 l5 8 l5-8 l5 8 l5-8 l5 8 l5-8 l5 8 l5-8 l5 8 l5-8 l5 8" stroke="#7A7A84" stroke-width="2" fill="none" transform="rotate(-30 82 148)"/>
+  <rect x="115" y="112" width="14" height="44" fill="#8B6B4A" rx="3" transform="rotate(-30 115 112)"/>
+
+  <!-- Quality label -->
+  <rect x="330" y="16" width="160" height="38" fill="#F97316" rx="19"/>
+  <text x="410" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white" font-weight="bold">POSE SOIGNÉE</text>
+</svg>

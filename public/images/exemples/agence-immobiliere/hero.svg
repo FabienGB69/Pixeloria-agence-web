@@ -1,9 +1,214 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Hero agence-immobiliere">
-  <rect width="1200" height="800" fill="#EFE7DA"/>
-  <rect x="80" y="80" width="1040" height="640" rx="32" fill="#ffffff" stroke="#D6CFC4"/>
-  <circle cx="220" cy="220" r="70" fill="#D97706" opacity="0.15"/>
-  <rect x="330" y="180" width="650" height="26" rx="13" fill="#1F2933" opacity="0.15"/>
-  <rect x="330" y="230" width="520" height="22" rx="11" fill="#5F6B7A" opacity="0.18"/>
-  <rect x="170" y="360" width="860" height="250" rx="24" fill="#F8F5EF" stroke="#E5E0D8"/>
-  <text x="600" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#1F2933">Hero agence-immobiliere</text>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D8EAF4"/>
+      <stop offset="100%" stop-color="#EEF5FB"/>
+    </linearGradient>
+    <linearGradient id="facadeGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F0E8D8"/>
+      <stop offset="100%" stop-color="#F5F0E8"/>
+    </linearGradient>
+    <linearGradient id="wingGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E8DFD0"/>
+      <stop offset="100%" stop-color="#F0EBE0"/>
+    </linearGradient>
+    <linearGradient id="winLight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFF3D0"/>
+      <stop offset="100%" stop-color="#FFE89A"/>
+    </linearGradient>
+    <linearGradient id="winDay" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C8E4F5"/>
+      <stop offset="100%" stop-color="#A0CEED"/>
+    </linearGradient>
+    <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4C9B0"/>
+      <stop offset="100%" stop-color="#BFB49A"/>
+    </linearGradient>
+    <radialGradient id="cloudGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#EEF5FB" stop-opacity="0.6"/>
+    </radialGradient>
+    <linearGradient id="badgeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1A2E4A"/>
+      <stop offset="100%" stop-color="#0E1E32"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C9A84C"/>
+      <stop offset="100%" stop-color="#E8C96A"/>
+    </linearGradient>
+    <linearGradient id="signGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C9A84C"/>
+      <stop offset="100%" stop-color="#A8883A"/>
+    </linearGradient>
+    <filter id="bldShadow" x="-5%" y="-5%" width="115%" height="120%">
+      <feDropShadow dx="4" dy="8" stdDeviation="8" flood-color="#1A2E4A" flood-opacity="0.22"/>
+    </filter>
+    <filter id="softShadow" x="-5%" y="-5%" width="115%" height="120%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="900" height="560" fill="url(#skyGrad)"/>
+
+  <!-- Clouds left -->
+  <ellipse cx="120" cy="80" rx="70" ry="22" fill="url(#cloudGrad)"/>
+  <ellipse cx="155" cy="72" rx="45" ry="18" fill="url(#cloudGrad)"/>
+  <ellipse cx="88" cy="76" rx="35" ry="16" fill="url(#cloudGrad)"/>
+  <!-- Clouds right -->
+  <ellipse cx="700" cy="62" rx="80" ry="20" fill="url(#cloudGrad)"/>
+  <ellipse cx="738" cy="56" rx="52" ry="16" fill="url(#cloudGrad)"/>
+  <ellipse cx="668" cy="60" rx="38" ry="14" fill="url(#cloudGrad)"/>
+  <!-- Cloud center faint -->
+  <ellipse cx="440" cy="105" rx="55" ry="15" fill="url(#cloudGrad)" opacity="0.65"/>
+  <ellipse cx="468" cy="100" rx="36" ry="12" fill="url(#cloudGrad)" opacity="0.65"/>
+
+  <!-- Ground / pavement -->
+  <rect x="0" y="438" width="900" height="122" fill="url(#groundGrad)"/>
+  <line x1="0" y1="458" x2="900" y2="458" stroke="#C0B49E" stroke-width="1" opacity="0.45"/>
+  <line x1="0" y1="478" x2="900" y2="478" stroke="#C0B49E" stroke-width="1" opacity="0.28"/>
+  <line x1="180" y1="438" x2="180" y2="560" stroke="#C0B49E" stroke-width="0.8" opacity="0.38"/>
+  <line x1="360" y1="438" x2="360" y2="560" stroke="#C0B49E" stroke-width="0.8" opacity="0.38"/>
+  <line x1="540" y1="438" x2="540" y2="560" stroke="#C0B49E" stroke-width="0.8" opacity="0.38"/>
+  <line x1="720" y1="438" x2="720" y2="560" stroke="#C0B49E" stroke-width="0.8" opacity="0.38"/>
+
+  <!-- Left wing building -->
+  <polygon points="55,155 305,132 305,438 55,438" fill="url(#wingGrad)" filter="url(#softShadow)"/>
+  <rect x="55" y="153" width="250" height="6" rx="1" fill="#1A2E4A" opacity="0.12"/>
+  <rect x="55" y="228" width="250" height="3" fill="#1A2E4A" opacity="0.08"/>
+  <rect x="55" y="303" width="250" height="3" fill="#1A2E4A" opacity="0.08"/>
+  <rect x="55" y="378" width="250" height="3" fill="#1A2E4A" opacity="0.08"/>
+  <!-- Left wing windows R1 -->
+  <rect x="78" y="168" width="38" height="44" rx="3" fill="url(#winLight)" opacity="0.9"/>
+  <rect x="130" y="166" width="40" height="46" rx="3" fill="url(#winDay)" opacity="0.85"/>
+  <rect x="184" y="164" width="42" height="48" rx="3" fill="url(#winLight)" opacity="0.9"/>
+  <rect x="240" y="162" width="44" height="48" rx="3" fill="url(#winDay)" opacity="0.85"/>
+  <!-- Left wing windows R2 -->
+  <rect x="78" y="240" width="38" height="44" rx="3" fill="url(#winDay)" opacity="0.8"/>
+  <rect x="130" y="238" width="40" height="46" rx="3" fill="url(#winLight)" opacity="0.9"/>
+  <rect x="184" y="236" width="42" height="48" rx="3" fill="url(#winDay)" opacity="0.8"/>
+  <rect x="240" y="234" width="44" height="48" rx="3" fill="url(#winLight)" opacity="0.9"/>
+  <!-- Left wing windows R3 -->
+  <rect x="78" y="314" width="38" height="44" rx="3" fill="url(#winLight)" opacity="0.9"/>
+  <rect x="130" y="312" width="40" height="46" rx="3" fill="url(#winDay)" opacity="0.8"/>
+  <rect x="184" y="310" width="42" height="48" rx="3" fill="url(#winLight)" opacity="0.9"/>
+  <rect x="240" y="308" width="44" height="48" rx="3" fill="url(#winDay)" opacity="0.8"/>
+  <!-- Left wing door -->
+  <rect x="150" y="375" width="52" height="63" rx="4" fill="#1A2E4A" opacity="0.32"/>
+  <rect x="156" y="381" width="18" height="36" rx="2" fill="url(#winLight)" opacity="0.6"/>
+  <rect x="178" y="381" width="18" height="36" rx="2" fill="url(#winLight)" opacity="0.6"/>
+
+  <!-- Main central building -->
+  <rect x="262" y="98" width="394" height="340" fill="url(#facadeGrad)" filter="url(#bldShadow)"/>
+  <!-- Roofline -->
+  <rect x="252" y="94" width="414" height="12" rx="2" fill="#1A2E4A" opacity="0.16"/>
+  <!-- Decorative cornice strip -->
+  <rect x="262" y="106" width="394" height="8" rx="1" fill="#C9A84C" opacity="0.22"/>
+  <!-- Floor ledges -->
+  <rect x="262" y="174" width="394" height="5" fill="#1A2E4A" opacity="0.09"/>
+  <rect x="262" y="250" width="394" height="5" fill="#1A2E4A" opacity="0.09"/>
+  <rect x="262" y="326" width="394" height="5" fill="#1A2E4A" opacity="0.09"/>
+  <!-- Balcony sills row 1 -->
+  <rect x="272" y="169" width="108" height="8" rx="2" fill="#1A2E4A" opacity="0.13"/>
+  <rect x="396" y="169" width="108" height="8" rx="2" fill="#1A2E4A" opacity="0.13"/>
+  <rect x="520" y="169" width="108" height="8" rx="2" fill="#1A2E4A" opacity="0.13"/>
+  <!-- Balcony sills row 2 -->
+  <rect x="272" y="245" width="108" height="8" rx="2" fill="#1A2E4A" opacity="0.13"/>
+  <rect x="396" y="245" width="108" height="8" rx="2" fill="#1A2E4A" opacity="0.13"/>
+  <rect x="520" y="245" width="108" height="8" rx="2" fill="#1A2E4A" opacity="0.13"/>
+  <!-- Balcony sills row 3 -->
+  <rect x="272" y="321" width="108" height="8" rx="2" fill="#1A2E4A" opacity="0.13"/>
+  <rect x="396" y="321" width="108" height="8" rx="2" fill="#1A2E4A" opacity="0.13"/>
+  <rect x="520" y="321" width="108" height="8" rx="2" fill="#1A2E4A" opacity="0.13"/>
+
+  <!-- Windows R1 main -->
+  <rect x="275" y="118" width="96" height="52" rx="4" fill="url(#winDay)" opacity="0.88"/>
+  <line x1="323" y1="118" x2="323" y2="170" stroke="#A0C4DC" stroke-width="1.5"/>
+  <rect x="389" y="118" width="96" height="52" rx="4" fill="url(#winLight)" opacity="0.92"/>
+  <line x1="437" y1="118" x2="437" y2="170" stroke="#E8CC80" stroke-width="1.5"/>
+  <rect x="503" y="118" width="96" height="52" rx="4" fill="url(#winDay)" opacity="0.88"/>
+  <line x1="551" y1="118" x2="551" y2="170" stroke="#A0C4DC" stroke-width="1.5"/>
+
+  <!-- Windows R2 main -->
+  <rect x="275" y="192" width="96" height="54" rx="4" fill="url(#winLight)" opacity="0.92"/>
+  <line x1="323" y1="192" x2="323" y2="246" stroke="#E8CC80" stroke-width="1.5"/>
+  <rect x="389" y="192" width="96" height="54" rx="4" fill="url(#winDay)" opacity="0.88"/>
+  <line x1="437" y1="192" x2="437" y2="246" stroke="#A0C4DC" stroke-width="1.5"/>
+  <rect x="503" y="192" width="96" height="54" rx="4" fill="url(#winLight)" opacity="0.92"/>
+  <line x1="551" y1="192" x2="551" y2="246" stroke="#E8CC80" stroke-width="1.5"/>
+
+  <!-- Windows R3 main -->
+  <rect x="275" y="268" width="96" height="54" rx="4" fill="url(#winDay)" opacity="0.88"/>
+  <line x1="323" y1="268" x2="323" y2="322" stroke="#A0C4DC" stroke-width="1.5"/>
+  <rect x="389" y="268" width="96" height="54" rx="4" fill="url(#winLight)" opacity="0.92"/>
+  <line x1="437" y1="268" x2="437" y2="322" stroke="#E8CC80" stroke-width="1.5"/>
+  <rect x="503" y="268" width="96" height="54" rx="4" fill="url(#winDay)" opacity="0.88"/>
+  <line x1="551" y1="268" x2="551" y2="322" stroke="#A0C4DC" stroke-width="1.5"/>
+
+  <!-- Main entrance -->
+  <rect x="400" y="356" width="58" height="82" rx="5" fill="#1A2E4A" opacity="0.38"/>
+  <rect x="405" y="361" width="22" height="52" rx="3" fill="url(#winLight)" opacity="0.62"/>
+  <rect x="431" y="361" width="22" height="52" rx="3" fill="url(#winLight)" opacity="0.62"/>
+  <circle cx="430" cy="389" r="3.5" fill="#C9A84C"/>
+  <!-- Arch above door -->
+  <ellipse cx="430" cy="361" rx="29" ry="9" fill="#1A2E4A" opacity="0.18"/>
+  <!-- Entrance steps -->
+  <rect x="388" y="432" width="82" height="6" rx="1" fill="#D4C9B0"/>
+  <rect x="394" y="436" width="70" height="5" rx="1" fill="#C8BCA8"/>
+
+  <!-- Right wing building -->
+  <polygon points="656,132 848,154 848,438 656,438" fill="url(#wingGrad)" filter="url(#softShadow)"/>
+  <rect x="656" y="130" width="192" height="6" rx="1" fill="#1A2E4A" opacity="0.12"/>
+  <rect x="656" y="205" width="192" height="3" fill="#1A2E4A" opacity="0.08"/>
+  <rect x="656" y="280" width="192" height="3" fill="#1A2E4A" opacity="0.08"/>
+  <rect x="656" y="355" width="192" height="3" fill="#1A2E4A" opacity="0.08"/>
+  <!-- Right wing windows R1 -->
+  <rect x="666" y="147" width="44" height="46" rx="3" fill="url(#winLight)" opacity="0.9"/>
+  <rect x="720" y="149" width="42" height="46" rx="3" fill="url(#winDay)" opacity="0.85"/>
+  <rect x="772" y="151" width="40" height="45" rx="3" fill="url(#winLight)" opacity="0.9"/>
+  <!-- Right wing windows R2 -->
+  <rect x="666" y="220" width="44" height="46" rx="3" fill="url(#winDay)" opacity="0.8"/>
+  <rect x="720" y="222" width="42" height="46" rx="3" fill="url(#winLight)" opacity="0.9"/>
+  <rect x="772" y="224" width="40" height="45" rx="3" fill="url(#winDay)" opacity="0.8"/>
+  <!-- Right wing windows R3 -->
+  <rect x="666" y="294" width="44" height="46" rx="3" fill="url(#winLight)" opacity="0.9"/>
+  <rect x="720" y="296" width="42" height="46" rx="3" fill="url(#winDay)" opacity="0.8"/>
+  <rect x="772" y="298" width="40" height="45" rx="3" fill="url(#winLight)" opacity="0.9"/>
+
+  <!-- Trees left -->
+  <ellipse cx="128" cy="438" rx="46" ry="32" fill="#5C7A4A" opacity="0.78"/>
+  <ellipse cx="112" cy="428" rx="32" ry="24" fill="#6E9458" opacity="0.88"/>
+  <ellipse cx="148" cy="430" rx="30" ry="22" fill="#5C7A4A" opacity="0.82"/>
+  <rect x="124" y="445" width="8" height="32" rx="2" fill="#3D5C2A" opacity="0.6"/>
+  <ellipse cx="222" cy="444" rx="30" ry="20" fill="#6E9458" opacity="0.75"/>
+  <ellipse cx="210" cy="438" rx="22" ry="16" fill="#82AA6A" opacity="0.8"/>
+  <rect x="217" y="450" width="7" height="22" rx="2" fill="#3D5C2A" opacity="0.6"/>
+
+  <!-- Trees right -->
+  <ellipse cx="782" cy="438" rx="44" ry="30" fill="#5C7A4A" opacity="0.78"/>
+  <ellipse cx="796" cy="428" rx="32" ry="22" fill="#6E9458" opacity="0.88"/>
+  <ellipse cx="764" cy="432" rx="28" ry="20" fill="#5C7A4A" opacity="0.82"/>
+  <rect x="778" y="444" width="8" height="30" rx="2" fill="#3D5C2A" opacity="0.6"/>
+  <ellipse cx="694" cy="446" rx="28" ry="18" fill="#6E9458" opacity="0.75"/>
+  <rect x="689" y="452" width="7" height="20" rx="2" fill="#3D5C2A" opacity="0.6"/>
+
+  <!-- À VENDRE sign -->
+  <rect x="498" y="406" width="136" height="56" rx="7" fill="url(#signGrad)" filter="url(#softShadow)"/>
+  <rect x="502" y="410" width="128" height="48" rx="5" fill="none" stroke="#E8C96A" stroke-width="1.5"/>
+  <text x="566" y="428" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#FFFFFF" letter-spacing="2.5">À VENDRE</text>
+  <text x="566" y="448" text-anchor="middle" font-family="Arial, sans-serif" font-size="9.5" fill="#FFE8A0" letter-spacing="1">EXCLUSIVITÉ AGENCE</text>
+  <!-- Sign post -->
+  <rect x="561" y="462" width="7" height="30" rx="2" fill="#A8883A"/>
+  <rect x="553" y="490" width="22" height="4" rx="2" fill="#8A6E2A"/>
+
+  <!-- Agency badge top-left -->
+  <rect x="20" y="18" width="220" height="56" rx="9" fill="url(#badgeGrad)" filter="url(#softShadow)"/>
+  <rect x="24" y="22" width="212" height="48" rx="7" fill="none" stroke="url(#goldGrad)" stroke-width="1.5"/>
+  <!-- Small house icon -->
+  <polygon points="36,56 42,46 48,56" fill="#C9A84C"/>
+  <rect x="40" y="51" width="5" height="5" fill="#C9A84C"/>
+  <text x="60" y="39" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#C9A84C" letter-spacing="1">AGENCE IMMOBILIÈRE</text>
+  <text x="60" y="56" font-family="Arial, sans-serif" font-size="8.5" fill="#8AAFC8" letter-spacing="0.5">Paris · Prestige · Excellence</text>
+  <!-- Gold star accents -->
+  <text x="210" y="40" font-family="Arial, sans-serif" font-size="10" fill="#C9A84C">★★</text>
+</svg>

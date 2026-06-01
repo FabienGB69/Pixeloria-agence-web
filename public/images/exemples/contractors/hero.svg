@@ -1,9 +1,228 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Hero contractors">
-  <rect width="1200" height="800" fill="#EFE7DA"/>
-  <rect x="80" y="80" width="1040" height="640" rx="32" fill="#ffffff" stroke="#D6CFC4"/>
-  <circle cx="220" cy="220" r="70" fill="#D97706" opacity="0.15"/>
-  <rect x="330" y="180" width="650" height="26" rx="13" fill="#1F2933" opacity="0.15"/>
-  <rect x="330" y="230" width="520" height="22" rx="11" fill="#5F6B7A" opacity="0.18"/>
-  <rect x="170" y="360" width="860" height="250" rx="24" fill="#F8F5EF" stroke="#E5E0D8"/>
-  <text x="600" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#1F2933">Hero contractors</text>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560">
+  <defs>
+    <!-- Sky gradient -->
+    <linearGradient id="ct-h-sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a90d9"/>
+      <stop offset="60%" style="stop-color:#87ceeb"/>
+      <stop offset="100%" style="stop-color:#c8e8f8"/>
+    </linearGradient>
+    <!-- Ground / lawn -->
+    <linearGradient id="ct-h-lawn" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a8c28"/>
+      <stop offset="100%" style="stop-color:#3a7020"/>
+    </linearGradient>
+    <!-- House facade gradient -->
+    <linearGradient id="ct-h-facade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5f5f0"/>
+      <stop offset="100%" style="stop-color:#e8e8e0"/>
+    </linearGradient>
+    <!-- Roof gradient -->
+    <linearGradient id="ct-h-roof" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a3a50"/>
+      <stop offset="100%" style="stop-color:#1E3A5F"/>
+    </linearGradient>
+    <!-- Driveway -->
+    <linearGradient id="ct-h-drive" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#9aa0a8"/>
+      <stop offset="100%" style="stop-color:#7a8088"/>
+    </linearGradient>
+    <!-- Badge gradient -->
+    <linearGradient id="ct-h-badgeBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1E3A5F"/>
+      <stop offset="100%" style="stop-color:#2a4a6f"/>
+    </linearGradient>
+    <!-- Glass window -->
+    <linearGradient id="ct-h-glass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a8d4f0;stop-opacity:0.9"/>
+      <stop offset="50%" style="stop-color:#c0e4f8;stop-opacity:0.85"/>
+      <stop offset="100%" style="stop-color:#d8f0ff;stop-opacity:0.9"/>
+    </linearGradient>
+    <!-- Completed badge -->
+    <linearGradient id="ct-h-completedBadge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F97316"/>
+      <stop offset="100%" style="stop-color:#e06010"/>
+    </linearGradient>
+    <filter id="ct-h-shadow">
+      <feDropShadow dx="3" dy="5" stdDeviation="6" flood-color="#00000055"/>
+    </filter>
+    <filter id="ct-h-houseShadow">
+      <feDropShadow dx="4" dy="8" stdDeviation="10" flood-color="#00000040"/>
+    </filter>
+  </defs>
+
+  <!-- Sky background -->
+  <rect x="0" y="0" width="900" height="560" fill="url(#ct-h-sky)"/>
+
+  <!-- Clouds -->
+  <!-- Cloud 1 -->
+  <g opacity="0.88">
+    <ellipse cx="150" cy="90" rx="55" ry="28" fill="white"/>
+    <ellipse cx="115" cy="98" rx="35" ry="22" fill="white"/>
+    <ellipse cx="185" cy="98" rx="38" ry="20" fill="white"/>
+    <ellipse cx="150" cy="108" rx="58" ry="16" fill="white"/>
+  </g>
+  <!-- Cloud 2 -->
+  <g opacity="0.78">
+    <ellipse cx="650" cy="70" rx="70" ry="30" fill="white"/>
+    <ellipse cx="610" cy="80" rx="45" ry="24" fill="white"/>
+    <ellipse cx="695" cy="80" rx="48" ry="22" fill="white"/>
+    <ellipse cx="655" cy="92" rx="72" ry="18" fill="white"/>
+  </g>
+  <!-- Cloud 3 (small) -->
+  <g opacity="0.65">
+    <ellipse cx="820" cy="120" rx="40" ry="20" fill="white"/>
+    <ellipse cx="795" cy="128" rx="28" ry="16" fill="white"/>
+    <ellipse cx="845" cy="128" rx="30" ry="15" fill="white"/>
+  </g>
+
+  <!-- Ground -->
+  <rect x="0" y="400" width="900" height="160" fill="url(#ct-h-lawn)"/>
+  <!-- Lawn texture -->
+  <g stroke="#3a7020" stroke-width="1" opacity="0.3" fill="none">
+    <line x1="0" y1="415" x2="900" y2="415"/><line x1="0" y1="430" x2="900" y2="430"/>
+    <line x1="0" y1="445" x2="900" y2="445"/>
+  </g>
+  <!-- Driveway -->
+  <polygon points="350,400 550,400 600,560 300,560" fill="url(#ct-h-drive)"/>
+  <!-- Driveway lines -->
+  <line x1="450" y1="400" x2="450" y2="560" stroke="#8a9098" stroke-width="1" stroke-dasharray="12,8" opacity="0.5"/>
+
+  <!-- ===== MAIN HOUSE ===== -->
+  <g filter="url(#ct-h-houseShadow)">
+    <!-- GARAGE (left wing) -->
+    <rect x="140" y="290" width="200" height="130" fill="url(#ct-h-facade)" stroke="#d8d8d0" stroke-width="1"/>
+    <!-- Garage door -->
+    <rect x="155" y="310" width="170" height="100" rx="3" fill="#ddd" stroke="#c8c8c0" stroke-width="1"/>
+    <!-- Garage door panels -->
+    <g stroke="#c0c0b8" stroke-width="0.8" fill="none">
+      <line x1="155" y1="335" x2="325" y2="335"/>
+      <line x1="155" y1="360" x2="325" y2="360"/>
+      <line x1="155" y1="385" x2="325" y2="385"/>
+      <line x1="240" y1="310" x2="240" y2="410"/>
+    </g>
+    <!-- Garage trim -->
+    <rect x="152" y="307" width="176" height="6" rx="2" fill="#c8c8c0"/>
+    <!-- Roof of garage wing -->
+    <polygon points="120,290 360,290 340,250 140,250" fill="url(#ct-h-roof)"/>
+
+    <!-- MAIN HOUSE BODY -->
+    <rect x="320" y="210" width="340" height="210" fill="url(#ct-h-facade)" stroke="#d8d8d0" stroke-width="1"/>
+    <!-- Horizontal stone accent row -->
+    <rect x="320" y="370" width="340" height="50" fill="#e0dcd6" stroke="#c8c4be" stroke-width="0.5"/>
+    <!-- Stone blocks on lower band -->
+    <g stroke="#d0ccC6" stroke-width="0.5" fill="none">
+      <line x1="390" y1="370" x2="390" y2="420"/>
+      <line x1="460" y1="370" x2="460" y2="420"/>
+      <line x1="530" y1="370" x2="530" y2="420"/>
+      <line x1="600" y1="370" x2="600" y2="420"/>
+    </g>
+
+    <!-- Main Roof -->
+    <polygon points="290,210 660,210 620,140 330,140" fill="url(#ct-h-roof)"/>
+    <!-- Roof ridge cap -->
+    <line x1="330" y1="140" x2="620" y2="140" stroke="#3a4a60" stroke-width="3"/>
+    <!-- Roof trim fascia -->
+    <rect x="290" y="207" width="370" height="8" fill="#2a3a50"/>
+    <!-- Dormer / chimney detail -->
+    <rect x="540" y="100" width="35" height="55" fill="#1E3A5F"/>
+    <rect x="538" y="97" width="39" height="6" fill="#2a3a50"/>
+
+    <!-- Large picture window (left on main body) -->
+    <rect x="335" y="235" width="110" height="90" rx="4" fill="url(#ct-h-glass)" stroke="#c8c4be" stroke-width="1.5"/>
+    <!-- Window frame cross -->
+    <line x1="390" y1="235" x2="390" y2="325" stroke="#c8c4be" stroke-width="2"/>
+    <line x1="335" y1="280" x2="445" y2="280" stroke="#c8c4be" stroke-width="2"/>
+    <!-- Window reflection line -->
+    <line x1="340" y1="240" x2="350" y2="260" stroke="white" stroke-width="1.5" opacity="0.5"/>
+
+    <!-- Tall window (center) -->
+    <rect x="460" y="225" width="80" height="115" rx="4" fill="url(#ct-h-glass)" stroke="#c8c4be" stroke-width="1.5"/>
+    <!-- Arched top for center window -->
+    <path d="M460 245 Q500 215 540 245" fill="url(#ct-h-glass)" stroke="#c8c4be" stroke-width="1.5"/>
+    <line x1="500" y1="225" x2="500" y2="340" stroke="#c8c4be" stroke-width="2"/>
+    <line x1="460" y1="275" x2="540" y2="275" stroke="#c8c4be" stroke-width="2"/>
+    <!-- Window reflection -->
+    <line x1="465" y1="250" x2="475" y2="275" stroke="white" stroke-width="1.5" opacity="0.4"/>
+
+    <!-- Right window -->
+    <rect x="560" y="240" width="90" height="80" rx="4" fill="url(#ct-h-glass)" stroke="#c8c4be" stroke-width="1.5"/>
+    <line x1="605" y1="240" x2="605" y2="320" stroke="#c8c4be" stroke-width="2"/>
+    <line x1="560" y1="278" x2="650" y2="278" stroke="#c8c4be" stroke-width="2"/>
+
+    <!-- Front door -->
+    <rect x="450" y="330" width="80" height="90" rx="4" fill="#1E3A5F" stroke="#14283f" stroke-width="1.5"/>
+    <!-- Door panels -->
+    <rect x="458" y="338" width="30" height="35" rx="2" fill="#24467a" stroke="#2a5080" stroke-width="0.8"/>
+    <rect x="492" y="338" width="30" height="35" rx="2" fill="#24467a" stroke="#2a5080" stroke-width="0.8"/>
+    <rect x="458" y="378" width="30" height="35" rx="2" fill="#24467a" stroke="#2a5080" stroke-width="0.8"/>
+    <rect x="492" y="378" width="30" height="35" rx="2" fill="#24467a" stroke="#2a5080" stroke-width="0.8"/>
+    <!-- Door handle -->
+    <circle cx="520" cy="374" r="4" fill="#F97316"/>
+    <!-- Doorstep -->
+    <rect x="436" y="418" width="108" height="8" rx="2" fill="#d0ccC6"/>
+
+    <!-- Porch columns -->
+    <rect x="420" y="260" width="14" height="160" rx="4" fill="#e8e8e0"/>
+    <rect x="546" y="260" width="14" height="160" rx="4" fill="#e8e8e0"/>
+    <!-- Porch beam -->
+    <rect x="418" y="256" width="144" height="10" rx="3" fill="#ddd"/>
+
+    <!-- Right wing -->
+    <rect x="650" y="300" width="110" height="120" fill="url(#ct-h-facade)" stroke="#d8d8d0" stroke-width="1"/>
+    <!-- Wing window -->
+    <rect x="665" y="318" width="80" height="60" rx="3" fill="url(#ct-h-glass)" stroke="#c8c4be" stroke-width="1.2"/>
+    <line x1="705" y1="318" x2="705" y2="378" stroke="#c8c4be" stroke-width="1.5"/>
+    <line x1="665" y1="347" x2="745" y2="347" stroke="#c8c4be" stroke-width="1.5"/>
+    <!-- Wing roof -->
+    <polygon points="635,300 775,300 760,265 650,265" fill="url(#ct-h-roof)"/>
+  </g>
+
+  <!-- Landscaping: bushes -->
+  <ellipse cx="330" cy="408" rx="28" ry="20" fill="#3a7a20"/>
+  <ellipse cx="355" cy="412" rx="22" ry="16" fill="#4a8a28"/>
+  <ellipse cx="650" cy="408" rx="28" ry="20" fill="#3a7a20"/>
+  <ellipse cx="625" cy="412" rx="22" ry="16" fill="#4a8a28"/>
+  <!-- Flower accents -->
+  <circle cx="340" cy="400" r="4" fill="#F97316" opacity="0.8"/>
+  <circle cx="355" cy="402" r="3" fill="#F97316" opacity="0.7"/>
+  <circle cx="638" cy="400" r="4" fill="#F97316" opacity="0.8"/>
+  <circle cx="650" cy="402" r="3" fill="#F97316" opacity="0.7"/>
+  <!-- Small tree (right) -->
+  <rect x="780" y="340" width="8" height="65" fill="#5a3010"/>
+  <ellipse cx="784" cy="320" rx="30" ry="35" fill="#3a8020"/>
+  <ellipse cx="784" cy="305" rx="22" ry="25" fill="#4a9028"/>
+  <!-- Small tree (left) -->
+  <rect x="108" y="340" width="8" height="65" fill="#5a3010"/>
+  <ellipse cx="112" cy="320" rx="28" ry="32" fill="#3a8020"/>
+  <ellipse cx="112" cy="306" rx="20" ry="23" fill="#4a9028"/>
+
+  <!-- ===== COMPLETED BADGE ===== -->
+  <g filter="url(#ct-h-shadow)">
+    <rect x="600" y="135" width="185" height="62" rx="10" fill="url(#ct-h-completedBadge)"/>
+    <rect x="604" y="139" width="177" height="54" rx="8" fill="none" stroke="white" stroke-width="1" opacity="0.4"/>
+    <!-- Checkmark circle -->
+    <circle cx="627" cy="166" r="16" fill="white" opacity="0.95"/>
+    <polyline points="619,166 624,173 635,158" stroke="#F97316" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Text -->
+    <text x="645" y="158" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white">COMPLETED</text>
+    <text x="645" y="176" font-family="Arial, sans-serif" font-size="10" fill="#ffe0c0">Quality Assured ✓</text>
+  </g>
+
+  <!-- ===== TOP BADGE: Pro Contractors ===== -->
+  <rect x="20" y="15" width="220" height="46" rx="9" fill="url(#ct-h-badgeBg)" filter="url(#ct-h-shadow)"/>
+  <rect x="24" y="19" width="212" height="38" rx="7" fill="none" stroke="#F97316" stroke-width="1" opacity="0.4"/>
+  <!-- Hard hat icon block -->
+  <rect x="27" y="22" width="32" height="32" rx="5" fill="#F97316"/>
+  <ellipse cx="43" cy="38" rx="13" ry="5" fill="#cc5500"/>
+  <path d="M32 38 Q43 28 54 38 Z" fill="white" opacity="0.9"/>
+  <rect x="30" y="37" width="26" height="3" rx="1.5" fill="#cc5500"/>
+  <!-- Text -->
+  <text x="67" y="35" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white">Pro</text>
+  <text x="97" y="35" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#F97316">Contractors</text>
+  <text x="67" y="50" font-family="Arial, sans-serif" font-size="9" fill="#94A3B8">Build · Renovate · Excel</text>
+
+  <!-- Ground/road divider -->
+  <rect x="0" y="398" width="900" height="4" fill="#2a3a28" opacity="0.5"/>
+  <!-- Bottom bar -->
+  <rect x="0" y="553" width="900" height="7" fill="#1E3A5F"/>
+</svg>
