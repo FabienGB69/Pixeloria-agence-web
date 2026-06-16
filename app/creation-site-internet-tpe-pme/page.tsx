@@ -7,13 +7,13 @@ import JsonLd from '@/components/JsonLd';
 export const metadata: Metadata = {
   title: 'Création de site internet pour TPE et PME | Pixeloria',
   description:
-    'Pixeloria crée des sites internet professionnels pour TPE et PME. Visibilité locale, génération de contacts, design sur-mesure. Site Artisan Express à 199 € TTC, livré en 72 h.',
+    'Pixeloria crée des sites internet professionnels pour TPE et PME. Visibilité locale, génération de contacts, design sur-mesure. Site Artisan à 199 € TTC, livré en 72 h.',
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/creation-site-internet-tpe-pme',
     title: 'Création de site internet pour TPE et PME | Pixeloria',
     description:
-      'Site internet professionnel pour TPE et PME. Responsive, SEO local, formulaire de contact. Site Artisan Express à 199 € TTC, livré en 72 h.',
+      'Site internet professionnel pour TPE et PME. Responsive, SEO local, formulaire de contact. Site Artisan à 199 € TTC, livré en 72 h.',
     locale: 'fr_FR',
     siteName: 'Pixeloria',
   },
@@ -66,7 +66,7 @@ export default function CreationSiteTpePmePage() {
     description: 'Création de sites internet professionnels pour TPE et PME de tous secteurs d\'activité.',
     areaServed: 'France',
     offers: [
-      { '@type': 'Offer', name: 'Site Artisan Express', price: '199', priceCurrency: 'EUR' },
+      { '@type': 'Offer', name: 'Site Artisan', price: '199', priceCurrency: 'EUR' },
       { '@type': 'Offer', name: 'Option Visibilité', price: '89', priceCurrency: 'EUR', priceSpecification: { '@type': 'UnitPriceSpecification', referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitCode: 'MON' } } },
     ],
   };
@@ -91,7 +91,7 @@ export default function CreationSiteTpePmePage() {
               <h1>Création de site internet pour TPE et PME</h1>
               <p className="page-hero-sub">
                 Un site professionnel, lisible sur mobile, optimisé pour votre visibilité
-                locale et conçu pour générer des contacts qualifiés. Site Artisan Express
+                locale et conçu pour générer des contacts qualifiés. Site Artisan
                 à 199&nbsp;€&nbsp;TTC, livré en 72 h.
               </p>
               <div className="page-hero-actions">
@@ -189,7 +189,7 @@ export default function CreationSiteTpePmePage() {
             <div className="pricing-cards">
               <div className="pricing-card pricing-card--featured">
                 <span className="pricing-badge">Offre principale</span>
-                <p className="pricing-label">Site Artisan Express</p>
+                <p className="pricing-label">Site Artisan</p>
                 <p className="pricing-price">199 € <span>TTC</span></p>
                 <p className="pricing-sublabel">Paiement unique — livraison en 72 h</p>
                 <ul>
@@ -200,7 +200,7 @@ export default function CreationSiteTpePmePage() {
                   <li>Mise en ligne incluse</li>
                   <li>Optimisation technique de base</li>
                 </ul>
-                <Link href="/#contact" className="btn btn-primary">Choisir Site Artisan Express →</Link>
+                <Link href="/#contact" className="btn btn-primary">Choisir Site Artisan →</Link>
               </div>
               <div className="pricing-card">
                 <p className="pricing-label">Option Visibilité</p>

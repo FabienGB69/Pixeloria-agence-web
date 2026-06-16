@@ -7,13 +7,13 @@ import JsonLd from '@/components/JsonLd';
 export const metadata: Metadata = {
   title: 'Création de site internet pour artisans | Pixeloria',
   description:
-    'Pixeloria crée des sites internet professionnels pour artisans du bâtiment, plombiers, électriciens, peintres, menuisiers et artisans locaux. Design responsive, SEO local de base. Site Artisan Express à 199 € TTC, livré en 72 h.',
+    'Pixeloria crée des sites internet professionnels pour artisans du bâtiment, plombiers, électriciens, peintres, menuisiers et artisans locaux. Design responsive, SEO local de base. Site Artisan à 199 € TTC, livré en 72 h.',
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/creation-site-internet-artisan',
     title: 'Création de site internet pour artisans | Pixeloria',
     description:
-      'Site internet professionnel pour artisans. Responsive, SEO local, formulaire de contact. Site Artisan Express à 199 € TTC, livré en 72 h.',
+      'Site internet professionnel pour artisans. Responsive, SEO local, formulaire de contact. Site Artisan à 199 € TTC, livré en 72 h.',
     locale: 'fr_FR',
     siteName: 'Pixeloria',
   },
@@ -59,7 +59,7 @@ export default function CreationSiteArtisanPage() {
     description: 'Création de sites internet professionnels pour artisans du bâtiment et indépendants locaux.',
     areaServed: 'France',
     offers: [
-      { '@type': 'Offer', name: 'Site Artisan Express', price: '199', priceCurrency: 'EUR' },
+      { '@type': 'Offer', name: 'Site Artisan', price: '199', priceCurrency: 'EUR' },
       { '@type': 'Offer', name: 'Option Visibilité', price: '89', priceCurrency: 'EUR', priceSpecification: { '@type': 'UnitPriceSpecification', referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitCode: 'MON' } } },
     ],
   };
@@ -85,7 +85,7 @@ export default function CreationSiteArtisanPage() {
               <p className="page-hero-sub">
                 Un site professionnel, lisible sur mobile et optimisé pour être trouvé par vos
                 clients locaux. Formulaire de contact, bouton d&apos;appel, galerie de réalisations.
-                Site Artisan Express à 199&nbsp;€&nbsp;TTC, livré en 72 h. Option Visibilité à 89&nbsp;€/mois.
+                Site Artisan à 199&nbsp;€&nbsp;TTC, livré en 72 h. Option Visibilité à 89&nbsp;€/mois.
               </p>
               <div className="page-hero-actions">
                 <Link href="/#contact" className="btn btn-primary">
@@ -183,7 +183,7 @@ export default function CreationSiteArtisanPage() {
             <div className="pricing-cards">
               <div className="pricing-card pricing-card--featured">
                 <span className="pricing-badge">Offre principale</span>
-                <p className="pricing-label">Site Artisan Express</p>
+                <p className="pricing-label">Site Artisan</p>
                 <p className="pricing-price">199 € <span>TTC</span></p>
                 <p className="pricing-sublabel">Paiement unique — livraison en 72 h</p>
                 <ul>
@@ -194,7 +194,7 @@ export default function CreationSiteArtisanPage() {
                   <li>Mise en ligne incluse</li>
                   <li>Optimisation technique de base</li>
                 </ul>
-                <Link href="/#contact" className="btn btn-primary">Choisir Site Artisan Express →</Link>
+                <Link href="/#contact" className="btn btn-primary">Choisir Site Artisan →</Link>
               </div>
               <div className="pricing-card">
                 <p className="pricing-label">Option Visibilité</p>

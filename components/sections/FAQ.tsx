@@ -12,7 +12,7 @@ const faqs = [
     a: "Le SEO inclus correspond aux bases essentielles : structure claire des pages, titres optimisés, balises principales, vitesse, responsive mobile et cohérence des contenus. L'objectif est de partir sur une base saine pour être compris par Google.",
   },
   {
-    q: "Qu'est-ce qui est inclus dans le Site Artisan Express ?",
+    q: "Qu'est-ce qui est inclus dans le Site Artisan ?",
     a: "Tout ce qu'il faut pour être présent en ligne et recevoir des demandes de devis : site one page, jusqu'à 5 sections, bouton téléphone, bouton WhatsApp, formulaire de devis, Google Maps, avis clients, mentions légales, mise en ligne et optimisation SEO locale de base. Livré sous 72h après réception de vos contenus.",
   },
   {
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: "Combien de temps faut-il pour créer un site ?",
-    a: "Pour le Site Artisan Express, Pixeloria s'engage à livrer votre site sous 72h après réception de vos contenus (logo, photos, textes, horaires). Le processus est simple et guidé.",
+    a: "Pour le Site Artisan, Pixeloria s'engage à livrer votre site sous 72h après réception de vos contenus (logo, photos, textes, horaires). Le processus est simple et guidé.",
   },
   {
     q: "Est-ce que Pixeloria garantit la première position sur Google ?",
