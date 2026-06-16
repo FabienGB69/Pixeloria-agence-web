@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-type OfferKey = 'oneShot' | 'essentiel' | 'croissance';
+type OfferKey = 'artisan' | 'visibilite';
 
 interface Offer {
   key: OfferKey;
@@ -17,33 +17,25 @@ interface StripeLinks {
 }
 
 const stripeLinks: Record<OfferKey, StripeLinks> = {
-  oneShot: { referral: 'URL_STRIPE_ONESHOT_440' },
-  essentiel: { referral: 'URL_STRIPE_ESSENTIEL_39_FIRST_MONTH' },
-  croissance: { referral: 'URL_STRIPE_CROISSANCE_79_FIRST_MONTH' },
+  artisan: { referral: 'URL_STRIPE_ARTISAN_179' },
+  visibilite: { referral: 'URL_STRIPE_VISIBILITE_59_FIRST_MONTH' },
 };
 
 const validReferralCodes = ['PIXELORIA-JEAN', 'PIXELORIA-SOPHIE', 'PIXELORIA-MARTIN'];
 
 const offers: Offer[] = [
   {
-    key: 'oneShot',
-    name: 'One Shot',
-    desc: '440 € TTC au lieu de 490 €',
-    benefit: '−50 € sur le site',
+    key: 'artisan',
+    name: 'Site Artisan',
+    desc: '179 € TTC au lieu de 199 €',
+    benefit: '−20 € sur le Site Artisan',
     highlight: false,
   },
   {
-    key: 'essentiel',
-    name: 'Essentiel',
-    desc: 'Premier mois à 39 €',
-    benefit: '1er mois à 39 € puis 89 €/mois',
-    highlight: false,
-  },
-  {
-    key: 'croissance',
-    name: 'Croissance',
-    desc: 'Premier mois à 79 €',
-    benefit: '1er mois à 79 € puis 159 €/mois',
+    key: 'visibilite',
+    name: 'Option Visibilité',
+    desc: '1er mois à 59 € puis 89 €/mois',
+    benefit: '1er mois offert à moitié prix',
     highlight: true,
   },
 ];

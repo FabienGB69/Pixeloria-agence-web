@@ -20,7 +20,7 @@ export default function Hero() {
           </p>
 
           <p className="hero-reassurance">
-            Sans gros budget de départ. Offres simples. Accompagnement clair. Site maintenu selon l&apos;offre choisie.
+            Prix fixe à 199 € TTC. Livré sous 72h. Sans abonnement imposé.
           </p>
 
           <div className="hero-actions">
@@ -55,18 +55,18 @@ export default function Hero() {
 
           <div className="hero-metrics">
             <div className="metric">
-              <strong className="metric-value">490 €</strong>
-              <span>à partir de · TTC</span>
+              <strong className="metric-value">199 €</strong>
+              <span>TTC · paiement unique</span>
             </div>
             <div className="metric-divider" aria-hidden="true"></div>
             <div className="metric">
-              <strong className="metric-value">89 €</strong>
-              <span>/ mois · formule mensuelle</span>
+              <strong className="metric-value">72h</strong>
+              <span>délai de livraison</span>
             </div>
             <div className="metric-divider" aria-hidden="true"></div>
             <div className="metric">
               <strong className="metric-value">48h</strong>
-              <span>délai de réponse audit</span>
+              <span>délai de réponse</span>
             </div>
           </div>
         </div>
@@ -79,7 +79,7 @@ export default function Hero() {
                 <span></span><span></span><span></span>
               </div>
             </div>
-            <h2>Site Sérénité</h2>
+            <h2>Site Artisan</h2>
             <p>Design sur-mesure · SEO local · Support réactif</p>
 
             <ul className="feature-list">
@@ -87,7 +87,7 @@ export default function Hero() {
                 <svg viewBox="0 0 20 20" aria-hidden="true">
                   <path d="M4 10l4 4 8-8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
                 </svg>
-                Jusqu&apos;à 5 pages sur-mesure
+                Site one page · 5 sections
               </li>
               <li>
                 <svg viewBox="0 0 20 20" aria-hidden="true">
@@ -131,7 +131,7 @@ export default function Hero() {
               <circle cx="10" cy="10" r="8" stroke="currentColor" strokeWidth="1.8" />
               <path d="M10 6v4l3 3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
             </svg>
-            Livré en 5–10 jours
+            Livré en 72h
           </div>
         </div>
       </div>
