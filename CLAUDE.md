@@ -95,6 +95,7 @@ Les fichiers de mémoire se trouvent dans `.claude/memory/`. Ils sont mis à jou
 | `/growth-marketer` | Persona Growth Marketer (acquisition & CRO) | Sonnet |
 | `/senior-frontend` | Persona Senior Frontend (performance & a11y) | Sonnet |
 | `/senior-backend` | **Persona Léo** — Serverless, API sécurité, Notion, email | Sonnet |
+| `/svg-orchestrator` | **Orchestrateur SVG** — génère les illustrations des sites démo par batch | Sonnet |
 
 > **Point d'entrée recommandé pour toute tâche complexe : `/cto` ou `/orchestrate`**
 > `/orchestrate` choisit automatiquement le bon tier (Haiku/Sonnet/Opus) et produit un plan avant d'agir.
@@ -179,6 +180,34 @@ Transformer les demandes vagues en résultats testables.
 - **JS** : vanilla uniquement, pas de framework, ES6+
 - **Commits** : `type(scope): message` en anglais, max 72 chars
 - **Commentaires** : seulement si le WHY n'est pas évident
+
+---
+
+## 12. Stratégie de tâches larges (Large Task Strategy)
+
+### Règle de découpe pro-active
+
+Avant de lancer des agents background sur des tâches avec de nombreux fichiers :
+- **Maximum 2 sites / 8 fichiers par agent background** (les agents meurent après ~5 fichiers)
+- Lancer les agents **séquentiellement** par batch, vérifier la completion avant de passer au suivant
+- Utiliser `/svg-orchestrator` comme point d'entrée pour la génération SVG
+
+### Scanner les placeholders SVG
+
+```bash
+for site in public/images/exemples/*/; do
+  count=$(ls "$site"*.svg 2>/dev/null | wc -l)
+  lines=$(wc -l "$site"*.svg 2>/dev/null | tail -1 | awk '{print $1}')
+  echo "$site: $count files, ~$lines total lines"
+done
+```
+
+Fichier placeholder = < 20 lignes. Régénérer si détecté.
+
+### Hook anti-curly-quotes (actif dans `.claude/settings.json`)
+
+Le PostToolUse hook appelle `.claude/fix-curly-quotes.py` après chaque Write/Edit.
+Corrige automatiquement les guillemets typographiques U+2018/U+2019 dans les `.ts`/`.tsx`.
 
 ---
 
