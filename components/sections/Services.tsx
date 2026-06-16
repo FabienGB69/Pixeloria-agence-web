@@ -7,113 +7,74 @@ export default function Services() {
     <section id="services" className="section">
       <div className="container">
         <div className="section-heading reveal">
-          <span className="eyebrow">Nos offres</span>
-          <h2>Des offres claires pour créer ou refondre votre site internet</h2>
+          <span className="eyebrow">Notre offre</span>
+          <h2>Un site professionnel pour artisans, livré en 72h</h2>
           <p className="section-sub">
-            Choisissez la formule adaptée à votre besoin&nbsp;: une création simple en
-            paiement unique, ou un accompagnement mensuel avec maintenance et optimisation.
+            Pixeloria aide les artisans, TPE et PME à obtenir un site clair et efficace pour recevoir plus de demandes de devis. Paiement unique, sans abonnement imposé.
           </p>
         </div>
 
-        <div className="pricing-cards pricing-cards--three">
+        <div className="pricing-cards pricing-cards--two">
 
-          {/* Offre 1 — Site Essentiel */}
-          <div className="pricing-card">
-            <p className="pricing-label">Site Essentiel</p>
-            <p className="pricing-price">490 € <span>TTC</span></p>
-            <p className="pricing-sublabel">Paiement unique — sans abonnement</p>
-            <p className="pricing-accroche">
-              Pour les entreprises qui veulent un site vitrine simple, professionnel et livré clé en main.
-            </p>
-            <p className="pricing-list-title">Inclus :</p>
-            <ul>
-              <li>Création ou refonte d&apos;un site vitrine simple</li>
-              <li>Jusqu&apos;à 3 pages</li>
-              <li>Design responsive mobile, tablette et ordinateur</li>
-              <li>Formulaire de contact</li>
-              <li>Bouton d&apos;appel direct</li>
-              <li>Mise en ligne du site</li>
-              <li>Optimisation technique de base</li>
-              <li>Accompagnement à la prise en main</li>
-            </ul>
-            <p className="pricing-list-title pricing-list-title--excluded">Non inclus :</p>
-            <ul className="pricing-excluded">
-              <li>Maintenance mensuelle</li>
-              <li>SEO mensuel</li>
-              <li>Modifications après livraison</li>
-            </ul>
-            <p className="pricing-note">Idéal si vous souhaitez une présence en ligne professionnelle, sans suivi mensuel.</p>
-            <a
-              href="#contact"
-              className="btn btn-secondary"
-              onClick={() => trackOfferSelect('Site Essentiel', '490 TTC')}
-            >
-              Choisir Site Essentiel →
-            </a>
-          </div>
-
-          {/* Offre 2 — Site Sérénité */}
+          {/* Offre principale — Site Artisan Express */}
           <div className="pricing-card pricing-card--featured">
-            <span className="pricing-badge">Recommandé</span>
-            <p className="pricing-label">Site Sérénité</p>
-            <p className="pricing-price">89 € <span>TTC / mois</span></p>
-            <p className="pricing-sublabel">Engagement recommandé : 12 mois</p>
+            <span className="pricing-badge">L&apos;offre artisan</span>
+            <p className="pricing-label">Site Artisan Express</p>
+            <p className="pricing-price">199 € <span>TTC</span></p>
+            <p className="pricing-sublabel">Paiement unique — livraison sous 72h</p>
             <p className="pricing-accroche">
-              Votre site créé, maintenu et optimisé pour le SEO local de base, sans gros investissement au départ.
+              Un site professionnel pensé pour générer des demandes de devis, livré en 72h après réception de vos contenus.
             </p>
             <p className="pricing-list-title">Inclus :</p>
             <ul>
-              <li>Création ou refonte du site vitrine</li>
-              <li>Jusqu&apos;à 5 pages</li>
-              <li>Design responsive</li>
-              <li>Formulaire de contact</li>
-              <li>Bouton d&apos;appel direct</li>
-              <li>Bouton WhatsApp si souhaité</li>
-              <li>Intégration des avis Google</li>
-              <li>Galerie réalisations</li>
-              <li>Maintenance technique incluse</li>
-              <li>Sauvegardes &amp; sécurité</li>
-              <li>Petites modifications mensuelles</li>
-              <li>SEO local de base inclus</li>
-              <li>Indexation Google</li>
+              <li>Site one page professionnel</li>
+              <li>Jusqu&apos;à 5 sections</li>
+              <li>Design moderne</li>
+              <li>Version mobile</li>
+              <li>Bouton téléphone</li>
+              <li>Bouton WhatsApp</li>
+              <li>Formulaire de devis</li>
+              <li>Google Maps</li>
+              <li>Prestations</li>
+              <li>Zone d&apos;intervention</li>
+              <li>Avis clients / réassurance</li>
+              <li>Mentions légales simples</li>
+              <li>Mise en ligne</li>
+              <li>Optimisation SEO locale de base</li>
             </ul>
-            <p className="pricing-note">Idéal pour les entreprises qui veulent un site professionnel maintenu dans le temps, avec un budget mensuel maîtrisé.</p>
+            <p className="pricing-note">Site one page clé en main, mis en ligne, optimisé pour le mobile et Google.</p>
             <a
               href="#contact"
               className="btn btn-primary"
-              onClick={() => trackOfferSelect('Site Sérénité', '89 TTC / mois')}
+              onClick={() => trackOfferSelect('Site Artisan Express', '199 TTC')}
             >
-              Choisir Site Sérénité →
+              Lancer mon site →
             </a>
           </div>
 
-          {/* Offre 3 — Site Croissance */}
+          {/* Option — Visibilité */}
           <div className="pricing-card">
-            <span className="pricing-badge pricing-badge--alt">Le plus complet</span>
-            <p className="pricing-label">Site Croissance</p>
-            <p className="pricing-price">159 € <span>TTC / mois</span></p>
-            <p className="pricing-sublabel">Engagement recommandé : 12 mois</p>
+            <p className="pricing-label">Option Visibilité</p>
+            <p className="pricing-price">89 € <span>TTC / mois</span></p>
+            <p className="pricing-sublabel">En complément du Site Artisan Express</p>
             <p className="pricing-accroche">
-              Pour les entreprises qui veulent développer leur visibilité locale avec un site, un suivi mensuel et une stratégie de contenu.
+              Pour garder votre site à jour et progresser dans le temps, sans contrainte technique.
             </p>
-            <p className="pricing-list-title">Tout Site Sérénité, plus :</p>
+            <p className="pricing-list-title">Inclus :</p>
             <ul>
-              <li>SEO local renforcé</li>
-              <li>Optimisation Google Business Profile</li>
-              <li>Suivi Google Search Console</li>
-              <li>Création d&apos;un contenu ou article optimisé par mois</li>
-              <li>Optimisation des pages existantes</li>
-              <li>Reporting mensuel simple</li>
-              <li>Conseils pour améliorer les demandes de contact</li>
-              <li>Accompagnement visibilité locale</li>
+              <li>Maintenance technique</li>
+              <li>Petites modifications</li>
+              <li>Suivi local</li>
+              <li>Optimisation progressive</li>
+              <li>Assistance prioritaire</li>
             </ul>
-            <p className="pricing-note">Idéal pour les TPE, PME et artisans qui veulent faire de leur site un vrai levier de visibilité et de prospection locale.</p>
+            <p className="pricing-note">Option disponible à tout moment, sans engagement minimum.</p>
             <a
               href="#contact"
               className="btn btn-secondary"
-              onClick={() => trackOfferSelect('Site Croissance', '159 TTC / mois')}
+              onClick={() => trackOfferSelect('Option Visibilité', '89 TTC / mois')}
             >
-              Choisir Site Croissance →
+              Ajouter l&apos;Option Visibilité →
             </a>
           </div>
 
