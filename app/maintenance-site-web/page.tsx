@@ -64,18 +64,8 @@ export default function MaintenanceSiteWebPage() {
     offers: [
       {
         '@type': 'Offer',
-        name: 'Sérénité',
+        name: 'Option Visibilité',
         price: '89',
-        priceCurrency: 'EUR',
-        priceSpecification: {
-          '@type': 'UnitPriceSpecification',
-          referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitCode: 'MON' },
-        },
-      },
-      {
-        '@type': 'Offer',
-        name: 'Croissance',
-        price: '159',
         priceCurrency: 'EUR',
         priceSpecification: {
           '@type': 'UnitPriceSpecification',
@@ -208,39 +198,27 @@ export default function MaintenanceSiteWebPage() {
           <div className="container">
             <div className="section-heading">
               <span className="eyebrow">Tarifs</span>
-              <h2>Choisissez votre formule de maintenance</h2>
+              <h2>Une option claire pour maintenir votre visibilité</h2>
               <p className="section-sub">
-                Des offres claires, sans surprise, pour une tranquillité d&apos;esprit totale.
+                Une offre tout-en-un, sans surprise, pour une tranquillité d&apos;esprit totale.
               </p>
             </div>
             <div className="pricing-cards">
               <div className="pricing-card pricing-card--featured">
-                <span className="pricing-badge">Recommandé</span>
-                <p className="pricing-label">Sérénité</p>
+                <span className="pricing-badge">Option mensuelle</span>
+                <p className="pricing-label">Option Visibilité</p>
                 <p className="pricing-price">89 € <span>TTC / mois</span></p>
-                <p className="pricing-sublabel">Engagement recommandé&nbsp;: 12 mois</p>
+                <p className="pricing-sublabel">Maintenance, modifications et suivi SEO</p>
                 <ul>
                   <li>Maintenance &amp; mises à jour incluses</li>
                   <li>Hébergement inclus</li>
                   <li>Domaine inclus</li>
                   <li>Sauvegardes régulières</li>
                   <li>Support WhatsApp sous 24 h</li>
-                  <li>Jusqu&apos;à 5 pages</li>
+                  <li>Modifications mensuelles incluses</li>
                   <li>SEO local de base</li>
                 </ul>
-                <Link href="/#contact" className="btn btn-primary">Choisir Sérénité →</Link>
-              </div>
-              <div className="pricing-card">
-                <p className="pricing-label">Croissance</p>
-                <p className="pricing-price">159 € <span>TTC / mois</span></p>
-                <p className="pricing-sublabel">Engagement recommandé&nbsp;: 12 mois</p>
-                <ul>
-                  <li>Tout ce qui est inclus dans Sérénité</li>
-                  <li>SEO renforcé</li>
-                  <li>Contenu mensuel (article ou actualité)</li>
-                  <li>Rapport mensuel d&apos;activité détaillé</li>
-                </ul>
-                <Link href="/#contact" className="btn btn-secondary">Choisir Croissance →</Link>
+                <Link href="/#contact" className="btn btn-primary">Souscrire à l&apos;Option Visibilité →</Link>
               </div>
             </div>
             <p style={{ textAlign: 'center', marginTop: '1.5rem' }}>
