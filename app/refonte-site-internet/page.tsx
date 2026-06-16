@@ -7,13 +7,13 @@ import JsonLd from '@/components/JsonLd';
 export const metadata: Metadata = {
   title: 'Refonte de site internet pour TPE, PME et artisans | Pixeloria',
   description:
-    'Votre site actuel ne génère pas assez de contacts ? Pixeloria refond les sites internet des TPE, PME et artisans : design moderne, SEO local, responsive mobile. Site Artisan Express à 199 € TTC, livré en 72 h.',
+    'Votre site actuel ne génère pas assez de contacts ? Pixeloria refond les sites internet des TPE, PME et artisans : design moderne, SEO local, responsive mobile. Site Artisan à 199 € TTC, livré en 72 h.',
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/refonte-site-internet',
     title: 'Refonte de site internet pour TPE, PME et artisans | Pixeloria',
     description:
-      'Refonte de site internet professionnelle pour artisans et PME. Design moderne, SEO local, responsive. Site Artisan Express à 199 € TTC, livré en 72 h.',
+      'Refonte de site internet professionnelle pour artisans et PME. Design moderne, SEO local, responsive. Site Artisan à 199 € TTC, livré en 72 h.',
     locale: 'fr_FR',
     siteName: 'Pixeloria',
   },
@@ -91,7 +91,7 @@ export default function RefontePageInternet() {
                 Votre site actuel ne génère pas assez de contacts ou donne une image peu
                 professionnelle&nbsp;? Pixeloria refond votre site pour qu&apos;il soit
                 moderne, rapide, lisible sur mobile et optimisé pour le SEO local.
-                Refonte Artisan Express à 199&nbsp;€&nbsp;TTC, livrée en 72 h.
+                Refonte Artisan à 199&nbsp;€&nbsp;TTC, livrée en 72 h.
               </p>
               <div className="page-hero-actions">
                 <Link href="/#contact" className="btn btn-primary">
@@ -205,7 +205,7 @@ export default function RefontePageInternet() {
             <div className="pricing-cards">
               <div className="pricing-card pricing-card--featured">
                 <span className="pricing-badge">Offre principale</span>
-                <p className="pricing-label">Site Artisan Express</p>
+                <p className="pricing-label">Site Artisan</p>
                 <p className="pricing-price">199 € <span>TTC</span></p>
                 <p className="pricing-sublabel">Paiement unique — livraison en 72 h</p>
                 <ul>
@@ -215,7 +215,7 @@ export default function RefontePageInternet() {
                   <li>Formulaire de contact</li>
                   <li>Optimisation technique de base</li>
                 </ul>
-                <Link href="/#contact" className="btn btn-primary">Choisir Site Artisan Express →</Link>
+                <Link href="/#contact" className="btn btn-primary">Choisir Site Artisan →</Link>
               </div>
               <div className="pricing-card">
                 <p className="pricing-label">Option Visibilité</p>

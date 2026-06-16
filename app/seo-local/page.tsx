@@ -198,7 +198,7 @@ export default function SeoLocalPage() {
             <div className="pricing-cards">
               <div className="pricing-card pricing-card--featured">
                 <span className="pricing-badge">Offre principale</span>
-                <span className="pricing-label">Site Artisan Express</span>
+                <span className="pricing-label">Site Artisan</span>
                 <div className="pricing-price">199 <span>€ TTC</span></div>
                 <p className="pricing-sublabel">Paiement unique — livraison en 72 h</p>
                 <ul>

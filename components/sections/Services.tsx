@@ -16,10 +16,10 @@ export default function Services() {
 
         <div className="pricing-cards pricing-cards--two">
 
-          {/* Offre principale — Site Artisan Express */}
+          {/* Offre principale — Site Artisan */}
           <div className="pricing-card pricing-card--featured">
             <span className="pricing-badge">L&apos;offre artisan</span>
-            <p className="pricing-label">Site Artisan Express</p>
+            <p className="pricing-label">Site Artisan</p>
             <p className="pricing-price">199 € <span>TTC</span></p>
             <p className="pricing-sublabel">Paiement unique — livraison sous 72h</p>
             <p className="pricing-accroche">
@@ -46,7 +46,7 @@ export default function Services() {
             <a
               href="#contact"
               className="btn btn-primary"
-              onClick={() => trackOfferSelect('Site Artisan Express', '199 TTC')}
+              onClick={() => trackOfferSelect('Site Artisan', '199 TTC')}
             >
               Lancer mon site →
             </a>
@@ -56,7 +56,7 @@ export default function Services() {
           <div className="pricing-card">
             <p className="pricing-label">Option Visibilité</p>
             <p className="pricing-price">89 € <span>TTC / mois</span></p>
-            <p className="pricing-sublabel">En complément du Site Artisan Express</p>
+            <p className="pricing-sublabel">En complément du Site Artisan</p>
             <p className="pricing-accroche">
               Pour garder votre site à jour et progresser dans le temps, sans contrainte technique.
             </p>
