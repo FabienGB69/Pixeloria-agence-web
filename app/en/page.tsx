@@ -124,7 +124,7 @@ const jsonLd = {
           name: 'What industries do you work with?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Pixeloria works with contractors, tradespeople, renovation companies, hospitality and concierge businesses, estate agents, local shops and freelancers. Essentially any small business that needs a professional online presence.',
+            text: 'Pixeloria works with contractors, tradespeople, renovation companies, hospitality and concierge businesses, and local shops. Essentially any small business that needs a professional online presence.',
           },
         },
         {
@@ -179,7 +179,7 @@ const faqs = [
   },
   {
     q: 'What industries do you work with?',
-    a: 'Pixeloria works with contractors, tradespeople, renovation companies, hospitality and concierge businesses, estate agents, local shops and freelancers. Essentially any small business that needs a professional online presence.',
+    a: 'Pixeloria works with contractors, tradespeople, renovation companies, hospitality and concierge businesses, and local shops. Essentially any small business that needs a professional online presence.',
   },
   {
     q: 'What happens if I am not happy with the result?',
@@ -706,9 +706,7 @@ export default function EnHomePage() {
                 { label: 'Contractors & Tradespeople', desc: 'Electricians, plumbers, roofers — get found when local customers search.', href: '/en/examples/contractors' },
                 { label: 'Renovation Companies', desc: 'Showcase your projects, build trust and convert enquiries into quotes.', href: '/en/examples/renovation-companies' },
                 { label: 'Hospitality & Concierge', desc: 'Holiday lets, B&Bs and concierge services that need to inspire and convert.', href: '/en/examples/hospitality-concierge' },
-                { label: 'Estate Agents & Property', desc: 'Present your listings and services with a professional, trustworthy presence.', href: '/en/examples/real-estate' },
                 { label: 'Local Shops & Retail', desc: 'Bring footfall online — showcase products, opening hours and special offers.', href: '/en/examples/local-shops' },
-                { label: 'Freelancers & Consultants', desc: 'Position yourself as the expert clients want to hire — not just another profile.', href: '/en/examples/freelancers-consultants' },
               ].map(({ label, desc, href }) => (
                 <Link
                   key={href}
