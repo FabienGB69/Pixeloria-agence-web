@@ -1273,6 +1273,40 @@ abbr[title] {
   margin-top: 0.25rem;
 }
 
+.project-site-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  color: var(--accent);
+  text-decoration: none;
+  margin-top: 0.1rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+.project-site-link:hover { opacity: 1; text-decoration: underline; }
+
+.project-preview {
+  display: block;
+  margin: 1rem 0;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  background: #f7f7f7;
+  text-decoration: none;
+}
+.project-preview img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.35s ease;
+}
+.project-preview:hover img { transform: scale(1.02); }
+
 /* ============================================================
    PROCESS
 ============================================================ */

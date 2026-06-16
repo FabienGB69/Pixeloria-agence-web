@@ -14,6 +14,8 @@ type Project = {
   summary: string;
   bullets: string[];
   beforeImage?: string;
+  previewImage?: string;
+  showSiteLink?: boolean;
 };
 
 const projects: Project[] = [
@@ -78,6 +80,8 @@ const projects: Project[] = [
       'Parcours de contact simplifié pour générer des leads',
       'Base SEO locale posée dès le lancement',
     ],
+    showSiteLink: true,
+    previewImage: '/assets/portfolio/qit-concierge-preview.svg',
   },
 ];
 
@@ -111,9 +115,40 @@ export default function Portfolio() {
               </div>
 
               <h3>{p.client}</h3>
+
+              {p.showSiteLink && (
+                <a
+                  href={p.url}
+                  className="project-site-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Site web : qitconcierge.fr
+                </a>
+              )}
+
               <p style={{ fontSize: '0.875rem', marginBottom: '0.75rem' }}>
                 {p.summary}
               </p>
+
+              {p.previewImage && (
+                <a
+                  href={p.url}
+                  className="project-preview"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Voir le site ${p.client}`}
+                >
+                  <Image
+                    src={p.previewImage}
+                    alt={`Aperçu du site ${p.client}`}
+                    width={600}
+                    height={400}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    loading="lazy"
+                  />
+                </a>
+              )}
 
               <ul className="project-bullets">
                 {p.bullets.map((b) => (
@@ -174,7 +209,7 @@ export default function Portfolio() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Voir le site final ↗
+                {p.showSiteLink ? 'Voir le site : qitconcierge.fr ↗' : 'Voir le site final ↗'}
               </a>
             </article>
           ))}
