@@ -49,7 +49,7 @@ export default function ComparisonTable() {
             <thead>
               <tr>
                 <th className="ctable-feature-col">Fonctionnalité</th>
-                <th>Site Artisan Express<br /><span className="ctable-price">199 € TTC</span></th>
+                <th>Site Artisan<br /><span className="ctable-price">199 € TTC</span></th>
                 <th className="ctable-th--highlight">Option Visibilité<br /><span className="ctable-price">+89 €/mois</span></th>
               </tr>
             </thead>
