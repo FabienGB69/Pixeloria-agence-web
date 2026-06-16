@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: 'Pixeloria',
     title: 'Pixeloria — Création & refonte de sites internet pour artisans et PME',
     description:
-      'Création et refonte de sites internet professionnels pour artisans, TPE et PME. Offre one shot dès 490 € ou abonnement dès 89 €/mois avec maintenance et SEO inclus.',
+      'Pixeloria crée des sites internet professionnels pour artisans, TPE et PME. Site Artisan à 199 € TTC, livré sous 72h. Bouton téléphone, WhatsApp, formulaire de devis, SEO local inclus.',
     images: [
       {
         url: '/og/pixeloria-og-image.png',
