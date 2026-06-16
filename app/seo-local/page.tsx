@@ -193,13 +193,28 @@ export default function SeoLocalPage() {
           <div className="container">
             <h2 className="section-heading">SEO local inclus dans nos offres</h2>
             <p className="section-sub">
-              Le référencement local est intégré à nos formules mensuelles, sans supplément.
+              Le référencement local est intégré à notre Option Visibilité mensuelle, sans supplément.
             </p>
             <div className="pricing-cards">
+              <div className="pricing-card pricing-card--featured">
+                <span className="pricing-badge">Offre principale</span>
+                <span className="pricing-label">Site Artisan Express</span>
+                <div className="pricing-price">199 <span>€ TTC</span></div>
+                <p className="pricing-sublabel">Paiement unique — livraison en 72 h</p>
+                <ul>
+                  <li>Site vitrine jusqu&apos;à 3 pages</li>
+                  <li>Design responsive sur-mesure</li>
+                  <li>Formulaire de contact</li>
+                  <li>Mise en ligne incluse</li>
+                </ul>
+                <Link href="/offres" className="btn btn-primary">
+                  Voir le détail
+                </Link>
+              </div>
               <div className="pricing-card">
-                <span className="pricing-label">Sérénité</span>
+                <span className="pricing-label">Option Visibilité</span>
                 <div className="pricing-price">89 <span>€/mois</span></div>
-                <p className="pricing-sublabel">SEO local de base inclus</p>
+                <p className="pricing-sublabel">Maintenance, modifications et SEO local inclus</p>
                 <ul>
                   <li>Optimisation Google Business Profile</li>
                   <li>Mots-clés locaux ciblés</li>
@@ -207,23 +222,6 @@ export default function SeoLocalPage() {
                   <li>Support réactif</li>
                 </ul>
                 <Link href="/offres" className="btn btn-secondary">
-                  Voir le détail
-                </Link>
-              </div>
-              <div className="pricing-card pricing-card--featured">
-                <span className="pricing-badge">SEO renforcé</span>
-                <span className="pricing-label">Croissance</span>
-                <div className="pricing-price">159 <span>€/mois</span></div>
-                <p className="pricing-sublabel">SEO local avancé + pages de zones + suivi mensuel + contenu mensuel</p>
-                <ul>
-                  <li>Tout ce qui est dans Sérénité</li>
-                  <li>Pages de zones d&apos;intervention</li>
-                  <li>Suivi de positionnement mensuel</li>
-                  <li>Contenu mensuel optimisé SEO</li>
-                  <li>Stratégie avis clients</li>
-                  <li>Balisage schema.org local</li>
-                </ul>
-                <Link href="/offres" className="btn btn-primary">
                   Voir le détail
                 </Link>
               </div>
