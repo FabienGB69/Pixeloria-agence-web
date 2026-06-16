@@ -1285,7 +1285,10 @@ abbr[title] {
   opacity: 0.85;
   transition: opacity 0.2s;
 }
-.project-site-link:hover { opacity: 1; text-decoration: underline; }
+.project-site-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
 
 .project-preview {
   display: block;
