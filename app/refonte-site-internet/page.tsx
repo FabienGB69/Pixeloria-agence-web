@@ -7,13 +7,13 @@ import JsonLd from '@/components/JsonLd';
 export const metadata: Metadata = {
   title: 'Refonte de site internet pour TPE, PME et artisans | Pixeloria',
   description:
-    'Votre site actuel ne génère pas assez de contacts ? Pixeloria refond les sites internet des TPE, PME et artisans : design moderne, SEO local, responsive mobile. À partir de 490 € TTC ou 89 €/mois.',
+    'Votre site actuel ne génère pas assez de contacts ? Pixeloria refond les sites internet des TPE, PME et artisans : design moderne, SEO local, responsive mobile. Site Artisan Express à 199 € TTC, livré en 72 h.',
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/refonte-site-internet',
     title: 'Refonte de site internet pour TPE, PME et artisans | Pixeloria',
     description:
-      'Refonte de site internet professionnelle pour artisans et PME. Design moderne, SEO local, responsive. À partir de 490 € TTC.',
+      'Refonte de site internet professionnelle pour artisans et PME. Design moderne, SEO local, responsive. Site Artisan Express à 199 € TTC, livré en 72 h.',
     locale: 'fr_FR',
     siteName: 'Pixeloria',
   },
@@ -91,7 +91,7 @@ export default function RefontePageInternet() {
                 Votre site actuel ne génère pas assez de contacts ou donne une image peu
                 professionnelle&nbsp;? Pixeloria refond votre site pour qu&apos;il soit
                 moderne, rapide, lisible sur mobile et optimisé pour le SEO local.
-                À partir de 490&nbsp;€&nbsp;TTC ou 89&nbsp;€/mois.
+                Refonte Artisan Express à 199&nbsp;€&nbsp;TTC, livrée en 72 h.
               </p>
               <div className="page-hero-actions">
                 <Link href="/#contact" className="btn btn-primary">
@@ -196,17 +196,18 @@ export default function RefontePageInternet() {
           <div className="container">
             <div className="section-heading">
               <span className="eyebrow">Tarifs</span>
-              <h2>Choisissez votre formule de refonte</h2>
+              <h2>Une offre simple pour refondre votre site</h2>
               <p className="section-sub">
-                Une refonte peut être réalisée en paiement unique ou en formule mensuelle
-                avec maintenance et SEO local inclus.
+                Une refonte livrée en 72 h, paiement unique. Une option mensuelle pour
+                maintenir votre visibilité et garder votre site à jour.
               </p>
             </div>
             <div className="pricing-cards">
-              <div className="pricing-card">
-                <p className="pricing-label">Refonte Essentielle</p>
-                <p className="pricing-price">490 € <span>TTC</span></p>
-                <p className="pricing-sublabel">Paiement unique — sans abonnement</p>
+              <div className="pricing-card pricing-card--featured">
+                <span className="pricing-badge">Offre principale</span>
+                <p className="pricing-label">Site Artisan Express</p>
+                <p className="pricing-price">199 € <span>TTC</span></p>
+                <p className="pricing-sublabel">Paiement unique — livraison en 72 h</p>
                 <ul>
                   <li>Refonte complète jusqu&apos;à 3 pages</li>
                   <li>Design responsive sur-mesure</li>
@@ -214,27 +215,25 @@ export default function RefontePageInternet() {
                   <li>Formulaire de contact</li>
                   <li>Optimisation technique de base</li>
                 </ul>
-                <Link href="/#contact" className="btn btn-secondary">Choisir cette formule →</Link>
+                <Link href="/#contact" className="btn btn-primary">Choisir Site Artisan Express →</Link>
               </div>
-              <div className="pricing-card pricing-card--featured">
-                <span className="pricing-badge">Recommandé</span>
-                <p className="pricing-label">Refonte Sérénité</p>
+              <div className="pricing-card">
+                <p className="pricing-label">Option Visibilité</p>
                 <p className="pricing-price">89 € <span>TTC / mois</span></p>
-                <p className="pricing-sublabel">Engagement recommandé&nbsp;: 12 mois</p>
+                <p className="pricing-sublabel">Maintenance, modifications et suivi SEO</p>
                 <ul>
-                  <li>Refonte complète jusqu&apos;à 5 pages</li>
                   <li>Maintenance &amp; mises à jour incluses</li>
                   <li>Hébergement + domaine offerts</li>
                   <li>SEO local de base inclus</li>
                   <li>Modifications mensuelles incluses</li>
                   <li>Support WhatsApp sous 24 h</li>
                 </ul>
-                <Link href="/#contact" className="btn btn-primary">Choisir cette formule →</Link>
+                <Link href="/#contact" className="btn btn-secondary">Ajouter l&apos;Option Visibilité →</Link>
               </div>
             </div>
             <p style={{ textAlign: 'center', marginTop: '1.5rem' }}>
               <Link href="/offres" style={{ color: 'var(--primary)', textDecoration: 'underline', fontSize: '0.9rem' }}>
-                Voir aussi Site Croissance à 159 €/mois (SEO renforcé + contenu mensuel) →
+                Voir le détail de nos offres →
               </Link>
             </p>
           </div>
