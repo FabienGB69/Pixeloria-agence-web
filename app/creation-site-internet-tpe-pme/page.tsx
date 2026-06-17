@@ -67,7 +67,7 @@ export default function CreationSiteTpePmePage() {
     areaServed: 'France',
     offers: [
       { '@type': 'Offer', name: 'Site Artisan', price: '199', priceCurrency: 'EUR' },
-      { '@type': 'Offer', name: 'Option Visibilité', price: '89', priceCurrency: 'EUR', priceSpecification: { '@type': 'UnitPriceSpecification', referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitCode: 'MON' } } },
+      { '@type': 'Offer', name: 'Option Visibilité', price: '49', priceCurrency: 'EUR', priceSpecification: { '@type': 'UnitPriceSpecification', referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitCode: 'MON' } } },
     ],
   };
 
@@ -204,7 +204,7 @@ export default function CreationSiteTpePmePage() {
               </div>
               <div className="pricing-card">
                 <p className="pricing-label">Option Visibilité</p>
-                <p className="pricing-price">89 € <span>TTC / mois</span></p>
+                <p className="pricing-price">49 € <span>TTC / mois</span></p>
                 <p className="pricing-sublabel">Maintenance, modifications et suivi SEO</p>
                 <ul>
                   <li>Maintenance &amp; mises à jour incluses</li>

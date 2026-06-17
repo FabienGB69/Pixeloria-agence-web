@@ -213,7 +213,7 @@ export default function SeoLocalPage() {
               </div>
               <div className="pricing-card">
                 <span className="pricing-label">Option Visibilité</span>
-                <div className="pricing-price">89 <span>€/mois</span></div>
+                <div className="pricing-price">49 <span>€/mois</span></div>
                 <p className="pricing-sublabel">Maintenance, modifications et SEO local inclus</p>
                 <ul>
                   <li>Optimisation Google Business Profile</li>

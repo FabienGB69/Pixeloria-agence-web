@@ -16,8 +16,8 @@ const faqs = [
     a: "Tout ce qu'il faut pour être présent en ligne et recevoir des demandes de devis : site one page, jusqu'à 5 sections, bouton téléphone, bouton WhatsApp, formulaire de devis, Google Maps, avis clients, mentions légales, mise en ligne et optimisation SEO locale de base. Livré sous 72h après réception de vos contenus.",
   },
   {
-    q: "À quoi sert l'Option Visibilité à 89 €/mois ?",
-    a: "L'Option Visibilité est un complément mensuel sans obligation. Elle inclut la maintenance technique, les petites modifications, le suivi local, l'optimisation progressive et une assistance prioritaire. Elle permet de garder votre site à jour et d'améliorer votre visibilité dans le temps, sans contrainte technique.",
+    q: "À quoi sert l'Option Visibilité à 49 €/mois ?",
+    a: "L'Option Visibilité à 49 €/mois est un complément sans engagement. Elle inclut la maintenance technique, les sauvegardes, les corrections mineures, les petites modifications (textes, photos, horaires, prestations, zones d'intervention), la vérification mobile et l'optimisation SEO locale progressive. Sans engagement, résiliable à tout moment.",
   },
   {
     q: "Puis-je modifier mon site après livraison ?",

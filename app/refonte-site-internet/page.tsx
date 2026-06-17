@@ -219,7 +219,7 @@ export default function RefontePageInternet() {
               </div>
               <div className="pricing-card">
                 <p className="pricing-label">Option Visibilité</p>
-                <p className="pricing-price">89 € <span>TTC / mois</span></p>
+                <p className="pricing-price">49 € <span>TTC / mois</span></p>
                 <p className="pricing-sublabel">Maintenance, modifications et suivi SEO</p>
                 <ul>
                   <li>Maintenance &amp; mises à jour incluses</li>

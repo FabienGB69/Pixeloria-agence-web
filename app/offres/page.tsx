@@ -10,7 +10,7 @@ import JsonLd from '@/components/JsonLd';
 export const metadata: Metadata = {
   title: 'Offre Site Artisan — 199 € TTC | Pixeloria',
   description:
-    'Pixeloria crée votre site professionnel artisan pour 199 € TTC, livré sous 72h. Bouton téléphone, WhatsApp, formulaire de devis, Google Maps, SEO local. Option maintenance 89 €/mois.',
+    'Pixeloria crée votre site professionnel artisan pour 199 € TTC, livré sous 72h. Bouton téléphone, WhatsApp, formulaire de devis, Google Maps, SEO local. Option maintenance 49 €/mois.',
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/offres',
