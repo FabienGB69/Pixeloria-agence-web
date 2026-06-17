@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Mentions Légales — Pixeloria',
-  description: 'Mentions légales du site Pixeloria, agence web pour artisans et PME.',
+  description: 'Mentions légales du site Pixeloria, agence web pour artisans et TPE.',
   robots: { index: false, follow: false },
 };
 

@@ -232,7 +232,7 @@ export default function FreelancersConsultantsDemoPage() {
                 <h1 className="demo-hero-craft">Digital Strategy · Online Marketing</h1>
                 <p className="demo-hero-name">Morgan Digital Studio</p>
                 <p className="demo-hero-sub">
-                  Independent digital consultant based in Paris. I help SMEs and solopreneurs
+                  Independent digital consultant based in Paris. I help micro-businesses and solopreneurs
                   build their online presence and attract the right clients.
                 </p>
                 <div className="demo-hero-ctas">
@@ -542,7 +542,7 @@ export default function FreelancersConsultantsDemoPage() {
           <div className="demo-back-cta-trust">
             <span>✓ Free quote within 48h</span>
             <span>✓ Site delivered in 5–10 days</span>
-            <span>✓ From €89/month all-inclusive</span>
+            <span>✓ From €49/month — Visibility Option</span>
           </div>
         </div>
       </section>

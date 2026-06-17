@@ -31,7 +31,7 @@ const trustPoints = [
   },
   {
     title: 'Vision métier',
-    desc: 'Pixeloria comprend les contraintes des artisans, TPE et PME : temps limité, besoin de clarté, budget maîtrisé.',
+    desc: 'Pixeloria comprend les contraintes des artisans et TPE : temps limité, besoin de clarté, budget maîtrisé.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path d="M3 21V9l9-6 9 6v12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
@@ -55,7 +55,7 @@ export default function Testimonials() {
             <span className="testimonials-badge">Confiance</span>
             <h2>Pourquoi nous faire confiance&nbsp;?</h2>
             <p className="testimonials-sub">
-              Pixeloria accompagne les artisans, indépendants et PME avec une approche simple,
+              Pixeloria accompagne les artisans, indépendants et TPE avec une approche simple,
               claire et orientée résultat.
             </p>
             <p className="testimonials-body">

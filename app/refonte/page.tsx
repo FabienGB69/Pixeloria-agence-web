@@ -9,7 +9,7 @@ import JsonLd from '@/components/JsonLd';
 export const metadata: Metadata = {
   title: 'Audit & Refonte de Site — Pixeloria',
   description:
-    'Obtenez un audit gratuit de votre site et découvrez nos offres de refonte pour artisans et PME.',
+    'Obtenez un audit gratuit de votre site et découvrez nos offres de refonte pour artisans et TPE.',
 };
 
 export default function RefontePage() {

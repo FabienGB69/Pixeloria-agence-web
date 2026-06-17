@@ -4,7 +4,7 @@ export default function Intro() {
       <div className="container">
         <div className="intro-content reveal">
           <p className="intro-lead">
-            Pixeloria crée et refond des sites vitrines professionnels pour les TPE, PME, artisans
+            Pixeloria crée et refond des sites vitrines professionnels pour les artisans, TPE
             et entreprises locales qui veulent améliorer leur image, être visibles sur Google et
             recevoir plus de demandes de contact.
           </p>

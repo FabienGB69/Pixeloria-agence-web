@@ -27,28 +27,12 @@ const targetAudiences = [
     badge: 'Cas anonymisé',
   },
   {
-    slug: 'agence-immobiliere',
-    emoji: '🏠',
-    title: 'Agences immobilières',
-    description: 'Agent immobilier, mandataire, promoteur local…',
-    cta: 'Voir un exemple de site',
-    href: '/exemples/agence-immobiliere',
-  },
-  {
     slug: 'commerce-local',
     emoji: '🛒',
     title: 'Commerçants locaux',
     description: 'Boutique de quartier, fleuriste, librairie, commerce de proximité…',
     cta: 'Voir un exemple de site',
     href: '/exemples/commerce-local',
-  },
-  {
-    slug: 'independant',
-    emoji: '💼',
-    title: 'Indépendants',
-    description: 'Freelance, consultant, coach, formateur…',
-    cta: 'Voir un exemple de site',
-    href: '/exemples/independant',
   },
 ];
 
@@ -68,7 +52,7 @@ export default function ForWho() {
           </p>
         </div>
 
-        <div className="forwho-grid forwho-grid--3col">
+        <div className="forwho-grid forwho-grid--2col">
           {targetAudiences.map((item) => (
             <Link key={item.slug} href={item.href} className="forwho-link-card reveal">
               {item.badge && (

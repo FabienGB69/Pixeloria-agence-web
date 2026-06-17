@@ -10,7 +10,7 @@ export default function Services() {
           <span className="eyebrow">Notre offre</span>
           <h2>Un site professionnel pour artisans, livré en 72h</h2>
           <p className="section-sub">
-            Pixeloria aide les artisans, TPE et PME à obtenir un site clair et efficace pour recevoir plus de demandes de devis. Paiement unique, sans abonnement imposé.
+            Pixeloria aide les artisans et TPE à obtenir un site clair et efficace pour recevoir plus de demandes de devis. Paiement unique, sans abonnement imposé.
           </p>
         </div>
 
@@ -55,24 +55,37 @@ export default function Services() {
           {/* Option — Visibilité */}
           <div className="pricing-card">
             <p className="pricing-label">Option Visibilité</p>
-            <p className="pricing-price">89 € <span>TTC / mois</span></p>
+            <p className="pricing-price">49 € <span>TTC / mois</span></p>
             <p className="pricing-sublabel">En complément du Site Artisan</p>
             <p className="pricing-accroche">
-              Pour garder votre site à jour et progresser dans le temps, sans contrainte technique.
+              Votre site reste à jour, sécurisé et optimisé, sans que vous ayez à vous en occuper.
+            </p>
+            <p className="pricing-sub-accroche">
+              Une tranquillité mensuelle pour éviter d&apos;avoir un site abandonné après sa mise en ligne.
             </p>
             <p className="pricing-list-title">Inclus :</p>
             <ul>
-              <li>Maintenance technique</li>
-              <li>Petites modifications</li>
-              <li>Suivi local</li>
-              <li>Optimisation progressive</li>
-              <li>Assistance prioritaire</li>
+              <li>Maintenance technique du site</li>
+              <li>Sauvegardes régulières</li>
+              <li>Corrections mineures</li>
+              <li>Petites modifications de textes, photos ou prestations</li>
+              <li>Mise à jour des coordonnées, horaires ou boutons d&apos;appel</li>
+              <li>Ajout ou modification de zones d&apos;intervention</li>
+              <li>Vérification de l&apos;affichage mobile</li>
+              <li>Optimisation SEO locale progressive</li>
+              <li>Assistance prioritaire par message</li>
             </ul>
-            <p className="pricing-note">Option disponible à tout moment, sans engagement minimum.</p>
+            <p className="pricing-list-title pricing-list-title--excluded">Non inclus :</p>
+            <ul className="pricing-excluded">
+              <li>Refonte complète du site</li>
+              <li>Création de nouvelles pages complexes</li>
+              <li>Google Ads, gestion des réseaux sociaux, articles de blog</li>
+            </ul>
+            <p className="pricing-note">Sans engagement · Résiliable à tout moment.</p>
             <a
               href="#contact"
               className="btn btn-secondary"
-              onClick={() => trackOfferSelect('Option Visibilité', '89 TTC / mois')}
+              onClick={() => trackOfferSelect('Option Visibilité', '49 TTC / mois')}
             >
               Ajouter l&apos;Option Visibilité →
             </a>

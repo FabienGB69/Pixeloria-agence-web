@@ -541,7 +541,7 @@ export default function RealEstateDemoPage() {
           <div className="demo-back-cta-trust">
             <span>✓ Free quote within 48h</span>
             <span>✓ Site delivered in 5–10 days</span>
-            <span>✓ From €89/month all-inclusive</span>
+            <span>✓ From €49/month — Visibility Option</span>
           </div>
         </div>
       </section>

@@ -486,7 +486,7 @@ export default function ContractorsDemoPage() {
               <div className="demo-contact-info">
                 <span className="demo-eyebrow">Free &amp; no obligation</span>
                 <h2 id="demo-contact-title">Request a quote</h2>
-                <p>Tell us about your project and we’ll call you back quickly.</p>
+                <p>Tell us about your project and we&apos;ll call you back quickly.</p>
 
                 <div className="demo-contact-channels">
                   <a href="tel:+33612345678" className="demo-channel">
@@ -636,7 +636,7 @@ export default function ContractorsDemoPage() {
           <div className="demo-back-cta-trust">
             <span>✓ Free quote within 48h</span>
             <span>✓ Site delivered in 5–10 days</span>
-            <span>✓ From €89/month all-inclusive</span>
+            <span>✓ From €49/month — Visibility Option</span>
           </div>
         </div>
       </section>

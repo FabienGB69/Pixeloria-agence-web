@@ -38,7 +38,7 @@ export default function Footer({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
               height={32}
             />
           </Link>
-          <p>{locale === 'en' ? 'Website creation and redesign for local businesses and trades.' : 'Création &amp; refonte de sites internet pour artisans, TPE et PME locales.'}</p>
+          <p>{locale === 'en' ? 'Website creation and redesign for local businesses and trades.' : 'Création &amp; refonte de sites internet pour artisans et TPE locaux.'}</p>
           <p className="footer-brand-contact">
             <a href="tel:+33786125313">07 86 12 53 13</a><br />
             <a href="mailto:contact@pixeloria.fr">contact@pixeloria.fr</a><br />

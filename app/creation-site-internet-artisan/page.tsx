@@ -60,7 +60,7 @@ export default function CreationSiteArtisanPage() {
     areaServed: 'France',
     offers: [
       { '@type': 'Offer', name: 'Site Artisan', price: '199', priceCurrency: 'EUR' },
-      { '@type': 'Offer', name: 'Option Visibilité', price: '89', priceCurrency: 'EUR', priceSpecification: { '@type': 'UnitPriceSpecification', referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitCode: 'MON' } } },
+      { '@type': 'Offer', name: 'Option Visibilité', price: '49', priceCurrency: 'EUR', priceSpecification: { '@type': 'UnitPriceSpecification', referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitCode: 'MON' } } },
     ],
   };
 
@@ -85,7 +85,7 @@ export default function CreationSiteArtisanPage() {
               <p className="page-hero-sub">
                 Un site professionnel, lisible sur mobile et optimisé pour être trouvé par vos
                 clients locaux. Formulaire de contact, bouton d&apos;appel, galerie de réalisations.
-                Site Artisan à 199&nbsp;€&nbsp;TTC, livré en 72 h. Option Visibilité à 89&nbsp;€/mois.
+                Site Artisan à 199&nbsp;€&nbsp;TTC, livré en 72 h. Option Visibilité à 49&nbsp;€/mois.
               </p>
               <div className="page-hero-actions">
                 <Link href="/#contact" className="btn btn-primary">
@@ -198,7 +198,7 @@ export default function CreationSiteArtisanPage() {
               </div>
               <div className="pricing-card">
                 <p className="pricing-label">Option Visibilité</p>
-                <p className="pricing-price">89 € <span>TTC / mois</span></p>
+                <p className="pricing-price">49 € <span>TTC / mois</span></p>
                 <p className="pricing-sublabel">Maintenance, modifications et suivi SEO</p>
                 <ul>
                   <li>Maintenance &amp; mises à jour incluses</li>

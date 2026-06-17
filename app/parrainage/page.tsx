@@ -7,7 +7,7 @@ import ReferralCodeSection from '@/components/parrainage/ReferralCodeSection';
 export const metadata: Metadata = {
   title: "Programme de parrainage — Gagnez jusqu'à 150 € | Pixeloria",
   description:
-    "Recommandez Pixeloria à un artisan, une TPE ou une PME et gagnez jusqu'à 150 €. Programme de parrainage automatisé, transparent et sans gestion manuelle.",
+    "Recommandez Pixeloria à un artisan ou une TPE et gagnez jusqu'à 150 €. Programme de parrainage automatisé, transparent et sans gestion manuelle.",
   openGraph: {
     title: "Programme de parrainage Pixeloria — Gagnez jusqu'à 150 €",
     description:
@@ -61,7 +61,7 @@ export default function ParrainagePage() {
             </h1>
 
             <p className="hero__subtitle">
-              Vous connaissez un artisan, une TPE ou une PME qui a besoin d&apos;un site web professionnel&nbsp;?
+              Vous connaissez un artisan ou une TPE qui a besoin d&apos;un site web professionnel&nbsp;?
               Partagez votre lien de parrainage et recevez une récompense dès que le projet est validé.
             </p>
 
@@ -105,7 +105,7 @@ export default function ParrainagePage() {
                 <span className="badge badge--gold">Meilleure récompense</span>
               </div>
               <div className="hero-card__amount">30 €/mois <span>récompense parrain</span></div>
-              <div className="hero-card__label">Option Visibilité · 89 € TTC/mois</div>
+              <div className="hero-card__label">Option Visibilité · 49 € TTC/mois</div>
               <div className="hero-card__sub">Déclenché après 3 mois d&apos;abonnement actifs</div>
             </div>
           </div>
@@ -224,7 +224,7 @@ export default function ParrainagePage() {
               <div className="reward-card__top">
                 <div>
                   <div className="reward-card__name">Option Visibilité</div>
-                  <div className="reward-card__price">Visibilité locale · 89 € TTC/mois</div>
+                  <div className="reward-card__price">Visibilité locale · 49 € TTC/mois</div>
                 </div>
                 <span className="badge badge--gold">⭐ Meilleure récompense</span>
               </div>
@@ -241,7 +241,7 @@ export default function ParrainagePage() {
                   <span className="reward-card__row-icon">💵</span>
                   <span className="reward-card__row-label">Puis mensualité normale</span>
                 </div>
-                <span className="reward-card__row-value">89 € TTC/mois</span>
+                <span className="reward-card__row-value">49 € TTC/mois</span>
               </div>
               <div className="reward-card__row">
                 <div className="reward-card__row-left">
@@ -279,7 +279,7 @@ export default function ParrainagePage() {
                 <li className="audience__item"><span className="audience__item-icon">🔨</span> Un artisan du bâtiment</li>
                 <li className="audience__item"><span className="audience__item-icon">🏪</span> Un commerçant local</li>
                 <li className="audience__item"><span className="audience__item-icon">💼</span> Un indépendant ou freelance</li>
-                <li className="audience__item"><span className="audience__item-icon">🏗️</span> Une TPE ou PME locale</li>
+                <li className="audience__item"><span className="audience__item-icon">🏗️</span> Une TPE locale</li>
                 <li className="audience__item"><span className="audience__item-icon">🏠</span> Une entreprise avec un site vieillissant</li>
                 <li className="audience__item"><span className="audience__item-icon">🔍</span> Une entreprise qui veut plus de visibilité locale</li>
                 <li className="audience__item"><span className="audience__item-icon">✨</span> Une entreprise qui n&apos;a pas encore de site web</li>
