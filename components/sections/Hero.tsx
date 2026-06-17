@@ -6,12 +6,12 @@ export default function Hero() {
         <div className="hero-text">
           <div className="hero-badge">
             <span className="badge-dot"></span>
-            Spécialiste web pour TPE, PME &amp; artisans
+            Spécialiste web pour artisans et TPE
           </div>
 
           <h1>
             Création et refonte de sites internet pour{' '}
-            <em className="gradient-text">TPE, PME et artisans</em>{' '}
+            <em className="gradient-text">artisans et TPE</em>{' '}
             locaux.
           </h1>
 

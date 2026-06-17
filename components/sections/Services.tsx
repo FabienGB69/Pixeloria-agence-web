@@ -10,7 +10,7 @@ export default function Services() {
           <span className="eyebrow">Notre offre</span>
           <h2>Un site professionnel pour artisans, livré en 72h</h2>
           <p className="section-sub">
-            Pixeloria aide les artisans, TPE et PME à obtenir un site clair et efficace pour recevoir plus de demandes de devis. Paiement unique, sans abonnement imposé.
+            Pixeloria aide les artisans et TPE à obtenir un site clair et efficace pour recevoir plus de demandes de devis. Paiement unique, sans abonnement imposé.
           </p>
         </div>
 

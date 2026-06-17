@@ -8,7 +8,7 @@ export default function WhyPixeloria() {
         </svg>
       ),
       title: 'Une offre accessible',
-      desc: "Pas besoin d'investir plusieurs milliers d'euros pour avoir un site professionnel. Pixeloria propose des solutions adaptées aux budgets des TPE, PME et artisans.",
+      desc: "Pas besoin d'investir plusieurs milliers d'euros pour avoir un site professionnel. Pixeloria propose des solutions adaptées aux budgets des artisans et TPE.",
     },
     {
       icon: (
