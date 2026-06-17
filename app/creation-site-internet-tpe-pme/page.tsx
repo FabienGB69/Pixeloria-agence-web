@@ -5,15 +5,15 @@ import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Création de site internet pour TPE et PME | Pixeloria',
+  title: 'Création de site internet pour artisans et TPE | Pixeloria',
   description:
-    'Pixeloria crée des sites internet professionnels pour TPE et PME. Visibilité locale, génération de contacts, design sur-mesure. Site Artisan à 199 € TTC, livré en 72 h.',
+    'Pixeloria crée des sites internet professionnels pour artisans et TPE. Visibilité locale, génération de contacts, design sur-mesure. Site Artisan à 199 € TTC, livré en 72 h.',
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/creation-site-internet-tpe-pme',
-    title: 'Création de site internet pour TPE et PME | Pixeloria',
+    title: 'Création de site internet pour artisans et TPE | Pixeloria',
     description:
-      'Site internet professionnel pour TPE et PME. Responsive, SEO local, formulaire de contact. Site Artisan à 199 € TTC, livré en 72 h.',
+      'Site internet professionnel pour artisans et TPE. Responsive, SEO local, formulaire de contact. Site Artisan à 199 € TTC, livré en 72 h.',
     locale: 'fr_FR',
     siteName: 'Pixeloria',
   },
@@ -29,7 +29,7 @@ const sectors = [
   'Formation & coaching',
   'Professions libérales',
   'Artisanat & création',
-  'Autres TPE/PME locales',
+  'Autres TPE locales',
 ];
 
 const benefits = [
@@ -55,7 +55,7 @@ export default function CreationSiteTpePmePage() {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'Création de site internet pour TPE et PME',
+    name: 'Création de site internet pour artisans et TPE',
     provider: {
       '@type': 'ProfessionalService',
       name: 'Pixeloria',
@@ -63,7 +63,7 @@ export default function CreationSiteTpePmePage() {
       telephone: '+33786125313',
       email: 'contact@pixeloria.fr',
     },
-    description: 'Création de sites internet professionnels pour TPE et PME de tous secteurs d\'activité.',
+    description: 'Création de sites internet professionnels pour artisans et TPE de tous secteurs d\'activité.',
     areaServed: 'France',
     offers: [
       { '@type': 'Offer', name: 'Site Artisan', price: '199', priceCurrency: 'EUR' },
@@ -85,10 +85,10 @@ export default function CreationSiteTpePmePage() {
               <nav className="breadcrumb" aria-label="Fil d'Ariane">
                 <Link href="/">Accueil</Link>
                 <span aria-hidden="true"> › </span>
-                <span>Création site TPE PME</span>
+                <span>Création site artisans &amp; TPE</span>
               </nav>
-              <span className="eyebrow">TPE &amp; PME</span>
-              <h1>Création de site internet pour TPE et PME</h1>
+              <span className="eyebrow">Artisans &amp; TPE</span>
+              <h1>Création de site internet pour artisans et TPE</h1>
               <p className="page-hero-sub">
                 Un site professionnel, lisible sur mobile, optimisé pour votre visibilité
                 locale et conçu pour générer des contacts qualifiés. Site Artisan
@@ -114,7 +114,7 @@ export default function CreationSiteTpePmePage() {
               <span className="eyebrow">Votre secteur</span>
               <h2>Un site adapté à votre secteur d&apos;activité</h2>
               <p className="section-sub">
-                Pixeloria accompagne les TPE et PME de tous secteurs qui veulent
+                Pixeloria accompagne les artisans et TPE de tous secteurs qui veulent
                 une présence en ligne professionnelle et efficace.
               </p>
             </div>
@@ -131,7 +131,7 @@ export default function CreationSiteTpePmePage() {
           <div className="container">
             <div className="section-heading">
               <span className="eyebrow">Pourquoi un site internet&nbsp;?</span>
-              <h2>Ce qu&apos;un bon site apporte à votre TPE / PME</h2>
+              <h2>Ce qu&apos;un bon site apporte à votre activité</h2>
             </div>
             <div className="benefits-grid">
               {benefits.map((b, i) => (
@@ -229,7 +229,7 @@ export default function CreationSiteTpePmePage() {
         <section className="section section-tinted">
           <div className="container">
             <div className="page-cta-block">
-              <h2>Votre site TPE/PME en 72 h</h2>
+              <h2>Votre site artisan en 72 h</h2>
               <p>
                 Décrivez-nous votre activité et vos objectifs. Nous vous proposons
                 une solution adaptée à votre secteur et à votre budget, sans engagement.

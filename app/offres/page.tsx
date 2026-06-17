@@ -40,7 +40,7 @@ export default function OffresPage() {
               <span className="eyebrow">Tarif &amp; offre</span>
               <h1>Un site professionnel pour artisans, livré sous 72h</h1>
               <p className="page-hero-sub">
-                Pixeloria aide les artisans, TPE et PME à obtenir un site clair et efficace pour recevoir plus de demandes de devis. Prix fixe à 199 € TTC, sans abonnement imposé, sans frais cachés.
+                Pixeloria aide les artisans et TPE à obtenir un site clair et efficace pour recevoir plus de demandes de devis. Prix fixe à 199 € TTC, sans abonnement imposé, sans frais cachés.
               </p>
             </div>
           </div>

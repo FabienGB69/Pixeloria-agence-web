@@ -78,7 +78,7 @@ export default function ContentByDenisePage() {
             </div>
             <p>
               Denise est rédactrice web et éditoriale freelance. Elle travaille pour des agences,
-              des startups et des PME sur des missions de contenu variées — articles de blog,
+              des startups et des TPE sur des missions de contenu variées — articles de blog,
               pages web, newsletters, scripts. Sans site propre, elle dépendait des plateformes
               de freelancing pour trouver ses clients. L&apos;objectif&nbsp;: créer un portfolio
               qui la présente de manière professionnelle, valorise ses spécialités et facilite

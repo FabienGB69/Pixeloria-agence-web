@@ -7,7 +7,7 @@ import ReferralCodeSection from '@/components/parrainage/ReferralCodeSection';
 export const metadata: Metadata = {
   title: "Programme de parrainage — Gagnez jusqu'à 150 € | Pixeloria",
   description:
-    "Recommandez Pixeloria à un artisan, une TPE ou une PME et gagnez jusqu'à 150 €. Programme de parrainage automatisé, transparent et sans gestion manuelle.",
+    "Recommandez Pixeloria à un artisan ou une TPE et gagnez jusqu'à 150 €. Programme de parrainage automatisé, transparent et sans gestion manuelle.",
   openGraph: {
     title: "Programme de parrainage Pixeloria — Gagnez jusqu'à 150 €",
     description:
@@ -61,7 +61,7 @@ export default function ParrainagePage() {
             </h1>
 
             <p className="hero__subtitle">
-              Vous connaissez un artisan, une TPE ou une PME qui a besoin d&apos;un site web professionnel&nbsp;?
+              Vous connaissez un artisan ou une TPE qui a besoin d&apos;un site web professionnel&nbsp;?
               Partagez votre lien de parrainage et recevez une récompense dès que le projet est validé.
             </p>
 
@@ -279,7 +279,7 @@ export default function ParrainagePage() {
                 <li className="audience__item"><span className="audience__item-icon">🔨</span> Un artisan du bâtiment</li>
                 <li className="audience__item"><span className="audience__item-icon">🏪</span> Un commerçant local</li>
                 <li className="audience__item"><span className="audience__item-icon">💼</span> Un indépendant ou freelance</li>
-                <li className="audience__item"><span className="audience__item-icon">🏗️</span> Une TPE ou PME locale</li>
+                <li className="audience__item"><span className="audience__item-icon">🏗️</span> Une TPE locale</li>
                 <li className="audience__item"><span className="audience__item-icon">🏠</span> Une entreprise avec un site vieillissant</li>
                 <li className="audience__item"><span className="audience__item-icon">🔍</span> Une entreprise qui veut plus de visibilité locale</li>
                 <li className="audience__item"><span className="audience__item-icon">✨</span> Une entreprise qui n&apos;a pas encore de site web</li>

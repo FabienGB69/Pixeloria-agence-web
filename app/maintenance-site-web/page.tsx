@@ -5,13 +5,13 @@ import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Maintenance de site internet pour TPE, PME et artisans | Pixeloria',
+  title: 'Maintenance de site internet pour artisans et TPE | Pixeloria',
   description:
     'Pixeloria assure la maintenance de votre site internet : mises à jour, sécurité, hébergement, sauvegardes et support réactif WhatsApp. À partir de 49 €/mois.',
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/maintenance-site-web',
-    title: 'Maintenance de site internet pour TPE, PME et artisans | Pixeloria',
+    title: 'Maintenance de site internet pour artisans et TPE | Pixeloria',
     description:
       'Maintenance site internet : mises à jour, sécurité, hébergement, support WhatsApp sous 24 h. À partir de 49 €/mois.',
     locale: 'fr_FR',
@@ -59,7 +59,7 @@ export default function MaintenanceSiteWebPage() {
       telephone: '+33786125313',
       email: 'contact@pixeloria.fr',
     },
-    description: 'Maintenance de site internet pour TPE, PME et artisans : mises à jour, sécurité, hébergement, sauvegardes et support WhatsApp.',
+    description: 'Maintenance de site internet pour artisans et TPE : mises à jour, sécurité, hébergement, sauvegardes et support WhatsApp.',
     areaServed: 'France',
     offers: [
       {
@@ -92,7 +92,7 @@ export default function MaintenanceSiteWebPage() {
                 <span>Maintenance site internet</span>
               </nav>
               <span className="eyebrow">Sérénité technique</span>
-              <h1>Maintenance de site internet pour artisans, TPE et PME</h1>
+              <h1>Maintenance de site internet pour artisans et TPE</h1>
               <p className="page-hero-sub">
                 Votre site toujours à jour, sécurisé et disponible — sans que vous ayez à vous
                 en occuper. Pixeloria prend en charge la maintenance complète de votre site web

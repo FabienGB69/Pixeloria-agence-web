@@ -5,15 +5,15 @@ import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Refonte de site internet pour TPE, PME et artisans | Pixeloria',
+  title: 'Refonte de site internet pour artisans et TPE | Pixeloria',
   description:
-    'Votre site actuel ne génère pas assez de contacts ? Pixeloria refond les sites internet des TPE, PME et artisans : design moderne, SEO local, responsive mobile. Site Artisan à 199 € TTC, livré en 72 h.',
+    'Votre site actuel ne génère pas assez de contacts ? Pixeloria refond les sites internet des artisans et TPE : design moderne, SEO local, responsive mobile. Site Artisan à 199 € TTC, livré en 72 h.',
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/refonte-site-internet',
-    title: 'Refonte de site internet pour TPE, PME et artisans | Pixeloria',
+    title: 'Refonte de site internet pour artisans et TPE | Pixeloria',
     description:
-      'Refonte de site internet professionnelle pour artisans et PME. Design moderne, SEO local, responsive. Site Artisan à 199 € TTC, livré en 72 h.',
+      'Refonte de site internet professionnelle pour artisans et TPE. Design moderne, SEO local, responsive. Site Artisan à 199 € TTC, livré en 72 h.',
     locale: 'fr_FR',
     siteName: 'Pixeloria',
   },
@@ -65,7 +65,7 @@ export default function RefontePageInternet() {
       telephone: '+33786125313',
       email: 'contact@pixeloria.fr',
     },
-    description: 'Refonte de sites internet pour TPE, PME et artisans locaux. Design moderne, SEO local, responsive mobile.',
+    description: 'Refonte de sites internet pour artisans et TPE locaux. Design moderne, SEO local, responsive mobile.',
     areaServed: 'France',
   };
 
@@ -86,7 +86,7 @@ export default function RefontePageInternet() {
                 <span>Refonte de site internet</span>
               </nav>
               <span className="eyebrow">Modernisez votre présence en ligne</span>
-              <h1>Refonte de site internet pour TPE, PME et artisans</h1>
+              <h1>Refonte de site internet pour artisans et TPE</h1>
               <p className="page-hero-sub">
                 Votre site actuel ne génère pas assez de contacts ou donne une image peu
                 professionnelle&nbsp;? Pixeloria refond votre site pour qu&apos;il soit
