@@ -34,7 +34,7 @@ const offers: Offer[] = [
   {
     key: 'visibilite',
     name: 'Option Visibilité',
-    desc: '1er mois à 59 € puis 89 €/mois',
+    desc: '1er mois à 29 € puis 49 €/mois',
     benefit: '1er mois offert à moitié prix',
     highlight: true,
   },

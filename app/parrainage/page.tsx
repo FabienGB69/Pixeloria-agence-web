@@ -224,7 +224,7 @@ export default function ParrainagePage() {
               <div className="reward-card__top">
                 <div>
                   <div className="reward-card__name">Option Visibilité</div>
-                  <div className="reward-card__price">Visibilité locale · 89 € TTC/mois</div>
+                  <div className="reward-card__price">Visibilité locale · 49 € TTC/mois</div>
                 </div>
                 <span className="badge badge--gold">⭐ Meilleure récompense</span>
               </div>
@@ -241,7 +241,7 @@ export default function ParrainagePage() {
                   <span className="reward-card__row-icon">💵</span>
                   <span className="reward-card__row-label">Puis mensualité normale</span>
                 </div>
-                <span className="reward-card__row-value">89 € TTC/mois</span>
+                <span className="reward-card__row-value">49 € TTC/mois</span>
               </div>
               <div className="reward-card__row">
                 <div className="reward-card__row-left">
