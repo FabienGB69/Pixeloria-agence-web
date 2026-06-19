@@ -24,7 +24,7 @@ const FAQ = dynamic(() => import('@/components/sections/FAQ'));
 export const metadata: Metadata = {
   title: 'Pixeloria — Création & refonte de sites internet pour artisans et PME',
   description:
-    'Création et refonte de sites internet professionnels pour artisans, TPE et PME. Site Artisan à 199 € TTC, livré en 72 h. Option Visibilité à 89 €/mois avec maintenance et SEO inclus.',
+    'Création et refonte de sites internet professionnels pour artisans, TPE et PME. Site Artisan à 199 € TTC, livré en 72 h. Option Visibilité à 49 €/mois avec maintenance et SEO inclus.',
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     locale: 'fr_FR',
     title: 'Pixeloria — Création & refonte de sites internet pour artisans et PME',
     description:
-      'Création et refonte de sites internet professionnels pour artisans, TPE et PME. Site Artisan à 199 € TTC, livré en 72 h. Option Visibilité à 89 €/mois avec maintenance et SEO inclus.',
+      'Création et refonte de sites internet professionnels pour artisans, TPE et PME. Site Artisan à 199 € TTC, livré en 72 h. Option Visibilité à 49 €/mois avec maintenance et SEO inclus.',
     images: [{
       url: 'https://pixeloria.fr/og/pixeloria-og-image.png',
       secureUrl: 'https://pixeloria.fr/og/pixeloria-og-image.png',

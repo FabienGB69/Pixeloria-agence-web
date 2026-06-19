@@ -7,13 +7,13 @@ import JsonLd from '@/components/JsonLd';
 export const metadata: Metadata = {
   title: 'Maintenance de site internet pour TPE, PME et artisans | Pixeloria',
   description:
-    'Pixeloria assure la maintenance de votre site internet : mises à jour, sécurité, hébergement, sauvegardes et support réactif WhatsApp. À partir de 89 €/mois.',
+    'Pixeloria assure la maintenance de votre site internet : mises à jour, sécurité, hébergement, sauvegardes et support réactif WhatsApp. À partir de 49 €/mois.',
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/maintenance-site-web',
     title: 'Maintenance de site internet pour TPE, PME et artisans | Pixeloria',
     description:
-      'Maintenance site internet : mises à jour, sécurité, hébergement, support WhatsApp sous 24 h. À partir de 89 €/mois.',
+      'Maintenance site internet : mises à jour, sécurité, hébergement, support WhatsApp sous 24 h. À partir de 49 €/mois.',
     locale: 'fr_FR',
     siteName: 'Pixeloria',
   },
@@ -65,7 +65,7 @@ export default function MaintenanceSiteWebPage() {
       {
         '@type': 'Offer',
         name: 'Option Visibilité',
-        price: '89',
+        price: '49',
         priceCurrency: 'EUR',
         priceSpecification: {
           '@type': 'UnitPriceSpecification',
@@ -207,7 +207,7 @@ export default function MaintenanceSiteWebPage() {
               <div className="pricing-card pricing-card--featured">
                 <span className="pricing-badge">Option mensuelle</span>
                 <p className="pricing-label">Option Visibilité</p>
-                <p className="pricing-price">89 € <span>TTC / mois</span></p>
+                <p className="pricing-price">49 € <span>TTC / mois</span></p>
                 <p className="pricing-sublabel">Maintenance, modifications et suivi SEO</p>
                 <ul>
                   <li>Maintenance &amp; mises à jour incluses</li>

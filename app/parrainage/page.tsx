@@ -105,7 +105,7 @@ export default function ParrainagePage() {
                 <span className="badge badge--gold">Meilleure récompense</span>
               </div>
               <div className="hero-card__amount">30 €/mois <span>récompense parrain</span></div>
-              <div className="hero-card__label">Option Visibilité · 89 € TTC/mois</div>
+              <div className="hero-card__label">Option Visibilité · 49 € TTC/mois</div>
               <div className="hero-card__sub">Déclenché après 3 mois d&apos;abonnement actifs</div>
             </div>
           </div>
