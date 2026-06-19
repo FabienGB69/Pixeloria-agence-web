@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import HeaderEn from '@/components/layout/HeaderEn';
@@ -5,6 +7,7 @@ import LaunchBannerEn from '@/components/ui/LaunchBannerEn';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
 import ContactFormEn from './ContactFormEn';
+import { trackOfferSelect } from '@/lib/gtm';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -530,91 +533,65 @@ export default function EnHomePage() {
 
             <div className="pricing-cards pricing-cards--two">
 
-              {/* Essential */}
-              <div className="pricing-card reveal">
-                <p className="pricing-label">Essential</p>
-                <p className="pricing-price">€490 <span>inc. VAT</span></p>
-                <p className="pricing-sublabel">One-off payment — no subscription</p>
-                <p className="pricing-accroche">
-                  For businesses that want a clean, professional website delivered turnkey.
-                </p>
-                <p className="pricing-list-title">Included:</p>
-                <ul>
-                  <li>Website creation or redesign</li>
-                  <li>Up to 3 pages</li>
-                  <li>Responsive design (mobile, tablet, desktop)</li>
-                  <li>Contact form</li>
-                  <li>Direct call button</li>
-                  <li>Site launch</li>
-                  <li>Basic technical optimisation</li>
-                  <li>Onboarding support</li>
-                </ul>
-                <p className="pricing-list-title pricing-list-title--excluded">Not included:</p>
-                <ul className="pricing-excluded">
-                  <li>Ongoing maintenance</li>
-                  <li>Monthly SEO</li>
-                  <li>Post-delivery edits</li>
-                </ul>
-                <p className="pricing-note">Ideal if you want a professional online presence without a monthly subscription.</p>
-                <a href="#contact" className="btn btn-secondary">
-                  Choose Essential →
-                </a>
-              </div>
-
-              {/* Care — featured */}
+              {/* Artisan Site — featured */}
               <div className="pricing-card pricing-card--featured reveal">
-                <span className="pricing-badge">Recommended</span>
-                <p className="pricing-label">Care</p>
-                <p className="pricing-price">€89 <span>inc. VAT / month</span></p>
-                <p className="pricing-sublabel">Recommended commitment: 12 months</p>
+                <span className="pricing-badge">The artisan offer</span>
+                <p className="pricing-label">Artisan Site</p>
+                <p className="pricing-price">€199 <span>inc. VAT</span></p>
+                <p className="pricing-sublabel">One-off payment — delivered in 72h</p>
                 <p className="pricing-accroche">
-                  Your site created, maintained and optimised for basic local SEO — without a large upfront investment.
+                  A professional website for tradespeople, built to generate quote requests.
                 </p>
                 <p className="pricing-list-title">Included:</p>
                 <ul>
-                  <li>Website creation or redesign</li>
-                  <li>Up to 5 pages</li>
-                  <li>Responsive design</li>
-                  <li>Contact form</li>
-                  <li>Direct call button</li>
-                  <li>WhatsApp button if needed</li>
-                  <li>Google reviews integration</li>
-                  <li>Work gallery</li>
-                  <li>Technical maintenance included</li>
-                  <li>Backups &amp; security</li>
-                  <li>Monthly minor updates</li>
-                  <li>Basic local SEO included</li>
-                  <li>Google indexing</li>
+                  <li>One page professional website</li>
+                  <li>Up to 5 sections</li>
+                  <li>Modern design</li>
+                  <li>Mobile-ready</li>
+                  <li>Phone button</li>
+                  <li>WhatsApp button</li>
+                  <li>Quote form</li>
+                  <li>Google Maps</li>
+                  <li>Services list</li>
+                  <li>Service area</li>
+                  <li>Client reviews</li>
+                  <li>Legal notices</li>
+                  <li>Go-live</li>
+                  <li>Basic local SEO</li>
                 </ul>
-                <p className="pricing-note">Ideal for businesses that want a professional, well-maintained website with a predictable monthly budget.</p>
-                <a href="#contact" className="btn btn-primary">
-                  Choose Care →
+                <p className="pricing-note">Ready-to-go website, live, mobile-optimised and Google-ready.</p>
+                <a
+                  href="#contact"
+                  className="btn btn-primary"
+                  onClick={() => trackOfferSelect('Artisan Site', '199 VAT incl.')}
+                >
+                  Start my website →
                 </a>
               </div>
 
-              {/* Growth */}
+              {/* Visibility Option */}
               <div className="pricing-card reveal">
-                <span className="pricing-badge pricing-badge--alt">Most complete</span>
-                <p className="pricing-label">Growth</p>
-                <p className="pricing-price">€159 <span>inc. VAT / month</span></p>
-                <p className="pricing-sublabel">Recommended commitment: 12 months</p>
+                <p className="pricing-label">Visibility Option</p>
+                <p className="pricing-price">€89 <span>inc. VAT / month</span></p>
+                <p className="pricing-sublabel">Add-on to the Artisan Site</p>
                 <p className="pricing-accroche">
-                  For businesses that want to grow their local visibility with a site, monthly support and a content strategy.
+                  Keep your site up to date and grow over time, without any technical hassle.
                 </p>
-                <p className="pricing-list-title">Everything in Care, plus:</p>
+                <p className="pricing-list-title">Included:</p>
                 <ul>
-                  <li>Advanced local SEO</li>
-                  <li>Google Business Profile optimisation</li>
-                  <li>Google Search Console monitoring</li>
-                  <li>1 optimised article or page per month</li>
-                  <li>Existing page optimisation</li>
-                  <li>Simple monthly report</li>
-                  <li>Advice to improve enquiries</li>
-                  <li>Local visibility support</li>
+                  <li>Technical maintenance</li>
+                  <li>Minor updates</li>
+                  <li>Local follow-up</li>
+                  <li>Progressive optimisation</li>
+                  <li>Priority support</li>
                 </ul>
-                <p className="pricing-note">Ideal for small businesses ready to make their website a real driver of local visibility and lead generation.</p>
-                <a href="#contact" className="btn btn-secondary">
-                  Let&apos;s talk growth →
+                <p className="pricing-note">Available at any time, no minimum commitment.</p>
+                <a
+                  href="#contact"
+                  className="btn btn-secondary"
+                  onClick={() => trackOfferSelect('Visibility Option', '89 VAT incl. / month')}
+                >
+                  Add Visibility Option →
                 </a>
               </div>
 
