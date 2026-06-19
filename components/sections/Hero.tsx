@@ -10,9 +10,9 @@ export default function Hero() {
           </div>
 
           <h1>
-            Un site qui vous ramène des devis —{' '}
-            <em className="gradient-text">livré en 72h</em>,
-            à prix fixe.
+            Création et refonte de sites internet pour{' '}
+            <em className="gradient-text">artisans et TPE</em>{' '}
+            locaux.
           </h1>
 
           <p className="hero-sub">
