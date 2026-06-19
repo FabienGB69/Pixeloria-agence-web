@@ -102,7 +102,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       const resend = new Resend(resendKey);
       await resend.emails.send({
         from:    'Pixeloria Notifs <contact@pixeloria.fr>',
-        to:      'fabiengomesbancel@gmail.com',
+        to:      'contact.pixeloria@gmail.com',
         subject: `⭐ Nouvel avis Pixeloria — ${prenom}, ${activite} à ${ville}`,
         html:    buildTestimonialHtml(prenom, activite, ville, avis, note),
       });
