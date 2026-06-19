@@ -187,43 +187,6 @@ const faqs = [
   },
 ];
 
-const comparisonRows: { feature: string; essential: string; care: string; growth: string }[] = [
-  { feature: 'Website creation or redesign', essential: 'Yes', care: 'Yes', growth: 'Yes' },
-  { feature: 'Pages included', essential: 'Up to 3', care: 'Up to 5', growth: 'Up to 5' },
-  { feature: 'Responsive design', essential: 'Yes', care: 'Yes', growth: 'Yes' },
-  { feature: 'Contact form', essential: 'Yes', care: 'Yes', growth: 'Yes' },
-  { feature: 'Direct call button', essential: 'Yes', care: 'Yes', growth: 'Yes' },
-  { feature: 'WhatsApp button', essential: 'Option', care: 'Yes', growth: 'Yes' },
-  { feature: 'Ongoing maintenance', essential: 'No', care: 'Yes', growth: 'Yes' },
-  { feature: 'Backups', essential: 'No', care: 'Yes', growth: 'Yes' },
-  { feature: 'Monthly minor updates', essential: 'No', care: 'Yes', growth: 'Yes' },
-  { feature: 'Basic local SEO', essential: 'No', care: 'Yes', growth: 'Yes' },
-  { feature: 'Advanced local SEO', essential: 'No', care: 'No', growth: 'Yes' },
-  { feature: 'Google Business Profile optimisation', essential: 'No', care: 'No', growth: 'Yes' },
-  { feature: 'Monthly content article', essential: 'No', care: 'No', growth: 'Yes' },
-  { feature: 'Monthly performance report', essential: 'No', care: 'No', growth: 'Yes' },
-];
-
-function CompCell({ value }: { value: string }) {
-  const isYes = value === 'Yes';
-  const isNo = value === 'No';
-  return (
-    <td className={`ctable-cell${isYes ? ' ctable-cell--yes' : isNo ? ' ctable-cell--no' : ''}`}>
-      {isYes ? (
-        <svg viewBox="0 0 16 16" fill="none" aria-label="Yes">
-          <path d="M3 8l3.5 3.5L13 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      ) : isNo ? (
-        <svg viewBox="0 0 16 16" fill="none" aria-label="No">
-          <path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-        </svg>
-      ) : (
-        <span>{value}</span>
-      )}
-    </td>
-  );
-}
-
 type PortfolioProject = {
   type: string;
   year: string;
@@ -600,49 +563,6 @@ export default function EnHomePage() {
             <p className="pricing-disclaimer reveal">
               All prices include VAT &middot; <a href="#contact">Contact us</a> for a free personalised quote.
             </p>
-          </div>
-        </section>
-
-        {/* ── COMPARISON TABLE ── */}
-        <section className="section section-tinted">
-          <div className="container">
-            <div className="section-heading reveal">
-              <span className="eyebrow">Compare</span>
-              <h2>Compare packages</h2>
-              <p className="section-sub">Choose the plan that fits your situation at a glance.</p>
-            </div>
-
-            <div className="ctable-wrap reveal">
-              <table className="ctable">
-                <thead>
-                  <tr>
-                    <th className="ctable-feature-col">Feature</th>
-                    <th>Essential<br /><span className="ctable-price">€490 inc. VAT</span></th>
-                    <th>Care<br /><span className="ctable-price">€89/month</span></th>
-                    <th className="ctable-th--highlight">Growth<br /><span className="ctable-price">€159/month</span></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {comparisonRows.map((row) => (
-                    <tr key={row.feature}>
-                      <td className="ctable-feature">{row.feature}</td>
-                      <CompCell value={row.essential} />
-                      <CompCell value={row.care} />
-                      <CompCell value={row.growth} />
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-
-            <div className="ctable-cta reveal">
-              <a href="#contact" className="btn btn-primary">
-                Get a free audit
-                <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                  <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </a>
-            </div>
           </div>
         </section>
 
