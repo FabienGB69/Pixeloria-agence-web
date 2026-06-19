@@ -49,7 +49,7 @@ const jsonLd = {
           name: 'How much does a professional website cost?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Pixeloria offers two options: a one-off creation from €490, or a monthly plan from €89/month that includes creation, maintenance and basic SEO — no long-term contract required.',
+            text: 'Pixeloria offers an Artisan Site at €199 inc. VAT — a one-off payment with delivery in 72h. The optional Visibility Option at €89/month adds maintenance, updates and local follow-up. No forced subscription.',
           },
         },
         {
@@ -78,10 +78,10 @@ const jsonLd = {
         },
         {
           '@type': 'Question',
-          name: 'What is included in the €89/month plan?',
+          name: 'What is included in the Visibility Option at €89/month?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The Care plan at €89/month includes website creation or redesign, ongoing maintenance, basic SEO and priority support. There is no long-term commitment.',
+            text: 'The Visibility Option at €89 inc. VAT/month includes technical maintenance, minor updates, local follow-up, progressive optimisation and priority support. No minimum commitment required.',
           },
         },
         {
@@ -102,10 +102,10 @@ const jsonLd = {
         },
         {
           '@type': 'Question',
-          name: 'What is the difference between the Essential and Care plans?',
+          name: 'What is the difference between the Artisan Site and the Visibility Option?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Essential (€490 one-off) is a fixed-price build with no ongoing subscription. Care (€89/month) adds ongoing maintenance, SEO and support in a flexible monthly plan.',
+            text: 'The Artisan Site (€199 inc. VAT, delivered in 72h) is a one-off payment — your professional website, live, with no subscription. The Visibility Option (€89 inc. VAT/month) is an optional add-on that keeps your site up to date and grows your local visibility over time.',
           },
         },
         {
@@ -140,7 +140,7 @@ const jsonLd = {
 const faqs = [
   {
     q: 'How much does a professional website cost?',
-    a: 'Pixeloria offers two options: a one-off creation from €490, or a monthly plan from €89/month that includes creation, maintenance and basic SEO — no long-term contract required.',
+    a: 'Pixeloria offers an Artisan Site at €199 inc. VAT — a one-off payment with delivery in 72h. The optional Visibility Option at €89/month adds maintenance, updates and local follow-up. No forced subscription.',
   },
   {
     q: 'Do I own my website?',
@@ -155,8 +155,8 @@ const faqs = [
     a: 'No. Anyone who promises a #1 ranking is not being honest with you. What Pixeloria delivers is a clean, well-structured, fast website built on sound SEO foundations — the kind Google rewards over time.',
   },
   {
-    q: 'What is included in the €89/month plan?',
-    a: 'The Care plan at €89/month includes website creation or redesign, ongoing maintenance, basic SEO and priority support. There is no long-term commitment.',
+    q: 'What is included in the Visibility Option at €89/month?',
+    a: 'The Visibility Option at €89 inc. VAT/month includes technical maintenance, minor updates, local follow-up, progressive optimisation and priority support. No minimum commitment required.',
   },
   {
     q: 'Do you work with English-speaking clients outside France?',
@@ -167,8 +167,8 @@ const faqs = [
     a: 'Yes. Depending on the plan, you can request content updates or manage basic changes yourself. The goal is always to keep the site easy to maintain.',
   },
   {
-    q: 'What is the difference between the Essential and Care plans?',
-    a: 'Essential (€490 one-off) is a fixed-price build with no ongoing subscription. Care (€89/month) adds ongoing maintenance, SEO and support in a flexible monthly plan.',
+    q: 'What is the difference between the Artisan Site and the Visibility Option?',
+    a: 'The Artisan Site (€199 inc. VAT, delivered in 72h) is a one-off payment — your professional website, live, with no subscription. The Visibility Option (€89 inc. VAT/month) is an optional add-on that keeps your site up to date and grows your local visibility over time.',
   },
   {
     q: 'Is a free audit really free?',
@@ -415,18 +415,18 @@ export default function EnHomePage() {
 
               <div className="hero-metrics">
                 <div className="metric">
-                  <strong className="metric-value">€490</strong>
-                  <span>starting price · inc. VAT</span>
+                  <strong className="metric-value">€199</strong>
+                  <span>Artisan Site · inc. VAT</span>
                 </div>
                 <div className="metric-divider" aria-hidden="true"></div>
                 <div className="metric">
                   <strong className="metric-value">€89</strong>
-                  <span>/ month · monthly plan</span>
+                  <span>/ month · Visibility Option</span>
                 </div>
                 <div className="metric-divider" aria-hidden="true"></div>
                 <div className="metric">
-                  <strong className="metric-value">48h</strong>
-                  <span>audit response time</span>
+                  <strong className="metric-value">72h</strong>
+                  <span>delivery time</span>
                 </div>
               </div>
             </div>
@@ -521,14 +521,14 @@ export default function EnHomePage() {
         <section className="section" id="packages">
           <div className="container">
             <div className="section-heading reveal">
-              <span className="eyebrow">Our packages</span>
-              <h2>Clear packages, no hidden fees</h2>
+              <span className="eyebrow">Our offer</span>
+              <h2>A professional website for tradespeople, delivered in 72h</h2>
               <p className="section-sub">
-                Choose between a one-off fixed price or a flexible monthly plan. Either way, you know exactly what you are paying for before we start.
+                Pixeloria helps tradespeople, micro-businesses and SMEs get a clear, effective website to receive more quote requests. Fixed price, no forced subscription.
               </p>
             </div>
 
-            <div className="pricing-cards pricing-cards--three">
+            <div className="pricing-cards pricing-cards--two">
 
               {/* Essential */}
               <div className="pricing-card reveal">
