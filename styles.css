@@ -6049,3 +6049,107 @@ details.faq-item[open] .faq-chevron {
 @media (max-width: 640px) {
   .demo-illustrations-grid { grid-template-columns: 1fr; }
 }
+
+/* ── Page Témoignage ──────────────────────────────────────── */
+.temoignage-page {
+  min-height: 100vh;
+  background: #f8f8fc;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 1rem 4rem;
+}
+.temoignage-inner {
+  width: 100%;
+  max-width: 540px;
+}
+.temoignage-logo {
+  font-size: 1.25rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #7a5cff, #00d1ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 2rem;
+  display: block;
+}
+.temoignage-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 2rem 1.75rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+.temoignage-card h1 {
+  font-size: 1.5rem;
+  color: #111;
+  margin: 0 0 0.5rem;
+}
+.temoignage-card .subtitle {
+  color: #666;
+  margin: 0 0 1.75rem;
+  font-size: 0.95rem;
+}
+.temoignage-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+}
+.temoignage-form input,
+.temoignage-form textarea {
+  padding: 0.65rem 0.9rem;
+  border: 1.5px solid #ddd;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #111;
+  background: #fafafa;
+  transition: border-color 0.2s;
+  font-family: inherit;
+}
+.temoignage-form input:focus,
+.temoignage-form textarea:focus {
+  outline: none;
+  border-color: #7a5cff;
+  background: #fff;
+}
+.temoignage-stars {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+.temoignage-stars input[type="radio"] { display: none; }
+.temoignage-stars label {
+  font-size: 1.75rem;
+  cursor: pointer;
+  color: #ddd;
+  transition: color 0.15s;
+  margin: 0;
+  font-weight: normal;
+}
+.temoignage-stars input[type="radio"]:checked ~ label,
+.temoignage-stars label:hover,
+.temoignage-stars label:hover ~ label { color: #f59e0b; }
+.temoignage-stars { flex-direction: row-reverse; }
+.temoignage-accord {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin-bottom: 1.5rem;
+  font-weight: normal;
+  color: #555;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.temoignage-accord input { margin-top: 2px; flex-shrink: 0; }
+.temoignage-success {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #333;
+}
+.temoignage-success .success-emoji { font-size: 3rem; margin-bottom: 1rem; }
+.temoignage-success h2 { color: #111; margin-bottom: 0.5rem; }
+.temoignage-success p { color: #666; }
