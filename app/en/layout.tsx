@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Website Design for Small Businesses, Contractors & Local Brands | Pixeloria',
   description:
-    'Pixeloria helps tradespeople, micro-businesses and SMEs get a clear, effective website to receive more quote requests. Artisan Site at €199 inc. VAT, delivered in 72h. Visibility Option at €49/month.',
+    'Pixeloria helps tradespeople and micro-businesses get a clear, professional and effective website to receive more quote requests. Artisan Site at €199 inc. VAT, delivered in 72h. Visibility Option at €49/month.',
   metadataBase: new URL('https://pixeloria.fr'),
   openGraph: {
     type: 'website',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     siteName: 'Pixeloria',
     title: 'Website Design for Small Businesses, Contractors & Local Brands | Pixeloria',
     description:
-      'Pixeloria helps tradespeople, micro-businesses and SMEs get a clear, effective website to receive more quote requests. Artisan Site at €199 inc. VAT, delivered in 72h. Visibility Option at €49/month.',
+      'Pixeloria helps tradespeople and micro-businesses get a clear, professional and effective website to receive more quote requests. Artisan Site at €199 inc. VAT, delivered in 72h. Visibility Option at €49/month.',
     images: [
       {
         url: '/og/pixeloria-og-image.png',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Website Design for Small Businesses, Contractors & Local Brands | Pixeloria',
     description:
-      'Pixeloria helps tradespeople, micro-businesses and SMEs get a clear, effective website to receive more quote requests. Artisan Site at €199 inc. VAT, delivered in 72h. Visibility Option at €49/month.',
+      'Pixeloria helps tradespeople and micro-businesses get a clear, professional and effective website to receive more quote requests. Artisan Site at €199 inc. VAT, delivered in 72h. Visibility Option at €49/month.',
     images: ['/og/pixeloria-og-image.png'],
   },
   alternates: {

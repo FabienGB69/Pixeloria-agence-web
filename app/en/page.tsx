@@ -490,7 +490,7 @@ export default function EnHomePage() {
               <span className="eyebrow">Our offer</span>
               <h2>A professional website for tradespeople, delivered in 72h</h2>
               <p className="section-sub">
-                Pixeloria helps tradespeople, micro-businesses and SMEs get a clear, effective website to receive more quote requests. Fixed price, no forced subscription.
+                Pixeloria helps tradespeople and micro-businesses get a clear, professional and effective website to receive more quote requests. Fixed price, no forced subscription.
               </p>
             </div>
 
