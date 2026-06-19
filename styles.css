@@ -6144,12 +6144,21 @@ details.faq-item[open] .faq-chevron {
   font-size: 0.85rem;
   cursor: pointer;
 }
-.temoignage-accord input { margin-top: 2px; flex-shrink: 0; }
+.temoignage-accord input {
+  margin-top: 2px;
+  flex-shrink: 0;
+}
 .temoignage-success {
   text-align: center;
   padding: 2rem 1rem;
   color: #333;
 }
-.temoignage-success .success-emoji { font-size: 3rem; margin-bottom: 1rem; }
-.temoignage-success h2 { color: #111; margin-bottom: 0.5rem; }
+.temoignage-success .success-emoji {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.temoignage-success h2 {
+  color: #111;
+  margin-bottom: 0.5rem;
+}
 .temoignage-success p { color: #666; }

@@ -147,7 +147,7 @@ export default function ContactForm() {
           <span>Téléphone <abbr title="requis">*</abbr></span>
           <input
             type="tel"
-            name="telephone"
+            name="phone"
             placeholder="06 00 00 00 00"
             required
             autoComplete="tel"
