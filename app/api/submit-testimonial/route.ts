@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
+import { checkRateLimit } from '@/lib/security';
 import { Resend } from 'resend';
 
 // ─── Schema ───────────────────────────────────────────────────────────────────
@@ -22,11 +23,13 @@ function buildTestimonialHtml(
   avis: string,
   note: number,
 ): string {
+  const escape = (s: string) =>
+    s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   const stars = '★'.repeat(note) + '☆'.repeat(5 - note);
-  const escapedAvis = avis
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
+  const escapedAvis    = escape(avis);
+  const escapedPrenom  = escape(prenom);
+  const escapedActivite = escape(activite);
+  const escapedVille   = escape(ville);
 
   return `<!DOCTYPE html>
 <html lang="fr">
@@ -49,9 +52,9 @@ function buildTestimonialHtml(
               ${escapedAvis}
             </blockquote>
             <p style="margin:0 0 24px;font-size:15px;color:#444;">
-              <strong style="color:#111;">${prenom}</strong>
-              &nbsp;·&nbsp;${activite}
-              &nbsp;·&nbsp;${ville}
+              <strong style="color:#111;">${escapedPrenom}</strong>
+              &nbsp;·&nbsp;${escapedActivite}
+              &nbsp;·&nbsp;${escapedVille}
             </p>
             <hr style="border:none;border-top:1px solid #eee;margin:0 0 16px;" />
             <p style="margin:0;font-size:13px;color:#888;">À intégrer sur pixeloria.fr/realisations</p>
@@ -75,7 +78,16 @@ function buildTestimonialHtml(
 // ─── Handler ──────────────────────────────────────────────────────────────────
 
 export async function POST(req: NextRequest): Promise<NextResponse> {
-  // 1. Parse body
+  // 1. Rate limiting
+  const ip = req.headers.get('x-forwarded-for')?.split(',')[0].trim() ?? 'unknown';
+  if (await checkRateLimit(ip)) {
+    return NextResponse.json(
+      { error: 'Trop de tentatives. Réessayez dans quelques minutes.' },
+      { status: 429 },
+    );
+  }
+
+  // 2. Parse body
   let rawBody: Record<string, unknown>;
   try {
     rawBody = await req.json();
@@ -86,7 +98,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     );
   }
 
-  // 2. Validate with Zod
+  // 3. Validate with Zod
   const parsed = TestimonialSchema.safeParse(rawBody);
   if (!parsed.success) {
     const firstError = parsed.error.errors[0]?.message ?? 'Données invalides';
@@ -95,7 +107,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
 
   const { prenom, activite, ville, avis, note } = parsed.data;
 
-  // 3. Send email via Resend
+  // 4. Send email via Resend
   const resendKey = process.env.RESEND_API_KEY;
   if (resendKey) {
     try {

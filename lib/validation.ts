@@ -11,7 +11,7 @@ export const LeadSchema = z.object({
   company:    z.string().max(200).default(''),
   offre:      z.string().max(100).default(''),
   message:    z.string().max(2000).default(''),
-  phone:      z.string().max(30).default(''),
+  phone:      z.string().min(1, 'Téléphone requis').max(30),
   url:        z.string().max(500).default(''),
   painPoints: z.array(z.string().max(50)).default([]),
   objectives: z.array(z.string().max(100)).default([]),
