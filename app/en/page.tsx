@@ -52,7 +52,7 @@ const jsonLd = {
           name: 'How much does a professional website cost?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Pixeloria offers an Artisan Site at €199 inc. VAT — a one-off payment with delivery in 72h. The optional Visibility Option at €89/month adds maintenance, updates and local follow-up. No forced subscription.',
+            text: 'Pixeloria offers an Artisan Site at €199 inc. VAT — a one-off payment with delivery in 72h. The optional Visibility Option at €49/month adds maintenance, updates and local follow-up. No forced subscription.',
           },
         },
         {
@@ -81,10 +81,10 @@ const jsonLd = {
         },
         {
           '@type': 'Question',
-          name: 'What is included in the Visibility Option at €89/month?',
+          name: 'What is included in the Visibility Option at €49/month?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The Visibility Option at €89 inc. VAT/month includes technical maintenance, minor updates, local follow-up, progressive optimisation and priority support. No minimum commitment required.',
+            text: 'The Visibility Option at €49 inc. VAT/month includes technical maintenance, regular backups, minor corrections, small text/photo/service updates, contact details and opening hours updates, service area updates, mobile display check, progressive local SEO optimisation, and priority support by message. No commitment — cancel at any time.',
           },
         },
         {
@@ -108,7 +108,7 @@ const jsonLd = {
           name: 'What is the difference between the Artisan Site and the Visibility Option?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The Artisan Site (€199 inc. VAT, delivered in 72h) is a one-off payment — your professional website, live, with no subscription. The Visibility Option (€89 inc. VAT/month) is an optional add-on that keeps your site up to date and grows your local visibility over time.',
+            text: 'The Artisan Site (€199 inc. VAT, delivered in 72h) is a one-off payment — your professional website, live, with no subscription. The Visibility Option (€49 inc. VAT/month) is an optional add-on that keeps your site up to date and grows your local visibility over time.',
           },
         },
         {
@@ -143,7 +143,7 @@ const jsonLd = {
 const faqs = [
   {
     q: 'How much does a professional website cost?',
-    a: 'Pixeloria offers an Artisan Site at €199 inc. VAT — a one-off payment with delivery in 72h. The optional Visibility Option at €89/month adds maintenance, updates and local follow-up. No forced subscription.',
+    a: 'Pixeloria offers an Artisan Site at €199 inc. VAT — a one-off payment with delivery in 72h. The optional Visibility Option at €49/month adds maintenance, updates and local follow-up. No forced subscription.',
   },
   {
     q: 'Do I own my website?',
@@ -158,8 +158,8 @@ const faqs = [
     a: 'No. Anyone who promises a #1 ranking is not being honest with you. What Pixeloria delivers is a clean, well-structured, fast website built on sound SEO foundations — the kind Google rewards over time.',
   },
   {
-    q: 'What is included in the Visibility Option at €89/month?',
-    a: 'The Visibility Option at €89 inc. VAT/month includes technical maintenance, minor updates, local follow-up, progressive optimisation and priority support. No minimum commitment required.',
+    q: 'What is included in the Visibility Option at €49/month?',
+    a: 'The Visibility Option at €49 inc. VAT/month includes technical maintenance, regular backups, minor corrections, small text/photo/service updates, contact details and opening hours updates, service area updates, mobile display check, progressive local SEO optimisation, and priority support by message. No commitment — cancel at any time.',
   },
   {
     q: 'Do you work with English-speaking clients outside France?',
@@ -171,7 +171,7 @@ const faqs = [
   },
   {
     q: 'What is the difference between the Artisan Site and the Visibility Option?',
-    a: 'The Artisan Site (€199 inc. VAT, delivered in 72h) is a one-off payment — your professional website, live, with no subscription. The Visibility Option (€89 inc. VAT/month) is an optional add-on that keeps your site up to date and grows your local visibility over time.',
+    a: 'The Artisan Site (€199 inc. VAT, delivered in 72h) is a one-off payment — your professional website, live, with no subscription. The Visibility Option (€49 inc. VAT/month) is an optional add-on that keeps your site up to date and grows your local visibility over time.',
   },
   {
     q: 'Is a free audit really free?',
@@ -386,7 +386,7 @@ export default function EnHomePage() {
                 </div>
                 <div className="metric-divider" aria-hidden="true"></div>
                 <div className="metric">
-                  <strong className="metric-value">€89</strong>
+                  <strong className="metric-value">€49</strong>
                   <span>/ month · Visibility Option</span>
                 </div>
                 <div className="metric-divider" aria-hidden="true"></div>
@@ -535,24 +535,36 @@ export default function EnHomePage() {
               {/* Visibility Option */}
               <div className="pricing-card reveal">
                 <p className="pricing-label">Visibility Option</p>
-                <p className="pricing-price">€89 <span>inc. VAT / month</span></p>
+                <p className="pricing-price">€49 <span>inc. VAT / month</span></p>
                 <p className="pricing-sublabel">Add-on to the Artisan Site</p>
                 <p className="pricing-accroche">
-                  Keep your site up to date and grow over time, without any technical hassle.
+                  Your site stays up to date, secure and optimised — without you having to think about it.
                 </p>
                 <p className="pricing-list-title">Included:</p>
                 <ul>
                   <li>Technical maintenance</li>
-                  <li>Minor updates</li>
-                  <li>Local follow-up</li>
-                  <li>Progressive optimisation</li>
-                  <li>Priority support</li>
+                  <li>Regular backups</li>
+                  <li>Minor corrections</li>
+                  <li>Small text, photo or service updates</li>
+                  <li>Contact details, opening hours or call button updates</li>
+                  <li>Add or update service areas</li>
+                  <li>Mobile display check</li>
+                  <li>Progressive local SEO optimisation</li>
+                  <li>Priority support by message</li>
                 </ul>
-                <p className="pricing-note">Available at any time, no minimum commitment.</p>
+                <p className="pricing-list-title" style={{ marginTop: '0.75rem' }}>Not included:</p>
+                <ul>
+                  <li>Full redesign</li>
+                  <li>New complex pages</li>
+                  <li>Google Ads</li>
+                  <li>Social media management</li>
+                  <li>Blog articles</li>
+                </ul>
+                <p className="pricing-note">No commitment · Cancel at any time.</p>
                 <a
                   href="#contact"
                   className="btn btn-secondary"
-                  onClick={() => trackOfferSelect('Visibility Option', '89 VAT incl. / month')}
+                  onClick={() => trackOfferSelect('Visibility Option', '49 VAT incl. / month')}
                 >
                   Add Visibility Option →
                 </a>
