@@ -77,16 +77,12 @@ export default function ParrainagePage() {
             {/* Stats bar */}
             <div className="hero__stats">
               <div className="hero__stat">
-                <div className="hero__stat-value"><span>75 €</span></div>
-                <div className="hero__stat-label">One Shot</div>
+                <div className="hero__stat-value"><span>50 €</span></div>
+                <div className="hero__stat-label">Site Artisan</div>
               </div>
               <div className="hero__stat">
-                <div className="hero__stat-value"><span>100 €</span></div>
-                <div className="hero__stat-label">Essentiel</div>
-              </div>
-              <div className="hero__stat">
-                <div className="hero__stat-value"><span>150 €</span></div>
-                <div className="hero__stat-label">Croissance</div>
+                <div className="hero__stat-value"><span>30 €/mois</span></div>
+                <div className="hero__stat-label">Option Visibilité</div>
               </div>
             </div>
           </div>
@@ -98,8 +94,8 @@ export default function ParrainagePage() {
                 <div className="hero-card__icon">🎯</div>
                 <span className="badge badge--green">Automatique</span>
               </div>
-              <div className="hero-card__amount">75 € <span>récompense parrain</span></div>
-              <div className="hero-card__label">Offre One Shot · 490 € TTC</div>
+              <div className="hero-card__amount">50 € <span>récompense parrain</span></div>
+              <div className="hero-card__label">Site Artisan · 199 € TTC</div>
               <div className="hero-card__sub">Déclenché après paiement validé</div>
             </div>
 
@@ -108,19 +104,9 @@ export default function ParrainagePage() {
                 <div className="hero-card__icon">🚀</div>
                 <span className="badge badge--gold">Meilleure récompense</span>
               </div>
-              <div className="hero-card__amount">150 € <span>récompense parrain</span></div>
-              <div className="hero-card__label">Offre Croissance · 159 € TTC/mois</div>
-              <div className="hero-card__sub">Déclenché après 3 paiements mensuels réussis</div>
-            </div>
-
-            <div className="hero-card">
-              <div className="hero-card__top">
-                <div className="hero-card__icon">💼</div>
-                <span className="badge badge--teal">Parrainage illimité</span>
-              </div>
-              <div className="hero-card__amount">100 € <span>récompense parrain</span></div>
-              <div className="hero-card__label">Offre Essentiel · 89 € TTC/mois</div>
-              <div className="hero-card__sub">Déclenché après 3 paiements mensuels réussis</div>
+              <div className="hero-card__amount">30 €/mois <span>récompense parrain</span></div>
+              <div className="hero-card__label">Option Visibilité · 89 € TTC/mois</div>
+              <div className="hero-card__sub">Déclenché après 3 mois d&apos;abonnement actifs</div>
             </div>
           </div>
         </div>
@@ -185,19 +171,19 @@ export default function ParrainagePage() {
               Vos <em>récompenses</em> de parrainage
             </h2>
             <p className="section-subtitle" style={{ margin: '0 auto' }}>
-              Trois offres, trois niveaux de récompense. Chaque parrainage compte.
+              Deux offres, deux niveaux de récompense. Chaque parrainage compte.
             </p>
           </div>
 
           <div className="rewards__grid">
 
-            {/* One Shot */}
+            {/* Site Artisan */}
             <div className="reward-card">
               <div className="reward-card__stripe"></div>
               <div className="reward-card__top">
                 <div>
-                  <div className="reward-card__name">One Shot</div>
-                  <div className="reward-card__price">Création ou refonte · 490 € TTC</div>
+                  <div className="reward-card__name">Site Artisan</div>
+                  <div className="reward-card__price">Création ou refonte · 199 € TTC</div>
                 </div>
                 <span className="badge badge--purple">Paiement unique</span>
               </div>
@@ -207,40 +193,40 @@ export default function ParrainagePage() {
                   <span className="reward-card__row-icon">🎁</span>
                   <span className="reward-card__row-label">Avantage filleul</span>
                 </div>
-                <span className="reward-card__row-value reward-card__row-value--green">−50 € sur le site</span>
+                <span className="reward-card__row-value reward-card__row-value--green">−20 € sur le site</span>
               </div>
               <div className="reward-card__row">
                 <div className="reward-card__row-left">
                   <span className="reward-card__row-icon">💵</span>
                   <span className="reward-card__row-label">Prix avec parrainage</span>
                 </div>
-                <span className="reward-card__row-value">440 € TTC</span>
+                <span className="reward-card__row-value">179 € TTC</span>
               </div>
               <div className="reward-card__row">
                 <div className="reward-card__row-left">
                   <span className="reward-card__row-icon">🏆</span>
                   <span className="reward-card__row-label">Récompense parrain</span>
                 </div>
-                <span className="reward-card__row-value reward-card__row-value--purple">75 €</span>
+                <span className="reward-card__row-value reward-card__row-value--purple">50 €</span>
               </div>
               <div className="reward-card__trigger">
                 <div className="reward-card__trigger-label">Déclenchement</div>
-                <div className="reward-card__trigger-text">Après paiement réussi de l&apos;offre One Shot.</div>
+                <div className="reward-card__trigger-text">Après paiement réussi du Site Artisan.</div>
               </div>
               <div className="reward-card__cta">
                 <a href={REFERRAL_URL} className="btn btn--secondary">Devenir parrain →</a>
               </div>
             </div>
 
-            {/* Essentiel */}
-            <div className="reward-card">
+            {/* Option Visibilité (highlighted) */}
+            <div className="reward-card reward-card--highlight">
               <div className="reward-card__stripe"></div>
               <div className="reward-card__top">
                 <div>
-                  <div className="reward-card__name">Essentiel</div>
-                  <div className="reward-card__price">Site + maintenance + SEO · 89 € TTC/mois</div>
+                  <div className="reward-card__name">Option Visibilité</div>
+                  <div className="reward-card__price">Visibilité locale · 89 € TTC/mois</div>
                 </div>
-                <span className="badge badge--teal">Abonnement</span>
+                <span className="badge badge--gold">⭐ Meilleure récompense</span>
               </div>
               <div className="reward-card__divider"></div>
               <div className="reward-card__row">
@@ -248,7 +234,7 @@ export default function ParrainagePage() {
                   <span className="reward-card__row-icon">🎁</span>
                   <span className="reward-card__row-label">Avantage filleul</span>
                 </div>
-                <span className="reward-card__row-value reward-card__row-value--green">1er mois à 39 €</span>
+                <span className="reward-card__row-value reward-card__row-value--green">1er mois à 59 €</span>
               </div>
               <div className="reward-card__row">
                 <div className="reward-card__row-left">
@@ -262,52 +248,11 @@ export default function ParrainagePage() {
                   <span className="reward-card__row-icon">🏆</span>
                   <span className="reward-card__row-label">Récompense parrain</span>
                 </div>
-                <span className="reward-card__row-value reward-card__row-value--teal">100 €</span>
+                <span className="reward-card__row-value" style={{ color: 'var(--gold)', fontSize: '1.1875rem' }}>30 €/mois</span>
               </div>
               <div className="reward-card__trigger">
                 <div className="reward-card__trigger-label">Déclenchement</div>
-                <div className="reward-card__trigger-text">Après 3 paiements mensuels réussis, abonnement actif.</div>
-              </div>
-              <div className="reward-card__cta">
-                <a href={REFERRAL_URL} className="btn btn--secondary">Devenir parrain →</a>
-              </div>
-            </div>
-
-            {/* Croissance (highlighted) */}
-            <div className="reward-card reward-card--highlight">
-              <div className="reward-card__stripe"></div>
-              <div className="reward-card__top">
-                <div>
-                  <div className="reward-card__name">Croissance</div>
-                  <div className="reward-card__price">Site + maintenance + SEO renforcé · 159 € TTC/mois</div>
-                </div>
-                <span className="badge badge--gold">⭐ Meilleure récompense</span>
-              </div>
-              <div className="reward-card__divider"></div>
-              <div className="reward-card__row">
-                <div className="reward-card__row-left">
-                  <span className="reward-card__row-icon">🎁</span>
-                  <span className="reward-card__row-label">Avantage filleul</span>
-                </div>
-                <span className="reward-card__row-value reward-card__row-value--green">1er mois à 79 €</span>
-              </div>
-              <div className="reward-card__row">
-                <div className="reward-card__row-left">
-                  <span className="reward-card__row-icon">💵</span>
-                  <span className="reward-card__row-label">Puis mensualité normale</span>
-                </div>
-                <span className="reward-card__row-value">159 € TTC/mois</span>
-              </div>
-              <div className="reward-card__row">
-                <div className="reward-card__row-left">
-                  <span className="reward-card__row-icon">🏆</span>
-                  <span className="reward-card__row-label">Récompense parrain</span>
-                </div>
-                <span className="reward-card__row-value" style={{ color: 'var(--gold)', fontSize: '1.1875rem' }}>150 €</span>
-              </div>
-              <div className="reward-card__trigger">
-                <div className="reward-card__trigger-label">Déclenchement</div>
-                <div className="reward-card__trigger-text">Après 3 paiements mensuels réussis, abonnement actif.</div>
+                <div className="reward-card__trigger-text">Après 3 mois d&apos;abonnement actifs.</div>
               </div>
               <div className="reward-card__cta">
                 <a href={REFERRAL_URL} className="btn btn--primary">Devenir parrain →</a>
@@ -346,16 +291,12 @@ export default function ParrainagePage() {
               <div className="audience__visual-sub">Chaque recommandation peut générer une récompense automatique.</div>
               <div className="audience__visual-numbers">
                 <div className="audience__num">
-                  <div className="audience__num-value audience__num-value--purple">75 €</div>
-                  <div className="audience__num-label">par One Shot</div>
+                  <div className="audience__num-value audience__num-value--purple">50 €</div>
+                  <div className="audience__num-label">par Site Artisan</div>
                 </div>
                 <div className="audience__num">
-                  <div className="audience__num-value audience__num-value--teal">100 €</div>
-                  <div className="audience__num-label">par Essentiel</div>
-                </div>
-                <div className="audience__num">
-                  <div className="audience__num-value audience__num-value--gold">150 €</div>
-                  <div className="audience__num-label">par Croissance</div>
+                  <div className="audience__num-value audience__num-value--gold">30 €/mois</div>
+                  <div className="audience__num-label">par Option Visibilité</div>
                 </div>
                 <div className="audience__num">
                   <div className="audience__num-value audience__num-value--green">∞</div>
@@ -512,7 +453,7 @@ export default function ParrainagePage() {
               </li>
               <li className="conditions__item">
                 <span className="conditions__item-icon">✦</span>
-                <p>Pour l&apos;offre One Shot, la récompense est déclenchée après <strong>paiement effectif de la prestation</strong>.</p>
+                <p>Pour le Site Artisan, la récompense est déclenchée après <strong>paiement effectif de la prestation</strong>.</p>
               </li>
               <li className="conditions__item">
                 <span className="conditions__item-icon">✦</span>

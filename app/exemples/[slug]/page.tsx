@@ -34,9 +34,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const offerColors: Record<string, string> = {
-  'Site Essentiel': 'exemple-offer--essentiel',
-  'Site Sérénité': 'exemple-offer--serenite',
-  'Site Croissance': 'exemple-offer--croissance',
+  'Site Artisan': 'exemple-offer--artisan',
+  'Option Visibilité': 'exemple-offer--visibilite',
 };
 
 export default function ExempleMetierPage({ params }: Props) {
