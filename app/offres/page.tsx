@@ -8,15 +8,15 @@ import FAQ from '@/components/sections/FAQ';
 import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Nos offres de création et refonte de site internet | Pixeloria',
+  title: 'Offre Site Artisan Express — 199 € TTC | Pixeloria',
   description:
-    'Découvrez les 3 formules Pixeloria : Site Essentiel à 490 € TTC, Site Sérénité à 89 €/mois et Site Croissance à 159 €/mois. Maintenance, SEO local et accompagnement inclus selon la formule.',
+    'Pixeloria crée votre site professionnel artisan pour 199 € TTC, livré sous 72h. Bouton téléphone, WhatsApp, formulaire de devis, Google Maps, SEO local. Option maintenance 89 €/mois.',
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/offres',
-    title: 'Nos offres de création et refonte de site internet | Pixeloria',
+    title: 'Offre Site Artisan Express — 199 € TTC | Pixeloria',
     description:
-      '3 formules claires pour créer ou refondre votre site. À partir de 490 € TTC ou 89 €/mois avec maintenance et SEO local.',
+      'Site professionnel pour artisan à 199 € TTC, livré sous 72h. Tout inclus : devis, téléphone, WhatsApp, Google Maps, SEO local.',
     locale: 'fr_FR',
     siteName: 'Pixeloria',
   },
@@ -37,12 +37,10 @@ export default function OffresPage() {
                 <span aria-hidden="true"> › </span>
                 <span>Offres</span>
               </nav>
-              <span className="eyebrow">Tarifs &amp; formules</span>
-              <h1>Des offres claires pour créer ou refondre votre site internet</h1>
+              <span className="eyebrow">Tarif &amp; offre</span>
+              <h1>Un site professionnel pour artisans, livré sous 72h</h1>
               <p className="page-hero-sub">
-                Choisissez la formule adaptée à votre situation&nbsp;: une création simple en paiement
-                unique, ou un accompagnement mensuel avec maintenance, SEO local et suivi.
-                Tous les prix sont TTC, sans frais cachés.
+                Pixeloria aide les artisans, TPE et PME à obtenir un site clair et efficace pour recevoir plus de demandes de devis. Prix fixe à 199 € TTC, sans abonnement imposé, sans frais cachés.
               </p>
             </div>
           </div>
@@ -81,7 +79,7 @@ export default function OffresPage() {
         <section className="section">
           <div className="container">
             <div className="page-cta-block">
-              <h2>Vous ne savez pas quelle formule choisir&nbsp;?</h2>
+              <h2>Pas encore sûr ? On répond à toutes vos questions.</h2>
               <p>
                 Demandez un audit gratuit de votre situation. Nous vous orientons vers la formule
                 la plus adaptée à votre activité et à votre budget.
