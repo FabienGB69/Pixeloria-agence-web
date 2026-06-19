@@ -13,7 +13,7 @@ export default function JsonLd({ type = 'home' }: JsonLdProps) {
         name: 'Pixeloria',
         url: 'https://pixeloria.fr',
       },
-      description: 'Audit gratuit et refonte de site web pour artisans et PME.',
+      description: 'Audit gratuit et refonte de site web pour artisans et TPE.',
     };
 
     return (
@@ -29,7 +29,7 @@ export default function JsonLd({ type = 'home' }: JsonLdProps) {
     '@type': 'ProfessionalService',
     name: 'Pixeloria',
     url: 'https://pixeloria.fr',
-    description: 'Création et refonte de sites internet pour TPE, PME, artisans et entreprises locales.',
+    description: 'Création et refonte de sites internet pour artisans, TPE et entreprises locales.',
     telephone: '+33786125313',
     email: 'contact@pixeloria.fr',
     areaServed: [
@@ -39,7 +39,6 @@ export default function JsonLd({ type = 'home' }: JsonLdProps) {
       'Montélimar',
       'Romans-sur-Isère',
       'TPE',
-      'PME',
       'Artisans',
       'Entreprises locales',
     ],

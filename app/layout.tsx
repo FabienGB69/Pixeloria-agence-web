@@ -23,33 +23,33 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL('https://pixeloria.fr'),
   title: {
-    default: 'Pixeloria — Création & refonte de sites internet pour artisans et PME',
+    default: 'Pixeloria — Création & refonte de sites internet pour artisans et TPE',
     template: '%s | Pixeloria',
   },
   description:
-    'Pixeloria accompagne les artisans, TPE et PME dans la création ou la refonte de sites internet professionnels, rapides, modernes et optimisés pour le SEO.',
+    'Pixeloria accompagne les artisans et TPE dans la création ou la refonte de sites internet professionnels, rapides, modernes et optimisés pour le SEO.',
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
     url: 'https://pixeloria.fr',
     siteName: 'Pixeloria',
-    title: 'Pixeloria — Création & refonte de sites internet pour artisans et PME',
+    title: 'Pixeloria — Création & refonte de sites internet pour artisans et TPE',
     description:
-      'Pixeloria crée des sites internet professionnels pour artisans, TPE et PME. Site Artisan à 199 € TTC, livré sous 72h. Bouton téléphone, WhatsApp, formulaire de devis, SEO local inclus.',
+      'Pixeloria crée des sites internet professionnels pour artisans et TPE. Site Artisan à 199 € TTC, livré sous 72h. Bouton téléphone, WhatsApp, formulaire de devis, SEO local inclus.',
     images: [
       {
         url: '/og/pixeloria-og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Pixeloria — Création et refonte de sites internet pour artisans et PME',
+        alt: 'Pixeloria — Création et refonte de sites internet pour artisans et TPE',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Pixeloria — Création & refonte de sites internet pour artisans et PME',
+    title: 'Pixeloria — Création & refonte de sites internet pour artisans et TPE',
     description:
-      'Sites internet professionnels pour artisans, TPE et PME. Création, refonte, maintenance et SEO.',
+      'Sites internet professionnels pour artisans et TPE. Création, refonte, maintenance et SEO.',
     images: ['/og/pixeloria-og-image.png'],
   },
   robots: { index: true, follow: true },

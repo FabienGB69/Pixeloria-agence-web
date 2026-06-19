@@ -7,7 +7,7 @@ import JsonLd from '@/components/JsonLd';
 export const metadata: Metadata = {
   title: "À propos — L'agence Pixeloria",
   description:
-    "Qui sommes-nous ? Pixeloria est une agence web spécialisée dans la création de sites pour artisans, TPE et PME. Nos compétences, notre approche et nos valeurs.",
+    "Qui sommes-nous ? Pixeloria est une agence web spécialisée dans la création de sites pour artisans et TPE. Nos compétences, notre approche et nos valeurs.",
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/a-propos',

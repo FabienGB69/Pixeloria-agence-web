@@ -5,22 +5,22 @@ import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'SEO local pour artisans, TPE et PME | Pixeloria',
+  title: 'SEO local pour artisans et TPE | Pixeloria',
   description:
-    'Référencement local Google pour artisans, TPE et PME : optimisation Google Business Profile, mots-clés locaux et visibilité dans votre zone d\'intervention.',
+    'Référencement local Google pour artisans et TPE : optimisation Google Business Profile, mots-clés locaux et visibilité dans votre zone d\'intervention.',
 };
 
 const jsonLdData = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'SEO local pour TPE et PME',
+  name: 'SEO local pour artisans et TPE',
   provider: {
     '@type': 'Organization',
     name: 'Pixeloria',
     url: 'https://pixeloria.fr',
   },
   description:
-    'Référencement local Google pour artisans, TPE et PME. Optimisation Google Business Profile, pages de zones d\'intervention et suivi mensuel de positionnement.',
+    'Référencement local Google pour artisans et TPE. Optimisation Google Business Profile, pages de zones d\'intervention et suivi mensuel de positionnement.',
   areaServed: {
     '@type': 'Country',
     name: 'France',
@@ -49,7 +49,7 @@ export default function SeoLocalPage() {
                 <span>SEO local</span>
               </nav>
               <span className="eyebrow">Référencement local</span>
-              <h1>SEO local pour artisans, TPE et PME</h1>
+              <h1>SEO local pour artisans et TPE</h1>
               <p className="page-hero-sub">
                 Être trouvé sur Google par vos clients locaux — sans attendre des mois.
               </p>

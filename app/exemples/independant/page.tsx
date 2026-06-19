@@ -256,7 +256,7 @@ export default function IndependantDemoPage() {
               <p className="demo-hero-name">Sophie Martin Digital</p>
 
               <p className="demo-hero-sub">
-                Consultante indépendante à Lyon. J&apos;aide les TPE et PME à développer leur présence
+                Consultante indépendante à Lyon. J&apos;aide les artisans et TPE à développer leur présence
                 en ligne et à trouver de nouveaux clients grâce au digital.
               </p>
 
