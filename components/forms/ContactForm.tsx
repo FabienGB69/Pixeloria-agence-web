@@ -117,31 +117,18 @@ export default function ContactForm() {
         style={{ display: 'none' }}
       />
 
-      <div className="form-row">
-        <label>
-          <span>Nom <abbr title="requis">*</abbr></span>
-          <input
-            type="text"
-            name="nom"
-            placeholder="Votre nom"
-            required
-            autoComplete="family-name"
-            onBlur={handleBlur}
-            onInput={handleInput}
-          />
-        </label>
-        <label>
-          <span>Entreprise <span className="optional">(facultatif)</span></span>
-          <input
-            type="text"
-            name="company"
-            placeholder="Nom de votre entreprise"
-            autoComplete="organization"
-            onBlur={handleBlur}
-            onInput={handleInput}
-          />
-        </label>
-      </div>
+      <label>
+        <span>Nom <abbr title="requis">*</abbr></span>
+        <input
+          type="text"
+          name="nom"
+          placeholder="Votre nom"
+          required
+          autoComplete="family-name"
+          onBlur={handleBlur}
+          onInput={handleInput}
+        />
+      </label>
 
       <div className="form-row">
         <label>
@@ -157,11 +144,12 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          <span>Téléphone <span className="optional">(facultatif)</span></span>
+          <span>Téléphone <abbr title="requis">*</abbr></span>
           <input
             type="tel"
             name="telephone"
             placeholder="06 00 00 00 00"
+            required
             autoComplete="tel"
             onBlur={handleBlur}
             onInput={handleInput}
@@ -206,12 +194,16 @@ export default function ContactForm() {
         className={`btn btn-primary btn-full${formState.loading ? ' is-loading' : ''}`}
         disabled={formState.loading}
       >
-        <span className="btn-label">Envoyer ma demande</span>
+        <span className="btn-label">Recevoir mon devis gratuit</span>
         <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
           <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
         <span className="btn-loader" aria-hidden="true"></span>
       </button>
+
+      <p style={{ textAlign: 'center', fontSize: '0.82rem', color: 'var(--text-muted, #888)', margin: '0.5rem 0 0' }}>
+        Réponse sous 48h · Sans engagement
+      </p>
 
       {formState.error && (
         <p

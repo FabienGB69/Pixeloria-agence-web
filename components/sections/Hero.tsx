@@ -10,13 +10,13 @@ export default function Hero() {
           </div>
 
           <h1>
-            Création et refonte de sites internet pour{' '}
-            <em className="gradient-text">artisans et TPE</em>{' '}
-            locaux.
+            Un site qui vous ramène des devis —{' '}
+            <em className="gradient-text">livré en 72h</em>,
+            à prix fixe.
           </h1>
 
           <p className="hero-sub">
-            Un site professionnel, clair et efficace pour rassurer vos prospects, améliorer votre visibilité locale et générer plus de demandes de contact.
+            Pixeloria crée des sites internet simples et efficaces pour les artisans et TPE qui veulent recevoir plus de demandes de devis, sans se compliquer la vie.
           </p>
 
           <p className="hero-reassurance">
@@ -25,7 +25,7 @@ export default function Hero() {
 
           <div className="hero-actions">
             <a href="#contact" className="btn btn-primary">
-              <span>Demander un audit gratuit</span>
+              <span>Obtenir mon devis gratuit</span>
               <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                 <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -41,15 +41,15 @@ export default function Hero() {
           <ul className="hero-microbene">
             <li>
               <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              Site vitrine professionnel
+              Livré en 72h après vos contenus
             </li>
             <li>
               <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              Budget maîtrisé
+              Prix fixe · 199 € TTC · sans surprise
             </li>
             <li>
               <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              SEO local selon l&apos;offre choisie
+              Devis gratuit · Réponse sous 48h
             </li>
           </ul>
 
