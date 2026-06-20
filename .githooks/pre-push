@@ -1,8 +1,33 @@
 #!/usr/bin/env bash
 # Bloque le push si typecheck, lint ou build échoue.
+# Auto-rebase si le remote est en avance (évite les divergences multi-agents).
 # Pour bypasser en urgence : git push --no-verify
 
 set -e
+
+REMOTE="${1:-origin}"
+
+# ─── Guard : avorter si le remote est en avance ──────────────────────────────
+# Note : rebaser depuis l'intérieur d'un hook pre-push est non fiable —
+# git a déjà capturé les refs à pousser avant d'appeler le hook.
+# On avorte proprement avec instructions plutôt que d'auto-rebaser.
+BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo "")
+
+if [ -n "$BRANCH" ] && [ "$BRANCH" != "HEAD" ]; then
+  git fetch "$REMOTE" "$BRANCH" 2>/dev/null || true
+
+  BEHIND=$(git rev-list --count "HEAD..${REMOTE}/${BRANCH}" 2>/dev/null || echo "0")
+
+  if [ "$BEHIND" -gt 0 ]; then
+    echo ""
+    echo "  ✗ Remote en avance de $BEHIND commit(s)."
+    echo "    Lancez : git pull --rebase origin $BRANCH"
+    echo "    Puis relancez votre git push."
+    echo ""
+    exit 1
+  fi
+fi
+# ─────────────────────────────────────────────────────────────────────────────
 
 echo ""
 echo "╔═══════════════════════════════════════════╗"

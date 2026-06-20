@@ -139,7 +139,7 @@ export default function ContactFormEn() {
           </span>
           <input
             type="tel"
-            name="telephone"
+            name="phone"
             className="form-input"
             placeholder="+44 7700 900000"
             autoComplete="tel"

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 
 interface FormState {
   loading: boolean;
@@ -120,7 +120,7 @@ export default function TestimonialForm() {
         </legend>
         <div className="temoignage-stars" role="group" aria-label="Note de 1 à 5 étoiles">
           {[5, 4, 3, 2, 1].map((val) => (
-            <span key={val} style={{ display: 'contents' }}>
+            <Fragment key={val}>
               <input
                 type="radio"
                 id={`note-${val}`}
@@ -132,7 +132,7 @@ export default function TestimonialForm() {
               <label htmlFor={`note-${val}`} aria-label={`${val} étoile${val > 1 ? 's' : ''}`}>
                 ★
               </label>
-            </span>
+            </Fragment>
           ))}
         </div>
       </fieldset>

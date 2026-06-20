@@ -96,9 +96,11 @@ Les fichiers de mémoire se trouvent dans `.claude/memory/`. Ils sont mis à jou
 | `/senior-frontend` | Persona Senior Frontend (performance & a11y) | Sonnet |
 | `/senior-backend` | **Persona Léo** — Serverless, API sécurité, Notion, email | Sonnet |
 | `/svg-orchestrator` | **Orchestrateur SVG** — génère les illustrations des sites démo par batch | Sonnet |
+| `/push-guard` | **Boucle CI** — s'abonne aux événements PR, surveille le CI, auto-corrige les échecs connus | Haiku/Sonnet |
 
 > **Point d'entrée recommandé pour toute tâche complexe : `/cto` ou `/orchestrate`**
 > `/orchestrate` choisit automatiquement le bon tier (Haiku/Sonnet/Opus) et produit un plan avant d'agir.
+> **Après tout push : `/push-guard`** démarre la boucle de vérification automatique CI.
 
 ---
 

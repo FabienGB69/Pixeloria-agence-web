@@ -17,6 +17,7 @@ test.describe('Formulaire contact', () => {
 
     await form.locator('[name="nom"]').fill('Alice Martin');
     await form.locator('[name="email"]').fill('alice@test.com');
+    await form.locator('[name="phone"]').fill('0600000000');
     await form.locator('[name="message"]').fill('Projet de refonte complète de notre site vitrine.');
 
     // Intercepter la requête API pour éviter un vrai appel réseau
@@ -35,6 +36,7 @@ test.describe('Formulaire contact', () => {
 
     await form.locator('[name="nom"]').fill('Bob Dupont');
     await form.locator('[name="email"]').fill('bob@test.com');
+    await form.locator('[name="phone"]').fill('0600000000');
     await form.locator('[name="message"]').fill('Test erreur serveur.');
 
     await page.route('/api/submit-lead', (route) =>
