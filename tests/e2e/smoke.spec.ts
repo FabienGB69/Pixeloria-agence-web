@@ -14,12 +14,12 @@ test.describe('Pixeloria homepage — smoke tests', () => {
 
   test('liens de navigation résolvent vers les sections', async ({ page }) => {
     const expectedNavLinks = [
-      { label: 'Offres', href: '/#services' },
-      { label: 'Portfolio', href: '/#portfolio' },
-      { label: 'Process', href: '/#process' },
-      { label: 'Avis', href: '/#testimonials' },
-      { label: 'FAQ', href: '/#faq' },
-      { label: 'Audit gratuit', href: '/#contact' },
+      { label: 'Tarifs', href: '/tarifs' },
+      { label: 'Portfolio', href: '/realisations' },
+      { label: 'Comment ça marche', href: '/comment-ca-marche' },
+      { label: 'Avis', href: '/avis' },
+      { label: 'FAQ', href: '/faq' },
+      { label: 'Devis gratuit', href: '/#contact' },
     ];
 
     const nav = page.getByRole('navigation', { name: 'Navigation principale' });
@@ -29,9 +29,8 @@ test.describe('Pixeloria homepage — smoke tests', () => {
       await expect(link).toHaveAttribute('href', href);
     }
 
-    for (const id of ['services', 'portfolio', 'process', 'testimonials', 'faq', 'contact']) {
-      await expect(page.locator(`#${id}`)).toBeAttached();
-    }
+    // Seule la section contact reste sur la homepage
+    await expect(page.locator('#contact')).toBeAttached();
   });
 
   test('menu mobile — toggle ouvre/ferme la nav', async ({ page }) => {

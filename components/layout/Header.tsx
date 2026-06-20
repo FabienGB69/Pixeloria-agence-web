@@ -55,15 +55,15 @@ export default function Header() {
           ref={navRef}
         >
           <Link href="/" className="nav-link" onClick={closeMenu}>Accueil</Link>
-          <a href="/#services" className="nav-link" onClick={closeMenu}>Offres</a>
-          <a href="/#portfolio" className="nav-link" onClick={closeMenu}>Portfolio</a>
-          <a href="/#process" className="nav-link" onClick={closeMenu}>Process</a>
-          <a href="/#testimonials" className="nav-link" onClick={closeMenu}>Avis</a>
-          <a href="/#faq" className="nav-link" onClick={closeMenu}>FAQ</a>
+          <Link href="/tarifs" className="nav-link" onClick={closeMenu}>Tarifs</Link>
+          <Link href="/comment-ca-marche" className="nav-link" onClick={closeMenu}>Comment ça marche</Link>
+          <Link href="/realisations" className="nav-link" onClick={closeMenu}>Portfolio</Link>
+          <Link href="/avis" className="nav-link" onClick={closeMenu}>Avis</Link>
+          <Link href="/faq" className="nav-link" onClick={closeMenu}>FAQ</Link>
           <Link href="/a-propos" className="nav-link" onClick={closeMenu}>À propos</Link>
           <Link href="/parrainage" className="nav-link" onClick={closeMenu}>Parrainage</Link>
           <Link href="/en" className="nav-link lang-switcher" onClick={closeMenu} aria-label="English version">🇬🇧 EN</Link>
-          <a href="/#contact" className="btn btn-nav" onClick={closeMenu}>Audit gratuit</a>
+          <a href="/#contact" className="btn btn-nav" onClick={closeMenu}>Devis gratuit</a>
         </nav>
 
         <button
