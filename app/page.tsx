@@ -19,23 +19,12 @@ export const metadata: Metadata = {
     title: 'Pixeloria — Création & refonte de sites internet pour artisans et TPE',
     description:
       'Création et refonte de sites internet professionnels pour artisans et TPE. Site Artisan à 199 € TTC, livré en 72 h. Option Visibilité à 49 €/mois avec maintenance et SEO inclus.',
-    images: [{
-      url: 'https://pixeloria.fr/og/pixeloria-og-image.png',
-      secureUrl: 'https://pixeloria.fr/og/pixeloria-og-image.png',
-      width: 1200,
-      height: 630,
-      alt: 'Pixeloria — Création et refonte de sites internet pour artisans et TPE',
-    }],
   },
   twitter: {
     card: 'summary_large_image',
     site: '@pixeloria_fr',
     title: 'Pixeloria — Création & refonte de sites internet pour artisans et TPE',
     description: 'Sites internet professionnels pour artisans et TPE. Création, refonte, maintenance et SEO.',
-    images: [{
-      url: 'https://pixeloria.fr/og/pixeloria-og-image.png',
-      alt: 'Pixeloria — Création et refonte de sites internet pour artisans et TPE',
-    }],
   },
 };
 
