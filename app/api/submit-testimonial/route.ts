@@ -80,11 +80,15 @@ function buildTestimonialHtml(
 export async function POST(req: NextRequest): Promise<NextResponse> {
   // 1. Rate limiting
   const ip = req.headers.get('x-forwarded-for')?.split(',')[0].trim() ?? 'unknown';
-  if (await checkRateLimit(ip)) {
-    return NextResponse.json(
-      { error: 'Trop de tentatives. Réessayez dans quelques minutes.' },
-      { status: 429 },
-    );
+  try {
+    if (await checkRateLimit(ip)) {
+      return NextResponse.json(
+        { error: 'Trop de tentatives. Réessayez dans quelques minutes.' },
+        { status: 429 },
+      );
+    }
+  } catch {
+    // Redis indisponible — on laisse passer (fail open)
   }
 
   // 2. Parse body

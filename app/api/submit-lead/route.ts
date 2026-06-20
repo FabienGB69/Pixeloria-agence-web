@@ -27,11 +27,15 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     req.headers.get('x-forwarded-for')?.split(',')[0].trim() ??
     'unknown';
 
-  if (await checkRateLimit(ip)) {
-    return NextResponse.json(
-      { error: 'Trop de tentatives. Réessayez dans quelques minutes.' },
-      { status: 429, headers: CORS_HEADERS }
-    );
+  try {
+    if (await checkRateLimit(ip)) {
+      return NextResponse.json(
+        { error: 'Trop de tentatives. Réessayez dans quelques minutes.' },
+        { status: 429, headers: CORS_HEADERS }
+      );
+    }
+  } catch {
+    // Redis indisponible — on laisse passer (fail open)
   }
 
   // 2. Parse body
