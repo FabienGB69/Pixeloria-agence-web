@@ -27,6 +27,12 @@ test.describe('Pages — statut HTTP 200', () => {
     '/parrainage',
     '/refonte',
     '/en',
+    '/en/pricing',
+    '/en/how-it-works',
+    '/en/reviews',
+    '/en/faq',
+    '/en/about',
+    '/en/testimonial',
     '/cgu',
     '/cgv',
     '/mentions-legales',
@@ -89,6 +95,36 @@ test.describe('Pages — contenu principal visible', () => {
   test('/parrainage — H1 présent', async ({ page }) => {
     await page.goto('/parrainage');
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+  });
+
+  test('/en/pricing — H1 visible', async ({ page }) => {
+    await page.goto('/en/pricing');
+    await expect(page.getByRole('heading', { name: /pricing|transparent/i })).toBeVisible();
+  });
+
+  test('/en/how-it-works — H1 visible', async ({ page }) => {
+    await page.goto('/en/how-it-works');
+    await expect(page.getByRole('heading', { name: /steps|website live/i })).toBeVisible();
+  });
+
+  test('/en/reviews — H1 visible', async ({ page }) => {
+    await page.goto('/en/reviews');
+    await expect(page.getByRole('heading', { name: /clients say/i })).toBeVisible();
+  });
+
+  test('/en/faq — H1 visible', async ({ page }) => {
+    await page.goto('/en/faq');
+    await expect(page.getByRole('heading', { name: /frequently asked/i })).toBeVisible();
+  });
+
+  test('/en/about — H1 visible', async ({ page }) => {
+    await page.goto('/en/about');
+    await expect(page.getByRole('heading', { name: /agency behind/i })).toBeVisible();
+  });
+
+  test('/en/testimonial — H1 visible', async ({ page }) => {
+    await page.goto('/en/testimonial');
+    await expect(page.getByRole('heading', { name: /share your review/i })).toBeVisible();
   });
 });
 
@@ -229,6 +265,75 @@ test.describe('Formulaire témoignage (/temoignage)', () => {
   });
 });
 
+// ─── English testimonial form ─────────────────────────────────────────────────
+
+test.describe('English testimonial form (/en/testimonial)', () => {
+  test('all required fields are present', async ({ page }) => {
+    await page.goto('/en/testimonial');
+    const form = page.locator('form');
+    await expect(form.locator('[name="firstName"]')).toBeVisible();
+    await expect(form.locator('[name="trade"]')).toBeVisible();
+    await expect(form.locator('[name="city"]')).toBeVisible();
+    await expect(form.locator('[name="review"]')).toBeVisible();
+    await expect(form.locator('[name="consent"]')).toBeVisible();
+  });
+
+  test('successful submission shows success message in English', async ({ page }) => {
+    await page.goto('/en/testimonial');
+    await page.route('/api/submit-testimonial', (r) =>
+      r.fulfill({ status: 200, body: JSON.stringify({ success: true }) }),
+    );
+    await page.fill('[name="firstName"]', 'John');
+    await page.fill('[name="trade"]', 'Plumber');
+    await page.fill('[name="city"]', 'Lyon');
+    await page.fill('[name="review"]', 'Excellent service, fast delivery and professional website.');
+    await page.check('#note-5');
+    await page.check('[name="consent"]');
+    await page.click('button[type="submit"]');
+    const success = page.locator('.temoignage-success');
+    await expect(success).toBeVisible({ timeout: 6000 });
+    await expect(success).toContainText('Thank you');
+  });
+
+  test('API error → English error message shown', async ({ page }) => {
+    await page.goto('/en/testimonial');
+    await page.route('/api/submit-testimonial', (r) =>
+      r.fulfill({ status: 429, body: JSON.stringify({ error: 'Too many attempts' }) }),
+    );
+    await page.fill('[name="firstName"]', 'Test');
+    await page.fill('[name="trade"]', 'Electrician');
+    await page.fill('[name="city"]', 'Paris');
+    await page.fill('[name="review"]', 'Testing the error path here.');
+    await page.check('#note-5');
+    await page.check('[name="consent"]');
+    await page.click('button[type="submit"]');
+    const alert = page.locator('p[role="alert"]').first();
+    await expect(alert).toBeVisible({ timeout: 5000 });
+    await expect(alert).toContainText('Too many attempts');
+  });
+});
+
+// ─── English navigation ───────────────────────────────────────────────────────
+
+test.describe('English navigation (HeaderEn)', () => {
+  test('EN nav links point to correct page URLs', async ({ page }) => {
+    await page.goto('/en');
+    const nav = page.locator('nav');
+    const expectedLinks = [
+      { label: 'Pricing', href: '/en/pricing' },
+      { label: 'How it works', href: '/en/how-it-works' },
+      { label: 'Reviews', href: '/en/reviews' },
+      { label: 'FAQ', href: '/en/faq' },
+      { label: 'About', href: '/en/about' },
+    ];
+    for (const { label, href } of expectedLinks) {
+      const link = nav.getByRole('link', { name: label });
+      await expect(link).toBeVisible();
+      await expect(link).toHaveAttribute('href', href);
+    }
+  });
+});
+
 // ─── Footer ──────────────────────────────────────────────────────────────────
 
 test.describe('Footer', () => {
@@ -264,7 +369,7 @@ test.describe('Open Graph image', () => {
 // ─── SEO méta tags ────────────────────────────────────────────────────────────
 
 test.describe('SEO — title et meta description', () => {
-  const pages = ['/', '/tarifs', '/faq', '/avis', '/comment-ca-marche'];
+  const pages = ['/', '/tarifs', '/faq', '/avis', '/comment-ca-marche', '/en/pricing', '/en/faq', '/en/about'];
 
   for (const url of pages) {
     test(`${url} — title contient "Pixeloria"`, async ({ page }) => {

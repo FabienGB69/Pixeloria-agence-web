@@ -62,7 +62,18 @@
 - [x] `tests/e2e/pages.spec.ts` — 43 tests (toutes les pages, formulaires, nav, SEO, a11y)
 - [x] `.claude/commands/feature-test.md` — skill `/feature-test` + 14 angles morts documentés
 
+### Version anglaise — 6 nouvelles pages (PR #97, mergée 2026-06-20)
+- [x] `/en/pricing` — packages €199/€49, tableau comparatif, audit gratuit CTA
+- [x] `/en/how-it-works` — process 4 étapes, timeline Jour 1-4, ContactFormEn
+- [x] `/en/reviews` — 6 avis clients, CTA vers /en/testimonial, ContactFormEn
+- [x] `/en/faq` — 12 questions, accordion, ContactFormEn
+- [x] `/en/about` — English-speaking clients, 6 compétences, 3 valeurs, ContactFormEn
+- [x] `/en/testimonial` + `TestimonialFormEn.tsx` — formulaire en anglais (mapping champs EN→API FR)
+- [x] `HeaderEn.tsx` — nav mise à jour (ancres → vraies URLs de page)
+- [x] `sitemap.ts` — 6 nouvelles URLs EN ajoutées
+- [x] Vercel DEPLOYED ✅
+
 ## En attente / À faire 🔲
 
-- [ ] Version anglaise : 8 pages FR sans équivalent EN (`/en/tarifs`, `/en/avis`, `/en/temoignage`, `/en/a-propos`, `/en/parrainage`, `/en/refonte`, nav multi-pages)
+- [ ] `tests/e2e/pages.spec.ts` — ajouter les 6 pages EN dans `allPages` 200-check + content tests
 - [ ] Env vars Vercel (`NOTION_TOKEN`, `NOTION_DB_ID`) — à configurer pour le formulaire de contact prod
