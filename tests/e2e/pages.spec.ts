@@ -246,14 +246,12 @@ test.describe('Footer', () => {
 });
 
 // ─── OG image ────────────────────────────────────────────────────────────────
-// Note: Edge runtime OG image ne fonctionne pas en mode dev (ERR_EMPTY_RESPONSE).
-// Ce test est skippé en dev et doit être vérifié sur Vercel preview.
+// L'Edge runtime next/og retourne ERR_EMPTY_RESPONSE dans next dev ET next start.
+// Elle fonctionne uniquement sur Vercel (Edge network réel).
+// Vérification manuelle : inspecter la preview Vercel après chaque deploy.
 
 test.describe('Open Graph image', () => {
-  test.skip(
-    !process.env.CI,
-    'OG image Edge function non disponible en mode dev — vérifier sur Vercel preview',
-  );
+  test.skip(true, 'Edge runtime OG image non testable avec next start — vérifier sur Vercel preview');
 
   test('opengraph-image répond en 200 et content-type image/png', async ({ page }) => {
     const res = await page.goto('/opengraph-image');
