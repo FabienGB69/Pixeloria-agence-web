@@ -1,8 +1,30 @@
 #!/usr/bin/env bash
 # Bloque le push si typecheck, lint ou build échoue.
+# Auto-rebase si le remote est en avance (évite les divergences multi-agents).
 # Pour bypasser en urgence : git push --no-verify
 
 set -e
+
+REMOTE="${1:-origin}"
+
+# ─── Auto-sync : rebase si le remote est en avance ──────────────────────────
+BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo "")
+
+if [ -n "$BRANCH" ] && [ "$BRANCH" != "HEAD" ]; then
+  # Fetch silencieux — échec non-fatal (pas de réseau, etc.)
+  git fetch "$REMOTE" "$BRANCH" 2>/dev/null || true
+
+  # Combien de commits le remote a-t-il en avance ?
+  BEHIND=$(git rev-list --count "HEAD..${REMOTE}/${BRANCH}" 2>/dev/null || echo "0")
+
+  if [ "$BEHIND" -gt 0 ]; then
+    echo ""
+    echo "  ⟳ Remote en avance de $BEHIND commit(s) — rebase automatique…"
+    git rebase "${REMOTE}/${BRANCH}" 2>&1 | sed 's/^/    /'
+    echo "  ✓ Rebase OK — poursuite du push"
+  fi
+fi
+# ─────────────────────────────────────────────────────────────────────────────
 
 echo ""
 echo "╔═══════════════════════════════════════════╗"
