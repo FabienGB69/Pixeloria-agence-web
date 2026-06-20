@@ -40,10 +40,15 @@ export default function TestimonialForm() {
           error: null,
         });
       } else {
+        let errMsg = 'Une erreur s\'est produite. Réessayez ou écrivez directement à contact@pixeloria.fr';
+        try {
+          const body = await res.json() as { error?: string };
+          if (body.error) errMsg = body.error;
+        } catch { /* ignore */ }
         setFormState((prev) => ({
           ...prev,
           loading: false,
-          error: 'Une erreur s\'est produite. Réessayez ou écrivez directement à contact@pixeloria.fr',
+          error: errMsg,
         }));
       }
     } catch {
