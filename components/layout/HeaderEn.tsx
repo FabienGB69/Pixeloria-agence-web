@@ -55,14 +55,15 @@ export default function HeaderEn() {
           ref={navRef}
         >
           <Link href="/en" className="nav-link" onClick={closeMenu}>Home</Link>
-          <a href="/en#packages" className="nav-link" onClick={closeMenu}>Packages</a>
-          <a href="/en#why" className="nav-link" onClick={closeMenu}>Why us</a>
-          <a href="/en#process" className="nav-link" onClick={closeMenu}>How it works</a>
-          <a href="/en#faq" className="nav-link" onClick={closeMenu}>FAQ</a>
+          <Link href="/en/pricing" className="nav-link" onClick={closeMenu}>Pricing</Link>
+          <Link href="/en/how-it-works" className="nav-link" onClick={closeMenu}>How it works</Link>
+          <Link href="/en/reviews" className="nav-link" onClick={closeMenu}>Reviews</Link>
+          <Link href="/en/faq" className="nav-link" onClick={closeMenu}>FAQ</Link>
+          <Link href="/en/about" className="nav-link" onClick={closeMenu}>About</Link>
           <Link href="/?setlang=fr" className="nav-link lang-switcher" onClick={closeMenu} aria-label="Version française">
             🇫🇷 FR
           </Link>
-          <a href="/en#contact" className="btn btn-nav" onClick={closeMenu}>Free audit</a>
+          <a href="/en#contact" className="btn btn-nav" onClick={closeMenu}>Free quote</a>
         </nav>
 
         <button
