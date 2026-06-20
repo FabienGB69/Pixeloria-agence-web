@@ -75,6 +75,40 @@ Scopes : html, css, js, assets, config
 Toujours depuis main, toujours en feature branch.
 Format : `type/description-courte`
 
+### Multi-agent push — règle anti-divergence
+Quand ≥2 agents poussent sur la même branche, les pushs concurrents échouent ("Updates were rejected").
+- **Fix court-terme** : `git pull --rebase origin <branch>` avant de repousser
+- **Fix structurel** : `.githooks/pre-push` auto-fetch + auto-rebase (commit `5a1fa71`)
+- **Règle** : toujours appeler `/push-guard` après un push pour surveiller les conflicts CI
+
+### Post-push : workflow obligatoire
+```
+git push -u origin <branch>
+→ /push-guard  (subscribe PR activity + surveiller CI)
+```
+
+## Leçons apprises (bugs résolus)
+
+### CSS — sélecteur `~` et `display:contents`
+Un wrapper `<span style={{display:'contents'}}>` en React **casse le sélecteur CSS `~`**.
+Le flatten visuel `display:contents` ne flatten pas le DOM pour les sélecteurs CSS.
+→ Toujours utiliser `<Fragment key={val}>` quand des siblings doivent être ciblés par `input ~ label`.
+
+### Zod — contrat API vs contrat UI
+Les champs "requis côté UI" restent **optionnels dans le schéma Zod** (`z.string().max(n).default('')`).
+- L'UI enforce le `required` via HTML.
+- L'API accepte des soumissions partielles (outils tiers, bots de test, etc.).
+- Rendre un champ `min(1)` dans Zod casse les tests unitaires qui valident des payloads email-only.
+- Avant tout changement de schema : vérifier `tests/unit/validation.test.ts`.
+
+### HTML injection — toujours escaper dans les emails
+Dans les templates email Resend, utiliser une fonction `escape()` sur **tous** les champs utilisateur :
+```ts
+const escape = (s: string) =>
+  s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+```
+Ne jamais interpoler `${rawUserInput}` directement dans du HTML.
+
 ## Décisions architecturales
 
 | Décision | Raison | Alternative rejetée |
