@@ -50,40 +50,46 @@ const RATE_MAP   = new Map<string, RateEntry>();
 const RATE_LIMIT  = 5;
 const RATE_WINDOW = 10 * 60 * 1000;
 
-function inMemoryRateLimit(ip: string): boolean {
+function inMemoryRateLimit(key: string): boolean {
   const now   = Date.now();
-  const entry = RATE_MAP.get(ip) ?? { count: 0, start: now };
+  const entry = RATE_MAP.get(key) ?? { count: 0, start: now };
   if (now - entry.start > RATE_WINDOW) {
-    RATE_MAP.set(ip, { count: 1, start: now });
+    RATE_MAP.set(key, { count: 1, start: now });
     return false;
   }
   if (entry.count >= RATE_LIMIT) return true;
   entry.count += 1;
-  RATE_MAP.set(ip, entry);
+  RATE_MAP.set(key, entry);
   return false;
 }
 
-let upstashLimiter: Ratelimit | null = null;
+const upstashLimiters = new Map<string, Ratelimit>();
 
-function getUpstashLimiter(): Ratelimit | null {
+function getUpstashLimiter(prefix: string): Ratelimit | null {
   if (!process.env.UPSTASH_REDIS_REST_URL || !process.env.UPSTASH_REDIS_REST_TOKEN) {
     return null;
   }
-  if (!upstashLimiter) {
-    upstashLimiter = new Ratelimit({
+  if (!upstashLimiters.has(prefix)) {
+    upstashLimiters.set(prefix, new Ratelimit({
       redis:   Redis.fromEnv(),
       limiter: Ratelimit.slidingWindow(RATE_LIMIT, '10 m'),
-      prefix:  'pixeloria:rl',
-    });
+      prefix,
+    }));
   }
-  return upstashLimiter;
+  return upstashLimiters.get(prefix)!;
 }
 
-export async function checkRateLimit(ip: string): Promise<boolean> {
-  const limiter = getUpstashLimiter();
+/**
+ * Check rate limit for a given IP and route identifier.
+ * The `route` parameter prevents cross-route rate limit sharing
+ * (e.g. submitting the lead form 5× should not lock the testimonial form).
+ */
+export async function checkRateLimit(ip: string, route = 'default'): Promise<boolean> {
+  const key    = `${route}:${ip}`;
+  const limiter = getUpstashLimiter(`pixeloria:rl:${route}`);
   if (limiter) {
     const { success } = await limiter.limit(ip);
     return !success; // true = limité
   }
-  return inMemoryRateLimit(ip);
+  return inMemoryRateLimit(key);
 }

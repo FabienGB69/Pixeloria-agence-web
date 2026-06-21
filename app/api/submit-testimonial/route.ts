@@ -11,7 +11,9 @@ const TestimonialSchema = z.object({
   ville:    z.string().min(1).max(100),
   avis:     z.string().min(10).max(1000),
   note:     z.coerce.number().int().min(1).max(5),
-  accord:   z.literal('true').or(z.literal(true)),
+  accord:   z.union([z.literal('true'), z.literal(true)], {
+    errorMap: () => ({ message: 'Veuillez accepter les conditions pour continuer.' }),
+  }),
 });
 
 // ─── Email template ───────────────────────────────────────────────────────────
@@ -81,7 +83,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
   // 1. Rate limiting
   const ip = req.headers.get('x-forwarded-for')?.split(',')[0].trim() ?? 'unknown';
   try {
-    if (await checkRateLimit(ip)) {
+    if (await checkRateLimit(ip, 'submit-testimonial')) {
       return NextResponse.json(
         { error: 'Trop de tentatives. Réessayez dans quelques minutes.' },
         { status: 429 },
