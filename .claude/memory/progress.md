@@ -44,8 +44,36 @@
 - [x] /mentions-legales, /cgu, /cgv — GOMES FABIEN, SIREN 798 262 416
 - [x] /politique-confidentialite — RGPD complet
 
-## En attente / Optionnel 🔲
+### Restructuration homepage + pages dédiées (PR #94, mergée)
+- [x] Homepage réduite à Hero + Contact uniquement
+- [x] `/tarifs` — Services + ComparisonTable + ForWho + AuditGratuit
+- [x] `/faq` — FAQ component
+- [x] `/avis` — Testimonials + lien vers /temoignage
+- [x] `/comment-ca-marche` — Process + SiteWorks + WhyPixeloria + Marketing
+- [x] Navigation Header mise à jour (vraies URLs, plus d'ancres)
+- [x] OG image dynamique `app/opengraph-image.tsx` (Edge runtime)
 
-- [ ] Image OG (1200×630) — utilisateur en cours de création → déposer dans `public/assets/` et référencer dans `app/layout.tsx`
-- [ ] Env vars Vercel (`NOTION_TOKEN`, `NOTION_DB_ID`) — utilisateur en cours d'ajout → tester formulaire en prod
-- [ ] Pages futures possibles : `/creation-site-internet-tpe-pme`, `/maintenance-site-web`, `/seo-local`, `/realisations` (done ci-dessus)
+### Fixes API + TestimonialForm (PR #96, mergée 2026-06-20)
+- [x] `app/api/submit-testimonial/route.ts` — fail open sur erreurs Redis
+- [x] `app/api/submit-lead/route.ts` — idem pour cohérence
+- [x] `TestimonialForm.tsx` — surfacer le message d'erreur de l'API
+
+### Tests E2E — feature-test skill (PR #96, mergée 2026-06-20)
+- [x] `tests/e2e/pages.spec.ts` — 43 tests (toutes les pages, formulaires, nav, SEO, a11y)
+- [x] `.claude/commands/feature-test.md` — skill `/feature-test` + 14 angles morts documentés
+
+### Version anglaise — 6 nouvelles pages (PR #97, mergée 2026-06-20)
+- [x] `/en/pricing` — packages €199/€49, tableau comparatif, audit gratuit CTA
+- [x] `/en/how-it-works` — process 4 étapes, timeline Jour 1-4, ContactFormEn
+- [x] `/en/reviews` — 6 avis clients, CTA vers /en/testimonial, ContactFormEn
+- [x] `/en/faq` — 12 questions, accordion, ContactFormEn
+- [x] `/en/about` — English-speaking clients, 6 compétences, 3 valeurs, ContactFormEn
+- [x] `/en/testimonial` + `TestimonialFormEn.tsx` — formulaire en anglais (mapping champs EN→API FR)
+- [x] `HeaderEn.tsx` — nav mise à jour (ancres → vraies URLs de page)
+- [x] `sitemap.ts` — 6 nouvelles URLs EN ajoutées
+- [x] Vercel DEPLOYED ✅
+
+## En attente / À faire 🔲
+
+- [ ] `tests/e2e/pages.spec.ts` — ajouter les 6 pages EN dans `allPages` 200-check + content tests
+- [ ] Env vars Vercel (`NOTION_TOKEN`, `NOTION_DB_ID`) — à configurer pour le formulaire de contact prod

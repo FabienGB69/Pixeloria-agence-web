@@ -4,9 +4,9 @@
 
 ## Session actuelle
 
-**Date :** 2026-04-25
-**Branche active :** `feat/seo-pages-supplementaires`
-**Tâche en cours :** Ajout 4 pages SEO supplémentaires + refonte section AuditGratuit
+**Date :** 2026-06-20
+**Branche active :** `main` (PR #97 mergée)
+**Dernière tâche complétée :** 6 pages anglaises créées + HeaderEn multi-pages + sitemap EN
 
 ## Stack technique
 
@@ -44,6 +44,5 @@
 
 ## Prochaines étapes
 
-1. ~~Build check + commit + push `feat/seo-pages-supplementaires`~~  (en cours)
-2. Refonte section AuditGratuit (demande utilisateur reçue)
-3. Vérifier formulaire contact en prod une fois env vars Vercel actives
+1. Ajouter les 6 pages EN à `tests/e2e/pages.spec.ts` (allPages + content tests)
+2. Vérifier formulaire contact en prod une fois env vars Vercel actives
