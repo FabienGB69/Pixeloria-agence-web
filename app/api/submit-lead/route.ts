@@ -28,7 +28,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     'unknown';
 
   try {
-    if (await checkRateLimit(ip)) {
+    if (await checkRateLimit(ip, 'submit-lead')) {
       return NextResponse.json(
         { error: 'Trop de tentatives. Réessayez dans quelques minutes.' },
         { status: 429, headers: CORS_HEADERS }
