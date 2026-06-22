@@ -1,3 +1,41 @@
+const testimonials = [
+  {
+    prenom:   'Caroline',
+    activite: 'Escalée — Cours de cuisine & ateliers',
+    ville:    'Lyon',
+    note:     5,
+    avis:     "J'avais besoin d'un site qui donne envie de réserver, pas juste d'afficher des infos. Pixeloria a su capter l'ambiance conviviale de l'Escalée dès les premières pages. Depuis le lancement, j'ai nettement plus de demandes de réservation pour les ateliers.",
+  },
+  {
+    prenom:   'Lenora',
+    activite: 'Lenora Conciergerie — Services haut de gamme',
+    ville:    'Annecy',
+    note:     5,
+    avis:     "Le rendu est très élégant, exactement le niveau de qualité que mes clients attendent. Pixeloria a compris que pour une conciergerie, chaque détail compte. Le site inspire confiance immédiatement, et ça se ressent sur les premiers contacts que je reçois.",
+  },
+  {
+    prenom:   'Denise',
+    activite: 'Content by Denise — Rédaction & stratégie de contenu',
+    ville:    'Paris',
+    note:     5,
+    avis:     "En tant que rédactrice, j'étais exigeante sur les textes, mais aussi sur la clarté du message. Pixeloria a livré un site structuré, lisible et professionnel. J'ai eu mes premiers clients via le site en moins de deux semaines après le lancement.",
+  },
+  {
+    prenom:   'Karim',
+    activite: 'QiT Concierge — Conciergerie d\'entreprise',
+    ville:    'Genève',
+    note:     5,
+    avis:     "Interlocuteur unique, délais respectés, résultat qui dépasse ce que j'imaginais. Pixeloria a réussi à traduire une offre B2B complexe en un site clair et percutant. Exactement ce dont j'avais besoin pour prospecter de nouveaux partenaires.",
+  },
+  {
+    prenom:   'Félicité',
+    activite: 'Conciergerie location courte durée',
+    ville:    'Annonay',
+    note:     5,
+    avis:     "Avec mon nouveau site l'image et la visibilité de mon entreprise sont nettement améliorées. Mon activité a pris un coup d'élan depuis. Je recommande.",
+  },
+];
+
 const trustPoints = [
   {
     title: 'Interlocuteur unique',
@@ -41,6 +79,18 @@ const trustPoints = [
   },
 ];
 
+function StarRating({ note }: { note: number }) {
+  return (
+    <span className="testimonial-stars" aria-label={`Note : ${note} sur 5`}>
+      {Array.from({ length: 5 }, (_, i) => (
+        <span key={i} aria-hidden="true" style={{ color: i < note ? '#f59e0b' : 'rgba(255,255,255,0.2)' }}>
+          ★
+        </span>
+      ))}
+    </span>
+  );
+}
+
 export default function Testimonials() {
   return (
     <section id="testimonials" className="section testimonials-section">
@@ -48,63 +98,65 @@ export default function Testimonials() {
       <div className="testimonials-halo testimonials-halo--bottom" aria-hidden="true" />
 
       <div className="container">
-        <div className="testimonials-layout">
 
-          {/* Left editorial */}
-          <div className="testimonials-editorial reveal">
-            <span className="testimonials-badge">Confiance</span>
-            <h2>Pourquoi nous faire confiance&nbsp;?</h2>
-            <p className="testimonials-sub">
-              Pixeloria accompagne les artisans, indépendants et TPE avec une approche simple,
-              claire et orientée résultat.
-            </p>
-            <p className="testimonials-body">
-              Un site web ne doit pas seulement être joli. Il doit être clair, rapide à comprendre,
-              adapté à votre métier et pensé pour transformer vos visiteurs en demandes de contact.
-              Avec Pixeloria, vous avancez étape par étape, avec un interlocuteur unique, une méthode
-              simple et des offres lisibles.
-            </p>
-            <div className="testimonials-cta-group">
-              <a href="#contact" className="btn btn-primary">
-                Discuter de mon projet
-              </a>
-              <a href="#services" className="btn btn-secondary">
-                Voir les offres
-              </a>
-            </div>
-          </div>
-
-          {/* Right trust card */}
-          <div className="trust-card reveal">
-            <div className="tc-halo" aria-hidden="true" />
-            <div className="tc-card-header">
-              <div className="tc-shield-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M12 2l7 3v5c0 5-3.5 9-7 10C8.5 19 5 15 5 10V5l7-3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round"/>
-                  <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </div>
-              <div>
-                <p className="tc-label">Méthode Pixeloria</p>
-                <h3>Une approche pensée pour les pros</h3>
-              </div>
-            </div>
-            <p className="tc-intro">
-              Pixeloria privilégie les sites utiles, crédibles et faciles à faire évoluer,
-              sans complexité inutile.
-            </p>
-            <div className="tc-grid">
-              {trustPoints.map((pt) => (
-                <div key={pt.title} className="tc-point">
-                  <div className="tc-point-icon" aria-hidden="true">{pt.icon}</div>
-                  <strong>{pt.title}</strong>
-                  <p>{pt.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
+        {/* Section header */}
+        <div className="testimonials-header reveal">
+          <span className="testimonials-badge">Avis clients</span>
+          <h2>Ce que disent nos clients</h2>
+          <p className="testimonials-sub">
+            Des artisans, indépendants et TPE qui ont fait confiance à Pixeloria pour leur présence en ligne.
+          </p>
         </div>
+
+        {/* Reviews grid */}
+        <div className="testimonials-grid">
+          {testimonials.map((t, i) => (
+            <article key={i} className="testimonial-card reveal">
+              <StarRating note={t.note} />
+              <blockquote className="testimonial-quote">
+                <p>&laquo;&nbsp;{t.avis}&nbsp;&raquo;</p>
+              </blockquote>
+              <footer className="testimonial-author">
+                <strong>{t.prenom}</strong>
+                <span className="testimonial-sep" aria-hidden="true"> · </span>
+                <span>{t.activite}</span>
+                <span className="testimonial-sep" aria-hidden="true"> · </span>
+                <span>{t.ville}</span>
+              </footer>
+            </article>
+          ))}
+        </div>
+
+        {/* Trust points */}
+        <div className="trust-card trust-card--wide reveal">
+          <div className="tc-halo" aria-hidden="true" />
+          <div className="tc-card-header">
+            <div className="tc-shield-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 2l7 3v5c0 5-3.5 9-7 10C8.5 19 5 15 5 10V5l7-3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round"/>
+                <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <p className="tc-label">Méthode Pixeloria</p>
+              <h3>Une approche pensée pour les pros</h3>
+            </div>
+          </div>
+          <p className="tc-intro">
+            Pixeloria privilégie les sites utiles, crédibles et faciles à faire évoluer,
+            sans complexité inutile.
+          </p>
+          <div className="tc-grid">
+            {trustPoints.map((pt) => (
+              <div key={pt.title} className="tc-point">
+                <div className="tc-point-icon" aria-hidden="true">{pt.icon}</div>
+                <strong>{pt.title}</strong>
+                <p>{pt.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );

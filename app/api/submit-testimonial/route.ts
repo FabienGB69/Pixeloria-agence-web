@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { checkRateLimit } from '@/lib/security';
 import { Resend } from 'resend';
+import { createTestimonial } from '@/lib/notion';
 
 // ─── Schema ───────────────────────────────────────────────────────────────────
 
@@ -14,6 +15,7 @@ const TestimonialSchema = z.object({
   accord:   z.union([z.literal('true'), z.literal(true)], {
     errorMap: () => ({ message: 'Veuillez accepter les conditions pour continuer.' }),
   }),
+  _lang:    z.string().max(10).optional(),
 });
 
 // ─── Email template ───────────────────────────────────────────────────────────
@@ -111,9 +113,22 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     return NextResponse.json({ error: firstError }, { status: 400 });
   }
 
-  const { prenom, activite, ville, avis, note } = parsed.data;
+  const { prenom, activite, ville, avis, note, _lang } = parsed.data;
 
-  // 4. Send email via Resend
+  // 4. Save to Notion (before email — fail open if env var absent)
+  try {
+    await createTestimonial({ prenom, activite, ville, avis, note, lang: _lang });
+  } catch (err) {
+    const e = err as { message?: string };
+    if (e.message === 'NOTION_TESTIMONIALS_DB_ID is not defined') {
+      console.warn('[submit-testimonial] Notion storage skipped: NOTION_TESTIMONIALS_DB_ID not set');
+    } else {
+      console.error('[submit-testimonial] Notion storage FAILED — avis non sauvegardé:', e.message);
+    }
+    // Fail open: do not block the submission
+  }
+
+  // 5. Send email via Resend
   const resendKey = process.env.RESEND_API_KEY;
   if (resendKey) {
     try {
@@ -126,7 +141,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       });
     } catch (err) {
       const e = err as { message?: string };
-      console.error('[submit-testimonial] Resend error:', e.message);
+      console.error('[submit-testimonial] Resend FAILED — avis perdu si Notion absent:', e.message);
       // Non-blocking: do not fail the request if email fails
     }
   }
