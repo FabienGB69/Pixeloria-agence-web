@@ -73,8 +73,8 @@ test.describe('Pages — contenu principal visible', () => {
 
   test('/avis — section témoignages chargée', async ({ page }) => {
     await page.goto('/avis');
-    // Testimonials component h2: "Pourquoi nous faire confiance ?"
-    await expect(page.getByRole('heading', { name: /confiance|faire|pourquoi/i })).toBeVisible();
+    // Testimonials component h2: "Ce que disent nos clients"
+    await expect(page.getByRole('heading', { name: /disent|clients|avis/i })).toBeVisible();
   });
 
   test('/comment-ca-marche — section process chargée', async ({ page }) => {
