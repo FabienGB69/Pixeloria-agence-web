@@ -2,6 +2,15 @@ import { Client } from '@notionhq/client';
 import type { LeadInput } from './validation';
 import { safe } from './validation';
 
+export interface TestimonialInput {
+  prenom:   string;
+  activite: string;
+  ville:    string;
+  avis:     string;
+  note:     number;
+  lang?:    string;
+}
+
 /**
  * Client Notion initialisé lazily pour éviter les crashes au build
  * si NOTION_TOKEN n'est pas défini dans l'environnement de build.
@@ -71,6 +80,35 @@ export async function saveLead(data: LeadInput): Promise<void> {
       'Date':           {
         date: { start: new Date().toISOString().split('T')[0] },
       },
+    },
+  });
+}
+
+/**
+ * Crée une page dans la base de données Notion dédiée aux témoignages.
+ * Lance une exception si NOTION_TOKEN ou NOTION_TESTIMONIALS_DB_ID est absent,
+ * ou si l'API Notion retourne une erreur.
+ */
+export async function createTestimonial(data: TestimonialInput): Promise<void> {
+  const dbId = process.env.NOTION_TESTIMONIALS_DB_ID;
+  if (!dbId) {
+    throw new Error('NOTION_TESTIMONIALS_DB_ID is not defined');
+  }
+
+  const notion = getNotionClient();
+  const source = data.lang === 'en' ? 'EN' : 'FR';
+
+  await notion.pages.create({
+    parent: { database_id: dbId },
+    properties: {
+      'Prénom':   { title:     [{ text: { content: safe(data.prenom, 50) } }] },
+      'Activité': { rich_text: [{ text: { content: safe(data.activite, 100) } }] },
+      'Ville':    { rich_text: [{ text: { content: safe(data.ville, 100) } }] },
+      'Avis':     { rich_text: [{ text: { content: safe(data.avis, 1000) } }] },
+      'Note':     { number: data.note },
+      'Source':   { select: { name: source } },
+      'Statut':   { select: { name: 'À publier' } },
+      'Date':     { date:   { start: new Date().toISOString() } },
     },
   });
 }

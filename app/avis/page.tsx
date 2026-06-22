@@ -20,6 +20,20 @@ export default function AvisPage() {
       <ClientEffects />
       <Header />
       <main id="avis-page">
+
+        {/* ── HERO ── */}
+        <section className="page-hero section">
+          <div className="container">
+            <div className="page-hero-inner">
+              <span className="eyebrow">Retours d&apos;expérience</span>
+              <h1>Avis de nos clients</h1>
+              <p className="page-hero-sub">
+                Des artisans, indépendants et TPE partagent leur expérience avec Pixeloria.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <Testimonials />
         <section className="section" style={{ textAlign: 'center', padding: '2rem 1rem 4rem' }}>
           <div className="container">
