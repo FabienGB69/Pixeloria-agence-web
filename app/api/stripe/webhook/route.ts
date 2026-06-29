@@ -84,6 +84,11 @@ async function handleCheckoutSessionCompleted(session: Stripe.Checkout.Session) 
   // Determine offer type from metadata
   const offerId = session.metadata?.offer_id as 'site-vitrine' | 'option-visibilite' || 'site-vitrine';
 
+  // Get customer ID
+  const customerId = typeof session.customer === 'string'
+    ? session.customer
+    : session.customer?.id;
+
   // Create Notion record
   await createReferralRecord({
     referralCode,
@@ -94,7 +99,7 @@ async function handleCheckoutSessionCompleted(session: Stripe.Checkout.Session) 
     amountTotal: session.amount_total || 0,
     checkoutSessionId: session.id,
     paymentStatus: session.payment_status as 'paid' | 'unpaid' | 'refunded',
-    stripeCustomerId: session.customer || undefined,
+    stripeCustomerId: customerId,
   });
 
   console.log(`[Stripe Webhook] Checkout session ${session.id} processed for referral ${referralCode}`);
@@ -108,21 +113,22 @@ async function handleInvoicePaid(invoice: Stripe.Invoice) {
   console.log(`[Stripe Webhook] Processing paid invoice: ${invoice.id}`);
 
   // Only process recurring invoices (subscription-related)
-  if (!invoice.subscription) {
+  const subscriptionId = (invoice as unknown as Record<string, unknown>).subscription;
+  if (!subscriptionId) {
     console.log(`[Stripe Webhook] Invoice ${invoice.id} is not subscription-related, skipping`);
     return;
   }
 
-  const subscriptionId = typeof invoice.subscription === 'string'
-    ? invoice.subscription
-    : invoice.subscription.id;
+  const subId = typeof subscriptionId === 'string'
+    ? (subscriptionId as string)
+    : (subscriptionId as Record<string, unknown>).id as string;
 
   // Get subscription details to find the original checkout session
   let subscription: Stripe.Subscription;
   try {
-    subscription = await stripe.subscriptions.retrieve(subscriptionId);
+    subscription = await stripe.subscriptions.retrieve(subId);
   } catch (error) {
-    console.error(`[Stripe Webhook] Error retrieving subscription ${subscriptionId}:`, error);
+    console.error(`[Stripe Webhook] Error retrieving subscription ${subId}:`, error);
     return;
   }
 
@@ -145,9 +151,9 @@ async function handleInvoicePaid(invoice: Stripe.Invoice) {
 
   if (checkoutSessionId) {
     // Update Notion record with paid invoice info
-    await updateRewardStatus(checkoutSessionId, 'Triggered', subscriptionId);
-    console.log(`[Stripe Webhook] Monthly reward triggered for subscription ${subscriptionId}`);
+    await updateRewardStatus(checkoutSessionId, 'Triggered', subId);
+    console.log(`[Stripe Webhook] Monthly reward triggered for subscription ${subId}`);
   } else {
-    console.warn(`[Stripe Webhook] No checkout session ID found for subscription ${subscriptionId}`);
+    console.warn(`[Stripe Webhook] No checkout session ID found for subscription ${subId}`);
   }
 }

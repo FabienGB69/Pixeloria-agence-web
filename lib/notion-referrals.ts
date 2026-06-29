@@ -157,24 +157,37 @@ export async function updateRewardStatus(
   }
 
   try {
-    // Query for the referral record by Checkout Session ID
-    const response = await client.databases.query({
-      database_id: databaseId,
-      filter: {
-        property: 'Checkout Session ID',
-        rich_text: { equals: checkoutSessionId },
-      },
+    // Search for the referral record by Checkout Session ID
+    // Using search with text query
+    const response = await client.search({
+      query: checkoutSessionId,
+      filter: { value: 'page', property: 'object' },
     });
 
-    if (response.results.length === 0) {
+    // Filter results to find the page in our referrals database
+    const referralPage = response.results.find((result) => {
+      return (
+        'parent' in result &&
+        result.parent?.type === 'database_id' &&
+        result.parent.database_id === databaseId
+      );
+    });
+
+    if (!referralPage) {
       console.warn(`[Notion] No referral record found for session ${checkoutSessionId}`);
       return false;
     }
 
-    const pageId = response.results[0].id;
+    const pageId = referralPage.id;
 
     // Update the page with new reward status and subscription ID if provided
-    const updatePayload: Record<string, unknown> = {
+    const updatePayload: Record<
+      string,
+      {
+        select?: { name: string };
+        rich_text?: Array<{ text: { content: string } }>;
+      }
+    > = {
       'Reward Status': { select: { name: newStatus } },
     };
 
@@ -186,7 +199,7 @@ export async function updateRewardStatus(
 
     await client.pages.update({
       page_id: pageId,
-      properties: updatePayload,
+      properties: updatePayload as Parameters<typeof client.pages.update>[0]['properties'],
     });
 
     console.log(`[Notion] Reward status updated for session ${checkoutSessionId}`);
