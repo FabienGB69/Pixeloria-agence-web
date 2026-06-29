@@ -17,10 +17,11 @@
     "test:e2e": "playwright test",
     "test:e2e:install": "playwright install --with-deps chromium",
     "ci": "npm run typecheck && npm run lint && npm run build",
+    "stripe:create-referral-links": "tsx scripts/create-stripe-referral-links.ts",
     "prepare": "git config core.hooksPath .githooks || true"
   },
   "dependencies": {
-    "@notionhq/client": "^5.18.0",
+    "@notionhq/client": "^5.22.0",
     "@upstash/ratelimit": "^2.0.8",
     "@upstash/redis": "^1.37.0",
     "@vercel/analytics": "^2.0.1",
@@ -43,6 +44,7 @@
     "sharp": "^0.34.5",
     "stylelint": "^16.10.0",
     "stylelint-config-standard": "^36.0.1",
+    "tsx": "^4.22.4",
     "typescript": "^5.6.3",
     "vitest": "^4.1.4"
   }
