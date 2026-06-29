@@ -1,33 +1,5 @@
 const testimonials = [
   {
-    prenom:   'Caroline',
-    activite: 'Escalée — Cours de cuisine & ateliers',
-    ville:    'Lyon',
-    note:     5,
-    avis:     "J'avais besoin d'un site qui donne envie de réserver, pas juste d'afficher des infos. Pixeloria a su capter l'ambiance conviviale de l'Escalée dès les premières pages. Depuis le lancement, j'ai nettement plus de demandes de réservation pour les ateliers.",
-  },
-  {
-    prenom:   'Lenora',
-    activite: 'Lenora Conciergerie — Services haut de gamme',
-    ville:    'Annecy',
-    note:     5,
-    avis:     "Le rendu est très élégant, exactement le niveau de qualité que mes clients attendent. Pixeloria a compris que pour une conciergerie, chaque détail compte. Le site inspire confiance immédiatement, et ça se ressent sur les premiers contacts que je reçois.",
-  },
-  {
-    prenom:   'Denise',
-    activite: 'Content by Denise — Rédaction & stratégie de contenu',
-    ville:    'Paris',
-    note:     5,
-    avis:     "En tant que rédactrice, j'étais exigeante sur les textes, mais aussi sur la clarté du message. Pixeloria a livré un site structuré, lisible et professionnel. J'ai eu mes premiers clients via le site en moins de deux semaines après le lancement.",
-  },
-  {
-    prenom:   'Karim',
-    activite: 'QiT Concierge — Conciergerie d\'entreprise',
-    ville:    'Genève',
-    note:     5,
-    avis:     "Interlocuteur unique, délais respectés, résultat qui dépasse ce que j'imaginais. Pixeloria a réussi à traduire une offre B2B complexe en un site clair et percutant. Exactement ce dont j'avais besoin pour prospecter de nouveaux partenaires.",
-  },
-  {
     prenom:   'Félicité',
     activite: 'Conciergerie location courte durée',
     ville:    'Annonay',
