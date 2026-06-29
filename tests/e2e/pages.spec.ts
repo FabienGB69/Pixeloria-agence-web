@@ -33,6 +33,7 @@ test.describe('Pages — statut HTTP 200', () => {
     '/en/faq',
     '/en/about',
     '/en/testimonial',
+    '/en/parrainage',
     '/cgu',
     '/cgv',
     '/mentions-legales',
@@ -120,6 +121,11 @@ test.describe('Pages — contenu principal visible', () => {
   test('/en/about — H1 visible', async ({ page }) => {
     await page.goto('/en/about');
     await expect(page.getByRole('heading', { name: /agency behind/i })).toBeVisible();
+  });
+
+  test('/en/parrainage — H1 visible', async ({ page }) => {
+    await page.goto('/en/parrainage');
+    await expect(page.getByRole('heading', { name: /recommend pixeloria|earn/i })).toBeVisible();
   });
 
   test('/en/testimonial — H1 visible', async ({ page }) => {
