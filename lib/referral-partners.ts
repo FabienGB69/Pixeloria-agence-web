@@ -3,12 +3,23 @@
  * Manages referral codes, partner information, and reward calculations.
  */
 
-/**
- * Referral partners database with their associated rewards.
- * Keys are partner codes (uppercase, prefixed with "PIXELORIA-").
- * Values contain partner metadata and reward amounts.
- */
-export const referralPartners = {
+export const validReferralCodes = [
+  "PIXELORIA-FELIADA",
+  "PIXELORIA-MARILYN",
+  "PIXELORIA-DENISE",
+  "PIXELORIA-LESLYE",
+] as const
+
+export type ReferralCode = (typeof validReferralCodes)[number]
+
+export const referralPartners: Record<
+  ReferralCode,
+  {
+    name: string
+    rewardSiteVitrine: number
+    rewardOptionVisibilityMonthly: number
+  }
+> = {
   "PIXELORIA-FELIADA": {
     name: "Feliada",
     rewardSiteVitrine: 100,
@@ -29,69 +40,73 @@ export const referralPartners = {
     rewardSiteVitrine: 100,
     rewardOptionVisibilityMonthly: 25,
   },
-} as const;
+}
 
 /**
- * Type-safe referral code — extracted from referralPartners keys.
- * Ensures only valid codes are used throughout the application.
- */
-export type ReferralCode = keyof typeof referralPartners;
-
-/**
- * Partner information object — extracted from referralPartners values.
- * Contains partner name and reward amounts.
- */
-export type ReferralPartner = typeof referralPartners[ReferralCode];
-
-/**
- * Checks if a given string is a valid referral code.
- * Provides type guard for runtime validation before using in partner lookups.
+ * Normalizes a referral code for validation and lookup.
+ * Handles trimming, uppercase conversion, and sanitization of special characters.
+ * Designed to be forgiving with user input while maintaining code integrity.
  *
- * @param code - The string to validate
- * @returns True if code exists in referralPartners, false otherwise
+ * @param code - The raw referral code to normalize (can be null/undefined)
+ * @returns Normalized code string, or empty string if input is falsy
  *
  * @example
  * ```ts
- * const userCode = "PIXELORIA-FELIADA";
- * if (isValidReferralCode(userCode)) {
- *   const partner = getPartnerInfo(userCode);
+ * normalizeReferralCode("  pixeloria-feliada  ") // "PIXELORIA-FELIADA"
+ * normalizeReferralCode("pixeloria_feliada")    // "PIXELORIA-FELIADA" (underscores preserved)
+ * normalizeReferralCode(null)                   // ""
+ * ```
+ */
+export const normalizeReferralCode = (code?: string | null) => {
+  if (!code) return ""
+
+  return code
+    .trim()
+    .toUpperCase()
+    .replace(/[^A-Z0-9-_]/g, "")
+}
+
+/**
+ * Type guard for validating referral codes.
+ * Normalizes input and checks against the valid codes list.
+ * Ensures type safety throughout the application when using ReferralCode.
+ *
+ * @param code - The string to validate (can be null/undefined)
+ * @returns True if code is valid after normalization, false otherwise
+ *
+ * @example
+ * ```ts
+ * if (isValidReferralCode("PIXELORIA-FELIADA")) {
+ *   const partner = getReferralPartner("PIXELORIA-FELIADA");
  * }
  * ```
  */
-export function isValidReferralCode(code: string): code is ReferralCode {
-  return code in referralPartners;
+export const isValidReferralCode = (
+  code?: string | null
+): code is ReferralCode => {
+  const normalizedCode = normalizeReferralCode(code)
+  return validReferralCodes.includes(normalizedCode as ReferralCode)
 }
 
 /**
  * Retrieves partner information by referral code.
  * Returns null if the code is invalid — safe for untrusted input.
  *
- * @param code - The referral code to look up
+ * @param code - The referral code to look up (can be null/undefined)
  * @returns Partner information object or null if not found
  *
  * @example
  * ```ts
- * const partner = getPartnerInfo("PIXELORIA-FELIADA");
+ * const partner = getReferralPartner("PIXELORIA-FELIADA");
  * console.log(partner?.name); // "Feliada"
  * ```
  */
-export function getPartnerInfo(code: ReferralCode): ReferralPartner | null {
-  return referralPartners[code] ?? null;
-}
+export const getReferralPartner = (code?: string | null) => {
+  const normalizedCode = normalizeReferralCode(code)
 
-/**
- * Generates a referral URL with the given code as query parameter.
- * Suitable for sharing referral links to potential customers.
- *
- * @param code - The referral code to encode in the URL
- * @returns Relative URL path with referral code query parameter
- *
- * @example
- * ```ts
- * const url = getReferralUrl("PIXELORIA-FELIADA");
- * // Returns: "/parrainage?code=PIXELORIA-FELIADA"
- * ```
- */
-export function getReferralUrl(code: ReferralCode): string {
-  return `/parrainage?code=${code}`;
+  if (!isValidReferralCode(normalizedCode)) {
+    return null
+  }
+
+  return referralPartners[normalizedCode]
 }
