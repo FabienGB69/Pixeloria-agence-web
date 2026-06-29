@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-type OfferKey = 'artisan' | 'visibilite';
+type OfferKey = 'vitrine' | 'visibilite';
 
 interface Offer {
   key: OfferKey;
@@ -17,25 +17,25 @@ interface StripeLinks {
 }
 
 const stripeLinks: Record<OfferKey, StripeLinks> = {
-  artisan: { referral: 'URL_STRIPE_ARTISAN_179' },
-  visibilite: { referral: 'URL_STRIPE_VISIBILITE_59_FIRST_MONTH' },
+  vitrine: { referral: 'URL_STRIPE_VITRINE_199' },
+  visibilite: { referral: 'URL_STRIPE_VISIBILITE_49_MONTHLY' },
 };
 
-const validReferralCodes = ['PIXELORIA-JEAN', 'PIXELORIA-SOPHIE', 'PIXELORIA-MARTIN'];
+const validReferralCodes = ['PIXELORIA-FELIADA', 'PIXELORIA-DENISE', 'PIXELORIA-LESLYE'];
 
 const offers: Offer[] = [
   {
-    key: 'artisan',
-    name: 'Site Artisan',
-    desc: '179 € TTC au lieu de 199 €',
-    benefit: '−20 € sur le Site Artisan',
+    key: 'vitrine',
+    name: 'Site Vitrine',
+    desc: '199 € TTC · Paiement unique',
+    benefit: 'Vous gagnez 100 €',
     highlight: false,
   },
   {
     key: 'visibilite',
-    name: 'Option Visibilité',
-    desc: '1er mois à 29 € puis 49 €/mois',
-    benefit: '1er mois offert à moitié prix',
+    name: 'Visibilité locale',
+    desc: '49 € TTC/mois · Abonnement',
+    benefit: 'Vous gagnez 25 €/mois',
     highlight: true,
   },
 ];
@@ -86,10 +86,10 @@ export default function ReferralCodeSection() {
 
   return (
     <div id="code-parrainage" className="rcs-wrap">
-      <p className="section-label">Activer mon avantage filleul</p>
+      <p className="section-label">Utiliser mon code parrainage</p>
       <h2 className="rcs-wrap__title">J&rsquo;ai un code parrainage</h2>
       <p className="rcs-wrap__sub">
-        Renseignez votre code, choisissez votre offre, accédez directement au paiement avec votre remise.
+        Renseignez votre code, choisissez votre offre, et accédez au paiement. Votre parrain recevra sa récompense automatiquement.
       </p>
 
       <div className="rcs-input-wrap">
@@ -100,7 +100,7 @@ export default function ReferralCodeSection() {
           id="referral-code"
           type="text"
           className="rcs-input"
-          placeholder="Ex : PIXELORIA-JEAN"
+          placeholder="Ex : PIXELORIA-FELIADA"
           value={code}
           onChange={(e) => {
             setCode(e.target.value);
@@ -151,11 +151,11 @@ export default function ReferralCodeSection() {
         style={{ width: '100%', marginTop: '8px' }}
         onClick={handleSubmit}
       >
-        Utiliser mon avantage &rarr;
+        Procéder au paiement &rarr;
       </button>
 
       <p className="rcs-wrap__micro">
-        Votre avantage est appliqué via Stripe. La récompense du parrain est déclenchée selon les conditions du programme Pixeloria.
+        Votre code parrainage est validé lors du paiement. La récompense du parrain est déclenchée automatiquement selon les conditions du programme.
       </p>
     </div>
   );

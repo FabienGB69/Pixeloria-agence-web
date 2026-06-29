@@ -9,36 +9,32 @@ interface FaqItem {
 
 const faqItems: FaqItem[] = [
   {
-    question: "Quand la récompense est-elle versée ?",
-    answer: "Pour le Site Artisan, la récompense est déclenchée après paiement validé. Pour l'Option Visibilité, elle est déclenchée après 3 mois d'abonnement actifs.",
+    question: "Combien gagne le parrain ?",
+    answer: "Site Vitrine : vous gagnez 100 € après la réception du paiement. Visibilité locale : vous gagnez 25 € par mois tant que l'abonnement est actif. Potentiel de cumul : 100 € + 25 €/mois si votre filleul prend les deux offres.",
   },
   {
-    question: "Puis-je parrainer plusieurs entreprises ?",
-    answer: "Oui, sans limite. Chaque nouveau client parrainé peut générer une récompense indépendante. Vous suivez l'ensemble de vos filleuls dans votre espace affilié.",
+    question: "Les récompenses sont-elles cumulables ?",
+    answer: "Oui. Vous pouvez parrainer plusieurs entreprises sans limite. Chaque parrainage génère une récompense indépendante. Si un même filleul prend Site Vitrine ET Visibilité locale, vous percevez 100 € + 25 €/mois.",
   },
   {
-    question: "Le filleul bénéficie-t-il aussi d'un avantage ?",
-    answer: "Le filleul bénéficie automatiquement d'une remise : −20 € sur le Site Artisan (179 € TTC), ou premier mois à 59 € sur l'Option Visibilité.",
+    question: "Quand la récompense est-elle déclenchée ?",
+    answer: "Site Vitrine : immédiatement après réception du paiement via Stripe. Visibilité locale : après 1 mois d'abonnement actif et continu. La récompense continue chaque mois tant que l'abonnement reste actif.",
   },
   {
-    question: "Puis-je choisir entre argent et crédit Pixeloria ?",
-    answer: "Oui. Dans votre espace parrain, vous choisissez librement entre une récompense financière ou un crédit Pixeloria utilisable sur n'importe quelle prestation web.",
+    question: "Comment le parrainage est-il suivi ?",
+    answer: "Tout est automatique et transparent. Vous accédez à votre espace affilié où vous voyez vos filleuls actifs, vos commissions en attente, vos commissions validées et l'historique de vos paiements. Aucune gestion manuelle requise.",
+  },
+  {
+    question: "La récompense mensuelle continue-t-elle indéfiniment ?",
+    answer: "Oui. Vous recevez 25 € chaque mois tant que votre filleul conserve son abonnement Visibilité locale actif. Pas de limite de durée. Si l'abonnement s'arrête, la récompense cesse le mois suivant.",
   },
   {
     question: "Le programme est-il réservé aux clients Pixeloria ?",
-    answer: "Non. Clients, partenaires, professionnels et particuliers peuvent tous devenir parrains et recommander Pixeloria à leur réseau.",
+    answer: "Non. Tout le monde peut devenir parrain : clients actuels, partenaires, professionnels, freelances, particuliers, entreprises. Aucune condition préalable. Seuls les nouveaux clients de Pixeloria peuvent être parrainés.",
   },
   {
-    question: "Que se passe-t-il si le filleul annule son abonnement ?",
-    answer: "Si l'abonnement est annulé avant les 3 premiers paiements, la commission est annulée. Pour l'offre One Shot, une annulation après paiement validé entraîne un ajustement de la commission selon les conditions de remboursement.",
-  },
-  {
-    question: "Comment obtenir mon code personnel ?",
-    answer: "En rejoignant le programme via le bouton « Devenir parrain », vous créez votre compte dans l'espace affilié. Un code personnalisé au format PIXELORIA-PRENOM vous est attribué automatiquement.",
-  },
-  {
-    question: "Comment suivre mes parrainages et récompenses ?",
-    answer: "Tout est visible dans votre espace affilié : filleuls actifs, commissions en attente, commissions validées, historique des paiements. Aucune gestion manuelle n'est nécessaire.",
+    question: "Que se passe-t-il si le filleul annule ?",
+    answer: "Pour le Site Vitrine : si l'achat est remboursé, la commission est annulée. Pour la Visibilité : si l'abonnement s'arrête, vous cesserez de recevoir la récompense mensuelle le mois suivant. Pixeloria se réserve le droit d'ajuster ou annuler en cas de litige ou paiement échoué.",
   },
 ];
 
