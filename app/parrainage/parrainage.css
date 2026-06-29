@@ -824,6 +824,51 @@
 }
 
 /* ============================================================
+   REWARD CUMUL
+============================================================ */
+.prrn-page .reward-cumul {
+  margin-top: 48px;
+  padding: 0;
+}
+
+.prrn-page .reward-cumul__inner {
+  background: linear-gradient(160deg, rgba(217, 119, 6, 0.08) 0%, rgba(122, 92, 255, 0.04) 100%);
+  border: 1.5px solid rgba(217, 119, 6, 0.25);
+  border-radius: var(--card-radius);
+  padding: 32px 28px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.prrn-page .reward-cumul__icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.prrn-page .reward-cumul__title {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.prrn-page .reward-cumul__text {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.prrn-page .reward-cumul__text strong {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+/* ============================================================
    SECTION : DEUX FACONS D'ETRE RECOMPENSE
 ============================================================ */
 .prrn-page .reward-choice {
@@ -1457,6 +1502,14 @@
   }
   .prrn-page .become-referrer__box {
     padding: 40px 28px;
+  }
+  .prrn-page .reward-cumul__inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .prrn-page .reward-cumul__icon {
+    font-size: 2rem;
   }
 }
 
