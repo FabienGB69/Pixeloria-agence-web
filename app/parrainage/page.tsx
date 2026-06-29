@@ -5,13 +5,13 @@ import ParrainageReveal from '@/components/parrainage/ParrainageReveal';
 import ReferralCodeSection from '@/components/parrainage/ReferralCodeSection';
 
 export const metadata: Metadata = {
-  title: "Programme de parrainage — Gagnez jusqu'à 150 € | Pixeloria",
+  title: "Programme de parrainage — Gagnez jusqu'à 100 € + 25 €/mois | Pixeloria",
   description:
-    "Recommandez Pixeloria à un artisan ou une TPE et gagnez jusqu'à 150 €. Programme de parrainage automatisé, transparent et sans gestion manuelle.",
+    "Recommandez Pixeloria à un artisan ou une TPE et gagnez jusqu'à 100 € de prime, plus 25 €/mois si votre filleul s'abonne à la Visibilité locale. Programme entièrement transparent et automatisé.",
   openGraph: {
-    title: "Programme de parrainage Pixeloria — Gagnez jusqu'à 150 €",
+    title: "Programme de parrainage Pixeloria — Gagnez jusqu'à 100 € + 25 €/mois",
     description:
-      "Partagez votre code parrainage et recevez une récompense quand votre filleul devient client Pixeloria.",
+      "Partagez votre code parrainage. Gagnez 100 € quand votre filleul achète un site, plus 25 €/mois s'il s'abonne à la Visibilité locale.",
     url: 'https://pixeloria.fr/parrainage',
   },
   alternates: { canonical: 'https://pixeloria.fr/parrainage' },
@@ -57,12 +57,13 @@ export default function ParrainagePage() {
             </div>
 
             <h1 className="hero__title" id="hero-title">
-              Recommandez Pixeloria et gagnez jusqu&apos;à 150 €.
+              Recommandez Pixeloria et gagnez jusqu&apos;à 100&nbsp;€ + 25&nbsp;€/mois.
             </h1>
 
             <p className="hero__subtitle">
               Vous connaissez un artisan ou une TPE qui a besoin d&apos;un site web professionnel&nbsp;?
-              Partagez votre lien de parrainage et recevez une récompense dès que le projet est validé.
+              Partagez votre code de parrainage et recevez automatiquement 100&nbsp;€ quand il lance son site,
+              plus 25&nbsp;€ chaque mois s&apos;il s&apos;abonne à la Visibilité locale.
             </p>
 
             <div className="hero__actions">
@@ -77,12 +78,12 @@ export default function ParrainagePage() {
             {/* Stats bar */}
             <div className="hero__stats">
               <div className="hero__stat">
-                <div className="hero__stat-value"><span>50 €</span></div>
-                <div className="hero__stat-label">Site Artisan</div>
+                <div className="hero__stat-value"><span>100 €</span></div>
+                <div className="hero__stat-label">Site Vitrine</div>
               </div>
               <div className="hero__stat">
-                <div className="hero__stat-value"><span>30 €/mois</span></div>
-                <div className="hero__stat-label">Option Visibilité</div>
+                <div className="hero__stat-value"><span>25 €/mois</span></div>
+                <div className="hero__stat-label">Visibilité locale</div>
               </div>
             </div>
           </div>
@@ -92,21 +93,21 @@ export default function ParrainagePage() {
             <div className="hero-card">
               <div className="hero-card__top">
                 <div className="hero-card__icon">🎯</div>
-                <span className="badge badge--green">Automatique</span>
+                <span className="badge badge--green">Immédiat</span>
               </div>
-              <div className="hero-card__amount">50 € <span>récompense parrain</span></div>
-              <div className="hero-card__label">Site Artisan · 199 € TTC</div>
-              <div className="hero-card__sub">Déclenché après paiement validé</div>
+              <div className="hero-card__amount">100 € <span>récompense parrain</span></div>
+              <div className="hero-card__label">Site Vitrine · 199 € TTC</div>
+              <div className="hero-card__sub">Après paiement du site reçu</div>
             </div>
 
             <div className="hero-card hero-card--highlight">
               <div className="hero-card__top">
                 <div className="hero-card__icon">🚀</div>
-                <span className="badge badge--gold">Meilleure récompense</span>
+                <span className="badge badge--gold">Revenu passif</span>
               </div>
-              <div className="hero-card__amount">30 €/mois <span>récompense parrain</span></div>
-              <div className="hero-card__label">Option Visibilité · 49 € TTC/mois</div>
-              <div className="hero-card__sub">Déclenché après 3 mois d&apos;abonnement actifs</div>
+              <div className="hero-card__amount">25 €/mois <span>récompense parrain</span></div>
+              <div className="hero-card__label">Visibilité locale · 49 € TTC/mois</div>
+              <div className="hero-card__sub">Après 1 mois d&apos;abonnement actif</div>
             </div>
           </div>
         </div>
@@ -133,18 +134,18 @@ export default function ParrainagePage() {
               <div className="step__number">01</div>
               <div className="step__title">Vous partagez votre code</div>
               <p className="step__text">
-                Envoyez votre code personnel (ex&nbsp;:{' '}
-                <strong style={{ color: 'var(--purple-light)' }}>PIXELORIA-JEAN</strong>
-                ) ou votre lien d&apos;affiliation à une entreprise de votre réseau. Par SMS, WhatsApp, email ou LinkedIn.
+                Envoyez votre code personnel au format{' '}
+                <strong style={{ color: 'var(--purple-light)' }}>PIXELORIA-PRENOM</strong>
+                {' '}à un artisan ou TPE de votre réseau. Par SMS, WhatsApp, email ou LinkedIn.
               </p>
             </div>
 
             <div className="step">
               <div className="step__icon">🛒</div>
               <div className="step__number">02</div>
-              <div className="step__title">Votre filleul choisit son offre</div>
+              <div className="step__title">Votre filleul s&apos;inscrit avec votre code</div>
               <p className="step__text">
-                Votre filleul bénéficie automatiquement de son avantage de bienvenue. La remise est appliquée dès la validation du paiement via Stripe.
+                Il utilise votre code au moment de choisir son offre. Si c&apos;est le Site Vitrine (199 €), il paie via Stripe. Si c&apos;est la Visibilité, l&apos;abonnement démarre au mois suivant.
               </p>
             </div>
 
@@ -153,7 +154,9 @@ export default function ParrainagePage() {
               <div className="step__number">03</div>
               <div className="step__title">Vous recevez votre récompense</div>
               <p className="step__text">
-                Dès que les conditions sont validées, votre récompense est déclenchée automatiquement dans votre espace affilié. Argent ou crédit Pixeloria&nbsp;: vous choisissez.
+                Site Vitrine&nbsp;: 100 € après la première commande reçue.
+                Visibilité&nbsp;: 25 €/mois après 1 mois d&apos;abonnement actif.
+                Cumul possible&nbsp;: 100 € + 25 €/mois si votre filleul prend les deux.
               </p>
             </div>
           </div>
@@ -177,88 +180,103 @@ export default function ParrainagePage() {
 
           <div className="rewards__grid">
 
-            {/* Site Artisan */}
+            {/* Site Vitrine */}
             <div className="reward-card">
               <div className="reward-card__stripe"></div>
               <div className="reward-card__top">
                 <div>
-                  <div className="reward-card__name">Site Artisan</div>
-                  <div className="reward-card__price">Création ou refonte · 199 € TTC</div>
+                  <div className="reward-card__name">Site Vitrine</div>
+                  <div className="reward-card__price">Site professionnel · 199 € TTC</div>
                 </div>
                 <span className="badge badge--purple">Paiement unique</span>
               </div>
               <div className="reward-card__divider"></div>
               <div className="reward-card__row">
                 <div className="reward-card__row-left">
-                  <span className="reward-card__row-icon">🎁</span>
-                  <span className="reward-card__row-label">Avantage filleul</span>
+                  <span className="reward-card__row-icon">🎯</span>
+                  <span className="reward-card__row-label">Filleul paie</span>
                 </div>
-                <span className="reward-card__row-value reward-card__row-value--green">−20 € sur le site</span>
-              </div>
-              <div className="reward-card__row">
-                <div className="reward-card__row-left">
-                  <span className="reward-card__row-icon">💵</span>
-                  <span className="reward-card__row-label">Prix avec parrainage</span>
-                </div>
-                <span className="reward-card__row-value">179 € TTC</span>
+                <span className="reward-card__row-value">199 € TTC</span>
               </div>
               <div className="reward-card__row">
                 <div className="reward-card__row-left">
                   <span className="reward-card__row-icon">🏆</span>
-                  <span className="reward-card__row-label">Récompense parrain</span>
+                  <span className="reward-card__row-label">Vous gagnez</span>
                 </div>
-                <span className="reward-card__row-value reward-card__row-value--purple">50 €</span>
+                <span className="reward-card__row-value reward-card__row-value--purple">100 €</span>
+              </div>
+              <div className="reward-card__row">
+                <div className="reward-card__row-left">
+                  <span className="reward-card__row-icon">⚡</span>
+                  <span className="reward-card__row-label">ROI du parrainage</span>
+                </div>
+                <span className="reward-card__row-value reward-card__row-value--green">50 % du prix</span>
               </div>
               <div className="reward-card__trigger">
                 <div className="reward-card__trigger-label">Déclenchement</div>
-                <div className="reward-card__trigger-text">Après paiement réussi du Site Artisan.</div>
+                <div className="reward-card__trigger-text">Immédiatement après la réception du paiement Stripe.</div>
               </div>
               <div className="reward-card__cta">
                 <a href={REFERRAL_URL} className="btn btn--secondary">Devenir parrain →</a>
               </div>
             </div>
 
-            {/* Option Visibilité (highlighted) */}
+            {/* Visibilité locale (highlighted) */}
             <div className="reward-card reward-card--highlight">
               <div className="reward-card__stripe"></div>
               <div className="reward-card__top">
                 <div>
-                  <div className="reward-card__name">Option Visibilité</div>
-                  <div className="reward-card__price">Visibilité locale · 49 € TTC/mois</div>
+                  <div className="reward-card__name">Visibilité locale</div>
+                  <div className="reward-card__price">Abonnement · 49 € TTC/mois</div>
                 </div>
-                <span className="badge badge--gold">⭐ Meilleure récompense</span>
+                <span className="badge badge--gold">⭐ Revenu récurrent</span>
               </div>
               <div className="reward-card__divider"></div>
               <div className="reward-card__row">
                 <div className="reward-card__row-left">
-                  <span className="reward-card__row-icon">🎁</span>
-                  <span className="reward-card__row-label">Avantage filleul</span>
-                </div>
-                <span className="reward-card__row-value reward-card__row-value--green">1er mois à 59 €</span>
-              </div>
-              <div className="reward-card__row">
-                <div className="reward-card__row-left">
-                  <span className="reward-card__row-icon">💵</span>
-                  <span className="reward-card__row-label">Puis mensualité normale</span>
+                  <span className="reward-card__row-icon">💳</span>
+                  <span className="reward-card__row-label">Filleul paie</span>
                 </div>
                 <span className="reward-card__row-value">49 € TTC/mois</span>
               </div>
               <div className="reward-card__row">
                 <div className="reward-card__row-left">
                   <span className="reward-card__row-icon">🏆</span>
-                  <span className="reward-card__row-label">Récompense parrain</span>
+                  <span className="reward-card__row-label">Vous gagnez</span>
                 </div>
-                <span className="reward-card__row-value" style={{ color: 'var(--gold)', fontSize: '1.1875rem' }}>30 €/mois</span>
+                <span className="reward-card__row-value" style={{ color: 'var(--gold)', fontSize: '1.1875rem' }}>25 € /mois</span>
+              </div>
+              <div className="reward-card__row">
+                <div className="reward-card__row-left">
+                  <span className="reward-card__row-icon">📊</span>
+                  <span className="reward-card__row-label">Potentiel annuel</span>
+                </div>
+                <span className="reward-card__row-value reward-card__row-value--gold">300 € /an</span>
               </div>
               <div className="reward-card__trigger">
                 <div className="reward-card__trigger-label">Déclenchement</div>
-                <div className="reward-card__trigger-text">Après 3 mois d&apos;abonnement actifs.</div>
+                <div className="reward-card__trigger-text">Après 1 mois d&apos;abonnement actif et continu.</div>
               </div>
               <div className="reward-card__cta">
                 <a href={REFERRAL_URL} className="btn btn--primary">Devenir parrain →</a>
               </div>
             </div>
 
+          </div>
+
+          {/* Cumul bonus section */}
+          <div className="reward-cumul">
+            <div className="reward-cumul__inner">
+              <div className="reward-cumul__icon">🎊</div>
+              <div>
+                <h3 className="reward-cumul__title">Cumul possible</h3>
+                <p className="reward-cumul__text">
+                  Si votre filleul prend <strong>à la fois</strong> le Site Vitrine (199 €) et s&apos;abonne à la Visibilité locale,
+                  vous gagnez <strong>100 € immédiat + 25 €/mois continu</strong>.
+                  Potentiel : <strong>400 € la première année</strong> pour un seul parrainage.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -291,16 +309,16 @@ export default function ParrainagePage() {
               <div className="audience__visual-sub">Chaque recommandation peut générer une récompense automatique.</div>
               <div className="audience__visual-numbers">
                 <div className="audience__num">
-                  <div className="audience__num-value audience__num-value--purple">50 €</div>
-                  <div className="audience__num-label">par Site Artisan</div>
+                  <div className="audience__num-value audience__num-value--purple">100 €</div>
+                  <div className="audience__num-label">par Site Vitrine</div>
                 </div>
                 <div className="audience__num">
-                  <div className="audience__num-value audience__num-value--gold">30 €/mois</div>
-                  <div className="audience__num-label">par Option Visibilité</div>
+                  <div className="audience__num-value audience__num-value--gold">25 €/mois</div>
+                  <div className="audience__num-label">par Visibilité locale</div>
                 </div>
                 <div className="audience__num">
-                  <div className="audience__num-value audience__num-value--green">∞</div>
-                  <div className="audience__num-label">parrainages possibles</div>
+                  <div className="audience__num-value audience__num-value--green">Illimité</div>
+                  <div className="audience__num-label">parrainages cumulés</div>
                 </div>
               </div>
             </div>
@@ -453,11 +471,11 @@ export default function ParrainagePage() {
               </li>
               <li className="conditions__item">
                 <span className="conditions__item-icon">✦</span>
-                <p>Pour le Site Artisan, la récompense est déclenchée après <strong>paiement effectif de la prestation</strong>.</p>
+                <p>Pour le Site Vitrine, la récompense de <strong>100 €</strong> est déclenchée après <strong>paiement effectif reçu via Stripe</strong>.</p>
               </li>
               <li className="conditions__item">
                 <span className="conditions__item-icon">✦</span>
-                <p>Pour les offres en abonnement, la récompense est déclenchée après <strong>3 paiements mensuels réussis</strong> et un abonnement toujours actif.</p>
+                <p>Pour la Visibilité locale, la récompense de <strong>25 €/mois</strong> est déclenchée après <strong>1 mois d&apos;abonnement actif</strong> et continue tant que l&apos;abonnement est actif.</p>
               </li>
               <li className="conditions__item">
                 <span className="conditions__item-icon">✦</span>
