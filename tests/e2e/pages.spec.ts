@@ -73,8 +73,10 @@ test.describe('Pages — contenu principal visible', () => {
 
   test('/avis — section témoignages chargée', async ({ page }) => {
     await page.goto('/avis');
-    // Testimonials component h2: "Ce que disent nos clients"
-    await expect(page.getByRole('heading', { name: /disent|clients|avis/i })).toBeVisible();
+    // Testimonials component h2: "Ce que disent nos clients" — scope to h2 + a
+    // substring unique to it, since the page's own <h1>Avis de nos clients</h1>
+    // also matches a broader "clients|avis" regex (strict-mode violation).
+    await expect(page.getByRole('heading', { level: 2, name: /disent/i })).toBeVisible();
   });
 
   test('/comment-ca-marche — section process chargée', async ({ page }) => {
