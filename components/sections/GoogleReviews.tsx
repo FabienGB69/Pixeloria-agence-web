@@ -130,7 +130,12 @@ async function GoogleReviewsContent() {
       </div>
 
       {schema && (
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+        <script
+          type="application/ld+json"
+          // Le texte des avis vient de Google (tiers) : on échappe `<` pour empêcher
+          // toute évasion de la balise <script> (ex. un avis contenant "</script>").
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, '\\u003c') }}
+        />
       )}
     </section>
   );
