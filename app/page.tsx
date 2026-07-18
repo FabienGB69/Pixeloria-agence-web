@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import LaunchBanner from '@/components/ui/LaunchBanner';
 import Hero from '@/components/sections/Hero';
+import GoogleReviews from '@/components/sections/GoogleReviews';
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
@@ -37,6 +38,7 @@ export default function HomePage() {
       <Header />
       <main id="home">
         <Hero />
+        <GoogleReviews />
         <Contact />
       </main>
       <Footer />
