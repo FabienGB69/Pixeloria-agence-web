@@ -4,7 +4,6 @@ import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
 import Services from '@/components/sections/Services';
 import ComparisonTable from '@/components/sections/ComparisonTable';
-import ForWho from '@/components/sections/ForWho';
 import AuditGratuit from '@/components/sections/AuditGratuit';
 import Contact from '@/components/sections/Contact';
 
@@ -28,7 +27,6 @@ export default function TarifsPage() {
           <a href="/faq" className="offers-faq-link">Une question sur nos offres&nbsp;? Consulter la FAQ</a>
         </div>
         <ComparisonTable />
-        <ForWho />
         <AuditGratuit />
         <Contact />
       </main>
