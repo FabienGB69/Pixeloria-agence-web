@@ -36,6 +36,24 @@ type Etude = {
 
 const etudes: Etude[] = [
   {
+    type: 'Plateforme web',
+    year: '2026',
+    sector: 'Automobile / Sécurité routière',
+    client: 'EAD France',
+    url: 'https://eadfrance.fr',
+    summary: 'Conception d\'une plateforme nationale de recherche et de comparaison d\'installateurs d\'éthylotest anti-démarrage agréés en France, avec simulateur interactif et prise de rendez-vous.',
+    axes: [
+      'Recherche géolocalisée par ville, code postal ou département',
+      'Comparateur d\'installateurs (tarifs, délais, disponibilités)',
+      'Simulateur interactif pour orienter les conducteurs concernés',
+      'Pages locales SEO et espace dédié aux professionnels',
+    ],
+    status: 'Plateforme en ligne',
+    // TODO: pas de capture d'écran réelle disponible pour l'instant (Chromium bloqué par le sandbox,
+    // net::ERR_CONNECTION_RESET alors que curl fonctionne) — voir rapport de session.
+    // Ajouter previewImage + previewImageAlt (assets/portfolio/ead-france-preview.webp) une fois capturée manuellement.
+  },
+  {
     type: 'Création complète',
     year: '2026',
     sector: 'Ménage à domicile / Service à la personne',
