@@ -6,33 +6,32 @@ const targetAudiences = [
     emoji: '🔨',
     title: 'Artisans du bâtiment',
     description: 'Couvreur, plombier, électricien, peintre, menuisier…',
-    cta: 'Voir un exemple de site',
-    href: '/exemples/artisan-batiment',
+    cta: 'Voir nos réalisations',
+    href: '/realisations',
   },
   {
     slug: 'entreprise-renovation',
     emoji: '🏗️',
     title: 'Entreprises de rénovation',
     description: 'Rénovation intérieure, isolation, carrelage, second œuvre…',
-    cta: 'Voir un exemple de site',
-    href: '/exemples/entreprise-renovation',
+    cta: 'Voir nos réalisations',
+    href: '/realisations',
   },
   {
     slug: 'conciergerie',
     emoji: '🏡',
     title: 'Conciergeries',
     description: 'Location saisonnière, gestion des voyageurs, propriétaires, automatisation…',
-    cta: 'Voir un exemple anonymisé',
-    href: '/exemples/conciergerie',
-    badge: 'Cas anonymisé',
+    cta: 'Voir nos réalisations',
+    href: '/realisations',
   },
   {
     slug: 'commerce-local',
     emoji: '🛒',
     title: 'Commerçants locaux',
     description: 'Boutique de quartier, fleuriste, librairie, commerce de proximité…',
-    cta: 'Voir un exemple de site',
-    href: '/exemples/commerce-local',
+    cta: 'Voir nos réalisations',
+    href: '/realisations',
   },
 ];
 
@@ -48,16 +47,13 @@ export default function ForWho() {
             améliorer leur présence en ligne et recevoir plus de demandes de contact.
           </p>
           <p className="forwho-hint">
-            Cliquez sur votre métier pour voir un exemple de site adapté à votre activité.
+            Découvrez comment Pixeloria a accompagné des professionnels comme vous.
           </p>
         </div>
 
         <div className="forwho-grid forwho-grid--2col">
           {targetAudiences.map((item) => (
             <Link key={item.slug} href={item.href} className="forwho-link-card reveal">
-              {item.badge && (
-                <span className="forwho-card-badge">{item.badge}</span>
-              )}
               <div className="forwho-card-body">
                 <div className="forwho-link-icon" aria-hidden="true">{item.emoji}</div>
                 <h3>{item.title}</h3>
