@@ -51,6 +51,7 @@ export default function Footer({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
           <Link href={locale === 'en' ? '/en' : '/'}>{locale === 'en' ? 'Home' : 'Accueil'}</Link>
           <Link href="/realisations">{locale === 'en' ? 'Our work' : 'Voir nos réalisations'}</Link>
           <Link href={locale === 'en' ? '/en#packages' : '/offres'}>{locale === 'en' ? 'Packages' : 'Offres'}</Link>
+          <Link href={locale === 'en' ? '/en/faq' : '/faq'}>FAQ</Link>
           <Link href={locale === 'en' ? '/en#contact' : '/#contact'}>Contact</Link>
           <Link href="/mentions-legales">{locale === 'en' ? 'Legal notice' : 'Mentions légales'}</Link>
         </nav>

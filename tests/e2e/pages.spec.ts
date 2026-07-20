@@ -142,7 +142,6 @@ test.describe('Navigation principale', () => {
       { label: 'Portfolio', href: '/realisations' },
       { label: 'Comment ça marche', href: '/comment-ca-marche' },
       { label: 'Avis', href: '/avis' },
-      { label: 'FAQ', href: '/faq' },
       { label: 'Devis gratuit', href: '/#contact' },
     ];
 
@@ -325,7 +324,6 @@ test.describe('English navigation (HeaderEn)', () => {
       { label: 'Pricing', href: '/en/pricing' },
       { label: 'How it works', href: '/en/how-it-works' },
       { label: 'Reviews', href: '/en/reviews' },
-      { label: 'FAQ', href: '/en/faq' },
       { label: 'About', href: '/en/about' },
     ];
     for (const { label, href } of expectedLinks) {

@@ -58,7 +58,6 @@ export default function HeaderEn() {
           <Link href="/en/pricing" className="nav-link" onClick={closeMenu}>Pricing</Link>
           <Link href="/en/how-it-works" className="nav-link" onClick={closeMenu}>How it works</Link>
           <Link href="/en/reviews" className="nav-link" onClick={closeMenu}>Reviews</Link>
-          <Link href="/en/faq" className="nav-link" onClick={closeMenu}>FAQ</Link>
           <Link href="/en/about" className="nav-link" onClick={closeMenu}>About</Link>
           <Link href="/?setlang=fr" className="nav-link lang-switcher" onClick={closeMenu} aria-label="Version française">
             🇫🇷 FR

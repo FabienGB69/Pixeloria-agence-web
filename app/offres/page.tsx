@@ -48,6 +48,9 @@ export default function OffresPage() {
 
         {/* Les 3 offres */}
         <Services />
+        <div className="container">
+          <a href="/faq" className="offers-faq-link">Une question sur nos offres&nbsp;? Consulter la FAQ</a>
+        </div>
 
         {/* Tableau comparatif */}
         <ComparisonTable />
