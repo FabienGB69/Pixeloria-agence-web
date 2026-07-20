@@ -1,6 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
+import {
+  normalizeReferralCode,
+  isValidReferralCode,
+  getReferralPartner,
+} from '@/lib/referral-partners';
+import { buildStripeReferralUrl } from '@/lib/stripe-referral-url';
 
 type OfferKey = 'vitrine' | 'visibilite';
 
@@ -17,11 +24,9 @@ interface StripeLinks {
 }
 
 const stripeLinks: Record<OfferKey, StripeLinks> = {
-  vitrine: { referral: 'URL_STRIPE_VITRINE_199' },
-  visibilite: { referral: 'URL_STRIPE_VISIBILITE_49_MONTHLY' },
+  vitrine: { referral: process.env.NEXT_PUBLIC_STRIPE_SITE_VITRINE_PAYMENT_LINK || '' },
+  visibilite: { referral: process.env.NEXT_PUBLIC_STRIPE_OPTION_VISIBILITE_PAYMENT_LINK || '' },
 };
-
-const validReferralCodes = ['PIXELORIA-FELIADA', 'PIXELORIA-DENISE', 'PIXELORIA-LESLYE'];
 
 const offers: Offer[] = [
   {
@@ -43,19 +48,33 @@ const offers: Offer[] = [
 const CONTACT_EMAIL = 'contact@pixeloria.fr';
 
 export default function ReferralCodeSection() {
+  const searchParams = useSearchParams();
   const [code, setCode] = useState<string>('');
   const [selectedOffer, setSelectedOffer] = useState<OfferKey | ''>('');
   const [error, setError] = useState<string>('');
+  const [isInitialized, setIsInitialized] = useState(false);
+
+  // Extract and auto-fill code from URL params
+  useEffect(() => {
+    const urlCode = searchParams.get('code');
+    if (urlCode) {
+      const normalized = normalizeReferralCode(urlCode);
+      if (isValidReferralCode(normalized)) {
+        setCode(normalized);
+      }
+    }
+    setIsInitialized(true);
+  }, [searchParams]);
 
   const handleSubmit = () => {
-    const normalizedCode = code.trim().toUpperCase();
+    const normalizedCode = normalizeReferralCode(code);
 
     if (!normalizedCode) {
       setError('Veuillez renseigner votre code parrainage.');
       return;
     }
 
-    if (!validReferralCodes.includes(normalizedCode)) {
+    if (!isValidReferralCode(normalizedCode)) {
       setError(
         "Ce code parrainage n'est pas encore reconnu. Vérifiez votre code ou contactez Pixeloria.",
       );
@@ -67,9 +86,9 @@ export default function ReferralCodeSection() {
       return;
     }
 
-    const stripeUrl = stripeLinks[selectedOffer].referral;
+    const baseUrl = stripeLinks[selectedOffer].referral;
 
-    if (stripeUrl.includes('URL_STRIPE')) {
+    if (!baseUrl || baseUrl.includes('URL_STRIPE')) {
       setError(
         "Le lien de paiement n'est pas encore configuré. Contactez Pixeloria :",
       );
@@ -77,15 +96,29 @@ export default function ReferralCodeSection() {
     }
 
     setError('');
-    const url = `${stripeUrl}?client_reference_id=${normalizedCode}&prefilled_promo_code=${normalizedCode}`;
+    const url = buildStripeReferralUrl(baseUrl, normalizedCode);
     window.location.href = url;
   };
 
   const showContactLink =
     error.includes('contactez Pixeloria') || error.includes('Contactez Pixeloria');
 
+  const partner = isInitialized && code ? getReferralPartner(code) : null;
+
   return (
     <div id="code-parrainage" className="rcs-wrap">
+      {partner && (
+        <div className="rcs-banner rcs-banner--success">
+          <span className="rcs-banner__icon">✓</span>
+          <div className="rcs-banner__content">
+            <div className="rcs-banner__label">Code parrainage appliqué</div>
+            <div className="rcs-banner__text">
+              {partner.name} — <strong>{code}</strong>
+            </div>
+          </div>
+        </div>
+      )}
+
       <p className="section-label">Utiliser mon code parrainage</p>
       <h2 className="rcs-wrap__title">J&rsquo;ai un code parrainage</h2>
       <p className="rcs-wrap__sub">

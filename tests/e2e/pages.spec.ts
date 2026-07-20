@@ -33,6 +33,7 @@ test.describe('Pages — statut HTTP 200', () => {
     '/en/faq',
     '/en/about',
     '/en/testimonial',
+    '/en/parrainage',
     '/cgu',
     '/cgv',
     '/mentions-legales',
@@ -73,8 +74,10 @@ test.describe('Pages — contenu principal visible', () => {
 
   test('/avis — section témoignages chargée', async ({ page }) => {
     await page.goto('/avis');
-    // Testimonials component h2: "Ce que disent nos clients"
-    await expect(page.getByRole('heading', { name: /disent|clients|avis/i })).toBeVisible();
+    // Testimonials component h2: "Ce que disent nos clients" — scope to h2 + a
+    // substring unique to it, since the page's own <h1>Avis de nos clients</h1>
+    // also matches a broader "clients|avis" regex (strict-mode violation).
+    await expect(page.getByRole('heading', { level: 2, name: /disent/i })).toBeVisible();
   });
 
   test('/comment-ca-marche — section process chargée', async ({ page }) => {
@@ -120,6 +123,11 @@ test.describe('Pages — contenu principal visible', () => {
   test('/en/about — H1 visible', async ({ page }) => {
     await page.goto('/en/about');
     await expect(page.getByRole('heading', { name: /agency behind/i })).toBeVisible();
+  });
+
+  test('/en/parrainage — H1 visible', async ({ page }) => {
+    await page.goto('/en/parrainage');
+    await expect(page.getByRole('heading', { name: /recommend pixeloria|earn/i })).toBeVisible();
   });
 
   test('/en/testimonial — H1 visible', async ({ page }) => {
