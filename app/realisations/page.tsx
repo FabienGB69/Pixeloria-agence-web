@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/JsonLd';
@@ -19,7 +20,38 @@ export const metadata: Metadata = {
   },
 };
 
-const etudes = [
+type Etude = {
+  type: string;
+  year: string;
+  sector: string;
+  client: string;
+  slug?: string;
+  url: string;
+  summary: string;
+  axes: string[];
+  status?: string;
+  previewImage?: string;
+  previewImageAlt?: string;
+};
+
+const etudes: Etude[] = [
+  {
+    type: 'Création complète',
+    year: '2026',
+    sector: 'Maçonnerie / Travaux extérieurs',
+    client: 'EI Maigret',
+    url: 'https://ei-maigret.fr',
+    summary: 'Création d\'un site internet moderne pour un artisan spécialisé dans la maçonnerie, le terrassement, le ravalement à la chaux et les aménagements extérieurs à Jouarre (Seine-et-Marne).',
+    axes: [
+      'Présentation claire des prestations et du savoir-faire',
+      'Galerie de réalisations pour rassurer les prospects',
+      'Formulaire de demande de devis et intégration WhatsApp',
+      'Optimisation mobile et référencement local dès le lancement',
+    ],
+    status: 'En cours de création',
+    // TODO: pas de capture d'écran réelle disponible pour l'instant — voir rapport de session.
+    // Ajouter previewImage + previewImageAlt (assets/portfolio/ei-maigret-preview.webp) une fois capturée manuellement.
+  },
   {
     type: 'Refonte',
     year: '2026',
@@ -122,12 +154,32 @@ export default function RealisationsPage() {
           <div className="container">
             <div className="etude-grid">
               {etudes.map((e) => (
-                <article key={e.slug} className="etude-card">
+                <article key={e.slug ?? e.client} className="etude-card">
                   <div className="etude-meta">
                     <span className="tag">{e.type}</span>
+                    {e.status && <span className="tag tag-status">{e.status}</span>}
                     <span className="etude-year">{e.year}</span>
                     <span className="etude-sector">{e.sector}</span>
                   </div>
+
+                  {e.previewImage && (
+                    <a
+                      href={e.url}
+                      className="project-preview"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Voir le site ${e.client}`}
+                    >
+                      <Image
+                        src={e.previewImage}
+                        alt={e.previewImageAlt ?? `Aperçu du site ${e.client}`}
+                        width={600}
+                        height={400}
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        loading="lazy"
+                      />
+                    </a>
+                  )}
 
                   <h2 className="etude-title">{e.client}</h2>
                   <p className="etude-summary">{e.summary}</p>
@@ -139,12 +191,14 @@ export default function RealisationsPage() {
                   </ul>
 
                   <div className="etude-actions">
-                    <Link href={`/realisations/${e.slug}`} className="btn btn-primary">
-                      Voir la transformation
-                      <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                        <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </Link>
+                    {e.slug && (
+                      <Link href={`/realisations/${e.slug}`} className="btn btn-primary">
+                        Voir la transformation
+                        <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                          <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </Link>
+                    )}
                     <a
                       href={e.url}
                       className="etude-link-secondary"

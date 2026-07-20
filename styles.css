@@ -1015,6 +1015,11 @@ abbr[title] {
   padding: 0.2rem 0.6rem;
 }
 
+.tag-status {
+  color: var(--cyan);
+  border-color: rgba(44,167,255,0.30);
+}
+
 .project-year {
   font-size: 0.78rem;
   color: var(--text-muted);
