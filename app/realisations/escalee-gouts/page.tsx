@@ -35,14 +35,14 @@ export default function EscaleeGoutsPage() {
               <span aria-hidden="true"> › </span>
               <Link href="/realisations">Réalisations</Link>
               <span aria-hidden="true"> › </span>
-              <span>Escalee &amp; Goûts</span>
+              <span>Escalee & Goûts</span>
             </nav>
 
             <div className="page-hero-inner">
               <p className="eyebrow">Refonte · Conciergerie / Tourisme · 2026</p>
-              <h1>Avant / Après&nbsp;: refonte du site Escalee &amp; Goûts</h1>
+              <h1>Avant / Après&nbsp;: refonte du site Escalee & Goûts</h1>
               <p className="page-hero-sub">
-                Escalee &amp; Goûts propose des expériences de conciergerie haut de gamme. Leur ancien
+                Escalee & Goûts propose des expériences de conciergerie haut de gamme. Leur ancien
                 site ne reflétait pas le niveau de service proposé et rendait difficile la prise de
                 contact pour les vacanciers.
               </p>
@@ -68,7 +68,7 @@ export default function EscaleeGoutsPage() {
           <div className="container">
             <h2 className="section-heading">Contexte du projet</h2>
             <p className="section-sub">
-              Escalee &amp; Goûts accompagne des vacanciers exigeants dans leur séjour en Ardèche et en
+              Escalee & Goûts accompagne des vacanciers exigeants dans leur séjour en Ardèche et en
               Drôme Provençale. La société proposait des services de conciergerie premium — accueil,
               activités, recommandations locales — mais son site donnait une image insuffisamment
               professionnelle pour convaincre une clientèle haut de gamme de confier leur séjour à
@@ -109,7 +109,7 @@ export default function EscaleeGoutsPage() {
                 <span className="benefit-num">02</span>
                 <h3>Clarifier l&apos;offre de services</h3>
                 <p>
-                  Permettre aux visiteurs de comprendre en quelques secondes ce qu&apos;Escalee &amp; Goûts
+                  Permettre aux visiteurs de comprendre en quelques secondes ce qu&apos;Escalee & Goûts
                   propose.
                 </p>
               </div>

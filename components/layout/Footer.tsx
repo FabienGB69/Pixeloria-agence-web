@@ -22,7 +22,7 @@ export default function Footer({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
             {locale === 'en' ? 'Request a quote' : 'Demander un devis'}
           </Link>
           <Link href="/realisations" className="btn btn-secondary">
-            {locale === 'en' ? 'Our work' : 'Voir nos réalisations'}
+            {locale === 'en' ? 'View our projects' : 'Voir les réalisations'}
           </Link>
         </div>
       </div>
@@ -38,7 +38,7 @@ export default function Footer({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
               height={32}
             />
           </Link>
-          <p>{locale === 'en' ? 'Website creation and redesign for local businesses and trades.' : 'Création &amp; refonte de sites internet pour artisans et TPE locaux.'}</p>
+          <p>{locale === 'en' ? 'Website creation and redesign for local businesses and trades.' : 'Création et refonte de sites internet pour artisans et TPE locaux.'}</p>
           <p className="footer-brand-contact">
             <a href="tel:+33786125313">07 86 12 53 13</a><br />
             <a href="mailto:contact@pixeloria.fr">contact@pixeloria.fr</a><br />
@@ -49,7 +49,7 @@ export default function Footer({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
         <nav className="footer-nav" aria-label="Navigation pied de page">
           <strong>{locale === 'en' ? 'Useful links' : 'Liens utiles'}</strong>
           <Link href={locale === 'en' ? '/en' : '/'}>{locale === 'en' ? 'Home' : 'Accueil'}</Link>
-          <Link href="/realisations">{locale === 'en' ? 'Our work' : 'Voir nos réalisations'}</Link>
+          <Link href="/realisations">{locale === 'en' ? 'Projects' : 'Réalisations'}</Link>
           <Link href={locale === 'en' ? '/en#packages' : '/offres'}>{locale === 'en' ? 'Packages' : 'Offres'}</Link>
           <Link href={locale === 'en' ? '/en/faq' : '/faq'}>FAQ</Link>
           <Link href={locale === 'en' ? '/en#contact' : '/#contact'}>Contact</Link>

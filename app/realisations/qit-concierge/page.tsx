@@ -281,7 +281,7 @@ export default function QitConciergePage() {
             </div>
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <Link href="/realisations/escalee-gouts" className="btn btn-secondary">
-                Escalee &amp; Goûts →
+                Escalee & Goûts →
               </Link>
               <Link href="/realisations/lenora-conciergerie" className="btn btn-secondary">
                 Lenora Conciergerie →

@@ -528,7 +528,7 @@ export default function ParrainagePage() {
           </a>
           <div className="footer__links">
             <a href="https://pixeloria.fr/#services" className="footer__link">Offres</a>
-            <a href="https://pixeloria.fr/#portfolio" className="footer__link">Portfolio</a>
+            <a href="https://pixeloria.fr/realisations" className="footer__link">Réalisations</a>
             <a href="https://pixeloria.fr/#contact" className="footer__link">Contact</a>
             <a href="https://pixeloria.fr/mentions-legales" className="footer__link">Mentions légales</a>
             <a href="https://pixeloria.fr/cgv" className="footer__link">CGV</a>

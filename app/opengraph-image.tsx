@@ -93,7 +93,7 @@ export default function OgImage() {
               maxWidth: '900px',
             }}
           >
-            Création &amp; refonte de sites internet
+            Création et refonte de sites internet
             <br />
             <span
               style={{
