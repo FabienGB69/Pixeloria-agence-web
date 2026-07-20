@@ -3,8 +3,8 @@ export default function Marketing() {
     <section id="marketing" className="section">
       <div className="container">
         <div className="section-heading reveal">
-          <span className="eyebrow">Marketing &amp; Visibilité</span>
-          <h2>Copywriting &amp; SEO — votre voix, votre visibilité</h2>
+          <span className="eyebrow">Marketing et Visibilité</span>
+          <h2>Copywriting et SEO — votre voix, votre visibilité</h2>
           <p className="section-intro">
             Un beau site sans visiteurs, c&apos;est une vitrine dans un désert. On aligne
             copywriting percutant et SEO technique pour que votre site <em>attire</em>,{' '}
@@ -29,21 +29,21 @@ export default function Marketing() {
               <li>
                 <span className="feature-dot" aria-hidden="true"></span>
                 <div>
-                  <strong>Pages de vente &amp; landing pages</strong>
+                  <strong>Pages de vente et landing pages</strong>
                   <span>Accroches, storytelling, CTA irrésistibles</span>
                 </div>
               </li>
               <li>
                 <span className="feature-dot" aria-hidden="true"></span>
                 <div>
-                  <strong>Tone of voice &amp; brand messaging</strong>
+                  <strong>Tone of voice et brand messaging</strong>
                   <span>Charte éditoriale, positionnement verbal, slogan</span>
                 </div>
               </li>
               <li>
                 <span className="feature-dot" aria-hidden="true"></span>
                 <div>
-                  <strong>Email &amp; séquences automatisées</strong>
+                  <strong>Email et séquences automatisées</strong>
                   <span>Nurturing, onboarding, relance panier</span>
                 </div>
               </li>

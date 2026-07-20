@@ -186,7 +186,7 @@ export default function TunnelForm() {
         <p>Nous revenons vers vous sous 24&nbsp;h ouvrées à l&apos;adresse <strong>{s.email}</strong>.</p>
         <p>Vous allez recevoir 4 livrables clés&nbsp;:</p>
         <ul className="deliverables">
-          <li>1. Diagnostic UX &amp; conversion détaillé</li>
+          <li>1. Diagnostic UX et conversion détaillé</li>
           <li>2. Score SEO technique avec priorités</li>
           <li>3. Roadmap d&apos;actions 30 / 60 / 90 jours</li>
           <li>4. Proposition de refonte + planning de lancement</li>

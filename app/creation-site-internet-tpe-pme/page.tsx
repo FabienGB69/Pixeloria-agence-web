@@ -85,9 +85,9 @@ export default function CreationSiteTpePmePage() {
               <nav className="breadcrumb" aria-label="Fil d'Ariane">
                 <Link href="/">Accueil</Link>
                 <span aria-hidden="true"> › </span>
-                <span>Création site artisans &amp; TPE</span>
+                <span>Création site artisans et TPE</span>
               </nav>
-              <span className="eyebrow">Artisans &amp; TPE</span>
+              <span className="eyebrow">Artisans et TPE</span>
               <h1>Création de site internet pour artisans et TPE</h1>
               <p className="page-hero-sub">
                 Un site professionnel, lisible sur mobile, optimisé pour votre visibilité
@@ -196,7 +196,7 @@ export default function CreationSiteTpePmePage() {
                   <li>Jusqu&apos;à 3 pages</li>
                   <li>Design responsive sur-mesure</li>
                   <li>Formulaire de contact</li>
-                  <li>Bouton d&apos;appel &amp; WhatsApp</li>
+                  <li>Bouton d&apos;appel et WhatsApp</li>
                   <li>Mise en ligne incluse</li>
                   <li>Optimisation technique de base</li>
                 </ul>
@@ -207,11 +207,11 @@ export default function CreationSiteTpePmePage() {
                 <p className="pricing-price">49 € <span>TTC / mois</span></p>
                 <p className="pricing-sublabel">Maintenance, modifications et suivi SEO</p>
                 <ul>
-                  <li>Maintenance &amp; mises à jour incluses</li>
+                  <li>Maintenance et mises à jour incluses</li>
                   <li>Hébergement + domaine offerts</li>
                   <li>SEO local de base inclus</li>
                   <li>Formulaire de contact avancé</li>
-                  <li>Bouton d&apos;appel &amp; WhatsApp</li>
+                  <li>Bouton d&apos;appel et WhatsApp</li>
                   <li>Support WhatsApp sous 24 h</li>
                 </ul>
                 <Link href="/#contact" className="btn btn-secondary">Ajouter l&apos;Option Visibilité →</Link>

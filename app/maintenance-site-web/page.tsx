@@ -210,7 +210,7 @@ export default function MaintenanceSiteWebPage() {
                 <p className="pricing-price">49 € <span>TTC / mois</span></p>
                 <p className="pricing-sublabel">Maintenance, modifications et suivi SEO</p>
                 <ul>
-                  <li>Maintenance &amp; mises à jour incluses</li>
+                  <li>Maintenance et mises à jour incluses</li>
                   <li>Hébergement inclus</li>
                   <li>Domaine inclus</li>
                   <li>Sauvegardes régulières</li>

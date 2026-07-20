@@ -37,7 +37,7 @@ export default function ContentByDenisePage() {
                 <span aria-hidden="true"> › </span>
                 <span>Content by Denise</span>
               </nav>
-              <span className="eyebrow">Création complète · Rédaction &amp; Contenu · 2026</span>
+              <span className="eyebrow">Création complète · Rédaction et Contenu · 2026</span>
               <h1>Création complète&nbsp;: site portfolio Content by Denise</h1>
               <p className="page-hero-sub">
                 Content by Denise est une rédactrice freelance spécialisée dans la création de
@@ -275,7 +275,7 @@ export default function ContentByDenisePage() {
             </div>
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <Link href="/realisations/escalee-gouts" className="btn btn-secondary">
-                Escalee &amp; Goûts →
+                Escalee & Goûts →
               </Link>
               <Link href="/realisations/lenora-conciergerie" className="btn btn-secondary">
                 Lenora Conciergerie →

@@ -222,7 +222,7 @@ export default function RefontePageInternet() {
                 <p className="pricing-price">49 € <span>TTC / mois</span></p>
                 <p className="pricing-sublabel">Maintenance, modifications et suivi SEO</p>
                 <ul>
-                  <li>Maintenance &amp; mises à jour incluses</li>
+                  <li>Maintenance et mises à jour incluses</li>
                   <li>Hébergement + domaine offerts</li>
                   <li>SEO local de base inclus</li>
                   <li>Modifications mensuelles incluses</li>

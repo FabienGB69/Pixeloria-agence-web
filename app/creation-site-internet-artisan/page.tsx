@@ -80,7 +80,7 @@ export default function CreationSiteArtisanPage() {
                 <span aria-hidden="true"> › </span>
                 <span>Création de site internet pour artisans</span>
               </nav>
-              <span className="eyebrow">Artisans &amp; indépendants</span>
+              <span className="eyebrow">Artisans et indépendants</span>
               <h1>Création de site internet pour artisans</h1>
               <p className="page-hero-sub">
                 Un site professionnel, lisible sur mobile et optimisé pour être trouvé par vos
@@ -201,7 +201,7 @@ export default function CreationSiteArtisanPage() {
                 <p className="pricing-price">49 € <span>TTC / mois</span></p>
                 <p className="pricing-sublabel">Maintenance, modifications et suivi SEO</p>
                 <ul>
-                  <li>Maintenance &amp; mises à jour incluses</li>
+                  <li>Maintenance et mises à jour incluses</li>
                   <li>Hébergement + domaine offerts</li>
                   <li>Galerie réalisations</li>
                   <li>Avis Google intégrés</li>

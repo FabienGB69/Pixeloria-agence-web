@@ -333,7 +333,7 @@ export default function EnHomePage() {
             <div className="hero-text">
               <div className="hero-badge">
                 <span className="badge-dot"></span>
-                Website design for small businesses &amp; tradespeople
+                Website design for small businesses and tradespeople
               </div>
 
               <h1>
@@ -814,8 +814,8 @@ export default function EnHomePage() {
         <section id="marketing" className="section">
           <div className="container">
             <div className="section-heading reveal">
-              <span className="eyebrow">Marketing &amp; Visibility</span>
-              <h2>Copywriting &amp; SEO — your voice, your visibility</h2>
+              <span className="eyebrow">Marketing and Visibility</span>
+              <h2>Copywriting and SEO — your voice, your visibility</h2>
               <p className="section-intro">
                 A great website with no visitors is a shopfront in a desert. We align compelling copywriting and technical SEO so your site <em>attracts</em>,{' '}
                 <em>convinces</em> and <em>converts</em> — durably.
@@ -839,21 +839,21 @@ export default function EnHomePage() {
                   <li>
                     <span className="feature-dot" aria-hidden="true"></span>
                     <div>
-                      <strong>Sales pages &amp; landing pages</strong>
+                      <strong>Sales pages and landing pages</strong>
                       <span>Headlines, storytelling, irresistible CTAs</span>
                     </div>
                   </li>
                   <li>
                     <span className="feature-dot" aria-hidden="true"></span>
                     <div>
-                      <strong>Tone of voice &amp; brand messaging</strong>
+                      <strong>Tone of voice and brand messaging</strong>
                       <span>Editorial guidelines, positioning, tagline</span>
                     </div>
                   </li>
                   <li>
                     <span className="feature-dot" aria-hidden="true"></span>
                     <div>
-                      <strong>Email &amp; automated sequences</strong>
+                      <strong>Email and automated sequences</strong>
                       <span>Nurturing, onboarding, follow-ups</span>
                     </div>
                   </li>

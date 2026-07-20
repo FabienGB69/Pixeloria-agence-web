@@ -57,7 +57,7 @@ export default function Header() {
           <Link href="/" className="nav-link" onClick={closeMenu}>Accueil</Link>
           <Link href="/tarifs" className="nav-link" onClick={closeMenu}>Tarifs</Link>
           <Link href="/comment-ca-marche" className="nav-link" onClick={closeMenu}>Comment ça marche</Link>
-          <Link href="/realisations" className="nav-link" onClick={closeMenu}>Portfolio</Link>
+          <Link href="/realisations" className="nav-link" onClick={closeMenu}>Réalisations</Link>
           <Link href="/avis" className="nav-link" onClick={closeMenu}>Avis</Link>
           <Link href="/a-propos" className="nav-link" onClick={closeMenu}>À propos</Link>
           <Link href="/parrainage" className="nav-link" onClick={closeMenu}>Parrainage</Link>
