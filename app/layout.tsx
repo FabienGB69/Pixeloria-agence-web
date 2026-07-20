@@ -60,6 +60,7 @@ export const metadata: Metadata = {
 };
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID ?? 'GTM-KSBHH2Q7';
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? 'G-2GWMB0T4FG';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -72,6 +73,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','${GTM_ID}');
+          `}</Script>
+        )}
+        {GA_ID && (
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+            strategy="afterInteractive"
+          />
+        )}
+        {GA_ID && (
+          <Script id="ga4-init" strategy="afterInteractive">{`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
           `}</Script>
         )}
       </head>
