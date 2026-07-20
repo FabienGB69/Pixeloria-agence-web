@@ -38,6 +38,24 @@ const etudes: Etude[] = [
   {
     type: 'Création complète',
     year: '2026',
+    sector: 'Ménage à domicile / Service à la personne',
+    client: 'Fée du Ménage',
+    url: 'https://www.lafeedumenage.fr',
+    summary: 'Création d\'un site vitrine rassurant et optimisé pour une aide ménagère indépendante à Lyon, afin de présenter ses prestations, valoriser ses avis clients et générer davantage de demandes de devis locales.',
+    axes: [
+      'Mise en avant de 30 ans d\'expérience et des avis clients vérifiés',
+      'Présentation claire des prestations (ménage régulier, grand nettoyage, Airbnb…)',
+      'Formulaire de devis, contact téléphonique et bouton WhatsApp intégrés',
+      'Référencement local optimisé pour Lyon 9e et les communes alentour',
+    ],
+    status: 'Site en ligne',
+    // TODO: pas de capture d'écran réelle disponible pour l'instant (Chromium bloqué par le sandbox,
+    // net::ERR_CONNECTION_RESET alors que curl fonctionne) — voir rapport de session.
+    // Ajouter previewImage + previewImageAlt (assets/portfolio/fee-du-menage-preview.webp) une fois capturée manuellement.
+  },
+  {
+    type: 'Création complète',
+    year: '2026',
     sector: 'Maçonnerie / Travaux extérieurs',
     client: 'EI Maigret',
     url: 'https://ei-maigret.fr',
