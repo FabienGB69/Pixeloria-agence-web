@@ -715,13 +715,13 @@ export default function EnHomePage() {
               }}
             >
               {[
-                { label: 'Contractors & Tradespeople', desc: 'Electricians, plumbers, roofers — get found when local customers search.', href: '/en/examples/contractors' },
-                { label: 'Renovation Companies', desc: 'Showcase your projects, build trust and convert enquiries into quotes.', href: '/en/examples/renovation-companies' },
-                { label: 'Hospitality & Concierge', desc: 'Holiday lets, B&Bs and concierge services that need to inspire and convert.', href: '/en/examples/hospitality-concierge' },
-                { label: 'Local Shops & Retail', desc: 'Bring footfall online — showcase products, opening hours and special offers.', href: '/en/examples/local-shops' },
+                { label: 'Contractors & Tradespeople', desc: 'Electricians, plumbers, roofers — get found when local customers search.', href: '/realisations' },
+                { label: 'Renovation Companies', desc: 'Showcase your projects, build trust and convert enquiries into quotes.', href: '/realisations' },
+                { label: 'Hospitality & Concierge', desc: 'Holiday lets, B&Bs and concierge services that need to inspire and convert.', href: '/realisations' },
+                { label: 'Local Shops & Retail', desc: 'Bring footfall online — showcase products, opening hours and special offers.', href: '/realisations' },
               ].map(({ label, desc, href }) => (
                 <Link
-                  key={href}
+                  key={label}
                   href={href}
                   className="why-card"
                   style={{ textDecoration: 'none', display: 'block' }}
@@ -739,7 +739,7 @@ export default function EnHomePage() {
                       color: 'var(--primary)',
                     }}
                   >
-                    See examples
+                    See our work
                     <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                       <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>

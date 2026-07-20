@@ -180,3 +180,16 @@ button {
 .section {
   padding-block: clamp(4rem, 8vw, 7rem);
 }
+
+.offers-faq-link {
+  display: block;
+  text-align: center;
+  margin: 1.5rem auto 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.offers-faq-link:hover {
+  text-decoration: underline;
+}

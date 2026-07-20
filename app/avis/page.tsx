@@ -41,6 +41,33 @@ export default function AvisPage() {
             <Link href="/temoignage" className="btn btn-secondary">
               Laisser votre avis →
             </Link>
+
+            <div style={{ marginTop: '2.5rem', paddingTop: '2rem', borderTop: '1px solid var(--border)' }}>
+              <p style={{ color: 'var(--text-muted)', marginBottom: '1rem' }}>
+                Vous avez travaillé avec Pixeloria&nbsp;? Partagez votre expérience ou consultez les avis de nos clients.
+              </p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.875rem', justifyContent: 'center', marginTop: '1rem' }}>
+                <a
+                  href="https://g.page/r/CbgXlHuDVjDzEBI/review"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary"
+                  aria-label="Laisser un avis Google sur Pixeloria"
+                >
+                  <span aria-hidden="true">G</span> Laisser un avis Google
+                </a>
+                {/* TODO: remplacer par l'URL publique Google Maps de Pixeloria permettant de consulter directement les avis. */}
+                <a
+                  href="https://g.page/r/CbgXlHuDVjDzEBI/review"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-secondary"
+                  aria-label="Voir les avis Google de Pixeloria"
+                >
+                  Voir nos avis Google
+                </a>
+              </div>
+            </div>
           </div>
         </section>
         <Contact />

@@ -21,8 +21,8 @@ export default function Footer({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
           <Link href={locale === 'en' ? '/en#contact' : '/#contact'} className="btn btn-primary">
             {locale === 'en' ? 'Request a quote' : 'Demander un devis'}
           </Link>
-          <Link href={locale === 'en' ? '/en/examples/contractors' : '/exemples/artisan-batiment'} className="btn btn-secondary">
-            {locale === 'en' ? 'View examples' : 'Voir les exemples'}
+          <Link href="/realisations" className="btn btn-secondary">
+            {locale === 'en' ? 'Our work' : 'Voir nos réalisations'}
           </Link>
         </div>
       </div>
@@ -49,8 +49,9 @@ export default function Footer({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
         <nav className="footer-nav" aria-label="Navigation pied de page">
           <strong>{locale === 'en' ? 'Useful links' : 'Liens utiles'}</strong>
           <Link href={locale === 'en' ? '/en' : '/'}>{locale === 'en' ? 'Home' : 'Accueil'}</Link>
-          <Link href={locale === 'en' ? '/en/examples/contractors' : '/exemples/artisan-batiment'}>{locale === 'en' ? 'Examples' : 'Exemples'}</Link>
+          <Link href="/realisations">{locale === 'en' ? 'Our work' : 'Voir nos réalisations'}</Link>
           <Link href={locale === 'en' ? '/en#packages' : '/offres'}>{locale === 'en' ? 'Packages' : 'Offres'}</Link>
+          <Link href={locale === 'en' ? '/en/faq' : '/faq'}>FAQ</Link>
           <Link href={locale === 'en' ? '/en#contact' : '/#contact'}>Contact</Link>
           <Link href="/mentions-legales">{locale === 'en' ? 'Legal notice' : 'Mentions légales'}</Link>
         </nav>

@@ -122,6 +122,8 @@ export default function PricingEnPage() {
             <p className="pricing-disclaimer reveal">
               All prices include VAT · <a href="#contact">Contact us</a> for a free personalised quote.
             </p>
+
+            <a href="/en/faq" className="offers-faq-link">Questions about our packages? View the FAQ</a>
           </div>
         </section>
 

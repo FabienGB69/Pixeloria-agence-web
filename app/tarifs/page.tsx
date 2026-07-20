@@ -24,6 +24,9 @@ export default function TarifsPage() {
       <Header />
       <main id="tarifs">
         <Services />
+        <div className="container">
+          <a href="/faq" className="offers-faq-link">Une question sur nos offres&nbsp;? Consulter la FAQ</a>
+        </div>
         <ComparisonTable />
         <ForWho />
         <AuditGratuit />

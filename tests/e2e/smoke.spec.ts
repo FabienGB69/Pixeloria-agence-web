@@ -18,7 +18,6 @@ test.describe('Pixeloria homepage — smoke tests', () => {
       { label: 'Portfolio', href: '/realisations' },
       { label: 'Comment ça marche', href: '/comment-ca-marche' },
       { label: 'Avis', href: '/avis' },
-      { label: 'FAQ', href: '/faq' },
       { label: 'Devis gratuit', href: '/#contact' },
     ];
 
