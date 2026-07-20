@@ -190,6 +190,31 @@ export default function ReviewsEnPage() {
                 <p>We would love to hear about your experience. Your feedback helps other business owners make the right choice.</p>
               </div>
               <Link href="/en/testimonial" className="btn btn-primary">Leave a review →</Link>
+
+              <div style={{ marginTop: '2rem', paddingTop: '2rem', borderTop: '1px solid var(--border)' }}>
+                <p>Have you worked with Pixeloria? Share your experience or read our customer reviews.</p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.875rem', marginTop: '1rem' }}>
+                  <a
+                    href="https://g.page/r/CbgXlHuDVjDzEBI/review"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary"
+                    aria-label="Leave a Google review for Pixeloria"
+                  >
+                    <span aria-hidden="true">G</span> Leave a Google review
+                  </a>
+                  {/* TODO: replace with Pixeloria's public Google Maps URL for viewing reviews directly. */}
+                  <a
+                    href="https://g.page/r/CbgXlHuDVjDzEBI/review"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-secondary"
+                    aria-label="See Google reviews for Pixeloria"
+                  >
+                    View our Google reviews
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
