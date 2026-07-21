@@ -193,3 +193,74 @@ button {
 .offers-faq-link:hover {
   text-decoration: underline;
 }
+
+/* ============================================================
+   X (TWITTER) FEED SECTION
+============================================================ */
+.x-feed-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+}
+
+.x-feed-header h2 {
+  font-size: clamp(1.75rem, 3vw, 2.4rem);
+  font-weight: 700;
+  margin: 0.5rem 0 1rem;
+}
+
+.x-feed-sub {
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.x-feed-widget {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  min-height: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.x-feed-widget .twitter-timeline {
+  display: block;
+}
+
+.x-feed-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  min-height: 400px;
+  padding: 2.5rem 2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.x-feed-fallback p {
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0;
+  max-width: 420px;
+}
+
+.x-feed-fallback--hidden {
+  display: none;
+}
+
+.x-feed-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+@media (min-width: 640px) {
+  .x-feed-widget,
+  .x-feed-fallback {
+    min-height: 550px;
+  }
+}
