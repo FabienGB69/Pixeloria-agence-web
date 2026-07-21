@@ -23,7 +23,12 @@ const jsonLd = {
       telephone: '+33786125313',
       email: 'contact@pixeloria.fr',
       areaServed: ['France', 'United Kingdom', 'Europe'],
-      sameAs: [],
+      sameAs: [
+        'https://x.com/pixeloriaaw',
+        'https://www.instagram.com/pixeloria.fr',
+        'https://www.linkedin.com/company/pixeloria',
+        'https://www.facebook.com/pixeloria.fr',
+      ],
     },
     {
       '@type': 'WebSite',

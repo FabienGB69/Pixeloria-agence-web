@@ -42,7 +42,12 @@ export default function JsonLd({ type = 'home' }: JsonLdProps) {
       'Artisans',
       'Entreprises locales',
     ],
-    sameAs: [],
+    sameAs: [
+      'https://x.com/pixeloriaaw',
+      'https://www.instagram.com/pixeloria.fr',
+      'https://www.linkedin.com/company/pixeloria',
+      'https://www.facebook.com/pixeloria.fr',
+    ],
   };
 
   const websiteSchema = {
