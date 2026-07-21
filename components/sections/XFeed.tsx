@@ -5,6 +5,10 @@ import Script from 'next/script';
 import { useConsent } from '@/components/consent/ConsentProvider';
 
 const X_PROFILE_URL = 'https://x.com/pixeloriaaw';
+// widgets.js's legacy profile-URL parser is unreliable with x.com hrefs — use
+// the twitter.com domain (still valid, redirects to the same account) only
+// for the embed anchor itself so the script reliably recognizes the handle.
+const X_TIMELINE_EMBED_URL = 'https://twitter.com/pixeloriaaw';
 const WIDGET_LOAD_TIMEOUT_MS = 4000;
 
 declare global {
@@ -123,7 +127,7 @@ export default function XFeed({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
           {mounted && socialGranted && (
             <a
               className="twitter-timeline"
-              href={X_PROFILE_URL}
+              href={X_TIMELINE_EMBED_URL}
               data-height="550"
               data-dnt="true"
               data-chrome="noheader nofooter noborders transparent"
