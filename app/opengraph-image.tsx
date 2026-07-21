@@ -85,6 +85,8 @@ export default function OgImage() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
           <div
             style={{
+              display: 'flex',
+              flexDirection: 'column',
               fontSize: '52px',
               fontWeight: '800',
               color: 'white',
@@ -93,17 +95,13 @@ export default function OgImage() {
               maxWidth: '900px',
             }}
           >
-            Création et refonte de sites internet
-            <br />
-            <span
-              style={{
-                background: 'linear-gradient(90deg, #7a5cff, #00d1ff)',
-                WebkitBackgroundClip: 'text',
-                color: 'transparent',
-              }}
-            >
+            <div style={{ display: 'flex' }}>Création et refonte de sites internet</div>
+            {/* Solid accent color, not a gradient-text-clip: Satori's Edge
+                runtime does not reliably support background-clip:text —
+                it silently rendered as an opaque bar instead of clipped text. */}
+            <div style={{ display: 'flex', color: '#00d1ff' }}>
               pour artisans et TPE
-            </span>
+            </div>
           </div>
 
           {/* Badge pricing */}
