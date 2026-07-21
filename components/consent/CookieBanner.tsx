@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useConsent } from './ConsentProvider';
@@ -41,6 +41,7 @@ export default function CookieBanner() {
   const [expanded, setExpanded] = useState(false);
   const [analyticsChecked, setAnalyticsChecked] = useState(false);
   const [socialChecked, setSocialChecked] = useState(false);
+  const innerRef = useRef<HTMLDivElement>(null);
 
   // Re-sync the panel's checkboxes with the current stored consent every time
   // the banner is (re)opened, so "manage cookies" reflects the real state.
@@ -51,11 +52,41 @@ export default function CookieBanner() {
     }
   }, [bannerOpen, consent]);
 
+  // The banner is fixed to the bottom of the viewport, and its visible card
+  // has pointer-events:auto (needed for its own buttons). On short pages —
+  // e.g. a form whose submit button sits near the bottom of the viewport —
+  // it would otherwise physically overlap and block clicks on that content.
+  // Reserve matching space at the bottom of the page while it's open/resizing
+  // (its height changes when "Personnaliser" expands), so nothing underneath
+  // is ever covered.
+  useEffect(() => {
+    if (!bannerOpen) {
+      document.body.style.paddingBottom = '';
+      return;
+    }
+
+    const el = innerRef.current;
+    if (!el) return;
+
+    const updatePadding = () => {
+      document.body.style.paddingBottom = `${el.offsetHeight}px`;
+    };
+    updatePadding();
+
+    const observer = new ResizeObserver(updatePadding);
+    observer.observe(el);
+
+    return () => {
+      observer.disconnect();
+      document.body.style.paddingBottom = '';
+    };
+  }, [bannerOpen, expanded]);
+
   if (!bannerOpen) return null;
 
   return (
     <div className="cookie-banner" role="region" aria-label={locale === 'en' ? 'Cookie consent' : 'Consentement aux cookies'}>
-      <div className="cookie-banner-inner">
+      <div className="cookie-banner-inner" ref={innerRef}>
         <p className="cookie-banner-text">
           {t.text}{' '}
           <Link href="/politique-confidentialite#cookies">{t.moreLink}</Link>
