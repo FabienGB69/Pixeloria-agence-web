@@ -15,7 +15,7 @@ test.describe('Pixeloria homepage — smoke tests', () => {
   test('liens de navigation résolvent vers les sections', async ({ page }) => {
     const expectedNavLinks = [
       { label: 'Tarifs', href: '/tarifs' },
-      { label: 'Portfolio', href: '/realisations' },
+      { label: 'Réalisations', href: '/realisations' },
       { label: 'Comment ça marche', href: '/comment-ca-marche' },
       { label: 'Avis', href: '/avis' },
       { label: 'Devis gratuit', href: '/#contact' },

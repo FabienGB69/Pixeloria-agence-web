@@ -145,7 +145,7 @@ test.describe('Navigation principale', () => {
 
     const expectedLinks = [
       { label: 'Tarifs', href: '/tarifs' },
-      { label: 'Portfolio', href: '/realisations' },
+      { label: 'Réalisations', href: '/realisations' },
       { label: 'Comment ça marche', href: '/comment-ca-marche' },
       { label: 'Avis', href: '/avis' },
       { label: 'Devis gratuit', href: '/#contact' },
