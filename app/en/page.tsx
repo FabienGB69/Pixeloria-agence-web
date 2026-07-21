@@ -5,6 +5,7 @@ import Link from 'next/link';
 import HeaderEn from '@/components/layout/HeaderEn';
 import LaunchBannerEn from '@/components/ui/LaunchBannerEn';
 import Footer from '@/components/layout/Footer';
+import XFeed from '@/components/sections/XFeed';
 import ClientEffects from '@/components/layout/ClientEffects';
 import ContactFormEn from './ContactFormEn';
 import { trackOfferSelect } from '@/lib/gtm';
@@ -23,7 +24,12 @@ const jsonLd = {
       telephone: '+33786125313',
       email: 'contact@pixeloria.fr',
       areaServed: ['France', 'United Kingdom', 'Europe'],
-      sameAs: [],
+      sameAs: [
+        'https://x.com/pixeloriaaw',
+        'https://www.instagram.com/pixeloria.fr',
+        'https://www.linkedin.com/company/pixeloria',
+        'https://www.facebook.com/pixeloria.fr',
+      ],
     },
     {
       '@type': 'WebSite',
@@ -1296,6 +1302,7 @@ export default function EnHomePage() {
           </div>
         </section>
 
+        <XFeed locale="en" />
       </main>
       <Footer locale="en" />
     </>

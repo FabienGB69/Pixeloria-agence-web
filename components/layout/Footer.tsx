@@ -1,8 +1,12 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { useConsent } from '@/components/consent/ConsentProvider';
 
 export default function Footer({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
   const year = new Date().getFullYear();
+  const { openSettings } = useConsent();
 
   return (
     <footer className="site-footer">
@@ -116,6 +120,18 @@ export default function Footer({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
                 <path d="M13.5 21v-7h2.4l.4-2.7h-2.8V9.5c0-.8.3-1.3 1.4-1.3h1.5V5.8a18 18 0 0 0-2.3-.1c-2.3 0-3.8 1.4-3.8 4v1.6H8v2.7h2.3v7h3.2Z" />
               </svg>
             </a>
+            <a
+              className="social-link"
+              href="https://x.com/pixeloriaaw"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={locale === 'en' ? 'Follow Pixeloria on X' : 'Suivre Pixeloria sur X'}
+              title="X"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
           </div>
         </div>
       </div>
@@ -131,6 +147,10 @@ export default function Footer({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
             <Link href="/cgu">CGU</Link>
             {' · '}
             <Link href="/politique-confidentialite">Politique de confidentialité</Link>
+            {' · '}
+            <button type="button" className="footer-legal-link-button" onClick={openSettings}>
+              {locale === 'en' ? 'Manage cookies' : 'Gérer les cookies'}
+            </button>
           </p>
           <Link href="/" className="back-top" aria-label="Retour à l'accueil">
             <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
