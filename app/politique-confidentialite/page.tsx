@@ -63,6 +63,31 @@ export default function PolitiqueConfidentialite() {
           </p>
         </section>
 
+        <section id="cookies">
+          <h2>7. Cookies et traceurs</h2>
+          <p>
+            Ce site dépose des cookies et traceurs relevant de trois catégories :
+          </p>
+          <ul>
+            <li>
+              <strong>Cookies nécessaires (toujours actifs)</strong> : préférence de langue,
+              sécurité anti-bot des formulaires (Cloudflare Turnstile).
+            </li>
+            <li>
+              <strong>Cookies de mesure d&apos;audience (soumis à consentement)</strong> : Google
+              Analytics, Google Tag Manager.
+            </li>
+            <li>
+              <strong>Cookies réseaux sociaux (soumis à consentement)</strong> : widget X
+              (Twitter) affichant nos dernières publications.
+            </li>
+          </ul>
+          <p>
+            Vous pouvez modifier votre choix à tout moment via le lien « Gérer les cookies »
+            présent dans le pied de page du site.
+          </p>
+        </section>
+
         <p style={{ marginTop: '2rem' }}>
           <Link href="/">← Retour à l&apos;accueil</Link>
         </p>

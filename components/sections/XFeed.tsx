@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Script from 'next/script';
+import { useConsent } from '@/components/consent/ConsentProvider';
 
 const X_PROFILE_URL = 'https://x.com/pixeloriaaw';
 const WIDGET_LOAD_TIMEOUT_MS = 4000;
@@ -25,6 +26,8 @@ const COPY = {
     button: 'Voir le profil X',
     timelineAriaLabel: 'Dernières publications de Pixeloria sur X',
     timelineLinkText: 'Publications de Pixeloria sur X',
+    consentPending: 'Ce contenu nécessite votre consentement pour les cookies « Réseaux sociaux ».',
+    allowButton: 'Autoriser et afficher',
   },
   en: {
     eyebrow: 'Latest news',
@@ -34,11 +37,16 @@ const COPY = {
     button: 'View X profile',
     timelineAriaLabel: 'Latest posts from Pixeloria on X',
     timelineLinkText: 'Posts from Pixeloria on X',
+    consentPending: 'This content requires your consent for "Social media" cookies.',
+    allowButton: 'Allow and show',
   },
 } as const;
 
 export default function XFeed({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
   const t = COPY[locale];
+  const { consent, savePreferences } = useConsent();
+  const socialGranted = consent?.social === true;
+  const currentAnalyticsConsent = consent?.analytics ?? false;
   const [mounted, setMounted] = useState(false);
   const [scriptReady, setScriptReady] = useState(false);
   const [widgetLoaded, setWidgetLoaded] = useState(false);
@@ -50,12 +58,21 @@ export default function XFeed({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
     setMounted(true);
   }, []);
 
+  // If social consent is revoked after the widget already loaded, drop back
+  // to the fallback card instead of leaving a stale "loaded" state.
+  useEffect(() => {
+    if (!socialGranted) {
+      setScriptReady(false);
+      setWidgetLoaded(false);
+    }
+  }, [socialGranted]);
+
   // Once the anchor is in the DOM and widgets.js has confirmed it's ready,
   // ask it to scan the DOM and convert the anchor into an iframe. Watch the
   // widget container for that iframe to appear; if it never does within a
   // few seconds (ad blocker, network/script failure), keep the fallback card.
   useEffect(() => {
-    if (!mounted || !scriptReady) return;
+    if (!mounted || !scriptReady || !socialGranted) return;
 
     window.twttr?.widgets?.load?.();
 
@@ -85,7 +102,7 @@ export default function XFeed({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
       observer.disconnect();
       clearTimeout(timeout);
     };
-  }, [mounted, scriptReady]);
+  }, [mounted, scriptReady, socialGranted]);
 
   const handleScriptLoad = () => {
     if (window.twttr?.widgets?.load) {
@@ -103,7 +120,7 @@ export default function XFeed({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
         </div>
 
         <div className="x-feed-widget" id="x-feed-widget" ref={widgetRef}>
-          {mounted && (
+          {mounted && socialGranted && (
             <a
               className="twitter-timeline"
               href={X_PROFILE_URL}
@@ -117,7 +134,20 @@ export default function XFeed({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
           )}
 
           <div className={`x-feed-fallback${widgetLoaded ? ' x-feed-fallback--hidden' : ''}`} aria-hidden={widgetLoaded}>
-            <p>{t.fallback}</p>
+            {consent === null ? (
+              <>
+                <p>{t.consentPending}</p>
+                <button
+                  type="button"
+                  className="btn btn-secondary"
+                  onClick={() => savePreferences({ analytics: currentAnalyticsConsent, social: true })}
+                >
+                  {t.allowButton}
+                </button>
+              </>
+            ) : (
+              <p>{t.fallback}</p>
+            )}
           </div>
         </div>
 
@@ -134,13 +164,15 @@ export default function XFeed({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
         </div>
       </div>
 
-      <Script
-        id="twitter-widgets"
-        src="https://platform.twitter.com/widgets.js"
-        strategy="lazyOnload"
-        onLoad={handleScriptLoad}
-        onError={() => setWidgetLoaded(false)}
-      />
+      {socialGranted && (
+        <Script
+          id="twitter-widgets"
+          src="https://platform.twitter.com/widgets.js"
+          strategy="lazyOnload"
+          onLoad={handleScriptLoad}
+          onError={() => setWidgetLoaded(false)}
+        />
+      )}
     </section>
   );
 }

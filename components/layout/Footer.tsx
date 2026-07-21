@@ -1,8 +1,12 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { useConsent } from '@/components/consent/ConsentProvider';
 
 export default function Footer({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
   const year = new Date().getFullYear();
+  const { openSettings } = useConsent();
 
   return (
     <footer className="site-footer">
@@ -143,6 +147,10 @@ export default function Footer({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
             <Link href="/cgu">CGU</Link>
             {' · '}
             <Link href="/politique-confidentialite">Politique de confidentialité</Link>
+            {' · '}
+            <button type="button" className="footer-legal-link-button" onClick={openSettings}>
+              {locale === 'en' ? 'Manage cookies' : 'Gérer les cookies'}
+            </button>
           </p>
           <Link href="/" className="back-top" aria-label="Retour à l'accueil">
             <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
