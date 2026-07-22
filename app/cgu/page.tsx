@@ -6,7 +6,6 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: "Conditions Générales d'Utilisation — Pixeloria",
   description: "CGU du site pixeloria.fr — règles d'utilisation du service.",
-  robots: { index: false, follow: false },
 };
 
 export default function CGUPage() {
