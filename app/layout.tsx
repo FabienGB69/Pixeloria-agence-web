@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { ConsentProvider } from '@/components/consent/ConsentProvider';
 import CookieBanner from '@/components/consent/CookieBanner';
 import AnalyticsScripts from '@/components/consent/AnalyticsScripts';
+import HtmlLangSync from '@/components/layout/HtmlLangSync';
 import '../styles.css';        // composants hérités (header, nav, sections, forms…)
 import '@/styles/globals.css'; // tokens sober theme — écrase les anciens `:root`
 
@@ -68,6 +69,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="fr" className={`${playfair.variable} ${jakarta.variable}`}>
       <body>
+        <HtmlLangSync />
         <ConsentProvider>
           <AnalyticsScripts gtmId={GTM_ID} gaId={GA_ID} />
           {children}
