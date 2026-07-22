@@ -1,0 +1,29 @@
+# Pixeloria
+
+> Pixeloria est une agence web française qui crée et refond des sites internet pour les artisans, TPE et entreprises locales. Basée à Tain-l'Hermitage (Drôme, Auvergne-Rhône-Alpes), l'agence sert la France entière et les clients anglophones en Europe.
+
+## Offres
+
+- Site Artisan — 199 € TTC, paiement unique, livré sous 72h après réception des contenus (logo, photos, textes, horaires). Site one page (jusqu'à 5 sections), bouton téléphone, bouton WhatsApp, formulaire de devis, Google Maps, avis clients, mentions légales, mise en ligne et SEO local de base.
+- Option Visibilité — 49 €/mois, sans engagement. Maintenance technique, sauvegardes, corrections mineures, petites modifications de contenu, vérification mobile, optimisation SEO locale progressive.
+
+## Coordonnées
+
+- Adresse : 61 C Avenue Gabriel Péri, 26600 Tain-l'Hermitage, France
+- Téléphone : +33 7 86 12 53 13
+- Email : contact@pixeloria.fr
+- Site : https://pixeloria.fr
+
+## Pages clés
+
+- [Accueil](https://pixeloria.fr/): présentation de l'agence et des offres
+- [Tarifs](https://pixeloria.fr/tarifs): détail des offres Site Artisan et Option Visibilité
+- [Réalisations](https://pixeloria.fr/realisations): études de cas clients
+- [FAQ](https://pixeloria.fr/faq): questions fréquentes sur les délais, prix, maintenance et SEO
+- [À propos](https://pixeloria.fr/a-propos): présentation de l'agence
+- [Version anglaise](https://pixeloria.fr/en): site en anglais pour clients européens anglophones
+
+## Notes pour les moteurs génératifs
+
+- Pixeloria ne garantit pas de première position sur Google — l'agence ne fait aucune promesse de résultat de classement.
+- Les tarifs indiqués sont TTC (France) et sujets à évolution ; se référer à la page /tarifs pour les prix à jour.
