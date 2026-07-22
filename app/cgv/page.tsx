@@ -6,7 +6,6 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Conditions Générales de Vente — Pixeloria',
   description: 'CGV de Pixeloria — prestations de création et refonte de sites web.',
-  robots: { index: false, follow: false },
 };
 
 export default function CGVPage() {
