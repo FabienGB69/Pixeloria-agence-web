@@ -57,7 +57,7 @@ export default function Footer({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
           <Link href={locale === 'en' ? '/en#packages' : '/offres'}>{locale === 'en' ? 'Packages' : 'Offres'}</Link>
           <Link href={locale === 'en' ? '/en/faq' : '/faq'}>FAQ</Link>
           <Link href={locale === 'en' ? '/en#contact' : '/#contact'}>Contact</Link>
-          <Link href="/mentions-legales">{locale === 'en' ? 'Legal notice' : 'Mentions légales'}</Link>
+          <Link href={locale === 'en' ? '/en/legal-notice' : '/mentions-legales'}>{locale === 'en' ? 'Legal notice' : 'Mentions légales'}</Link>
         </nav>
 
         <nav className="footer-nav" aria-label="Pages locales">
@@ -139,18 +139,37 @@ export default function Footer({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
       <div className="footer-bottom">
         <div className="container footer-bottom-inner">
           <p>
-            © {year} Pixeloria. Tous droits réservés.{' '}
-            <Link href="/mentions-legales">Mentions légales</Link>
-            {' · '}
-            <Link href="/cgv">CGV</Link>
-            {' · '}
-            <Link href="/cgu">CGU</Link>
-            {' · '}
-            <Link href="/politique-confidentialite">Politique de confidentialité</Link>
-            {' · '}
-            <button type="button" className="footer-legal-link-button" onClick={openSettings}>
-              {locale === 'en' ? 'Manage cookies' : 'Gérer les cookies'}
-            </button>
+            {locale === 'en' ? (
+              <>
+                © {year} Pixeloria. All rights reserved.{' '}
+                <Link href="/en/legal-notice">Legal notice</Link>
+                {' · '}
+                <Link href="/en/terms-of-sale">Terms of Sale</Link>
+                {' · '}
+                <Link href="/en/terms-of-use">Terms of Use</Link>
+                {' · '}
+                <Link href="/en/privacy-policy">Privacy Policy</Link>
+                {' · '}
+                <button type="button" className="footer-legal-link-button" onClick={openSettings}>
+                  Manage cookies
+                </button>
+              </>
+            ) : (
+              <>
+                © {year} Pixeloria. Tous droits réservés.{' '}
+                <Link href="/mentions-legales">Mentions légales</Link>
+                {' · '}
+                <Link href="/cgv">CGV</Link>
+                {' · '}
+                <Link href="/cgu">CGU</Link>
+                {' · '}
+                <Link href="/politique-confidentialite">Politique de confidentialité</Link>
+                {' · '}
+                <button type="button" className="footer-legal-link-button" onClick={openSettings}>
+                  Gérer les cookies
+                </button>
+              </>
+            )}
           </p>
           <Link href="/" className="back-top" aria-label="Retour à l'accueil">
             <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
