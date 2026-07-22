@@ -89,7 +89,7 @@ export default function CookieBanner() {
       <div className="cookie-banner-inner" ref={innerRef}>
         <p className="cookie-banner-text">
           {t.text}{' '}
-          <Link href="/politique-confidentialite#cookies">{t.moreLink}</Link>
+          <Link href={locale === 'en' ? '/en/privacy-policy#cookies' : '/politique-confidentialite#cookies'}>{t.moreLink}</Link>
         </p>
 
         <div className="cookie-banner-actions">
