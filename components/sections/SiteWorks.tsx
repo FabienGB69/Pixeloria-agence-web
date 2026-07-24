@@ -18,7 +18,7 @@ export default function SiteWorks() {
               Chez Pixeloria, chaque page est pensée avec un objectif clair&nbsp;: aider vos
               visiteurs à comprendre votre offre et à passer à l&apos;action.
             </p>
-            <a href="#services" className="btn btn-primary" style={{ marginTop: '1.5rem', display: 'inline-flex' }}>
+            <a href="/offres" className="btn btn-primary" style={{ marginTop: '1.5rem', display: 'inline-flex' }}>
               Voir les offres
               <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                 <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />

@@ -49,9 +49,6 @@ export default function JsonLd({ type = 'home' }: JsonLdProps) {
       'Valence',
       'Montélimar',
       'Romans-sur-Isère',
-      'TPE',
-      'Artisans',
-      'Entreprises locales',
     ],
     sameAs: [
       'https://x.com/pixeloriaaw',
@@ -66,11 +63,6 @@ export default function JsonLd({ type = 'home' }: JsonLdProps) {
     '@type': 'WebSite',
     name: 'Pixeloria',
     url: 'https://pixeloria.fr',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: 'https://pixeloria.fr/?s={search_term_string}',
-      'query-input': 'required name=search_term_string',
-    },
   };
 
   return (

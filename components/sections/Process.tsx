@@ -85,7 +85,7 @@ export default function Process() {
             <a href="#contact" className="btn btn-primary">
               Discuter de mon projet
             </a>
-            <Link href="#services" className="btn btn-secondary">
+            <Link href="/offres" className="btn btn-secondary">
               Voir les offres
             </Link>
           </div>

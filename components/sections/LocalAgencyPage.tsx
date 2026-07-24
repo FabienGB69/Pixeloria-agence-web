@@ -113,7 +113,7 @@ export default function LocalAgencyPage({ data }: Props) {
                 { stat: '< 2.5s', label: 'Temps de chargement cible' },
                 { stat: '90+', label: 'Score Lighthouse minimum' },
                 { stat: '3–6 sem.', label: 'Délai de livraison moyen' },
-                { stat: '89 €/mois', label: 'À partir de (abonnement)' },
+                { stat: '49 €/mois', label: 'À partir de (abonnement)' },
               ].map((item) => (
                 <div key={item.stat}>
                   <div className="gradient-text" style={{ fontSize: '2rem', fontWeight: 800 }}>{item.stat}</div>

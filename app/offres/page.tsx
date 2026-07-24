@@ -5,6 +5,7 @@ import Footer from '@/components/layout/Footer';
 import Services from '@/components/sections/Services';
 import ComparisonTable from '@/components/sections/ComparisonTable';
 import FAQ from '@/components/sections/FAQ';
+import Contact from '@/components/sections/Contact';
 import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
@@ -80,6 +81,9 @@ export default function OffresPage() {
 
         {/* FAQ */}
         <FAQ />
+
+        {/* Contact — cible des CTA "#contact" de Services/ComparisonTable/FAQ ci-dessus */}
+        <Contact />
 
         {/* CTA final */}
         <section className="section">
