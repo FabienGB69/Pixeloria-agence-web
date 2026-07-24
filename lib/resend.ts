@@ -74,19 +74,27 @@ function buildConfirmationHtml(prenom: string, offreLabel: string): string {
 }
 
 function buildOwnerNotifHtml(data: OwnerNotifPayload): string {
-  const fullName =
-    [data.prenom, data.nom].filter(Boolean).join(' ') || 'Anonyme';
+  const escape = (s: string) =>
+    s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+  const fullName = escape(
+    [data.prenom, data.nom].filter(Boolean).join(' ') || 'Anonyme'
+  );
+  const email = escape(data.email);
+  const phone = data.phone ? escape(data.phone) : '—';
+  const url = data.url ? escape(data.url) : '';
+  const message = data.message ? escape(data.message) : '—';
 
   const rows: [string, string][] = [
     ['Nom',       fullName],
-    ['Email',     `<a href="mailto:${data.email}" style="color:#00d1ff;">${data.email}</a>`],
-    ['Téléphone', data.phone || '—'],
-    ['Site web',  data.url
-      ? `<a href="${data.url}" style="color:#00d1ff;">${data.url}</a>`
+    ['Email',     `<a href="mailto:${email}" style="color:#00d1ff;">${email}</a>`],
+    ['Téléphone', phone],
+    ['Site web',  url
+      ? `<a href="${url}" style="color:#00d1ff;">${url}</a>`
       : '—'],
-    ['Offre',     data.offreLabel],
-    ['Source',    data.source],
-    ['Message',   data.message || '—'],
+    ['Offre',     escape(data.offreLabel)],
+    ['Source',    escape(data.source)],
+    ['Message',   message],
   ];
 
   const rowsHtml = rows
