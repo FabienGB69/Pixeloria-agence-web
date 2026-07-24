@@ -227,10 +227,10 @@ export default function PricingEnPage() {
               <div className="contact-text reveal">
                 <span className="eyebrow">Contact</span>
                 <h2>Let&apos;s talk about your project</h2>
-                <p>Tell us about your business and what you need. We reply within 24h.</p>
+                <p>Tell us about your business and what you need. We reply within 48h.</p>
                 <div className="contact-reassurance">
                   <p>✓ Free, no-commitment quote</p>
-                  <p>✓ Reply within 24h</p>
+                  <p>✓ Reply within 48h</p>
                   <p>✓ All communication in English</p>
                 </div>
               </div>
@@ -242,7 +242,7 @@ export default function PricingEnPage() {
         </section>
 
       </main>
-      <Footer />
+      <Footer locale="en" />
     </>
   );
 }

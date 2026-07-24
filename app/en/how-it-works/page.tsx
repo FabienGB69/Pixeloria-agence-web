@@ -26,7 +26,7 @@ const steps = [
     title: 'Tell us about your project',
     description:
       'Fill in the free quote form. Tell us what you do, your service area, your target customers and any examples of sites you like. No tech knowledge required.',
-    detail: 'We reply within 24 hours with a clear proposal and a fixed price — no surprises.',
+    detail: 'We reply within 48 hours with a clear proposal and a fixed price — no surprises.',
   },
   {
     number: '02',
@@ -181,10 +181,10 @@ export default function HowItWorksEnPage() {
               <div className="contact-text reveal">
                 <span className="eyebrow">Ready to start?</span>
                 <h2>Let&apos;s get your site live</h2>
-                <p>Tell us about your business. We reply within 24h with a fixed-price proposal.</p>
+                <p>Tell us about your business. We reply within 48h with a fixed-price proposal.</p>
                 <div className="contact-reassurance">
                   <p>✓ Free, no-commitment quote</p>
-                  <p>✓ Reply within 24h</p>
+                  <p>✓ Reply within 48h</p>
                   <p>✓ All communication in English</p>
                 </div>
               </div>
@@ -196,7 +196,7 @@ export default function HowItWorksEnPage() {
         </section>
 
       </main>
-      <Footer />
+      <Footer locale="en" />
     </>
   );
 }

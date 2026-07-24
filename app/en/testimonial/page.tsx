@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     description: 'Had a website built with Pixeloria? Share your experience.',
   },
   alternates: { canonical: 'https://pixeloria.fr/en/testimonial' },
+  robots: { index: false, follow: false },
 };
 
 export default function TestimonialEnPage() {
@@ -72,7 +73,7 @@ export default function TestimonialEnPage() {
         </section>
 
       </main>
-      <Footer />
+      <Footer locale="en" />
     </>
   );
 }

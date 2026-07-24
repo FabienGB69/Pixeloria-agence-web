@@ -33,7 +33,7 @@ export default function Footer({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
 
       <div className="container footer-inner">
         <div className="footer-brand">
-          <Link href="/" aria-label="Pixeloria accueil">
+          <Link href={locale === 'en' ? '/en' : '/'} aria-label={locale === 'en' ? 'Pixeloria home' : 'Pixeloria accueil'}>
             <Image
               src="/assets/pixeloria-logo.svg"
               className="footer-logo"
@@ -171,7 +171,7 @@ export default function Footer({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
               </>
             )}
           </p>
-          <Link href="/" className="back-top" aria-label="Retour à l'accueil">
+          <Link href={locale === 'en' ? '/en' : '/'} className="back-top" aria-label={locale === 'en' ? 'Back to home' : "Retour à l'accueil"}>
             <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
               <path
                 d="M10 16V4M5 9l5-5 5 5"

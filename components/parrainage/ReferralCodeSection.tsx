@@ -47,7 +47,51 @@ const offers: Offer[] = [
 
 const CONTACT_EMAIL = 'contact@pixeloria.fr';
 
-export default function ReferralCodeSection() {
+const COPY = {
+  fr: {
+    offerNames: { vitrine: 'Site Vitrine', visibilite: 'Visibilité locale' } as Record<OfferKey, string>,
+    offerDescs: { vitrine: '199 € TTC · Paiement unique', visibilite: '49 € TTC/mois · Abonnement' } as Record<OfferKey, string>,
+    offerBenefits: { vitrine: 'Vous gagnez 100 €', visibilite: 'Vous gagnez 25 €/mois' } as Record<OfferKey, string>,
+    highlightBadge: '⭐ Meilleure récompense',
+    errRequired: 'Veuillez renseigner votre code parrainage.',
+    errUnknown: "Ce code parrainage n'est pas encore reconnu. Vérifiez votre code ou contactez Pixeloria.",
+    errNoOffer: 'Veuillez sélectionner une offre Pixeloria.',
+    errNoLink: "Le lien de paiement n'est pas encore configuré. Contactez Pixeloria :",
+    contactMarker: 'contactez Pixeloria',
+    bannerLabel: 'Code parrainage appliqué',
+    sectionLabel: 'Utiliser mon code parrainage',
+    title: "J'ai un code parrainage",
+    sub: 'Renseignez votre code, choisissez votre offre, et accédez au paiement. Votre parrain recevra sa récompense automatiquement.',
+    inputLabel: 'Code parrainage',
+    placeholder: 'Ex : PIXELORIA-FELIADA',
+    chooseOffer: 'Choisissez votre offre',
+    submit: 'Procéder au paiement →',
+    micro: 'Votre code parrainage est validé lors du paiement. La récompense du parrain est déclenchée automatiquement selon les conditions du programme.',
+  },
+  en: {
+    offerNames: { vitrine: 'Showcase Website', visibilite: 'Local Visibility' } as Record<OfferKey, string>,
+    offerDescs: { vitrine: '€199 incl. VAT · One-time payment', visibilite: '€49 incl. VAT/month · Subscription' } as Record<OfferKey, string>,
+    offerBenefits: { vitrine: 'You earn €100', visibilite: 'You earn €25/month' } as Record<OfferKey, string>,
+    highlightBadge: '⭐ Best reward',
+    errRequired: 'Please enter your referral code.',
+    errUnknown: 'This referral code is not recognised yet. Check your code or contact Pixeloria.',
+    errNoOffer: 'Please select a Pixeloria offer.',
+    errNoLink: 'The payment link is not configured yet. Contact Pixeloria:',
+    contactMarker: 'contact Pixeloria',
+    bannerLabel: 'Referral code applied',
+    sectionLabel: 'Use my referral code',
+    title: 'I have a referral code',
+    sub: 'Enter your code, choose your offer, and proceed to payment. Your referrer will receive their reward automatically.',
+    inputLabel: 'Referral code',
+    placeholder: 'E.g. PIXELORIA-FELIADA',
+    chooseOffer: 'Choose your offer',
+    submit: 'Proceed to payment →',
+    micro: "Your referral code is validated at payment. The referrer's reward is triggered automatically per the program's terms.",
+  },
+} as const;
+
+export default function ReferralCodeSection({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
+  const t = COPY[locale];
   const searchParams = useSearchParams();
   const [code, setCode] = useState<string>('');
   const [selectedOffer, setSelectedOffer] = useState<OfferKey | ''>('');
@@ -70,28 +114,24 @@ export default function ReferralCodeSection() {
     const normalizedCode = normalizeReferralCode(code);
 
     if (!normalizedCode) {
-      setError('Veuillez renseigner votre code parrainage.');
+      setError(t.errRequired);
       return;
     }
 
     if (!isValidReferralCode(normalizedCode)) {
-      setError(
-        "Ce code parrainage n'est pas encore reconnu. Vérifiez votre code ou contactez Pixeloria.",
-      );
+      setError(t.errUnknown);
       return;
     }
 
     if (!selectedOffer) {
-      setError('Veuillez sélectionner une offre Pixeloria.');
+      setError(t.errNoOffer);
       return;
     }
 
     const baseUrl = stripeLinks[selectedOffer].referral;
 
     if (!baseUrl || baseUrl.includes('URL_STRIPE')) {
-      setError(
-        "Le lien de paiement n'est pas encore configuré. Contactez Pixeloria :",
-      );
+      setError(t.errNoLink);
       return;
     }
 
@@ -100,8 +140,7 @@ export default function ReferralCodeSection() {
     window.location.href = url;
   };
 
-  const showContactLink =
-    error.includes('contactez Pixeloria') || error.includes('Contactez Pixeloria');
+  const showContactLink = error.includes(t.contactMarker);
 
   const partner = isInitialized && code ? getReferralPartner(code) : null;
 
@@ -111,7 +150,7 @@ export default function ReferralCodeSection() {
         <div className="rcs-banner rcs-banner--success">
           <span className="rcs-banner__icon">✓</span>
           <div className="rcs-banner__content">
-            <div className="rcs-banner__label">Code parrainage appliqué</div>
+            <div className="rcs-banner__label">{t.bannerLabel}</div>
             <div className="rcs-banner__text">
               {partner.name} — <strong>{code}</strong>
             </div>
@@ -119,21 +158,19 @@ export default function ReferralCodeSection() {
         </div>
       )}
 
-      <p className="section-label">Utiliser mon code parrainage</p>
-      <h2 className="rcs-wrap__title">J&rsquo;ai un code parrainage</h2>
-      <p className="rcs-wrap__sub">
-        Renseignez votre code, choisissez votre offre, et accédez au paiement. Votre parrain recevra sa récompense automatiquement.
-      </p>
+      <p className="section-label">{t.sectionLabel}</p>
+      <h2 className="rcs-wrap__title">{t.title}</h2>
+      <p className="rcs-wrap__sub">{t.sub}</p>
 
       <div className="rcs-input-wrap">
         <label htmlFor="referral-code" className="rcs-input-wrap__label">
-          Code parrainage
+          {t.inputLabel}
         </label>
         <input
           id="referral-code"
           type="text"
           className="rcs-input"
-          placeholder="Ex : PIXELORIA-FELIADA"
+          placeholder={t.placeholder}
           value={code}
           onChange={(e) => {
             setCode(e.target.value);
@@ -143,7 +180,7 @@ export default function ReferralCodeSection() {
       </div>
 
       <p className="rcs-input-wrap__label" style={{ marginBottom: '16px' }}>
-        Choisissez votre offre
+        {t.chooseOffer}
       </p>
       <div className="rcs-offers">
         {offers.map((offer) => (
@@ -157,11 +194,11 @@ export default function ReferralCodeSection() {
             }}
           >
             {offer.highlight && (
-              <span className="badge badge--gold">&#11088; Meilleure récompense</span>
+              <span className="badge badge--gold">{t.highlightBadge}</span>
             )}
-            <div className="rcs-offer-card__name">{offer.name}</div>
-            <div className="rcs-offer-card__desc">{offer.desc}</div>
-            <div className="rcs-offer-card__benefit">{offer.benefit}</div>
+            <div className="rcs-offer-card__name">{t.offerNames[offer.key]}</div>
+            <div className="rcs-offer-card__desc">{t.offerDescs[offer.key]}</div>
+            <div className="rcs-offer-card__benefit">{t.offerBenefits[offer.key]}</div>
           </button>
         ))}
       </div>
@@ -184,12 +221,10 @@ export default function ReferralCodeSection() {
         style={{ width: '100%', marginTop: '8px' }}
         onClick={handleSubmit}
       >
-        Procéder au paiement &rarr;
+        {t.submit}
       </button>
 
-      <p className="rcs-wrap__micro">
-        Votre code parrainage est validé lors du paiement. La récompense du parrain est déclenchée automatiquement selon les conditions du programme.
-      </p>
+      <p className="rcs-wrap__micro">{t.micro}</p>
     </div>
   );
 }
