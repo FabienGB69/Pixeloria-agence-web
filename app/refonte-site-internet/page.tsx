@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Refonte de site internet pour artisans et TPE | Pixeloria',
   description:
     'Votre site actuel ne génère pas assez de contacts ? Pixeloria refond les sites internet des artisans et TPE : design moderne, SEO local, responsive mobile. Site Artisan à 199 € TTC, livré en 72 h.',
+  alternates: {
+    canonical: 'https://pixeloria.fr/refonte-site-internet',
+  },
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/refonte-site-internet',

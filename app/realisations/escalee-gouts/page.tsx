@@ -287,7 +287,7 @@ export default function EscaleeGoutsPage() {
                 Demander un audit gratuit
               </Link>
               <p className="page-cta-note">
-                📞 <a href="tel:0786125313">07 86 12 53 13</a> · ✉️{' '}
+                📞 <a href="tel:+33786125313">07 86 12 53 13</a> · ✉️{' '}
                 <a href="mailto:contact@pixeloria.fr">contact@pixeloria.fr</a>
               </p>
             </div>

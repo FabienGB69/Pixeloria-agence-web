@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'SEO local pour artisans et TPE | Pixeloria',
   description:
     'Référencement local Google pour artisans et TPE : optimisation Google Business Profile, mots-clés locaux et visibilité dans votre zone d\'intervention.',
+  alternates: {
+    canonical: 'https://pixeloria.fr/seo-local',
+  },
 };
 
 const jsonLdData = {

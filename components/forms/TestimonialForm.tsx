@@ -73,6 +73,16 @@ export default function TestimonialForm() {
   return (
     <form className="temoignage-form" noValidate onSubmit={handleSubmit}>
 
+      {/* Honeypot — invisible pour les humains, rempli par les bots */}
+      <input
+        type="text"
+        name="_hp"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        style={{ display: 'none' }}
+      />
+
       <label>
         Prénom <abbr title="requis">*</abbr>
         <input

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
-import { checkRateLimit } from '@/lib/security';
+import { checkRateLimit, isHoneypot } from '@/lib/security';
 import { Resend } from 'resend';
 import { createTestimonial } from '@/lib/notion';
 
@@ -106,7 +106,12 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     );
   }
 
-  // 3. Validate with Zod
+  // 3. Honeypot — répondre 200 sans traitement pour tromper les bots
+  if (isHoneypot(rawBody)) {
+    return NextResponse.json({ success: true }, { status: 200 });
+  }
+
+  // 4. Validate with Zod
   const parsed = TestimonialSchema.safeParse(rawBody);
   if (!parsed.success) {
     const firstError = parsed.error.errors[0]?.message ?? 'Données invalides';
@@ -115,7 +120,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
 
   const { prenom, activite, ville, avis, note, _lang } = parsed.data;
 
-  // 4. Save to Notion (before email — fail open if env var absent)
+  // 5. Save to Notion (before email — fail open if env var absent)
   try {
     await createTestimonial({ prenom, activite, ville, avis, note, lang: _lang });
   } catch (err) {
@@ -128,7 +133,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     // Fail open: do not block the submission
   }
 
-  // 5. Send email via Resend
+  // 6. Send email via Resend
   const resendKey = process.env.RESEND_API_KEY;
   if (resendKey) {
     try {
