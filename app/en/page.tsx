@@ -1,279 +1,122 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import HeaderEn from '@/components/layout/HeaderEn';
 import LaunchBannerEn from '@/components/ui/LaunchBannerEn';
 import Footer from '@/components/layout/Footer';
 import XFeed from '@/components/sections/XFeed';
 import ClientEffects from '@/components/layout/ClientEffects';
+import GoogleReviews from '@/components/sections/GoogleReviews';
 import ContactFormEn from './ContactFormEn';
-import { trackOfferSelect } from '@/lib/gtm';
+import { trackOfferSelect, trackEmailClicked, trackCallScheduled } from '@/lib/gtm';
 
-const jsonLd = {
+const organizationJsonLd = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Organization',
-      '@id': 'https://pixeloria.fr/#organization',
-      name: 'Pixeloria',
-      url: 'https://pixeloria.fr',
-      logo: 'https://pixeloria.fr/assets/pixeloria-logo.svg',
-      description:
-        'Professional website design and redesign for small businesses, contractors and local brands. Based in France, working with English-speaking clients across Europe.',
-      telephone: '+33786125313',
-      email: 'contact@pixeloria.fr',
-      areaServed: ['France', 'United Kingdom', 'Europe'],
-      sameAs: [
-        'https://x.com/pixeloriaaw',
-        'https://www.instagram.com/pixeloria.fr',
-        'https://www.linkedin.com/company/pixeloria',
-        'https://www.facebook.com/pixeloria.fr',
-      ],
-    },
-    {
-      '@type': 'WebSite',
-      '@id': 'https://pixeloria.fr/en#website',
-      url: 'https://pixeloria.fr/en',
-      name: 'Pixeloria — Website Design for Small Businesses',
-      inLanguage: 'en',
-    },
-    {
-      '@type': 'LocalBusiness',
-      '@id': 'https://pixeloria.fr/#localbusiness',
-      name: 'Pixeloria',
-      url: 'https://pixeloria.fr',
-      image: 'https://pixeloria.fr/og/pixeloria-og-image.png',
-      telephone: '+33786125313',
-      email: 'contact@pixeloria.fr',
-      priceRange: '€€',
-      description:
-        'Website creation and redesign for small businesses, tradespeople and local brands. Fixed pricing, no surprises.',
-    },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'How much does a professional website cost?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Pixeloria offers an Artisan Site at €199 inc. VAT — a one-off payment with delivery in 72h. The optional Visibility Option at €49/month adds maintenance, updates and local follow-up. No forced subscription.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Do I own my website?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Yes. You own your website, your content and all your login credentials. Pixeloria helps you build it, but it's entirely yours.",
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How long does it take to build a website?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'A straightforward business website is typically ready within a few days to a couple of weeks, depending on the number of pages and how quickly content is approved.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can you guarantee first position on Google?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. Anyone who promises a #1 ranking is not being honest with you. What Pixeloria delivers is a clean, well-structured, fast website built on sound SEO foundations — the kind Google rewards over time.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What is included in the Visibility Option at €49/month?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'The Visibility Option at €49 inc. VAT/month includes technical maintenance, regular backups, minor corrections, small text/photo/service updates, contact details and opening hours updates, service area updates, mobile display check, progressive local SEO optimisation, and priority support by message. No commitment — cancel at any time.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Do you work with English-speaking clients outside France?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. All communication, briefs and project handover documents are available in English. Pixeloria works with expats, international business owners and English-speaking brands operating in France or Europe.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can I update the website myself after launch?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. Depending on the plan, you can request content updates or manage basic changes yourself. The goal is always to keep the site easy to maintain.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What is the difference between the Artisan Site and the Visibility Option?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'The Artisan Site (€199 inc. VAT, delivered in 72h) is a one-off payment — your professional website, live, with no subscription. The Visibility Option (€49 inc. VAT/month) is an optional add-on that keeps your site up to date and grows your local visibility over time.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is a free audit really free?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes, completely. No strings attached. You will receive a short, honest assessment of your current website or project brief within 48 hours.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What industries do you work with?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Pixeloria works with contractors, tradespeople, renovation companies, hospitality and concierge businesses, and local shops. Essentially any small business that needs a professional online presence.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What happens if I am not happy with the result?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Revisions are included in every project. The goal is for you to be genuinely satisfied with the result. If something is not right, we fix it — simple as that.',
-          },
-        },
-      ],
-    },
+  '@type': 'Organization',
+  name: 'Pixeloria',
+  url: 'https://pixeloria.fr/en',
+  logo: 'https://pixeloria.fr/assets/pixeloria-logo.svg',
+  description:
+    'Pixeloria builds conversion-focused websites for contractors and local service businesses.',
+  areaServed: { '@type': 'Country', name: 'United States' },
+  sameAs: [
+    'https://x.com/pixeloriaaw',
+    'https://www.instagram.com/pixeloria.fr',
+    'https://www.linkedin.com/company/pixeloria',
+    'https://www.facebook.com/pixeloria.fr',
   ],
 };
 
 const faqs = [
   {
-    q: 'How much does a professional website cost?',
-    a: 'Pixeloria offers an Artisan Site at €199 inc. VAT — a one-off payment with delivery in 72h. The optional Visibility Option at €49/month adds maintenance, updates and local follow-up. No forced subscription.',
+    q: 'How much does a contractor website cost?',
+    a: 'Pixeloria contractor websites start at $499 for a one-page website. Multi-page websites start at $899. The final price depends on the number of pages, required integrations and content needs.',
+  },
+  {
+    q: 'How long does it take to build a contractor website?',
+    a: 'A one-page contractor website can generally be delivered within five business days after all required information has been received. Larger websites may require one to three weeks.',
+  },
+  {
+    q: 'Do you work with businesses across the United States?',
+    a: 'Yes. Pixeloria works remotely with contractors and local service businesses across the United States.',
   },
   {
     q: 'Do I own my website?',
-    a: "Yes. You own your website, your content and all your login credentials. Pixeloria helps you build it, but it's entirely yours.",
+    a: 'Yes. The client owns the website content, domain and agreed project deliverables after full payment.',
   },
   {
-    q: 'How long does it take to build a website?',
-    a: 'A straightforward business website is typically ready within a few days to a couple of weeks, depending on the number of pages and how quickly content is approved.',
+    q: 'Can you redesign my existing website?',
+    a: 'Yes. Pixeloria can redesign outdated contractor websites while preserving useful content and improving mobile usability, clarity and lead generation.',
   },
   {
-    q: 'Can you guarantee first position on Google?',
-    a: 'No. Anyone who promises a #1 ranking is not being honest with you. What Pixeloria delivers is a clean, well-structured, fast website built on sound SEO foundations — the kind Google rewards over time.',
+    q: 'Is local SEO included?',
+    a: 'Basic on-page and local SEO structure is included according to the selected package. Ongoing SEO, content creation and link acquisition require a separate service.',
   },
   {
-    q: 'What is included in the Visibility Option at €49/month?',
-    a: 'The Visibility Option at €49 inc. VAT/month includes technical maintenance, regular backups, minor corrections, small text/photo/service updates, contact details and opening hours updates, service area updates, mobile display check, progressive local SEO optimisation, and priority support by message. No commitment — cancel at any time.',
+    q: 'Do you guarantee Google rankings?',
+    a: 'No legitimate agency can guarantee a specific organic Google ranking. Pixeloria improves the technical structure, content relevance and usability of the website without promising a specific position.',
   },
   {
-    q: 'Do you work with English-speaking clients outside France?',
-    a: 'Yes. All communication, briefs and project handover documents are available in English. Pixeloria works with expats, international business owners and English-speaking brands operating in France or Europe.',
-  },
-  {
-    q: 'Can I update the website myself after launch?',
-    a: 'Yes. Depending on the plan, you can request content updates or manage basic changes yourself. The goal is always to keep the site easy to maintain.',
-  },
-  {
-    q: 'What is the difference between the Artisan Site and the Visibility Option?',
-    a: 'The Artisan Site (€199 inc. VAT, delivered in 72h) is a one-off payment — your professional website, live, with no subscription. The Visibility Option (€49 inc. VAT/month) is an optional add-on that keeps your site up to date and grows your local visibility over time.',
-  },
-  {
-    q: 'Is a free audit really free?',
-    a: 'Yes, completely. No strings attached. You will receive a short, honest assessment of your current website or project brief within 48 hours.',
-  },
-  {
-    q: 'What industries do you work with?',
-    a: 'Pixeloria works with contractors, tradespeople, renovation companies, hospitality and concierge businesses, and local shops. Essentially any small business that needs a professional online presence.',
-  },
-  {
-    q: 'What happens if I am not happy with the result?',
-    a: 'Revisions are included in every project. The goal is for you to be genuinely satisfied with the result. If something is not right, we fix it — simple as that.',
+    q: 'Do you provide Google Ads?',
+    a: 'Google Ads management is not included in the standard website packages.',
   },
 ];
 
-type PortfolioProject = {
-  type: string;
-  year: string;
-  client: string;
-  sector: string;
-  slug: string;
-  url: string;
-  summary: string;
-  bullets: string[];
-  beforeImage?: string;
+const faqPageJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(({ q, a }) => ({
+    '@type': 'Question',
+    name: q,
+    acceptedAnswer: { '@type': 'Answer', text: a },
+  })),
 };
 
-const portfolioProjects: PortfolioProject[] = [
+const solutionBlocks = [
   {
-    type: 'Redesign',
-    year: '2026',
-    client: 'Escalee & Goûts',
-    sector: 'CONCIERGE / TOURISM',
-    slug: 'escalee-gouts',
-    url: 'https://www.escaleetgouts.fr/',
-    summary: 'Full redesign of a concierge services website for a premium, high-end experience.',
-    bullets: [
-      'Premium conversion-focused design',
-      'Mobile experience optimised for easy contact',
-      'SEO structure rebuilt for better local visibility',
-      'Local landing pages',
-    ],
-    beforeImage: '/assets/portfolio/escalee-avant.webp',
+    title: 'Clear Service Positioning',
+    desc: 'Visitors understand what you do and who you serve within seconds.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
   },
   {
-    type: 'Redesign',
-    year: '2026',
-    client: 'Lenora Conciergerie',
-    sector: 'CONCIERGE SERVICES',
-    slug: 'lenora-conciergerie',
-    url: 'https://lenora-conciergerie.vercel.app/',
-    summary: 'Modernisation of a concierge website to strengthen credibility and increase enquiries.',
-    bullets: [
-      'Clean, professional visual identity',
-      'Simplified contact journey to reduce friction',
-      'Mobile experience built for easy contact',
-      'Loading time optimised',
-    ],
-    beforeImage: '/assets/portfolio/lenora-avant.webp',
+    title: 'Mobile Lead Generation',
+    desc: 'Prominent call buttons and short estimate forms reduce friction.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <rect x="7" y="2" width="10" height="20" rx="2" stroke="currentColor" strokeWidth="2" />
+        <path d="M11 18h2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+    ),
   },
   {
-    type: 'Full creation',
-    year: '2026',
-    client: 'Content by Denise',
-    sector: 'COPYWRITING & CONTENT',
-    slug: 'content-by-denise',
-    url: 'https://contentbydenise.vercel.app/',
-    summary: 'Professional portfolio created for a freelance copywriter.',
-    bullets: [
-      'Unique, memorable branding',
-      'Content portfolio showcased clearly',
-      'Lead-oriented calls to action',
-      'SEO optimised from launch',
-    ],
+    title: 'Local Search Structure',
+    desc: 'Services and service areas are clearly organized for customers and search engines.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" strokeWidth="2" />
+        <circle cx="12" cy="10" r="3" stroke="currentColor" strokeWidth="2" />
+      </svg>
+    ),
   },
   {
-    type: 'Full creation',
-    year: '2026',
-    client: 'Qit Concierge',
-    sector: 'SHORT-TERM RENTAL CONCIERGE',
-    slug: 'qit-concierge',
-    url: 'https://qitconcierge.fr',
-    summary: 'Complete website creation for a concierge specialising in short-term rental management.',
-    bullets: [
-      'Professional design aimed at property owners',
-      'Clear presentation of property management services',
-      'Simplified contact journey to generate leads',
-      'Local SEO foundations from day one',
-    ],
+    title: 'Trust and Proof',
+    desc: 'Reviews, completed projects, credentials and service guarantees help customers make a decision.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
   },
 ];
 
 const trustPoints = [
   {
-    title: 'Single point of contact',
-    desc: 'You communicate directly with the person who understands your needs and drives your project.',
+    title: 'Direct communication with the website builder',
+    desc: 'You talk directly with the person building your site — no account managers relaying messages.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <circle cx="12" cy="8" r="4" stroke="currentColor" strokeWidth="1.8" />
@@ -282,8 +125,8 @@ const trustPoints = [
     ),
   },
   {
-    title: 'Clear packages',
-    desc: 'You know exactly what is included, what is not, and which plan fits your situation.',
+    title: 'Clear project scope',
+    desc: 'What is included, what is not, and what a scope change would involve is agreed before work starts.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <rect x="4" y="4" width="16" height="16" rx="4" stroke="currentColor" strokeWidth="1.8" />
@@ -292,18 +135,28 @@ const trustPoints = [
     ),
   },
   {
-    title: 'Professional design',
-    desc: 'Your site should inspire trust within the first few seconds — on desktop and mobile alike.',
+    title: 'Transparent pricing',
+    desc: 'One-time package pricing, stated up front, with no hidden fees added later.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <rect x="2" y="4" width="20" height="14" rx="3" stroke="currentColor" strokeWidth="1.8" />
-        <path d="M8 22h8M12 18v4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M12 7v10M9 9.5c0-1.4 1.3-2.5 3-2.5s3 .9 3 2.2c0 3-6 1.5-6 4.3 0 1.3 1.3 2.3 3 2.3s3-1 3-2.3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
       </svg>
     ),
   },
   {
-    title: 'Business understanding',
-    desc: 'Pixeloria understands the constraints of small businesses: limited time, a need for clarity and a controlled budget.',
+    title: 'Mobile-first design',
+    desc: 'Every page is built and tested for how customers actually browse: on a phone.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <rect x="7" y="2" width="10" height="20" rx="2" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M11 18h2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Contractor industry knowledge',
+    desc: 'Websites are structured around how contractors and home-service businesses actually get hired.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path d="M3 21V9l9-6 9 6v12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
@@ -311,13 +164,54 @@ const trustPoints = [
       </svg>
     ),
   },
+  {
+    title: 'Website ownership',
+    desc: 'The content, domain and agreed deliverables belong to you once the project is paid in full.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Remote collaboration',
+    desc: 'Projects run entirely by email, form and video call — built around your schedule and time zone.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M2 12h20M12 3a15 15 0 010 18M12 3a15 15 0 000 18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Written project process',
+    desc: 'Scope, timeline and deliverables are confirmed in writing before any work begins.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+];
+
+const contractorCategories = [
+  { label: 'Roofing contractors', href: '/en/roofing-websites' },
+  { label: 'General contractors' },
+  { label: 'Remodeling companies' },
+  { label: 'Gutter companies' },
+  { label: 'HVAC contractors' },
+  { label: 'Plumbers' },
+  { label: 'Electricians' },
+  { label: 'Painters' },
+  { label: 'Landscapers' },
+  { label: 'Cleaning companies' },
 ];
 
 const auditMiniCards = [
-  { title: 'Message clarity', desc: 'Is your offer understood within a few seconds?' },
-  { title: 'Mobile readability', desc: 'Does your site inspire trust on a smartphone?' },
-  { title: 'Calls to action', desc: 'Do your visitors know what to do next?' },
-  { title: 'Local SEO', desc: 'Is your business understandable to Google?' },
+  { title: 'Service clarity', desc: 'Can a visitor tell what you do and where you work in seconds?' },
+  { title: 'Mobile experience', desc: 'Is it easy to call or request an estimate from a phone?' },
+  { title: 'Calls to action', desc: 'Do visitors know exactly what to do next?' },
+  { title: 'Local search readiness', desc: 'Is your business structured clearly for local search?' },
 ];
 
 export default function EnHomePage() {
@@ -325,7 +219,11 @@ export default function EnHomePage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd) }}
       />
       <ClientEffects />
       <LaunchBannerEn />
@@ -339,31 +237,27 @@ export default function EnHomePage() {
             <div className="hero-text">
               <div className="hero-badge">
                 <span className="badge-dot"></span>
-                Website design for small businesses and tradespeople
+                Websites for contractors and local service businesses
               </div>
 
               <h1>
-                Professional websites for{' '}
-                <em className="gradient-text">small businesses, contractors and local&nbsp;brands.</em>
+                Websites Built to Turn Local Searches Into{' '}
+                <em className="gradient-text">Calls and Estimate Requests.</em>
               </h1>
 
               <p className="hero-sub">
-                A professional, clear and effective website to reassure your prospects, improve your local visibility and generate more customer enquiries.
-              </p>
-
-              <p className="hero-reassurance">
-                No large upfront budget. Simple packages. Clear support. Maintenance included on your chosen plan.
+                Pixeloria builds fast, mobile-first websites for roofing contractors, home-service companies and local businesses across the United States. Every website is designed to build trust, explain your services clearly and make it easy for customers to contact you.
               </p>
 
               <div className="hero-actions">
-                <a href="#contact" className="btn btn-primary">
-                  <span>Get a free audit</span>
+                <Link href="/en/free-website-audit" className="btn btn-primary">
+                  <span>Get a Free Website Audit</span>
                   <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                     <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                </a>
+                </Link>
                 <a href="#packages" className="btn btn-ghost">
-                  View packages
+                  View Website Packages
                   <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                     <path d="M10 4v12M4 10l6 6 6-6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
@@ -373,32 +267,40 @@ export default function EnHomePage() {
               <ul className="hero-microbene">
                 <li>
                   <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                  Professional business website
+                  Mobile-first design
                 </li>
                 <li>
                   <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                  Controlled budget
+                  Built for lead generation
                 </li>
                 <li>
                   <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                  Local SEO included on eligible plans
+                  Clear one-time pricing
+                </li>
+                <li>
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                  Direct communication
+                </li>
+                <li>
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                  Available across the United States
                 </li>
               </ul>
 
               <div className="hero-metrics">
                 <div className="metric">
-                  <strong className="metric-value">€199</strong>
-                  <span>Artisan Site · inc. VAT</span>
+                  <strong className="metric-value">$499</strong>
+                  <span>Starter Website</span>
                 </div>
                 <div className="metric-divider" aria-hidden="true"></div>
                 <div className="metric">
-                  <strong className="metric-value">€49</strong>
-                  <span>/ month · Visibility Option</span>
+                  <strong className="metric-value">$899</strong>
+                  <span>Growth Website</span>
                 </div>
                 <div className="metric-divider" aria-hidden="true"></div>
                 <div className="metric">
-                  <strong className="metric-value">72h</strong>
-                  <span>delivery time</span>
+                  <strong className="metric-value">5 days</strong>
+                  <span>Starter delivery time</span>
                 </div>
               </div>
             </div>
@@ -406,13 +308,13 @@ export default function EnHomePage() {
             <div className="hero-visual">
               <div className="hero-card glass-card">
                 <div className="hero-card-header">
-                  <span className="chip">Your site online</span>
+                  <span className="chip">Your website, built for leads</span>
                   <div className="traffic-lights" aria-hidden="true">
                     <span></span><span></span><span></span>
                   </div>
                 </div>
-                <h2>Serenity Website</h2>
-                <p>Custom design · Local SEO · Responsive design</p>
+                <h2>Contractor Website</h2>
+                <p>Custom design · Local SEO structure · Mobile-first</p>
 
                 <ul className="feature-list">
                   <li>
@@ -425,19 +327,19 @@ export default function EnHomePage() {
                     <svg viewBox="0 0 20 20" aria-hidden="true">
                       <path d="M4 10l4 4 8-8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
                     </svg>
-                    Basic local SEO included
+                    Click-to-call &amp; estimate request form
                   </li>
                   <li>
                     <svg viewBox="0 0 20 20" aria-hidden="true">
                       <path d="M4 10l4 4 8-8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
                     </svg>
-                    Hosting + domain included
+                    Local SEO structure included
                   </li>
                   <li>
                     <svg viewBox="0 0 20 20" aria-hidden="true">
                       <path d="M4 10l4 4 8-8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
                     </svg>
-                    WhatsApp support within 24h
+                    Direct communication with your builder
                   </li>
                 </ul>
 
@@ -456,14 +358,14 @@ export default function EnHomePage() {
                 <svg viewBox="0 0 20 20" fill="none">
                   <path d="M10 2l2.4 5 5.6.8-4 3.9.9 5.5L10 14.7l-5 2.5.9-5.5L2 7.8 7.6 7z" fill="currentColor" />
                 </svg>
-                100% satisfaction
+                Mobile-first design
               </div>
               <div className="float-badge float-badge-2" aria-hidden="true">
                 <svg viewBox="0 0 20 20" fill="none">
                   <circle cx="10" cy="10" r="8" stroke="currentColor" strokeWidth="1.8" />
                   <path d="M10 6v4l3 3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
                 </svg>
-                Delivered in 5–10 days
+                Starter sites ready in 5 business days
               </div>
             </div>
           </div>
@@ -475,16 +377,52 @@ export default function EnHomePage() {
           </div>
         </section>
 
-        {/* ── INTRO ── */}
-        <section className="section-intro section">
+        {/* ── QUICK ANSWER ── */}
+        <section className="section-intro section" id="quick-answer">
           <div className="container">
             <div className="intro-content reveal">
               <p className="intro-lead">
-                Pixeloria creates and redesigns professional showcase websites for small businesses, contractors and local companies that want to improve their image, be found on Google and receive more customer enquiries.
+                A contractor website is a lead-generation website designed to present your services, establish trust and encourage local customers to call or request an estimate.
               </p>
               <p className="intro-body">
-                Every site is designed to be clear, fast, mobile-friendly and tailored to the real needs of a small business: presenting your services, reassuring your prospects and making it easy to get in touch.
+                A strong contractor website includes clear service pages, a defined service area, customer reviews, completed projects, mobile-friendly call buttons and a short estimate request form — all built to turn a phone search into a booked job.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── PROBLEM ── */}
+        <section className="section" id="problem">
+          <div className="container">
+            <div className="section-heading reveal">
+              <span className="eyebrow">The Problem</span>
+              <h2>Your Website Should Help You Win More Jobs</h2>
+              <p className="section-sub">
+                A contractor website should do more than look professional. It should immediately show customers what services you provide, where you work, why they should trust your company, how to request an estimate and how to call you from a mobile phone. If your website is outdated, slow or difficult to use, potential customers may contact a competitor instead.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── SOLUTION ── */}
+        <section id="solution" className="section section-tinted">
+          <div className="container">
+            <div className="section-heading reveal">
+              <span className="eyebrow">Our Approach</span>
+              <h2>Built for the Way Local Customers Search</h2>
+              <p className="section-sub">
+                Most customers looking for a contractor search on their phone, compare several companies and contact the business that appears trustworthy and easy to reach. Pixeloria creates websites designed around that customer journey.
+              </p>
+            </div>
+
+            <div className="why-grid">
+              {solutionBlocks.map((block) => (
+                <div key={block.title} className="why-card reveal">
+                  <div className="why-icon">{block.icon}</div>
+                  <h3>{block.title}</h3>
+                  <p>{block.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -493,221 +431,130 @@ export default function EnHomePage() {
         <section className="section" id="packages">
           <div className="container">
             <div className="section-heading reveal">
-              <span className="eyebrow">Our offer</span>
-              <h2>A professional website for tradespeople, delivered in 72h</h2>
+              <span className="eyebrow">Website Packages</span>
+              <h2>Clear, One-Time Pricing for Contractor Websites</h2>
               <p className="section-sub">
-                Pixeloria helps tradespeople and micro-businesses get a clear, professional and effective website to receive more quote requests. Fixed price, no forced subscription.
+                Pixeloria helps contractors and local service businesses get a clear, professional and effective website built to generate calls and estimate requests. No payment integration on this page — every package starts with a conversation.
               </p>
             </div>
 
-            <div className="pricing-cards pricing-cards--two">
+            <div className="pricing-cards pricing-cards--three">
 
-              {/* Artisan Site — featured */}
-              <div className="pricing-card pricing-card--featured reveal">
-                <span className="pricing-badge">The artisan offer</span>
-                <p className="pricing-label">Artisan Site</p>
-                <p className="pricing-price">€199 <span>inc. VAT</span></p>
-                <p className="pricing-sublabel">One-off payment — delivered in 72h</p>
+              {/* Starter Website */}
+              <div className="pricing-card reveal">
+                <p className="pricing-label">Starter Website</p>
+                <p className="pricing-price">$499 <span>one-time</span></p>
+                <p className="pricing-sublabel">One-page contractor website</p>
                 <p className="pricing-accroche">
-                  A professional website for tradespeople, built to generate quote requests.
+                  A focused, mobile-first website built to generate calls and estimate requests.
                 </p>
                 <p className="pricing-list-title">Included:</p>
                 <ul>
-                  <li>One page professional website</li>
-                  <li>Up to 5 sections</li>
-                  <li>Modern design</li>
-                  <li>Mobile-ready</li>
-                  <li>Phone button</li>
-                  <li>WhatsApp button</li>
-                  <li>Quote form</li>
-                  <li>Google Maps</li>
-                  <li>Services list</li>
-                  <li>Service area</li>
-                  <li>Client reviews</li>
-                  <li>Legal notices</li>
-                  <li>Go-live</li>
-                  <li>Basic local SEO</li>
+                  <li>One-page contractor website</li>
+                  <li>Up to 6 sections</li>
+                  <li>Mobile-first design</li>
+                  <li>Click-to-call button</li>
+                  <li>Estimate request form</li>
+                  <li>Service-area section</li>
+                  <li>Services section</li>
+                  <li>Customer review section</li>
+                  <li>Project gallery</li>
+                  <li>Basic on-page SEO</li>
+                  <li>Analytics setup</li>
+                  <li>Website launch</li>
                 </ul>
-                <p className="pricing-note">Ready-to-go website, live, mobile-optimised and Google-ready.</p>
-                <a
-                  href="#contact"
-                  className="btn btn-primary"
-                  onClick={() => trackOfferSelect('Artisan Site', '199 VAT incl.')}
+                <p className="pricing-note">Delivered five business days after all content is received.</p>
+                <Link
+                  href="/en/free-website-audit"
+                  className="btn btn-secondary"
+                  onClick={() => trackOfferSelect('Starter Website', '499 one-time')}
                 >
-                  Start my website →
-                </a>
+                  Get Your Website →
+                </Link>
               </div>
 
-              {/* Visibility Option */}
-              <div className="pricing-card reveal">
-                <p className="pricing-label">Visibility Option</p>
-                <p className="pricing-price">€49 <span>inc. VAT / month</span></p>
-                <p className="pricing-sublabel">Add-on to the Artisan Site</p>
+              {/* Growth Website — featured */}
+              <div className="pricing-card pricing-card--featured reveal">
+                <span className="pricing-badge">Most Popular</span>
+                <p className="pricing-label">Growth Website</p>
+                <p className="pricing-price">$899 <span>one-time</span></p>
+                <p className="pricing-sublabel">Up to 5 pages</p>
                 <p className="pricing-accroche">
-                  Your site stays up to date, secure and optimised — without you having to think about it.
+                  A multi-page website with individual service pages, built to generate more qualified leads.
                 </p>
                 <p className="pricing-list-title">Included:</p>
                 <ul>
-                  <li>Technical maintenance</li>
-                  <li>Regular backups</li>
-                  <li>Minor corrections</li>
-                  <li>Small text, photo or service updates</li>
-                  <li>Contact details, opening hours or call button updates</li>
-                  <li>Add or update service areas</li>
-                  <li>Mobile display check</li>
-                  <li>Progressive local SEO optimisation</li>
-                  <li>Priority support by message</li>
+                  <li>Up to 5 pages</li>
+                  <li>Custom conversion-focused design</li>
+                  <li>Individual service pages</li>
+                  <li>Service-area structure</li>
+                  <li>Lead-generation forms</li>
+                  <li>Customer reviews</li>
+                  <li>Project gallery</li>
+                  <li>Technical SEO</li>
+                  <li>Keyword mapping</li>
+                  <li>Schema markup</li>
+                  <li>Analytics setup</li>
+                  <li>Google Search Console setup</li>
+                  <li>Website launch</li>
                 </ul>
-                <p className="pricing-list-title" style={{ marginTop: '0.75rem' }}>Not included:</p>
+                <p className="pricing-note">Delivered in one to three weeks, depending on scope.</p>
+                <Link
+                  href="/en/free-website-audit"
+                  className="btn btn-primary"
+                  onClick={() => trackOfferSelect('Growth Website', '899 one-time')}
+                >
+                  Start My Website →
+                </Link>
+              </div>
+
+              {/* Website Care & Local Visibility */}
+              <div className="pricing-card reveal">
+                <p className="pricing-label">Website Care &amp; Local Visibility</p>
+                <p className="pricing-price">$79 <span>/ month</span></p>
+                <p className="pricing-sublabel">Ongoing care for your website</p>
+                <p className="pricing-accroche">
+                  Your site stays secure, up to date and locally optimized — without you having to think about it.
+                </p>
+                <p className="pricing-list-title">Included:</p>
                 <ul>
-                  <li>Full redesign</li>
-                  <li>New complex pages</li>
-                  <li>Google Ads</li>
-                  <li>Social media management</li>
-                  <li>Blog articles</li>
+                  <li>Hosting management</li>
+                  <li>Technical maintenance</li>
+                  <li>Security updates</li>
+                  <li>Backups</li>
+                  <li>Content edits</li>
+                  <li>Service-area updates</li>
+                  <li>Conversion checks</li>
+                  <li>Basic local SEO improvements</li>
+                  <li>Search Console monitoring</li>
+                  <li>Monthly performance summary</li>
                 </ul>
-                <p className="pricing-note">No commitment · Cancel at any time.</p>
+                <p className="pricing-note">Cancel anytime. No guaranteed Google rankings — no agency can promise that honestly.</p>
                 <a
                   href="#contact"
                   className="btn btn-secondary"
-                  onClick={() => trackOfferSelect('Visibility Option', '49 VAT incl. / month')}
+                  onClick={() => trackOfferSelect('Website Care & Local Visibility', '79 / month')}
                 >
-                  Add Visibility Option →
+                  Ask About Care Plan →
                 </a>
               </div>
 
             </div>
 
             <p className="pricing-disclaimer reveal">
-              All prices include VAT &middot; <a href="#contact">Contact us</a> for a free personalised quote.
+              All prices are in USD &middot; <Link href="/en/pricing">See full pricing details</Link> &middot; <a href="#contact">Contact us</a> for a free estimate.
             </p>
           </div>
         </section>
 
-        {/* ── WHY PIXELORIA ── */}
-        <section className="section" id="why">
+        {/* ── CONTRACTOR SPECIALIZATION ── */}
+        <section className="section section-tinted" id="who">
           <div className="container">
             <div className="section-heading reveal">
-              <span className="eyebrow">Why Pixeloria</span>
-              <h2>A website that actually works for your business</h2>
+              <span className="eyebrow">Who We Build For</span>
+              <h2>Websites for Contractors and Home-Service Businesses</h2>
               <p className="section-sub">
-                Not just a pretty page. A site designed to be found, earn trust and convert visitors into customers.
-              </p>
-            </div>
-
-            <div className="why-grid">
-              <div className="why-card reveal">
-                <div className="why-icon">
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </div>
-                <h3>Fixed, transparent pricing</h3>
-                <p>What we quote is what you pay. No scope creep, no surprise invoices at the end of the project.</p>
-              </div>
-
-              <div className="why-card reveal">
-                <div className="why-icon">
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" />
-                    <path d="M12 6v6l4 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                  </svg>
-                </div>
-                <h3>Fast turnaround</h3>
-                <p>Most websites go live within a few days to a couple of weeks. You will see progress updates throughout.</p>
-              </div>
-
-              <div className="why-card reveal">
-                <div className="why-icon">
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" strokeWidth="2" />
-                    <circle cx="12" cy="10" r="3" stroke="currentColor" strokeWidth="2" />
-                  </svg>
-                </div>
-                <h3>Local SEO that matters</h3>
-                <p>We optimise for the searches your customers are actually making — local, specific and ready to buy.</p>
-              </div>
-
-              <div className="why-card reveal">
-                <div className="why-icon">
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </div>
-                <h3>You always own your site</h3>
-                <p>All files, logins and content belong to you from day one. Walk away any time — your site comes with you.</p>
-              </div>
-
-              <div className="why-card reveal">
-                <div className="why-icon">
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    <circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="2" />
-                    <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </div>
-                <h3>Direct communication</h3>
-                <p>No account managers passing messages around. You speak directly with the person building your site.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── SITE WORKS ── */}
-        <section id="site-works" className="section section-tinted">
-          <div className="container">
-            <div className="section-heading reveal">
-              <span className="eyebrow">Our philosophy</span>
-              <h2>Your website should work for you</h2>
-            </div>
-
-            <div className="siteworks-layout">
-              <div className="siteworks-text reveal">
-                <p className="siteworks-intro">
-                  A good website does not just present your business. It should reassure your prospects, showcase your work, clearly explain your services, work perfectly on mobile, make it easy to get in touch and support your local visibility on Google.
-                </p>
-                <p>
-                  At Pixeloria, every page is designed with one clear goal: help your visitors understand your offer and take action.
-                </p>
-                <a href="#packages" className="btn btn-primary" style={{ marginTop: '1.5rem', display: 'inline-flex' }}>
-                  View packages
-                  <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                    <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </a>
-              </div>
-
-              <ul className="siteworks-pillars reveal reveal-right">
-                {[
-                  'Reassure your prospects',
-                  'Showcase your services clearly',
-                  'Highlight your work and projects',
-                  'Make it easy to get in touch',
-                  'Work perfectly on mobile',
-                  'Support your local Google visibility',
-                ].map((item) => (
-                  <li key={item} className="siteworks-pillar">
-                    <span className="siteworks-pillar-check" aria-hidden="true">
-                      <svg viewBox="0 0 20 20" fill="none">
-                        <path d="M4 10l4 4 8-8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* ── WHO WE WORK WITH ── */}
-        <section className="section" id="who">
-          <div className="container">
-            <div className="section-heading reveal">
-              <span className="eyebrow">Who we work with</span>
-              <h2>Built for businesses like yours</h2>
-              <p className="section-sub">
-                Small teams, sole traders, local services. We know what works for each type of business.
+                Pixeloria builds websites for service-area businesses that rely on local customers finding them, trusting them and calling them.
               </p>
             </div>
 
@@ -715,43 +562,43 @@ export default function EnHomePage() {
               className="reveal"
               style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
                 gap: '1.25rem',
                 marginTop: '2.5rem',
               }}
             >
-              {[
-                { label: 'Contractors & Tradespeople', desc: 'Electricians, plumbers, roofers — get found when local customers search.', href: '/realisations' },
-                { label: 'Renovation Companies', desc: 'Showcase your projects, build trust and convert enquiries into quotes.', href: '/realisations' },
-                { label: 'Hospitality & Concierge', desc: 'Holiday lets, B&Bs and concierge services that need to inspire and convert.', href: '/realisations' },
-                { label: 'Local Shops & Retail', desc: 'Bring footfall online — showcase products, opening hours and special offers.', href: '/realisations' },
-              ].map(({ label, desc, href }) => (
-                <Link
-                  key={label}
-                  href={href}
-                  className="why-card"
-                  style={{ textDecoration: 'none', display: 'block' }}
-                >
-                  <h3 style={{ color: 'var(--text)', marginBottom: '0.5rem' }}>{label}</h3>
-                  <p>{desc}</p>
-                  <span
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '0.35rem',
-                      marginTop: '0.75rem',
-                      fontSize: '0.85rem',
-                      fontWeight: 600,
-                      color: 'var(--primary)',
-                    }}
+              {contractorCategories.map(({ label, href }) =>
+                href ? (
+                  <Link
+                    key={label}
+                    href={href}
+                    className="why-card"
+                    style={{ textDecoration: 'none', display: 'block' }}
                   >
-                    See our work
-                    <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                      <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </span>
-                </Link>
-              ))}
+                    <h3 style={{ color: 'var(--text)', margin: 0 }}>{label}</h3>
+                    <span
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.35rem',
+                        marginTop: '0.75rem',
+                        fontSize: '0.85rem',
+                        fontWeight: 600,
+                        color: 'var(--primary)',
+                      }}
+                    >
+                      Learn more
+                      <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                        <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                  </Link>
+                ) : (
+                  <div key={label} className="why-card">
+                    <h3 style={{ color: 'var(--text)', margin: 0 }}>{label}</h3>
+                  </div>
+                )
+              )}
             </div>
           </div>
         </section>
@@ -766,11 +613,11 @@ export default function EnHomePage() {
               <span className="audit-premium-badge">Free audit</span>
 
               <h2 className="audit-premium-title">
-                Get a clear audit of your website
+                Get a Free Website Audit
               </h2>
 
               <p className="audit-premium-desc">
-                Already have a site but not generating enough enquiries? Pixeloria analyses your online presence and gives you concrete recommendations to improve clarity, trust and conversion.
+                Already have a website but not getting enough calls or estimate requests? Pixeloria reviews your current site and gives you concrete recommendations to improve clarity, trust and lead generation.
               </p>
 
               <div className="audit-mini-cards">
@@ -785,250 +632,33 @@ export default function EnHomePage() {
 
             <div className="audit-cta-panel">
               <div className="audit-cta-inner">
-                <p className="audit-cta-label">Free mini-audit</p>
+                <p className="audit-cta-label">Free website audit</p>
 
                 <h3 className="audit-cta-title">
-                  Get 3 to 5 concrete improvement ideas
+                  Get 3 to 5 Concrete Improvement Ideas
                 </h3>
 
                 <p className="audit-cta-desc">
-                  A simple, readable and actionable first review to identify what may be holding back your enquiries.
+                  A simple, readable and actionable first review to identify what may be holding back your calls and estimate requests.
                 </p>
 
                 <ul className="audit-cta-list">
-                  <li>Quick analysis of your homepage</li>
+                  <li>Quick review of your homepage</li>
                   <li>Visible friction points</li>
-                  <li>Simple recommendations to prioritise</li>
+                  <li>Simple recommendations to prioritize</li>
                 </ul>
 
-                <a href="#contact" className="audit-cta-btn">
-                  Request my free audit
+                <Link href="/en/free-website-audit" className="audit-cta-btn">
+                  Get My Free Website Audit
                   <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                     <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                </a>
+                </Link>
 
                 <p className="audit-cta-reassurance">
-                  A quick, clear first recommendation tailored to your needs.
+                  A quick, clear first recommendation tailored to your business.
                 </p>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── MARKETING & SEO ── */}
-        <section id="marketing" className="section">
-          <div className="container">
-            <div className="section-heading reveal">
-              <span className="eyebrow">Marketing and Visibility</span>
-              <h2>Copywriting and SEO — your voice, your visibility</h2>
-              <p className="section-intro">
-                A great website with no visitors is a shopfront in a desert. We align compelling copywriting and technical SEO so your site <em>attracts</em>,{' '}
-                <em>convinces</em> and <em>converts</em> — durably.
-              </p>
-            </div>
-
-            <div className="marketing-grid">
-              {/* Copywriting column */}
-              <div className="marketing-pillar reveal">
-                <div className="marketing-pillar-header">
-                  <div className="marketing-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M12 20h9" />
-                      <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z" />
-                    </svg>
-                  </div>
-                  <h3>Copywriting</h3>
-                </div>
-                <p>Words that sell. We write conversion-focused copy that speaks directly to your ideal customers.</p>
-                <ul className="marketing-features">
-                  <li>
-                    <span className="feature-dot" aria-hidden="true"></span>
-                    <div>
-                      <strong>Sales pages and landing pages</strong>
-                      <span>Headlines, storytelling, irresistible CTAs</span>
-                    </div>
-                  </li>
-                  <li>
-                    <span className="feature-dot" aria-hidden="true"></span>
-                    <div>
-                      <strong>Tone of voice and brand messaging</strong>
-                      <span>Editorial guidelines, positioning, tagline</span>
-                    </div>
-                  </li>
-                  <li>
-                    <span className="feature-dot" aria-hidden="true"></span>
-                    <div>
-                      <strong>Email and automated sequences</strong>
-                      <span>Nurturing, onboarding, follow-ups</span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              {/* SEO column */}
-              <div className="marketing-pillar reveal">
-                <div className="marketing-pillar-header">
-                  <div className="marketing-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="11" cy="11" r="8" />
-                      <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                      <polyline points="11 8 11 11 13 13" />
-                    </svg>
-                  </div>
-                  <h3>SEO</h3>
-                </div>
-                <p>Being found is the first sale. We optimise your Google presence from A to Z — technical, content and authority.</p>
-                <ul className="marketing-features">
-                  <li>
-                    <span className="feature-dot" aria-hidden="true"></span>
-                    <div>
-                      <strong>Full SEO audit</strong>
-                      <span>Technical analysis, Core Web Vitals, tags, internal linking</span>
-                    </div>
-                  </li>
-                  <li>
-                    <span className="feature-dot" aria-hidden="true"></span>
-                    <div>
-                      <strong>Keyword research</strong>
-                      <span>Search intent, volume, competition</span>
-                    </div>
-                  </li>
-                  <li>
-                    <span className="feature-dot" aria-hidden="true"></span>
-                    <div>
-                      <strong>On-page optimisation</strong>
-                      <span>Titles, meta, heading structure, structured data</span>
-                    </div>
-                  </li>
-                  <li>
-                    <span className="feature-dot" aria-hidden="true"></span>
-                    <div>
-                      <strong>SEO content strategy</strong>
-                      <span>Topic clusters, blog, editorial link building</span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Results banner */}
-            <div className="marketing-results reveal">
-              <div className="marketing-result-item">
-                <strong>+180%</strong>
-                <span>average organic traffic in 6 months</span>
-              </div>
-              <div className="marketing-result-divider" aria-hidden="true"></div>
-              <div className="marketing-result-item">
-                <strong>Top 3</strong>
-                <span>Google ranking on target keywords</span>
-              </div>
-              <div className="marketing-result-divider" aria-hidden="true"></div>
-              <div className="marketing-result-item">
-                <strong>x2.8</strong>
-                <span>conversion rate on sales pages</span>
-              </div>
-            </div>
-            <p className="marketing-disclaimer">Results from actual clients — individual outcomes vary by sector and competition.</p>
-
-            {/* CTA */}
-            <div className="marketing-cta reveal">
-              <p>Free SEO audit included — receive your personalised report within 48h.</p>
-              <a href="#contact" className="btn btn-primary">Request my free audit →</a>
-            </div>
-          </div>
-        </section>
-
-        {/* ── PORTFOLIO ── */}
-        <section id="portfolio" className="section section-tinted">
-          <div className="container">
-            <div className="section-heading reveal">
-              <span className="eyebrow">Case studies</span>
-              <h2>Client case studies</h2>
-              <p className="section-sub">
-                Discover how Pixeloria transforms existing sites or creates new showcase websites that are clearer, more modern and better structured — to build trust and generate more enquiries.
-              </p>
-            </div>
-
-            <div className="portfolio-grid">
-              {portfolioProjects.map((p, i) => (
-                <article
-                  key={p.client}
-                  className={`project-card reveal${i === 1 ? ' project-card-lg' : ''}`}
-                >
-                  <div className="project-meta">
-                    <span className="tag">{p.type}</span>
-                    <span className="project-year">{p.year}</span>
-                  </div>
-
-                  <div className="project-sector" style={{ fontSize: '0.78rem', marginBottom: '0.5rem' }}>
-                    {p.sector}
-                  </div>
-
-                  <h3>{p.client}</h3>
-                  <p style={{ fontSize: '0.875rem', marginBottom: '0.75rem' }}>
-                    {p.summary}
-                  </p>
-
-                  <ul className="project-bullets">
-                    {p.bullets.map((b) => (
-                      <li key={b}>{b}</li>
-                    ))}
-                  </ul>
-
-                  {p.beforeImage ? (
-                    <div className="portfolio-comparison">
-                      <div className="portfolio-thumb-wrap">
-                        <span className="thumb-label thumb-label--before">Before</span>
-                        <Image
-                          className="portfolio-thumb"
-                          src={p.beforeImage}
-                          alt={`Site before redesign — ${p.client}`}
-                          width={600}
-                          height={450}
-                          sizes="(max-width: 768px) 100vw, 300px"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div className="portfolio-thumb-wrap">
-                        <span className="thumb-label thumb-label--after">After</span>
-                        <a
-                          href={p.url}
-                          className="portfolio-thumb portfolio-thumb--link"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={`View the redesigned site — ${p.client}`}
-                        >
-                          View site →
-                        </a>
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="portfolio-creation-badge">Full creation</div>
-                  )}
-
-                  <a
-                    href={p.url}
-                    className="project-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View the final site
-                    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                      <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </a>
-                </article>
-              ))}
-            </div>
-
-            <div className="portfolio-cta reveal">
-              <a href="#contact" className="btn btn-primary">
-                Request a free audit
-                <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                  <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </a>
             </div>
           </div>
         </section>
@@ -1037,8 +667,8 @@ export default function EnHomePage() {
         <section className="section" id="process">
           <div className="container">
             <div className="section-heading reveal">
-              <span className="eyebrow">How it works</span>
-              <h2>From first message to live website</h2>
+              <span className="eyebrow">How It Works</span>
+              <h2>From First Message to Live Website</h2>
               <p className="section-sub">Four straightforward steps, no complexity.</p>
             </div>
 
@@ -1051,7 +681,7 @@ export default function EnHomePage() {
                   </svg>
                 </div>
                 <h3>You reach out</h3>
-                <p>Fill in the form or send an email. Tell us about your business, your goals and what you need. We respond within 48 hours.</p>
+                <p>Fill in the form or send an email. Tell us about your business, your service area and what you need. We respond within 48 hours.</p>
               </div>
 
               <div className="process-card reveal">
@@ -1063,7 +693,7 @@ export default function EnHomePage() {
                   </svg>
                 </div>
                 <h3>We agree on a clear plan</h3>
-                <p>A short brief, a fixed quote, a timeline. Everything in writing before any work begins. No ambiguity.</p>
+                <p>A short brief, a fixed estimate, a timeline. Everything in writing before any work begins. No ambiguity.</p>
               </div>
 
               <div className="process-card reveal">
@@ -1093,8 +723,8 @@ export default function EnHomePage() {
           </div>
         </section>
 
-        {/* ── TRUST / TESTIMONIALS ── */}
-        <section id="testimonials" className="section testimonials-section">
+        {/* ── WHY WORK WITH PIXELORIA ── */}
+        <section id="why" className="section testimonials-section">
           <div className="testimonials-halo testimonials-halo--top" aria-hidden="true" />
           <div className="testimonials-halo testimonials-halo--bottom" aria-hidden="true" />
 
@@ -1103,20 +733,20 @@ export default function EnHomePage() {
 
               {/* Left editorial */}
               <div className="testimonials-editorial reveal">
-                <span className="testimonials-badge">Trust</span>
-                <h2>Why work with us?</h2>
+                <span className="testimonials-badge">Why Pixeloria</span>
+                <h2>Why Work With Pixeloria?</h2>
                 <p className="testimonials-sub">
-                  Pixeloria supports small businesses and freelancers with a simple, clear and results-driven approach.
+                  Pixeloria is a France-based web design studio serving contractors and local service businesses remotely across the United States.
                 </p>
                 <p className="testimonials-body">
-                  A website should not just look good. It should be clear, quick to understand, adapted to your industry and designed to turn visitors into enquiries. With Pixeloria, you move forward step by step, with a single point of contact, a simple method and transparent packages.
+                  European design standards, direct communication and a streamlined remote process — without a local office, an account manager or a call center in between. You work directly with the person building your website, from the first message to launch.
                 </p>
                 <div className="testimonials-cta-group">
-                  <a href="#contact" className="btn btn-primary">
-                    Discuss my project
-                  </a>
+                  <Link href="/en/about" className="btn btn-primary">
+                    About Pixeloria
+                  </Link>
                   <a href="#packages" className="btn btn-secondary">
-                    View packages
+                    View Packages
                   </a>
                 </div>
               </div>
@@ -1133,11 +763,11 @@ export default function EnHomePage() {
                   </div>
                   <div>
                     <p className="tc-label">The Pixeloria Method</p>
-                    <h3>An approach built for business owners</h3>
+                    <h3>Built for Business Owners, Not Web Insiders</h3>
                   </div>
                 </div>
                 <p className="tc-intro">
-                  Pixeloria focuses on websites that are useful, credible and easy to evolve — without unnecessary complexity.
+                  Pixeloria focuses on websites that are useful, credible and easy to maintain — without unnecessary complexity.
                 </p>
                 <div className="tc-grid">
                   {trustPoints.map((pt) => (
@@ -1154,75 +784,66 @@ export default function EnHomePage() {
           </div>
         </section>
 
-        {/* ── ENGLISH-SPEAKING CLIENTS REASSURANCE ── */}
-        <section className="section section-dark" id="english-clients">
+        {/* ── PORTFOLIO ── */}
+        <section id="portfolio" className="section section-tinted">
           <div className="container">
             <div className="section-heading reveal">
-              <span className="eyebrow">Working together</span>
-              <h2>Working with English-speaking clients</h2>
+              <span className="eyebrow">Our Work</span>
+              <h2>Professional Websites, Built to Convert</h2>
               <p className="section-sub">
-                Based in France, working in English. If you are an expat, an international business owner or an English-speaking brand operating in France or across Europe — you are in the right place.
+                Pixeloria designs and builds custom websites — from single-page starter sites to multi-page lead-generation websites. Every project is designed around clarity, trust and making it easy for a customer to get in touch.
               </p>
             </div>
 
-            <div
-              className="reveal"
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-                gap: '1.5rem',
-                marginTop: '2.5rem',
-              }}
-            >
-              {[
-                {
-                  icon: (
-                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" width="24" height="24">
-                      <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  ),
-                  title: 'All communication in English',
-                  body: 'Briefs, proposals, feedback rounds and project updates — everything is written and discussed in clear English.',
-                },
-                {
-                  icon: (
-                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" width="24" height="24">
-                      <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  ),
-                  title: 'English website content',
-                  body: 'We build bilingual or English-only sites tailored to your target audience — whether local French customers, international visitors or both.',
-                },
-                {
-                  icon: (
-                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" width="24" height="24">
-                      <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" />
-                      <path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                    </svg>
-                  ),
-                  title: 'International SEO',
-                  body: 'Whether you want to rank in the UK, France or both, we set up the correct hreflang, market-specific keywords and local search signals.',
-                },
-                {
-                  icon: (
-                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" width="24" height="24">
-                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  ),
-                  title: 'No language barrier',
-                  body: 'No relying on automated translation or misunderstandings in back-and-forth emails. You get direct, fluent communication throughout.',
-                },
-              ].map(({ icon, title, body }) => (
-                <div key={title} className="why-card">
-                  <div className="why-icon">{icon}</div>
-                  <h3>{title}</h3>
-                  <p>{body}</p>
+            <div className="why-grid reveal">
+              <div className="why-card">
+                <div className="why-icon">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <rect x="2" y="4" width="20" height="14" rx="3" stroke="currentColor" strokeWidth="2" />
+                    <path d="M8 22h8M12 18v4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                  </svg>
                 </div>
-              ))}
+                <h3>Custom design</h3>
+                <p>Every website is designed around your services and your service area — not a generic template.</p>
+              </div>
+              <div className="why-card">
+                <div className="why-icon">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <rect x="7" y="2" width="10" height="20" rx="2" stroke="currentColor" strokeWidth="2" />
+                    <path d="M11 18h2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                  </svg>
+                </div>
+                <h3>Built for mobile</h3>
+                <p>Most local searches happen on a phone. Every site is built and tested mobile-first.</p>
+              </div>
+              <div className="why-card">
+                <div className="why-icon">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" strokeWidth="2" />
+                    <circle cx="12" cy="10" r="3" stroke="currentColor" strokeWidth="2" />
+                  </svg>
+                </div>
+                <h3>Structured for local SEO</h3>
+                <p>Service and service-area pages are organized to help customers and search engines understand your business.</p>
+              </div>
+            </div>
+
+            <div className="portfolio-cta reveal">
+              <Link href="/realisations" className="btn btn-secondary">
+                See Our Work
+              </Link>
+              <Link href="/en/free-website-audit" className="btn btn-primary">
+                Get a Free Website Audit
+                <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </Link>
             </div>
           </div>
         </section>
+
+        {/* ── REVIEWS ── */}
+        <GoogleReviews locale="en" />
 
         {/* ── FAQ ── */}
         <section className="section section-tinted faq-section" id="faq">
@@ -1230,16 +851,16 @@ export default function EnHomePage() {
             <div className="faq-layout">
               <div className="faq-sidebar reveal">
                 <span className="faq-badge">FAQ</span>
-                <h2>Common questions</h2>
+                <h2>Common Questions</h2>
                 <p className="faq-sub">
-                  Straight answers to the things most people ask before starting a project with Pixeloria.
+                  Straight answers to the things most contractors ask before starting a project with Pixeloria.
                 </p>
                 <div className="faq-reassurance">
                   <p>
                     Got a question we haven&apos;t covered? Ask directly — no jargon, no sales pitch.
                   </p>
                   <a href="#contact" className="btn btn-primary">
-                    Ask a question
+                    Ask a Question
                   </a>
                 </div>
               </div>
@@ -1268,14 +889,18 @@ export default function EnHomePage() {
           <div className="container">
             <div className="contact-grid">
               <div className="contact-info">
-                <span className="eyebrow reveal">Get in touch</span>
-                <h2 className="reveal">Tell us about your project</h2>
+                <span className="eyebrow reveal">Get in Touch</span>
+                <h2 className="reveal">Tell Us About Your Project</h2>
                 <p className="reveal">
-                  Fill in the form and we will come back to you within 48 hours with a clear first recommendation — no sales call, no obligation.
+                  Fill in the form and we will get back to you within 48 hours with a clear first recommendation — no sales call, no obligation.
                 </p>
 
                 <div className="contact-channels reveal">
-                  <a href="mailto:contact@pixeloria.fr" className="channel-item">
+                  <a
+                    href="mailto:contact@pixeloria.fr"
+                    className="channel-item"
+                    onClick={() => trackEmailClicked('homepage_contact')}
+                  >
                     <span className="channel-icon" aria-hidden="true">
                       <svg viewBox="0 0 24 24" fill="none">
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -1287,11 +912,27 @@ export default function EnHomePage() {
                       <span>contact@pixeloria.fr</span>
                     </div>
                   </a>
+                  <a
+                    href="mailto:contact@pixeloria.fr?subject=Schedule%20a%20call"
+                    className="channel-item"
+                    onClick={() => trackCallScheduled('homepage_contact')}
+                  >
+                    <span className="channel-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none">
+                        <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="2" />
+                        <path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                      </svg>
+                    </span>
+                    <div>
+                      <strong>Schedule a call</strong>
+                      <span>Email us your availability</span>
+                    </div>
+                  </a>
                 </div>
 
                 <p className="contact-availability reveal">
                   <span className="avail-dot" aria-hidden="true" />
-                  Available — usually respond within 48h
+                  Available across the United States — usually respond within 48h
                 </p>
               </div>
 

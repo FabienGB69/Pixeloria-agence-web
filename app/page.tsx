@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     'Création et refonte de sites internet pour artisans et TPE. Site Artisan à 199 € TTC, livré en 72 h. Maintenance dès 49 €/mois.',
   alternates: {
     canonical: 'https://pixeloria.fr/',
+    languages: {
+      'fr-FR': 'https://pixeloria.fr/',
+      'en-US': 'https://pixeloria.fr/en',
+      'x-default': 'https://pixeloria.fr/en',
+    },
   },
   openGraph: {
     type: 'website',

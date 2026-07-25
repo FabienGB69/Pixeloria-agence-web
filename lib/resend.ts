@@ -81,12 +81,16 @@ function buildOwnerNotifHtml(data: OwnerNotifPayload): string {
     [data.prenom, data.nom].filter(Boolean).join(' ') || 'Anonyme'
   );
   const email = escape(data.email);
+  const company = data.company ? escape(data.company) : '—';
   const phone = data.phone ? escape(data.phone) : '—';
   const url = data.url ? escape(data.url) : '';
-  const message = data.message ? escape(data.message) : '—';
+  // Les retours à la ligne (contexte audit gratuit ajouté au message) sont
+  // convertis en <br> pour rester lisibles dans l'email.
+  const message = data.message ? escape(data.message).replace(/\n/g, '<br>') : '—';
 
   const rows: [string, string][] = [
     ['Nom',       fullName],
+    ['Entreprise', company],
     ['Email',     `<a href="mailto:${email}" style="color:#00d1ff;">${email}</a>`],
     ['Téléphone', phone],
     ['Site web',  url

@@ -9,14 +9,14 @@ import GoogleReviews from '@/components/sections/GoogleReviews';
 export const metadata: Metadata = {
   title: 'Client Reviews — What Our Clients Say | Pixeloria',
   description:
-    'Read reviews from tradespeople and micro-business owners who trusted Pixeloria for their professional website. Real results, real stories.',
+    'Read reviews from contractors and small business owners who trusted Pixeloria for their professional website. Real results, real stories.',
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/en/reviews',
-    locale: 'en_GB',
+    locale: 'en_US',
     siteName: 'Pixeloria',
     title: 'Client Reviews — What Our Clients Say | Pixeloria',
-    description: 'Real reviews from tradespeople and small business owners who got their website with Pixeloria.',
+    description: 'Real reviews from contractors and small business owners who got their website with Pixeloria.',
   },
   alternates: { canonical: 'https://pixeloria.fr/en/reviews' },
 };
@@ -59,7 +59,7 @@ export default function ReviewsEnPage() {
                   Pixeloria supports small businesses and freelancers with a simple, clear and results-driven approach.
                 </p>
                 <p className="testimonials-body">
-                  A website should not just look good. It should be clear, quick to understand, adapted to your industry and designed to turn visitors into enquiries. With Pixeloria, you move forward step by step, with a single point of contact, a simple method and transparent pricing.
+                  A website should not just look good. It should be clear, quick to understand, adapted to your industry and designed to turn visitors into leads. With Pixeloria, you move forward step by step, with a single point of contact, a simple method and transparent pricing.
                 </p>
                 <div className="testimonials-cta-group">
                   <a href="#contact" className="btn btn-primary">Discuss my project</a>
@@ -87,7 +87,7 @@ export default function ReviewsEnPage() {
                 <div className="tc-grid">
                   {[
                     { icon: '⚡', title: 'Fast delivery', desc: 'Your site online within days, not weeks.' },
-                    { icon: '💶', title: 'Fixed price', desc: 'What we quote is what you pay. No surprises.' },
+                    { icon: '💲', title: 'Fixed price', desc: 'One flat price, agreed upfront. No hidden costs.' },
                     { icon: '📍', title: 'Local SEO', desc: 'Built to rank in your local area on Google.' },
                     { icon: '🔒', title: 'You own it', desc: 'All files and logins are yours from day one.' },
                   ].map((pt) => (
@@ -151,7 +151,7 @@ export default function ReviewsEnPage() {
                 <h2>Ready to get started?</h2>
                 <p>Tell us about your project. We reply within 48 hours.</p>
                 <div className="contact-reassurance">
-                  <p>✓ Free, no-commitment quote</p>
+                  <p>✓ Free, no-commitment estimate</p>
                   <p>✓ Reply within 48h</p>
                   <p>✓ All communication in English</p>
                 </div>
