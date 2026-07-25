@@ -25,10 +25,7 @@ const jakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://pixeloria.fr'),
-  title: {
-    default: 'Pixeloria — Création & refonte de sites internet pour artisans et TPE',
-    template: '%s | Pixeloria',
-  },
+  title: 'Pixeloria — Création & refonte de sites internet pour artisans et TPE',
   description:
     'Pixeloria accompagne les artisans et TPE dans la création ou la refonte de sites internet professionnels, rapides, modernes et optimisés pour le SEO.',
   openGraph: {
