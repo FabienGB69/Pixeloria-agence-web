@@ -60,16 +60,31 @@ export default function Footer({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
           <Link href={locale === 'en' ? '/en/legal-notice' : '/mentions-legales'}>{locale === 'en' ? 'Legal notice' : 'Mentions légales'}</Link>
         </nav>
 
-        <nav className="footer-nav" aria-label="Pages locales">
-          <strong>Zones desservies</strong>
-          <Link href="/agence-web-rhone">Agence web Lyon / Rhône</Link>
-          <Link href="/agence-web-isere">Agence web Isère</Link>
-          <Link href="/agence-web-haute-savoie">Agence web Haute-Savoie</Link>
-          <Link href="/agence-web-savoie">Agence web Savoie</Link>
-          <Link href="/agence-web-ain">Agence web Ain</Link>
-          <Link href="/agence-web-drome">Agence web Drôme</Link>
-          <Link href="/agence-web-ardeche">Agence web Ardèche</Link>
-          <Link href="/agence-web-loire">Agence web Loire</Link>
+        <nav className="footer-nav" aria-label={locale === 'en' ? 'Areas served' : 'Pages locales'}>
+          <strong>{locale === 'en' ? 'Areas served' : 'Zones desservies'}</strong>
+          {locale === 'en' ? (
+            <>
+              <Link href="/en/web-agency-rhone">Web agency Lyon / Rhône</Link>
+              <Link href="/en/web-agency-isere">Web agency Isère</Link>
+              <Link href="/en/web-agency-haute-savoie">Web agency Haute-Savoie</Link>
+              <Link href="/en/web-agency-savoie">Web agency Savoie</Link>
+              <Link href="/en/web-agency-ain">Web agency Ain</Link>
+              <Link href="/en/web-agency-drome">Web agency Drôme</Link>
+              <Link href="/en/web-agency-ardeche">Web agency Ardèche</Link>
+              <Link href="/en/web-agency-loire">Web agency Loire</Link>
+            </>
+          ) : (
+            <>
+              <Link href="/agence-web-rhone">Agence web Lyon / Rhône</Link>
+              <Link href="/agence-web-isere">Agence web Isère</Link>
+              <Link href="/agence-web-haute-savoie">Agence web Haute-Savoie</Link>
+              <Link href="/agence-web-savoie">Agence web Savoie</Link>
+              <Link href="/agence-web-ain">Agence web Ain</Link>
+              <Link href="/agence-web-drome">Agence web Drôme</Link>
+              <Link href="/agence-web-ardeche">Agence web Ardèche</Link>
+              <Link href="/agence-web-loire">Agence web Loire</Link>
+            </>
+          )}
         </nav>
 
         <nav className="footer-nav" aria-label="Contact pied de page">

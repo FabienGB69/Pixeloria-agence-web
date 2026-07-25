@@ -37,6 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://pixeloria.fr/en', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: 'https://pixeloria.fr/en/parrainage', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
     { url: 'https://pixeloria.fr/en/pricing', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://pixeloria.fr/en/offers', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: 'https://pixeloria.fr/en/how-it-works', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://pixeloria.fr/en/reviews', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://pixeloria.fr/en/faq', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
@@ -45,5 +46,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://pixeloria.fr/en/terms-of-use', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
     { url: 'https://pixeloria.fr/en/terms-of-sale', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
     { url: 'https://pixeloria.fr/en/privacy-policy', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
+    { url: 'https://pixeloria.fr/en/web-agency-drome', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://pixeloria.fr/en/web-agency-ardeche', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://pixeloria.fr/en/web-agency-isere', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://pixeloria.fr/en/web-agency-rhone', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://pixeloria.fr/en/web-agency-ain', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://pixeloria.fr/en/web-agency-loire', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://pixeloria.fr/en/web-agency-savoie', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://pixeloria.fr/en/web-agency-haute-savoie', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
   ];
 }

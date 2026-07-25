@@ -37,7 +37,7 @@ export const LOCAL_SEO_PAGES: Record<string, LocalSeoData> = {
     faq: [
       {
         question: 'Combien coûte un site web pour une PME dans la Drôme ?',
-        answer: 'Nos offres démarrent à partir de 49 €/mois (formule abonnement) ou à partir de 1 900 € HT pour un audit + refonte one-shot. Le tarif dépend de vos objectifs et du nombre de pages.',
+        answer: 'Notre Site Vitrine démarre à 199 € TTC en paiement unique, livré en 72h. L\'Option Visibilité (49 €/mois) ajoute maintenance, mises à jour et suivi SEO local. Aucun engagement forcé.',
       },
       {
         question: 'Pixeloria se déplace-t-elle dans la Drôme pour des réunions ?',
@@ -141,7 +141,7 @@ export const LOCAL_SEO_PAGES: Record<string, LocalSeoData> = {
     heroTitle: 'Agence web Lyon & Rhône',
     heroSubtitle: 'Création et refonte de sites web pour les entreprises de la métropole lyonnaise.',
     contextParagraph:
-      'Pixeloria est basée à Lyon et accompagne les artisans, TPE et PME du Rhône (69) dans leur développement digital. Dans la deuxième métropole économique de France, la concurrence en ligne est intense : un site performant et bien référencé est indispensable pour sortir du lot. Restaurants, cabinets, boutiques, artisans, startups lyonnaises — nous créons des sites qui génèrent de vrais clients, pas juste du trafic.',
+      'Pixeloria accompagne les artisans, TPE et PME du Rhône (69) dans leur développement digital, immatriculée au RCS de Lyon. Dans la deuxième métropole économique de France, la concurrence en ligne est intense : un site performant et bien référencé est indispensable pour sortir du lot. Restaurants, cabinets, boutiques, artisans, startups lyonnaises — nous créons des sites qui génèrent de vrais clients, pas juste du trafic.',
     sectors: [
       { title: 'Startups & Tech lyonnaises', detail: 'Lyon est le 2ème hub tech français. Sites SaaS, landing pages à fort taux de conversion, tunnels de vente pour les startups de La Part-Dieu et Confluence.' },
       { title: 'Artisans & BTP', detail: 'Plombiers, électriciens, peintres de la métropole — génération de devis en ligne et positionnement local sur Google Maps.' },
@@ -197,7 +197,7 @@ export const LOCAL_SEO_PAGES: Record<string, LocalSeoData> = {
       },
       {
         question: 'Combien coûte un site web pour un artisan dans l\'Ain ?',
-        answer: 'Nos offres démarrent à 49 €/mois en abonnement ou à partir de 1 900 € HT one-shot. Devis gratuit en 48h après analyse de votre situation.',
+        answer: 'Notre Site Vitrine démarre à 199 € TTC en paiement unique, livré en 72h. L\'Option Visibilité (49 €/mois) ajoute maintenance et suivi SEO local. Devis gratuit en 48h après analyse de votre situation.',
       },
     ],
     metaTitle: 'Agence Web Ain (01) — Création de sites pour artisans et PME | Pixeloria',
@@ -273,7 +273,7 @@ export const LOCAL_SEO_PAGES: Record<string, LocalSeoData> = {
       },
       {
         question: 'Quel budget pour un site de chalet ou d\'hôtel en Savoie ?',
-        answer: 'Un site vitrine + réservation basique démarre à partir de 2 500 € HT. Un site hôtelier complet avec moteur de réservation et galerie premium se situe entre 4 000 et 8 000 € HT selon le nombre de chambres.',
+        answer: 'Notre Site Vitrine standard démarre à 199 € TTC. Un hébergeur avec moteur de réservation est un projet sur-mesure : contactez-nous pour un devis gratuit adapté à votre nombre de chambres et à vos besoins.',
       },
     ],
     metaTitle: 'Agence Web Savoie (73) — Création de sites pour tourisme et artisans | Pixeloria',
@@ -307,7 +307,7 @@ export const LOCAL_SEO_PAGES: Record<string, LocalSeoData> = {
       },
       {
         question: 'Quels sont vos tarifs pour un site hôtelier ou de chalet de luxe ?',
-        answer: 'Un site hôtelier premium avec galerie, moteur de réservation et SEO démarre à 5 000 € HT. Chaque projet fait l\'objet d\'un devis personnalisé selon le nombre de pages et les fonctionnalités requises.',
+        answer: 'Notre Site Vitrine standard démarre à 199 € TTC. Un site hôtelier premium avec galerie et moteur de réservation est un projet sur-mesure, avec un devis personnalisé gratuit selon le nombre de pages et les fonctionnalités requises.',
       },
       {
         question: 'Travaillez-vous avec des entreprises du décolletage et de l\'industrie de précision ?',
