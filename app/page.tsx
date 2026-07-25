@@ -10,17 +10,20 @@ import ClientEffects from '@/components/layout/ClientEffects';
 import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Pixeloria — Création & refonte de sites internet pour artisans et TPE',
+  title: 'Pixeloria — Création & refonte de sites pour artisans',
   description:
-    'Création et refonte de sites internet professionnels pour artisans et TPE. Site Artisan à 199 € TTC, livré en 72 h. Option Visibilité à 49 €/mois avec maintenance et SEO inclus.',
+    'Création et refonte de sites internet pour artisans et TPE. Site Artisan à 199 € TTC, livré en 72 h. Maintenance dès 49 €/mois.',
+  alternates: {
+    canonical: 'https://pixeloria.fr/',
+  },
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/',
     siteName: 'Pixeloria',
     locale: 'fr_FR',
-    title: 'Pixeloria — Création & refonte de sites internet pour artisans et TPE',
+    title: 'Pixeloria — Création & refonte de sites pour artisans',
     description:
-      'Création et refonte de sites internet professionnels pour artisans et TPE. Site Artisan à 199 € TTC, livré en 72 h. Option Visibilité à 49 €/mois avec maintenance et SEO inclus.',
+      'Création et refonte de sites internet pour artisans et TPE. Site Artisan à 199 € TTC, livré en 72 h. Maintenance dès 49 €/mois.',
   },
   twitter: {
     card: 'summary_large_image',

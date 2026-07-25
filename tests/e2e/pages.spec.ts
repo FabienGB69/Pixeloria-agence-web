@@ -112,7 +112,9 @@ test.describe('Pages — contenu principal visible', () => {
 
   test('/en/reviews — H1 visible', async ({ page }) => {
     await page.goto('/en/reviews');
-    await expect(page.getByRole('heading', { name: /clients say/i })).toBeVisible();
+    // GoogleReviews component adds its own h2 ("...on Google"), also matching
+    // /clients say/i — scope to h1 to avoid the strict-mode violation.
+    await expect(page.getByRole('heading', { level: 1, name: /clients say/i })).toBeVisible();
   });
 
   test('/en/faq — H1 visible', async ({ page }) => {

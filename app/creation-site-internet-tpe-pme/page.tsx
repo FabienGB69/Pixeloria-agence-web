@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Création de site internet pour artisans et TPE | Pixeloria',
   description:
     'Pixeloria crée des sites internet professionnels pour artisans et TPE. Visibilité locale, génération de contacts, design sur-mesure. Site Artisan à 199 € TTC, livré en 72 h.',
+  alternates: {
+    canonical: 'https://pixeloria.fr/creation-site-internet-tpe-pme',
+  },
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/creation-site-internet-tpe-pme',

@@ -5,12 +5,16 @@ import Footer from '@/components/layout/Footer';
 import Services from '@/components/sections/Services';
 import ComparisonTable from '@/components/sections/ComparisonTable';
 import FAQ from '@/components/sections/FAQ';
+import Contact from '@/components/sections/Contact';
 import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Offre Site Artisan — 199 € TTC | Pixeloria',
   description:
-    'Pixeloria crée votre site professionnel artisan pour 199 € TTC, livré sous 72h. Bouton téléphone, WhatsApp, formulaire de devis, Google Maps, SEO local. Option maintenance 49 €/mois.',
+    'Pixeloria crée votre site professionnel artisan pour 199 € TTC, livré sous 72h. Bouton téléphone, WhatsApp, devis, Google Maps, SEO local.',
+  alternates: {
+    canonical: 'https://pixeloria.fr/offres',
+  },
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/offres',
@@ -77,6 +81,9 @@ export default function OffresPage() {
 
         {/* FAQ */}
         <FAQ />
+
+        {/* Contact — cible des CTA "#contact" de Services/ComparisonTable/FAQ ci-dessus */}
+        <Contact />
 
         {/* CTA final */}
         <section className="section">

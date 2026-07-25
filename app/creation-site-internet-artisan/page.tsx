@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Création de site internet pour artisans | Pixeloria',
   description:
     'Pixeloria crée des sites internet professionnels pour artisans du bâtiment, plombiers, électriciens, peintres, menuisiers et artisans locaux. Design responsive, SEO local de base. Site Artisan à 199 € TTC, livré en 72 h.',
+  alternates: {
+    canonical: 'https://pixeloria.fr/creation-site-internet-artisan',
+  },
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/creation-site-internet-artisan',

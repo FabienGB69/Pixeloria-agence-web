@@ -2,6 +2,7 @@
 
 import { useState, useRef, useCallback } from 'react';
 import { track } from '@vercel/analytics';
+import { trackAuditRequest } from '@/lib/gtm';
 import TurnstileWidget from '@/components/forms/TurnstileWidget';
 
 interface FormState {
@@ -55,6 +56,7 @@ export default function ContactForm() {
 
       if (res.ok) {
         track('contact_form_submit', { offre: (data.offre as string) || 'none' });
+        trackAuditRequest((data.offre as string) || 'none');
         setFormState({ loading: false, success: true, error: null });
       } else {
         let errMsg = 'Une erreur est survenue. Contactez-nous directement.';

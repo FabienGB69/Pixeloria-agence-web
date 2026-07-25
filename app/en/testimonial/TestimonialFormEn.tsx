@@ -32,6 +32,7 @@ export default function TestimonialFormEn() {
       note: raw.note,
       accord: raw.consent,
       _lang: 'en',
+      _hp: raw._hp,
     };
 
     setFormState((prev) => ({ ...prev, loading: true, error: null }));
@@ -79,6 +80,16 @@ export default function TestimonialFormEn() {
 
   return (
     <form className="temoignage-form" noValidate onSubmit={handleSubmit}>
+
+      {/* Honeypot — invisible to humans, filled in by bots */}
+      <input
+        type="text"
+        name="_hp"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        style={{ display: 'none' }}
+      />
 
       <label>
         First name <abbr title="required">*</abbr>

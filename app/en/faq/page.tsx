@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     q: 'How long does it take to build a website?',
-    a: 'A straightforward business website is typically ready within a few days to a couple of weeks, depending on the number of pages and how quickly content is approved.',
+    a: 'For the Artisan Site offer, Pixeloria delivers your website within 72h after receiving your content (logo, photos, texts, opening hours). The process is simple and guided.',
   },
   {
     q: 'Can you guarantee first position on Google?',
@@ -70,9 +70,23 @@ const faqs = [
   },
 ];
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: item.a },
+  })),
+};
+
 export default function FaqEnPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <ClientEffects />
       <HeaderEn />
       <main id="faq">
@@ -132,10 +146,10 @@ export default function FaqEnPage() {
               <div className="contact-text reveal">
                 <span className="eyebrow">Still have questions?</span>
                 <h2>Let&apos;s talk</h2>
-                <p>Send us your question and we will come back to you within 24 hours — clearly and without jargon.</p>
+                <p>Send us your question and we will come back to you within 48 hours — clearly and without jargon.</p>
                 <div className="contact-reassurance">
                   <p>✓ Free, no-commitment quote</p>
-                  <p>✓ Reply within 24h</p>
+                  <p>✓ Reply within 48h</p>
                   <p>✓ All communication in English</p>
                 </div>
               </div>
@@ -147,7 +161,7 @@ export default function FaqEnPage() {
         </section>
 
       </main>
-      <Footer />
+      <Footer locale="en" />
     </>
   );
 }

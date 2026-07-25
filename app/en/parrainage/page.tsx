@@ -429,7 +429,7 @@ export default function ParrainagePageEn() {
             </p>
           </div>
           <Suspense fallback={<div style={{ minHeight: '300px' }} />}>
-            <ReferralCodeSection />
+            <ReferralCodeSection locale="en" />
           </Suspense>
         </div>
       </section>
@@ -530,9 +530,9 @@ export default function ParrainagePageEn() {
             <a href="https://pixeloria.fr/en/pricing" className="footer__link">Pricing</a>
             <a href="https://pixeloria.fr/en/reviews" className="footer__link">Reviews</a>
             <a href="https://pixeloria.fr/en#contact" className="footer__link">Contact</a>
-            <a href="https://pixeloria.fr/legal-notice" className="footer__link">Legal Notice</a>
-            <a href="https://pixeloria.fr/terms" className="footer__link">Terms</a>
-            <a href="https://pixeloria.fr/privacy-policy" className="footer__link">Privacy</a>
+            <a href="https://pixeloria.fr/en/legal-notice" className="footer__link">Legal Notice</a>
+            <a href="https://pixeloria.fr/en/terms-of-use" className="footer__link">Terms</a>
+            <a href="https://pixeloria.fr/en/privacy-policy" className="footer__link">Privacy</a>
           </div>
           <p className="footer__copy">© 2026 Pixeloria. All rights reserved.</p>
         </div>

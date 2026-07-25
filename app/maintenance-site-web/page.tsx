@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Maintenance de site internet pour artisans et TPE | Pixeloria',
   description:
     'Pixeloria assure la maintenance de votre site internet : mises à jour, sécurité, hébergement, sauvegardes et support réactif WhatsApp. À partir de 49 €/mois.',
+  alternates: {
+    canonical: 'https://pixeloria.fr/maintenance-site-web',
+  },
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/maintenance-site-web',
