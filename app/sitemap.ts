@@ -37,6 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://pixeloria.fr/en', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: 'https://pixeloria.fr/en/parrainage', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
     { url: 'https://pixeloria.fr/en/pricing', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://pixeloria.fr/en/offers', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: 'https://pixeloria.fr/en/how-it-works', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://pixeloria.fr/en/reviews', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://pixeloria.fr/en/faq', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
