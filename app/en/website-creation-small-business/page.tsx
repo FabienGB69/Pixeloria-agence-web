@@ -4,18 +4,18 @@ import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
-  title: 'Website Creation for Tradespeople & Small Businesses | Pixeloria',
+  title: 'Website Creation for Contractors & Small Businesses | Pixeloria',
   description:
-    'Pixeloria builds professional websites for tradespeople and small businesses. Local visibility, lead generation, bespoke design. Artisan Site at €199 inc. VAT, delivered in 72h.',
+    'Pixeloria builds professional websites for contractors and local service businesses. Local visibility, lead generation, custom design. Starter Website at $499, live 5 business days after we receive your content.',
   alternates: {
     canonical: 'https://pixeloria.fr/en/website-creation-small-business',
   },
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/en/website-creation-small-business',
-    title: 'Website Creation for Tradespeople & Small Businesses | Pixeloria',
+    title: 'Website Creation for Contractors & Small Businesses | Pixeloria',
     description:
-      'A professional website for tradespeople and small businesses. Responsive, local SEO, contact form. Artisan Site at €199 inc. VAT, delivered in 72h.',
+      'A professional website for contractors and small businesses. Responsive, local SEO, estimate request form. Starter Website at $499, live 5 business days after we receive your content.',
     locale: 'en_GB',
     siteName: 'Pixeloria',
   },
@@ -41,15 +41,15 @@ const benefits = [
   },
   {
     title: 'Local visibility on Google',
-    desc: 'Get found by customers in your service area. A locally-optimised site puts you ahead of competitors with no web presence.',
+    desc: 'Get found by customers in your service area. A locally-optimized site puts you ahead of competitors with no web presence.',
   },
   {
     title: 'Lead generation',
-    desc: 'Form, phone, WhatsApp — every visitor can reach you easily, from any device, at any time.',
+    desc: 'Estimate request form and phone — every visitor can reach you easily, from any device, at any time.',
   },
   {
     title: 'An image that matches your business',
-    desc: 'A bespoke design that reflects your positioning, your values and your industry. Not a generic template, but a site that looks like you.',
+    desc: 'A custom design that reflects your positioning, your values and your industry. Not a generic template, but a site that looks like you.',
   },
 ];
 
@@ -57,7 +57,7 @@ export default function WebsiteCreationSmallBusinessPage() {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'Website creation for tradespeople and small businesses',
+    name: 'Website creation for contractors and small businesses',
     provider: {
       '@type': 'ProfessionalService',
       name: 'Pixeloria',
@@ -65,11 +65,11 @@ export default function WebsiteCreationSmallBusinessPage() {
       telephone: '+33786125313',
       email: 'contact@pixeloria.fr',
     },
-    description: 'Professional website creation for tradespeople and small businesses across all industries.',
+    description: 'Professional website creation for contractors and small businesses across all industries.',
     areaServed: 'France',
     offers: [
-      { '@type': 'Offer', name: 'Artisan Site', price: '199', priceCurrency: 'EUR' },
-      { '@type': 'Offer', name: 'Visibility Option', price: '49', priceCurrency: 'EUR', priceSpecification: { '@type': 'UnitPriceSpecification', referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitCode: 'MON' } } },
+      { '@type': 'Offer', name: 'Starter Website', price: '499', priceCurrency: 'USD' },
+      { '@type': 'Offer', name: 'Website Care & Local Visibility', price: '79', priceCurrency: 'USD', priceSpecification: { '@type': 'UnitPriceSpecification', referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitCode: 'MON' } } },
     ],
   };
 
@@ -88,12 +88,12 @@ export default function WebsiteCreationSmallBusinessPage() {
                 <span aria-hidden="true"> › </span>
                 <span>Website creation for small businesses</span>
               </nav>
-              <span className="eyebrow">Tradespeople & small businesses</span>
-              <h1>Website creation for tradespeople and small businesses</h1>
+              <span className="eyebrow">Contractors & small businesses</span>
+              <h1>Website creation for contractors and small businesses</h1>
               <p className="page-hero-sub">
-                A professional website, readable on mobile, optimised for your
-                local visibility and designed to generate qualified enquiries. Artisan Site
-                at €199 inc. VAT, delivered in 72h.
+                A professional website, built mobile-first, optimized for your
+                local visibility and designed to generate qualified estimate requests. Starter Website
+                at $499, live 5 business days after we receive your content.
               </p>
               <div className="page-hero-actions">
                 <Link href="/en#contact" className="btn btn-primary">
@@ -115,7 +115,7 @@ export default function WebsiteCreationSmallBusinessPage() {
               <span className="eyebrow">Your industry</span>
               <h2>A website tailored to your industry</h2>
               <p className="section-sub">
-                Pixeloria supports tradespeople and small businesses across every industry
+                Pixeloria supports contractors and small businesses across every industry
                 who want a professional, effective online presence.
               </p>
             </div>
@@ -151,7 +151,7 @@ export default function WebsiteCreationSmallBusinessPage() {
           <div className="container">
             <div className="section-heading">
               <span className="eyebrow">What&apos;s included</span>
-              <h2>A showcase website designed for your business</h2>
+              <h2>What&apos;s included in your website</h2>
               <p className="section-sub">
                 Every website Pixeloria builds includes the essentials to
                 present your business and make it easy for customers to reach you.
@@ -159,11 +159,11 @@ export default function WebsiteCreationSmallBusinessPage() {
             </div>
             <div className="includes-grid">
               {[
-                { icon: '🖥️', label: 'Bespoke design', desc: 'A unique design that reflects your visual identity and industry.' },
+                { icon: '🖥️', label: 'Custom design', desc: 'A unique design that reflects your visual identity and industry.' },
                 { icon: '📱', label: 'Mobile-first responsive', desc: 'Clear and pleasant on mobile, tablet and desktop.' },
-                { icon: '📞', label: 'Call & WhatsApp button', desc: 'One tap to reach you from any mobile.' },
-                { icon: '📋', label: 'Contact form', desc: 'Enquiries land straight in your inbox.' },
-                { icon: '🔍', label: 'Basic local SEO', desc: 'Your site is optimised to be found in your geographic area.' },
+                { icon: '📞', label: 'Click-to-call button', desc: 'One tap to reach you from any mobile.' },
+                { icon: '📋', label: 'Estimate request form', desc: 'Estimate requests land straight in your inbox.' },
+                { icon: '🔍', label: 'Basic on-page SEO', desc: 'Your site is optimized to be found in your geographic area.' },
                 { icon: '🔒', label: 'Security & hosting', desc: 'SSL certificate, reliable, high-performance hosting included.' },
               ].map((item) => (
                 <div key={item.label} className="include-item">
@@ -183,44 +183,44 @@ export default function WebsiteCreationSmallBusinessPage() {
               <span className="eyebrow">Pricing</span>
               <h2>A simple offer, no surprises</h2>
               <p className="section-sub">
-                A website delivered in 72h, one-off payment. An optional monthly plan to
-                keep your visibility and your site up to date.
+                The Starter Website is live 5 business days after we receive your content, one-time payment. Add Website Care &amp; Local Visibility to keep your site working every month.
               </p>
             </div>
             <div className="pricing-cards">
               <div className="pricing-card pricing-card--featured">
                 <span className="pricing-badge">Main offer</span>
-                <p className="pricing-label">Artisan Site</p>
-                <p className="pricing-price">€199 <span>inc. VAT</span></p>
-                <p className="pricing-sublabel">One-off payment — delivered in 72h</p>
+                <p className="pricing-label">Starter Website</p>
+                <p className="pricing-price">$499 <span>one-time</span></p>
+                <p className="pricing-sublabel">One-time payment — live 5 business days after we receive your content</p>
                 <ul>
-                  <li>Up to 3 pages</li>
-                  <li>Bespoke responsive design</li>
-                  <li>Contact form</li>
-                  <li>Call and WhatsApp button</li>
-                  <li>Go-live included</li>
-                  <li>Basic technical optimisation</li>
+                  <li>One-page contractor website</li>
+                  <li>Up to 6 sections</li>
+                  <li>Mobile-first design</li>
+                  <li>Click-to-call button</li>
+                  <li>Estimate request form</li>
+                  <li>Basic on-page SEO</li>
                 </ul>
-                <Link href="/en#contact" className="btn btn-primary">Choose Artisan Site →</Link>
+                <Link href="/en#contact" className="btn btn-primary">Get Your Website →</Link>
               </div>
               <div className="pricing-card">
-                <p className="pricing-label">Visibility Option</p>
-                <p className="pricing-price">€49 <span>inc. VAT / month</span></p>
-                <p className="pricing-sublabel">Maintenance, updates and SEO follow-up</p>
+                <p className="pricing-label">Website Care &amp; Local Visibility</p>
+                <p className="pricing-price">$79 <span>/month</span></p>
+                <p className="pricing-sublabel">Add-on to your Starter Website</p>
                 <ul>
-                  <li>Maintenance and updates included</li>
-                  <li>Hosting + domain included</li>
-                  <li>Basic local SEO included</li>
-                  <li>Advanced contact form</li>
-                  <li>Call and WhatsApp button</li>
-                  <li>WhatsApp support within 24h</li>
+                  <li>Hosting management</li>
+                  <li>Technical maintenance</li>
+                  <li>Security updates & backups</li>
+                  <li>Basic local SEO improvements</li>
+                  <li>Content edits</li>
+                  <li>Priority email support</li>
                 </ul>
-                <Link href="/en#contact" className="btn btn-secondary">Add Visibility Option →</Link>
+                <Link href="/en#contact" className="btn btn-secondary">Add Website Care →</Link>
               </div>
             </div>
             <p style={{ textAlign: 'center', marginTop: '1.5rem' }}>
-              <Link href="/en/offers" style={{ color: 'var(--primary)', textDecoration: 'underline', fontSize: '0.9rem' }}>
-                See our full offer details →
+              Want more pages, custom design and technical SEO?{' '}
+              <Link href="/en/pricing" style={{ color: 'var(--primary)', textDecoration: 'underline', fontSize: '0.9rem' }}>
+                See the Growth Website plan →
               </Link>
             </p>
           </div>
@@ -230,7 +230,7 @@ export default function WebsiteCreationSmallBusinessPage() {
         <section className="section section-tinted">
           <div className="container">
             <div className="page-cta-block">
-              <h2>Your tradesperson site in 72h</h2>
+              <h2>Your contractor website, live fast</h2>
               <p>
                 Tell us about your business and your goals. We&apos;ll suggest a
                 solution suited to your industry and your budget, with no commitment.

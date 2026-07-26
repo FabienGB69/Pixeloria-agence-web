@@ -6,7 +6,7 @@ import Footer from '@/components/layout/Footer';
 export const metadata: Metadata = {
   title: 'Local SEO for Tradespeople & Small Businesses | Pixeloria',
   description:
-    'Local Google search visibility for tradespeople and small businesses: Google Business Profile optimisation, local keywords and visibility in your service area.',
+    'Local Google search visibility for tradespeople and small businesses: Google Business Profile optimization, local keywords and visibility in your service area.',
   alternates: {
     canonical: 'https://pixeloria.fr/en/local-seo',
   },
@@ -22,7 +22,7 @@ const jsonLdData = {
     url: 'https://pixeloria.fr',
   },
   description:
-    'Local Google search visibility for tradespeople and small businesses. Google Business Profile optimisation, service-area pages and monthly ranking tracking.',
+    'Local Google search visibility for tradespeople and small businesses. Google Business Profile optimization, service-area pages and monthly ranking tracking.',
   areaServed: {
     '@type': 'Country',
     name: 'France',
@@ -105,12 +105,12 @@ export default function LocalSeoEnPage() {
                 <span className="benefit-num">01</span>
                 <h3>Show up in local searches</h3>
                 <p>
-                  When someone searches your trade + your town, your site needs to be visible. We optimise your presence for these high-potential searches.
+                  When someone searches your trade + your town, your site needs to be visible. We optimize your presence for these high-potential searches.
                 </p>
               </div>
               <div className="benefit-card">
                 <span className="benefit-num">02</span>
-                <h3>Optimised Google Business Profile</h3>
+                <h3>Optimized Google Business Profile</h3>
                 <p>
                   A well-filled-out Google listing means more direct calls and directions. We set up and maintain your profile to maximise its visibility.
                 </p>
@@ -143,7 +143,7 @@ export default function LocalSeoEnPage() {
             <div className="includes-grid">
               <div className="include-item">
                 <span className="include-icon" aria-hidden="true">🗺️</span>
-                <span>Google Business Profile optimisation</span>
+                <span>Google Business Profile optimization</span>
               </div>
               <div className="include-item">
                 <span className="include-icon" aria-hidden="true">🔍</span>
@@ -194,33 +194,33 @@ export default function LocalSeoEnPage() {
           <div className="container">
             <h2 className="section-heading">Local SEO included in our offers</h2>
             <p className="section-sub">
-              Local search optimisation is built into our monthly Visibility Option, at no extra cost.
+              Local SEO is included in our monthly Website Care &amp; Local Visibility plan, at no extra cost.
             </p>
             <div className="pricing-cards">
               <div className="pricing-card pricing-card--featured">
                 <span className="pricing-badge">Main offer</span>
-                <span className="pricing-label">Artisan Site</span>
-                <div className="pricing-price">€199 <span>inc. VAT</span></div>
-                <p className="pricing-sublabel">One-off payment — delivered in 72h</p>
+                <span className="pricing-label">Starter Website</span>
+                <div className="pricing-price">$499</div>
+                <p className="pricing-sublabel">One-time payment — delivered within 5 business days</p>
                 <ul>
-                  <li>Showcase site, up to 3 pages</li>
-                  <li>Bespoke responsive design</li>
-                  <li>Contact form</li>
-                  <li>Go-live included</li>
+                  <li>One-page website, up to 6 sections</li>
+                  <li>Mobile-first responsive design</li>
+                  <li>Estimate request form</li>
+                  <li>Launch included</li>
                 </ul>
                 <Link href="/en/offers" className="btn btn-primary">
                   See details
                 </Link>
               </div>
               <div className="pricing-card">
-                <span className="pricing-label">Visibility Option</span>
-                <div className="pricing-price">€49 <span>/month</span></div>
+                <span className="pricing-label">Website Care &amp; Local Visibility</span>
+                <div className="pricing-price">$79 <span>/month</span></div>
                 <p className="pricing-sublabel">Maintenance, updates and local SEO included</p>
                 <ul>
-                  <li>Google Business Profile optimisation</li>
+                  <li>Google Business Profile optimization</li>
                   <li>Targeted local keywords</li>
                   <li>Monthly maintenance</li>
-                  <li>Responsive support</li>
+                  <li>Monthly performance summary</li>
                 </ul>
                 <Link href="/en/offers" className="btn btn-secondary">
                   See details

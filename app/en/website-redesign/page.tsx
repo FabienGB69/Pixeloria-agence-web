@@ -6,7 +6,7 @@ import Footer from '@/components/layout/Footer';
 export const metadata: Metadata = {
   title: 'Website Redesign for Tradespeople & Small Businesses | Pixeloria',
   description:
-    'Is your current website not generating enough enquiries? Pixeloria redesigns websites for tradespeople and small businesses: modern design, local SEO, mobile-responsive. Artisan Site at €199 inc. VAT, delivered in 72h.',
+    'Is your current website not generating enough leads? Pixeloria redesigns websites for contractors and small businesses: modern design, local SEO, mobile-responsive. Starter Website redesigns from $499, delivered within 5 business days.',
   alternates: {
     canonical: 'https://pixeloria.fr/en/website-redesign',
   },
@@ -15,15 +15,15 @@ export const metadata: Metadata = {
     url: 'https://pixeloria.fr/en/website-redesign',
     title: 'Website Redesign for Tradespeople & Small Businesses | Pixeloria',
     description:
-      'Professional website redesign for tradespeople and small businesses. Modern design, local SEO, responsive. Artisan Site at €199 inc. VAT, delivered in 72h.',
-    locale: 'en_GB',
+      'Professional website redesign for contractors and small businesses. Modern design, local SEO, responsive. Starter Website redesigns from $499, delivered within 5 business days.',
+    locale: 'en_US',
     siteName: 'Pixeloria',
   },
 };
 
 const signals = [
   'Your site isn\'t readable on mobile',
-  'You\'re not getting enough enquiries',
+  'You\'re not getting enough leads',
   'The design looks dated or unprofessional',
   'Your site doesn\'t show up on Google in your area',
   'The information on it is out of date',
@@ -46,7 +46,7 @@ const steps = [
   {
     num: '03',
     title: 'Design and development',
-    desc: 'Your new site is built with a clear, responsive design focused on generating enquiries.',
+    desc: 'Your new site is built with a clear, responsive design focused on generating leads.',
   },
   {
     num: '04',
@@ -89,9 +89,10 @@ export default function WebsiteRedesignPage() {
               <span className="eyebrow">Modernise your online presence</span>
               <h1>Website redesign for tradespeople and small businesses</h1>
               <p className="page-hero-sub">
-                Is your current site not generating enough enquiries, or giving an unprofessional
-                impression? Pixeloria redesigns your site to make it modern, fast, mobile-readable
-                and optimised for local SEO. Artisan Redesign at €199 inc. VAT, delivered in 72h.
+                Is your current site not generating enough leads, or giving an unprofessional
+                impression? Pixeloria redesigns your site to make it modern, fast, mobile-friendly
+                and optimized for local SEO. Website redesigns start at $499, delivered within
+                5 business days.
               </p>
               <div className="page-hero-actions">
                 <Link href="/en#contact" className="btn btn-primary">
@@ -114,7 +115,7 @@ export default function WebsiteRedesignPage() {
               <h2>Signs it&apos;s time to redesign your website</h2>
               <p className="section-sub">
                 If any of these sound familiar, a redesign could make a real
-                difference to the enquiries you receive.
+                difference to the leads you receive.
               </p>
             </div>
             <ul className="signals-grid">
@@ -143,7 +144,7 @@ export default function WebsiteRedesignPage() {
               <span className="eyebrow">What&apos;s included</span>
               <h2>What a Pixeloria redesign includes</h2>
               <p className="section-sub">
-                A redesign isn&apos;t just about changing the colours. It&apos;s a full reset
+                A redesign isn&apos;t just about changing the colors. It&apos;s a full reset
                 of your site&apos;s structure, content and visibility.
               </p>
             </div>
@@ -151,10 +152,10 @@ export default function WebsiteRedesignPage() {
               {[
                 { icon: '🎨', label: 'Bespoke new design', desc: 'A modern design, consistent with your image and your services.' },
                 { icon: '📱', label: 'Mobile-first responsive', desc: 'Mobile takes priority, where most of your customers find you.' },
-                { icon: '⚡', label: 'Optimised speed', desc: 'A fast site, so you don\'t lose impatient visitors.' },
+                { icon: '⚡', label: 'Optimized speed', desc: 'A fast site, so you don\'t lose impatient visitors.' },
                 { icon: '🔍', label: 'Basic local SEO', desc: 'Structure, tags and content designed for your service area.' },
                 { icon: '🔗', label: 'Domain kept', desc: 'Your domain name is kept, with no loss of visibility.' },
-                { icon: '📞', label: 'Optimised CTAs', desc: 'Form, call button, WhatsApp — making contact easy at every step.' },
+                { icon: '📞', label: 'Optimized CTAs', desc: 'Estimate request form and click-to-call — making contact easy at every step.' },
               ].map((item) => (
                 <div key={item.label} className="include-item">
                   <span className="include-icon" aria-hidden="true">{item.icon}</span>
@@ -198,37 +199,37 @@ export default function WebsiteRedesignPage() {
               <span className="eyebrow">Pricing</span>
               <h2>A simple offer to redesign your website</h2>
               <p className="section-sub">
-                A redesign delivered in 72h, one-off payment. An optional monthly plan to
-                keep your visibility and your site up to date.
+                A redesign starting at $499, one-time payment. An optional monthly plan to
+                keep your site updated and locally visible.
               </p>
             </div>
             <div className="pricing-cards">
               <div className="pricing-card pricing-card--featured">
                 <span className="pricing-badge">Main offer</span>
-                <p className="pricing-label">Artisan Site</p>
-                <p className="pricing-price">€199 <span>inc. VAT</span></p>
-                <p className="pricing-sublabel">One-off payment — delivered in 72h</p>
+                <p className="pricing-label">Starter Website</p>
+                <p className="pricing-price">$499</p>
+                <p className="pricing-sublabel">One-time payment — delivered within 5 business days</p>
                 <ul>
-                  <li>Full redesign, up to 3 pages</li>
-                  <li>Bespoke responsive design</li>
+                  <li>One-page site redesign, up to 6 sections</li>
+                  <li>Mobile-first responsive design</li>
                   <li>Your domain kept</li>
-                  <li>Contact form</li>
-                  <li>Basic technical optimisation</li>
+                  <li>Estimate request form</li>
+                  <li>Basic on-page SEO</li>
                 </ul>
-                <Link href="/en#contact" className="btn btn-primary">Choose Artisan Site →</Link>
+                <Link href="/en#contact" className="btn btn-primary">Choose Starter Website →</Link>
               </div>
               <div className="pricing-card">
-                <p className="pricing-label">Visibility Option</p>
-                <p className="pricing-price">€49 <span>inc. VAT / month</span></p>
-                <p className="pricing-sublabel">Maintenance, updates and SEO follow-up</p>
+                <p className="pricing-label">Website Care &amp; Local Visibility</p>
+                <p className="pricing-price">$79 <span>/month</span></p>
+                <p className="pricing-sublabel">Hosting, maintenance and local SEO included</p>
                 <ul>
-                  <li>Maintenance and updates included</li>
-                  <li>Hosting + domain included</li>
-                  <li>Basic local SEO included</li>
-                  <li>Monthly updates included</li>
-                  <li>WhatsApp support within 24h</li>
+                  <li>Hosting management &amp; security updates</li>
+                  <li>Backups and technical maintenance</li>
+                  <li>Content &amp; service-area updates</li>
+                  <li>Basic local SEO improvements</li>
+                  <li>Monthly performance summary — cancel anytime</li>
                 </ul>
-                <Link href="/en#contact" className="btn btn-secondary">Add Visibility Option →</Link>
+                <Link href="/en#contact" className="btn btn-secondary">Add Website Care &amp; Local Visibility →</Link>
               </div>
             </div>
             <p style={{ textAlign: 'center', marginTop: '1.5rem' }}>
@@ -243,7 +244,7 @@ export default function WebsiteRedesignPage() {
         <section className="section section-tinted">
           <div className="container">
             <div className="page-cta-block">
-              <h2>Is your site not generating enough enquiries?</h2>
+              <h2>Is your site not generating enough leads?</h2>
               <p>
                 Send us your current site&apos;s address. We&apos;ll give you fast, free
                 initial feedback on the priority areas to improve.

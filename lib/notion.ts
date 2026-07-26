@@ -32,6 +32,7 @@ export const OFFRE_LABELS: Record<string, string> = {
   integration: 'Intégration web',
   full:        'Projet complet',
   creation:    'Création de site',
+  audit:       'Free website audit',
 };
 
 /**
@@ -124,6 +125,7 @@ export function resolveOffreAndSource(offre: string): {
   const offreLabel =
     OFFRE_LABELS[offre] ?? (safe(offre, 100) || 'Non précisé');
   const source = offre === 'creation' ? 'Tunnel création'
+               : offre === 'audit'    ? 'Tunnel audit'
                : offre               ? 'Tunnel refonte'
                :                       'Contact direct';
   return { offreLabel, source };

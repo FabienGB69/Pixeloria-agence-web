@@ -17,6 +17,11 @@ export const LeadSchema = z.object({
   objectives: z.array(z.string().max(100)).default([]),
   visiteurs:  z.coerce.number().int().nonnegative().nullable().default(null),
   leads:      z.coerce.number().int().nonnegative().nullable().default(null),
+  // Champs optionnels — formulaire "Free Website Audit" (EN)
+  businessCategory: z.string().max(100).default(''),
+  city:             z.string().max(100).default(''),
+  state:            z.string().max(50).default(''),
+  mainGoal:         z.string().max(200).default(''),
 });
 
 export type LeadInput = z.infer<typeof LeadSchema>;

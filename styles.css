@@ -4011,6 +4011,36 @@ select {
   align-items: center;
 }
 
+.audit-checklist {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem 1.5rem;
+  max-width: 640px;
+  margin-bottom: 2rem;
+  color: var(--text-muted);
+}
+
+.audit-checklist li {
+  position: relative;
+  padding-left: 1.4rem;
+  line-height: 1.5;
+}
+
+.audit-checklist li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .audit-checklist {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ============================================================
    BREADCRUMB
 ============================================================ */

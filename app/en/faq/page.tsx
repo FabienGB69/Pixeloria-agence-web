@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/en/faq',
-    locale: 'en_GB',
+    locale: 'en_US',
     siteName: 'Pixeloria',
     title: 'FAQ — Frequently Asked Questions | Pixeloria',
     description: 'Common questions about website creation, pricing, timelines and SEO. Clear, honest answers.',
@@ -21,24 +21,24 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    q: 'How much does a professional website cost?',
-    a: 'Pixeloria offers an Artisan Site at €199 inc. VAT — a one-off payment with delivery in 72h. The optional Visibility Option at €49/month adds maintenance, updates and local follow-up. No forced subscription.',
+    q: 'How much does a website cost?',
+    a: 'Pixeloria websites start at $499 for a one-page site. Multi-page websites start at $899. Ongoing website care starts at $79/month.',
   },
   {
     q: 'Do I own my website?',
     a: "Yes. You own your website, your content and all your login credentials. Pixeloria helps you build it, but it's entirely yours.",
   },
   {
-    q: 'How long does it take to build a website?',
-    a: 'For the Artisan Site offer, Pixeloria delivers your website within 72h after receiving your content (logo, photos, texts, opening hours). The process is simple and guided.',
+    q: 'How long does it take?',
+    a: 'A one-page website can generally be delivered within five business days after we receive all required content (logo, photos, texts, opening hours). Larger websites may take one to three weeks.',
   },
   {
     q: 'Can you guarantee first position on Google?',
     a: 'No. Anyone who promises a #1 ranking is not being honest with you. What Pixeloria delivers is a clean, well-structured, fast website built on sound SEO foundations — the kind Google rewards over time.',
   },
   {
-    q: 'What is included in the Visibility Option at €49/month?',
-    a: 'The Visibility Option includes technical maintenance, regular backups, minor corrections, small text/photo/service updates, contact details and opening hours updates, service area updates, mobile display check, progressive local SEO optimisation, and priority support by message. No commitment — cancel at any time.',
+    q: 'What is included in the Website Care & Local Visibility plan ($79/month)?',
+    a: 'Website Care & Local Visibility includes hosting management, technical maintenance, security updates, backups, content edits, service-area updates, conversion checks, basic local SEO improvements and Search Console monitoring, plus a monthly performance summary. Cancel anytime.',
   },
   {
     q: 'Do you work with English-speaking clients outside France?',
@@ -49,8 +49,8 @@ const faqs = [
     a: 'Yes. Depending on the plan, you can request content updates or manage basic changes yourself. The goal is always to keep the site easy to maintain.',
   },
   {
-    q: 'What is the difference between the Artisan Site and the Visibility Option?',
-    a: 'The Artisan Site (€199 inc. VAT, delivered in 72h) is a one-off payment — your professional website, live, with no subscription. The Visibility Option (€49 inc. VAT/month) is an optional add-on that keeps your site up to date and grows your local visibility over time.',
+    q: 'What is the difference between a one-time website and ongoing website care?',
+    a: 'A one-time website (Starter from $499, Growth from $899) is a one-time payment — your site goes live with no subscription required. Website Care & Local Visibility ($79/month) is an optional plan that keeps your site updated, secure and locally optimized over time. Cancel anytime.',
   },
   {
     q: 'Is a free audit really free?',
@@ -148,7 +148,7 @@ export default function FaqEnPage() {
                 <h2>Let&apos;s talk</h2>
                 <p>Send us your question and we will come back to you within 48 hours — clearly and without jargon.</p>
                 <div className="contact-reassurance">
-                  <p>✓ Free, no-commitment quote</p>
+                  <p>✓ Free, no-commitment estimate</p>
                   <p>✓ Reply within 48h</p>
                   <p>✓ All communication in English</p>
                 </div>

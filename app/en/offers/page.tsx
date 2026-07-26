@@ -4,36 +4,39 @@ import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
 import ContactFormEn from '@/app/en/ContactFormEn';
+import TrackOnMount from '@/components/analytics/TrackOnMount';
 
 export const metadata: Metadata = {
-  title: 'Artisan Site Offer — €199 inc. VAT | Pixeloria',
+  title: 'Website Offers — Starter, Growth & Care Plans | Pixeloria',
   description:
-    'Pixeloria builds your professional tradesperson website for €199 inc. VAT, delivered in 72h. Phone button, WhatsApp, quote form, Google Maps, local SEO.',
+    'Starter Website at $499, Growth Website at $899, and Website Care & Local Visibility at $79/month. Transparent pricing for contractors and local service businesses.',
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/en/offers',
     locale: 'en_GB',
     siteName: 'Pixeloria',
-    title: 'Artisan Site Offer — €199 inc. VAT | Pixeloria',
-    description: 'A professional tradesperson website for €199 inc. VAT, delivered in 72h. Everything included: quote form, phone, WhatsApp, Google Maps, local SEO.',
+    title: 'Website Offers — Starter, Growth & Care Plans | Pixeloria',
+    description: 'Website plans for contractors and local service businesses: Starter Website $499, Growth Website $899, Website Care & Local Visibility $79/month.',
   },
   alternates: { canonical: 'https://pixeloria.fr/en/offers' },
 };
 
-const comparisonRows: { feature: string; artisan: boolean; visibility: boolean }[] = [
-  { feature: 'One-page professional website', artisan: true, visibility: true },
-  { feature: 'Up to 5 sections', artisan: true, visibility: true },
-  { feature: 'Modern, responsive design', artisan: true, visibility: true },
-  { feature: 'Phone & WhatsApp button', artisan: true, visibility: true },
-  { feature: 'Quote form', artisan: true, visibility: true },
-  { feature: 'Google Maps integration', artisan: true, visibility: true },
-  { feature: 'Client reviews', artisan: true, visibility: true },
-  { feature: 'Go-live included', artisan: true, visibility: true },
-  { feature: 'Basic local SEO', artisan: true, visibility: true },
-  { feature: 'Technical maintenance', artisan: false, visibility: true },
-  { feature: 'Minor updates', artisan: false, visibility: true },
-  { feature: 'Progressive SEO optimisation', artisan: false, visibility: true },
-  { feature: 'Priority support', artisan: false, visibility: true },
+const comparisonRows: { feature: string; starter: boolean; growth: boolean }[] = [
+  { feature: 'One-page website', starter: true, growth: false },
+  { feature: 'Up to 5 pages', starter: false, growth: true },
+  { feature: 'Mobile-first, responsive design', starter: true, growth: true },
+  { feature: 'Custom conversion-focused design', starter: false, growth: true },
+  { feature: 'Individual service pages', starter: false, growth: true },
+  { feature: 'Service-area section', starter: true, growth: true },
+  { feature: 'Estimate / lead-generation forms', starter: true, growth: true },
+  { feature: 'Customer reviews', starter: true, growth: true },
+  { feature: 'Project gallery', starter: true, growth: true },
+  { feature: 'On-page SEO', starter: true, growth: true },
+  { feature: 'Technical SEO & keyword mapping', starter: false, growth: true },
+  { feature: 'Schema markup', starter: false, growth: true },
+  { feature: 'Analytics setup', starter: true, growth: true },
+  { feature: 'Google Search Console setup', starter: false, growth: true },
+  { feature: 'Website launch', starter: true, growth: true },
 ];
 
 function Cell({ value }: { value: boolean }) {
@@ -55,6 +58,7 @@ function Cell({ value }: { value: boolean }) {
 export default function OffersEnPage() {
   return (
     <>
+      <TrackOnMount page="offers" />
       <ClientEffects />
       <HeaderEn />
       <main>
@@ -68,9 +72,9 @@ export default function OffersEnPage() {
                 <span>Offers</span>
               </nav>
               <span className="eyebrow">Pricing &amp; offer</span>
-              <h1>A professional website for tradespeople, delivered in 72h</h1>
+              <h1>Websites built to turn visitors into booked jobs</h1>
               <p className="page-hero-sub">
-                Pixeloria helps tradespeople and micro-businesses get a clear, effective website to receive more quote requests. Fixed price at €199 inc. VAT, no forced subscription, no hidden fees.
+                Pixeloria builds websites for contractors and local service businesses that generate estimate requests and phone calls. Choose Starter or Growth, then add ongoing care to keep your site working for you.
               </p>
             </div>
           </div>
@@ -81,78 +85,95 @@ export default function OffersEnPage() {
           <div className="container">
             <div className="section-heading reveal">
               <span className="eyebrow">Our offer</span>
-              <h2>A professional website for tradespeople, delivered in 72h</h2>
+              <h2>Website plans for contractors and local service businesses</h2>
               <p className="section-sub">
-                Pixeloria helps tradespeople and micro-businesses get a clear, effective website to receive more quote requests. One-off payment, no forced subscription.
+                Two website options, each a single upfront price, plus an optional monthly care plan. No long-term contract required to launch.
               </p>
             </div>
 
-            <div className="pricing-cards pricing-cards--two">
-              <div className="pricing-card pricing-card--featured">
-                <span className="pricing-badge">The artisan offer</span>
-                <p className="pricing-label">Artisan Site</p>
-                <p className="pricing-price">€199 <span>inc. VAT</span></p>
-                <p className="pricing-sublabel">One-off payment — delivered in 72h</p>
+            <div className="pricing-cards pricing-cards--three">
+              <div className="pricing-card">
+                <p className="pricing-label">Starter Website</p>
+                <p className="pricing-price">$499 <span>one-time</span></p>
+                <p className="pricing-sublabel">One-time payment — live 5 business days after we receive your content</p>
                 <p className="pricing-accroche">
-                  A professional website designed to generate quote requests, delivered in 72h after we receive your content.
+                  A one-page website built to turn visitors into estimate requests and phone calls.
                 </p>
                 <p className="pricing-list-title">Included:</p>
                 <ul>
-                  <li>One-page professional website</li>
-                  <li>Up to 5 sections</li>
-                  <li>Modern design</li>
-                  <li>Mobile version</li>
-                  <li>Phone button</li>
-                  <li>WhatsApp button</li>
-                  <li>Quote form</li>
-                  <li>Google Maps</li>
-                  <li>Services list</li>
-                  <li>Service area</li>
-                  <li>Client reviews / trust signals</li>
-                  <li>Simple legal notices</li>
-                  <li>Go-live</li>
-                  <li>Basic local SEO optimisation</li>
+                  <li>One-page contractor website</li>
+                  <li>Up to 6 sections</li>
+                  <li>Mobile-first design</li>
+                  <li>Click-to-call button</li>
+                  <li>Estimate request form</li>
+                  <li>Service-area section</li>
+                  <li>Services section</li>
+                  <li>Customer review section</li>
+                  <li>Project gallery</li>
+                  <li>Basic on-page SEO</li>
+                  <li>Analytics setup</li>
+                  <li>Website launch</li>
                 </ul>
-                <p className="pricing-note">Ready-to-go one-page website, live, mobile- and Google-optimised.</p>
-                <a href="#contact" className="btn btn-primary">Start my website →</a>
+                <p className="pricing-note">Ready-to-launch website, live, mobile-optimized and built to generate calls.</p>
+                <a href="#contact" className="btn btn-primary">Get Your Website →</a>
+              </div>
+
+              <div className="pricing-card pricing-card--featured">
+                <span className="pricing-badge">Most Popular</span>
+                <p className="pricing-label">Growth Website</p>
+                <p className="pricing-price">$899 <span>one-time</span></p>
+                <p className="pricing-sublabel">One-time payment — live in 1–3 weeks depending on scope</p>
+                <p className="pricing-accroche">
+                  A multi-page website built for contractors and home-service businesses who want a stronger local search presence.
+                </p>
+                <p className="pricing-list-title">Included:</p>
+                <ul>
+                  <li>Up to 5 pages</li>
+                  <li>Custom conversion-focused design</li>
+                  <li>Individual service pages</li>
+                  <li>Service-area structure</li>
+                  <li>Lead-generation forms</li>
+                  <li>Customer reviews</li>
+                  <li>Project gallery</li>
+                  <li>Technical SEO</li>
+                  <li>Keyword mapping</li>
+                  <li>Schema markup</li>
+                  <li>Analytics setup</li>
+                  <li>Google Search Console setup</li>
+                  <li>Website launch</li>
+                </ul>
+                <p className="pricing-note">Built to rank locally and convert visitors into booked jobs.</p>
+                <a href="#contact" className="btn btn-primary">Start My Website →</a>
               </div>
 
               <div className="pricing-card">
-                <p className="pricing-label">Visibility Option</p>
-                <p className="pricing-price">€49 <span>inc. VAT / month</span></p>
-                <p className="pricing-sublabel">Add-on to the Artisan Site</p>
+                <p className="pricing-label">Website Care &amp; Local Visibility</p>
+                <p className="pricing-price">$79 <span>/month</span></p>
+                <p className="pricing-sublabel">Add-on to either website</p>
                 <p className="pricing-accroche">
-                  Your site stays up to date, secure and optimised, without you having to think about it.
-                </p>
-                <p className="pricing-sub-accroche">
-                  Monthly peace of mind, so your site never sits abandoned after launch.
+                  Your site stays online, secure and up to date, with ongoing local SEO support.
                 </p>
                 <p className="pricing-list-title">Included:</p>
                 <ul>
-                  <li>Technical site maintenance</li>
-                  <li>Regular backups</li>
-                  <li>Minor corrections</li>
-                  <li>Small text, photo or service updates</li>
-                  <li>Contact details, hours or call-button updates</li>
-                  <li>Add or update service areas</li>
-                  <li>Mobile display checks</li>
-                  <li>Progressive local SEO optimisation</li>
-                  <li>Priority support by message</li>
+                  <li>Hosting management</li>
+                  <li>Technical maintenance</li>
+                  <li>Security updates</li>
+                  <li>Backups</li>
+                  <li>Content edits</li>
+                  <li>Service-area updates</li>
+                  <li>Conversion checks</li>
+                  <li>Basic local SEO improvements</li>
+                  <li>Search Console monitoring</li>
+                  <li>Monthly performance summary</li>
                 </ul>
-                <p className="pricing-list-title pricing-list-title--excluded">Not included:</p>
-                <ul className="pricing-excluded">
-                  <li>Full site redesign</li>
-                  <li>Creation of complex new pages</li>
-                  <li>Google Ads, social media management, blog articles</li>
-                </ul>
-                <p className="pricing-note">No commitment · Cancel any time.</p>
-                <a href="#contact" className="btn btn-secondary">Add Visibility Option →</a>
+                <p className="pricing-note">Cancel anytime — no long-term contract.</p>
+                <a href="#contact" className="btn btn-secondary">Add Website Care →</a>
               </div>
             </div>
 
             <p className="pricing-disclaimer reveal">
-              All prices are inc. VAT · VAT applicable depending on your situation ·{' '}
-              <a href="#contact">Contact us</a> for a free personalised quote.
+              All prices are in USD ·{' '}
+              <a href="#contact">Contact us</a> for a free, no-obligation estimate.
             </p>
           </div>
           <div className="container">
@@ -165,8 +186,8 @@ export default function OffersEnPage() {
           <div className="container">
             <div className="section-heading reveal">
               <span className="eyebrow">Comparison</span>
-              <h2>What&apos;s included</h2>
-              <p className="section-sub">Everything is included in the base offer. The Visibility Option adds monthly follow-up.</p>
+              <h2>Starter Website vs Growth Website</h2>
+              <p className="section-sub">Compare what&apos;s included in each website plan. Add Website Care &amp; Local Visibility to either one.</p>
             </div>
 
             <div className="ctable-wrap reveal">
@@ -174,16 +195,16 @@ export default function OffersEnPage() {
                 <thead>
                   <tr>
                     <th className="ctable-feature-col">Feature</th>
-                    <th>Artisan Site<br /><span className="ctable-price">€199 inc. VAT</span></th>
-                    <th className="ctable-th--highlight">Visibility Option<br /><span className="ctable-price">+€49/month</span></th>
+                    <th>Starter Website<br /><span className="ctable-price">$499 one-time</span></th>
+                    <th className="ctable-th--highlight">Growth Website<br /><span className="ctable-price">$899 one-time</span></th>
                   </tr>
                 </thead>
                 <tbody>
                   {comparisonRows.map((row) => (
                     <tr key={row.feature}>
                       <td className="ctable-feature">{row.feature}</td>
-                      <Cell value={row.artisan} />
-                      <Cell value={row.visibility} />
+                      <Cell value={row.starter} />
+                      <Cell value={row.growth} />
                     </tr>
                   ))}
                 </tbody>
@@ -207,7 +228,7 @@ export default function OffersEnPage() {
             <div className="reassurance-band">
               <div className="reassurance-item">
                 <strong>No hidden commitment</strong>
-                <p>Terms are clear before launch. Cancel with one month&apos;s notice.</p>
+                <p>Terms are clear before launch. Cancel your Website Care plan anytime, no notice period required.</p>
               </div>
               <div className="reassurance-item">
                 <strong>Turnkey delivery</strong>
@@ -215,7 +236,7 @@ export default function OffersEnPage() {
               </div>
               <div className="reassurance-item">
                 <strong>Responsive support</strong>
-                <p>A question? An issue? We reply via WhatsApp within 24 business hours.</p>
+                <p>A question? An issue? We offer priority email support for every project.</p>
               </div>
             </div>
           </div>
@@ -230,7 +251,7 @@ export default function OffersEnPage() {
                 <h2>Not sure yet? We answer every question.</h2>
                 <p>Request a free audit of your situation. We&apos;ll point you to the package best suited to your business and budget.</p>
                 <div className="contact-reassurance">
-                  <p>✓ Free, no-commitment quote</p>
+                  <p>✓ Free, no-commitment consultation</p>
                   <p>✓ Reply within 48h</p>
                   <p>✓ All communication in English</p>
                 </div>

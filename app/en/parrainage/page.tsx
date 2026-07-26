@@ -475,7 +475,7 @@ export default function ParrainagePageEn() {
               </li>
               <li className="conditions__item">
                 <span className="conditions__item-icon">✦</span>
-                <p>The referral code must be used <strong>before validation of the quote or Stripe payment</strong>.</p>
+                <p>The referral code must be used <strong>before validation of the estimate or Stripe payment</strong>.</p>
               </li>
               <li className="conditions__item">
                 <span className="conditions__item-icon">✦</span>

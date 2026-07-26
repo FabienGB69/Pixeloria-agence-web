@@ -75,6 +75,20 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
 
   const data = parsed.data;
 
+  // 5bis. Formulaire "Free Website Audit" (EN) — champs additionnels sans
+  // colonnes Notion dédiées : ajoutés au message pour rester visibles
+  // dans Notion et dans l'email de notification.
+  const auditExtras = [
+    data.businessCategory && `Business category: ${data.businessCategory}`,
+    data.city             && `City: ${data.city}`,
+    data.state            && `State: ${data.state}`,
+    data.mainGoal         && `Main goal: ${data.mainGoal}`,
+  ].filter(Boolean).join('\n');
+
+  if (auditExtras) {
+    data.message = [data.message, auditExtras].filter(Boolean).join('\n\n').slice(0, 2000);
+  }
+
   // 6. Vérification des variables d'environnement Notion
   if (!process.env.NOTION_TOKEN || !process.env.NOTION_DB_ID) {
     console.error('[submit-lead] Missing NOTION_TOKEN or NOTION_DB_ID');

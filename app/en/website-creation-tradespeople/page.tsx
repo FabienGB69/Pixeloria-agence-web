@@ -4,18 +4,18 @@ import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
-  title: 'Website Creation for Tradespeople | Pixeloria',
+  title: 'Website Creation for Contractors & Tradespeople | Pixeloria',
   description:
-    'Pixeloria builds professional websites for builders, plumbers, electricians, painters, joiners and local tradespeople. Responsive design, basic local SEO. Artisan Site at €199 inc. VAT, delivered in 72h.',
+    'Pixeloria builds professional websites for builders, plumbers, electricians, painters, joiners and other contractors. Responsive design, basic local SEO. Starter Website at $499, live 5 business days after we receive your content.',
   alternates: {
     canonical: 'https://pixeloria.fr/en/website-creation-tradespeople',
   },
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/en/website-creation-tradespeople',
-    title: 'Website Creation for Tradespeople | Pixeloria',
+    title: 'Website Creation for Contractors & Tradespeople | Pixeloria',
     description:
-      'A professional website for tradespeople. Responsive, local SEO, contact form. Artisan Site at €199 inc. VAT, delivered in 72h.',
+      'A professional website for contractors. Responsive, local SEO, estimate request form. Starter Website at $499, live 5 business days after we receive your content.',
     locale: 'en_GB',
     siteName: 'Pixeloria',
   },
@@ -30,15 +30,15 @@ const tradeTypes = [
 const benefits = [
   {
     title: 'Get found by local customers',
-    desc: 'A customer looking for a plumber or electrician in their town usually starts on Google. A locally-optimised site gives you real visibility.',
+    desc: 'A customer looking for a plumber or electrician in their town usually starts on Google. A locally-optimized site gives you real visibility.',
   },
   {
     title: 'Present your services clearly',
-    desc: 'Your service area, specialities, indicative pricing, certifications — everything that reassures a prospect before they call you.',
+    desc: 'Your service area, specialties, indicative pricing, certifications — everything that reassures a prospect before they call you.',
   },
   {
-    title: 'Receive enquiries directly',
-    desc: 'Form, direct call button, WhatsApp button — every visitor has a simple way to reach you, from any device.',
+    title: 'Receive inquiries directly',
+    desc: 'Estimate request form and direct call button — every visitor has a simple way to reach you, from any device.',
   },
   {
     title: 'Showcase your work',
@@ -50,7 +50,7 @@ export default function WebsiteCreationTradespeoplePage() {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'Website creation for tradespeople',
+    name: 'Website creation for contractors and tradespeople',
     provider: {
       '@type': 'ProfessionalService',
       name: 'Pixeloria',
@@ -58,11 +58,11 @@ export default function WebsiteCreationTradespeoplePage() {
       telephone: '+33786125313',
       email: 'contact@pixeloria.fr',
     },
-    description: 'Professional website creation for tradespeople and local independent professionals.',
+    description: 'Professional website creation for contractors and local independent tradespeople.',
     areaServed: 'France',
     offers: [
-      { '@type': 'Offer', name: 'Artisan Site', price: '199', priceCurrency: 'EUR' },
-      { '@type': 'Offer', name: 'Visibility Option', price: '49', priceCurrency: 'EUR', priceSpecification: { '@type': 'UnitPriceSpecification', referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitCode: 'MON' } } },
+      { '@type': 'Offer', name: 'Starter Website', price: '499', priceCurrency: 'USD' },
+      { '@type': 'Offer', name: 'Website Care & Local Visibility', price: '79', priceCurrency: 'USD', priceSpecification: { '@type': 'UnitPriceSpecification', referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitCode: 'MON' } } },
     ],
   };
 
@@ -81,12 +81,12 @@ export default function WebsiteCreationTradespeoplePage() {
                 <span aria-hidden="true"> › </span>
                 <span>Website creation for tradespeople</span>
               </nav>
-              <span className="eyebrow">Tradespeople & independents</span>
-              <h1>Website creation for tradespeople</h1>
+              <span className="eyebrow">Contractors & tradespeople</span>
+              <h1>Website creation for contractors</h1>
               <p className="page-hero-sub">
-                A professional website, readable on mobile and optimised to be found by your
-                local customers. Contact form, call button, project gallery.
-                Artisan Site at €199 inc. VAT, delivered in 72h. Visibility Option at €49/month.
+                A professional website, built mobile-first and optimized to be found by your
+                local customers. Estimate request form, click-to-call button, project gallery.
+                Starter Website at $499, live 5 business days after we receive your content. Add Website Care & Local Visibility at $79/month.
               </p>
               <div className="page-hero-actions">
                 <Link href="/en#contact" className="btn btn-primary">
@@ -108,8 +108,8 @@ export default function WebsiteCreationTradespeoplePage() {
               <span className="eyebrow">Your trade</span>
               <h2>A website tailored to your trade</h2>
               <p className="section-sub">
-                Pixeloria supports tradespeople across every trade who want a
-                professional online presence without a big investment.
+                Pixeloria supports contractors across every trade who want a
+                professional online presence built to generate calls and estimate requests.
               </p>
             </div>
             <ul className="artisan-types-grid">
@@ -126,7 +126,7 @@ export default function WebsiteCreationTradespeoplePage() {
           <div className="container">
             <div className="section-heading">
               <span className="eyebrow">Why a website?</span>
-              <h2>What a good website brings to a tradesperson</h2>
+              <h2>What a good website brings to a contractor</h2>
             </div>
             <div className="benefits-grid">
               {benefits.map((b, i) => (
@@ -145,7 +145,7 @@ export default function WebsiteCreationTradespeoplePage() {
           <div className="container">
             <div className="section-heading">
               <span className="eyebrow">What&apos;s included</span>
-              <h2>A showcase website designed for tradespeople</h2>
+              <h2>What&apos;s included in your website</h2>
               <p className="section-sub">
                 Every website Pixeloria builds includes the essentials to
                 present your business and make it easy for customers to reach you.
@@ -155,10 +155,10 @@ export default function WebsiteCreationTradespeoplePage() {
               {[
                 { icon: '📱', label: 'Responsive design', desc: 'Readable on mobile, tablet and desktop.' },
                 { icon: '📞', label: 'Direct call button', desc: 'One tap to call you from a mobile.' },
-                { icon: '💬', label: 'Contact form', desc: 'Enquiries land straight in your inbox.' },
+                { icon: '💬', label: 'Estimate request form', desc: 'Estimate requests land straight in your inbox.' },
                 { icon: '📸', label: 'Project gallery', desc: 'Showcase your past projects with photos.' },
-                { icon: '⭐', label: 'Google reviews built in', desc: 'Display your client reviews to reassure prospects.' },
-                { icon: '📍', label: 'Basic local SEO', desc: 'Your site is optimised for your service area.' },
+                { icon: '⭐', label: 'Customer review section', desc: 'Display your customer reviews to reassure prospects.' },
+                { icon: '📍', label: 'Basic on-page SEO', desc: 'Your site is optimized for your service area.' },
               ].map((item) => (
                 <div key={item.label} className="include-item">
                   <span className="include-icon" aria-hidden="true">{item.icon}</span>
@@ -177,44 +177,44 @@ export default function WebsiteCreationTradespeoplePage() {
               <span className="eyebrow">Pricing</span>
               <h2>A simple offer, no surprises</h2>
               <p className="section-sub">
-                A website delivered in 72h, one-off payment. An optional monthly plan to
-                keep your visibility and your site up to date.
+                The Starter Website is live 5 business days after we receive your content, one-time payment. Add Website Care &amp; Local Visibility to keep your site working every month.
               </p>
             </div>
             <div className="pricing-cards">
               <div className="pricing-card pricing-card--featured">
                 <span className="pricing-badge">Main offer</span>
-                <p className="pricing-label">Artisan Site</p>
-                <p className="pricing-price">€199 <span>inc. VAT</span></p>
-                <p className="pricing-sublabel">One-off payment — delivered in 72h</p>
+                <p className="pricing-label">Starter Website</p>
+                <p className="pricing-price">$499 <span>one-time</span></p>
+                <p className="pricing-sublabel">One-time payment — live 5 business days after we receive your content</p>
                 <ul>
-                  <li>Up to 3 pages</li>
-                  <li>Bespoke responsive design</li>
-                  <li>Contact form</li>
-                  <li>Direct call button</li>
-                  <li>Go-live included</li>
-                  <li>Basic technical optimisation</li>
+                  <li>One-page contractor website</li>
+                  <li>Up to 6 sections</li>
+                  <li>Mobile-first design</li>
+                  <li>Click-to-call button</li>
+                  <li>Estimate request form</li>
+                  <li>Basic on-page SEO</li>
                 </ul>
-                <Link href="/en#contact" className="btn btn-primary">Choose Artisan Site →</Link>
+                <Link href="/en#contact" className="btn btn-primary">Get Your Website →</Link>
               </div>
               <div className="pricing-card">
-                <p className="pricing-label">Visibility Option</p>
-                <p className="pricing-price">€49 <span>inc. VAT / month</span></p>
-                <p className="pricing-sublabel">Maintenance, updates and SEO follow-up</p>
+                <p className="pricing-label">Website Care &amp; Local Visibility</p>
+                <p className="pricing-price">$79 <span>/month</span></p>
+                <p className="pricing-sublabel">Add-on to your Starter Website</p>
                 <ul>
-                  <li>Maintenance and updates included</li>
-                  <li>Hosting + domain included</li>
-                  <li>Project gallery</li>
-                  <li>Google reviews built in</li>
-                  <li>Basic local SEO included</li>
-                  <li>WhatsApp support within 24h</li>
+                  <li>Hosting management</li>
+                  <li>Technical maintenance</li>
+                  <li>Security updates & backups</li>
+                  <li>Content edits</li>
+                  <li>Basic local SEO improvements</li>
+                  <li>Priority email support</li>
                 </ul>
-                <Link href="/en#contact" className="btn btn-secondary">Add Visibility Option →</Link>
+                <Link href="/en#contact" className="btn btn-secondary">Add Website Care →</Link>
               </div>
             </div>
             <p style={{ textAlign: 'center', marginTop: '1.5rem' }}>
-              <Link href="/en/offers" style={{ color: 'var(--primary)', textDecoration: 'underline', fontSize: '0.9rem' }}>
-                See our full offer details →
+              Want more pages, custom design and technical SEO?{' '}
+              <Link href="/en/pricing" style={{ color: 'var(--primary)', textDecoration: 'underline', fontSize: '0.9rem' }}>
+                See the Growth Website plan →
               </Link>
             </p>
           </div>

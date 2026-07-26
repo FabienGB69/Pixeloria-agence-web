@@ -8,14 +8,14 @@ import ContactFormEn from '@/app/en/ContactFormEn';
 export const metadata: Metadata = {
   title: 'About — The Agency Behind Your Website | Pixeloria',
   description:
-    'Pixeloria is a web agency specialising in professional websites for tradespeople and micro-businesses. Based in France, working in English.',
+    'Pixeloria is a France-based web design studio serving contractors and local service businesses remotely across the United States.',
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/en/about',
-    locale: 'en_GB',
+    locale: 'en_US',
     siteName: 'Pixeloria',
     title: 'About — The Agency Behind Your Website | Pixeloria',
-    description: 'Pixeloria builds professional websites for tradespeople and micro-businesses. Based in France, working in English.',
+    description: 'Pixeloria builds professional websites for contractors and local service businesses across the United States, remotely from France.',
   },
   alternates: { canonical: 'https://pixeloria.fr/en/about' },
 };
@@ -64,7 +64,7 @@ const values = [
     number: '02',
     title: 'Concrete results',
     description:
-      "We do not build pretty sites. We build sites that generate calls, quote requests and new clients.",
+      "We do not build pretty sites. We build sites that generate phone calls, estimate requests and new clients.",
   },
   {
     number: '03',
@@ -88,7 +88,7 @@ export default function AboutEnPage() {
               <span className="eyebrow">About</span>
               <h1>The agency behind your web projects</h1>
               <p className="page-hero-sub">
-                Pixeloria helps tradespeople, local retailers and micro-businesses build a serious online presence — without drowning in technical complexity.
+                Pixeloria helps contractors, local retailers and small businesses build a serious online presence — without drowning in technical complexity.
               </p>
               <div className="page-hero-actions">
                 <a href="#contact" className="btn btn-primary">Discuss my project →</a>
@@ -98,14 +98,14 @@ export default function AboutEnPage() {
           </div>
         </section>
 
-        {/* ── ENGLISH-SPEAKING CLIENTS ── */}
+        {/* ── REMOTE US CLIENTS ── */}
         <section className="section section-dark" id="english-clients">
           <div className="container">
             <div className="section-heading reveal">
               <span className="eyebrow">Working together</span>
-              <h2>Working with English-speaking clients</h2>
+              <h2>A France-based studio serving US contractors remotely</h2>
               <p className="section-sub">
-                Based in France, working in English. If you are an expat, an international business owner or an English-speaking brand operating in France or across Europe — you are in the right place.
+                Pixeloria is a France-based web design studio serving contractors and local service businesses remotely across the United States — European design standards, direct communication and a streamlined remote process.
               </p>
             </div>
 
@@ -126,13 +126,13 @@ export default function AboutEnPage() {
                 },
                 {
                   icon: '📄',
-                  title: 'English website content',
-                  body: 'We build bilingual or English-only sites tailored to your target audience — whether local French customers, international visitors or both.',
+                  title: 'Built for your service area',
+                  body: 'Every site is structured around your services, your service area and how local customers actually search for a contractor.',
                 },
                 {
                   icon: '🌐',
-                  title: 'International SEO',
-                  body: 'Whether you want to rank in the UK, France or both, we set up the correct hreflang, market-specific keywords and local search signals.',
+                  title: 'Local search structure',
+                  body: 'We set up the technical basics — service pages, service-area structure and schema markup — to support your visibility in local search.',
                 },
                 {
                   icon: '🛡️',
@@ -204,7 +204,7 @@ export default function AboutEnPage() {
                 <h2>Let&apos;s talk about your project</h2>
                 <p>Tell us about your business and what you need. We reply within 48h.</p>
                 <div className="contact-reassurance">
-                  <p>✓ Free, no-commitment quote</p>
+                  <p>✓ Free, no-commitment estimate</p>
                   <p>✓ Reply within 48h</p>
                   <p>✓ All communication in English</p>
                 </div>

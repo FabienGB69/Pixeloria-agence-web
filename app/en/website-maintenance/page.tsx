@@ -6,7 +6,7 @@ import Footer from '@/components/layout/Footer';
 export const metadata: Metadata = {
   title: 'Website Maintenance for Tradespeople & Small Businesses | Pixeloria',
   description:
-    'Pixeloria handles your website maintenance: updates, security, hosting, backups and responsive WhatsApp support. From €49/month.',
+    'Pixeloria handles your website maintenance: hosting, security updates, backups and content updates. Website Care & Local Visibility from $79/month.',
   alternates: {
     canonical: 'https://pixeloria.fr/en/website-maintenance',
   },
@@ -15,8 +15,8 @@ export const metadata: Metadata = {
     url: 'https://pixeloria.fr/en/website-maintenance',
     title: 'Website Maintenance for Tradespeople & Small Businesses | Pixeloria',
     description:
-      'Website maintenance: updates, security, hosting, WhatsApp support within 24h. From €49/month.',
-    locale: 'en_GB',
+      'Website maintenance: hosting, security updates, backups and monthly reporting. Website Care & Local Visibility from $79/month.',
+    locale: 'en_US',
     siteName: 'Pixeloria',
   },
 };
@@ -44,8 +44,8 @@ const benefits = [
     desc: 'No surprise invoices. Hosting and the domain name are managed and included by Pixeloria.',
   },
   {
-    title: 'WhatsApp support within 24h',
-    desc: 'A question, an issue? Message us on WhatsApp and we reply quickly.',
+    title: 'Content & service-area updates',
+    desc: 'Text edits, service-area updates and small changes are included in your plan.',
   },
 ];
 
@@ -61,14 +61,14 @@ export default function WebsiteMaintenancePage() {
       telephone: '+33786125313',
       email: 'contact@pixeloria.fr',
     },
-    description: 'Website maintenance for tradespeople and small businesses: updates, security, hosting, backups and WhatsApp support.',
+    description: 'Website maintenance for tradespeople and small businesses: hosting, security updates, backups and monthly reporting.',
     areaServed: 'France',
     offers: [
       {
         '@type': 'Offer',
-        name: 'Visibility Option',
-        price: '49',
-        priceCurrency: 'EUR',
+        name: 'Website Care & Local Visibility',
+        price: '79',
+        priceCurrency: 'USD',
         priceSpecification: {
           '@type': 'UnitPriceSpecification',
           referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitCode: 'MON' },
@@ -181,8 +181,8 @@ export default function WebsiteMaintenancePage() {
                 { icon: '☁️', label: 'Hosting included', desc: 'High-performance hosting managed by Pixeloria, at no extra cost.' },
                 { icon: '🌐', label: 'Domain included', desc: 'Your domain name is renewed automatically, with no disruption.' },
                 { icon: '💾', label: 'Regular backups', desc: 'Your data is backed up regularly for a quick restore if needed.' },
-                { icon: '💬', label: '24h WhatsApp support', desc: 'Contact us directly on WhatsApp, reply within 24 business hours.' },
-                { icon: '📊', label: 'Monthly activity report', desc: 'A clear monthly summary: visits, actions taken, site status.' },
+                { icon: '📝', label: 'Content edits included', desc: 'Text, image and service-area updates included, so your site stays accurate.' },
+                { icon: '📊', label: 'Monthly performance summary', desc: 'A clear monthly summary: visits, actions taken, site status.' },
               ].map((item) => (
                 <div key={item.label} className="include-item">
                   <span className="include-icon" aria-hidden="true">{item.icon}</span>
@@ -207,19 +207,18 @@ export default function WebsiteMaintenancePage() {
             <div className="pricing-cards">
               <div className="pricing-card pricing-card--featured">
                 <span className="pricing-badge">Monthly option</span>
-                <p className="pricing-label">Visibility Option</p>
-                <p className="pricing-price">€49 <span>inc. VAT / month</span></p>
-                <p className="pricing-sublabel">Maintenance, updates and SEO follow-up</p>
+                <p className="pricing-label">Website Care &amp; Local Visibility</p>
+                <p className="pricing-price">$79 <span>/month</span></p>
+                <p className="pricing-sublabel">Hosting, maintenance and local SEO included</p>
                 <ul>
-                  <li>Maintenance and updates included</li>
-                  <li>Hosting included</li>
-                  <li>Domain included</li>
-                  <li>Regular backups</li>
-                  <li>WhatsApp support within 24h</li>
-                  <li>Monthly updates included</li>
-                  <li>Basic local SEO</li>
+                  <li>Hosting management included</li>
+                  <li>Security updates &amp; backups</li>
+                  <li>Content &amp; service-area updates</li>
+                  <li>Basic local SEO improvements</li>
+                  <li>Monthly performance summary</li>
+                  <li>Cancel anytime</li>
                 </ul>
-                <Link href="/en#contact" className="btn btn-primary">Subscribe to Visibility Option →</Link>
+                <Link href="/en#contact" className="btn btn-primary">Subscribe to Website Care &amp; Local Visibility →</Link>
               </div>
             </div>
             <p style={{ textAlign: 'center', marginTop: '1.5rem' }}>
