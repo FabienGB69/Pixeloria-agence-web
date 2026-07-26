@@ -4,59 +4,61 @@ import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
-  title: 'Contractor Website Design That Generates Leads | Pixeloria',
+  title: 'Website Design for Contractors in Colorado | Pixeloria',
   description:
-    'Professional websites for general contractors, remodelers, roofers and specialty trades. Mobile-first design built to generate phone calls and estimate requests for US contractors.',
+    'Remote website design services for Colorado contractors — Denver, Colorado Springs, Aurora and Fort Collins. Mobile-first websites built to generate calls and estimate requests, delivered remotely with no local office required.',
   alternates: {
-    canonical: 'https://pixeloria.fr/en/contractor-websites',
+    canonical: 'https://pixeloria.fr/en/contractor-websites/colorado',
   },
   openGraph: {
     type: 'website',
-    url: 'https://pixeloria.fr/en/contractor-websites',
-    title: 'Contractor Website Design That Generates Leads | Pixeloria',
+    url: 'https://pixeloria.fr/en/contractor-websites/colorado',
+    title: 'Website Design for Contractors in Colorado | Pixeloria',
     description:
-      'Professional websites for general contractors, remodelers, roofers and specialty trades. Mobile-first design built to generate phone calls and estimate requests for US contractors.',
+      'Remote website design services for Colorado contractors — Denver, Colorado Springs, Aurora and Fort Collins. Mobile-first websites built to generate calls and estimate requests, delivered remotely with no local office required.',
     locale: 'en_US',
     siteName: 'Pixeloria',
   },
 };
 
 const contractorTypes = [
-  { label: 'General contractors' },
   { label: 'Roofing contractors', href: '/en/roofing-websites' },
+  { label: 'General contractors' },
   { label: 'Remodeling companies' },
+  { label: 'Exterior and siding contractors' },
   { label: 'Gutter companies' },
   { label: 'Painting contractors' },
-  { label: 'Other specialty trades' },
 ];
 
-const strongWebsiteItems = [
+const marketContext = [
   {
-    title: 'Mobile Lead Generation',
-    desc: 'A visible call button and a short estimate form make it easy for a homeowner to reach you the moment they land on your site.',
+    title: 'One of the most hail-prone regions in the US',
+    desc: 'The Denver metro and the broader Front Range corridor are among the most hail-prone regions in the entire United States, making hailstorms a dominant, well-documented driver of roofing and exterior-contractor demand in Colorado specifically.',
   },
   {
-    title: 'Local Search Structure',
-    desc: 'Services and service areas are organized clearly so both visitors and search engines understand where and what you do.',
+    title: 'High-altitude and mountain construction',
+    desc: 'Mountain communities require weather-resistant materials and work within shorter seasonal windows, distinct from the year-round pace of Front Range metro work — a genuinely Colorado-specific consideration.',
   },
   {
-    title: 'Trust and Proof',
-    desc: 'Reviews, completed projects and clear credentials help a prospect decide to call you instead of a competitor.',
+    title: 'Front Range population growth',
+    desc: 'Strong, sustained population growth along the Denver-Boulder-Colorado Springs corridor is driving general contractor and remodeling demand well beyond just roofing.',
   },
   {
-    title: 'Clear Service Positioning',
-    desc: 'A visitor should understand what you build or repair, and for whom, within a few seconds of landing on your site.',
+    title: 'Secondary metro markets',
+    desc: 'Colorado Springs, Aurora and Fort Collins are established, growing markets alongside Denver, each with steady contractor demand.',
   },
 ];
+
+const metros = ['Denver', 'Colorado Springs', 'Aurora', 'Fort Collins'];
 
 const includeItems = [
   {
     label: 'Service pages',
-    desc: 'Dedicated pages for each core service you offer, from remodeling to repairs and installations.',
+    desc: 'Dedicated pages for each core service you offer, from roofing and remodeling to exterior repairs and installations.',
   },
   {
     label: 'Service area page',
-    desc: 'A clear list of the towns and counties you cover, so prospects know you serve their area.',
+    desc: 'A clear list of the Colorado towns and counties you cover, so prospects know you serve their area.',
   },
   {
     label: 'Completed projects gallery',
@@ -78,40 +80,40 @@ const includeItems = [
 
 const faqs = [
   {
-    q: 'How much does a contractor website cost?',
-    a: 'Pixeloria contractor websites start at $499 for a one-page website. Multi-page websites with individual service pages start at $899.',
+    q: 'Do you have an office in Colorado?',
+    a: 'No, Pixeloria works remotely with contractors across Colorado and the rest of the United States. All collaboration happens through video calls, email and shared project tools — there is no in-person office visit.',
   },
   {
-    q: 'How long does it take to build a contractor website?',
+    q: 'How does the remote process work?',
+    a: 'We gather your services, service area and content through a short form and email, review your project on a video call if helpful, and send drafts for feedback online. You never need to meet us in person to get a finished website.',
+  },
+  {
+    q: 'How much does a contractor website cost?',
+    a: 'Pixeloria contractor websites start at $499 for a one-page website. Multi-page websites with individual service pages start at $899. See our pricing page for full details.',
+  },
+  {
+    q: 'How long does it take to build a website?',
     a: 'A one-page contractor website can generally be delivered within five business days after we receive all required content. Larger multi-page websites may take one to three weeks.',
   },
   {
-    q: 'Can you redesign my existing contractor website?',
-    a: 'Yes. Pixeloria can redesign outdated contractor websites while improving mobile usability, lead generation and local search structure.',
-  },
-  {
-    q: 'Do you offer local SEO for contractors?',
-    a: 'Basic local SEO structure is included in our website packages. Ongoing SEO and content strategy are available as a separate service.',
-  },
-  {
-    q: 'Do you guarantee first-page Google rankings?',
-    a: 'No legitimate agency can guarantee a specific Google ranking. We focus on building a technically strong, well-structured website that supports your visibility over time.',
+    q: 'Can you redesign my existing website?',
+    a: 'Yes. Pixeloria can redesign outdated contractor websites while improving mobile usability, lead generation and local search structure — all handled remotely.',
   },
 ];
 
-export default function ContractorWebsitesPage() {
+export default function ContractorWebsitesColoradoPage() {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'Contractor website design',
+    name: 'Contractor website design for Colorado',
     provider: {
       '@type': 'Organization',
       name: 'Pixeloria',
       url: 'https://pixeloria.fr',
     },
     description:
-      'Website design services for general contractors, remodelers, roofers and specialty trade contractors.',
-    areaServed: { '@type': 'Country', name: 'United States' },
+      'Remote website design services for general contractors, remodelers, roofers and specialty trade contractors in Colorado.',
+    areaServed: { '@type': 'State', name: 'Colorado' },
   };
 
   const faqSchema = {
@@ -138,15 +140,17 @@ export default function ContractorWebsitesPage() {
               <nav className="breadcrumb" aria-label="Breadcrumb">
                 <Link href="/en">Home</Link>
                 <span aria-hidden="true"> › </span>
-                <span>Contractor Websites</span>
+                <Link href="/en/contractor-websites">Contractor Websites</Link>
+                <span aria-hidden="true"> › </span>
+                <span>Colorado</span>
               </nav>
-              <span className="eyebrow">Contractors</span>
-              <h1>Contractor Websites Built to Generate More Leads</h1>
+              <span className="eyebrow">Colorado</span>
+              <h1>Website Design for Contractors in Colorado</h1>
               <p className="page-hero-sub">
-                Pixeloria creates fast, professional websites for general contractors,
-                remodelers, roofers and specialty trade contractors across the United States.
-                Every contractor website is structured to showcase your services, service
-                area, completed projects, customer reviews and estimate request process.
+                Remote website design services for Colorado contractors. Pixeloria builds fast,
+                professional websites for roofers, general contractors and remodelers serving
+                Denver, Colorado Springs, Aurora, Fort Collins and the rest of Colorado — all
+                work is done remotely, with no local office or in-person visit required.
               </p>
               <div className="page-hero-actions">
                 <Link href="/en/free-website-audit" className="btn btn-primary">
@@ -167,11 +171,11 @@ export default function ContractorWebsitesPage() {
             <div className="include-item" style={{ maxWidth: '760px' }}>
               <strong>Quick answer</strong>
               <p>
-                A contractor website is a lead-generation website designed to present your
-                services, build trust with local customers, and turn visitors into phone
-                calls and estimate requests. A strong contractor website includes service
-                pages, a service-area section, reviews, completed projects, mobile call
-                buttons and a short estimate form.
+                Pixeloria designs and builds websites for contractors operating in Colorado,
+                entirely remotely. We do not have a physical office in the state — every
+                project is handled through video calls, email and online project tools, and
+                every website is structured around Colorado&apos;s service areas, from the
+                Denver metro to Colorado Springs and Fort Collins.
               </p>
             </div>
           </div>
@@ -182,11 +186,11 @@ export default function ContractorWebsitesPage() {
           <div className="container">
             <div className="section-heading">
               <span className="eyebrow">Who we build for</span>
-              <h2>Contractor Trades We Build Websites For</h2>
+              <h2>Contractor Trades We Build Websites For in Colorado</h2>
               <p className="section-sub">
                 Pixeloria builds websites for companies that provide contracting services —
                 Pixeloria itself does not perform contracting work. Our job is to design and
-                build the website your contracting business uses to win jobs.
+                build the website your Colorado contracting business uses to win jobs.
               </p>
             </div>
             <div
@@ -228,26 +232,85 @@ export default function ContractorWebsitesPage() {
           </div>
         </section>
 
-        {/* What Makes a Strong Contractor Website */}
+        {/* Colorado Market Context */}
         <section className="section">
           <div className="container">
             <div className="section-heading">
-              <span className="eyebrow">The essentials</span>
-              <h2>What Makes a Strong Contractor Website</h2>
+              <span className="eyebrow">Local context</span>
+              <h2>What Drives Contractor Demand in Colorado</h2>
               <p className="section-sub">
-                Most customers looking for a contractor search on their phone and contact the
-                business that appears trustworthy and easy to reach. A strong contractor
-                website is built around that behavior.
+                Colorado&apos;s contractor market has its own distinct drivers. Your website
+                should speak to the real conditions homeowners and property managers in the
+                state are searching around.
               </p>
             </div>
             <div className="benefits-grid">
-              {strongWebsiteItems.map((f, i) => (
+              {marketContext.map((f, i) => (
                 <div key={f.title} className="benefit-card">
                   <span className="benefit-num">0{i + 1}</span>
                   <h3>{f.title}</h3>
                   <p>{f.desc}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Metro Markets Served */}
+        <section className="section section-tinted">
+          <div className="container">
+            <div className="section-heading">
+              <span className="eyebrow">Service area</span>
+              <h2>Main Metro Markets We Serve</h2>
+              <p className="section-sub">
+                We design contractor websites for businesses serving these Colorado markets,
+                and any other city or county across the state.
+              </p>
+            </div>
+            <ul className="artisan-types-grid">
+              {metros.map((m) => (
+                <li key={m} className="artisan-type-tag">{m}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* Remote Collaboration Process */}
+        <section className="section">
+          <div className="container">
+            <div className="section-heading">
+              <span className="eyebrow">How it works</span>
+              <h2>A Fully Remote Collaboration Process</h2>
+              <p className="section-sub">
+                Pixeloria has no office in Colorado. Every project is handled remotely, from
+                first contact to launch, using clear written communication and simple online
+                tools.
+              </p>
+            </div>
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+                gap: '1.25rem',
+                marginTop: '2.5rem',
+              }}
+            >
+              <div className="why-card">
+                <h3 style={{ color: 'var(--text)', margin: 0 }}>Video calls</h3>
+                <p>We discuss your services, service area and goals over a video call whenever it&apos;s useful — no in-person visit needed.</p>
+              </div>
+              <div className="why-card">
+                <h3 style={{ color: 'var(--text)', margin: 0 }}>Email and written briefs</h3>
+                <p>Content, photos and feedback are collected through email and simple forms, so everything stays clear and documented.</p>
+              </div>
+              <div className="why-card">
+                <h3 style={{ color: 'var(--text)', margin: 0 }}>Online project tools</h3>
+                <p>Drafts are shared online for your review, so you can approve each step from your phone or computer, wherever you are.</p>
+              </div>
+            </div>
+            <div className="include-item" style={{ maxWidth: '760px', marginTop: '2rem' }}>
+              <strong>Our response commitment</strong>
+              <p>We reply within 48 hours to every project inquiry from Colorado contractors, with a clear next step — no waiting, no chasing.</p>
             </div>
           </div>
         </section>
@@ -260,7 +323,7 @@ export default function ContractorWebsitesPage() {
               <h2>What Every Contractor Website Should Include</h2>
               <p className="section-sub">
                 These are the elements prospects look for before they decide to call a
-                contracting company.
+                contracting company in Colorado.
               </p>
             </div>
             <div className="includes-grid">
@@ -279,10 +342,10 @@ export default function ContractorWebsitesPage() {
           <div className="container">
             <div className="section-heading">
               <span className="eyebrow">Pricing</span>
-              <h2>Contractor Website Pricing</h2>
+              <h2>Colorado Contractor Website Pricing</h2>
               <p className="section-sub">
-                Simple, one-time pricing to launch your contractor website, plus an optional
-                monthly plan to keep it maintained and locally visible.
+                Simple, one-time pricing to launch your contractor website remotely, plus an
+                optional monthly plan to keep it maintained and locally visible.
               </p>
             </div>
             <div className="pricing-cards pricing-cards--three">
@@ -359,33 +422,16 @@ export default function ContractorWebsitesPage() {
           </div>
         </section>
 
-        {/* State pages list */}
-        <section className="section">
-          <div className="container">
-            <div className="section-heading">
-              <span className="eyebrow">State pages</span>
-              <h2>We Also Serve Contractors In</h2>
-            </div>
-            <ul className="artisan-types-grid">
-              <li className="artisan-type-tag"><Link href="/en/contractor-websites/georgia">Georgia</Link></li>
-              <li className="artisan-type-tag"><Link href="/en/contractor-websites/colorado">Colorado</Link></li>
-              <li className="artisan-type-tag"><Link href="/en/contractor-websites/texas">Texas</Link></li>
-              <li className="artisan-type-tag"><Link href="/en/contractor-websites/florida">Florida</Link></li>
-              <li className="artisan-type-tag"><Link href="/en/contractor-websites/north-carolina">North Carolina</Link></li>
-            </ul>
-          </div>
-        </section>
-        {/* /State pages list */}
-
         {/* Final CTA */}
         <section className="section">
           <div className="container">
             <div className="page-cta-block">
               <h2>Request a Free Contractor Website Audit</h2>
               <p>
-                Send us your current website, or tell us about your contracting business if
-                you don&apos;t have one yet. We&apos;ll give you honest, no-obligation
-                feedback on what would help you generate more leads.
+                Send us your current website, or tell us about your Colorado contracting
+                business if you don&apos;t have one yet. We&apos;ll give you honest,
+                no-obligation feedback on what would help you generate more leads — all
+                handled remotely.
               </p>
               <Link href="/en/free-website-audit" className="btn btn-primary btn-lg">
                 Request My Free Audit
