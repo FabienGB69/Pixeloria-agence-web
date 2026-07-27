@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useConsent } from './ConsentProvider';
@@ -42,6 +42,54 @@ export default function CookieBanner() {
   const [analyticsChecked, setAnalyticsChecked] = useState(false);
   const [socialChecked, setSocialChecked] = useState(false);
   const innerRef = useRef<HTMLDivElement>(null);
+  const customizeBtnRef = useRef<HTMLButtonElement>(null);
+
+  const closeExpanded = useCallback(() => {
+    setExpanded(false);
+    customizeBtnRef.current?.focus();
+  }, []);
+
+  // Focus trap while the "Personnaliser" panel is open: the panel + the
+  // Accept/Reject/Customize buttons above it become a modal dialog so
+  // keyboard users can't tab out into the page behind it. Escape collapses
+  // the panel and returns focus to the button that opened it.
+  useEffect(() => {
+    if (!expanded) return;
+    const container = innerRef.current;
+    if (!container) return;
+
+    container.focus();
+
+    const getFocusable = () =>
+      Array.from(
+        container.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), input:not([disabled])'
+        )
+      );
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        closeExpanded();
+        return;
+      }
+      if (e.key !== 'Tab') return;
+      const focusables = getFocusable();
+      if (focusables.length === 0) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+
+    container.addEventListener('keydown', onKeyDown);
+    return () => container.removeEventListener('keydown', onKeyDown);
+  }, [expanded, closeExpanded]);
 
   // Re-sync the panel's checkboxes with the current stored consent every time
   // the banner is (re)opened, so "manage cookies" reflects the real state.
@@ -84,16 +132,23 @@ export default function CookieBanner() {
 
   if (!bannerOpen) return null;
 
+  const label = locale === 'en' ? 'Cookie consent' : 'Consentement aux cookies';
+
   return (
-    <div className="cookie-banner" role="region" aria-label={locale === 'en' ? 'Cookie consent' : 'Consentement aux cookies'}>
-      <div className="cookie-banner-inner" ref={innerRef}>
+    <div
+      className="cookie-banner"
+      role={expanded ? 'dialog' : 'region'}
+      aria-modal={expanded ? true : undefined}
+      aria-label={label}
+    >
+      <div className="cookie-banner-inner" ref={innerRef} tabIndex={-1}>
         <p className="cookie-banner-text">
           {t.text}{' '}
           <Link href={locale === 'en' ? '/en/privacy-policy#cookies' : '/politique-confidentialite#cookies'}>{t.moreLink}</Link>
         </p>
 
         <div className="cookie-banner-actions">
-          <button type="button" className="btn btn-secondary" onClick={() => setExpanded((v) => !v)}>
+          <button type="button" ref={customizeBtnRef} className="btn btn-secondary" onClick={() => setExpanded((v) => !v)}>
             {t.customize}
           </button>
           <button type="button" className="btn btn-secondary" onClick={rejectAll}>
@@ -107,7 +162,7 @@ export default function CookieBanner() {
         {expanded && (
           <div className="cookie-banner-panel">
             <label className="cookie-banner-option">
-              <input type="checkbox" checked disabled readOnly />
+              <input type="checkbox" checked readOnly aria-disabled="true" onClick={(e) => e.preventDefault()} />
               <span>
                 {t.necessary} <em>{t.necessaryHint}</em>
               </span>
