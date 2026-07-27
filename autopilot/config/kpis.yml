@@ -1,0 +1,47 @@
+# Pixeloria AutoPilot — KPI globaux (marché FR)
+
+acquisition:
+  - impressions
+  - clicks
+  - ctr
+  - positions
+  - organic_traffic
+  - local_traffic
+  - generative_engine_traffic
+
+business:
+  - leads
+  - quote_requests
+  - conversion_rate
+  - signature_rate
+  - cost_per_lead
+  - revenue_per_client
+  - recurring_revenue
+  - average_basket
+
+seo_geo:
+  - indexed_pages
+  - positions
+  - rich_results
+  - ai_citations
+  - brand_mentions
+  - backlinks
+  - citability_score
+
+product:
+  - bounce_rate
+  - visit_depth
+  - cta_clicks
+  - form_errors
+  - completion_rate
+  - mobile_conversion
+
+technical:
+  - lcp
+  - cls
+  - inp
+  - page_weight
+  - errors
+  - uptime
+  - vulnerabilities
+  - test_coverage

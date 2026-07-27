@@ -1,0 +1,37 @@
+# Pixeloria AutoPilot — sources de données (marché FR)
+# Chaque recommandation doit citer sa source depuis cette liste (voir /autopilot).
+
+primary:
+  - google_search_console
+  - google_analytics_4
+  - lighthouse
+  - pagespeed_insights
+  - application_logs
+  - form_submissions
+  - crm_notion
+  - google_business_profile
+  - github
+  - site_performance_data
+  - automated_test_results
+  - campaign_data
+  - linkedin_stats
+  - x_stats
+  - google_reviews
+  - validated_business_data
+
+secondary:
+  - competitor_analysis
+  - search_results
+  - search_trends
+  - seo_tooling_platforms
+  - rank_tracking_tools
+  - generative_engines
+  - official_google_publications
+  - official_technical_documentation
+
+traceability_required_fields:
+  - source
+  - collection_date
+  - period_analyzed
+  - confidence_level
+  - analysis_limitations

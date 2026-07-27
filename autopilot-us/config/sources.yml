@@ -1,0 +1,36 @@
+# Pixeloria AutoPilot US — sources de données (marché US, pages /en/*)
+
+primary:
+  - google_search_console_en_segment
+  - google_analytics_4_us_segment
+  - lighthouse
+  - pagespeed_insights
+  - application_logs
+  - form_submissions_en
+  - crm_notion_us_leads
+  - google_business_profile_us
+  - github
+  - site_performance_data
+  - automated_test_results
+  - campaign_data_us
+  - linkedin_stats_en
+  - x_stats_en
+  - google_reviews_us
+  - validated_business_data_us
+
+secondary:
+  - us_competitor_analysis
+  - search_results_en
+  - search_trends_us
+  - seo_tooling_platforms
+  - rank_tracking_tools_google_com
+  - generative_engines_en
+  - official_google_publications
+  - official_technical_documentation
+
+traceability_required_fields:
+  - source
+  - collection_date
+  - period_analyzed
+  - confidence_level
+  - analysis_limitations

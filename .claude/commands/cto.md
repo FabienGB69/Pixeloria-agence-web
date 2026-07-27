@@ -75,12 +75,60 @@ L'arbitrage ne choisit jamais un camp par défaut — il cherche la solution qui
 
 ## Ordre de priorité (arbitrage en dernier ressort)
 
-1. **Performance**
-2. **Conversion**
-3. **SEO**
-4. **GEO**
-5. **Accessibilité**
-6. **Maintenabilité**
+Ordre défini par Pixeloria AutoPilot (Vision 4.0), qui remplace et affine l'ordre à 6 niveaux précédent :
+
+1. **Sécurité**
+2. **Intégrité des données**
+3. **Conversion**
+4. **Expérience utilisateur**
+5. **SEO**
+6. **GEO**
+7. **Performance**
+8. **Accessibilité**
+9. **Maintenabilité**
+10. **Esthétique**
+
+Cet ordre peut être adapté si une justification claire est fournie et documentée dans `/docs/autopilot/decisions.md`.
+
+## Score de priorité
+
+Chaque tâche du backlog reçoit un score sur 100 avant d'entrer dans un sprint :
+
+- Impact business : /25
+- Impact SEO ou GEO : /20
+- Impact conversion : /20
+- Urgence : /10
+- Confiance : /10
+- Effort (inversé — un effort faible score haut) : /10
+- Risque (inversé — un risque faible score haut) : /5
+
+| Score | Niveau |
+|-------|--------|
+| 90–100 | Critique |
+| 75–89 | Très prioritaire |
+| 60–74 | Prioritaire |
+| 40–59 | Amélioration |
+| 0–39 | Backlog |
+
+Formule courte pour un tri rapide (hors scoring détaillé) : `Score = (Impact estimé × Niveau de confiance × Urgence) ÷ Effort estimé`.
+
+## Niveaux d'autonomie
+
+| Niveau | Capacités | Statut Pixeloria |
+|--------|-----------|-------------------|
+| 0 — Observation | Lecture des données, rapports, aucune création de tâche | — |
+| 1 — Recommandation | Backlog, recommandations, aucune modification de code | — |
+| 2 — Préparation | Issues, branches, modification du code, PR, **aucune fusion automatique** | **Niveau actif** |
+| 3 — Exécution encadrée | Fusion possible pour les changements à faible risque, validation humaine obligatoire, monitoring post-déploiement | Désactivé |
+| 4 — AutoPilot avancé | Fusion automatique pour changements préautorisés, rollback automatique, alertes immédiates | Désactivé |
+
+Le niveau actif et les permissions machine-readable associées sont dans `/autopilot/config/permissions.yml` — ce fichier est la source de vérité, pas ce document.
+
+## Modifications à faible risque vs haut risque
+
+**Faible risque** (peuvent être préparées — branche + PR — sans validation préalable, mais jamais fusionnées automatiquement au niveau 2) : lien cassé, faute, attribut `alt` factuel, balise `canonical`, sitemap, optimisation d'image, ajout de tests, documentation, erreur de typage, mise à jour de dépendance sans breaking change.
+
+**Haut risque** (validation humaine obligatoire avant toute préparation de PR, pas seulement avant fusion) : prix, offres, formulaires, tracking, suppression de contenu, redirections massives, nouvelles pages locales, automatisation commerciale, messages aux prospects, données clients, mentions légales, cookies, authentification, paiement, nouvelle architecture.
 
 ## Après fusion des rapports
 
@@ -90,7 +138,65 @@ Le Chief Architect produit automatiquement :
 - **Priorités** — Critique / Important / Confort (ou opportunités), toutes équipes confondues
 - **Sprint suivant** — sélection des tâches à plus fort ratio impact/effort pour la prochaine itération
 
-Chaque tâche du backlog qui vaut la peine d'être trackée devient une issue GitHub (voir le format dans `/geo-guardian`, commun à tous les Guardians).
+Chaque tâche du backlog qui vaut la peine d'être trackée devient une issue GitHub selon le format ci-dessous (canonique — tous les Guardians l'utilisent, y compris `/geo-guardian`).
+
+## Convention de branches (Pixeloria AutoPilot)
+
+```
+feature/  fix/  seo/  geo/  performance/  cro/  security/  content/  analytics/
+```
+
+Exemples : `seo/improve-service-page-metadata`, `geo/add-citable-summary-blocks`, `cro/simplify-quote-form`, `performance/optimize-homepage-images`.
+
+## Format d'issue (canonique)
+
+```markdown
+# Titre
+
+## Contexte
+## Problème
+## Preuves
+## Agent responsable
+## Priorité
+## Score de priorité
+## Hypothèse
+## Action recommandée
+## Fichiers concernés
+## KPI principal
+## KPI secondaire
+## Résultat attendu
+## Critères d'acceptation
+## Tests nécessaires
+## Risques
+## Plan de retour arrière
+## Validation humaine requise
+Oui / Non
+```
+
+## Format de Pull Request (canonique)
+
+```markdown
+# Objectif
+## Issue liée
+## Problème traité
+## Solution mise en œuvre
+## Fichiers modifiés
+## Impact attendu
+## KPI à surveiller
+## Tests réalisés
+## Résultats des tests
+## Contrôles SEO
+## Contrôles GEO
+## Contrôles UX
+## Contrôles Performance
+## Contrôles Sécurité
+## Captures
+## Risques
+## Plan de rollback
+## Validation requise
+```
+
+Une PR = un objectif unique. Ne jamais regrouper plusieurs changements non liés dans une même PR, même s'ils sont petits.
 
 ---
 

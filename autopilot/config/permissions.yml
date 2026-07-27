@@ -1,0 +1,19 @@
+# Pixeloria AutoPilot — permissions (marché FR)
+# Source de vérité machine-readable. Voir /cto pour la documentation lisible.
+
+autonomy_level: 2
+
+permissions:
+  read_analytics: true
+  read_search_console: true
+  read_repository: true
+  create_issue: true
+  create_branch: true
+  modify_code: true
+  create_pull_request: true
+  merge_pull_request: false
+  deploy_production: false
+  publish_content: false
+  change_prices: false
+  send_sales_messages: false
+  delete_pages: false
