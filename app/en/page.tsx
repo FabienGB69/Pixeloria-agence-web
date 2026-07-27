@@ -196,14 +196,14 @@ const trustPoints = [
 
 const contractorCategories = [
   { label: 'Roofing contractors', href: '/en/roofing-websites' },
-  { label: 'General contractors' },
-  { label: 'Remodeling companies' },
-  { label: 'Gutter companies' },
-  { label: 'HVAC contractors' },
-  { label: 'Plumbers' },
-  { label: 'Electricians' },
-  { label: 'Painters' },
-  { label: 'Landscapers' },
+  { label: 'General contractors', href: '/en/general-contractor-websites' },
+  { label: 'Remodeling companies', href: '/en/remodeling-contractor-websites' },
+  { label: 'Gutter companies', href: '/en/gutter-company-websites' },
+  { label: 'HVAC contractors', href: '/en/hvac-websites' },
+  { label: 'Plumbers', href: '/en/plumber-websites' },
+  { label: 'Electricians', href: '/en/electrician-websites' },
+  { label: 'Painters', href: '/en/painting-contractor-websites' },
+  { label: 'Landscapers', href: '/en/landscaping-websites' },
   { label: 'Cleaning companies' },
 ];
 
