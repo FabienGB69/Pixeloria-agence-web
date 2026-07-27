@@ -1,0 +1,46 @@
+# Pixeloria AutoPilot US — KPI globaux (marché US, pages /en/*)
+
+acquisition:
+  - impressions
+  - clicks
+  - ctr
+  - positions_google_com
+  - organic_traffic_en
+  - generative_engine_traffic_en
+
+business:
+  - leads_us
+  - quote_requests_us
+  - conversion_rate_us
+  - signature_rate_us
+  - cost_per_lead_us
+  - revenue_per_client_us
+  - recurring_revenue_us
+  - average_basket_us
+
+seo_geo:
+  - indexed_pages_en
+  - positions_google_com
+  - rich_results
+  - ai_citations_en
+  - brand_mentions_en
+  - backlinks_us
+  - citability_score
+
+product:
+  - bounce_rate_en
+  - visit_depth_en
+  - cta_clicks_en
+  - form_errors_en
+  - completion_rate_en
+  - mobile_conversion_en
+
+technical:
+  - lcp
+  - cls
+  - inp
+  - page_weight
+  - errors
+  - uptime
+  - vulnerabilities
+  - test_coverage

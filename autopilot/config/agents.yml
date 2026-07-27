@@ -1,0 +1,76 @@
+# Pixeloria AutoPilot — registre des agents (marché FR)
+# Statut "detailed" = spec complète dans .claude/commands/<agent>.md
+# Statut "pole-level" = défini au niveau du pôle uniquement (mission + rôle résumé)
+
+ceo_ai:
+  command: /ceo-ai
+  status: detailed
+
+chief_architect:
+  command: /cto
+  status: detailed
+
+poles:
+  growth_intelligence:
+    command: /growth-intelligence
+    agents:
+      geo_guardian: { command: /geo-guardian, status: detailed }
+      seo_guardian: { command: /seo, status: detailed }
+      local_seo_guardian: { command: /local-seo-guardian, status: detailed }
+      ai_citation_guardian: { command: /ai-citation-guardian, status: detailed }
+      competitor_guardian: { command: /competitor-guardian, status: detailed }
+      trend_guardian: { status: pole-level }
+
+  product_intelligence:
+    command: /product-intelligence
+    agents:
+      ux_guardian: { command: /ux-guardian, status: detailed }
+      cro_guardian: { command: /cro-guardian, status: detailed }
+      accessibility_guardian: { status: pole-level }
+      design_guardian: { status: pole-level }
+      mobile_guardian: { status: pole-level }
+      customer_journey_guardian: { status: pole-level }
+
+  engineering_intelligence:
+    command: /engineering-intelligence
+    agents:
+      performance_guardian: { command: /performance-guardian, status: detailed }
+      security_guardian: { command: /security-guardian, status: detailed }
+      react_guardian: { status: pole-level }
+      nextjs_guardian: { status: pole-level }
+      typescript_guardian: { status: pole-level }
+      architecture_guardian: { status: pole-level }
+      code_quality_guardian: { status: pole-level }
+      testing_guardian: { status: pole-level }
+
+  marketing_intelligence:
+    command: /marketing-intelligence
+    agents:
+      content_intelligence_guardian: { command: /content-intelligence-guardian, status: detailed }
+      copywriting_guardian: { status: pole-level }
+      social_guardian: { status: pole-level }
+      google_business_guardian: { status: pole-level }
+      brand_guardian: { status: pole-level }
+      linkedin_guardian: { status: pole-level }
+      x_guardian: { status: pole-level }
+
+  business_intelligence:
+    command: /business-intelligence
+    agents:
+      pixeloria_business_guardian: { command: /business-guardian, status: detailed }
+      pricing_guardian: { command: /pricing-guardian, status: detailed }
+      sales_guardian: { status: pole-level }
+      crm_guardian: { status: pole-level }
+      funnel_guardian: { status: pole-level }
+      offer_guardian: { status: pole-level }
+
+  operations_intelligence:
+    command: /operations-intelligence
+    agents:
+      github_guardian: { command: /github-guardian, status: detailed }
+      documentation_guardian: { status: pole-level }
+      qa_guardian: { status: pole-level }
+      testing_guardian: { status: pole-level }
+      analytics_guardian: { status: pole-level }
+      roadmap_guardian: { status: pole-level }
+      release_guardian: { status: pole-level }

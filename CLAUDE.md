@@ -19,11 +19,15 @@
 ### Structure des fichiers
 
 ```
-index.html   — Page unique (hero, services, portfolio, process, contact, footer)
-styles.css   — Tokens CSS, layout, responsive, animations .reveal
-script.js    — Menu mobile, scroll-reveal, année footer
-assets/      — Images et médias
-.claude/     — Config Claude Code (skills, mémoire, settings)
+index.html      — Page unique (hero, services, portfolio, process, contact, footer)
+styles.css      — Tokens CSS, layout, responsive, animations .reveal
+script.js       — Menu mobile, scroll-reveal, année footer
+assets/         — Images et médias
+.claude/        — Config Claude Code (skills, mémoire, settings)
+autopilot/      — Config machine-readable AutoPilot marché FR (agents/kpis/permissions/thresholds/sources.yml)
+autopilot-us/   — Config machine-readable AutoPilot marché US (/en/*), même structure
+docs/autopilot/     — Mémoire des expériences et décisions AutoPilot FR
+docs/autopilot-us/  — Mémoire des expériences et décisions AutoPilot US
 ```
 
 ---
@@ -85,8 +89,12 @@ Les fichiers de mémoire se trouvent dans `.claude/memory/`. Ils sont mis à jou
 | Commande | Rôle | Modèle |
 |----------|------|--------|
 | `/orchestrate` | **Routage 3 tiers** — Haiku / Sonnet / Opus selon complexité | Auto |
-| `/ceo-ai` | **CEO AI** — orchestre toute la Pixeloria AI Team, produit le rapport hebdomadaire (PIXELORIA WEEKLY REPORT) | Opus |
-| `/cto` | **Chief Architect (Max)** — orchestre les 6 pôles, arbitre les conflits, décompose les tâches | Opus |
+| `/autopilot` | **Pixeloria AutoPilot (marché FR)** — boucle d'optimisation continue complète (observer → apprendre), point d'entrée unique de la Pixeloria AI Team FR | Opus |
+| `/autopilot-us` | **Pixeloria AutoPilot US (marché US, pages `/en/*`)** — hiérarchie séparée (CEO AI/Chief Architect/pôles marché dupliqués, agents techniques partagés avec le FR) | Opus |
+| `/ceo-ai` | **CEO AI** — orchestre toute la Pixeloria AI Team FR, produit les rapports (quotidien/hebdomadaire/mensuel) | Opus |
+| `/ceo-ai-us` | **CEO AI US** — équivalent `/ceo-ai` pour le marché US | Opus |
+| `/cto` | **Chief Architect (Max)** — orchestre les 6 pôles FR, arbitre les conflits, décompose les tâches | Opus |
+| `/cto-us` | **Chief Architect US (Max)** — équivalent `/cto` pour le marché US (pôles Growth/Product/Marketing/Business Intelligence dupliqués ; Engineering/Operations Intelligence partagés avec le FR) | Opus |
 | `/growth-intelligence` | **Pôle Growth** — GEO/SEO/Local SEO/AI Citation/Competitor/Trend Guardian | Sonnet |
 | `/product-intelligence` | **Pôle Product** — UX/Accessibility/Design/Mobile/CRO/Customer Journey Guardian | Sonnet |
 | `/engineering-intelligence` | **Pôle Engineering** — Performance/React/NextJS/TypeScript/Architecture/Security Guardian | Sonnet |

@@ -1,0 +1,12 @@
+# Pixeloria AutoPilot — seuils d'alerte (marché FR)
+
+alerts:
+  organic_clicks_drop_percent: 20
+  conversions_drop_percent: 15
+  mobile_performance_min: 85
+  lcp_max_ms: 2500
+  cls_max: 0.1
+  inp_max_ms: 200
+  broken_links_max: 0
+  critical_security_issues_max: 0
+  form_error_rate_percent: 2

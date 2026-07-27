@@ -1,0 +1,74 @@
+# Pixeloria AutoPilot US — registre des agents (marché US, pages /en/*)
+# Statut "detailed" = spec complète dans .claude/commands/<agent>-us.md
+# Statut "pole-level" = défini au niveau du pôle uniquement
+# Statut "shared" = pas de variante US, voir l'agent FR équivalent (technique, repo-wide)
+
+ceo_ai_us:
+  command: /ceo-ai-us
+  status: detailed
+
+chief_architect_us:
+  command: /cto-us
+  status: detailed
+
+poles:
+  growth_intelligence_us:
+    command: /growth-intelligence-us
+    agents:
+      geo_guardian_us: { command: /geo-guardian-us, status: detailed }
+      seo_guardian_us: { status: pole-level }
+      local_seo_guardian_us: { command: /local-seo-guardian-us, status: detailed }
+      ai_citation_guardian_us: { command: /ai-citation-guardian-us, status: detailed }
+      competitor_guardian_us: { command: /competitor-guardian-us, status: detailed }
+      trend_guardian_us: { status: pole-level }
+
+  product_intelligence_us:
+    command: /product-intelligence-us
+    agents:
+      ux_guardian_us: { command: /ux-guardian-us, status: detailed }
+      cro_guardian_us: { command: /cro-guardian-us, status: detailed }
+      accessibility_guardian_us: { status: pole-level }
+      design_guardian_us: { status: pole-level }
+      mobile_guardian_us: { status: pole-level }
+      customer_journey_guardian_us: { status: pole-level }
+
+  engineering_intelligence:
+    command: /engineering-intelligence
+    note: shared with FR — no US variant, repo-wide technical audit
+    agents:
+      performance_guardian: { command: /performance-guardian, status: shared }
+      security_guardian: { command: /security-guardian, status: shared }
+      architecture_guardian: { status: shared }
+      code_quality_guardian: { status: shared }
+      testing_guardian: { status: shared }
+
+  marketing_intelligence_us:
+    command: /marketing-intelligence-us
+    agents:
+      content_intelligence_guardian_us: { status: pole-level }
+      copywriting_guardian_us: { status: pole-level }
+      social_guardian_us: { status: pole-level }
+      google_business_guardian_us: { status: pole-level }
+      brand_guardian_us: { status: pole-level }
+
+  business_intelligence_us:
+    command: /business-intelligence-us
+    agents:
+      pixeloria_business_guardian_us: { command: /business-guardian-us, status: detailed }
+      pricing_guardian_us: { command: /pricing-guardian-us, status: detailed }
+      sales_guardian_us: { status: pole-level }
+      crm_guardian_us: { status: pole-level }
+      funnel_guardian_us: { status: pole-level }
+      offer_guardian_us: { status: pole-level }
+
+  operations_intelligence:
+    command: /operations-intelligence
+    note: shared with FR — no US variant, repo-wide GitHub/QA/docs
+    agents:
+      github_guardian: { command: /github-guardian, status: shared }
+      documentation_guardian: { status: shared }
+      qa_guardian: { status: shared }
+      testing_guardian: { status: shared }
+      analytics_guardian: { status: shared }
+      roadmap_guardian: { status: shared }
+      release_guardian: { status: shared }
