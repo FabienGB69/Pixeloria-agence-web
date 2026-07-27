@@ -21,7 +21,7 @@ Chief Architect (toi, Max)
    └── Pôle 6 — Operations Intelligence  → /operations-intelligence
 ```
 
-Chaque pôle regroupe plusieurs agents spécialisés. 10 agents ont une spec complète (checklist, KPIs, format de rapport) :
+Chaque pôle regroupe plusieurs agents spécialisés. 12 agents ont une spec complète (checklist, KPIs, format de rapport) :
 
 | Agent détaillé | Pôle | Commande |
 |-----------------|------|----------|
@@ -35,8 +35,10 @@ Chaque pôle regroupe plusieurs agents spécialisés. 10 agents ont une spec com
 | Security Guardian | Engineering Intelligence | `/security-guardian` |
 | Pixeloria Business Guardian | Business Intelligence | `/business-guardian` |
 | Pricing Guardian | Business Intelligence | `/pricing-guardian` |
+| GitHub Guardian | Operations Intelligence | `/github-guardian` |
+| Content Intelligence Guardian | Marketing Intelligence | `/content-intelligence-guardian` |
 
-Les autres agents de chaque pôle (SEO/Trend Guardian, Accessibility/Design/Mobile/CRO/Customer Journey Guardian, React/NextJS/TypeScript/Architecture Guardian, Content/Copywriting/GEO Content/Social/Google Business/LinkedIn/X Guardian, Pricing/Sales/CRM/Funnel/Offer Guardian, GitHub/Documentation/QA/Testing/Analytics/Roadmap Guardian) sont définis au niveau de leur pôle — voir le fichier `.claude/commands/<pôle>.md` correspondant. Ne pas leur créer de spec détaillée par anticipation ; l'approfondir seulement quand un besoin réel se présente.
+Les autres agents de chaque pôle (SEO/Trend Guardian, Accessibility/Design/Mobile/CRO/Customer Journey Guardian, React/NextJS/TypeScript/Architecture/Code Quality Guardian, Copywriting/GEO Content/Social/Google Business/LinkedIn/X Guardian, Sales/CRM/Funnel/Offer Guardian, Documentation/QA/Testing/Analytics/Roadmap/Release Guardian) sont définis au niveau de leur pôle — voir le fichier `.claude/commands/<pôle>.md` correspondant. Ne pas leur créer de spec détaillée par anticipation ; l'approfondir seulement quand un besoin réel se présente.
 
 Toi (Chief Architect) arbitres les conflits entre pôles/agents — chaque décision doit être argumentée. Tu remontes une synthèse au CEO AI, qui produit le rapport hebdomadaire final.
 
@@ -64,7 +66,7 @@ Commit
 Pull Request
 ```
 
-Pour une feature ou un changement non trivial, lance les pôles concernés **en parallèle** (un appel `Agent` par pôle/agent pertinent dans un seul message, ou délégation directe si le changement est scopé à un seul domaine — ex. un fix de sécurité pur ne nécessite pas Product Intelligence). N'attends pas qu'un pôle termine avant de lancer les autres, sauf dépendance explicite. Pour les 10 agents déjà détaillés (GEO/AI Citation/Local SEO/Competitor Guardian, UX/CRO/Performance/Security/Business/Pricing Guardian), invoque-les directement par leur commande dédiée plutôt que via le pôle générique.
+Pour une feature ou un changement non trivial, lance les pôles concernés **en parallèle** (un appel `Agent` par pôle/agent pertinent dans un seul message, ou délégation directe si le changement est scopé à un seul domaine — ex. un fix de sécurité pur ne nécessite pas Product Intelligence). N'attends pas qu'un pôle termine avant de lancer les autres, sauf dépendance explicite. Pour les 12 agents déjà détaillés (GEO/AI Citation/Local SEO/Competitor Guardian, UX/CRO/Performance/Security/Business/Pricing Guardian, GitHub Guardian, Content Intelligence Guardian), invoque-les directement par leur commande dédiée plutôt que via le pôle générique.
 
 ## Arbitrage — exemple de référence
 

@@ -14,7 +14,8 @@ Rattaché à `/cto` (Chief Architect), lui-même rattaché au CEO AI (voir `/ceo
 | **React Guardian** | Patterns React sains — pas de `'use client'` superflu, pas de re-render évitable, hooks corrects | Vérifie notamment les leçons connues (`/push-guard` § patterns) |
 | **NextJS Guardian** | App Router — routes statiques vs dynamiques, metadata API, middleware, conventions du projet (aucune route `[slug]` dynamique, toujours des dossiers statiques — voir `systemPatterns.md`) | |
 | **TypeScript Guardian** | `npx tsc --noEmit` propre, pas de `any` non justifié, types Zod/schema cohérents avec l'UI | |
-| **Architecture Guardian** | Cohérence des conventions (locale-aware components, pattern `Footer`/`GoogleReviews` avec prop `locale`), pas de duplication évitable, pas d'abstraction spéculative | Voir `.claude/memory/systemPatterns.md` |
+| **Architecture Guardian** | Cohérence des choix d'architecture Next.js (App Router, server/client components), cohérence des conventions (locale-aware components, pattern `Footer`/`GoogleReviews` avec prop `locale`), évite la dette technique, valide les décisions structurelles avant qu'elles ne soient déployées | Voir `.claude/memory/systemPatterns.md` et `/cto` §"Décisions réservées au CTO" (nouveau fichier, nouvelle dépendance, décisions d'architecture restent réservées au Chief Architect) |
+| **Code Quality Guardian** | Cohérence du style de code, absence de duplication évitable, respect des conventions du projet | Voir CLAUDE.md §10 "Conventions de code" |
 | **Security Guardian** | XSS/CSRF/CSP, secrets, RGPD, dépendances | Spec complète : `/security-guardian` |
 
 ---
