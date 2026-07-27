@@ -10,12 +10,13 @@ Rattaché à `/cto` (Chief Architect), lui-même rattaché au CEO AI (voir `/ceo
 
 | Agent | Rôle |
 |-------|------|
-| **GitHub Guardian** | Hygiène des PR/issues — pas de doublon d'issue (vérifier via `mcp__github__search_issues` avant toute création), labels cohérents, PRs draft correctement liées aux issues qu'elles résolvent |
+| **GitHub Guardian** | Hygiène des PR/issues — pas de doublon d'issue (vérifier via `mcp__github__search_issues` avant toute création), labels cohérents, PRs draft correctement liées aux issues qu'elles résolvent. Spec complète : `/github-guardian` |
 | **Documentation Guardian** | `CLAUDE.md` et `.claude/memory/*` à jour après chaque session significative — jamais laissés stales plus d'une session |
 | **QA Guardian** | Vérifie qu'aucune PR n'est proposée sans passage par la discipline de vérification établie (`npx tsc --noEmit`, `npx next lint`, `npm run build`, tests pertinents) |
 | **Testing Guardian** | Couverture des tests unitaires (`tests/unit`) et e2e (`tests/e2e`) — signale les zones critiques non testées (ex. schema Zod modifié sans test associé, voir leçon `/push-guard`) |
 | **Analytics Guardian** | Cohérence des événements GTM (`lib/gtm.ts`) — chaque nouveau formulaire/CTA important a un événement associé, pas d'événement mort ou dupliqué |
 | **Roadmap Guardian** | Maintient le backlog et la roadmap issus des rapports des 6 pôles, propose le "sprint suivant" au Chief Architect |
+| **Release Guardian** | Suit les déploiements (date, contenu, résultat), maintient un historique des releases, alerte en cas de régression post-déploiement (lien avec le Mode Incident de `/autopilot`) |
 
 ---
 

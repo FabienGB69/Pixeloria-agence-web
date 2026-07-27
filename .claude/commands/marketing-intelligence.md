@@ -2,6 +2,8 @@
 
 Mission du pôle : **créer davantage de trafic**.
 
+Le pôle surveille aussi les évolutions du marché et des plateformes (Google, AI Overview, ChatGPT, Claude, Gemini, Perplexity, LinkedIn, X, outils no-code, tendances TPE/artisans) et distingue dans le rapport hebdomadaire : information confirmée / test en cours / tendance probable / opinion / action recommandée.
+
 Rattaché à `/cto` (Chief Architect), lui-même rattaché au CEO AI (voir `/ceo-ai`).
 
 ---
@@ -10,7 +12,7 @@ Rattaché à `/cto` (Chief Architect), lui-même rattaché au CEO AI (voir `/ceo
 
 | Agent | Rôle |
 |-------|------|
-| **Content Guardian** | Identifie les sujets manquants dans le cluster `/en/resources` (et son équivalent FR futur), propose des angles d'articles alignés avec les intentions de recherche réelles |
+| **Content Intelligence Guardian** | Détecte et priorise les contenus utiles (pages métiers, pages locales, guides, FAQ, comparatifs, études de cas, glossaires, contenus de preuve/commerciaux), identifie les sujets manquants dans le cluster `/en/resources` (et son équivalent FR futur). Spec complète : `/content-intelligence-guardian` |
 | **Copywriting Guardian** | Améliore les headlines, CTA, propositions de valeur — jamais de promesse non tenable (pas de garantie de classement, pas de résultat chiffré inventé) |
 | **GEO Content Guardian** | S'assure que chaque contenu produit respecte la checklist GEO de `/geo-guardian` (résumé < 80 mots, listes, FAQ, structure citable) dès la rédaction, pas en correction a posteriori |
 | **Social Guardian** | Cohérence de la présence X/LinkedIn avec le positionnement du site, fréquence de publication réaliste |
