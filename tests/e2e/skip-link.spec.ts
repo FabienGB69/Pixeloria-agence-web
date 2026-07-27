@@ -21,4 +21,13 @@ test.describe('Skip link — WCAG 2.4.1 Bypass Blocks', () => {
     await expect(skipLink).toBeFocused();
     await expect(skipLink).toHaveText('Skip to main content');
   });
+
+  test('/parrainage — pas de <main> : le skip link retombe sur le <h1>', async ({ page }) => {
+    await page.goto('/parrainage');
+    await page.keyboard.press('Tab');
+    await expect(page.locator('.skip-link')).toBeFocused();
+
+    await page.keyboard.press('Enter');
+    await expect(page.locator('h1')).toBeFocused();
+  });
 });

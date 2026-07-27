@@ -3,18 +3,19 @@
 import { usePathname } from 'next/navigation';
 
 /**
- * Every page.tsx already renders exactly one <main> (with inconsistent or
- * absent ids), so the skip target is resolved at click-time against the
- * first <main> in the DOM rather than requiring a fixed #main-content id
- * on 80+ page files.
+ * Most page.tsx files render exactly one <main> (with inconsistent or absent
+ * ids), so the skip target is resolved at click-time against the first
+ * <main> in the DOM rather than requiring a fixed #main-content id on 80+
+ * page files. A few routes (/parrainage, /en/parrainage, /temoignage) render
+ * no <main> at all — fall back to the first <h1>, which every page has.
  */
 function focusMain(e: React.MouseEvent<HTMLAnchorElement>) {
   e.preventDefault();
-  const main = document.querySelector('main');
-  if (!main) return;
-  if (!main.hasAttribute('tabindex')) main.setAttribute('tabindex', '-1');
-  main.focus();
-  main.scrollIntoView();
+  const target = document.querySelector('main') ?? document.querySelector('h1');
+  if (!target) return;
+  if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+  target.focus();
+  target.scrollIntoView();
 }
 
 export default function SkipLink() {
