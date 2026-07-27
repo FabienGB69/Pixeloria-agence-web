@@ -67,6 +67,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://pixeloria.fr/en/local-seo', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://pixeloria.fr/en/how-it-works', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://pixeloria.fr/en/reviews', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://pixeloria.fr/en/testimonial', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
     { url: 'https://pixeloria.fr/en/faq', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
     { url: 'https://pixeloria.fr/en/about', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
     { url: 'https://pixeloria.fr/en/legal-notice', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
