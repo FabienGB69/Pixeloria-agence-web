@@ -33,7 +33,7 @@ describe('lib/pricing — catalogue unique', () => {
   });
 
   it('lib/industry-pages.ts ne référence que des offres du catalogue publié', () => {
-    const validOffers = new Set(OFFER_ORDER.map((id) => OFFERS[id].title));
+    const validOffers = new Set<string>(OFFER_ORDER.map((id) => OFFERS[id].title));
     for (const page of industryPages) {
       expect(validOffers.has(page.recommendedOffer)).toBe(true);
     }
