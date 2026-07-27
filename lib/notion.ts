@@ -1,6 +1,9 @@
 import { Client } from '@notionhq/client';
 import type { LeadInput } from './validation';
 import { safe } from './validation';
+import { OFFRE_LABELS } from './pricing';
+
+export { OFFRE_LABELS };
 
 export interface TestimonialInput {
   prenom:   string;
@@ -22,18 +25,6 @@ function getNotionClient(): Client {
   }
   return new Client({ auth: token });
 }
-
-export const OFFRE_LABELS: Record<string, string> = {
-  oneshot:     'One-Shot 490€ TTC',
-  abo:         'Maintenance 49€/mois',
-  maintenance: 'Maintenance 49€/mois',
-  branding:    'Branding digital',
-  'ui-ux':     'UI / UX design',
-  integration: 'Intégration web',
-  full:        'Projet complet',
-  creation:    'Création de site',
-  audit:       'Free website audit',
-};
 
 /**
  * Crée une page dans la base de données Notion pour un nouveau lead.

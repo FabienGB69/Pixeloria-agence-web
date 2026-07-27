@@ -67,8 +67,8 @@ test.describe('Tunnel de vente /refonte', () => {
     await expect(page.locator('h2')).toContainText('Alice');
   });
 
-  test('offre preselect via ?offre=audit-boost', async ({ page }) => {
-    await page.goto('/refonte?offre=audit-boost');
+  test('offre preselect via ?offre=site-artisan', async ({ page }) => {
+    await page.goto('/refonte?offre=site-artisan');
     await expect(page.locator('.wizard')).toBeVisible({ timeout: 10000 });
     // Naviguer jusqu'à l'étape 3 pour vérifier la préselection
     // (remplir step 1 et step 2 rapidement)
@@ -80,11 +80,18 @@ test.describe('Tunnel de vente /refonte', () => {
     await page.locator('.step-nav button').last().click();
 
     await page.locator('.chip, .objective-chip').first().click();
+    // Remplir visiteurs et taux de conversion pour valider l'étape 2
+    const numInputs = page.locator('input[type="number"]');
+    if (await numInputs.count() > 0) {
+      await numInputs.first().fill('5000');
+      await numInputs.nth(1).fill('2');
+    }
     await page.locator('.step-nav button').last().click();
 
-    // Étape 3 — l'offre audit-boost doit être présélectionnée
-    const offerCard = page.locator('[data-offer="audit-boost"], .offer-card').first();
+    // Étape 3 — l'offre site-artisan doit être présélectionnée
+    const offerCard = page.locator('[data-offer="site-artisan"]');
     await expect(offerCard).toBeVisible();
+    await expect(offerCard).toHaveClass(/is-selected/);
   });
 
   test('bouton Précédent revient à l\'étape précédente', async ({ page }) => {

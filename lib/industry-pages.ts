@@ -45,10 +45,10 @@ export const industryPages: IndustryPage[] = [
       'Connexion Google Business Profile',
       'Analytics et suivi des conversions',
     ],
-    recommendedOffer: 'Site Croissance',
-    recommendedPrice: '159 € TTC / mois',
+    recommendedOffer: 'Site Artisan',
+    recommendedPrice: '199 € TTC',
     offerReason:
-      "Les artisans ont besoin d'un site qui évolue avec leurs réalisations, leurs prestations et leur visibilité locale. L'offre Croissance est la plus pertinente car elle permet de travailler le SEO, les contenus, les mises à jour et l'amélioration continue du site.",
+      "Pour un artisan, le Site Artisan à 199 € TTC couvre l'essentiel : site vitrine responsive, SEO local, formulaire de devis et bouton d'appel. L'Option Visibilité à 49 €/mois est recommandée si vous voulez faire vivre vos réalisations, garder Google Business Profile à jour et travailler le SEO local dans le temps.",
     primaryCta: "Je veux un site d'artisan comme celui-ci",
   },
   {
@@ -80,10 +80,10 @@ export const industryPages: IndustryPage[] = [
       'Photos avant / après intégrées aux réalisations',
       'Tracking des demandes de devis',
     ],
-    recommendedOffer: 'Site Croissance',
-    recommendedPrice: '159 € TTC / mois',
+    recommendedOffer: 'Site Artisan',
+    recommendedPrice: '199 € TTC',
     offerReason:
-      "La rénovation demande plus de contenu, plus de réassurance et plus de visibilité locale. L'offre Croissance permet d'améliorer progressivement le site, d'ajouter des réalisations et de travailler les pages SEO par prestation.",
+      "Le Site Artisan à 199 € TTC vous met en ligne rapidement avec vos garanties, réalisations et formulaire de devis. L'Option Visibilité à 49 €/mois est pertinente pour la rénovation : elle permet d'enrichir les réalisations, d'ajouter des pages prestation et de travailler le SEO local en continu.",
     primaryCta: 'Je veux un site de rénovation comme celui-ci',
   },
   {
@@ -118,10 +118,10 @@ export const industryPages: IndustryPage[] = [
       'Page services détaillée avec tarifs indicatifs',
       "SEO local par destination ou secteur géographique",
     ],
-    recommendedOffer: 'Site Croissance',
-    recommendedPrice: '159 € TTC / mois',
+    recommendedOffer: 'Site Artisan',
+    recommendedPrice: '199 € TTC',
     offerReason:
-      "L'offre Croissance convient à une conciergerie qui veut développer sa visibilité locale, ajouter des destinations ou secteurs d'intervention et travailler son positionnement Google dans le temps.",
+      "Le Site Artisan à 199 € TTC vous permet de lancer un site conciergerie professionnel avec formulaire de mandat et FAQ propriétaires. L'Option Visibilité à 49 €/mois est recommandée si vous ajoutez régulièrement des destinations ou secteurs d'intervention et voulez garder une visibilité locale forte.",
     primaryCta: 'Je veux un site conciergerie comme celui-ci',
   },
   {
@@ -153,10 +153,10 @@ export const industryPages: IndustryPage[] = [
       'SEO local pour votre ville et votre spécialité',
       'Tracking des leads vendeurs',
     ],
-    recommendedOffer: 'Site Croissance',
-    recommendedPrice: '159 € TTC / mois',
+    recommendedOffer: 'Site Artisan',
+    recommendedPrice: '199 € TTC',
     offerReason:
-      "L'immobilier nécessite une présence locale forte et des contenus réguliers pour capter des vendeurs. L'offre Croissance est recommandée car elle permet de travailler les pages locales, les services, les contenus et les optimisations dans le temps.",
+      "Le Site Artisan à 199 € TTC vous met en ligne avec un formulaire d'estimation gratuite et vos biens mis en avant. L'Option Visibilité à 49 €/mois est recommandée pour l'immobilier : elle permet d'entretenir des pages quartiers, publier des contenus et capter des vendeurs sur le long terme.",
     primaryCta: 'Je veux un site immobilier comme celui-ci',
   },
   {
@@ -188,10 +188,10 @@ export const industryPages: IndustryPage[] = [
       'SEO local pour votre ville',
       'Connexion Google Business Profile',
     ],
-    recommendedOffer: 'Site Sérénité',
-    recommendedPrice: '89 € TTC / mois',
+    recommendedOffer: 'Site Artisan',
+    recommendedPrice: '199 € TTC',
     offerReason:
-      "Un commerce local a souvent besoin d'un site simple, rapide et rassurant. L'offre Sérénité est adaptée si vous voulez éviter un gros paiement initial et garder maintenance + SEO de base inclus. L'offre Essentiel à 490 € convient si vous préférez un site simple sans abonnement.",
+      "Le Site Artisan à 199 € TTC couvre parfaitement le besoin d'un commerce local : horaires, adresse, Google Maps, galerie et bouton d'appel — livré en 72 h, sans engagement. L'Option Visibilité à 49 €/mois s'ajoute si vous souhaitez déléguer maintenance, mises à jour Google Business Profile et SEO local mensuel.",
     primaryCta: 'Je veux un site de commerce local comme celui-ci',
   },
   {
@@ -222,10 +222,10 @@ export const industryPages: IndustryPage[] = [
       'Blog ou ressources si besoin',
       'SEO personnel ou métier',
     ],
-    recommendedOffer: 'Site Sérénité',
-    recommendedPrice: '89 € TTC / mois',
+    recommendedOffer: 'Site Artisan',
+    recommendedPrice: '199 € TTC',
     offerReason:
-      "Un indépendant a souvent besoin d'un site clair, professionnel et simple à maintenir. L'offre Sérénité est adaptée pour lancer une présence solide. L'offre Croissance devient pertinente si le site doit devenir un canal d'acquisition régulier.",
+      "Le Site Artisan à 199 € TTC vous permet de lancer une présence en ligne claire et professionnelle : positionnement, offres, témoignages, prise de rendez-vous. L'Option Visibilité à 49 €/mois devient pertinente si le site doit devenir un vrai canal d'acquisition (SEO régulier, contenus, GBP).",
     primaryCta: "Je veux un site d'indépendant comme celui-ci",
   },
 ];
