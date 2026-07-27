@@ -21,7 +21,7 @@ Chief Architect (toi, Max)
    └── Pôle 6 — Operations Intelligence  → /operations-intelligence
 ```
 
-Chaque pôle regroupe plusieurs agents spécialisés. 8 agents ont une spec complète (checklist, KPIs, format de rapport) :
+Chaque pôle regroupe plusieurs agents spécialisés. 10 agents ont une spec complète (checklist, KPIs, format de rapport) :
 
 | Agent détaillé | Pôle | Commande |
 |-----------------|------|----------|
@@ -30,9 +30,11 @@ Chaque pôle regroupe plusieurs agents spécialisés. 8 agents ont une spec comp
 | Local SEO Guardian | Growth Intelligence | `/local-seo-guardian` |
 | Competitor Guardian | Growth Intelligence | `/competitor-guardian` |
 | UX Guardian | Product Intelligence | `/ux-guardian` |
+| CRO Guardian | Product Intelligence | `/cro-guardian` |
 | Performance Guardian | Engineering Intelligence | `/performance-guardian` |
 | Security Guardian | Engineering Intelligence | `/security-guardian` |
 | Pixeloria Business Guardian | Business Intelligence | `/business-guardian` |
+| Pricing Guardian | Business Intelligence | `/pricing-guardian` |
 
 Les autres agents de chaque pôle (SEO/Trend Guardian, Accessibility/Design/Mobile/CRO/Customer Journey Guardian, React/NextJS/TypeScript/Architecture Guardian, Content/Copywriting/GEO Content/Social/Google Business/LinkedIn/X Guardian, Pricing/Sales/CRM/Funnel/Offer Guardian, GitHub/Documentation/QA/Testing/Analytics/Roadmap Guardian) sont définis au niveau de leur pôle — voir le fichier `.claude/commands/<pôle>.md` correspondant. Ne pas leur créer de spec détaillée par anticipation ; l'approfondir seulement quand un besoin réel se présente.
 
@@ -62,7 +64,7 @@ Commit
 Pull Request
 ```
 
-Pour une feature ou un changement non trivial, lance les pôles concernés **en parallèle** (un appel `Agent` par pôle/agent pertinent dans un seul message, ou délégation directe si le changement est scopé à un seul domaine — ex. un fix de sécurité pur ne nécessite pas Product Intelligence). N'attends pas qu'un pôle termine avant de lancer les autres, sauf dépendance explicite. Pour les 8 agents déjà détaillés (GEO/AI Citation/Local SEO/Competitor Guardian, UX/Performance/Security/Business Guardian), invoque-les directement par leur commande dédiée plutôt que via le pôle générique.
+Pour une feature ou un changement non trivial, lance les pôles concernés **en parallèle** (un appel `Agent` par pôle/agent pertinent dans un seul message, ou délégation directe si le changement est scopé à un seul domaine — ex. un fix de sécurité pur ne nécessite pas Product Intelligence). N'attends pas qu'un pôle termine avant de lancer les autres, sauf dépendance explicite. Pour les 10 agents déjà détaillés (GEO/AI Citation/Local SEO/Competitor Guardian, UX/CRO/Performance/Security/Business/Pricing Guardian), invoque-les directement par leur commande dédiée plutôt que via le pôle générique.
 
 ## Arbitrage — exemple de référence
 

@@ -14,7 +14,7 @@ Rattaché à `/cto` (Chief Architect), lui-même rattaché au CEO AI (voir `/ceo
 | **Accessibility Guardian** | WCAG 2.1 AA — contrastes, ARIA, focus, ordre clavier | Voir la checklist accessibilité de `/ux-guardian` — agent dédié pour un audit accessibilité approfondi et indépendant |
 | **Design Guardian** | Cohérence visuelle, tokens design (`--primary`, `--accent`, `--radius`), cohérence entre pages FR et US | Référence tokens dans `/ux-guardian` |
 | **Mobile Guardian** | Expérience mobile spécifique — cibles tactiles ≥ 44px, zoom iOS Safari, responsive réel (pas supposé) | Voir "Responsive" dans `/ux-guardian` |
-| **CRO Guardian** | Conversion Rate Optimization — friction dans les formulaires, longueur des parcours, A/B testing candidats | Recoupe `/business-guardian` côté funnel |
+| **CRO Guardian** | Conversion Rate Optimization — expérimentation structurée sur les événements de conversion (devis, formulaire, WhatsApp, téléphone, tarifs, réalisations, rendez-vous, avis), méthode en 7 étapes, aucun dark pattern | Spec complète : `/cro-guardian` |
 | **Customer Journey Guardian** | Cartographie du parcours visiteur → lead, points d'abandon, temps jusqu'à la conversion | Répond à : "Pourquoi un visiteur quitte-t-il la page ? Pourquoi ne demande-t-il pas un devis ?" |
 
 ---
