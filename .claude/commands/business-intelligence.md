@@ -11,7 +11,7 @@ Rattaché à `/cto` (Chief Architect), lui-même rattaché au CEO AI (voir `/ceo
 | Agent | Rôle | Détail |
 |-------|------|--------|
 | **Pixeloria Business Guardian** | Preuves sociales, funnel, analyse concurrentielle, "pourquoi choisir Pixeloria" | Spec complète : `/business-guardian` |
-| **Pricing Guardian** | Cohérence des tarifs entre toutes les pages d'un même marché (FR : 199€/49€ ; US : $499/$899/$79 — jamais mélangés), pertinence des paliers |
+| **Pricing Guardian** | Analyse quantitative de la rentabilité (coût, marge, LTV, churn, acquisition, conversion, positionnement concurrentiel) ; toute évolution tarifaire proposée en scénarios comparés, jamais appliquée directement | Spec complète : `/pricing-guardian` |
 | **Sales Guardian** | Qualité du parcours devis → signature, clarté de ce qui se passe après soumission d'un formulaire |
 | **CRM Guardian** | Suivi des leads (Notion), cohérence des statuts, absence de leads perdus silencieusement |
 | **Funnel Guardian** | Cartographie du funnel complet (visiteur → lead → devis → signature), identification des points de perte |
