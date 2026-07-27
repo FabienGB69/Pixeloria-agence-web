@@ -262,7 +262,7 @@ export default function TunnelForm() {
         {/* ── Step 3 ── */}
         {s.step === 3 && (
           <>
-            <div className="step-lead"><h2>Choisissez votre offre Pixeloria</h2><p>Deux offres, sans engagement. Vous pouvez combiner les deux.</p></div>
+            <div className="step-lead"><h2>Choisissez votre offre Pixeloria</h2><p>Sélectionnez l&apos;offre qui correspond le mieux à votre projet.</p></div>
             <div className="offer-grid">
               {OFFER_ORDER.map((id: OfferId) => {
                 const offer = OFFERS[id];
