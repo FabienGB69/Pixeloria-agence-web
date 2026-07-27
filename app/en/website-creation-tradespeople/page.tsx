@@ -59,7 +59,7 @@ export default function WebsiteCreationTradespeoplePage() {
       email: 'contact@pixeloria.fr',
     },
     description: 'Professional website creation for contractors and local independent tradespeople.',
-    areaServed: 'France',
+    areaServed: { '@type': 'Country', name: 'United States' },
     offers: [
       { '@type': 'Offer', name: 'Starter Website', price: '499', priceCurrency: 'USD' },
       { '@type': 'Offer', name: 'Website Care & Local Visibility', price: '79', priceCurrency: 'USD', priceSpecification: { '@type': 'UnitPriceSpecification', referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitCode: 'MON' } } },

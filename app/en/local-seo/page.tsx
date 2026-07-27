@@ -25,7 +25,7 @@ const jsonLdData = {
     'Local Google search visibility for tradespeople and small businesses. Google Business Profile optimization, service-area pages and monthly ranking tracking.',
   areaServed: {
     '@type': 'Country',
-    name: 'France',
+    name: 'United States',
   },
   serviceType: 'Local SEO',
 };

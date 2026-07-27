@@ -62,7 +62,7 @@ export default function WebsiteMaintenancePage() {
       email: 'contact@pixeloria.fr',
     },
     description: 'Website maintenance for tradespeople and small businesses: hosting, security updates, backups and monthly reporting.',
-    areaServed: 'France',
+    areaServed: { '@type': 'Country', name: 'United States' },
     offers: [
       {
         '@type': 'Offer',
