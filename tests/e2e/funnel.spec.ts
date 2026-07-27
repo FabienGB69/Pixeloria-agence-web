@@ -109,4 +109,39 @@ test.describe('Tunnel de vente /refonte', () => {
     await page.locator('.step-nav button').first().click();
     await expect(page.locator('.progress li.is-active')).toContainText('Contexte');
   });
+
+  test('a11y — les champs coordonnées ont autoComplete et aria-invalid dynamique', async ({ page }) => {
+    // Naviguer jusqu'à l'étape 4
+    await page.locator('input[type="url"]').fill('https://test.fr');
+    await page.locator('select').first().selectOption({ index: 1 });
+    const selects = page.locator('select');
+    await selects.nth(1).selectOption({ index: 1 });
+    await page.locator('.pain-card').first().click();
+    await page.locator('.step-nav button').last().click();
+
+    await page.locator('.chip, .objective-chip').first().click();
+    const numInputs = page.locator('input[type="number"]');
+    await numInputs.first().fill('5000');
+    await numInputs.nth(1).fill('2');
+    await page.locator('.step-nav button').last().click();
+
+    await page.locator('.offer-card button').first().click();
+    await page.locator('.step-nav button').last().click();
+    await expect(page.locator('.progress li.is-active')).toContainText('Coordonnées');
+
+    const email = page.locator('[name="email"]');
+    await expect(email).toHaveAttribute('autocomplete', 'email');
+    await expect(page.locator('[name="prenom"]')).toHaveAttribute('autocomplete', 'given-name');
+    await expect(page.locator('[name="nom"]')).toHaveAttribute('autocomplete', 'family-name');
+    await expect(page.locator('[name="phone"]')).toHaveAttribute('autocomplete', 'tel');
+
+    // Champ requis vide + blur → aria-invalid passe à true
+    await email.fill('not-an-email');
+    await email.blur();
+    await expect(email).toHaveAttribute('aria-invalid', 'true');
+
+    await email.fill('alice@pixeloria.fr');
+    await email.blur();
+    await expect(email).toHaveAttribute('aria-invalid', 'false');
+  });
 });

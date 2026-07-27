@@ -99,6 +99,22 @@ export default function TunnelForm() {
 
   const update = useCallback((patch: Partial<TunnelState>) => setS(prev => ({ ...prev, ...patch })), []);
 
+  // Mirrors ContactForm's aria-invalid handling: native HTML5 validity is used
+  // as the source of truth so screen readers get a live invalid state without
+  // needing a parallel per-field error object.
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const field = e.currentTarget;
+    if (field.hasAttribute('required') || field.value) {
+      field.setAttribute('aria-invalid', String(!field.checkValidity()));
+    }
+  };
+  const revalidate = (e: React.SyntheticEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const field = e.currentTarget;
+    if (field.getAttribute('aria-invalid') === 'true') {
+      field.setAttribute('aria-invalid', String(!field.checkValidity()));
+    }
+  };
+
   const togglePain = (id: string) => {
     update({ painPoints: s.painPoints.includes(id) ? s.painPoints.filter(p => p !== id) : [...s.painPoints, id] });
     setWarning('');
@@ -188,19 +204,40 @@ export default function TunnelForm() {
             <div className="step-lead"><h2>Analyse de votre situation actuelle</h2><p>Partagez votre contexte digital pour cadrer votre projet Pixeloria.</p></div>
             <div className="field-grid">
               <label style={{ gridColumn: '1/-1' }}>
-                URL de votre site
-                <input type="url" placeholder="https://mon-site.fr" value={s.url} onChange={e => update({ url: e.target.value })} />
+                <span className="field-label">URL de votre site</span>
+                <input
+                  type="url"
+                  name="url"
+                  placeholder="https://mon-site.fr"
+                  value={s.url}
+                  onChange={e => { update({ url: e.target.value }); revalidate(e); }}
+                  onBlur={handleBlur}
+                  required
+                  autoComplete="url"
+                />
               </label>
               <label>
-                Technologie principale
-                <select value={s.techno} onChange={e => update({ techno: e.target.value })}>
+                <span className="field-label">Technologie principale</span>
+                <select
+                  name="techno"
+                  value={s.techno}
+                  onChange={e => { update({ techno: e.target.value }); revalidate(e); }}
+                  onBlur={handleBlur}
+                  required
+                >
                   <option value="">Sélectionner…</option>
                   {['WordPress', 'Wix', 'Shopify', 'Webflow', 'Squarespace', 'Développement sur mesure', 'Autre'].map(t => <option key={t}>{t}</option>)}
                 </select>
               </label>
               <label>
-                Ancienneté du site
-                <select value={s.anciennete} onChange={e => update({ anciennete: e.target.value })}>
+                <span className="field-label">Ancienneté du site</span>
+                <select
+                  name="anciennete"
+                  value={s.anciennete}
+                  onChange={e => { update({ anciennete: e.target.value }); revalidate(e); }}
+                  onBlur={handleBlur}
+                  required
+                >
                   <option value="">Sélectionner…</option>
                   {["Moins d'1 an", '1 à 3 ans', '3 à 5 ans', 'Plus de 5 ans'].map(a => <option key={a}>{a}</option>)}
                 </select>
@@ -246,14 +283,30 @@ export default function TunnelForm() {
             </div>
             <div className="field-grid">
               <label>
-                Visiteurs / mois actuels
-                <input type="number" min="0" value={s.visiteurs}
-                  onChange={e => update({ visiteurs: Math.max(0, Number(e.target.value)) })} />
+                <span className="field-label">Visiteurs / mois actuels</span>
+                <input
+                  type="number"
+                  name="visiteurs"
+                  min="0"
+                  value={s.visiteurs}
+                  onChange={e => { update({ visiteurs: Math.max(0, Number(e.target.value)) }); revalidate(e); }}
+                  onBlur={handleBlur}
+                  required
+                />
               </label>
               <label>
-                Taux de conversion actuel (%)
-                <input type="number" min="0" max="100" step="0.1" value={s.leads}
-                  onChange={e => update({ leads: Math.max(0, Number(e.target.value)) })} />
+                <span className="field-label">Taux de conversion actuel (%)</span>
+                <input
+                  type="number"
+                  name="leads"
+                  min="0"
+                  max="100"
+                  step="0.1"
+                  value={s.leads}
+                  onChange={e => { update({ leads: Math.max(0, Number(e.target.value)) }); revalidate(e); }}
+                  onBlur={handleBlur}
+                  required
+                />
               </label>
             </div>
           </>
@@ -289,12 +342,63 @@ export default function TunnelForm() {
           <>
             <div className="step-lead"><h2>Vos coordonnées</h2><p>Dernière étape&nbsp;: recevez une proposition Pixeloria adaptée à votre projet.</p></div>
             <div className="field-grid">
-              <label>Prénom<input type="text" name="prenom" placeholder="Prénom" value={s.prenom} onChange={e => update({ prenom: e.target.value })} /></label>
-              <label>Nom<input type="text" name="nom" placeholder="Nom" value={s.nom} onChange={e => update({ nom: e.target.value })} /></label>
-              <label>Email pro<input type="email" name="email" placeholder="vous@entreprise.fr" value={s.email} onChange={e => update({ email: e.target.value })} /></label>
-              <label>Téléphone<input type="tel" name="phone" placeholder="06 00 00 00 00" value={s.phone} onChange={e => update({ phone: e.target.value })} /></label>
+              <label>
+                <span className="field-label">Prénom</span>
+                <input
+                  type="text"
+                  name="prenom"
+                  placeholder="Prénom"
+                  value={s.prenom}
+                  onChange={e => { update({ prenom: e.target.value }); revalidate(e); }}
+                  onBlur={handleBlur}
+                  required
+                  autoComplete="given-name"
+                />
+              </label>
+              <label>
+                <span className="field-label">Nom</span>
+                <input
+                  type="text"
+                  name="nom"
+                  placeholder="Nom"
+                  value={s.nom}
+                  onChange={e => { update({ nom: e.target.value }); revalidate(e); }}
+                  onBlur={handleBlur}
+                  required
+                  autoComplete="family-name"
+                />
+              </label>
+              <label>
+                <span className="field-label">Email pro</span>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="vous@entreprise.fr"
+                  value={s.email}
+                  onChange={e => { update({ email: e.target.value }); revalidate(e); }}
+                  onBlur={handleBlur}
+                  required
+                  autoComplete="email"
+                />
+              </label>
+              <label>
+                <span className="field-label">Téléphone</span>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="06 00 00 00 00"
+                  value={s.phone}
+                  onChange={e => { update({ phone: e.target.value }); revalidate(e); }}
+                  onBlur={handleBlur}
+                  required
+                  autoComplete="tel"
+                />
+              </label>
             </div>
-            <label>Message (facultatif)<textarea placeholder="Contexte complémentaire" rows={3} value={s.message} onChange={e => update({ message: e.target.value })} /></label>
+            <label>
+              <span className="field-label">Message <span className="optional">(facultatif)</span></span>
+              <textarea placeholder="Contexte complémentaire" rows={3} value={s.message} onChange={e => update({ message: e.target.value })} />
+            </label>
             <TurnstileWidget onVerify={onTurnstileVerify} onExpire={onTurnstileExpire} />
             {s.error && <p role="alert" style={{ color: '#e43f6f', fontSize: '.9rem' }}>{s.error}</p>}
           </>
