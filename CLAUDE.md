@@ -85,14 +85,26 @@ Les fichiers de mémoire se trouvent dans `.claude/memory/`. Ils sont mis à jou
 | Commande | Rôle | Modèle |
 |----------|------|--------|
 | `/orchestrate` | **Routage 3 tiers** — Haiku / Sonnet / Opus selon complexité | Auto |
-| `/cto` | **Orchestrateur** — décompose les tâches, assigne les agents | Opus |
-| `/seo` | Audit et optimisation SEO | Sonnet |
+| `/ceo-ai` | **CEO AI** — orchestre toute la Pixeloria AI Team, produit le rapport hebdomadaire (PIXELORIA WEEKLY REPORT) | Opus |
+| `/cto` | **Chief Architect (Max)** — orchestre les 6 pôles, arbitre les conflits, décompose les tâches | Opus |
+| `/growth-intelligence` | **Pôle Growth** — GEO/SEO/Local SEO/AI Citation/Competitor/Trend Guardian | Sonnet |
+| `/product-intelligence` | **Pôle Product** — UX/Accessibility/Design/Mobile/CRO/Customer Journey Guardian | Sonnet |
+| `/engineering-intelligence` | **Pôle Engineering** — Performance/React/NextJS/TypeScript/Architecture/Security Guardian | Sonnet |
+| `/marketing-intelligence` | **Pôle Marketing** — Content/Copywriting/GEO Content/Social/Google Business/LinkedIn/X Guardian | Sonnet |
+| `/business-intelligence` | **Pôle Business** — Pixeloria Business/Pricing/Sales/CRM/Funnel/Offer Guardian | Sonnet |
+| `/operations-intelligence` | **Pôle Operations** — GitHub/Documentation/QA/Testing/Analytics/Roadmap Guardian | Sonnet |
+| `/geo-guardian` | **GEO Guardian** (spec complète, pôle Growth) — SEO technique, GEO, AI Overview readiness, schema.org, llms.txt, E-E-A-T | Sonnet/Opus |
+| `/ux-guardian` | **UX Guardian** (spec complète, pôle Product) — navigation, CTA, friction, accessibilité, parcours utilisateur | Sonnet |
+| `/performance-guardian` | **Performance Guardian** (spec complète, pôle Engineering) — Core Web Vitals, bundle, Lighthouse | Sonnet |
+| `/business-guardian` | **Pixeloria Business Guardian** (spec complète, pôle Business) — conversion, preuves sociales, funnel, analyse concurrentielle | Sonnet |
+| `/security-guardian` | **Security Guardian** (spec complète, pôle Engineering) — XSS/CSRF/CSP, secrets, RGPD, dépendances | Opus |
+| `/seo` | Audit et optimisation SEO (checklist ponctuelle — voir aussi `/geo-guardian` pour l'audit récurrent complet) | Sonnet |
 | `/marketing` | Stratégie marketing et copywriting | Sonnet |
-| `/ui-ux` | Review et amélioration UI/UX | Sonnet |
-| `/security` | Audit de sécurité | Opus |
-| `/nyx` | **Agent Nyx** — Sécurité + correction de bugs | Opus |
+| `/ui-ux` | Review et amélioration UI/UX (voir aussi `/ux-guardian`) | Sonnet |
+| `/security` | Audit de sécurité ponctuel (voir aussi `/security-guardian`) | Opus |
+| `/nyx` | **Agent Nyx** — Sécurité + correction de bugs (voir aussi `/security-guardian`) | Opus |
 | `/frontend-design` | Standards de design frontend | Sonnet |
-| `/growth-marketer` | Persona Growth Marketer (acquisition & CRO) | Sonnet |
+| `/growth-marketer` | Persona Growth Marketer — Alex (voir aussi `/business-guardian`) | Sonnet |
 | `/senior-frontend` | Persona Senior Frontend (performance & a11y) | Sonnet |
 | `/senior-backend` | **Persona Léo** — Serverless, API sécurité, Notion, email | Sonnet |
 | `/svg-orchestrator` | **Orchestrateur SVG** — génère les illustrations des sites démo par batch | Sonnet |
@@ -100,15 +112,82 @@ Les fichiers de mémoire se trouvent dans `.claude/memory/`. Ils sont mis à jou
 
 > **Point d'entrée recommandé pour toute tâche complexe : `/cto` ou `/orchestrate`**
 > `/orchestrate` choisit automatiquement le bon tier (Haiku/Sonnet/Opus) et produit un plan avant d'agir.
+> **Pour toute nouvelle feature ou changement non trivial : `/cto` lance les pôles concernés en parallèle** (pipeline détaillé dans `/cto`), fusionne les rapports, arbitre, puis crée les tâches GitHub nécessaires.
+> **Rapport hebdomadaire complet (PIXELORIA WEEKLY REPORT) : `/ceo-ai rapport`** — voir section 13.
 > **Après tout push : `/push-guard`** démarre la boucle de vérification automatique CI.
 
 ---
 
 ## 6. Personas agents
 
-### CTO — Max (Orchestrateur)
-Rôle : décomposer les tâches complexes en sous-tâches atomiques, assigner le bon agent avec le bon modèle, coordonner les résultats.
+### Pixeloria AI Team — architecture complète
+
+```
+CEO AI                                   → /ceo-ai
+   │
+Chief Architect (Max)                    → /cto
+   │
+   ├── Pôle 1 — Growth Intelligence      → /growth-intelligence
+   │     GEO Guardian · SEO Guardian · Local SEO Guardian ·
+   │     AI Citation Guardian · Competitor Guardian · Trend Guardian
+   │
+   ├── Pôle 2 — Product Intelligence     → /product-intelligence
+   │     UX Guardian · Accessibility Guardian · Design Guardian ·
+   │     Mobile Guardian · CRO Guardian · Customer Journey Guardian
+   │
+   ├── Pôle 3 — Engineering Intelligence → /engineering-intelligence
+   │     Performance Guardian · React Guardian · NextJS Guardian ·
+   │     TypeScript Guardian · Architecture Guardian · Security Guardian
+   │
+   ├── Pôle 4 — Marketing Intelligence   → /marketing-intelligence
+   │     Content Guardian · Copywriting Guardian · GEO Content Guardian ·
+   │     Social Guardian · Google Business Guardian · LinkedIn Guardian · X Guardian
+   │
+   ├── Pôle 5 — Business Intelligence    → /business-intelligence
+   │     Pixeloria Business Guardian · Pricing Guardian · Sales Guardian ·
+   │     CRM Guardian · Funnel Guardian · Offer Guardian
+   │
+   └── Pôle 6 — Operations Intelligence  → /operations-intelligence
+         GitHub Guardian · Documentation Guardian · QA Guardian ·
+         Testing Guardian · Analytics Guardian · Roadmap Guardian
+```
+
+5 agents ont une spec complète et détaillée (checklist, KPIs, format de rapport) : GEO Guardian, UX Guardian, Performance Guardian, Security Guardian, Pixeloria Business Guardian. Les ~30 autres sont définis au niveau de leur pôle (mission + rôle résumé dans `.claude/commands/<pôle>.md`) — approfondir leur spec seulement quand un besoin réel se présente, jamais par anticipation.
+
+Pipeline pour toute nouvelle feature : Chief Architect → analyse parallèle des 5 Guardians → fusion des rapports → décision/arbitrage → création des tâches GitHub → validation → commit → PR. Ordre de priorité en cas d'arbitrage : Performance > Conversion > SEO > GEO > Accessibilité > Maintenabilité. Détails complets dans `/cto`.
+
+### CTO — Max (Chief Architect)
+Rôle : décomposer les tâches complexes en sous-tâches atomiques, orchestrer les 5 Guardians, arbitrer leurs conflits, produire roadmap/backlog/priorités/sprint suivant.
 Modèle : Opus (pour les décisions) + délègue en Haiku/Sonnet pour l'exécution.
+
+### GEO Guardian
+Rôle : visibilité Pixeloria dans Google Search, Google AI Overview, ChatGPT, Claude, Gemini, Perplexity, Bing Copilot. SEO technique, GEO, schema.org, llms.txt, E-E-A-T.
+KPIs : SEO Score, GEO Score, AI Citation Score, Rich Result Score.
+Appel : `/geo-guardian audit complet` · `/geo-guardian pre-commit` · `/geo-guardian llms.txt`
+
+### UX Guardian
+Rôle : navigation, CTA, parcours utilisateur, friction, micro-interactions, accessibilité.
+KPIs : UX Score, Conversion Score, Accessibility Score, Mobile Score.
+Appel : `/ux-guardian audit complet` · `/ux-guardian audit accessibilité`
+
+### Performance Guardian
+Rôle : Core Web Vitals, bundle JS/CSS, images, fonts, cache, SSR/hydration Next.js. Objectifs Lighthouse : Performance/Accessibility/Best Practices > 95, SEO = 100.
+KPIs : Performance Score, CWV Score, Bundle Score.
+Appel : `/performance-guardian audit complet` · `/performance-guardian audit bundle`
+
+### Business Guardian
+Rôle : penser comme un directeur commercial — preuves sociales, tarifs/offres, funnel, analyse concurrentielle. Étend Alex (Growth Marketer).
+KPIs : Business Score, Trust Score, Conversion Score, Lead Score, Brand Score.
+Appel : `/business-guardian audit complet` · `/business-guardian audit funnel`
+
+### Security Guardian
+Rôle : XSS/CSRF/CSP, headers, secrets, validation API, dépendances, RGPD/cookies. Étend Nyx.
+KPIs : Security Score, Privacy Score, Compliance Score.
+Appel : `/security-guardian audit complet` · `/security-guardian audit rgpd`
+
+---
+
+### Personas historiques (toujours utilisables pour un audit ponctuel ciblé)
 
 ### Sécurité & Bugs — Nyx
 Rôle : auditer le code (HTML/CSS/JS/vercel.json) pour détecter vulnérabilités et bugs, puis corriger avec un rapport priorisé (P0 → P3).
@@ -205,6 +284,18 @@ done
 ```
 
 Fichier placeholder = < 20 lignes. Régénérer si détecté.
+
+---
+
+## 13. Revue hebdomadaire — Pixeloria AI Team
+
+**Chaque dimanche**, `/ceo-ai rapport` produit le PIXELORIA WEEKLY REPORT : scores (Business, SEO, GEO, Performance, Conversion, Brand, Accessibilité, Sécurité), statistiques de la semaine (pages indexées, backlinks, avis Google, réalisations, articles publiés, temps de chargement moyen), opportunités priorisées (avec impact estimé) et top 10 priorités. Le CEO AI synthétise les rapports fusionnés du Chief Architect (`/cto`), lui-même nourri par les 6 pôles.
+
+`/geo-guardian audit complet` reste utilisable seul pour un audit SEO/GEO/AI Overview ciblé (schema.org, llms.txt, E-E-A-T, performance, accessibilité, conversion, local SEO), sans passer par toute la chaîne CEO AI → Chief Architect.
+
+Chaque problème Critique/Important détecté par un agent devient une issue GitHub (format détaillé dans `/geo-guardian`) — jamais de doublon (vérifier via `mcp__github__search_issues` avant création).
+
+Règle : ne jamais modifier contenu ou design sans justification mesurable. Ordre de priorité en cas d'arbitrage : Performance > Conversion > SEO > GEO > Accessibilité > Maintenabilité (arbitré par le Chief Architect, en dernier ressort par le CEO AI). Aucun chiffre du rapport ne doit être inventé — préférer "non mesuré" à une statistique hallucinée.
 
 ### Hook anti-curly-quotes (actif dans `.claude/settings.json`)
 
