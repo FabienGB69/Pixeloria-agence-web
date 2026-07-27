@@ -4,94 +4,96 @@ import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
-  title: 'Home Service Business Website Design That Generates Leads | Pixeloria',
+  title: 'Electrician Website Design That Generates Leads | Pixeloria',
   description:
-    'Professional websites for plumbers, electricians, HVAC contractors, landscapers and cleaning companies. Mobile-first design built to generate phone calls and service requests for US home-service businesses.',
+    'Electrician websites structured around both emergency repairs and planned projects like panel upgrades and EV charger installation, with clear licensing display. Website design for US electrical companies.',
   alternates: {
-    canonical: 'https://pixeloria.fr/en/home-service-websites',
+    canonical: 'https://pixeloria.fr/en/electrician-websites',
   },
   openGraph: {
     type: 'website',
-    url: 'https://pixeloria.fr/en/home-service-websites',
-    title: 'Home Service Business Website Design That Generates Leads | Pixeloria',
+    url: 'https://pixeloria.fr/en/electrician-websites',
+    title: 'Electrician Website Design That Generates Leads | Pixeloria',
     description:
-      'Professional websites for plumbers, electricians, HVAC contractors, landscapers and cleaning companies. Mobile-first design built to generate phone calls and service requests for US home-service businesses.',
+      'Electrician websites structured around both emergency repairs and planned projects like panel upgrades and EV charger installation, with clear licensing display. Website design for US electrical companies.',
     locale: 'en_US',
     siteName: 'Pixeloria',
   },
 };
 
-const homeServiceTypes = [
-  { label: 'Plumbers', href: '/en/plumber-websites' },
-  { label: 'Electricians', href: '/en/electrician-websites' },
-  { label: 'HVAC contractors', href: '/en/hvac-websites' },
-  { label: 'Landscapers', href: '/en/landscaping-websites' },
-  { label: 'Cleaning companies' },
-  { label: 'Other home-service trades' },
+const emergencyFeatures = [
+  {
+    title: 'Power outage repair',
+    desc: 'A clear path for customers dealing with a sudden power outage or a circuit that will not reset.',
+  },
+  {
+    title: 'Exposed wiring and safety hazards',
+    desc: 'A visible way to reach you fast when a customer spots exposed wiring, sparking or another safety hazard.',
+  },
+  {
+    title: 'Prominent mobile call button',
+    desc: 'A tap-to-call button that stays visible, since emergency electrical searches need an immediate way to reach you.',
+  },
 ];
 
-const strongWebsiteItems = [
+const plannedFeatures = [
   {
-    title: 'Recurring Service Calls',
-    desc: 'Home-service work is often repeat business. Your website should make it just as easy for a returning customer to book a visit as it is for a first-time visitor to call.',
+    title: 'Panel upgrades',
+    desc: 'A dedicated page explaining electrical panel upgrades for homes with outdated or undersized panels.',
   },
   {
-    title: 'Service-Area Coverage',
-    desc: 'A clear list of the towns and neighborhoods you serve helps customers confirm you work in their area before they reach out.',
+    title: 'EV charger installation',
+    desc: 'A page for EV charger installation — a genuinely growing niche and a search term worth naming directly on its own page.',
   },
   {
-    title: 'Same-Day and Emergency Messaging',
-    desc: 'If you offer same-day or emergency service, your website should say so clearly, so customers with an urgent need know to call you.',
-  },
-  {
-    title: 'Trust and Proof',
-    desc: 'Reviews, licensing details and completed jobs help a homeowner feel confident calling you into their home.',
+    title: 'Whole-home rewiring and smart-home installs',
+    desc: 'Separate coverage of whole-home rewiring and smart-home installations, since these are longer, planned projects rather than same-day calls.',
   },
 ];
 
 const includeItems = [
   {
+    label: 'Clear emergency vs. planned split',
+    desc: 'Emergency repair services and planned-project services presented as distinct paths, since they are different customer journeys with different urgency levels.',
+  },
+  {
+    label: 'Licensing and certification display',
+    desc: 'License number and certifications shown clearly — this matters more for electrical work than most trades, given the safety stakes involved.',
+  },
+  {
     label: 'Service pages',
-    desc: 'Dedicated pages for each service you offer, from routine maintenance to repairs and installations.',
+    desc: 'Dedicated pages for panel upgrades, EV charger installation, rewiring, lighting installation and other core services.',
   },
   {
     label: 'Service area page',
-    desc: 'A clear list of the towns and neighborhoods you cover, so customers know you serve their area.',
-  },
-  {
-    label: 'Completed jobs gallery',
-    desc: 'Photos of finished work to build trust with homeowners before they call.',
-  },
-  {
-    label: 'Customer reviews',
-    desc: 'Reviews displayed where prospects can see them before they decide to reach out.',
+    desc: 'A clear list of the towns and counties you cover, so customers know you serve their area.',
   },
   {
     label: 'Mobile call button',
     desc: 'A tap-to-call button, always visible, for customers browsing on a phone.',
   },
   {
-    label: 'Short service request form',
-    desc: 'A simple form so customers can request service without picking up the phone.',
+    label: 'Customer reviews',
+    desc: 'Reviews displayed where prospects can see them before they decide to reach out.',
   },
 ];
 
 const faqs = [
   {
-    q: 'How much does a home service business website cost?',
-    a: 'Pixeloria home service websites start at $499 for a one-page website. Multi-page websites with individual service pages start at $899.',
+    q: 'How much does an electrician website cost?',
+    a: 'Pixeloria electrician websites start at $499 for a one-page website. Multi-page websites with individual service pages start at $899.',
   },
   {
-    q: 'How long does it take to build a home service website?',
-    a: 'A one-page website can generally be delivered within five business days after we receive all required content. Larger multi-page websites may take one to three weeks.',
+    q: 'How long does it take to build an electrician website?',
+    a: 'A one-page electrician website can generally be delivered within five business days after we receive all required content. Larger multi-page websites may take one to three weeks.',
   },
   {
-    q: 'Can you redesign my existing website?',
-    a: 'Yes. Pixeloria can redesign outdated home-service websites while improving mobile usability, lead generation and local search structure.',
+    q: 'Can you redesign my existing electrician website?',
+    a: 'Yes. Pixeloria can redesign outdated electrician websites, including separating emergency and planned-project services more clearly and improving local search structure.',
   },
   {
-    q: 'Can my website highlight same-day or emergency service?',
-    a: 'Yes. If your business offers same-day or emergency service, we can feature it prominently so customers with an urgent need can find and contact you quickly.',
+    q: 'Can my website have a page for EV charger installation?',
+    a: 'Yes. EV charger installation is a growing search term, and we can build it a dedicated page separate from your general electrical service pages.',
   },
   {
     q: 'Do you guarantee first-page Google rankings?',
@@ -99,18 +101,18 @@ const faqs = [
   },
 ];
 
-export default function HomeServiceWebsitesPage() {
+export default function ElectricianWebsitesPage() {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'Home service business website design',
+    name: 'Electrician website design',
     provider: {
       '@type': 'Organization',
       name: 'Pixeloria',
       url: 'https://pixeloria.fr',
     },
     description:
-      'Website design services for plumbers, electricians, HVAC contractors, landscapers, cleaning companies and other home-service businesses.',
+      'Website design services for electrical companies, structured around both emergency repairs and planned electrical projects.',
     areaServed: { '@type': 'Country', name: 'United States' },
   };
 
@@ -138,15 +140,16 @@ export default function HomeServiceWebsitesPage() {
               <nav className="breadcrumb" aria-label="Breadcrumb">
                 <Link href="/en">Home</Link>
                 <span aria-hidden="true"> › </span>
-                <span>Home Service Websites</span>
+                <span>Electrician Websites</span>
               </nav>
-              <span className="eyebrow">Home service businesses</span>
-              <h1>Home Service Websites Built to Generate More Calls</h1>
+              <span className="eyebrow">Electrical companies</span>
+              <h1>Electrician Website Design That Generates Leads</h1>
               <p className="page-hero-sub">
-                Pixeloria creates fast, professional websites for plumbers, electricians,
-                HVAC contractors, landscapers, cleaning companies and other home-service
-                businesses across the United States. Every website is structured to
-                showcase your services, service area, reviews and service request process.
+                Pixeloria builds websites for electrical companies across the United States.
+                Electrical work covers two very different customer journeys — urgent repairs
+                and planned projects like panel upgrades or EV charger installation — so every
+                site is structured to present both clearly, alongside visible licensing
+                information.
               </p>
               <div className="page-hero-actions">
                 <Link href="/en/free-website-audit" className="btn btn-primary">
@@ -167,81 +170,41 @@ export default function HomeServiceWebsitesPage() {
             <div className="include-item" style={{ maxWidth: '760px' }}>
               <strong>Quick answer</strong>
               <p>
-                A home service business website is a lead-generation website designed to
-                present your services, build trust with local customers, and turn visitors
-                into phone calls and service requests. A strong home-service website
-                includes service pages, a service-area section, reviews, completed jobs,
-                mobile call buttons and a short service request form.
+                An electrician website should clearly separate emergency electrical repairs
+                (power outages, exposed wiring, safety hazards) from planned projects (panel
+                upgrades, EV charger installation, rewiring, smart-home installs), since these
+                are different customer journeys with different urgency levels. It should also
+                display licensing and certification information clearly, given the safety
+                stakes of electrical work, plus a mobile call button, service pages and reviews.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Home Service Trades We Build Websites For */}
+        {/* Two Kinds of Electrical Searches */}
         <section className="section section-tinted">
           <div className="container">
             <div className="section-heading">
-              <span className="eyebrow">Who we build for</span>
-              <h2>Home Service Trades We Build Websites For</h2>
+              <span className="eyebrow">Two customer journeys</span>
+              <h2>Two Kinds of Electrical Searches: Emergency and Planned</h2>
               <p className="section-sub">
-                Pixeloria builds websites for companies that provide home services —
-                Pixeloria itself does not perform plumbing, electrical, HVAC, landscaping
-                or cleaning work. Our job is to design and build the website your business
-                uses to win jobs.
-              </p>
-            </div>
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-                gap: '1.25rem',
-                marginTop: '2.5rem',
-              }}
-            >
-              {homeServiceTypes.map(({ label, href }) =>
-                href ? (
-                  <Link key={label} href={href} className="why-card" style={{ textDecoration: 'none', display: 'block' }}>
-                    <h3 style={{ color: 'var(--text)', margin: 0 }}>{label}</h3>
-                    <span
-                      style={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '0.35rem',
-                        marginTop: '0.75rem',
-                        fontSize: '0.85rem',
-                        fontWeight: 600,
-                        color: 'var(--primary)',
-                      }}
-                    >
-                      Learn more
-                      <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                        <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                  </Link>
-                ) : (
-                  <div key={label} className="why-card">
-                    <h3 style={{ color: 'var(--text)', margin: 0 }}>{label}</h3>
-                  </div>
-                )
-              )}
-            </div>
-          </div>
-        </section>
-
-        {/* What Makes a Strong Home Service Website */}
-        <section className="section">
-          <div className="container">
-            <div className="section-heading">
-              <span className="eyebrow">The essentials</span>
-              <h2>What Makes a Strong Home Service Website</h2>
-              <p className="section-sub">
-                Home-service customers often need help quickly, and many become repeat
-                customers over time. A strong website is built around both situations.
+                Pixeloria builds websites for companies that provide electrical services —
+                Pixeloria itself does not perform electrical work. Emergency and planned-project
+                customers are looking for very different things, and your website should present
+                each one clearly rather than blending them together.
               </p>
             </div>
             <div className="benefits-grid">
-              {strongWebsiteItems.map((f, i) => (
+              {emergencyFeatures.map((f, i) => (
+                <div key={f.title} className="benefit-card">
+                  <span className="benefit-num">0{i + 1}</span>
+                  <h3>{f.title}</h3>
+                  <p>{f.desc}</p>
+                </div>
+              ))}
+            </div>
+            <div className="benefits-grid" style={{ marginTop: '1.5rem' }}>
+              {plannedFeatures.map((f, i) => (
                 <div key={f.title} className="benefit-card">
                   <span className="benefit-num">0{i + 1}</span>
                   <h3>{f.title}</h3>
@@ -252,15 +215,41 @@ export default function HomeServiceWebsitesPage() {
           </div>
         </section>
 
-        {/* What Every Home Service Website Should Include */}
+        {/* Electrical Searches Your Website Should Speak To */}
+        <section className="section">
+          <div className="container">
+            <div className="section-heading">
+              <span className="eyebrow">Local search</span>
+              <h2>Electrical Searches Your Website Should Speak To</h2>
+              <p className="section-sub">
+                Customers searching for electrical help are usually looking for one of these
+                situations. Your website should speak directly to each one.
+              </p>
+            </div>
+            <ul className="artisan-types-grid">
+              <li className="artisan-type-tag">Emergency electrician</li>
+              <li className="artisan-type-tag">Power outage repair</li>
+              <li className="artisan-type-tag">Exposed wiring repair</li>
+              <li className="artisan-type-tag">Panel upgrades</li>
+              <li className="artisan-type-tag">EV charger installation</li>
+              <li className="artisan-type-tag">Whole-home rewiring</li>
+              <li className="artisan-type-tag">Smart-home installation</li>
+              <li className="artisan-type-tag">Lighting installation</li>
+              <li className="artisan-type-tag">Residential electrical</li>
+              <li className="artisan-type-tag">Commercial electrical</li>
+            </ul>
+          </div>
+        </section>
+
+        {/* What Every Electrician Website Should Include */}
         <section className="section section-tinted">
           <div className="container">
             <div className="section-heading">
-              <span className="eyebrow">What&apos;s included</span>
-              <h2>What Every Home Service Website Should Include</h2>
+              <span className="eyebrow">The essentials</span>
+              <h2>What Every Electrician Website Should Include</h2>
               <p className="section-sub">
-                These are the elements customers look for before they decide to call a
-                home-service company.
+                These are the elements customers look for before they decide to call an
+                electrical company.
               </p>
             </div>
             <div className="includes-grid">
@@ -279,22 +268,22 @@ export default function HomeServiceWebsitesPage() {
           <div className="container">
             <div className="section-heading">
               <span className="eyebrow">Pricing</span>
-              <h2>Home Service Website Pricing</h2>
+              <h2>Electrician Website Pricing</h2>
               <p className="section-sub">
-                Simple, one-time pricing to launch your home-service website, plus an
-                optional monthly plan to keep it maintained and locally visible.
+                Simple, one-time pricing to launch your electrician website, plus an optional
+                monthly plan to keep it maintained and locally visible.
               </p>
             </div>
             <div className="pricing-cards pricing-cards--three">
               <div className="pricing-card">
                 <p className="pricing-label">Starter Website</p>
                 <p className="pricing-price">$499 <span>one-time</span></p>
-                <p className="pricing-sublabel">A focused one-page home-service website</p>
+                <p className="pricing-sublabel">A focused one-page electrician website</p>
                 <ul>
                   <li>One-page website</li>
                   <li>Mobile-first responsive design</li>
                   <li>Mobile call button</li>
-                  <li>Short service request form</li>
+                  <li>Licensing display</li>
                 </ul>
                 <Link href="/en/free-website-audit" className="btn btn-secondary">Get Started →</Link>
               </div>
@@ -304,9 +293,8 @@ export default function HomeServiceWebsitesPage() {
                 <p className="pricing-price">$899 <span>one-time</span></p>
                 <p className="pricing-sublabel">A multi-page website with individual service pages</p>
                 <ul>
-                  <li>Multiple service pages</li>
+                  <li>Separate emergency and planned-project pages</li>
                   <li>Service area page</li>
-                  <li>Completed jobs gallery</li>
                   <li>Customer reviews section</li>
                   <li>Local SEO structure included</li>
                 </ul>
@@ -363,11 +351,11 @@ export default function HomeServiceWebsitesPage() {
         <section className="section">
           <div className="container">
             <div className="page-cta-block">
-              <h2>Request a Free Home Service Website Audit</h2>
+              <h2>Request a Free Electrician Website Audit</h2>
               <p>
-                Send us your current website, or tell us about your business if you
-                don&apos;t have one yet. We&apos;ll give you honest, no-obligation feedback
-                on what would help you generate more leads.
+                Send us your current website, or tell us about your electrical business if you
+                don&apos;t have one yet. We&apos;ll give you honest, no-obligation feedback on
+                what would help you generate more leads.
               </p>
               <Link href="/en/free-website-audit" className="btn btn-primary btn-lg">
                 Request My Free Audit

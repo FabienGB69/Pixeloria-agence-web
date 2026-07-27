@@ -22,11 +22,11 @@ export const metadata: Metadata = {
 };
 
 const contractorTypes = [
-  { label: 'General contractors' },
+  { label: 'General contractors', href: '/en/general-contractor-websites' },
   { label: 'Roofing contractors', href: '/en/roofing-websites' },
-  { label: 'Remodeling companies' },
-  { label: 'Gutter companies' },
-  { label: 'Painting contractors' },
+  { label: 'Remodeling companies', href: '/en/remodeling-contractor-websites' },
+  { label: 'Gutter companies', href: '/en/gutter-company-websites' },
+  { label: 'Painting contractors', href: '/en/painting-contractor-websites' },
   { label: 'Other specialty trades' },
 ];
 
