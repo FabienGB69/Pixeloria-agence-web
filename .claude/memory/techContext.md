@@ -1,6 +1,6 @@
 # Tech Context — Pixeloria
 
-> Mis à jour le 2026-04-25.
+> Mis à jour le 2026-07-27.
 
 ## Stack
 
@@ -38,22 +38,37 @@ UPSTASH_REDIS_REST_TOKEN=                     # optionnel
 
 ```
 app/
-  layout.tsx · page.tsx · not-found.tsx
-  api/submit-lead/route.ts
-  offres/ · creation-site-internet-artisan/ · creation-site-internet-tpe-pme/
-  refonte-site-internet/ · maintenance-site-web/ · seo-local/ · realisations/
-  agence-web-[dép]/ (×8) · refonte/ · politique-confidentialite/
-  mentions-legales/ · cgu/ · cgv/
+  layout.tsx (root, partagé FR+EN) · page.tsx · not-found.tsx · sitemap.ts
+  api/submit-lead/ · api/submit-testimonial/ · api/stripe/webhook/
+  offres/ · tarifs/ · faq/ · avis/ · comment-ca-marche/ · realisations/
+  creation-site-internet-artisan/ · creation-site-internet-tpe-pme/
+  refonte-site-internet/ · maintenance-site-web/ · seo-local/
+  agence-web-[dép]/ (×8) · refonte/ · creation/ · parrainage/
+  politique-confidentialite/ · mentions-legales/ · cgu/ · cgv/
+  en/  — marché US contractors (repositionné Phase 1-4, PR #114-121)
+    page.tsx · pricing/ · offers/ · contractor-websites/ (+ ×5 states)
+    hvac-websites/ · plumber-websites/ · roofing-websites/ · etc. (×9 secteurs)
+    resources/ · case-studies/ · web-agency-[dép]/ (×8, parité FR)
+    legal-notice/ · privacy-policy/ · terms-of-use/ · terms-of-sale/
 
 components/
-  layout/Header.tsx · Footer.tsx
-  sections/ (Hero, Services, ComparisonTable, FAQ, Process, AuditGratuit…)
-  forms/ContactForm.tsx · TunnelForm.tsx · TurnstileWidget.tsx
+  layout/Header.tsx · HeaderEn.tsx · Footer.tsx · SkipLink.tsx · HtmlLangSync.tsx
+  sections/ (Hero, Services, ComparisonTable, FAQ, Process, GoogleReviews…)
+  forms/ContactForm.tsx · TunnelForm.tsx · CreationForm.tsx · TurnstileWidget.tsx
+  consent/ (CookieBanner, ConsentProvider, AnalyticsScripts)
   JsonLd.tsx · ui/LaunchBanner.tsx
 
-lib/  notion.ts · resend.ts · validation.ts · security.ts · utm.ts
-styles/  styles.css (variables + reset + tous les styles)
-tests/e2e/  smoke.spec.ts · contact-form.spec.ts · funnel.spec.ts
+lib/
+  notion.ts · resend.ts · validation.ts · security.ts · html.ts (escapeHtml)
+  pricing.ts (catalogue FR unique) · industry-pages.ts · utm.ts · gtm.ts
+
+styles.css        — styles hérités (header, nav, sections, forms, .reveal)
+styles/globals.css — design tokens actuels (Sober Theme), chargé après styles.css
+
+tests/
+  e2e/   smoke · contact-form · funnel · pages · skip-link (Playwright, seul dossier dans testDir)
+  unit/  validation · security · pricing · resend (Vitest, scope lib/**)
+  a11y/  accessibility (axe-core) — PAS dans testDir Playwright, ne tourne pas en CI
 ```
 
 ## Contraintes importantes
