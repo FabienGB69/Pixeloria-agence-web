@@ -68,7 +68,7 @@ export default function WebsiteRedesignPage() {
       email: 'contact@pixeloria.fr',
     },
     description: 'Website redesign for local tradespeople and small businesses. Modern design, local SEO, mobile-responsive.',
-    areaServed: 'France',
+    areaServed: { '@type': 'Country', name: 'United States' },
   };
 
   return (

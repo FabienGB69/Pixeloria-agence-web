@@ -1,5 +1,6 @@
 import { Resend } from 'resend';
 import type { LeadInput } from './validation';
+import { escapeHtml } from './html';
 
 /**
  * Client Resend initialisé lazily.
@@ -24,11 +25,13 @@ export type OwnerNotifPayload = LeadInput & {
 
 // ─── Templates HTML ───────────────────────────────────────────────────────────
 
-function buildConfirmationHtml(prenom: string, offreLabel: string): string {
-  const greeting = prenom ? `Bonjour ${prenom},` : 'Bonjour,';
+export function buildConfirmationHtml(prenom: string, offreLabel: string): string {
+  const safePrenom = escapeHtml(prenom);
+  const safeOffreLabel = escapeHtml(offreLabel);
+  const greeting = safePrenom ? `Bonjour ${safePrenom},` : 'Bonjour,';
   const offreHtml =
     offreLabel !== 'Non précisé'
-      ? `pour l'offre <strong style="color:#7a5cff;">${offreLabel}</strong>`
+      ? `pour l'offre <strong style="color:#7a5cff;">${safeOffreLabel}</strong>`
       : 'sur Pixeloria';
 
   return `<!DOCTYPE html>
@@ -74,19 +77,16 @@ function buildConfirmationHtml(prenom: string, offreLabel: string): string {
 }
 
 function buildOwnerNotifHtml(data: OwnerNotifPayload): string {
-  const escape = (s: string) =>
-    s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-
-  const fullName = escape(
+  const fullName = escapeHtml(
     [data.prenom, data.nom].filter(Boolean).join(' ') || 'Anonyme'
   );
-  const email = escape(data.email);
-  const company = data.company ? escape(data.company) : '—';
-  const phone = data.phone ? escape(data.phone) : '—';
-  const url = data.url ? escape(data.url) : '';
+  const email = escapeHtml(data.email);
+  const company = data.company ? escapeHtml(data.company) : '—';
+  const phone = data.phone ? escapeHtml(data.phone) : '—';
+  const url = data.url ? escapeHtml(data.url) : '';
   // Les retours à la ligne (contexte audit gratuit ajouté au message) sont
   // convertis en <br> pour rester lisibles dans l'email.
-  const message = data.message ? escape(data.message).replace(/\n/g, '<br>') : '—';
+  const message = data.message ? escapeHtml(data.message).replace(/\n/g, '<br>') : '—';
 
   const rows: [string, string][] = [
     ['Nom',       fullName],
@@ -96,8 +96,8 @@ function buildOwnerNotifHtml(data: OwnerNotifPayload): string {
     ['Site web',  url
       ? `<a href="${url}" style="color:#00d1ff;">${url}</a>`
       : '—'],
-    ['Offre',     escape(data.offreLabel)],
-    ['Source',    escape(data.source)],
+    ['Offre',     escapeHtml(data.offreLabel)],
+    ['Source',    escapeHtml(data.source)],
     ['Message',   message],
   ];
 

@@ -10,19 +10,22 @@
 | Élément | Détail |
 |---------|--------|
 | **Nom** | Pixeloria – Agence Web |
-| **Type** | Site marketing statique (HTML + CSS + Vanilla JS) |
-| **Langue UI** | Français |
-| **Déploiement** | Vercel |
-| **Design** | Dark theme · Couleurs primaires : `#7a5cff` (violet), `#00d1ff` (cyan) |
+| **Type** | Site Next.js 14 (App Router, TypeScript strict) — FR à la racine, marché US contractors sous `/en/*` |
+| **Langue UI** | Français (racine) + Anglais (`/en/*`) |
+| **Déploiement** | Vercel (auto sur push `main`) |
+| **Design** | Sober theme (clair) · `--bg:#FAF8F4` · Couleurs primaires : `--primary:#5B3FD4` (violet), voir `styles/globals.css` |
 | **Repo GitHub** | `fabiengb69/pixeloria-agence-web` |
 
 ### Structure des fichiers
 
 ```
-index.html      — Page unique (hero, services, portfolio, process, contact, footer)
-styles.css      — Tokens CSS, layout, responsive, animations .reveal
-script.js       — Menu mobile, scroll-reveal, année footer
-assets/         — Images et médias
+app/            — Pages Next.js App Router (page.tsx par route), API routes (app/api/*)
+components/     — layout/ (Header, Footer) · sections/ · forms/ · consent/ · ui/
+lib/            — notion.ts, resend.ts, validation.ts (Zod), security.ts, pricing.ts, utm.ts…
+styles.css      — Styles hérités (header, nav, sections, forms, animations .reveal)
+styles/globals.css — Design tokens actuels (Sober Theme), chargé après styles.css, écrase les anciens `:root`
+tests/          — e2e/ (Playwright), unit/ (Vitest), a11y/ (axe-core — non branché en CI, voir §12)
+public/         — Assets statiques, llms.txt
 .claude/        — Config Claude Code (skills, mémoire, settings)
 autopilot/      — Config machine-readable AutoPilot marché FR (agents/kpis/permissions/thresholds/sources.yml)
 autopilot-us/   — Config machine-readable AutoPilot marché US (/en/*), même structure
@@ -230,11 +233,15 @@ Appel : `/senior-backend audit api` · `/senior-backend créer endpoint email` �
 ## 8. Lancer le site localement
 
 ```bash
-python3 -m http.server 8080
-# Ouvrir http://localhost:8080
+npm install
+npm run dev
+# Ouvrir http://localhost:3000
 ```
 
-> Note : `/_vercel/insights/script.js` retourne 404 en local — c'est normal.
+> Note : les tests E2E (`npm run test:e2e`) tournent contre un build de production
+> (`next build && next start`), pas contre `next dev` — le CSP du site n'autorise pas
+> `unsafe-eval`, ce qui casse le runtime webpack de `next dev` (fast refresh). CI fait
+> déjà `next build` avant l'étape e2e.
 
 ---
 
@@ -264,9 +271,10 @@ Transformer les demandes vagues en résultats testables.
 
 ## 10. Conventions de code
 
-- **HTML** : sémantique, `lang="fr"`, balises ARIA sur éléments interactifs
-- **CSS** : variables CSS dans `:root`, mobile-first, pas de `!important`
-- **JS** : vanilla uniquement, pas de framework, ES6+
+- **Stack** : Next.js 14 App Router, TypeScript strict, React 18 Server Components par défaut (`'use client'` seulement si interactivité)
+- **HTML/JSX** : sémantique, `lang` synchronisé FR/EN (`HtmlLangSync`), ARIA sur éléments interactifs
+- **CSS** : `styles.css` (hérité) + `styles/globals.css` (tokens actuels, Sober Theme) — variables CSS dans `:root`, mobile-first, pas de `!important`
+- **Validation** : Zod (`lib/validation.ts`) sur toute entrée API
 - **Commits** : `type(scope): message` en anglais, max 72 chars
 - **Commentaires** : seulement si le WHY n'est pas évident
 
@@ -314,10 +322,24 @@ Corrige automatiquement les guillemets typographiques U+2018/U+2019 dans les `.t
 
 ## 11. Tokens design
 
+> Source de vérité : `styles/globals.css` (Sober Theme, chargé après `styles.css`,
+> écrase l'ancien thème sombre ci-dessous conservé pour référence historique).
+
 ```css
---bg: #080810        /* Fond page */
---surface: #111123   /* Fond cartes/sections */
---primary: #7a5cff   /* Accent principal (violet) */
---accent: #00d1ff    /* Accent secondaire (cyan) */
---radius: 18px       /* Border radius par défaut */
+/* Tokens actuels — styles/globals.css */
+--bg: #FAF8F4          /* Fond page (clair) */
+--surface: #FFFFFF     /* Fond cartes/sections */
+--primary: #5B3FD4     /* Accent principal (violet) */
+--primary-light: #8B6FF0
+--text: #1A1A18
+--r-lg: 14px           /* Border radius standard */
+```
+
+```css
+/* Ancien thème sombre — styles.css, non actif (écrasé par globals.css) */
+--bg: #080810
+--surface: #111123
+--primary: #7a5cff
+--accent: #00d1ff
+--radius: 18px
 ```

@@ -1,6 +1,6 @@
 # Progress — Pixeloria
 
-> Suivi de l'avancement du projet. Mis à jour le 2026-04-25.
+> Suivi de l'avancement du projet. Mis à jour le 2026-07-27.
 
 ## Fait ✅
 
@@ -73,7 +73,34 @@
 - [x] `sitemap.ts` — 6 nouvelles URLs EN ajoutées
 - [x] Vercel DEPLOYED ✅
 
+### Marché US — repositionnement `/en/*` (Phase 1-4, PR #114-121, mergées)
+- [x] Phase 1 — repositionnement `/en` en site contractors US (pricing USD, FreeAuditForm, roofing-websites)
+- [x] Phase 2 — hubs contractor, case studies, resources guides
+- [x] Phase 3 — state landing pages TX/FL/NC/GA/CO
+- [x] Phase 4 — 8 pages secteur (HVAC, plumber, electrician, gutter, landscaping, painting, remodeling, general contractor)
+- [x] GTM conversion events sur tous les formulaires (creation/refonte/funnel)
+
+### Pixeloria AI Team — CEO AI / Chief Architect / 6 pôles / AutoPilot Vision 4.0 (PR #122-129, mergées)
+- [x] CEO AI, Chief Architect, 6 pôles (Growth/Product/Engineering/Marketing/Business/Operations)
+- [x] 5 Guardians spec complète (GEO, UX, Performance, Business, Security) + ~15 Guardians promus FR+US
+- [x] Config machine-readable `autopilot/` + `autopilot-us/` (agents/kpis/permissions/thresholds/sources.yml)
+- [x] Premier PIXELORIA WEEKLY REPORT (2026-07-27) — audit 5 pôles, 9 issues P0 créées (#130-138)
+
+### Corrections P0 issues du rapport hebdomadaire (2026-07-27)
+- [x] #130 — Catalogue d'offres aligné (TunnelForm, industry-pages, Notion labels → `lib/pricing.ts` unique)
+- [x] #132 — `/en/testimonial` ajouté au sitemap
+- [x] #133 — `areaServed` corrigé en 'United States' sur 5 pages `/en/*` legacy
+- [x] #134 — Escape HTML dans `buildConfirmationHtml`, factorisé dans `lib/html.ts`
+- [x] #135 — Skip link sitewide (WCAG 2.4.1) via `components/layout/SkipLink.tsx`
+- [x] #138 — README, CLAUDE.md, memory bank rafraîchis
+
 ## En attente / À faire 🔲
 
-- [ ] `tests/e2e/pages.spec.ts` — ajouter les 6 pages EN dans `allPages` 200-check + content tests
-- [ ] Env vars Vercel (`NOTION_TOKEN`, `NOTION_DB_ID`) — à configurer pour le formulaire de contact prod
+- [ ] Décision produit : catalogue US officiel ($499/$899/$79, confirmé) — reste à aligner tout contenu résiduel si divergent
+- [ ] Décision produit : entité US formelle (LocalBusiness/GBP) ou "remote-only Organization"
+- [ ] #131 — Alternates hreflang FR/EN manquants sur ~80 pages en parité (helper `lib/hreflang.ts` à créer)
+- [ ] #136 — A11y `TunnelForm` (labels, autoComplete, aria-invalid) — non traité dans le lot #130-138
+- [ ] #137 — CookieBanner `role="dialog"` + focus trap — non traité dans le lot #130-138
+- [ ] Recâbler `tests/a11y/` dans le testDir Playwright (actuellement jamais exécuté en CI)
+- [ ] Brancher une source analytics live (GSC/Vercel Analytics) à la chaîne AutoPilot
+- [ ] Env vars Vercel (`NOTION_TOKEN`, `NOTION_DB_ID`) — à reconfirmer en prod

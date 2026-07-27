@@ -7,17 +7,18 @@ import { track } from '@vercel/analytics';
 import { trackEvent } from '@/lib/gtm';
 import { getStoredUtm } from '@/lib/utm';
 import TurnstileWidget from '@/components/forms/TurnstileWidget';
+import { OFFERS, OFFER_ORDER, type OfferId } from '@/lib/pricing';
 
 /* ── Data catalogues ───────────────────────────────────────── */
 const PAIN_CATALOG = [
   { id: 'slow-speed',    title: 'Vitesse insuffisante',   detail: 'Votre site charge trop lentement.' },
-  { id: 'weak-message',  title: 'Message flou',           detail: "Votre proposition de valeur n’est pas comprise." },
-  { id: 'low-mobile',    title: 'Expérience mobile faible', detail: "Le parcours mobile n’est pas assez fluide." },
+  { id: 'weak-message',  title: 'Message flou',           detail: "Votre proposition de valeur n'est pas comprise." },
+  { id: 'low-mobile',    title: 'Expérience mobile faible', detail: "Le parcours mobile n'est pas assez fluide." },
   { id: 'seo-drop',      title: 'Trafic SEO en baisse',   detail: 'Vos pages peinent à se positionner durablement.' },
-  { id: 'poor-cta',      title: 'CTA peu visibles',       detail: "Les actions clés manquent d’impact." },
+  { id: 'poor-cta',      title: 'CTA peu visibles',       detail: "Les actions clés manquent d'impact." },
   { id: 'trust-gap',     title: 'Manque de preuves',      detail: 'Témoignages et éléments de réassurance insuffisants.' },
-  { id: 'content-chaos', title: 'Contenu désorganisé',   detail: "L’information est difficile à parcourir." },
-  { id: 'no-funnel',     title: 'Tunnel incomplet',       detail: "Votre capture de leads n’est pas optimisée." },
+  { id: 'content-chaos', title: 'Contenu désorganisé',   detail: "L'information est difficile à parcourir." },
+  { id: 'no-funnel',     title: 'Tunnel incomplet',       detail: "Votre capture de leads n'est pas optimisée." },
 ] as const;
 
 const OBJECTIVE_CATALOG = [
@@ -31,24 +32,16 @@ const OBJECTIVE_CATALOG = [
   { id: 'launch-offer',    label: 'Lancer une nouvelle offre' },
 ] as const;
 
-const OFFER_CATALOG = {
-  'audit-boost': {
-    title: 'Audit Boost',
-    price: '1 900 € HT',
-    summary: 'Diagnostic + quick wins activables sous 30 jours.',
-    features: ["Audit UX + conversion complet", "Plan d’optimisation SEO technique", "Roadmap priorisée et chiffrée"],
-    rateBonus: 0.8,
-  },
-  'growth-engine': {
-    title: 'Growth Engine',
-    price: '3 900 € HT',
-    summary: 'Accompagnement stratégique pour accélérer sur 12 mois.',
-    features: ["Tout le pack Audit Boost", "Wireframes de la refonte de pages clés", "Plan éditorial et conversion 90 jours"],
-    rateBonus: 2.2,
-  },
-} as const;
+const KNOWN_OFFER_IDS = new Set<string>(OFFER_ORDER);
 
-type OfferId = keyof typeof OFFER_CATALOG;
+function normalizeInitialOffre(raw: string): string {
+  if (!raw) return '';
+  if (KNOWN_OFFER_IDS.has(raw)) return raw;
+  // Alias historiques préservés pour la compat des liens externes.
+  if (raw === 'oneshot') return 'site-artisan';
+  if (raw === 'abo' || raw === 'maintenance') return 'option-visibilite';
+  return '';
+}
 
 /* ── State ─────────────────────────────────────────────────── */
 interface TunnelState {
@@ -71,37 +64,11 @@ function makeInitialState(initialOffre: string): TunnelState {
   };
 }
 
-/* ── Helpers ────────────────────────────────────────────────── */
-function getMetrics(s: TunnelState) {
-  const visitors = Math.max(Number(s.visiteurs) || 0, 0);
-  const currentRate = Math.max(Number(s.leads) || 0, 0);
-  const strategyLift = 0.9 + s.objectives.length * 0.45 + s.painPoints.length * 0.15;
-  const projectedRate = Math.min(currentRate + strategyLift, 35);
-  return {
-    visitors,
-    currentRate,
-    projectedRate,
-    currentLeadsMonthly: visitors * (currentRate / 100),
-    projectedLeadsMonthly: visitors * (projectedRate / 100),
-  };
-}
-
-function getOfferProjection(offerId: OfferId, s: TunnelState) {
-  const m = getMetrics(s);
-  const bonus = OFFER_CATALOG[offerId].rateBonus;
-  const finalRate = Math.min(m.projectedRate + bonus, 40);
-  const annualLeads = m.visitors * (finalRate / 100) * 12;
-  return { annualLeads, annualRevenue: annualLeads * 280 };
-}
-
-const fmtInt = (v: number) => new Intl.NumberFormat('fr-FR').format(Math.round(v || 0));
-const fmtCur = (v: number) => new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(Math.max(0, v || 0));
-
 function validate(s: TunnelState): string {
   if (s.step === 1) {
-    if (!s.url.trim()) return "Ajoutez l’URL de votre site pour continuer.";
+    if (!s.url.trim()) return "Ajoutez l'URL de votre site pour continuer.";
     if (!s.techno) return 'Sélectionnez votre technologie principale.';
-    if (!s.anciennete) return "Indiquez l’ancienneté de votre site.";
+    if (!s.anciennete) return "Indiquez l'ancienneté de votre site.";
     if (s.painPoints.length === 0) return 'Sélectionnez au moins une douleur prioritaire.';
   }
   if (s.step === 2) {
@@ -113,8 +80,8 @@ function validate(s: TunnelState): string {
   if (s.step === 4) {
     if (!s.prenom) return 'Le prénom est requis.';
     if (!s.nom) return 'Le nom est requis.';
-    if (!s.email) return "L’email est requis.";
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(s.email)) return "Format d’email invalide.";
+    if (!s.email) return "L'email est requis.";
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(s.email)) return "Format d'email invalide.";
     if (!s.phone) return 'Le téléphone est requis.';
   }
   return '';
@@ -123,7 +90,7 @@ function validate(s: TunnelState): string {
 /* ── Component ──────────────────────────────────────────────── */
 export default function TunnelForm() {
   const searchParams = useSearchParams();
-  const initialOffre = searchParams.get('offre') ?? '';
+  const initialOffre = normalizeInitialOffre(searchParams.get('offre') ?? '');
   const [s, setS] = useState<TunnelState>(() => makeInitialState(initialOffre));
   const [warning, setWarning] = useState('');
   const [turnstileToken, setTurnstileToken] = useState('');
@@ -178,20 +145,17 @@ export default function TunnelForm() {
     }
   };
 
-  const metrics = getMetrics(s);
-
   if (s.done) {
     return (
       <div className="wizard success-card">
-        <div className="eyebrow">Audit confirmé</div>
-        <h2>Merci {s.prenom || ''}, votre audit Pixeloria est réservé.</h2>
+        <div className="eyebrow">Demande enregistrée</div>
+        <h2>Merci {s.prenom || ''}, votre demande Pixeloria est enregistrée.</h2>
         <p>Nous revenons vers vous sous 24&nbsp;h ouvrées à l&apos;adresse <strong>{s.email}</strong>.</p>
-        <p>Vous allez recevoir 4 livrables clés&nbsp;:</p>
+        <p>Vous allez recevoir&nbsp;:</p>
         <ul className="deliverables">
-          <li>1. Diagnostic UX et conversion détaillé</li>
-          <li>2. Score SEO technique avec priorités</li>
-          <li>3. Roadmap d&apos;actions 30 / 60 / 90 jours</li>
-          <li>4. Proposition de refonte + planning de lancement</li>
+          <li>1. Un premier retour sur votre site actuel</li>
+          <li>2. Une proposition adaptée à votre contexte</li>
+          <li>3. Un planning de livraison en 72&nbsp;h si vous validez</li>
         </ul>
         <div className="step-nav">
           <Link href="/" className="btn btn-secondary">Retour à l&apos;accueil</Link>
@@ -206,8 +170,8 @@ export default function TunnelForm() {
   return (
     <section className="wizard">
       <header className="wizard-head">
-        <div className="eyebrow">Tunnel de vente Pixeloria</div>
-        <h1 className="wizard-title">Audit de refonte en 4 étapes</h1>
+        <div className="eyebrow">Tunnel de refonte Pixeloria</div>
+        <h1 className="wizard-title">Votre projet en 4 étapes</h1>
         <ol className="progress">
           {STEPS.map((label, i) => {
             const num = i + 1;
@@ -221,7 +185,7 @@ export default function TunnelForm() {
         {/* ── Step 1 ── */}
         {s.step === 1 && (
           <>
-            <div className="step-lead"><h2>Analyse de votre situation actuelle</h2><p>Partagez votre contexte digital pour cadrer l&apos;audit Pixeloria.</p></div>
+            <div className="step-lead"><h2>Analyse de votre situation actuelle</h2><p>Partagez votre contexte digital pour cadrer votre projet Pixeloria.</p></div>
             <div className="field-grid">
               <label style={{ gridColumn: '1/-1' }}>
                 URL de votre site
@@ -264,7 +228,7 @@ export default function TunnelForm() {
         {/* ── Step 2 ── */}
         {s.step === 2 && (
           <>
-            <div className="step-lead"><h2>Vos objectifs de croissance</h2><p>Définissez vos ambitions pour calibrer la stratégie Pixeloria.</p></div>
+            <div className="step-lead"><h2>Vos objectifs et votre volumétrie</h2><p>Ces données servent à qualifier votre besoin, pas à vendre un chiffre.</p></div>
             <div>
               <p style={{ marginBottom: '0.75rem', fontWeight: 600 }}>Objectifs ({s.objectives.length} sélectionné{s.objectives.length > 1 ? 's' : ''})</p>
               <div className="chip-grid">
@@ -292,58 +256,38 @@ export default function TunnelForm() {
                   onChange={e => update({ leads: Math.max(0, Number(e.target.value)) })} />
               </label>
             </div>
-            <div className="roi-grid" aria-live="polite">
-              <article className="roi-item"><strong>{fmtInt(metrics.currentLeadsMonthly)}</strong><span>Leads actuels / mois</span></article>
-              <article className="roi-item"><strong>{fmtInt(metrics.projectedLeadsMonthly)}</strong><span>Leads projetés / mois</span></article>
-              <article className="roi-item"><strong>{fmtCur(Math.max(0, metrics.projectedLeadsMonthly - metrics.currentLeadsMonthly) * 12 * 280)}</strong><span>Potentiel additionnel / an</span></article>
-            </div>
           </>
         )}
 
         {/* ── Step 3 ── */}
-        {s.step === 3 && (() => {
-          const currentAnnual = metrics.currentLeadsMonthly * 12;
-          return (
-            <>
-              <div className="step-lead"><h2>Choisissez votre offre Pixeloria</h2><p>Comparez les scénarios sur 12 mois et sélectionnez l&apos;option adaptée.</p></div>
-              <div className="offer-grid">
-                {(Object.entries(OFFER_CATALOG) as [OfferId, typeof OFFER_CATALOG[OfferId]][]).map(([id, offer]) => {
-                  const selected = s.offre === id;
-                  return (
-                    <article key={id} className={`offer-card${selected ? ' is-selected' : ''}`}>
-                      <div className="offer-head"><h3>{offer.title}</h3><span className="offer-status">{selected ? 'Sélectionnée' : 'Disponible'}</span></div>
-                      <p>{offer.summary}</p>
-                      <div className="offer-price">{offer.price}</div>
-                      <ul>{offer.features.map(f => <li key={f}>{f}</li>)}</ul>
-                      <button type="button" className={`btn ${selected ? 'btn-primary' : 'btn-secondary'}`}
-                        onClick={() => { update({ offre: id }); setWarning(''); }}>
-                        {selected ? 'Offre choisie' : 'Choisir cette offre'}
-                      </button>
-                    </article>
-                  );
-                })}
-              </div>
-              <div className="comparison-panel">
-                <h3>Comparaison 12 mois</h3>
-                <table className="comparison-table">
-                  <thead><tr><th>Scénario</th><th>Leads/an</th><th>CA potentiel</th></tr></thead>
-                  <tbody>
-                    <tr><td>Situation actuelle</td><td>{fmtInt(currentAnnual)}</td><td>{fmtCur(currentAnnual * 280)}</td></tr>
-                    {(Object.keys(OFFER_CATALOG) as OfferId[]).map(id => {
-                      const proj = getOfferProjection(id, s);
-                      return <tr key={id}><td>Offre {OFFER_CATALOG[id].title}</td><td>{fmtInt(proj.annualLeads)}</td><td>{fmtCur(proj.annualRevenue)}</td></tr>;
-                    })}
-                  </tbody>
-                </table>
-              </div>
-            </>
-          );
-        })()}
+        {s.step === 3 && (
+          <>
+            <div className="step-lead"><h2>Choisissez votre offre Pixeloria</h2><p>Deux offres, sans engagement. Vous pouvez combiner les deux.</p></div>
+            <div className="offer-grid">
+              {OFFER_ORDER.map((id: OfferId) => {
+                const offer = OFFERS[id];
+                const selected = s.offre === id;
+                return (
+                  <article key={id} className={`offer-card${selected ? ' is-selected' : ''}`} data-offer={id}>
+                    <div className="offer-head"><h3>{offer.title}</h3><span className="offer-status">{selected ? 'Sélectionnée' : 'Disponible'}</span></div>
+                    <p>{offer.summary}</p>
+                    <div className="offer-price">{offer.price}</div>
+                    <ul>{offer.features.map(f => <li key={f}>{f}</li>)}</ul>
+                    <button type="button" className={`btn ${selected ? 'btn-primary' : 'btn-secondary'}`}
+                      onClick={() => { update({ offre: id }); setWarning(''); }}>
+                      {selected ? 'Offre choisie' : 'Choisir cette offre'}
+                    </button>
+                  </article>
+                );
+              })}
+            </div>
+          </>
+        )}
 
         {/* ── Step 4 ── */}
         {s.step === 4 && (
           <>
-            <div className="step-lead"><h2>Vos coordonnées</h2><p>Dernière étape&nbsp;: recevez votre audit et plan d&apos;actions personnalisé.</p></div>
+            <div className="step-lead"><h2>Vos coordonnées</h2><p>Dernière étape&nbsp;: recevez une proposition Pixeloria adaptée à votre projet.</p></div>
             <div className="field-grid">
               <label>Prénom<input type="text" name="prenom" placeholder="Prénom" value={s.prenom} onChange={e => update({ prenom: e.target.value })} /></label>
               <label>Nom<input type="text" name="nom" placeholder="Nom" value={s.nom} onChange={e => update({ nom: e.target.value })} /></label>
@@ -363,7 +307,7 @@ export default function TunnelForm() {
           {s.step < 4
             ? <button type="button" className="btn btn-primary" onClick={next}>Continuer</button>
             : <button type="button" className="btn btn-primary" disabled={s.submitting} onClick={submit}>
-                {s.submitting ? 'Envoi…' : 'Recevoir mon audit'}
+                {s.submitting ? 'Envoi…' : 'Envoyer ma demande'}
               </button>
           }
         </div>

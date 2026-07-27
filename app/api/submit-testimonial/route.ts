@@ -3,6 +3,7 @@ import { z } from 'zod';
 import { checkRateLimit, isHoneypot } from '@/lib/security';
 import { Resend } from 'resend';
 import { createTestimonial } from '@/lib/notion';
+import { escapeHtml } from '@/lib/html';
 
 // ─── Schema ───────────────────────────────────────────────────────────────────
 
@@ -27,13 +28,11 @@ function buildTestimonialHtml(
   avis: string,
   note: number,
 ): string {
-  const escape = (s: string) =>
-    s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   const stars = '★'.repeat(note) + '☆'.repeat(5 - note);
-  const escapedAvis    = escape(avis);
-  const escapedPrenom  = escape(prenom);
-  const escapedActivite = escape(activite);
-  const escapedVille   = escape(ville);
+  const escapedAvis    = escapeHtml(avis);
+  const escapedPrenom  = escapeHtml(prenom);
+  const escapedActivite = escapeHtml(activite);
+  const escapedVille   = escapeHtml(ville);
 
   return `<!DOCTYPE html>
 <html lang="fr">
