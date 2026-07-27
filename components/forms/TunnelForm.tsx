@@ -4,6 +4,7 @@ import { useState, useCallback } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { track } from '@vercel/analytics';
+import { trackEvent } from '@/lib/gtm';
 import { getStoredUtm } from '@/lib/utm';
 import TurnstileWidget from '@/components/forms/TurnstileWidget';
 
@@ -169,6 +170,7 @@ export default function TunnelForm() {
       });
       if (res.ok) {
         track('funnel_submit', { offre: s.offre });
+        trackEvent('funnel_submit', { offre: s.offre });
         update({ done: true, submitting: false });
       } else { update({ error: 'Une erreur est survenue. Réessayez ou contactez-nous.', submitting: false }); }
     } catch {

@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from 'react';
 import { track } from '@vercel/analytics';
+import { trackEvent } from '@/lib/gtm';
 import TurnstileWidget from '@/components/forms/TurnstileWidget';
 
 const SITE_TYPES = [
@@ -125,6 +126,7 @@ export default function CreationForm() {
 
       if (res.ok) {
         track('creation_form_submit', { siteType: data.siteType, budget: data.budget });
+        trackEvent('creation_form_submit', { siteType: data.siteType, budget: data.budget });
         setSubmitted(true);
       } else {
         const body = await res.json().catch(() => ({}));
