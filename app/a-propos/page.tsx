@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { hreflangLanguages } from '@/lib/hreflang';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/JsonLd';
@@ -8,6 +9,10 @@ export const metadata: Metadata = {
   title: "À propos — L'agence Pixeloria",
   description:
     "Qui sommes-nous ? Pixeloria est une agence web spécialisée dans la création de sites pour artisans et TPE. Nos compétences, notre approche et nos valeurs.",
+  alternates: {
+    canonical: 'https://pixeloria.fr/a-propos',
+    languages: hreflangLanguages('/a-propos'),
+  },
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/a-propos',

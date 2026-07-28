@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { hreflangLanguages } from '@/lib/hreflang';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
     'Découvrez nos offres : Site Artisan à 199 € TTC livré en 72 h, et Option Visibilité à 49 €/mois avec maintenance et SEO inclus.',
   alternates: {
     canonical: 'https://pixeloria.fr/tarifs',
+    languages: hreflangLanguages('/tarifs'),
   },
 };
 

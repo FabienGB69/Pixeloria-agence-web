@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { hreflangLanguages } from '@/lib/hreflang';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     'Local Google search visibility for tradespeople and small businesses: Google Business Profile optimization, local keywords and visibility in your service area.',
   alternates: {
     canonical: 'https://pixeloria.fr/en/local-seo',
+    languages: hreflangLanguages('/en/local-seo'),
   },
 };
 

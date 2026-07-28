@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { hreflangLanguages } from '@/lib/hreflang';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/JsonLd';
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
     'Référencement local Google pour artisans et TPE : optimisation Google Business Profile, mots-clés locaux et visibilité dans votre zone d\'intervention.',
   alternates: {
     canonical: 'https://pixeloria.fr/seo-local',
+    languages: hreflangLanguages('/seo-local'),
   },
 };
 

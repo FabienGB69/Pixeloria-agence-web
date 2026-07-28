@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { hreflangLanguages } from '@/lib/hreflang';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     'Pixeloria builds professional websites for builders, plumbers, electricians, painters, joiners and other contractors. Responsive design, basic local SEO. Starter Website at $499, live 5 business days after we receive your content.',
   alternates: {
     canonical: 'https://pixeloria.fr/en/website-creation-tradespeople',
+    languages: hreflangLanguages('/en/website-creation-tradespeople'),
   },
   openGraph: {
     type: 'website',

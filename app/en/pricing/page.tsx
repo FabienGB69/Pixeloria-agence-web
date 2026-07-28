@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { hreflangLanguages } from '@/lib/hreflang';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     title: 'Pricing — Starter, Growth & Website Care Plans | Pixeloria',
     description: 'Starter Website $499, Growth Website $899, and Website Care & Local Visibility $79/month.',
   },
-  alternates: { canonical: 'https://pixeloria.fr/en/pricing' },
+  alternates: { canonical: 'https://pixeloria.fr/en/pricing', languages: hreflangLanguages('/en/pricing') },
 };
 
 export default function PricingEnPage() {

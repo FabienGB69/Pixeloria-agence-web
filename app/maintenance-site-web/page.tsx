@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { hreflangLanguages } from '@/lib/hreflang';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/JsonLd';
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
     'Pixeloria assure la maintenance de votre site internet : mises à jour, sécurité, hébergement, sauvegardes et support réactif WhatsApp. À partir de 49 €/mois.',
   alternates: {
     canonical: 'https://pixeloria.fr/maintenance-site-web',
+    languages: hreflangLanguages('/maintenance-site-web'),
   },
   openGraph: {
     type: 'website',

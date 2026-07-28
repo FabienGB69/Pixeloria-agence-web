@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { hreflangLanguages } from '@/lib/hreflang';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     title: 'How It Works — Website in 4 Simple Steps | Pixeloria',
     description: 'From first contact to live website in 4 steps. Delivered in 72 hours.',
   },
-  alternates: { canonical: 'https://pixeloria.fr/en/how-it-works' },
+  alternates: { canonical: 'https://pixeloria.fr/en/how-it-works', languages: hreflangLanguages('/en/how-it-works') },
 };
 
 const steps = [

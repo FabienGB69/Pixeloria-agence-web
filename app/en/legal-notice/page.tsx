@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { hreflangLanguages } from '@/lib/hreflang';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 import Link from 'next/link';
@@ -6,6 +7,10 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Legal Notice — Pixeloria',
   description: 'Legal notice for the Pixeloria website, a web agency for tradespeople and small businesses.',
+  alternates: {
+    canonical: 'https://pixeloria.fr/en/legal-notice',
+    languages: hreflangLanguages('/en/legal-notice'),
+  },
 };
 
 export default function LegalNoticePage() {

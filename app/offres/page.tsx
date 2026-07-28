@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { hreflangLanguages } from '@/lib/hreflang';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Services from '@/components/sections/Services';
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
     'Pixeloria crée votre site professionnel artisan pour 199 € TTC, livré sous 72h. Bouton téléphone, WhatsApp, devis, Google Maps, SEO local.',
   alternates: {
     canonical: 'https://pixeloria.fr/offres',
+    languages: hreflangLanguages('/offres'),
   },
   openGraph: {
     type: 'website',

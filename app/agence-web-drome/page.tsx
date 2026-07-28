@@ -4,6 +4,7 @@ import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
 import LocalAgencyPage from '@/components/sections/LocalAgencyPage';
 import { LOCAL_SEO_PAGES } from '@/lib/local-seo';
+import { hreflangLanguages } from '@/lib/hreflang';
 
 const data = LOCAL_SEO_PAGES['agence-web-drome'];
 
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     title: data.ogTitle,
     description: data.ogDescription,
   },
-  alternates: { canonical: 'https://pixeloria.fr/agence-web-drome' },
+  alternates: { canonical: 'https://pixeloria.fr/agence-web-drome', languages: hreflangLanguages('/agence-web-drome') },
 };
 
 export default function AgenceWebDromePage() {

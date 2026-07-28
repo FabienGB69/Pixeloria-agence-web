@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { hreflangLanguages } from '@/lib/hreflang';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/JsonLd';
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
     'Pixeloria crée des sites internet professionnels pour artisans et TPE. Visibilité locale, génération de contacts, design sur-mesure. Site Artisan à 199 € TTC, livré en 72 h.',
   alternates: {
     canonical: 'https://pixeloria.fr/creation-site-internet-tpe-pme',
+    languages: hreflangLanguages('/creation-site-internet-tpe-pme'),
   },
   openGraph: {
     type: 'website',

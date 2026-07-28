@@ -4,6 +4,7 @@ import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
 import LocalAgencyPage from '@/components/sections/LocalAgencyPage';
 import { LOCAL_SEO_PAGES } from '@/lib/local-seo';
+import { hreflangLanguages } from '@/lib/hreflang';
 
 const data = LOCAL_SEO_PAGES['agence-web-rhone'];
 
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   description: data.metaDescription,
   openGraph: { type: 'website', url: 'https://pixeloria.fr/agence-web-rhone', title: data.ogTitle, description: data.ogDescription, locale: 'fr_FR', siteName: 'Pixeloria' },
   twitter: { card: 'summary_large_image', title: data.ogTitle, description: data.ogDescription },
-  alternates: { canonical: 'https://pixeloria.fr/agence-web-rhone' },
+  alternates: { canonical: 'https://pixeloria.fr/agence-web-rhone', languages: hreflangLanguages('/agence-web-rhone') },
 };
 
 export default function AgenceWebRhonePage() {

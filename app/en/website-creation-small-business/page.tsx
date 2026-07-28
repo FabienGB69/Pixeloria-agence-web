@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { hreflangLanguages } from '@/lib/hreflang';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     'Pixeloria builds professional websites for contractors and local service businesses. Local visibility, lead generation, custom design. Starter Website at $499, live 5 business days after we receive your content.',
   alternates: {
     canonical: 'https://pixeloria.fr/en/website-creation-small-business',
+    languages: hreflangLanguages('/en/website-creation-small-business'),
   },
   openGraph: {
     type: 'website',

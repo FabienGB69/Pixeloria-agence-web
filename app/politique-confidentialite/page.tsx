@@ -1,9 +1,14 @@
 import type { Metadata } from 'next';
+import { hreflangLanguages } from '@/lib/hreflang';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Politique de confidentialité | Pixeloria',
   description: 'Politique de confidentialité et traitement des données personnelles — Pixeloria.',
+  alternates: {
+    canonical: 'https://pixeloria.fr/politique-confidentialite',
+    languages: hreflangLanguages('/politique-confidentialite'),
+  },
 };
 
 export default function PolitiqueConfidentialite() {

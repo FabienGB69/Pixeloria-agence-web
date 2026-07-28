@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { hreflangLanguages } from '@/lib/hreflang';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     'Pixeloria handles your website maintenance: hosting, security updates, backups and content updates. Website Care & Local Visibility from $79/month.',
   alternates: {
     canonical: 'https://pixeloria.fr/en/website-maintenance',
+    languages: hreflangLanguages('/en/website-maintenance'),
   },
   openGraph: {
     type: 'website',

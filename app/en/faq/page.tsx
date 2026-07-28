@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { hreflangLanguages } from '@/lib/hreflang';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     title: 'FAQ — Frequently Asked Questions | Pixeloria',
     description: 'Common questions about website creation, pricing, timelines and SEO. Clear, honest answers.',
   },
-  alternates: { canonical: 'https://pixeloria.fr/en/faq' },
+  alternates: { canonical: 'https://pixeloria.fr/en/faq', languages: hreflangLanguages('/en/faq') },
 };
 
 const faqs = [

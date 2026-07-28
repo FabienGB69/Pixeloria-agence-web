@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { hreflangLanguages } from '@/lib/hreflang';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Link from 'next/link';
@@ -6,6 +7,10 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: "Conditions Générales d'Utilisation — Pixeloria",
   description: "CGU du site pixeloria.fr — règles d'utilisation du service.",
+  alternates: {
+    canonical: 'https://pixeloria.fr/cgu',
+    languages: hreflangLanguages('/cgu'),
+  },
 };
 
 export default function CGUPage() {

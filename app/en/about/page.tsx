@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { hreflangLanguages } from '@/lib/hreflang';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     title: 'About — The Agency Behind Your Website | Pixeloria',
     description: 'Pixeloria builds professional websites for contractors and local service businesses across the United States, remotely from France.',
   },
-  alternates: { canonical: 'https://pixeloria.fr/en/about' },
+  alternates: { canonical: 'https://pixeloria.fr/en/about', languages: hreflangLanguages('/en/about') },
 };
 
 const skills = [

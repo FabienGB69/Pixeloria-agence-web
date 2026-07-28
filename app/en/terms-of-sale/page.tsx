@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { hreflangLanguages } from '@/lib/hreflang';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 import Link from 'next/link';
@@ -6,6 +7,10 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Terms of Sale — Pixeloria',
   description: 'Terms of Sale for Pixeloria — website creation and redesign services.',
+  alternates: {
+    canonical: 'https://pixeloria.fr/en/terms-of-sale',
+    languages: hreflangLanguages('/en/terms-of-sale'),
+  },
 };
 
 export default function TermsOfSalePage() {
