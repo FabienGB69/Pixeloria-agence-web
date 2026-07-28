@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
+import { hreflangLanguages } from '@/lib/hreflang';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
     'Toutes vos questions sur la création de site internet pour artisans et TPE : délais, prix, maintenance, SEO. Réponses claires et honnêtes.',
   alternates: {
     canonical: 'https://pixeloria.fr/faq',
+    languages: hreflangLanguages('/faq'),
   },
 };
 

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { hreflangLanguages } from '@/lib/hreflang';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Link from 'next/link';
@@ -6,6 +7,10 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Conditions Générales de Vente — Pixeloria',
   description: 'CGV de Pixeloria — prestations de création et refonte de sites web.',
+  alternates: {
+    canonical: 'https://pixeloria.fr/cgv',
+    languages: hreflangLanguages('/cgv'),
+  },
 };
 
 export default function CGVPage() {

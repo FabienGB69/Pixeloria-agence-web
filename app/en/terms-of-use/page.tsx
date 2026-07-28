@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { hreflangLanguages } from '@/lib/hreflang';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 import Link from 'next/link';
@@ -6,6 +7,10 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Terms of Use — Pixeloria',
   description: 'Terms of Use for pixeloria.fr — rules governing the use of the service.',
+  alternates: {
+    canonical: 'https://pixeloria.fr/en/terms-of-use',
+    languages: hreflangLanguages('/en/terms-of-use'),
+  },
 };
 
 export default function TermsOfUsePage() {

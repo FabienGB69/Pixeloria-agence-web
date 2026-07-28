@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { hreflangLanguages } from '@/lib/hreflang';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
   description: 'Découvrez les avis de nos clients artisans et TPE sur Pixeloria. Des témoignages réels sur la création de sites internet professionnels.',
   alternates: {
     canonical: 'https://pixeloria.fr/avis',
+    languages: hreflangLanguages('/avis'),
   },
 };
 

@@ -1,9 +1,14 @@
 import type { Metadata } from 'next';
+import { hreflangLanguages } from '@/lib/hreflang';
 import TestimonialForm from '@/components/forms/TestimonialForm';
 
 export const metadata: Metadata = {
   title: 'Laissez votre avis — Pixeloria',
   description: 'Partagez votre expérience avec Pixeloria en 2 minutes.',
+  alternates: {
+    canonical: 'https://pixeloria.fr/temoignage',
+    languages: hreflangLanguages('/temoignage'),
+  },
   robots: 'noindex',
 };
 

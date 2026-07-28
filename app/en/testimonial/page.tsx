@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { hreflangLanguages } from '@/lib/hreflang';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     title: 'Leave a Review — Share Your Experience | Pixeloria',
     description: 'Had a website built with Pixeloria? Share your experience.',
   },
-  alternates: { canonical: 'https://pixeloria.fr/en/testimonial' },
+  alternates: { canonical: 'https://pixeloria.fr/en/testimonial', languages: hreflangLanguages('/en/testimonial') },
   robots: { index: false, follow: false },
 };
 

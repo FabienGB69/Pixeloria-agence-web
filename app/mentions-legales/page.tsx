@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { hreflangLanguages } from '@/lib/hreflang';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Link from 'next/link';
@@ -6,6 +7,10 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Mentions Légales — Pixeloria',
   description: 'Mentions légales du site Pixeloria, agence web pour artisans et TPE.',
+  alternates: {
+    canonical: 'https://pixeloria.fr/mentions-legales',
+    languages: hreflangLanguages('/mentions-legales'),
+  },
 };
 
 export default function MentionsLegalesPage() {

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { hreflangLanguages } from '@/lib/hreflang';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     title: 'Website Offers — Starter, Growth & Care Plans | Pixeloria',
     description: 'Website plans for contractors and local service businesses: Starter Website $499, Growth Website $899, Website Care & Local Visibility $79/month.',
   },
-  alternates: { canonical: 'https://pixeloria.fr/en/offers' },
+  alternates: { canonical: 'https://pixeloria.fr/en/offers', languages: hreflangLanguages('/en/offers') },
 };
 
 const comparisonRows: { feature: string; starter: boolean; growth: boolean }[] = [

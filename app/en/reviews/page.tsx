@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { hreflangLanguages } from '@/lib/hreflang';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     title: 'Client Reviews — What Our Clients Say | Pixeloria',
     description: 'Real reviews from contractors and small business owners who got their website with Pixeloria.',
   },
-  alternates: { canonical: 'https://pixeloria.fr/en/reviews' },
+  alternates: { canonical: 'https://pixeloria.fr/en/reviews', languages: hreflangLanguages('/en/reviews') },
 };
 
 export default function ReviewsEnPage() {

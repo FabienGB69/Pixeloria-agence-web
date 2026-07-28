@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { hreflangLanguages } from '@/lib/hreflang';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
   description: 'Découvrez comment Pixeloria crée votre site internet en 4 étapes simples : audit, design, développement et livraison en 72 h.',
   alternates: {
     canonical: 'https://pixeloria.fr/comment-ca-marche',
+    languages: hreflangLanguages('/comment-ca-marche'),
   },
 };
 

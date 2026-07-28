@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { hreflangLanguages } from '@/lib/hreflang';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     'Is your current website not generating enough leads? Pixeloria redesigns websites for contractors and small businesses: modern design, local SEO, mobile-responsive. Starter Website redesigns from $499, delivered within 5 business days.',
   alternates: {
     canonical: 'https://pixeloria.fr/en/website-redesign',
+    languages: hreflangLanguages('/en/website-redesign'),
   },
   openGraph: {
     type: 'website',

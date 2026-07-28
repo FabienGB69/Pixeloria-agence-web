@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { hreflangLanguages } from '@/lib/hreflang';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/JsonLd';
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
     'Votre site actuel ne génère pas assez de contacts ? Pixeloria refond les sites internet des artisans et TPE : design moderne, SEO local, responsive mobile. Site Artisan à 199 € TTC, livré en 72 h.',
   alternates: {
     canonical: 'https://pixeloria.fr/refonte-site-internet',
+    languages: hreflangLanguages('/refonte-site-internet'),
   },
   openGraph: {
     type: 'website',

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { hreflangLanguages } from '@/lib/hreflang';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/JsonLd';
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
     'Pixeloria crée des sites internet professionnels pour artisans du bâtiment, plombiers, électriciens, peintres, menuisiers et artisans locaux. Design responsive, SEO local de base. Site Artisan à 199 € TTC, livré en 72 h.',
   alternates: {
     canonical: 'https://pixeloria.fr/creation-site-internet-artisan',
+    languages: hreflangLanguages('/creation-site-internet-artisan'),
   },
   openGraph: {
     type: 'website',

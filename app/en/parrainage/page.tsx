@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { Suspense } from 'react';
 import dynamic from 'next/dynamic';
+import { hreflangLanguages } from '@/lib/hreflang';
 import ParrainageFaqEn from '@/components/parrainage/ParrainageFaqEn';
 import ParrainageReveal from '@/components/parrainage/ParrainageReveal';
 
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
       "Share your referral code. Earn €100 when your referral launches a site, plus €25/month if they subscribe to Local Visibility.",
     url: 'https://pixeloria.fr/en/parrainage',
   },
-  alternates: { canonical: 'https://pixeloria.fr/en/parrainage' },
+  alternates: { canonical: 'https://pixeloria.fr/en/parrainage', languages: hreflangLanguages('/en/parrainage') },
 };
 
 const _referralRaw = process.env.NEXT_PUBLIC_REFERRAL_URL;

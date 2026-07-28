@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { hreflangLanguages } from '@/lib/hreflang';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 import Link from 'next/link';
@@ -6,6 +7,10 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Privacy Policy | Pixeloria',
   description: 'Privacy policy and processing of personal data — Pixeloria.',
+  alternates: {
+    canonical: 'https://pixeloria.fr/en/privacy-policy',
+    languages: hreflangLanguages('/en/privacy-policy'),
+  },
 };
 
 export default function PrivacyPolicy() {
