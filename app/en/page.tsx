@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import HeaderEn from '@/components/layout/HeaderEn';
-import LaunchBannerEn from '@/components/ui/LaunchBannerEn';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
 import GoogleReviews from '@/components/sections/GoogleReviews';
@@ -225,7 +224,6 @@ export default function EnHomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd) }}
       />
       <ClientEffects />
-      <LaunchBannerEn />
       <HeaderEn />
       <main id="home">
 
