@@ -4,7 +4,6 @@ import Link from 'next/link';
 import HeaderEn from '@/components/layout/HeaderEn';
 import LaunchBannerEn from '@/components/ui/LaunchBannerEn';
 import Footer from '@/components/layout/Footer';
-import XFeed from '@/components/sections/XFeed';
 import ClientEffects from '@/components/layout/ClientEffects';
 import GoogleReviews from '@/components/sections/GoogleReviews';
 import ContactFormEn from './ContactFormEn';
@@ -942,8 +941,6 @@ export default function EnHomePage() {
             </div>
           </div>
         </section>
-
-        <XFeed locale="en" />
       </main>
       <Footer locale="en" />
     </>

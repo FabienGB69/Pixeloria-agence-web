@@ -9,7 +9,7 @@ import { usePathname } from 'next/navigation';
  * level in Next.js App Router without a larger route-group restructuring.
  * This corrects it client-side on mount and on every navigation instead —
  * cheap, matches the pathname-based locale detection already used by
- * CookieBanner/XFeed, and fixes the attribute for screen readers and any
+ * CookieBanner, and fixes the attribute for screen readers and any
  * crawler that executes JS (which includes Googlebot).
  */
 export default function HtmlLangSync() {

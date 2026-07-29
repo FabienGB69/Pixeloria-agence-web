@@ -18,7 +18,7 @@ Rattaché à `/cto` (Chief Architect), lui-même rattaché au CEO AI (voir `/ceo
 | **Social Guardian** | Cohérence de la présence X/LinkedIn avec le positionnement du site, fréquence de publication réaliste |
 | **Google Business Guardian** | Fiche Google Business à jour, cohérente avec le NAP du site, avis suivis |
 | **LinkedIn Guardian** | Contenu LinkedIn — posts orientés B2B, cohérents avec le positionnement contractor/agence selon le marché |
-| **X Guardian** | Contenu X — cohérent avec `XFeed.tsx`, pas de contenu dupliqué avec LinkedIn |
+| **X Guardian** | Contenu X — cohérent avec le lien de profil X du footer (`components/layout/Footer.tsx`), pas de contenu dupliqué avec LinkedIn |
 
 ---
 
