@@ -4,7 +4,6 @@ import LaunchBanner from '@/components/ui/LaunchBanner';
 import Hero from '@/components/sections/Hero';
 import GoogleReviews from '@/components/sections/GoogleReviews';
 import Contact from '@/components/sections/Contact';
-import XFeed from '@/components/sections/XFeed';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
 import JsonLd from '@/components/JsonLd';
@@ -49,7 +48,6 @@ export default function HomePage() {
         <Hero />
         <GoogleReviews />
         <Contact />
-        <XFeed locale="fr" />
       </main>
       <Footer />
     </>
