@@ -1,6 +1,6 @@
 # Progress — Pixeloria
 
-> Suivi de l'avancement du projet. Mis à jour le 2026-07-27.
+> Suivi de l'avancement du projet. Mis à jour le 2026-08-03.
 
 ## Fait ✅
 
@@ -94,8 +94,16 @@
 - [x] #135 — Skip link sitewide (WCAG 2.4.1) via `components/layout/SkipLink.tsx`
 - [x] #138 — README, CLAUDE.md, memory bank rafraîchis
 
+### Audit quotidien 2026-08-03 (PR #152, mergée)
+- [x] HSTS `preload` ajouté (`next.config.mjs`)
+- [x] `.env.example` : liens Stripe live anonymisés
+- [x] `llms.txt` : section programme de parrainage ajoutée (GEO)
+- [x] `/en/testimonial` confirmée noindex (robots:{index:false}) — correctement absente du sitemap
+
 ## En attente / À faire 🔲
 
+- [ ] **P1 SÉCURITÉ** — Next.js ^14.2.29 → 15.5.21 (7 CVEs HIGH, dont SSRF CVSS 8.6)
+- [ ] **P1 SÉCURITÉ** — sharp ^0.34.5 → 0.35.0 (GHSA-f88m-g3jw-g9cj, 4 CVE libvips)
 - [ ] Décision produit : catalogue US officiel ($499/$899/$79, confirmé) — reste à aligner tout contenu résiduel si divergent
 - [ ] Décision produit : entité US formelle (LocalBusiness/GBP) ou "remote-only Organization"
 - [ ] #131 — Alternates hreflang FR/EN manquants sur ~80 pages en parité (helper `lib/hreflang.ts` à créer)

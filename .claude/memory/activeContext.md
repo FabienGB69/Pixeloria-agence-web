@@ -4,9 +4,9 @@
 
 ## Session actuelle
 
-**Date :** 2026-07-27
-**Branche active :** `main` (PR #129 mergée)
-**Dernière tâche complétée :** PIXELORIA WEEKLY REPORT 2026-07-27 (CEO AI) + correction de 6 issues P0 (#130–#135, #138)
+**Date :** 2026-08-03
+**Branche active :** `main` (PR #152 mergée)
+**Dernière tâche complétée :** Audit quotidien 2026-08-03 (Max CTO / AutoPilot) — 3 corrections P2/P3 mergées (PR #152)
 
 ## Stack technique
 
@@ -42,6 +42,8 @@
 
 ## Problèmes ouverts
 
+- **P1 SÉCURITÉ** : Next.js ^14.2.29 → 15.5.21 requis (7 CVEs HIGH dont SSRF WebSocket CVSS 8.6, DoS Server Components, SSRF rewrites/Server Actions) — migration breaking, nécessite tests E2E
+- **P1 SÉCURITÉ** : sharp ^0.34.5 → 0.35.0 requis (GHSA-f88m-g3jw-g9cj, 4 CVE libvips) — upgrade mineur
 - Décision produit en attente : entité US formelle (adresse + GBP + LocalBusiness dédié) ou rester "remote-only Organization" pour le marché US
 - `docs/autopilot/experiments.md` vide — la boucle observer→apprendre AutoPilot n'a pas encore capitalisé de premier cycle
 - `tests/a11y/` n'est pas dans le `testDir` Playwright (`./tests/e2e` uniquement) — ces tests ne tournent jamais en CI ; à recâbler ou déplacer
