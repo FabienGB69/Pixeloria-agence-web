@@ -26,12 +26,7 @@ export const env = {
   RESEND_API_KEY: process.env.RESEND_API_KEY as string | undefined,
   /** Recipient email for lead notifications */
   OWNER_EMAIL: process.env.OWNER_EMAIL ?? 'contact@pixeloria.fr',
-  /**
-   * Allowed CORS origin for /api/* routes.
-   * Set to the production domain in Vercel env vars, e.g. https://pixeloria.fr
-   * Defaults to '*' (open) — acceptable for a public marketing API with rate limiting.
-   */
-  ALLOWED_ORIGIN: process.env.ALLOWED_ORIGIN ?? '*',
+  ALLOWED_ORIGIN: process.env.ALLOWED_ORIGIN ?? 'https://pixeloria.fr',
 } as const;
 
 export type Env = typeof env;

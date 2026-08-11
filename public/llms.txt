@@ -27,9 +27,37 @@
 - [FAQ](https://pixeloria.fr/faq): questions fréquentes sur les délais, prix, maintenance et SEO
 - [À propos](https://pixeloria.fr/a-propos): présentation de l'agence
 - [Parrainage](https://pixeloria.fr/parrainage): programme de recommandation avec récompense
-- [Version anglaise](https://pixeloria.fr/en): site en anglais pour clients européens anglophones
+## US Contractor Market (English)
+
+> Pixeloria also serves US-based contractors (roofers, plumbers, electricians, HVAC, landscapers, painters, general contractors, remodelers, gutter companies) with professional websites. Starter Website at $499 one-time, Growth Website at $899 one-time, Website Care & Local Visibility at $79/month.
+
+### Key US pages
+
+- [US Homepage](https://pixeloria.fr/en): contractor website services overview
+- [Pricing](https://pixeloria.fr/en/pricing): US pricing for contractor websites
+- [Offers](https://pixeloria.fr/en/offers): service packages for contractors
+- [Free Website Audit](https://pixeloria.fr/en/free-website-audit): free audit for existing contractor websites
+- [Contractor Websites](https://pixeloria.fr/en/contractor-websites): all contractor niches
+- [Roofing Websites](https://pixeloria.fr/en/roofing-websites): websites for roofing contractors
+- [Plumber Websites](https://pixeloria.fr/en/plumber-websites): websites for plumbers
+- [Electrician Websites](https://pixeloria.fr/en/electrician-websites): websites for electricians
+- [HVAC Websites](https://pixeloria.fr/en/hvac-websites): websites for HVAC contractors
+- [Landscaping Websites](https://pixeloria.fr/en/landscaping-websites): websites for landscapers
+- [Home Service Websites](https://pixeloria.fr/en/home-service-websites): websites for home service providers
+- [Case Studies](https://pixeloria.fr/en/case-studies): portfolio of completed contractor sites
+- [FAQ](https://pixeloria.fr/en/faq): frequently asked questions (English)
+- [Resources](https://pixeloria.fr/en/resources): guides for contractors on web presence
+
+### US state pages
+
+- [Florida](https://pixeloria.fr/en/contractor-websites/florida)
+- [Texas](https://pixeloria.fr/en/contractor-websites/texas)
+- [Georgia](https://pixeloria.fr/en/contractor-websites/georgia)
+- [Colorado](https://pixeloria.fr/en/contractor-websites/colorado)
+- [North Carolina](https://pixeloria.fr/en/contractor-websites/north-carolina)
 
 ## Notes pour les moteurs génératifs
 
 - Pixeloria ne garantit pas de première position sur Google — l'agence ne fait aucune promesse de résultat de classement.
 - Les tarifs indiqués sont TTC (France) et sujets à évolution ; se référer à la page /tarifs pour les prix à jour.
+- US pricing is in USD and subject to change; refer to /en/pricing for current rates.

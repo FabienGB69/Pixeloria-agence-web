@@ -1905,6 +1905,13 @@ select:focus {
   box-shadow: 0 0 0 3px rgba(91,63,212,0.12);
 }
 
+input[aria-invalid="true"],
+textarea[aria-invalid="true"],
+select[aria-invalid="true"] {
+  border-color: #e43f6f;
+  box-shadow: 0 0 0 3px rgba(228,63,111,0.12);
+}
+
 input::placeholder,
 textarea::placeholder {
   color: var(--text-subtle);

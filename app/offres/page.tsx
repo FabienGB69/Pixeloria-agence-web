@@ -8,6 +8,7 @@ import ComparisonTable from '@/components/sections/ComparisonTable';
 import FAQ from '@/components/sections/FAQ';
 import Contact from '@/components/sections/Contact';
 import JsonLd from '@/components/JsonLd';
+import { faqs } from '@/components/sections/faq-data';
 
 export const metadata: Metadata = {
   title: 'Offre Site Artisan — 199 € TTC | Pixeloria',
@@ -28,10 +29,24 @@ export const metadata: Metadata = {
   },
 };
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: item.a },
+  })),
+};
+
 export default function OffresPage() {
   return (
     <>
       <JsonLd />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Header />
       <main>
         {/* Hero de page */}
@@ -96,7 +111,7 @@ export default function OffresPage() {
                 Demandez un audit gratuit de votre situation. Nous vous orientons vers la formule
                 la plus adaptée à votre activité et à votre budget.
               </p>
-              <Link href="/#contact" className="btn btn-primary btn-lg">
+              <Link href="#contact" className="btn btn-primary btn-lg">
                 Demander un audit gratuit
                 <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                   <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
