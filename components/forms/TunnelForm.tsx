@@ -7,6 +7,7 @@ import { track } from '@vercel/analytics';
 import { trackEvent } from '@/lib/gtm';
 import { getStoredUtm } from '@/lib/utm';
 import TurnstileWidget from '@/components/forms/TurnstileWidget';
+import { useTurnstileToken } from '@/components/forms/useTurnstileToken';
 import { OFFERS, OFFER_ORDER, type OfferId } from '@/lib/pricing';
 
 /* ── Data catalogues ───────────────────────────────────────── */
@@ -93,9 +94,7 @@ export default function TunnelForm() {
   const initialOffre = normalizeInitialOffre(searchParams.get('offre') ?? '');
   const [s, setS] = useState<TunnelState>(() => makeInitialState(initialOffre));
   const [warning, setWarning] = useState('');
-  const [turnstileToken, setTurnstileToken] = useState('');
-  const onTurnstileVerify = useCallback((token: string) => setTurnstileToken(token), []);
-  const onTurnstileExpire = useCallback(() => setTurnstileToken(''), []);
+  const { turnstileToken, onTurnstileVerify, onTurnstileExpire } = useTurnstileToken();
 
   const update = useCallback((patch: Partial<TunnelState>) => setS(prev => ({ ...prev, ...patch })), []);
 
