@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { OFFERS_US } from '@/lib/pricing-us';
+import { PROVIDER_US } from '@/lib/organization';
 import Link from 'next/link';
 import { hreflangLanguages } from '@/lib/hreflang';
 import HeaderEn from '@/components/layout/HeaderEn';
@@ -61,12 +62,7 @@ export default function WebsiteCreationSmallBusinessPage() {
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: 'Website creation for contractors and small businesses',
-    provider: {
-      '@type': 'ProfessionalService',
-      name: 'Pixeloria',
-      url: 'https://pixeloria.fr',
-      email: 'contact@pixeloria.fr',
-    },
+    provider: PROVIDER_US,
     description: 'Professional website creation for contractors and small businesses across all industries.',
     areaServed: { '@type': 'Country', name: 'United States' },
     offers: [

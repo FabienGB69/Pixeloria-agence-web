@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { hreflangLanguages } from '@/lib/hreflang';
 import { OFFERS_US } from '@/lib/pricing-us';
+import { PROVIDER_US } from '@/lib/organization';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 
@@ -63,12 +64,7 @@ export default function WebsiteRedesignPage() {
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: 'Website redesign',
-    provider: {
-      '@type': 'ProfessionalService',
-      name: 'Pixeloria',
-      url: 'https://pixeloria.fr',
-      email: 'contact@pixeloria.fr',
-    },
+    provider: PROVIDER_US,
     description: 'Website redesign for local tradespeople and small businesses. Modern design, local SEO, mobile-responsive.',
     areaServed: { '@type': 'Country', name: 'United States' },
   };

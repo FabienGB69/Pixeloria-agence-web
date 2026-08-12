@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { hreflangLanguages } from '@/lib/hreflang';
 import { OFFERS_US } from '@/lib/pricing-us';
+import { PROVIDER_US } from '@/lib/organization';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 
@@ -57,12 +58,7 @@ export default function WebsiteMaintenancePage() {
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: 'Website maintenance',
-    provider: {
-      '@type': 'ProfessionalService',
-      name: 'Pixeloria',
-      url: 'https://pixeloria.fr',
-      email: 'contact@pixeloria.fr',
-    },
+    provider: PROVIDER_US,
     description: 'Website maintenance for tradespeople and small businesses: hosting, security updates, backups and monthly reporting.',
     areaServed: { '@type': 'Country', name: 'United States' },
     offers: [

@@ -5,7 +5,7 @@ import { OFFERS_US } from '@/lib/pricing-us';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
-import ContactFormEn from '@/app/en/ContactFormEn';
+import ContactForm from '@/components/forms/ContactForm';
 import TrackOnMount from '@/components/analytics/TrackOnMount';
 
 export const metadata: Metadata = {
@@ -261,7 +261,7 @@ export default function PricingEnPage() {
                 </div>
               </div>
               <div className="contact-form-wrap reveal">
-                <ContactFormEn />
+                <ContactForm locale="en" />
               </div>
             </div>
           </div>
