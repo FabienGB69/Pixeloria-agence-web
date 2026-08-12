@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { hreflangLanguages } from '@/lib/hreflang';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -24,6 +25,22 @@ export default function TarifsPage() {
       <ClientEffects />
       <Header />
       <main id="tarifs">
+        <section className="page-hero section">
+          <div className="container">
+            <div className="page-hero-inner">
+              <nav className="breadcrumb" aria-label="Fil d'Ariane">
+                <Link href="/">Accueil</Link>
+                <span aria-hidden="true"> › </span>
+                <span>Tarifs</span>
+              </nav>
+              <span className="eyebrow">Tarif et offre</span>
+              <h1>Tarifs Pixeloria — 199 € TTC · maintenance 49 €/mois</h1>
+              <p className="page-hero-sub">
+                Un prix fixe pour votre site, une option mensuelle pour le faire vivre. Sans engagement, sans frais cachés.
+              </p>
+            </div>
+          </div>
+        </section>
         <Services />
         <div className="container">
           <a href="/faq" className="offers-faq-link">Une question sur nos offres&nbsp;? Consulter la FAQ</a>

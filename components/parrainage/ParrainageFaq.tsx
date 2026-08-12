@@ -10,15 +10,15 @@ interface FaqItem {
 const faqItems: FaqItem[] = [
   {
     question: "Combien gagne le parrain ?",
-    answer: "Site Vitrine : vous gagnez 100 € après la réception du paiement. Visibilité locale : vous gagnez 25 € par mois tant que l'abonnement est actif. Potentiel de cumul : 100 € + 25 €/mois si votre filleul prend les deux offres.",
+    answer: "Site Artisan : vous gagnez 100 € après la réception du paiement. Option Visibilité : vous gagnez 25 € par mois tant que l'abonnement est actif. Potentiel de cumul : 100 € + 25 €/mois si votre filleul prend les deux offres.",
   },
   {
     question: "Les récompenses sont-elles cumulables ?",
-    answer: "Oui. Vous pouvez parrainer plusieurs entreprises sans limite. Chaque parrainage génère une récompense indépendante. Si un même filleul prend Site Vitrine ET Visibilité locale, vous percevez 100 € + 25 €/mois.",
+    answer: "Oui. Vous pouvez parrainer plusieurs entreprises sans limite. Chaque parrainage génère une récompense indépendante. Si un même filleul prend Site Artisan ET Option Visibilité, vous percevez 100 € + 25 €/mois.",
   },
   {
     question: "Quand la récompense est-elle déclenchée ?",
-    answer: "Site Vitrine : immédiatement après réception du paiement via Stripe. Visibilité locale : après 1 mois d'abonnement actif et continu. La récompense continue chaque mois tant que l'abonnement reste actif.",
+    answer: "Site Artisan : immédiatement après réception du paiement via Stripe. Option Visibilité : après 1 mois d'abonnement actif et continu. La récompense continue chaque mois tant que l'abonnement reste actif.",
   },
   {
     question: "Comment le parrainage est-il suivi ?",
@@ -26,7 +26,7 @@ const faqItems: FaqItem[] = [
   },
   {
     question: "La récompense mensuelle continue-t-elle indéfiniment ?",
-    answer: "Oui. Vous recevez 25 € chaque mois tant que votre filleul conserve son abonnement Visibilité locale actif. Pas de limite de durée. Si l'abonnement s'arrête, la récompense cesse le mois suivant.",
+    answer: "Oui. Vous recevez 25 € chaque mois tant que votre filleul conserve son abonnement Option Visibilité actif. Pas de limite de durée. Si l'abonnement s'arrête, la récompense cesse le mois suivant.",
   },
   {
     question: "Le programme est-il réservé aux clients Pixeloria ?",
@@ -34,7 +34,7 @@ const faqItems: FaqItem[] = [
   },
   {
     question: "Que se passe-t-il si le filleul annule ?",
-    answer: "Pour le Site Vitrine : si l'achat est remboursé, la commission est annulée. Pour la Visibilité : si l'abonnement s'arrête, vous cesserez de recevoir la récompense mensuelle le mois suivant. Pixeloria se réserve le droit d'ajuster ou annuler en cas de litige ou paiement échoué.",
+    answer: "Pour le Site Artisan : si l'achat est remboursé, la commission est annulée. Pour la Visibilité : si l'abonnement s'arrête, vous cesserez de recevoir la récompense mensuelle le mois suivant. Pixeloria se réserve le droit d'ajuster ou annuler en cas de litige ou paiement échoué.",
   },
 ];
 

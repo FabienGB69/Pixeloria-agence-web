@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { hreflangLanguages } from '@/lib/hreflang';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -24,6 +25,22 @@ export default function CommentCaMarchePage() {
       <ClientEffects />
       <Header />
       <main id="comment-ca-marche-page">
+        <section className="page-hero section">
+          <div className="container">
+            <div className="page-hero-inner">
+              <nav className="breadcrumb" aria-label="Fil d'Ariane">
+                <Link href="/">Accueil</Link>
+                <span aria-hidden="true"> › </span>
+                <span>Comment ça marche</span>
+              </nav>
+              <span className="eyebrow">Notre process</span>
+              <h1>Comment ça marche&nbsp;: votre site en 4 étapes</h1>
+              <p className="page-hero-sub">
+                De l&apos;audit à la livraison, un parcours simple et transparent pour obtenir votre site en 72 h.
+              </p>
+            </div>
+          </div>
+        </section>
         <Process />
         <SiteWorks />
         <WhyPixeloria />

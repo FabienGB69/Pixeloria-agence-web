@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { hreflangSelf } from '@/lib/hreflang';
 import Link from 'next/link';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     'Portfolio-first websites for kitchen, bath and whole-home remodeling contractors, built around a strong photo gallery and content that earns trust over a longer research process. Mobile-first website design for US remodeling contractors.',
   alternates: {
     canonical: 'https://pixeloria.fr/en/remodeling-contractor-websites',
+    languages: hreflangSelf('https://pixeloria.fr/en/remodeling-contractor-websites'),
   },
   openGraph: {
     type: 'website',

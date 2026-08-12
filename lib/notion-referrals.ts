@@ -1,9 +1,11 @@
 import { Client } from '@notionhq/client';
+import { OFFERS, type OfferId } from './pricing';
+import { getReferralReward } from './referral-rewards';
 
 export interface CreateReferralRecordInput {
   referralCode: string;
   referrerName: string;
-  offerId: 'site-vitrine' | 'option-visibilite';
+  offerId: OfferId;
   customerName: string;
   customerEmail: string;
   amountTotal: number;
@@ -71,7 +73,7 @@ export async function createReferralRecord(
         },
         // Offer type
         'Offer ID': {
-          select: { name: input.offerId },
+          select: { name: OFFERS[input.offerId].title },
         },
         // Customer details
         'Customer Name': {
@@ -120,7 +122,7 @@ export async function createReferralRecord(
           },
         },
         'Reward Amount': {
-          number: input.offerId === 'site-vitrine' ? 100 : 25,
+          number: getReferralReward(input.offerId),
         },
         'Created At': {
           date: { start: new Date().toISOString().split('T')[0] },

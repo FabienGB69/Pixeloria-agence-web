@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { hreflangSelf } from '@/lib/hreflang';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
@@ -17,7 +18,10 @@ export const metadata: Metadata = {
     description:
       'Get a free, practical review of your contractor or trade business website. Three to five actionable opportunities, no obligation.',
   },
-  alternates: { canonical: 'https://pixeloria.fr/en/free-website-audit' },
+  alternates: {
+    canonical: 'https://pixeloria.fr/en/free-website-audit',
+    languages: hreflangSelf('https://pixeloria.fr/en/free-website-audit'),
+  },
 };
 
 export default function FreeWebsiteAuditPage() {

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { hreflangSelf } from '@/lib/hreflang';
 import Link from 'next/link';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     'Fast, mobile-first plumbing websites built around emergency call urgency and clear trust signals. Website design for US plumbing companies that turns searches into phone calls.',
   alternates: {
     canonical: 'https://pixeloria.fr/en/plumber-websites',
+    languages: hreflangSelf('https://pixeloria.fr/en/plumber-websites'),
   },
   openGraph: {
     type: 'website',

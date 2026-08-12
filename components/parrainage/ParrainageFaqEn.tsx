@@ -10,15 +10,15 @@ interface FaqItem {
 const faqItems: FaqItem[] = [
   {
     question: "How much does the sponsor earn?",
-    answer: "Site Showcase: you earn €100 after payment is received. Local Visibility: you earn €25 per month as long as the subscription is active. Cumulative potential: €100 + €25/month if your referral takes both offers.",
+    answer: "Craftsman Website: you earn €100 after payment is received. Visibility Option: you earn €25 per month as long as the subscription is active. Cumulative potential: €100 + €25/month if your referral takes both offers.",
   },
   {
     question: "Can rewards be combined?",
-    answer: "Yes. You can sponsor multiple companies without limit. Each sponsorship generates an independent reward. If the same referral takes both Site Showcase AND Local Visibility, you receive €100 + €25/month.",
+    answer: "Yes. You can sponsor multiple companies without limit. Each sponsorship generates an independent reward. If the same referral takes both Craftsman Website AND Visibility Option, you receive €100 + €25/month.",
   },
   {
     question: "When is the reward triggered?",
-    answer: "Site Showcase: immediately after payment is received via Stripe. Local Visibility: after 1 month of active continuous subscription. The reward continues each month as long as the subscription remains active.",
+    answer: "Craftsman Website: immediately after payment is received via Stripe. Visibility Option: after 1 month of active continuous subscription. The reward continues each month as long as the subscription remains active.",
   },
   {
     question: "How is sponsorship tracked?",
@@ -26,7 +26,7 @@ const faqItems: FaqItem[] = [
   },
   {
     question: "Does the monthly reward continue indefinitely?",
-    answer: "Yes. You receive €25 each month as long as your referral keeps their Local Visibility subscription active. No time limit. If the subscription stops, the reward stops the following month.",
+    answer: "Yes. You receive €25 each month as long as your referral keeps their Visibility Option subscription active. No time limit. If the subscription stops, the reward stops the following month.",
   },
   {
     question: "Is the program reserved for Pixeloria customers?",
@@ -34,7 +34,7 @@ const faqItems: FaqItem[] = [
   },
   {
     question: "What happens if the referral cancels?",
-    answer: "For Site Showcase: if the purchase is refunded, the commission is cancelled. For Local Visibility: if the subscription stops, you will stop receiving the monthly reward the following month. Pixeloria reserves the right to adjust or cancel in case of dispute or failed payment.",
+    answer: "For Craftsman Website: if the purchase is refunded, the commission is cancelled. For Visibility Option: if the subscription stops, you will stop receiving the monthly reward the following month. Pixeloria reserves the right to adjust or cancel in case of dispute or failed payment.",
   },
 ];
 

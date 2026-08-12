@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { hreflangSelf } from '@/lib/hreflang';
 import Link from 'next/link';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     'Professional painting contractor websites built around before-and-after photos, clear interior and exterior service pages, and the trust signals homeowners look for when comparing painters.',
   alternates: {
     canonical: 'https://pixeloria.fr/en/painting-contractor-websites',
+    languages: hreflangSelf('https://pixeloria.fr/en/painting-contractor-websites'),
   },
   openGraph: {
     type: 'website',

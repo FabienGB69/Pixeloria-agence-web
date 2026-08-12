@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
 import { hreflangLanguages } from '@/lib/hreflang';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -39,6 +40,22 @@ export default function FaqPage() {
       <ClientEffects />
       <Header />
       <main id="faq-page">
+        <section className="page-hero section">
+          <div className="container">
+            <div className="page-hero-inner">
+              <nav className="breadcrumb" aria-label="Fil d'Ariane">
+                <Link href="/">Accueil</Link>
+                <span aria-hidden="true"> › </span>
+                <span>FAQ</span>
+              </nav>
+              <span className="eyebrow">Questions fréquentes</span>
+              <h1>Questions fréquentes sur nos sites pour artisans et TPE</h1>
+              <p className="page-hero-sub">
+                Délais, prix, maintenance, SEO&nbsp;: nos réponses claires aux questions les plus posées.
+              </p>
+            </div>
+          </div>
+        </section>
         <FAQ />
         <Contact />
       </main>

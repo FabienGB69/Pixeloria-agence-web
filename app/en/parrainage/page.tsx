@@ -14,11 +14,11 @@ const ReferralCodeSection = dynamic(
 export const metadata: Metadata = {
   title: "Referral Program — Earn up to €100 + €25/month | Pixeloria",
   description:
-    "Recommend Pixeloria to a craftsperson or SME and earn up to €100 bonus, plus €25/month if your referral subscribes to Local Visibility. Completely transparent and automated program.",
+    "Recommend Pixeloria to a craftsperson or SME and earn up to €100 bonus, plus €25/month if your referral subscribes to Visibility Option. Completely transparent and automated program.",
   openGraph: {
     title: "Pixeloria Referral Program — Earn up to €100 + €25/month",
     description:
-      "Share your referral code. Earn €100 when your referral launches a site, plus €25/month if they subscribe to Local Visibility.",
+      "Share your referral code. Earn €100 when your referral launches a site, plus €25/month if they subscribe to Visibility Option.",
     url: 'https://pixeloria.fr/en/parrainage',
   },
   alternates: { canonical: 'https://pixeloria.fr/en/parrainage', languages: hreflangLanguages('/en/parrainage') },
@@ -70,7 +70,7 @@ export default function ParrainagePageEn() {
             <p className="hero__subtitle">
               Do you know a craftsperson or SME who needs a professional website?
               Share your referral code and automatically receive €100 when they launch their site,
-              plus €25 each month if they subscribe to Local Visibility.
+              plus €25 each month if they subscribe to Visibility Option.
             </p>
 
             <div className="hero__actions">
@@ -86,11 +86,11 @@ export default function ParrainagePageEn() {
             <div className="hero__stats">
               <div className="hero__stat">
                 <div className="hero__stat-value"><span>€100</span></div>
-                <div className="hero__stat-label">Site Showcase</div>
+                <div className="hero__stat-label">Craftsman Website</div>
               </div>
               <div className="hero__stat">
                 <div className="hero__stat-value"><span>€25/month</span></div>
-                <div className="hero__stat-label">Local Visibility</div>
+                <div className="hero__stat-label">Visibility Option</div>
               </div>
             </div>
           </div>
@@ -103,7 +103,7 @@ export default function ParrainagePageEn() {
                 <span className="badge badge--green">Immediate</span>
               </div>
               <div className="hero-card__amount">€100 <span>sponsor reward</span></div>
-              <div className="hero-card__label">Site Showcase · €199 inc. VAT</div>
+              <div className="hero-card__label">Craftsman Website · €199</div>
               <div className="hero-card__sub">After payment received</div>
             </div>
 
@@ -113,7 +113,7 @@ export default function ParrainagePageEn() {
                 <span className="badge badge--gold">Passive Income</span>
               </div>
               <div className="hero-card__amount">€25/month <span>sponsor reward</span></div>
-              <div className="hero-card__label">Local Visibility · €49 inc. VAT/month</div>
+              <div className="hero-card__label">Visibility Option · €49/month</div>
               <div className="hero-card__sub">After 1 month of active subscription</div>
             </div>
           </div>
@@ -152,7 +152,7 @@ export default function ParrainagePageEn() {
               <div className="step__number">02</div>
               <div className="step__title">Your referral signs up with your code</div>
               <p className="step__text">
-                They use your code when choosing their offer. If it&apos;s the Site Showcase (€199), they pay via Stripe. If it&apos;s Local Visibility, the subscription starts the following month.
+                They use your code when choosing their offer. If it&apos;s the Craftsman Website (€199), they pay via Stripe. If it&apos;s Visibility Option, the subscription starts the following month.
               </p>
             </div>
 
@@ -161,8 +161,8 @@ export default function ParrainagePageEn() {
               <div className="step__number">03</div>
               <div className="step__title">You receive your reward</div>
               <p className="step__text">
-                Site Showcase: €100 after the first payment received.
-                Local Visibility: €25/month after 1 month of active subscription.
+                Craftsman Website: €100 after the first payment received.
+                Visibility Option: €25/month after 1 month of active subscription.
                 Cumulative: €100 + €25/month if your referral takes both.
               </p>
             </div>
@@ -187,13 +187,13 @@ export default function ParrainagePageEn() {
 
           <div className="rewards__grid">
 
-            {/* Site Showcase */}
+            {/* Craftsman Website */}
             <div className="reward-card">
               <div className="reward-card__stripe"></div>
               <div className="reward-card__top">
                 <div>
-                  <div className="reward-card__name">Site Showcase</div>
-                  <div className="reward-card__price">Professional site · €199 inc. VAT</div>
+                  <div className="reward-card__name">Craftsman Website</div>
+                  <div className="reward-card__price">Professional site · €199</div>
                 </div>
                 <span className="badge badge--purple">One-time payment</span>
               </div>
@@ -203,7 +203,7 @@ export default function ParrainagePageEn() {
                   <span className="reward-card__row-icon">🎯</span>
                   <span className="reward-card__row-label">Referral pays</span>
                 </div>
-                <span className="reward-card__row-value">€199 inc. VAT</span>
+                <span className="reward-card__row-value">€199</span>
               </div>
               <div className="reward-card__row">
                 <div className="reward-card__row-left">
@@ -228,13 +228,13 @@ export default function ParrainagePageEn() {
               </div>
             </div>
 
-            {/* Local Visibility (highlighted) */}
+            {/* Visibility Option (highlighted) */}
             <div className="reward-card reward-card--highlight">
               <div className="reward-card__stripe"></div>
               <div className="reward-card__top">
                 <div>
-                  <div className="reward-card__name">Local Visibility</div>
-                  <div className="reward-card__price">Subscription · €49 inc. VAT/month</div>
+                  <div className="reward-card__name">Visibility Option</div>
+                  <div className="reward-card__price">Subscription · €49/month</div>
                 </div>
                 <span className="badge badge--gold">⭐ Recurring Income</span>
               </div>
@@ -244,7 +244,7 @@ export default function ParrainagePageEn() {
                   <span className="reward-card__row-icon">💳</span>
                   <span className="reward-card__row-label">Referral pays</span>
                 </div>
-                <span className="reward-card__row-value">€49 inc. VAT/month</span>
+                <span className="reward-card__row-value">€49/month</span>
               </div>
               <div className="reward-card__row">
                 <div className="reward-card__row-left">
@@ -278,7 +278,7 @@ export default function ParrainagePageEn() {
               <div>
                 <h3 className="reward-cumul__title">Cumulative Potential</h3>
                 <p className="reward-cumul__text">
-                  If your referral takes <strong>both</strong> Site Showcase (€199) and subscribes to Local Visibility,
+                  If your referral takes <strong>both</strong> Craftsman Website (€199) and subscribes to Visibility Option,
                   you earn <strong>€100 immediate + €25/month recurring</strong>.
                   Potential: <strong>€400 in the first year</strong> from a single referral.
                 </p>
@@ -317,11 +317,11 @@ export default function ParrainagePageEn() {
               <div className="audience__visual-numbers">
                 <div className="audience__num">
                   <div className="audience__num-value audience__num-value--purple">€100</div>
-                  <div className="audience__num-label">per Site Showcase</div>
+                  <div className="audience__num-label">per Craftsman Website</div>
                 </div>
                 <div className="audience__num">
                   <div className="audience__num-value audience__num-value--gold">€25/month</div>
-                  <div className="audience__num-label">per Local Visibility</div>
+                  <div className="audience__num-label">per Visibility Option</div>
                 </div>
                 <div className="audience__num">
                   <div className="audience__num-value audience__num-value--green">Unlimited</div>
@@ -480,11 +480,11 @@ export default function ParrainagePageEn() {
               </li>
               <li className="conditions__item">
                 <span className="conditions__item-icon">✦</span>
-                <p>For Site Showcase, the <strong>€100</strong> reward is triggered after <strong>actual payment received via Stripe</strong>.</p>
+                <p>For Craftsman Website, the <strong>€100</strong> reward is triggered after <strong>actual payment received via Stripe</strong>.</p>
               </li>
               <li className="conditions__item">
                 <span className="conditions__item-icon">✦</span>
-                <p>For Local Visibility, the <strong>€25/month</strong> reward is triggered after <strong>1 month of active subscription</strong> and continues as long as the subscription is active.</p>
+                <p>For Visibility Option, the <strong>€25/month</strong> reward is triggered after <strong>1 month of active subscription</strong> and continues as long as the subscription is active.</p>
               </li>
               <li className="conditions__item">
                 <span className="conditions__item-icon">✦</span>

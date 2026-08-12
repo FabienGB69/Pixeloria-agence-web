@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { hreflangSelf } from '@/lib/hreflang';
 import Link from 'next/link';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     'Mobile-first HVAC websites built around urgent, right-now searches — AC failure in summer, heating failure in winter — with prominent click-to-call and clear emergency-service structure.',
   alternates: {
     canonical: 'https://pixeloria.fr/en/hvac-websites',
+    languages: hreflangSelf('https://pixeloria.fr/en/hvac-websites'),
   },
   openGraph: {
     type: 'website',

@@ -69,7 +69,10 @@ test.describe('Pages — contenu principal visible', () => {
 
   test('/faq — section FAQ chargée', async ({ page }) => {
     await page.goto('/faq');
-    await expect(page.getByRole('heading', { name: /question|FAQ/i })).toBeVisible();
+    // Page now has its own <h1> (issue #160) in addition to the FAQ
+    // component's <h2> "Questions fréquentes" — both match this regex, so
+    // scope to level 2 to avoid a strict-mode violation.
+    await expect(page.getByRole('heading', { level: 2, name: /question|FAQ/i })).toBeVisible();
   });
 
   test('/avis — section témoignages chargée', async ({ page }) => {
@@ -82,7 +85,10 @@ test.describe('Pages — contenu principal visible', () => {
 
   test('/comment-ca-marche — section process chargée', async ({ page }) => {
     await page.goto('/comment-ca-marche');
-    await expect(page.getByRole('heading', { name: /comment|projet|marche|déroule/i })).toBeVisible();
+    // Page now has its own <h1> (issue #160) in addition to the Process
+    // component's <h2> — both match this regex, so scope to level 2 to
+    // avoid a strict-mode violation.
+    await expect(page.getByRole('heading', { level: 2, name: /comment|projet|marche|déroule/i })).toBeVisible();
   });
 
   test('/realisations — H1 présent', async ({ page }) => {

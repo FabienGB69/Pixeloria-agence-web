@@ -94,3 +94,31 @@ jobs:
           name: playwright-report
           path: playwright-report
           retention-days: 7
+
+  a11y:
+    name: Accessibility (WCAG 2.1 AA / axe-core)
+    runs-on: ubuntu-latest
+    needs: [build]
+    env:
+      NOTION_TOKEN: ${{ secrets.NOTION_TOKEN || 'placeholder' }}
+      NOTION_DB_ID: ${{ secrets.NOTION_DB_ID || 'placeholder' }}
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY || 'placeholder' }}
+      OWNER_EMAIL: contact@pixeloria.fr
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      - run: npm ci
+      - name: Build Next.js app
+        run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:a11y
+      - name: Upload axe-core report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: a11y-report
+          path: playwright-report
+          retention-days: 7

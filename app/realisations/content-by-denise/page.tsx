@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     locale: 'fr_FR',
     siteName: 'Pixeloria',
   },
+  alternates: {
+    canonical: 'https://pixeloria.fr/realisations/content-by-denise',
+  },
 };
 
 export default function ContentByDenisePage() {

@@ -2166,7 +2166,7 @@ select {
 
 .footer-bottom p {
   font-size: 0.84rem;
-  color: var(--text-subtle);
+  color: var(--text-muted);
 }
 
 /* ─── Marketing section ─── */
@@ -2659,7 +2659,7 @@ select {
 }
 .pricing-sublabel {
   font-size: 0.78rem;
-  color: var(--text-subtle);
+  color: var(--text-muted);
   margin: -0.75rem 0 1rem;
 }
 .pricing-note {
@@ -2776,7 +2776,7 @@ select {
   flex: 1;
   font-size: 0.72rem;
   font-weight: 600;
-  color: var(--text-subtle, #9C9892);
+  color: var(--text-muted);
   text-align: center;
   padding-block: 0.55rem;
   border-bottom: 2px solid var(--border);
@@ -3687,19 +3687,19 @@ select {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .08em;
-  color: var(--text-subtle);
+  color: var(--text-muted);
   margin: 1rem 0 0.4rem;
 }
 .pricing-list-title--excluded {
-  color: var(--text-subtle);
+  color: var(--text-muted);
   margin-top: 0.75rem;
 }
 .pricing-excluded li {
-  color: var(--text-subtle) !important;
+  color: var(--text-muted) !important;
 }
 .pricing-excluded li::before {
   content: '✗ ' !important;
-  color: var(--text-subtle) !important;
+  color: var(--text-muted) !important;
 }
 .pricing-badge--alt {
   background: var(--text);
@@ -5157,11 +5157,6 @@ details.faq-item[open] .faq-chevron {
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.05em;
-  opacity: 0.75;
-  transition: opacity 0.2s;
-}
-.lang-switcher:hover {
-  opacity: 1;
 }
 
 

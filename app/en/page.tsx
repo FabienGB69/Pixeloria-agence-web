@@ -1,12 +1,10 @@
-'use client';
-
 import Link from 'next/link';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
 import GoogleReviews from '@/components/sections/GoogleReviews';
 import ContactFormEn from './ContactFormEn';
-import { trackOfferSelect, trackEmailClicked, trackCallScheduled } from '@/lib/gtm';
+import { TrackedOfferAction, TrackedContactChannel } from '@/components/analytics/TrackedAction';
 
 const organizationJsonLd = {
   '@context': 'https://schema.org',
@@ -461,13 +459,14 @@ export default function EnHomePage() {
                   <li>Website launch</li>
                 </ul>
                 <p className="pricing-note">Delivered five business days after all content is received.</p>
-                <Link
+                <TrackedOfferAction
                   href="/en/free-website-audit"
                   className="btn btn-secondary"
-                  onClick={() => trackOfferSelect('Starter Website', '499 one-time')}
+                  offerName="Starter Website"
+                  offerPrice="499 one-time"
                 >
                   Get Your Website →
-                </Link>
+                </TrackedOfferAction>
               </div>
 
               {/* Growth Website — featured */}
@@ -496,13 +495,14 @@ export default function EnHomePage() {
                   <li>Website launch</li>
                 </ul>
                 <p className="pricing-note">Delivered in one to three weeks, depending on scope.</p>
-                <Link
+                <TrackedOfferAction
                   href="/en/free-website-audit"
                   className="btn btn-primary"
-                  onClick={() => trackOfferSelect('Growth Website', '899 one-time')}
+                  offerName="Growth Website"
+                  offerPrice="899 one-time"
                 >
                   Start My Website →
-                </Link>
+                </TrackedOfferAction>
               </div>
 
               {/* Website Care & Local Visibility */}
@@ -527,13 +527,15 @@ export default function EnHomePage() {
                   <li>Monthly performance summary</li>
                 </ul>
                 <p className="pricing-note">Cancel anytime. No guaranteed Google rankings — no agency can promise that honestly.</p>
-                <a
+                <TrackedOfferAction
                   href="#contact"
                   className="btn btn-secondary"
-                  onClick={() => trackOfferSelect('Website Care & Local Visibility', '79 / month')}
+                  offerName="Website Care & Local Visibility"
+                  offerPrice="79 / month"
+                  as="anchor"
                 >
                   Ask About Care Plan →
-                </a>
+                </TrackedOfferAction>
               </div>
 
             </div>
@@ -893,10 +895,11 @@ export default function EnHomePage() {
                 </p>
 
                 <div className="contact-channels reveal">
-                  <a
+                  <TrackedContactChannel
                     href="mailto:contact@pixeloria.fr"
                     className="channel-item"
-                    onClick={() => trackEmailClicked('homepage_contact')}
+                    kind="email"
+                    source="homepage_contact"
                   >
                     <span className="channel-icon" aria-hidden="true">
                       <svg viewBox="0 0 24 24" fill="none">
@@ -908,11 +911,12 @@ export default function EnHomePage() {
                       <strong>Email</strong>
                       <span>contact@pixeloria.fr</span>
                     </div>
-                  </a>
-                  <a
+                  </TrackedContactChannel>
+                  <TrackedContactChannel
                     href="mailto:contact@pixeloria.fr?subject=Schedule%20a%20call"
                     className="channel-item"
-                    onClick={() => trackCallScheduled('homepage_contact')}
+                    kind="call"
+                    source="homepage_contact"
                   >
                     <span className="channel-icon" aria-hidden="true">
                       <svg viewBox="0 0 24 24" fill="none">
@@ -924,7 +928,7 @@ export default function EnHomePage() {
                       <strong>Schedule a call</strong>
                       <span>Email us your availability</span>
                     </div>
-                  </a>
+                  </TrackedContactChannel>
                 </div>
 
                 <p className="contact-availability reveal">

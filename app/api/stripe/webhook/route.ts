@@ -1,6 +1,7 @@
 import { stripe } from '@/lib/stripe';
 import { createReferralRecord, updateRewardStatus } from '@/lib/notion-referrals';
 import { getReferralPartner } from '@/lib/referral-partners';
+import { OFFERS, type OfferId } from '@/lib/pricing';
 import type Stripe from 'stripe';
 
 const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
@@ -58,7 +59,7 @@ export async function POST(req: Request): Promise<Response> {
 
 /**
  * Handle checkout.session.completed event
- * Triggered when payment is received for Site Vitrine
+ * Triggered when payment is received for the Site Artisan offer
  */
 async function handleCheckoutSessionCompleted(session: Stripe.Checkout.Session) {
   console.log(`[Stripe Webhook] Processing checkout session: ${session.id}`);
@@ -81,8 +82,13 @@ async function handleCheckoutSessionCompleted(session: Stripe.Checkout.Session) 
   const customerEmail = session.customer_details?.email || '';
   const customerName = session.customer_details?.name || 'Unknown';
 
-  // Determine offer type from metadata
-  const offerId = session.metadata?.offer_id as 'site-vitrine' | 'option-visibilite' || 'site-vitrine';
+  // Determine offer type from metadata — falls back to the default catalog
+  // offer if the id is missing or unrecognized, rather than persisting an
+  // id that doesn't exist in lib/pricing.ts (see issue #147).
+  const rawOfferId = session.metadata?.offer_id;
+  const offerId: OfferId = rawOfferId && rawOfferId in OFFERS
+    ? (rawOfferId as OfferId)
+    : 'site-artisan';
 
   // Get customer ID
   const customerId = typeof session.customer === 'string'

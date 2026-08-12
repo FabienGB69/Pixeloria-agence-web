@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { hreflangSelf } from '@/lib/hreflang';
+import { breadcrumbList } from '@/lib/breadcrumb';
 import Link from 'next/link';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
@@ -9,6 +11,7 @@ export const metadata: Metadata = {
     'Guides and articles for contractors and home-service businesses on what a website should include, how much it costs, and best practices to follow.',
   alternates: {
     canonical: 'https://pixeloria.fr/en/resources',
+    languages: hreflangSelf('https://pixeloria.fr/en/resources'),
   },
   openGraph: {
     type: 'website',
@@ -45,9 +48,15 @@ const articles = [
   },
 ];
 
+const breadcrumbSchema = breadcrumbList([
+  { name: 'Home', url: 'https://pixeloria.fr/en' },
+  { name: 'Resources', url: 'https://pixeloria.fr/en/resources' },
+]);
+
 export default function ResourcesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <HeaderEn />
       <main>
 

@@ -66,7 +66,6 @@ export default function WebsiteRedesignPage() {
       '@type': 'ProfessionalService',
       name: 'Pixeloria',
       url: 'https://pixeloria.fr',
-      telephone: '+33786125313',
       email: 'contact@pixeloria.fr',
     },
     description: 'Website redesign for local tradespeople and small businesses. Modern design, local SEO, mobile-responsive.',

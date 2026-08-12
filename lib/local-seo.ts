@@ -37,7 +37,7 @@ export const LOCAL_SEO_PAGES: Record<string, LocalSeoData> = {
     faq: [
       {
         question: 'Combien coûte un site web pour une PME dans la Drôme ?',
-        answer: 'Notre Site Vitrine démarre à 199 € TTC en paiement unique, livré en 72h. L\'Option Visibilité (49 €/mois) ajoute maintenance, mises à jour et suivi SEO local. Aucun engagement forcé.',
+        answer: 'Notre Site Artisan démarre à 199 € TTC en paiement unique, livré en 72h. L\'Option Visibilité (49 €/mois) ajoute maintenance, mises à jour et suivi SEO local. Aucun engagement forcé.',
       },
       {
         question: 'Pixeloria se déplace-t-elle dans la Drôme pour des réunions ?',
@@ -197,7 +197,7 @@ export const LOCAL_SEO_PAGES: Record<string, LocalSeoData> = {
       },
       {
         question: 'Combien coûte un site web pour un artisan dans l\'Ain ?',
-        answer: 'Notre Site Vitrine démarre à 199 € TTC en paiement unique, livré en 72h. L\'Option Visibilité (49 €/mois) ajoute maintenance et suivi SEO local. Devis gratuit en 48h après analyse de votre situation.',
+        answer: 'Notre Site Artisan démarre à 199 € TTC en paiement unique, livré en 72h. L\'Option Visibilité (49 €/mois) ajoute maintenance et suivi SEO local. Devis gratuit en 48h après analyse de votre situation.',
       },
     ],
     metaTitle: 'Agence Web Ain (01) — Création de sites pour artisans et PME | Pixeloria',
@@ -273,7 +273,7 @@ export const LOCAL_SEO_PAGES: Record<string, LocalSeoData> = {
       },
       {
         question: 'Quel budget pour un site de chalet ou d\'hôtel en Savoie ?',
-        answer: 'Notre Site Vitrine standard démarre à 199 € TTC. Un hébergeur avec moteur de réservation est un projet sur-mesure : contactez-nous pour un devis gratuit adapté à votre nombre de chambres et à vos besoins.',
+        answer: 'Notre Site Artisan standard démarre à 199 € TTC. Un hébergeur avec moteur de réservation est un projet sur-mesure : contactez-nous pour un devis gratuit adapté à votre nombre de chambres et à vos besoins.',
       },
     ],
     metaTitle: 'Agence Web Savoie (73) — Création de sites pour tourisme et artisans | Pixeloria',
@@ -307,7 +307,7 @@ export const LOCAL_SEO_PAGES: Record<string, LocalSeoData> = {
       },
       {
         question: 'Quels sont vos tarifs pour un site hôtelier ou de chalet de luxe ?',
-        answer: 'Notre Site Vitrine standard démarre à 199 € TTC. Un site hôtelier premium avec galerie et moteur de réservation est un projet sur-mesure, avec un devis personnalisé gratuit selon le nombre de pages et les fonctionnalités requises.',
+        answer: 'Notre Site Artisan standard démarre à 199 € TTC. Un site hôtelier premium avec galerie et moteur de réservation est un projet sur-mesure, avec un devis personnalisé gratuit selon le nombre de pages et les fonctionnalités requises.',
       },
       {
         question: 'Travaillez-vous avec des entreprises du décolletage et de l\'industrie de précision ?',

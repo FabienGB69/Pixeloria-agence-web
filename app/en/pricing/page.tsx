@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { hreflangLanguages } from '@/lib/hreflang';
+import { OFFERS_US } from '@/lib/pricing-us';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
@@ -10,14 +11,14 @@ import TrackOnMount from '@/components/analytics/TrackOnMount';
 export const metadata: Metadata = {
   title: 'Pricing — Starter, Growth & Website Care Plans | Pixeloria',
   description:
-    'Starter Website at $499 one-time, Growth Website at $899 one-time, and Website Care & Local Visibility at $79/month. No long-term contract required to launch.',
+    `Starter Website at ${OFFERS_US.starter.price} one-time, Growth Website at ${OFFERS_US.growth.price} one-time, and ${OFFERS_US.care.title} at ${OFFERS_US.care.price}${OFFERS_US.care.suffix}. No long-term contract required to launch.`,
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/en/pricing',
     locale: 'en_GB',
     siteName: 'Pixeloria',
     title: 'Pricing — Starter, Growth & Website Care Plans | Pixeloria',
-    description: 'Starter Website $499, Growth Website $899, and Website Care & Local Visibility $79/month.',
+    description: `Starter Website ${OFFERS_US.starter.price}, Growth Website ${OFFERS_US.growth.price}, and ${OFFERS_US.care.title} ${OFFERS_US.care.price}${OFFERS_US.care.suffix}.`,
   },
   alternates: { canonical: 'https://pixeloria.fr/en/pricing', languages: hreflangLanguages('/en/pricing') },
 };
@@ -61,8 +62,8 @@ export default function PricingEnPage() {
             <div className="pricing-cards pricing-cards--three">
 
               <div className="pricing-card reveal">
-                <p className="pricing-label">Starter Website</p>
-                <p className="pricing-price">$499 <span>one-time</span></p>
+                <p className="pricing-label">{OFFERS_US.starter.title}</p>
+                <p className="pricing-price">{OFFERS_US.starter.price} <span>{OFFERS_US.starter.suffix}</span></p>
                 <p className="pricing-sublabel">One-time payment — live 5 business days after we receive your content</p>
                 <p className="pricing-accroche">
                   A one-page website for contractors, built to generate estimate requests.
@@ -88,8 +89,8 @@ export default function PricingEnPage() {
 
               <div className="pricing-card pricing-card--featured reveal">
                 <span className="pricing-badge">Most Popular</span>
-                <p className="pricing-label">Growth Website</p>
-                <p className="pricing-price">$899 <span>one-time</span></p>
+                <p className="pricing-label">{OFFERS_US.growth.title}</p>
+                <p className="pricing-price">{OFFERS_US.growth.price} <span>{OFFERS_US.growth.suffix}</span></p>
                 <p className="pricing-sublabel">One-time payment — live in 1–3 weeks depending on scope</p>
                 <p className="pricing-accroche">
                   A multi-page website for contractors and home-service businesses who want a stronger local search presence.
@@ -115,8 +116,8 @@ export default function PricingEnPage() {
               </div>
 
               <div className="pricing-card reveal">
-                <p className="pricing-label">Website Care &amp; Local Visibility</p>
-                <p className="pricing-price">$79 <span>/month</span></p>
+                <p className="pricing-label">{OFFERS_US.care.title}</p>
+                <p className="pricing-price">{OFFERS_US.care.price} <span>{OFFERS_US.care.suffix}</span></p>
                 <p className="pricing-sublabel">Add-on to either website</p>
                 <p className="pricing-accroche">
                   Your site stays online, secure and up to date — without you having to think about it.
@@ -161,8 +162,8 @@ export default function PricingEnPage() {
                 <thead>
                   <tr>
                     <th style={{ textAlign: 'left', padding: '1rem', color: 'var(--text-muted)' }}>Feature</th>
-                    <th style={{ textAlign: 'center', padding: '1rem', color: 'var(--primary)' }}>Starter Website<br /><small>$499 one-time</small></th>
-                    <th style={{ textAlign: 'center', padding: '1rem', color: 'var(--accent)' }}>Growth Website<br /><small>$899 one-time</small></th>
+                    <th style={{ textAlign: 'center', padding: '1rem', color: 'var(--primary)' }}>{OFFERS_US.starter.title}<br /><small>{OFFERS_US.starter.price} {OFFERS_US.starter.suffix}</small></th>
+                    <th style={{ textAlign: 'center', padding: '1rem', color: 'var(--accent)' }}>{OFFERS_US.growth.title}<br /><small>{OFFERS_US.growth.price} {OFFERS_US.growth.suffix}</small></th>
                   </tr>
                 </thead>
                 <tbody>

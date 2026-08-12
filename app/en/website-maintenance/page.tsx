@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { hreflangLanguages } from '@/lib/hreflang';
+import { OFFERS_US } from '@/lib/pricing-us';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 
@@ -60,7 +61,6 @@ export default function WebsiteMaintenancePage() {
       '@type': 'ProfessionalService',
       name: 'Pixeloria',
       url: 'https://pixeloria.fr',
-      telephone: '+33786125313',
       email: 'contact@pixeloria.fr',
     },
     description: 'Website maintenance for tradespeople and small businesses: hosting, security updates, backups and monthly reporting.',
@@ -68,9 +68,9 @@ export default function WebsiteMaintenancePage() {
     offers: [
       {
         '@type': 'Offer',
-        name: 'Website Care & Local Visibility',
-        price: '79',
-        priceCurrency: 'USD',
+        name: OFFERS_US.care.title,
+        price: String(OFFERS_US.care.amount),
+        priceCurrency: OFFERS_US.care.currency,
         priceSpecification: {
           '@type': 'UnitPriceSpecification',
           referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitCode: 'MON' },
