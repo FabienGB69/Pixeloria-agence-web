@@ -57,7 +57,7 @@ const trustPoints = [
 
 function StarRating({ note }: { note: number }) {
   return (
-    <span className="testimonial-stars" aria-label={`Note : ${note} sur 5`}>
+    <span className="testimonial-stars" role="img" aria-label={`Note : ${note} sur 5`}>
       {Array.from({ length: 5 }, (_, i) => (
         <span key={i} aria-hidden="true" style={{ color: i < note ? '#f59e0b' : 'rgba(255,255,255,0.2)' }}>
           ★
