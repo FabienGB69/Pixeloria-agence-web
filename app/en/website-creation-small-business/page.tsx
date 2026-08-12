@@ -8,7 +8,7 @@ import Footer from '@/components/layout/Footer';
 export const metadata: Metadata = {
   title: 'Website Creation for Contractors & Small Businesses | Pixeloria',
   description:
-    'Pixeloria builds professional websites for contractors and local service businesses. Local visibility, lead generation, custom design. Starter Website at $499, live 5 business days after we receive your content.',
+    `Pixeloria builds professional websites for contractors and local service businesses. Local visibility, lead generation, custom design. Starter Website at ${OFFERS_US.starter.price}, live 5 business days after we receive your content.`,
   alternates: {
     canonical: 'https://pixeloria.fr/en/website-creation-small-business',
     languages: hreflangLanguages('/en/website-creation-small-business'),
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: 'https://pixeloria.fr/en/website-creation-small-business',
     title: 'Website Creation for Contractors & Small Businesses | Pixeloria',
     description:
-      'A professional website for contractors and small businesses. Responsive, local SEO, estimate request form. Starter Website at $499, live 5 business days after we receive your content.',
+      `A professional website for contractors and small businesses. Responsive, local SEO, estimate request form. Starter Website at ${OFFERS_US.starter.price}, live 5 business days after we receive your content.`,
     locale: 'en_GB',
     siteName: 'Pixeloria',
   },
@@ -95,7 +95,7 @@ export default function WebsiteCreationSmallBusinessPage() {
               <p className="page-hero-sub">
                 A professional website, built mobile-first, optimized for your
                 local visibility and designed to generate qualified estimate requests. Starter Website
-                at $499, live 5 business days after we receive your content.
+                at {OFFERS_US.starter.price}, live 5 business days after we receive your content.
               </p>
               <div className="page-hero-actions">
                 <Link href="/en#contact" className="btn btn-primary">
@@ -192,7 +192,7 @@ export default function WebsiteCreationSmallBusinessPage() {
               <div className="pricing-card pricing-card--featured">
                 <span className="pricing-badge">Main offer</span>
                 <p className="pricing-label">Starter Website</p>
-                <p className="pricing-price">$499 <span>one-time</span></p>
+                <p className="pricing-price">{OFFERS_US.starter.price} <span>{OFFERS_US.starter.suffix}</span></p>
                 <p className="pricing-sublabel">One-time payment — live 5 business days after we receive your content</p>
                 <ul>
                   <li>One-page contractor website</li>
@@ -206,7 +206,7 @@ export default function WebsiteCreationSmallBusinessPage() {
               </div>
               <div className="pricing-card">
                 <p className="pricing-label">Website Care &amp; Local Visibility</p>
-                <p className="pricing-price">$79 <span>/month</span></p>
+                <p className="pricing-price">{OFFERS_US.care.price} <span>{OFFERS_US.care.suffix}</span></p>
                 <p className="pricing-sublabel">Add-on to your Starter Website</p>
                 <ul>
                   <li>Hosting management</li>

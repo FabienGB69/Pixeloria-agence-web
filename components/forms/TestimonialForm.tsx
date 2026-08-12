@@ -9,7 +9,59 @@ interface FormState {
   error: string | null;
 }
 
-export default function TestimonialForm() {
+// Form field `name` attributes differ per locale (EN keeps its own English
+// names rather than the FR/API ones) — preserved from the pre-merge
+// components so the rendered HTML contract (and existing e2e tests) don't
+// change. Submission remaps them onto the canonical API field names below.
+const FIELD_NAMES = {
+  fr: { prenom: 'prenom', activite: 'activite', ville: 'ville', avis: 'avis', accord: 'accord' },
+  en: { prenom: 'firstName', activite: 'trade', ville: 'city', avis: 'review', accord: 'consent' },
+} as const;
+
+const COPY = {
+  fr: {
+    prenomLabel: 'Prénom', requiredAbbr: 'requis',
+    prenomPlaceholder: 'Votre prénom',
+    activiteLabel: 'Activité / Métier',
+    activitePlaceholder: 'Ex : Plombier, Électricien, Couvreur…',
+    villeLabel: 'Ville',
+    villePlaceholder: 'Ex : Lyon, Villeurbanne…',
+    avisLabel: 'Votre avis',
+    avisPlaceholder: "Qu'est-ce que vous avez aimé ? Qu'est-ce qui vous a convaincu de faire confiance à Pixeloria ? Y a-t-il un résultat concret que vous voulez partager ?",
+    noteLegend: 'Votre note globale',
+    starAriaGroup: 'Note de 1 à 5 étoiles',
+    starAriaLabel: (val: number) => `${val} étoile${val > 1 ? 's' : ''}`,
+    accordLabel: "J'accepte que cet avis soit affiché sur pixeloria.fr avec mon prénom et mon activité.",
+    submitLabel: 'Envoyer mon avis →',
+    submitLoading: 'Envoi en cours…',
+    successTitle: (prenom: string) => `Merci ${prenom} !`,
+    successBody: "Votre avis a bien été transmis. On l'intègre rapidement au site.",
+    defaultError: "Une erreur s'est produite. Réessayez ou écrivez directement à contact@pixeloria.fr",
+  },
+  en: {
+    prenomLabel: 'First name', requiredAbbr: 'required',
+    prenomPlaceholder: 'Your first name',
+    activiteLabel: 'Trade / Profession',
+    activitePlaceholder: 'e.g. Plumber, Electrician, Painter…',
+    villeLabel: 'City',
+    villePlaceholder: 'e.g. Lyon, Grenoble, London…',
+    avisLabel: 'Your review',
+    avisPlaceholder: 'What did you enjoy most? What convinced you to trust Pixeloria? Is there a concrete result you want to share?',
+    noteLegend: 'Overall rating',
+    starAriaGroup: 'Rating from 1 to 5 stars',
+    starAriaLabel: (val: number) => `${val} star${val > 1 ? 's' : ''}`,
+    accordLabel: 'I agree for this review to be displayed on pixeloria.fr with my first name and profession.',
+    submitLabel: 'Submit my review →',
+    submitLoading: 'Sending…',
+    successTitle: (prenom: string) => `Thank you, ${prenom}!`,
+    successBody: 'Your review has been submitted. We will add it to the site shortly.',
+    defaultError: 'Something went wrong. Please try again or email us directly at contact@pixeloria.fr',
+  },
+} as const;
+
+export default function TestimonialForm({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
+  const t = COPY[locale];
+  const f = FIELD_NAMES[locale];
   const [formState, setFormState] = useState<FormState>({
     loading: false,
     success: false,
@@ -21,7 +73,17 @@ export default function TestimonialForm() {
     e.preventDefault();
 
     const form = e.currentTarget;
-    const data = Object.fromEntries(new FormData(form).entries());
+    const raw = Object.fromEntries(new FormData(form).entries());
+    const data: Record<string, FormDataEntryValue | string> = {
+      prenom: raw[f.prenom],
+      activite: raw[f.activite],
+      ville: raw[f.ville],
+      avis: raw[f.avis],
+      note: raw.note,
+      accord: raw[f.accord],
+      _hp: raw._hp,
+      ...(locale === 'en' ? { _lang: 'en' } : {}),
+    };
 
     setFormState((prev) => ({ ...prev, loading: true, error: null }));
 
@@ -40,7 +102,7 @@ export default function TestimonialForm() {
           error: null,
         });
       } else {
-        let errMsg = 'Une erreur s\'est produite. Réessayez ou écrivez directement à contact@pixeloria.fr';
+        let errMsg: string = t.defaultError;
         try {
           const body = await res.json() as { error?: string };
           if (body.error) errMsg = body.error;
@@ -55,7 +117,7 @@ export default function TestimonialForm() {
       setFormState((prev) => ({
         ...prev,
         loading: false,
-        error: 'Une erreur s\'est produite. Réessayez ou écrivez directement à contact@pixeloria.fr',
+        error: t.defaultError,
       }));
     }
   };
@@ -64,8 +126,8 @@ export default function TestimonialForm() {
     return (
       <div className="temoignage-success" role="status" aria-live="polite">
         <div className="success-emoji">🎉</div>
-        <h2>Merci {formState.prenom}&nbsp;!</h2>
-        <p>Votre avis a bien été transmis. On l&apos;intègre rapidement au site.</p>
+        <h2>{t.successTitle(formState.prenom)}</h2>
+        <p>{t.successBody}</p>
       </div>
     );
   }
@@ -84,11 +146,11 @@ export default function TestimonialForm() {
       />
 
       <label>
-        Prénom <abbr title="requis">*</abbr>
+        {t.prenomLabel} <abbr title={t.requiredAbbr}>*</abbr>
         <input
           type="text"
-          name="prenom"
-          placeholder="Votre prénom"
+          name={f.prenom}
+          placeholder={t.prenomPlaceholder}
           required
           autoComplete="given-name"
           maxLength={50}
@@ -96,33 +158,33 @@ export default function TestimonialForm() {
       </label>
 
       <label>
-        Activité / Métier <abbr title="requis">*</abbr>
+        {t.activiteLabel} <abbr title={t.requiredAbbr}>*</abbr>
         <input
           type="text"
-          name="activite"
-          placeholder="Ex : Plombier, Électricien, Couvreur…"
+          name={f.activite}
+          placeholder={t.activitePlaceholder}
           required
           maxLength={100}
         />
       </label>
 
       <label>
-        Ville <abbr title="requis">*</abbr>
+        {t.villeLabel} <abbr title={t.requiredAbbr}>*</abbr>
         <input
           type="text"
-          name="ville"
-          placeholder="Ex : Lyon, Villeurbanne…"
+          name={f.ville}
+          placeholder={t.villePlaceholder}
           required
           maxLength={100}
         />
       </label>
 
       <label>
-        Votre avis <abbr title="requis">*</abbr>
+        {t.avisLabel} <abbr title={t.requiredAbbr}>*</abbr>
         <textarea
-          name="avis"
+          name={f.avis}
           rows={5}
-          placeholder="Qu'est-ce que vous avez aimé ? Qu'est-ce qui vous a convaincu de faire confiance à Pixeloria ? Y a-t-il un résultat concret que vous voulez partager ?"
+          placeholder={t.avisPlaceholder}
           required
           minLength={10}
           maxLength={1000}
@@ -131,9 +193,9 @@ export default function TestimonialForm() {
 
       <fieldset style={{ border: 'none', padding: 0, margin: '0 0 1.1rem' }}>
         <legend style={{ fontSize: '0.9rem', fontWeight: 600, color: '#333', marginBottom: '0.4rem' }}>
-          Votre note globale <abbr title="requis">*</abbr>
+          {t.noteLegend} <abbr title={t.requiredAbbr}>*</abbr>
         </legend>
-        <div className="temoignage-stars" role="group" aria-label="Note de 1 à 5 étoiles">
+        <div className="temoignage-stars" role="group" aria-label={t.starAriaGroup}>
           {[5, 4, 3, 2, 1].map((val) => (
             <Fragment key={val}>
               <input
@@ -144,7 +206,7 @@ export default function TestimonialForm() {
                 required
                 defaultChecked={val === 5}
               />
-              <label htmlFor={`note-${val}`} aria-label={`${val} étoile${val > 1 ? 's' : ''}`}>
+              <label htmlFor={`note-${val}`} aria-label={t.starAriaLabel(val)}>
                 ★
               </label>
             </Fragment>
@@ -153,8 +215,8 @@ export default function TestimonialForm() {
       </fieldset>
 
       <label className="temoignage-accord">
-        <input type="checkbox" name="accord" value="true" required />
-        J&apos;accepte que cet avis soit affiché sur pixeloria.fr avec mon prénom et mon activité.
+        <input type="checkbox" name={f.accord} value="true" required />
+        {t.accordLabel}
       </label>
 
       <button
@@ -163,7 +225,7 @@ export default function TestimonialForm() {
         disabled={formState.loading}
         style={{ width: '100%', justifyContent: 'center' }}
       >
-        {formState.loading ? 'Envoi en cours…' : 'Envoyer mon avis →'}
+        {formState.loading ? t.submitLoading : t.submitLabel}
       </button>
 
       {formState.error && (

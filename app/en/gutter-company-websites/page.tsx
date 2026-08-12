@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { hreflangSelf } from '@/lib/hreflang';
+import { OFFERS_US } from '@/lib/pricing-us';
 import Link from 'next/link';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
@@ -75,7 +76,7 @@ const localSeoItems = [
 const faqs = [
   {
     q: 'How much does a gutter company website cost?',
-    a: 'Pixeloria gutter company websites start at $499 for a focused one-page website. Multi-page websites with individual service pages start at $899. Full pricing details are on our pricing page.',
+    a: `Pixeloria gutter company websites start at ${OFFERS_US.starter.price} for a focused one-page website. Multi-page websites with individual service pages start at ${OFFERS_US.growth.price}. Full pricing details are on our pricing page.`,
   },
   {
     q: 'Is a one-page website enough for a gutter company?',
@@ -316,8 +317,8 @@ export default function GutterCompanyWebsitesPage() {
               </p>
             </div>
             <p style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto' }}>
-              Starter Website: $499 one-time. Growth Website: $899 one-time (most popular).
-              Website Care &amp; Local Visibility: $79/month, cancel anytime.
+              Starter Website: {OFFERS_US.starter.price} one-time. Growth Website: {OFFERS_US.growth.price} one-time (most popular).
+              Website Care &amp; Local Visibility: {OFFERS_US.care.price}/month, cancel anytime.
             </p>
             <p style={{ textAlign: 'center', marginTop: '1.5rem' }}>
               <Link href="/en/pricing" style={{ color: 'var(--primary)', textDecoration: 'underline', fontSize: '0.9rem' }}>

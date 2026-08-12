@@ -4,7 +4,7 @@ import { hreflangLanguages } from '@/lib/hreflang';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
-import TestimonialFormEn from './TestimonialFormEn';
+import TestimonialForm from '@/components/forms/TestimonialForm';
 
 export const metadata: Metadata = {
   title: 'Leave a Review — Share Your Experience | Pixeloria',
@@ -66,7 +66,7 @@ export default function TestimonialEnPage() {
               </div>
 
               <div className="temoignage-form-wrap reveal">
-                <TestimonialFormEn />
+                <TestimonialForm locale="en" />
               </div>
 
             </div>

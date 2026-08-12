@@ -1,8 +1,9 @@
 'use client';
 
-import { useState, useRef, useCallback } from 'react';
+import { useState, useRef } from 'react';
 import { track } from '@vercel/analytics';
 import TurnstileWidget from '@/components/forms/TurnstileWidget';
+import { useTurnstileToken } from '@/components/forms/useTurnstileToken';
 
 interface FormState {
   loading: boolean;
@@ -16,9 +17,7 @@ export default function ContactFormEn() {
     success: false,
     error: null,
   });
-  const [turnstileToken, setTurnstileToken] = useState<string>('');
-  const onTurnstileVerify = useCallback((token: string) => setTurnstileToken(token), []);
-  const onTurnstileExpire = useCallback(() => setTurnstileToken(''), []);
+  const { turnstileToken, onTurnstileVerify, onTurnstileExpire } = useTurnstileToken();
   const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {

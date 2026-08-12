@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { OFFERS_US } from '@/lib/pricing-us';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
@@ -26,7 +27,7 @@ const organizationJsonLd = {
 const faqs = [
   {
     q: 'How much does a contractor website cost?',
-    a: 'Pixeloria contractor websites start at $499 for a one-page website. Multi-page websites start at $899. The final price depends on the number of pages, required integrations and content needs.',
+    a: `Pixeloria contractor websites start at ${OFFERS_US.starter.price} for a one-page website. Multi-page websites start at ${OFFERS_US.growth.price}. The final price depends on the number of pages, required integrations and content needs.`,
   },
   {
     q: 'How long does it take to build a contractor website?',
@@ -284,12 +285,12 @@ export default function EnHomePage() {
 
               <div className="hero-metrics">
                 <div className="metric">
-                  <strong className="metric-value">$499</strong>
+                  <strong className="metric-value">{OFFERS_US.starter.price}</strong>
                   <span>Starter Website</span>
                 </div>
                 <div className="metric-divider" aria-hidden="true"></div>
                 <div className="metric">
-                  <strong className="metric-value">$899</strong>
+                  <strong className="metric-value">{OFFERS_US.growth.price}</strong>
                   <span>Growth Website</span>
                 </div>
                 <div className="metric-divider" aria-hidden="true"></div>
@@ -438,7 +439,7 @@ export default function EnHomePage() {
               {/* Starter Website */}
               <div className="pricing-card reveal">
                 <p className="pricing-label">Starter Website</p>
-                <p className="pricing-price">$499 <span>one-time</span></p>
+                <p className="pricing-price">{OFFERS_US.starter.price} <span>{OFFERS_US.starter.suffix}</span></p>
                 <p className="pricing-sublabel">One-page contractor website</p>
                 <p className="pricing-accroche">
                   A focused, mobile-first website built to generate calls and estimate requests.
@@ -473,7 +474,7 @@ export default function EnHomePage() {
               <div className="pricing-card pricing-card--featured reveal">
                 <span className="pricing-badge">Most Popular</span>
                 <p className="pricing-label">Growth Website</p>
-                <p className="pricing-price">$899 <span>one-time</span></p>
+                <p className="pricing-price">{OFFERS_US.growth.price} <span>{OFFERS_US.growth.suffix}</span></p>
                 <p className="pricing-sublabel">Up to 5 pages</p>
                 <p className="pricing-accroche">
                   A multi-page website with individual service pages, built to generate more qualified leads.
@@ -508,7 +509,7 @@ export default function EnHomePage() {
               {/* Website Care & Local Visibility */}
               <div className="pricing-card reveal">
                 <p className="pricing-label">Website Care &amp; Local Visibility</p>
-                <p className="pricing-price">$79 <span>/ month</span></p>
+                <p className="pricing-price">{OFFERS_US.care.price} <span>/ month</span></p>
                 <p className="pricing-sublabel">Ongoing care for your website</p>
                 <p className="pricing-accroche">
                   Your site stays secure, up to date and locally optimized — without you having to think about it.

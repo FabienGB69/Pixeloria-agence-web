@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { hreflangLanguages } from '@/lib/hreflang';
+import { OFFERS_US } from '@/lib/pricing-us';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'Website Redesign for Tradespeople & Small Businesses | Pixeloria',
   description:
-    'Is your current website not generating enough leads? Pixeloria redesigns websites for contractors and small businesses: modern design, local SEO, mobile-responsive. Starter Website redesigns from $499, delivered within 5 business days.',
+    `Is your current website not generating enough leads? Pixeloria redesigns websites for contractors and small businesses: modern design, local SEO, mobile-responsive. Starter Website redesigns from ${OFFERS_US.starter.price}, delivered within 5 business days.`,
   alternates: {
     canonical: 'https://pixeloria.fr/en/website-redesign',
     languages: hreflangLanguages('/en/website-redesign'),
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     url: 'https://pixeloria.fr/en/website-redesign',
     title: 'Website Redesign for Tradespeople & Small Businesses | Pixeloria',
     description:
-      'Professional website redesign for contractors and small businesses. Modern design, local SEO, responsive. Starter Website redesigns from $499, delivered within 5 business days.',
+      `Professional website redesign for contractors and small businesses. Modern design, local SEO, responsive. Starter Website redesigns from ${OFFERS_US.starter.price}, delivered within 5 business days.`,
     locale: 'en_US',
     siteName: 'Pixeloria',
   },
@@ -92,7 +93,7 @@ export default function WebsiteRedesignPage() {
               <p className="page-hero-sub">
                 Is your current site not generating enough leads, or giving an unprofessional
                 impression? Pixeloria redesigns your site to make it modern, fast, mobile-friendly
-                and optimized for local SEO. Website redesigns start at $499, delivered within
+                and optimized for local SEO. Website redesigns start at {OFFERS_US.starter.price}, delivered within
                 5 business days.
               </p>
               <div className="page-hero-actions">
@@ -200,7 +201,7 @@ export default function WebsiteRedesignPage() {
               <span className="eyebrow">Pricing</span>
               <h2>A simple offer to redesign your website</h2>
               <p className="section-sub">
-                A redesign starting at $499, one-time payment. An optional monthly plan to
+                A redesign starting at {OFFERS_US.starter.price}, one-time payment. An optional monthly plan to
                 keep your site updated and locally visible.
               </p>
             </div>
@@ -208,7 +209,7 @@ export default function WebsiteRedesignPage() {
               <div className="pricing-card pricing-card--featured">
                 <span className="pricing-badge">Main offer</span>
                 <p className="pricing-label">Starter Website</p>
-                <p className="pricing-price">$499</p>
+                <p className="pricing-price">{OFFERS_US.starter.price}</p>
                 <p className="pricing-sublabel">One-time payment — delivered within 5 business days</p>
                 <ul>
                   <li>One-page site redesign, up to 6 sections</li>
@@ -221,7 +222,7 @@ export default function WebsiteRedesignPage() {
               </div>
               <div className="pricing-card">
                 <p className="pricing-label">Website Care &amp; Local Visibility</p>
-                <p className="pricing-price">$79 <span>/month</span></p>
+                <p className="pricing-price">{OFFERS_US.care.price} <span>{OFFERS_US.care.suffix}</span></p>
                 <p className="pricing-sublabel">Hosting, maintenance and local SEO included</p>
                 <ul>
                   <li>Hosting management &amp; security updates</li>

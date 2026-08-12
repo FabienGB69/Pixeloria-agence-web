@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { OFFERS_US } from '@/lib/pricing-us';
 import { breadcrumbList } from '@/lib/breadcrumb';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
@@ -7,7 +8,7 @@ import Footer from '@/components/layout/Footer';
 export const metadata: Metadata = {
   title: 'How Much Does a Contractor Website Cost? | Pixeloria',
   description:
-    'Pixeloria contractor websites start at $499 one-time, with a $899 option and a $79/month care plan. Here is what actually drives contractor website costs up or down.',
+    `Pixeloria contractor websites start at ${OFFERS_US.starter.price} one-time, with a ${OFFERS_US.growth.price} option and a ${OFFERS_US.care.price}/month care plan. Here is what actually drives contractor website costs up or down.`,
   alternates: {
     canonical: 'https://pixeloria.fr/en/resources/contractor-website-cost',
   },
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     url: 'https://pixeloria.fr/en/resources/contractor-website-cost',
     title: 'How Much Does a Contractor Website Cost? | Pixeloria',
     description:
-      'Pixeloria contractor websites start at $499 one-time, with a $899 option and a $79/month care plan. Here is what actually drives contractor website costs up or down.',
+      `Pixeloria contractor websites start at ${OFFERS_US.starter.price} one-time, with a ${OFFERS_US.growth.price} option and a ${OFFERS_US.care.price}/month care plan. Here is what actually drives contractor website costs up or down.`,
     locale: 'en_US',
     siteName: 'Pixeloria',
   },
@@ -24,8 +25,8 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    q: 'Is $499 a realistic price for a contractor website?',
-    a: 'It is realistic for a focused, one-page website covering your services, service area, reviews and a contact form. The Pixeloria Starter Website at $499 one-time is built to that scope. Larger, multi-page websites with individual service pages cost more because there is simply more to design and build.',
+    q: `Is ${OFFERS_US.starter.price} a realistic price for a contractor website?`,
+    a: `It is realistic for a focused, one-page website covering your services, service area, reviews and a contact form. The Pixeloria Starter Website at ${OFFERS_US.starter.price} one-time is built to that scope. Larger, multi-page websites with individual service pages cost more because there is simply more to design and build.`,
   },
   {
     q: 'Why do some contractor websites cost so much more than others?',
@@ -33,10 +34,10 @@ const faqs = [
   },
   {
     q: 'Do I have to pay a monthly fee to have a contractor website?',
-    a: 'No. The Pixeloria one-time packages ($499 or $899) get your website live without any required subscription. The $79/month Website Care & Local Visibility plan is optional and covers hosting, maintenance, content edits and ongoing local visibility support — you can cancel anytime.',
+    a: `No. The Pixeloria one-time packages (${OFFERS_US.starter.price} or ${OFFERS_US.growth.price}) get your website live without any required subscription. The ${OFFERS_US.care.price}/month Website Care & Local Visibility plan is optional and covers hosting, maintenance, content edits and ongoing local visibility support — you can cancel anytime.`,
   },
   {
-    q: 'What is included in the $79/month plan?',
+    q: `What is included in the ${OFFERS_US.care.price}/month plan?`,
     a: 'It covers hosting management, security updates, backups, content edits and basic local visibility support, so your site stays online and up to date without you having to manage it yourself.',
   },
 ];
@@ -79,9 +80,9 @@ export default function ContractorWebsiteCostPage() {
               <span className="eyebrow">Pricing</span>
               <h1>How Much Does a Contractor Website Cost?</h1>
               <p className="page-hero-sub">
-                At Pixeloria, a contractor website costs $499 one-time for a focused one-page
-                site, $899 one-time for a multi-page site with individual service pages, plus an
-                optional $79/month plan for ongoing care and local visibility support. Actual
+                At Pixeloria, a contractor website costs {OFFERS_US.starter.price} one-time for a focused one-page
+                site, {OFFERS_US.growth.price} one-time for a multi-page site with individual service pages, plus an
+                optional {OFFERS_US.care.price}/month plan for ongoing care and local visibility support. Actual
                 costs across the industry vary based on scope — here is what drives that.
               </p>
               <div className="article-byline">
@@ -120,9 +121,9 @@ export default function ContractorWebsiteCostPage() {
                 Pixeloria offers two one-time website packages and one optional monthly plan:
               </p>
               <ul>
-                <li><strong>Starter Website — $499 one-time.</strong> A focused one-page website with mobile-first design, a click-to-call button and a short estimate form.</li>
-                <li><strong>Growth Website — $899 one-time (Most Popular).</strong> A multi-page website with individual service pages, a service-area structure, customer reviews and basic technical SEO.</li>
-                <li><strong>Website Care &amp; Local Visibility — $79/month.</strong> An optional add-on covering hosting, maintenance, content edits and local visibility support. Cancel anytime.</li>
+                <li><strong>Starter Website — {OFFERS_US.starter.price} one-time.</strong> A focused one-page website with mobile-first design, a click-to-call button and a short estimate form.</li>
+                <li><strong>Growth Website — {OFFERS_US.growth.price} one-time (Most Popular).</strong> A multi-page website with individual service pages, a service-area structure, customer reviews and basic technical SEO.</li>
+                <li><strong>Website Care &amp; Local Visibility — {OFFERS_US.care.price}/month.</strong> An optional add-on covering hosting, maintenance, content edits and local visibility support. Cancel anytime.</li>
               </ul>
               <p>
                 See the full{' '}
@@ -149,8 +150,8 @@ export default function ContractorWebsiteCostPage() {
               <h2 id="one-time-vs-ongoing">One-time cost vs ongoing cost</h2>
               <p>
                 It helps to separate the cost of launching a website from the cost of keeping it
-                running. The one-time cost covers design, build and launch — this is the $499 or
-                $899 payment with Pixeloria. The ongoing cost covers hosting, security updates,
+                running. The one-time cost covers design, build and launch — this is the {OFFERS_US.starter.price} or
+                {OFFERS_US.growth.price} payment with Pixeloria. The ongoing cost covers hosting, security updates,
                 backups and any content changes after launch. Some agencies bundle this into a
                 required monthly contract; Pixeloria keeps it optional and cancel-anytime, so you
                 are not locked into ongoing payments to keep the site you already paid for.

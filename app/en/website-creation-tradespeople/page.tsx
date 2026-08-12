@@ -8,7 +8,7 @@ import Footer from '@/components/layout/Footer';
 export const metadata: Metadata = {
   title: 'Website Creation for Contractors & Tradespeople | Pixeloria',
   description:
-    'Pixeloria builds professional websites for builders, plumbers, electricians, painters, joiners and other contractors. Responsive design, basic local SEO. Starter Website at $499, live 5 business days after we receive your content.',
+    `Pixeloria builds professional websites for builders, plumbers, electricians, painters, joiners and other contractors. Responsive design, basic local SEO. Starter Website at ${OFFERS_US.starter.price}, live 5 business days after we receive your content.`,
   alternates: {
     canonical: 'https://pixeloria.fr/en/website-creation-tradespeople',
     languages: hreflangLanguages('/en/website-creation-tradespeople'),
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: 'https://pixeloria.fr/en/website-creation-tradespeople',
     title: 'Website Creation for Contractors & Tradespeople | Pixeloria',
     description:
-      'A professional website for contractors. Responsive, local SEO, estimate request form. Starter Website at $499, live 5 business days after we receive your content.',
+      `A professional website for contractors. Responsive, local SEO, estimate request form. Starter Website at ${OFFERS_US.starter.price}, live 5 business days after we receive your content.`,
     locale: 'en_GB',
     siteName: 'Pixeloria',
   },
@@ -88,7 +88,7 @@ export default function WebsiteCreationTradespeoplePage() {
               <p className="page-hero-sub">
                 A professional website, built mobile-first and optimized to be found by your
                 local customers. Estimate request form, click-to-call button, project gallery.
-                Starter Website at $499, live 5 business days after we receive your content. Add Website Care & Local Visibility at $79/month.
+                Starter Website at {OFFERS_US.starter.price}, live 5 business days after we receive your content. Add Website Care & Local Visibility at {OFFERS_US.care.price}/month.
               </p>
               <div className="page-hero-actions">
                 <Link href="/en#contact" className="btn btn-primary">
@@ -186,7 +186,7 @@ export default function WebsiteCreationTradespeoplePage() {
               <div className="pricing-card pricing-card--featured">
                 <span className="pricing-badge">Main offer</span>
                 <p className="pricing-label">Starter Website</p>
-                <p className="pricing-price">$499 <span>one-time</span></p>
+                <p className="pricing-price">{OFFERS_US.starter.price} <span>{OFFERS_US.starter.suffix}</span></p>
                 <p className="pricing-sublabel">One-time payment — live 5 business days after we receive your content</p>
                 <ul>
                   <li>One-page contractor website</li>
@@ -200,7 +200,7 @@ export default function WebsiteCreationTradespeoplePage() {
               </div>
               <div className="pricing-card">
                 <p className="pricing-label">Website Care &amp; Local Visibility</p>
-                <p className="pricing-price">$79 <span>/month</span></p>
+                <p className="pricing-price">{OFFERS_US.care.price} <span>{OFFERS_US.care.suffix}</span></p>
                 <p className="pricing-sublabel">Add-on to your Starter Website</p>
                 <ul>
                   <li>Hosting management</li>

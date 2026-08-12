@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { OFFERS_US } from '@/lib/pricing-us';
 import Link from 'next/link';
 import { breadcrumbList } from '@/lib/breadcrumb';
 import HeaderEn from '@/components/layout/HeaderEn';
@@ -90,7 +91,7 @@ const faqs = [
   },
   {
     q: 'How much does a contractor website cost?',
-    a: 'Pixeloria contractor websites start at $499 for a one-page website. Multi-page websites with individual service pages start at $899. See our pricing page for full details.',
+    a: `Pixeloria contractor websites start at ${OFFERS_US.starter.price} for a one-page website. Multi-page websites with individual service pages start at ${OFFERS_US.growth.price}. See our pricing page for full details.`,
   },
   {
     q: 'How long does it take to build a website?',
@@ -359,7 +360,7 @@ export default function ContractorWebsitesGeorgiaPage() {
             <div className="pricing-cards pricing-cards--three">
               <div className="pricing-card">
                 <p className="pricing-label">Starter Website</p>
-                <p className="pricing-price">$499 <span>one-time</span></p>
+                <p className="pricing-price">{OFFERS_US.starter.price} <span>{OFFERS_US.starter.suffix}</span></p>
                 <p className="pricing-sublabel">A focused one-page contractor website</p>
                 <ul>
                   <li>One-page website</li>
@@ -372,7 +373,7 @@ export default function ContractorWebsitesGeorgiaPage() {
               <div className="pricing-card pricing-card--featured">
                 <span className="pricing-badge">Most Popular</span>
                 <p className="pricing-label">Growth Website</p>
-                <p className="pricing-price">$899 <span>one-time</span></p>
+                <p className="pricing-price">{OFFERS_US.growth.price} <span>{OFFERS_US.growth.suffix}</span></p>
                 <p className="pricing-sublabel">A multi-page website with individual service pages</p>
                 <ul>
                   <li>Multiple service pages</li>
@@ -385,7 +386,7 @@ export default function ContractorWebsitesGeorgiaPage() {
               </div>
               <div className="pricing-card">
                 <p className="pricing-label">Website Care & Local Visibility</p>
-                <p className="pricing-price">$79 <span>/month</span></p>
+                <p className="pricing-price">{OFFERS_US.care.price} <span>{OFFERS_US.care.suffix}</span></p>
                 <p className="pricing-sublabel">Ongoing maintenance and local visibility support</p>
                 <ul>
                   <li>Hosting and maintenance</li>

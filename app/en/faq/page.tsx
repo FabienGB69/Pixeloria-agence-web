@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { OFFERS_US } from '@/lib/pricing-us';
 import { hreflangLanguages } from '@/lib/hreflang';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: 'How much does a website cost?',
-    a: 'Pixeloria websites start at $499 for a one-page site. Multi-page websites start at $899. Ongoing website care starts at $79/month.',
+    a: `Pixeloria websites start at ${OFFERS_US.starter.price} for a one-page site. Multi-page websites start at ${OFFERS_US.growth.price}. Ongoing website care starts at ${OFFERS_US.care.price}/month.`,
   },
   {
     q: 'Do I own my website?',
@@ -38,7 +39,7 @@ const faqs = [
     a: 'No. Anyone who promises a #1 ranking is not being honest with you. What Pixeloria delivers is a clean, well-structured, fast website built on sound SEO foundations — the kind Google rewards over time.',
   },
   {
-    q: 'What is included in the Website Care & Local Visibility plan ($79/month)?',
+    q: `What is included in the Website Care & Local Visibility plan (${OFFERS_US.care.price}/month)?`,
     a: 'Website Care & Local Visibility includes hosting management, technical maintenance, security updates, backups, content edits, service-area updates, conversion checks, basic local SEO improvements and Search Console monitoring, plus a monthly performance summary. Cancel anytime.',
   },
   {
@@ -51,7 +52,7 @@ const faqs = [
   },
   {
     q: 'What is the difference between a one-time website and ongoing website care?',
-    a: 'A one-time website (Starter from $499, Growth from $899) is a one-time payment — your site goes live with no subscription required. Website Care & Local Visibility ($79/month) is an optional plan that keeps your site updated, secure and locally optimized over time. Cancel anytime.',
+    a: `A one-time website (Starter from ${OFFERS_US.starter.price}, Growth from ${OFFERS_US.growth.price}) is a one-time payment — your site goes live with no subscription required. Website Care & Local Visibility (${OFFERS_US.care.price}/month) is an optional plan that keeps your site updated, secure and locally optimized over time. Cancel anytime.`,
   },
   {
     q: 'Is a free audit really free?',

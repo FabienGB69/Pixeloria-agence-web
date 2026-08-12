@@ -4,6 +4,13 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/JsonLd';
 import CaseStudyImage from '@/components/ui/CaseStudyImage';
+import { breadcrumbList } from '@/lib/breadcrumb';
+
+const breadcrumbSchema = breadcrumbList([
+  { name: 'Accueil', url: 'https://pixeloria.fr/' },
+  { name: 'Réalisations', url: 'https://pixeloria.fr/realisations' },
+  { name: 'Escalee & Goûts', url: 'https://pixeloria.fr/realisations/escalee-gouts' },
+]);
 
 export const metadata: Metadata = {
   title: 'Refonte site internet conciergerie tourisme | Étude de cas Pixeloria',
@@ -26,6 +33,7 @@ export const metadata: Metadata = {
 export default function EscaleeGoutsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <JsonLd />
       <Header />
 

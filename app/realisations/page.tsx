@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/JsonLd';
+import { breadcrumbList } from '@/lib/breadcrumb';
 
 export const metadata: Metadata = {
   title: 'Études de cas client — transformations réalisées par Pixeloria | Pixeloria',
@@ -150,9 +151,15 @@ const etudes: Etude[] = [
   },
 ];
 
+const breadcrumbSchema = breadcrumbList([
+  { name: 'Accueil', url: 'https://pixeloria.fr/' },
+  { name: 'Réalisations', url: 'https://pixeloria.fr/realisations' },
+]);
+
 export default function RealisationsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <JsonLd />
       <Header />
       <main>

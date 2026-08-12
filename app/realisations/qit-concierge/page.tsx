@@ -3,6 +3,13 @@ import Link from 'next/link';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/JsonLd';
+import { breadcrumbList } from '@/lib/breadcrumb';
+
+const breadcrumbSchema = breadcrumbList([
+  { name: 'Accueil', url: 'https://pixeloria.fr/' },
+  { name: 'Réalisations', url: 'https://pixeloria.fr/realisations' },
+  { name: 'Qit Concierge', url: 'https://pixeloria.fr/realisations/qit-concierge' },
+]);
 
 export const metadata: Metadata = {
   title: 'Qit Concierge — Création de site internet par Pixeloria',
@@ -25,6 +32,7 @@ export const metadata: Metadata = {
 export default function QitConciergePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <JsonLd />
       <Header />
       <main>
