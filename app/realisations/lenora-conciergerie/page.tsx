@@ -252,7 +252,7 @@ export default function LenoraConciergeriePage() {
                 Demander un audit gratuit
               </Link>
               <p className="page-cta-note">
-                07 86 12 53 13 · contact@pixeloria.fr
+                06 01 77 76 33 · contact@pixeloria.fr
               </p>
             </div>
           </div>

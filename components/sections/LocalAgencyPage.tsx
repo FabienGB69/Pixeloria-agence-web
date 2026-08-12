@@ -66,7 +66,7 @@ export default function LocalAgencyPage({ data, locale = 'fr' }: Props) {
     url: `https://pixeloria.fr/${data.slug}`,
     logo: 'https://pixeloria.fr/assets/pixeloria-logo.svg',
     image: 'https://pixeloria.fr/assets/pixeloria-logo.svg',
-    telephone: '+33786125313',
+    telephone: '+33601777633',
     email: 'contact@pixeloria.fr',
     address: {
       '@type': 'PostalAddress',

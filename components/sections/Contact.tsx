@@ -14,7 +14,7 @@ export default function Contact() {
             </p>
 
             <div className="contact-channels">
-              <a href="tel:+33786125313" className="channel-item">
+              <a href="tel:+33601777633" className="channel-item">
                 <div className="channel-icon">
                   <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
                     <path d="M6 3h4l2 5-2.5 1.5a11 11 0 0 0 5 5L16 12l5 2v4a2 2 0 0 1-2 2C7.3 20 4 12.7 4 5a2 2 0 0 1 2-2Z" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
@@ -40,7 +40,7 @@ export default function Contact() {
               </a>
 
               <a
-                href="https://wa.me/33786125313"
+                href="https://wa.me/33601777633"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="channel-item"

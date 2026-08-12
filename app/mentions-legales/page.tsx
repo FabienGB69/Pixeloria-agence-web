@@ -33,7 +33,7 @@ export default function MentionsLegalesPage() {
             Inscription au RNE : 15/01/2015<br />
             Numéro de TVA intracommunautaire : FR44798262416<br />
             Email : <a href="mailto:contact@pixeloria.fr?subject=Demande%20de%20devis%20%E2%80%94%20Pixeloria&body=Bonjour%2C%0A%0AJe%20souhaite%20obtenir%20un%20devis%20pour%20mon%20projet%20web.%0A%0ACordialement%2C">contact@pixeloria.fr</a><br />
-            Téléphone : <a href="tel:+33786125313">07 86 12 53 13</a>
+            Téléphone : <a href="tel:+33601777633">06 01 77 76 33</a>
           </p>
 
           <h2>2. Hébergement</h2>
