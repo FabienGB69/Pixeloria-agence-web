@@ -1,6 +1,6 @@
 # Progress — Pixeloria
 
-> Suivi de l'avancement du projet. Mis à jour le 2026-08-09.
+> Suivi de l'avancement du projet. Mis à jour le 2026-08-12.
 
 ## Fait ✅
 
@@ -114,20 +114,24 @@
 - [x] #163 — `TunnelForm` : defaults `visiteurs`/`leads` à 0 au lieu de 5000/2
 - [x] #164 — Pipeline testimonials Notion → site : `getPublishedTestimonials()` + `Testimonials.tsx` en Server Component async, fallback si Notion indisponible
 - [x] #148 — Fermée : `LocalBusiness` JSON-LD déjà présent sur les 16 pages géo (audit initial obsolète), `sameAs` ajouté en bonus
-- [x] #145 — Home FR enrichie : `Services` + `Process` + `WhyPixeloria` ajoutés entre Hero et GoogleReviews
-- [x] #146 — `lib/pricing-us.ts` créé, câblé sur les JSON-LD `Offer` + `/en/pricing` (partiel — ~20 fichiers de prose restants)
-- [x] #149 — `lib/breadcrumb.ts` créé, `BreadcrumbList` JSON-LD ajouté sur les 5 pages états + `/en/resources` + 3 articles + `/en/contractor-websites`
-- [ ] #150 — CSP nonces — volontairement non traité (trop risqué pour ce lot, à faire en `Report-Only` d'abord)
-- [ ] #162 — Dédup ContactForm/TestimonialForm FR/EN — volontairement non traité (mérite sa propre session avec tests e2e)
+- [x] #149 — `lib/breadcrumb.ts` créé, `BreadcrumbList` JSON-LD sur les 5 pages états + `/en/resources` (index + 3 articles) + `/en/contractor-websites` + `/realisations` (index + 4 études) + `/en/case-studies`. Test unitaire `tests/unit/breadcrumb.test.ts` ajouté.
+
+### Clôture du backlog 2026-08-09 (PR #167, #168, #169, mergées 2026-08-12)
+- [x] #145 — Fermée : Home FR complète (`Services` + `GoogleReviews` + `WhyPixeloria` + `Process` + `Testimonials` + `AuditGratuit` entre Hero et Contact). Bug a11y préexistant découvert et corrigé au passage (`Testimonials.tsx` : `aria-label` sans `role` sur les étoiles de notation).
+- [x] #146 — Fermée : `lib/pricing-us.ts` câblé sur les ~25 fichiers `app/en/**` restants (sectorielles, states, offers, faq, local-seo, resources). Plus aucun `$499`/`$899`/`$79` en dur dans `app/en/**`.
+- [x] #162 — Partielle, fermée avec état documenté : `TestimonialForm`/`TestimonialFormEn` fusionnés en un seul composant piloté par `locale` (`components/forms/TestimonialForm.tsx`, `TestimonialFormEn.tsx` supprimé). `useTurnstileToken.ts` extrait et partagé par `ContactForm`, `ContactFormEn`, `TunnelForm`. `ContactForm`/`ContactFormEn` **non fusionnés** — vraies divergences fonctionnelles (champ Company EN-only, tél requis FR/optionnel EN, a11y dynamique manquante EN, comportement différent sur échec réseau) nécessitant une décision produit.
+- [ ] #150 — CSP nonces — réévalué avec chemin technique précis documenté (extension `middleware.ts` à toutes les routes + `nonce={}` sur 50+ scripts JSON-LD inline), toujours volontairement non traité : besoin d'un déploiement `Report-Only` pour valider sans risque.
+- [ ] #155 — Partielle, reste ouverte : vocabulaire parrainage EN aligné, mention "inc. VAT" retirée. Reste EUR (c'est la devise réelle Stripe) — décision produit en attente sur un vrai programme parrainage USD.
+- [ ] #161 — Partielle, reste ouverte : téléphone FR retiré des 4 pages réellement ciblées marché US. Décision produit en attente sur l'entité US formelle.
 
 ## En attente / À faire 🔲
 
 - [ ] **P1 SÉCURITÉ** — Next.js ^14.2.29 → 15.5.21 (7 CVEs HIGH, dont SSRF CVSS 8.6)
 - [ ] **P1 SÉCURITÉ** — sharp ^0.34.5 → 0.35.0 (GHSA-f88m-g3jw-g9cj, 4 CVE libvips)
-- [ ] #146 (suite) — ~20 fichiers `app/en/**` avec `$499`/`$899`/`$79` encore en dur dans du texte de prose
-- [ ] #150 — CSP nonces au lieu de `unsafe-inline`
-- [ ] #162 — Dédupliquer ContactForm/TestimonialForm FR/EN
-- [ ] Décision produit : entité US formelle (LocalBusiness/GBP) ou "remote-only Organization"
-- [ ] Décision produit : programme de parrainage en USD pour le catalogue contractors US, ou rester EUR-only
+- [ ] #150 — CSP nonces au lieu de `unsafe-inline` (déployer en `Report-Only` d'abord)
+- [ ] #162 (suite) — Fusionner `ContactForm`/`ContactFormEn`, conditionné aux décisions produit ci-dessous
+- [ ] Décision produit : entité US formelle (LocalBusiness/GBP) ou "remote-only Organization" (bloque #161)
+- [ ] Décision produit : programme de parrainage en USD pour le catalogue contractors US, ou rester EUR-only (bloque #155)
+- [ ] Décision produit : téléphone requis ou optionnel sur ContactForm FR, champ "Company" à ajouter en FR ? (bloque #162)
 - [ ] Brancher une source analytics live (GSC/Vercel Analytics) à la chaîne AutoPilot
 - [ ] Env vars Vercel (`NOTION_TOKEN`, `NOTION_DB_ID`) — à reconfirmer en prod
