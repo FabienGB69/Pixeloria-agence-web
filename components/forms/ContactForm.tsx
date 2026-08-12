@@ -66,8 +66,11 @@ export default function ContactForm() {
         setFormState({ loading: false, success: false, error: errMsg });
       }
     } catch {
-      // API absent (dev local) — afficher succès UX
-      setFormState({ loading: false, success: true, error: null });
+      setFormState({
+        loading: false,
+        success: false,
+        error: 'Erreur de connexion. Réessayez ou contactez-nous directement.',
+      });
     }
   };
 
