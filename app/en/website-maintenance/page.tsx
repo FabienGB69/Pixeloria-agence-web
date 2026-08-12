@@ -8,7 +8,7 @@ import Footer from '@/components/layout/Footer';
 export const metadata: Metadata = {
   title: 'Website Maintenance for Tradespeople & Small Businesses | Pixeloria',
   description:
-    'Pixeloria handles your website maintenance: hosting, security updates, backups and content updates. Website Care & Local Visibility from $79/month.',
+    `Pixeloria handles your website maintenance: hosting, security updates, backups and content updates. Website Care & Local Visibility from ${OFFERS_US.care.price}/month.`,
   alternates: {
     canonical: 'https://pixeloria.fr/en/website-maintenance',
     languages: hreflangLanguages('/en/website-maintenance'),
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: 'https://pixeloria.fr/en/website-maintenance',
     title: 'Website Maintenance for Tradespeople & Small Businesses | Pixeloria',
     description:
-      'Website maintenance: hosting, security updates, backups and monthly reporting. Website Care & Local Visibility from $79/month.',
+      `Website maintenance: hosting, security updates, backups and monthly reporting. Website Care & Local Visibility from ${OFFERS_US.care.price}/month.`,
     locale: 'en_US',
     siteName: 'Pixeloria',
   },
@@ -210,7 +210,7 @@ export default function WebsiteMaintenancePage() {
               <div className="pricing-card pricing-card--featured">
                 <span className="pricing-badge">Monthly option</span>
                 <p className="pricing-label">Website Care &amp; Local Visibility</p>
-                <p className="pricing-price">$79 <span>/month</span></p>
+                <p className="pricing-price">{OFFERS_US.care.price} <span>{OFFERS_US.care.suffix}</span></p>
                 <p className="pricing-sublabel">Hosting, maintenance and local SEO included</p>
                 <ul>
                   <li>Hosting management included</li>

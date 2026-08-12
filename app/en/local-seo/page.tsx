@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { OFFERS_US } from '@/lib/pricing-us';
 import Link from 'next/link';
 import { hreflangLanguages } from '@/lib/hreflang';
 import HeaderEn from '@/components/layout/HeaderEn';
@@ -202,7 +203,7 @@ export default function LocalSeoEnPage() {
               <div className="pricing-card pricing-card--featured">
                 <span className="pricing-badge">Main offer</span>
                 <span className="pricing-label">Starter Website</span>
-                <div className="pricing-price">$499</div>
+                <div className="pricing-price">{OFFERS_US.starter.price}</div>
                 <p className="pricing-sublabel">One-time payment — delivered within 5 business days</p>
                 <ul>
                   <li>One-page website, up to 6 sections</li>
@@ -216,7 +217,7 @@ export default function LocalSeoEnPage() {
               </div>
               <div className="pricing-card">
                 <span className="pricing-label">Website Care &amp; Local Visibility</span>
-                <div className="pricing-price">$79 <span>/month</span></div>
+                <div className="pricing-price">{OFFERS_US.care.price} <span>{OFFERS_US.care.suffix}</span></div>
                 <p className="pricing-sublabel">Maintenance, updates and local SEO included</p>
                 <ul>
                   <li>Google Business Profile optimization</li>

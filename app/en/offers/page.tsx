@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { OFFERS_US } from '@/lib/pricing-us';
 import Link from 'next/link';
 import { hreflangLanguages } from '@/lib/hreflang';
 import HeaderEn from '@/components/layout/HeaderEn';
@@ -10,14 +11,14 @@ import TrackOnMount from '@/components/analytics/TrackOnMount';
 export const metadata: Metadata = {
   title: 'Website Offers — Starter, Growth & Care Plans | Pixeloria',
   description:
-    'Starter Website at $499, Growth Website at $899, and Website Care & Local Visibility at $79/month. Transparent pricing for contractors and local service businesses.',
+    `Starter Website at ${OFFERS_US.starter.price}, Growth Website at ${OFFERS_US.growth.price}, and Website Care & Local Visibility at ${OFFERS_US.care.price}/month. Transparent pricing for contractors and local service businesses.`,
   openGraph: {
     type: 'website',
     url: 'https://pixeloria.fr/en/offers',
     locale: 'en_GB',
     siteName: 'Pixeloria',
     title: 'Website Offers — Starter, Growth & Care Plans | Pixeloria',
-    description: 'Website plans for contractors and local service businesses: Starter Website $499, Growth Website $899, Website Care & Local Visibility $79/month.',
+    description: `Website plans for contractors and local service businesses: Starter Website ${OFFERS_US.starter.price}, Growth Website ${OFFERS_US.growth.price}, Website Care & Local Visibility ${OFFERS_US.care.price}/month.`,
   },
   alternates: { canonical: 'https://pixeloria.fr/en/offers', languages: hreflangLanguages('/en/offers') },
 };
@@ -95,7 +96,7 @@ export default function OffersEnPage() {
             <div className="pricing-cards pricing-cards--three">
               <div className="pricing-card">
                 <p className="pricing-label">Starter Website</p>
-                <p className="pricing-price">$499 <span>one-time</span></p>
+                <p className="pricing-price">{OFFERS_US.starter.price} <span>{OFFERS_US.starter.suffix}</span></p>
                 <p className="pricing-sublabel">One-time payment — live 5 business days after we receive your content</p>
                 <p className="pricing-accroche">
                   A one-page website built to turn visitors into estimate requests and phone calls.
@@ -122,7 +123,7 @@ export default function OffersEnPage() {
               <div className="pricing-card pricing-card--featured">
                 <span className="pricing-badge">Most Popular</span>
                 <p className="pricing-label">Growth Website</p>
-                <p className="pricing-price">$899 <span>one-time</span></p>
+                <p className="pricing-price">{OFFERS_US.growth.price} <span>{OFFERS_US.growth.suffix}</span></p>
                 <p className="pricing-sublabel">One-time payment — live in 1–3 weeks depending on scope</p>
                 <p className="pricing-accroche">
                   A multi-page website built for contractors and home-service businesses who want a stronger local search presence.
@@ -149,7 +150,7 @@ export default function OffersEnPage() {
 
               <div className="pricing-card">
                 <p className="pricing-label">Website Care &amp; Local Visibility</p>
-                <p className="pricing-price">$79 <span>/month</span></p>
+                <p className="pricing-price">{OFFERS_US.care.price} <span>{OFFERS_US.care.suffix}</span></p>
                 <p className="pricing-sublabel">Add-on to either website</p>
                 <p className="pricing-accroche">
                   Your site stays online, secure and up to date, with ongoing local SEO support.
@@ -196,8 +197,8 @@ export default function OffersEnPage() {
                 <thead>
                   <tr>
                     <th className="ctable-feature-col">Feature</th>
-                    <th>Starter Website<br /><span className="ctable-price">$499 one-time</span></th>
-                    <th className="ctable-th--highlight">Growth Website<br /><span className="ctable-price">$899 one-time</span></th>
+                    <th>Starter Website<br /><span className="ctable-price">{OFFERS_US.starter.price} {OFFERS_US.starter.suffix}</span></th>
+                    <th className="ctable-th--highlight">Growth Website<br /><span className="ctable-price">{OFFERS_US.growth.price} {OFFERS_US.growth.suffix}</span></th>
                   </tr>
                 </thead>
                 <tbody>
