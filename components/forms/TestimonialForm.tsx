@@ -1,6 +1,8 @@
 'use client';
 
 import { Fragment, useState } from 'react';
+import TurnstileWidget from '@/components/forms/TurnstileWidget';
+import { useTurnstileToken } from '@/components/forms/useTurnstileToken';
 
 interface FormState {
   loading: boolean;
@@ -68,6 +70,7 @@ export default function TestimonialForm({ locale = 'fr' }: { locale?: 'fr' | 'en
     prenom: '',
     error: null,
   });
+  const { turnstileToken, onTurnstileVerify, onTurnstileExpire } = useTurnstileToken();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -82,6 +85,7 @@ export default function TestimonialForm({ locale = 'fr' }: { locale?: 'fr' | 'en
       note: raw.note,
       accord: raw[f.accord],
       _hp: raw._hp,
+      _turnstile: turnstileToken,
       ...(locale === 'en' ? { _lang: 'en' } : {}),
     };
 
@@ -218,6 +222,8 @@ export default function TestimonialForm({ locale = 'fr' }: { locale?: 'fr' | 'en
         <input type="checkbox" name={f.accord} value="true" required />
         {t.accordLabel}
       </label>
+
+      <TurnstileWidget onVerify={onTurnstileVerify} onExpire={onTurnstileExpire} />
 
       <button
         type="submit"
