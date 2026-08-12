@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
-import { checkRateLimit, isHoneypot } from '@/lib/security';
+import { checkRateLimit, isHoneypot, verifyTurnstile } from '@/lib/security';
 import { Resend } from 'resend';
 import { createTestimonial } from '@/lib/notion';
 import { escapeHtml } from '@/lib/html';
@@ -110,7 +110,16 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     return NextResponse.json({ success: true }, { status: 200 });
   }
 
-  // 4. Validate with Zod
+  // 4. Cloudflare Turnstile (skip si CLOUDFLARE_TURNSTILE_SECRET_KEY absent)
+  const turnstileValid = await verifyTurnstile(rawBody['_turnstile'] as string | undefined);
+  if (!turnstileValid) {
+    return NextResponse.json(
+      { error: 'Vérification de sécurité échouée. Rechargez la page et réessayez.' },
+      { status: 403 },
+    );
+  }
+
+  // 5. Validate with Zod
   const parsed = TestimonialSchema.safeParse(rawBody);
   if (!parsed.success) {
     const firstError = parsed.error.errors[0]?.message ?? 'Données invalides';
@@ -119,7 +128,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
 
   const { prenom, activite, ville, avis, note, _lang } = parsed.data;
 
-  // 5. Save to Notion (before email — fail open if env var absent)
+  // 6. Save to Notion (before email — fail open if env var absent)
   try {
     await createTestimonial({ prenom, activite, ville, avis, note, lang: _lang });
   } catch (err) {
@@ -132,7 +141,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     // Fail open: do not block the submission
   }
 
-  // 6. Send email via Resend
+  // 7. Send email via Resend
   const resendKey = process.env.RESEND_API_KEY;
   if (resendKey) {
     try {
