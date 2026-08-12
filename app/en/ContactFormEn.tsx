@@ -20,6 +20,20 @@ export default function ContactFormEn() {
   const { turnstileToken, onTurnstileVerify, onTurnstileExpire } = useTurnstileToken();
   const formRef = useRef<HTMLFormElement>(null);
 
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const field = e.currentTarget;
+    if (field.hasAttribute('required') || field.value) {
+      field.setAttribute('aria-invalid', String(!field.checkValidity()));
+    }
+  };
+
+  const handleInput = (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const field = e.currentTarget;
+    if (field.getAttribute('aria-invalid') === 'true') {
+      field.setAttribute('aria-invalid', String(!field.checkValidity()));
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
@@ -104,6 +118,8 @@ export default function ContactFormEn() {
             placeholder="Your name"
             required
             autoComplete="name"
+            onBlur={handleBlur}
+            onInput={handleInput}
           />
         </label>
         <label className="form-label">
@@ -116,6 +132,8 @@ export default function ContactFormEn() {
             className="form-input"
             placeholder="Your business name"
             autoComplete="organization"
+            onBlur={handleBlur}
+            onInput={handleInput}
           />
         </label>
       </div>
@@ -130,6 +148,8 @@ export default function ContactFormEn() {
             placeholder="your@email.com"
             required
             autoComplete="email"
+            onBlur={handleBlur}
+            onInput={handleInput}
           />
         </label>
         <label className="form-label">
@@ -142,6 +162,8 @@ export default function ContactFormEn() {
             className="form-input"
             placeholder="+44 7700 900000"
             autoComplete="tel"
+            onBlur={handleBlur}
+            onInput={handleInput}
           />
         </label>
       </div>
@@ -149,7 +171,7 @@ export default function ContactFormEn() {
       <label className="form-label">
         <span>Project type *</span>
         <div className="select-wrap">
-          <select name="offre" required defaultValue="">
+          <select name="offre" required defaultValue="" onBlur={handleBlur} onChange={handleInput}>
             <option value="" disabled>
               Select your need…
             </option>
@@ -185,6 +207,8 @@ export default function ContactFormEn() {
           rows={5}
           placeholder="Describe your business, your goals and what you're looking for in a website…"
           required
+          onBlur={handleBlur}
+          onInput={handleInput}
         />
       </label>
 
