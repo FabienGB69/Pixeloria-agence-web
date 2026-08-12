@@ -61,7 +61,7 @@ export default function MaintenanceSiteWebPage() {
       '@type': 'ProfessionalService',
       name: 'Pixeloria',
       url: 'https://pixeloria.fr',
-      telephone: '+33786125313',
+      telephone: '+33601777633',
       email: 'contact@pixeloria.fr',
     },
     description: 'Maintenance de site internet pour artisans et TPE : mises à jour, sécurité, hébergement, sauvegardes et support WhatsApp.',
@@ -251,7 +251,7 @@ export default function MaintenanceSiteWebPage() {
                 </svg>
               </Link>
               <p className="page-cta-note">
-                <a href="tel:+33786125313">07 86 12 53 13</a>
+                <a href="tel:+33601777633">06 01 77 76 33</a>
                 {' · '}
                 <a href="mailto:contact@pixeloria.fr">contact@pixeloria.fr</a>
               </p>

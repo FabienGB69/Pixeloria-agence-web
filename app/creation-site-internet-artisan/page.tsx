@@ -58,7 +58,7 @@ export default function CreationSiteArtisanPage() {
       '@type': 'ProfessionalService',
       name: 'Pixeloria',
       url: 'https://pixeloria.fr',
-      telephone: '+33786125313',
+      telephone: '+33601777633',
       email: 'contact@pixeloria.fr',
     },
     description: 'Création de sites internet professionnels pour artisans du bâtiment et indépendants locaux.',
@@ -240,7 +240,7 @@ export default function CreationSiteArtisanPage() {
                 </svg>
               </Link>
               <p className="page-cta-note">
-                <a href="tel:+33786125313">07 86 12 53 13</a>
+                <a href="tel:+33601777633">06 01 77 76 33</a>
                 {' · '}
                 <a href="mailto:contact@pixeloria.fr">contact@pixeloria.fr</a>
               </p>

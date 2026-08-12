@@ -238,7 +238,7 @@ export default function WebsiteCreationTradespeoplePage() {
                 </svg>
               </Link>
               <p className="page-cta-note">
-                <a href="tel:+33786125313">+33 7 86 12 53 13</a>
+                <a href="tel:+33601777633">+33 6 01 77 76 33</a>
                 {' · '}
                 <a href="mailto:contact@pixeloria.fr">contact@pixeloria.fr</a>
               </p>
