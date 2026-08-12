@@ -22,7 +22,7 @@ export default function PolitiqueConfidentialite() {
           <h2>1. Responsable du traitement</h2>
           <p>
             Pixeloria — <a href="mailto:contact@pixeloria.fr">contact@pixeloria.fr</a> —{' '}
-            <a href="tel:+33786125313">07 86 12 53 13</a>
+            <a href="tel:+33601777633">06 01 77 76 33</a>
           </p>
         </section>
 

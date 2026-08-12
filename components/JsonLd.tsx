@@ -32,7 +32,7 @@ export default function JsonLd({ type = 'home' }: JsonLdProps) {
     logo: 'https://pixeloria.fr/assets/pixeloria-logo.svg',
     image: 'https://pixeloria.fr/assets/pixeloria-logo.svg',
     description: 'Création et refonte de sites internet pour artisans, TPE et entreprises locales.',
-    telephone: '+33786125313',
+    telephone: '+33601777633',
     email: 'contact@pixeloria.fr',
     address: {
       '@type': 'PostalAddress',

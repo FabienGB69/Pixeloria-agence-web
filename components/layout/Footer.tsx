@@ -45,7 +45,7 @@ export default function Footer({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
           </Link>
           <p>{locale === 'en' ? 'Website creation and redesign for local businesses and trades.' : 'Création et refonte de sites internet pour artisans et TPE locaux.'}</p>
           <p className="footer-brand-contact">
-            <a href="tel:+33786125313" onClick={() => trackPhoneClicked('footer')}>07 86 12 53 13</a><br />
+            <a href="tel:+33601777633" onClick={() => trackPhoneClicked('footer')}>06 01 77 76 33</a><br />
             <a href="mailto:contact@pixeloria.fr">contact@pixeloria.fr</a><br />
             <a href="https://pixeloria.fr" target="_blank" rel="noopener noreferrer">pixeloria.fr</a>
           </p>
@@ -90,9 +90,9 @@ export default function Footer({ locale = 'fr' }: { locale?: 'fr' | 'en' }) {
 
         <nav className="footer-nav" aria-label="Contact pied de page">
           <strong>Contact</strong>
-          <a href="tel:+33786125313" onClick={() => trackPhoneClicked('footer')}>07 86 12 53 13</a>
+          <a href="tel:+33601777633" onClick={() => trackPhoneClicked('footer')}>06 01 77 76 33</a>
           <a href="mailto:contact@pixeloria.fr?subject=Demande%20de%20devis%20%E2%80%94%20Pixeloria&body=Bonjour%2C%0A%0AJe%20souhaite%20obtenir%20un%20devis%20pour%20mon%20projet%20web.%0A%0ACordialement%2C">contact@pixeloria.fr</a>
-          <a href="https://wa.me/33786125313" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/33601777633" target="_blank" rel="noopener noreferrer">
             WhatsApp
           </a>
         </nav>

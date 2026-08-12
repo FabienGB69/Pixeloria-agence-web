@@ -248,7 +248,7 @@ export default function LocalSeoEnPage() {
                 </svg>
               </Link>
               <p className="page-cta-note">
-                📞 +33 7 86 12 53 13 &nbsp;·&nbsp; ✉️ contact@pixeloria.fr
+                📞 +33 6 01 77 76 33 &nbsp;·&nbsp; ✉️ contact@pixeloria.fr
               </p>
             </div>
           </div>

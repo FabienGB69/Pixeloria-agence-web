@@ -26,7 +26,7 @@ export default function PrivacyPolicy() {
             <h2>1. Data controller</h2>
             <p>
               Pixeloria — <a href="mailto:contact@pixeloria.fr">contact@pixeloria.fr</a> —{' '}
-              <a href="tel:+33786125313">+33 7 86 12 53 13</a>
+              <a href="tel:+33601777633">+33 6 01 77 76 33</a>
             </p>
           </section>
 

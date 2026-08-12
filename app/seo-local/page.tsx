@@ -249,7 +249,7 @@ export default function SeoLocalPage() {
                 </svg>
               </Link>
               <p className="page-cta-note">
-                📞 07 86 12 53 13 &nbsp;·&nbsp; ✉️ contact@pixeloria.fr
+                📞 06 01 77 76 33 &nbsp;·&nbsp; ✉️ contact@pixeloria.fr
               </p>
             </div>
           </div>
