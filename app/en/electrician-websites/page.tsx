@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { hreflangSelf } from '@/lib/hreflang';
 import Link from 'next/link';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     'Electrician websites structured around both emergency repairs and planned projects like panel upgrades and EV charger installation, with clear licensing display. Website design for US electrical companies.',
   alternates: {
     canonical: 'https://pixeloria.fr/en/electrician-websites',
+    languages: hreflangSelf('https://pixeloria.fr/en/electrician-websites'),
   },
   openGraph: {
     type: 'website',

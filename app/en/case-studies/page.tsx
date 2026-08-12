@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { hreflangSelf } from '@/lib/hreflang';
 import Link from 'next/link';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     'Concept and demo websites showing how Pixeloria designs contractor websites for the US market. No fabricated results, just sample projects and approach.',
   alternates: {
     canonical: 'https://pixeloria.fr/en/case-studies',
+    languages: hreflangSelf('https://pixeloria.fr/en/case-studies'),
   },
   openGraph: {
     type: 'website',

@@ -1,4 +1,8 @@
-const testimonials = [
+import { getPublishedTestimonials } from '@/lib/notion';
+
+// Repli affiché si Notion est indisponible ou si aucun témoignage n'est
+// encore publié — jamais de section vide (voir issue #164).
+const fallbackTestimonials = [
   {
     prenom:   'Félicité',
     activite: 'Conciergerie location courte durée',
@@ -63,7 +67,10 @@ function StarRating({ note }: { note: number }) {
   );
 }
 
-export default function Testimonials() {
+export default async function Testimonials() {
+  const published = await getPublishedTestimonials();
+  const testimonials = published.length > 0 ? published : fallbackTestimonials;
+
   return (
     <section id="testimonials" className="section testimonials-section">
       <div className="testimonials-halo testimonials-halo--top" aria-hidden="true" />

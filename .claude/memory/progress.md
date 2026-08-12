@@ -1,6 +1,6 @@
 # Progress — Pixeloria
 
-> Suivi de l'avancement du projet. Mis à jour le 2026-08-03.
+> Suivi de l'avancement du projet. Mis à jour le 2026-08-09.
 
 ## Fait ✅
 
@@ -100,15 +100,34 @@
 - [x] `llms.txt` : section programme de parrainage ajoutée (GEO)
 - [x] `/en/testimonial` confirmée noindex (robots:{index:false}) — correctement absente du sitemap
 
+### PIXELORIA WEEKLY REPORT 2026-08-09 — 6 pôles + résolution backlog
+- [x] Audit complet 6 pôles (Growth/Product/Engineering/Marketing/Business/Operations), 11 nouvelles issues créées (#154-#164), toutes labellisées (taxonomie priority/dimension/market/agent/type)
+- [x] #147 — Webhook Stripe : offerId aligné sur `lib/pricing.ts` (fallback safe au lieu de l'alias mort `site-vitrine`)
+- [x] #154 — Parrainage FR : vocabulaire aligné (`Site Artisan`/`Option Visibilité`), rewards dérivées via `lib/referral-rewards.ts` (source unique)
+- [x] #155 — `/en/parrainage` : vocabulaire aligné, mention "inc. VAT" retirée (reste EUR — c'est la devise réelle Stripe)
+- [x] #156 — Taxonomie labels GitHub créée et appliquée aux 18 issues ouvertes
+- [x] #157 — `app/en/page.tsx` repassé en Server Component (`TrackedAction` isole les 5 handlers GTM)
+- [x] #158 — 14 pages `/en/*` : self-hreflang via `hreflangSelf()` (nouveau helper `lib/hreflang.ts`)
+- [x] #159 — 4 études de cas FR : `alternates.canonical` ajouté
+- [x] #160 — `<h1>` ajouté sur `/tarifs`, `/comment-ca-marche`, `/faq`
+- [x] #161 — Téléphone FR retiré des 4 pages réellement ciblées marché US (les 16 pages géo `/en/web-agency-*` sont en fait des pages FR traduites — non modifiées, à raison)
+- [x] #163 — `TunnelForm` : defaults `visiteurs`/`leads` à 0 au lieu de 5000/2
+- [x] #164 — Pipeline testimonials Notion → site : `getPublishedTestimonials()` + `Testimonials.tsx` en Server Component async, fallback si Notion indisponible
+- [x] #148 — Fermée : `LocalBusiness` JSON-LD déjà présent sur les 16 pages géo (audit initial obsolète), `sameAs` ajouté en bonus
+- [x] #145 — Home FR enrichie : `Services` + `Process` + `WhyPixeloria` ajoutés entre Hero et GoogleReviews
+- [x] #146 — `lib/pricing-us.ts` créé, câblé sur les JSON-LD `Offer` + `/en/pricing` (partiel — ~20 fichiers de prose restants)
+- [x] #149 — `lib/breadcrumb.ts` créé, `BreadcrumbList` JSON-LD ajouté sur les 5 pages états + `/en/resources` + 3 articles + `/en/contractor-websites`
+- [ ] #150 — CSP nonces — volontairement non traité (trop risqué pour ce lot, à faire en `Report-Only` d'abord)
+- [ ] #162 — Dédup ContactForm/TestimonialForm FR/EN — volontairement non traité (mérite sa propre session avec tests e2e)
+
 ## En attente / À faire 🔲
 
 - [ ] **P1 SÉCURITÉ** — Next.js ^14.2.29 → 15.5.21 (7 CVEs HIGH, dont SSRF CVSS 8.6)
 - [ ] **P1 SÉCURITÉ** — sharp ^0.34.5 → 0.35.0 (GHSA-f88m-g3jw-g9cj, 4 CVE libvips)
-- [ ] Décision produit : catalogue US officiel ($499/$899/$79, confirmé) — reste à aligner tout contenu résiduel si divergent
+- [ ] #146 (suite) — ~20 fichiers `app/en/**` avec `$499`/`$899`/`$79` encore en dur dans du texte de prose
+- [ ] #150 — CSP nonces au lieu de `unsafe-inline`
+- [ ] #162 — Dédupliquer ContactForm/TestimonialForm FR/EN
 - [ ] Décision produit : entité US formelle (LocalBusiness/GBP) ou "remote-only Organization"
-- [ ] #131 — Alternates hreflang FR/EN manquants sur ~80 pages en parité (helper `lib/hreflang.ts` à créer)
-- [ ] #136 — A11y `TunnelForm` (labels, autoComplete, aria-invalid) — non traité dans le lot #130-138
-- [ ] #137 — CookieBanner `role="dialog"` + focus trap — non traité dans le lot #130-138
-- [ ] Recâbler `tests/a11y/` dans le testDir Playwright (actuellement jamais exécuté en CI)
+- [ ] Décision produit : programme de parrainage en USD pour le catalogue contractors US, ou rester EUR-only
 - [ ] Brancher une source analytics live (GSC/Vercel Analytics) à la chaîne AutoPilot
 - [ ] Env vars Vercel (`NOTION_TOKEN`, `NOTION_DB_ID`) — à reconfirmer en prod

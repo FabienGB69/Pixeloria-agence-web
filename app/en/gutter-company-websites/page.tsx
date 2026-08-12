@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { hreflangSelf } from '@/lib/hreflang';
 import Link from 'next/link';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     'Focused, mobile-first websites for gutter installation, repair and cleaning companies. Built to turn seasonal search traffic into estimate requests, with a website plan sized to your ticket size.',
   alternates: {
     canonical: 'https://pixeloria.fr/en/gutter-company-websites',
+    languages: hreflangSelf('https://pixeloria.fr/en/gutter-company-websites'),
   },
   openGraph: {
     type: 'website',

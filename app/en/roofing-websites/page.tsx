@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { hreflangSelf } from '@/lib/hreflang';
 import Link from 'next/link';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     'Professional roofing websites built to generate phone calls, roof estimate requests and local leads. Mobile-first website design for US roofing contractors.',
   alternates: {
     canonical: 'https://pixeloria.fr/en/roofing-websites',
+    languages: hreflangSelf('https://pixeloria.fr/en/roofing-websites'),
   },
   openGraph: {
     type: 'website',

@@ -8,6 +8,8 @@ import {
   getReferralPartner,
 } from '@/lib/referral-partners';
 import { buildStripeReferralUrl } from '@/lib/stripe-referral-url';
+import { OFFERS } from '@/lib/pricing';
+import { getReferralReward } from '@/lib/referral-rewards';
 
 type OfferKey = 'vitrine' | 'visibilite';
 
@@ -31,16 +33,16 @@ const stripeLinks: Record<OfferKey, StripeLinks> = {
 const offers: Offer[] = [
   {
     key: 'vitrine',
-    name: 'Site Vitrine',
-    desc: '199 € TTC · Paiement unique',
-    benefit: 'Vous gagnez 100 €',
+    name: OFFERS['site-artisan'].title,
+    desc: `${OFFERS['site-artisan'].price} · Paiement unique`,
+    benefit: `Vous gagnez ${getReferralReward('site-artisan')} €`,
     highlight: false,
   },
   {
     key: 'visibilite',
-    name: 'Visibilité locale',
-    desc: '49 € TTC/mois · Abonnement',
-    benefit: 'Vous gagnez 25 €/mois',
+    name: OFFERS['option-visibilite'].title,
+    desc: `${OFFERS['option-visibilite'].price} · Abonnement`,
+    benefit: `Vous gagnez ${getReferralReward('option-visibilite')} €/mois`,
     highlight: true,
   },
 ];
@@ -49,9 +51,9 @@ const CONTACT_EMAIL = 'contact@pixeloria.fr';
 
 const COPY = {
   fr: {
-    offerNames: { vitrine: 'Site Vitrine', visibilite: 'Visibilité locale' } as Record<OfferKey, string>,
-    offerDescs: { vitrine: '199 € TTC · Paiement unique', visibilite: '49 € TTC/mois · Abonnement' } as Record<OfferKey, string>,
-    offerBenefits: { vitrine: 'Vous gagnez 100 €', visibilite: 'Vous gagnez 25 €/mois' } as Record<OfferKey, string>,
+    offerNames: { vitrine: OFFERS['site-artisan'].title, visibilite: OFFERS['option-visibilite'].title } as Record<OfferKey, string>,
+    offerDescs: { vitrine: `${OFFERS['site-artisan'].price} · Paiement unique`, visibilite: `${OFFERS['option-visibilite'].price} · Abonnement` } as Record<OfferKey, string>,
+    offerBenefits: { vitrine: `Vous gagnez ${getReferralReward('site-artisan')} €`, visibilite: `Vous gagnez ${getReferralReward('option-visibilite')} €/mois` } as Record<OfferKey, string>,
     highlightBadge: '⭐ Meilleure récompense',
     errRequired: 'Veuillez renseigner votre code parrainage.',
     errUnknown: "Ce code parrainage n'est pas encore reconnu. Vérifiez votre code ou contactez Pixeloria.",
@@ -69,9 +71,13 @@ const COPY = {
     micro: 'Votre code parrainage est validé lors du paiement. La récompense du parrain est déclenchée automatiquement selon les conditions du programme.',
   },
   en: {
-    offerNames: { vitrine: 'Showcase Website', visibilite: 'Local Visibility' } as Record<OfferKey, string>,
-    offerDescs: { vitrine: '€199 incl. VAT · One-time payment', visibilite: '€49 incl. VAT/month · Subscription' } as Record<OfferKey, string>,
-    offerBenefits: { vitrine: 'You earn €100', visibilite: 'You earn €25/month' } as Record<OfferKey, string>,
+    // The referral program is EUR-only: it pays out on the FR Site Artisan /
+    // Option Visibilité Stripe links (NEXT_PUBLIC_STRIPE_*_PAYMENT_LINK),
+    // regardless of locale — there is no separate USD referral product. See
+    // issue #155 for why this page keeps € pricing on /en/parrainage.
+    offerNames: { vitrine: 'Craftsman Website', visibilite: 'Visibility Option' } as Record<OfferKey, string>,
+    offerDescs: { vitrine: `${OFFERS['site-artisan'].price} · One-time payment`, visibilite: `${OFFERS['option-visibilite'].price} · Subscription` } as Record<OfferKey, string>,
+    offerBenefits: { vitrine: `You earn €${getReferralReward('site-artisan')}`, visibilite: `You earn €${getReferralReward('option-visibilite')}/month` } as Record<OfferKey, string>,
     highlightBadge: '⭐ Best reward',
     errRequired: 'Please enter your referral code.',
     errUnknown: 'This referral code is not recognised yet. Check your code or contact Pixeloria.',

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { breadcrumbList } from '@/lib/breadcrumb';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 
@@ -114,8 +115,15 @@ export default function ContractorWebsiteExamplesPage() {
     })),
   };
 
+  const breadcrumbSchema = breadcrumbList([
+    { name: 'Home', url: 'https://pixeloria.fr/en' },
+    { name: 'Resources', url: 'https://pixeloria.fr/en/resources' },
+    { name: 'Contractor Website Best Practices', url: 'https://pixeloria.fr/en/resources/contractor-website-examples' },
+  ]);
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <HeaderEn />
       <main>

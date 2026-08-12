@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { hreflangSelf } from '@/lib/hreflang';
+import { breadcrumbList } from '@/lib/breadcrumb';
 import Link from 'next/link';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
@@ -9,6 +11,7 @@ export const metadata: Metadata = {
     'Professional websites for general contractors, remodelers, roofers and specialty trades. Mobile-first design built to generate phone calls and estimate requests for US contractors.',
   alternates: {
     canonical: 'https://pixeloria.fr/en/contractor-websites',
+    languages: hreflangSelf('https://pixeloria.fr/en/contractor-websites'),
   },
   openGraph: {
     type: 'website',
@@ -124,8 +127,14 @@ export default function ContractorWebsitesPage() {
     })),
   };
 
+  const breadcrumbSchema = breadcrumbList([
+    { name: 'Home', url: 'https://pixeloria.fr/en' },
+    { name: 'Contractor Websites', url: 'https://pixeloria.fr/en/contractor-websites' },
+  ]);
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <HeaderEn />

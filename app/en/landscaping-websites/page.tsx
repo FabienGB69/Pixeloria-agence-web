@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { hreflangSelf } from '@/lib/hreflang';
 import Link from 'next/link';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     'Professional landscaping websites built to present one-time design and installation projects alongside recurring maintenance plans, with seasonal messaging that drives calls and estimate requests.',
   alternates: {
     canonical: 'https://pixeloria.fr/en/landscaping-websites',
+    languages: hreflangSelf('https://pixeloria.fr/en/landscaping-websites'),
   },
   openGraph: {
     type: 'website',

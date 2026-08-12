@@ -64,3 +64,14 @@ export function hreflangLanguages(path: string): Record<string, string> | undefi
 
   return { 'fr-FR': frUrl, 'en-US': enUrl, 'x-default': enUrl };
 }
+
+/**
+ * Returns a self-referencing `languages` block for a US-only `/en/*` page
+ * that has no FR counterpart (no entry in HREFLANG_PAIRS). Declaring
+ * `alternates.canonical` alone on such a page silently drops the layout's
+ * `en-US`/`x-default` declaration, because Next.js replaces the whole
+ * `alternates` object rather than merging it (see issue #158).
+ */
+export function hreflangSelf(url: string): Record<string, string> {
+  return { 'en-US': url, 'x-default': url };
+}

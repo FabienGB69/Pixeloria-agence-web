@@ -57,7 +57,7 @@ function makeInitialState(initialOffre: string): TunnelState {
   return {
     url: '', techno: '', anciennete: '',
     painPoints: [], objectives: [],
-    visiteurs: 5000, leads: 2,
+    visiteurs: 0, leads: 0,
     offre: initialOffre,
     prenom: '', nom: '', email: '', phone: '', message: '',
     step: 1, done: false, submitting: false, error: '',

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { breadcrumbList } from '@/lib/breadcrumb';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 
@@ -126,8 +127,15 @@ export default function ContractorWebsitesColoradoPage() {
     })),
   };
 
+  const breadcrumbSchema = breadcrumbList([
+    { name: 'Home', url: 'https://pixeloria.fr/en' },
+    { name: 'Contractor Websites', url: 'https://pixeloria.fr/en/contractor-websites' },
+    { name: 'Colorado', url: 'https://pixeloria.fr/en/contractor-websites/colorado' },
+  ]);
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <HeaderEn />

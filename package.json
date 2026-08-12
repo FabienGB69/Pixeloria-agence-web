@@ -16,6 +16,7 @@
     "test:unit": "vitest run",
     "test:e2e": "playwright test",
     "test:e2e:install": "playwright install --with-deps chromium",
+    "test:a11y": "playwright test --config=playwright.a11y.config.js",
     "ci": "npm run typecheck && npm run lint && npm run build",
     "stripe:create-referral-links": "tsx scripts/create-stripe-referral-links.ts",
     "notion:setup-referrals-db": "tsx scripts/setup-notion-db.ts",

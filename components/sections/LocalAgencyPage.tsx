@@ -87,6 +87,12 @@ export default function LocalAgencyPage({ data, locale = 'fr' }: Props) {
       opens: '09:00',
       closes: '18:00',
     },
+    sameAs: [
+      'https://x.com/pixeloriaaw',
+      'https://www.instagram.com/pixeloria.fr',
+      'https://www.linkedin.com/company/pixeloria',
+      'https://www.facebook.com/pixeloria.fr',
+    ],
   };
 
   const faqSchema = {

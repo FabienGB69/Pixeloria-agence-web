@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     locale: 'fr_FR',
     siteName: 'Pixeloria',
   },
+  alternates: {
+    canonical: 'https://pixeloria.fr/realisations/lenora-conciergerie',
+  },
 };
 
 export default function LenoraConciergeriePage() {

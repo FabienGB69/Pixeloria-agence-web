@@ -12,34 +12,16 @@ export const validReferralCodes = [
 
 export type ReferralCode = (typeof validReferralCodes)[number]
 
-export const referralPartners: Record<
-  ReferralCode,
-  {
-    name: string
-    rewardSiteVitrine: number
-    rewardOptionVisibilityMonthly: number
-  }
-> = {
-  "PIXELORIA-FELIADA": {
-    name: "Feliada",
-    rewardSiteVitrine: 100,
-    rewardOptionVisibilityMonthly: 25,
-  },
-  "PIXELORIA-MARILYN": {
-    name: "Marilyn",
-    rewardSiteVitrine: 100,
-    rewardOptionVisibilityMonthly: 25,
-  },
-  "PIXELORIA-DENISE": {
-    name: "Denise",
-    rewardSiteVitrine: 100,
-    rewardOptionVisibilityMonthly: 25,
-  },
-  "PIXELORIA-LESLYE": {
-    name: "Leslye",
-    rewardSiteVitrine: 100,
-    rewardOptionVisibilityMonthly: 25,
-  },
+/**
+ * Per-partner reward amounts are not tracked here — every partner earns the
+ * same catalog-wide reward, derived from `lib/pricing.ts` via
+ * `lib/referral-rewards.ts` (single source of truth, see issue #154).
+ */
+export const referralPartners: Record<ReferralCode, { name: string }> = {
+  "PIXELORIA-FELIADA": { name: "Feliada" },
+  "PIXELORIA-MARILYN": { name: "Marilyn" },
+  "PIXELORIA-DENISE": { name: "Denise" },
+  "PIXELORIA-LESLYE": { name: "Leslye" },
 }
 
 /**

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { hreflangSelf } from '@/lib/hreflang';
 import Link from 'next/link';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     'Professional websites for general contractors, built to present the full range of your project types, showcase a strong project gallery and win larger jobs. Mobile-first website design for US general contractors.',
   alternates: {
     canonical: 'https://pixeloria.fr/en/general-contractor-websites',
+    languages: hreflangSelf('https://pixeloria.fr/en/general-contractor-websites'),
   },
   openGraph: {
     type: 'website',

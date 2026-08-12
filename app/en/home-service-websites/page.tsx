@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { hreflangSelf } from '@/lib/hreflang';
 import Link from 'next/link';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     'Professional websites for plumbers, electricians, HVAC contractors, landscapers and cleaning companies. Mobile-first design built to generate phone calls and service requests for US home-service businesses.',
   alternates: {
     canonical: 'https://pixeloria.fr/en/home-service-websites',
+    languages: hreflangSelf('https://pixeloria.fr/en/home-service-websites'),
   },
   openGraph: {
     type: 'website',

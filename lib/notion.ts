@@ -14,6 +14,14 @@ export interface TestimonialInput {
   lang?:    string;
 }
 
+export interface PublishedTestimonial {
+  prenom:   string;
+  activite: string;
+  ville:    string;
+  avis:     string;
+  note:     number;
+}
+
 /**
  * Client Notion initialisé lazily pour éviter les crashes au build
  * si NOTION_TOKEN n'est pas défini dans l'environnement de build.
@@ -103,6 +111,52 @@ export async function createTestimonial(data: TestimonialInput): Promise<void> {
       'Date':     { date:   { start: new Date().toISOString() } },
     },
   });
+}
+
+/**
+ * Récupère les témoignages passés en statut "Publié" dans Notion, pour
+ * affichage sur `/avis` (voir issue #164). Fail-open : retourne un tableau
+ * vide si NOTION_TOKEN/NOTION_TESTIMONIALS_DB_ID est absent ou si l'appel
+ * Notion échoue, plutôt que de casser le build ou le rendu de la page.
+ */
+export async function getPublishedTestimonials(): Promise<PublishedTestimonial[]> {
+  const dbId = process.env.NOTION_TESTIMONIALS_DB_ID;
+  if (!process.env.NOTION_TOKEN || !dbId) {
+    return [];
+  }
+
+  try {
+    const notion = getNotionClient();
+    // Notion API 2025-09+ queries a database's data source, not the
+    // database itself — resolve it first (single-source DB, so [0] is safe).
+    const database = await notion.databases.retrieve({ database_id: dbId });
+    const dataSourceId = 'data_sources' in database ? database.data_sources[0]?.id : undefined;
+    if (!dataSourceId) return [];
+
+    const response = await notion.dataSources.query({
+      data_source_id: dataSourceId,
+      filter: { property: 'Statut', select: { equals: 'Publié' } },
+      sorts: [{ property: 'Date', direction: 'descending' }],
+      page_size: 12,
+    });
+
+    return response.results.flatMap((page: any) => {
+      if (!('properties' in page)) return [];
+      const props = page.properties as Record<string, any>;
+
+      const prenom = props['Prénom']?.title?.[0]?.plain_text ?? '';
+      const activite = props['Activité']?.rich_text?.[0]?.plain_text ?? '';
+      const ville = props['Ville']?.rich_text?.[0]?.plain_text ?? '';
+      const avis = props['Avis']?.rich_text?.[0]?.plain_text ?? '';
+      const note = typeof props['Note']?.number === 'number' ? props['Note'].number : 5;
+
+      if (!prenom || !avis) return [];
+      return [{ prenom, activite, ville, avis, note }];
+    });
+  } catch (error) {
+    console.error('[Notion] Error fetching published testimonials:', error);
+    return [];
+  }
 }
 
 /**

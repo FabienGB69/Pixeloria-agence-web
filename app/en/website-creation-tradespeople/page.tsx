@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { OFFERS_US } from '@/lib/pricing-us';
 import Link from 'next/link';
 import { hreflangLanguages } from '@/lib/hreflang';
 import HeaderEn from '@/components/layout/HeaderEn';
@@ -57,14 +58,13 @@ export default function WebsiteCreationTradespeoplePage() {
       '@type': 'ProfessionalService',
       name: 'Pixeloria',
       url: 'https://pixeloria.fr',
-      telephone: '+33786125313',
       email: 'contact@pixeloria.fr',
     },
     description: 'Professional website creation for contractors and local independent tradespeople.',
     areaServed: { '@type': 'Country', name: 'United States' },
     offers: [
-      { '@type': 'Offer', name: 'Starter Website', price: '499', priceCurrency: 'USD' },
-      { '@type': 'Offer', name: 'Website Care & Local Visibility', price: '79', priceCurrency: 'USD', priceSpecification: { '@type': 'UnitPriceSpecification', referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitCode: 'MON' } } },
+      { '@type': 'Offer', name: OFFERS_US.starter.title, price: String(OFFERS_US.starter.amount), priceCurrency: OFFERS_US.starter.currency },
+      { '@type': 'Offer', name: OFFERS_US.care.title, price: String(OFFERS_US.care.amount), priceCurrency: OFFERS_US.care.currency, priceSpecification: { '@type': 'UnitPriceSpecification', referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitCode: 'MON' } } },
     ],
   };
 
