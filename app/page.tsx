@@ -5,6 +5,8 @@ import Hero from '@/components/sections/Hero';
 import Services from '@/components/sections/Services';
 import Process from '@/components/sections/Process';
 import WhyPixeloria from '@/components/sections/WhyPixeloria';
+import Testimonials from '@/components/sections/Testimonials';
+import AuditGratuit from '@/components/sections/AuditGratuit';
 import GoogleReviews from '@/components/sections/GoogleReviews';
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/layout/Footer';
@@ -50,9 +52,11 @@ export default function HomePage() {
       <main id="home">
         <Hero />
         <Services />
-        <Process />
-        <WhyPixeloria />
         <GoogleReviews />
+        <WhyPixeloria />
+        <Process />
+        <Testimonials />
+        <AuditGratuit />
         <Contact />
       </main>
       <Footer />
