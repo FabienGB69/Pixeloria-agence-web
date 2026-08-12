@@ -3,6 +3,13 @@ import Link from 'next/link';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/JsonLd';
+import { breadcrumbList } from '@/lib/breadcrumb';
+
+const breadcrumbSchema = breadcrumbList([
+  { name: 'Accueil', url: 'https://pixeloria.fr/' },
+  { name: 'Réalisations', url: 'https://pixeloria.fr/realisations' },
+  { name: 'Content by Denise', url: 'https://pixeloria.fr/realisations/content-by-denise' },
+]);
 
 export const metadata: Metadata = {
   title: 'Création site portfolio freelance | Étude de cas Pixeloria',
@@ -25,6 +32,7 @@ export const metadata: Metadata = {
 export default function ContentByDenisePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <JsonLd />
       <Header />
       <main>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { hreflangSelf } from '@/lib/hreflang';
+import { breadcrumbList } from '@/lib/breadcrumb';
 import Link from 'next/link';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
@@ -119,9 +120,15 @@ const webPageSchema = {
   inLanguage: 'en-US',
 };
 
+const breadcrumbSchema = breadcrumbList([
+  { name: 'Home', url: 'https://pixeloria.fr/en' },
+  { name: 'Case Studies', url: 'https://pixeloria.fr/en/case-studies' },
+]);
+
 export default function CaseStudiesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       <HeaderEn />
       <main>
