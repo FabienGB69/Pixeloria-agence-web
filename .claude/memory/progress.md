@@ -1,6 +1,6 @@
 # Progress — Pixeloria
 
-> Suivi de l'avancement du projet. Mis à jour le 2026-08-12.
+> Suivi de l'avancement du projet. Mis à jour le 2026-08-12 (soir).
 
 ## Fait ✅
 
@@ -124,12 +124,18 @@
 - [ ] #155 — Partielle, reste ouverte : vocabulaire parrainage EN aligné, mention "inc. VAT" retirée. Reste EUR (c'est la devise réelle Stripe) — décision produit en attente sur un vrai programme parrainage USD.
 - [ ] #161 — Partielle, reste ouverte : téléphone FR retiré des 4 pages réellement ciblées marché US. Décision produit en attente sur l'entité US formelle.
 
+### Suivi du backlog #150/#155/#161/#162 (PR #170, #171, #173, mergées 2026-08-12)
+- [x] #170 — Memory bank alignée sur l'état réel post-clôture (documentation seule).
+- [x] #171 — `ContactForm.tsx` (FR) : catch réseau ne simule plus un faux succès (affichait "Message envoyé !" alors que la requête avait échoué) — remplacé par un vrai message d'erreur + fallback mailto. `ContactFormEn.tsx` : ajout de la validation `aria-invalid` dynamique au blur/input, absente jusqu'ici (a11y). Fusion complète `ContactForm`/`ContactFormEn` toujours non faite (Company/tél requis restent des décisions produit).
+- [x] #150 — Tentative d'implémentation concrète des nonces CSP : **abandonnée après découverte que `headers()` par page force le rendu dynamique** (~90 routes actuellement statiques d'après `npm run build`) — régression Performance majeure, non appliquée. Nouveau chemin technique documenté sur l'issue : hash SHA-256 au build (compatible statique) au lieu de nonces.
+- [x] #173 — Faille de sécurité non filée trouvée en marge de #162 : `app/api/submit-testimonial` n'avait **aucune** vérification Turnstile (ni widget client dans `TestimonialForm.tsx`, ni `verifyTurnstile()` côté route, contrairement à `submit-lead`). Corrigé : widget + hook partagés ajoutés côté client, `verifyTurnstile()` ajouté côté route (fail-open si clés absentes, comme le reste du site).
+- [x] **P1 SÉCURITÉ résolu** — sharp `^0.34.5` → `^0.35.3` (corrige GHSA-f88m-g3jw-g9cj/libvips). `npm audit fix` (sans `--force`) a aussi réglé nanoid/brace-expansion/glob/js-yaml/fast-uri, dans les ranges déjà déclarés — aucun changement de version majeure. Build + e2e complet (113/113) + a11y (6/6) revérifiés après coup.
+
 ## En attente / À faire 🔲
 
-- [ ] **P1 SÉCURITÉ** — Next.js ^14.2.29 → 15.5.21 (7 CVEs HIGH, dont SSRF CVSS 8.6)
-- [ ] **P1 SÉCURITÉ** — sharp ^0.34.5 → 0.35.0 (GHSA-f88m-g3jw-g9cj, 4 CVE libvips)
-- [ ] #150 — CSP nonces au lieu de `unsafe-inline` (déployer en `Report-Only` d'abord)
-- [ ] #162 (suite) — Fusionner `ContactForm`/`ContactFormEn`, conditionné aux décisions produit ci-dessous
+- [ ] **P1 SÉCURITÉ** — Next.js ^14.2.29 → 15/16.x (~21 CVEs HIGH sur la plage `next` d'après `npm audit`, dont SSRF, DoS Server Components, cache poisoning, XSS CSP nonces App Router) — migration majeure breaking, entraîne aussi `postcss`/`eslint-config-next`. Seule dépendance HIGH encore non résolue après le passage sharp du 2026-08-12.
+- [ ] #150 — Construire le script de build pour hash SHA-256 des blocs JSON-LD (pas de nonces — voir ci-dessus pourquoi), puis déployer en `Content-Security-Policy-Report-Only` avant bascule enforcée
+- [ ] #162 (suite) — Fusionner `ContactForm`/`ContactFormEn`, conditionné aux décisions produit ci-dessous (les 2 bugs objectifs — faux succès réseau FR, a11y EN — sont déjà corrigés, voir #171 ci-dessus)
 - [ ] Décision produit : entité US formelle (LocalBusiness/GBP) ou "remote-only Organization" (bloque #161)
 - [ ] Décision produit : programme de parrainage en USD pour le catalogue contractors US, ou rester EUR-only (bloque #155)
 - [ ] Décision produit : téléphone requis ou optionnel sur ContactForm FR, champ "Company" à ajouter en FR ? (bloque #162)
