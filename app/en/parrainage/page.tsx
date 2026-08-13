@@ -6,8 +6,8 @@ import { hreflangLanguages } from '@/lib/hreflang';
 import ParrainageFaqEn from '@/components/parrainage/ParrainageFaqEn';
 import ParrainageReveal from '@/components/parrainage/ParrainageReveal';
 
-const ReferralCodeSection = dynamic(
-  () => import('@/components/parrainage/ReferralCodeSection'),
+const ReferralLeadFormEn = dynamic(
+  () => import('@/components/parrainage/ReferralLeadFormEn'),
   { ssr: false },
 );
 
@@ -426,11 +426,11 @@ export default function ParrainagePageEn() {
               Use a <em>referral</em> code
             </h2>
             <p className="section-subtitle" style={{ margin: '0 auto' }}>
-              Select your offer and automatically benefit from your referral discount.
+              Enter your code and we&rsquo;ll follow up with a free estimate.
             </p>
           </div>
           <Suspense fallback={<div style={{ minHeight: '300px' }} />}>
-            <ReferralCodeSection locale="en" />
+            <ReferralLeadFormEn />
           </Suspense>
         </div>
       </section>

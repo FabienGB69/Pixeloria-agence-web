@@ -4,6 +4,8 @@ import { saveLead, resolveOffreAndSource } from '@/lib/notion';
 import { sendConfirmation, notifyOwner } from '@/lib/resend';
 import { safe } from '@/lib/validation';
 import { isHoneypot, verifyTurnstile, checkRateLimit } from '@/lib/security';
+import { getReferralPartner, normalizeReferralCode } from '@/lib/referral-partners';
+import { createReferralLead } from '@/lib/notion-referrals-us';
 
 // ─── CORS ─────────────────────────────────────────────────────────────────────
 
@@ -122,6 +124,31 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       { error: 'Impossible de sauvegarder le lead. Réessayez ou contactez-nous.' },
       { status: 502, headers: CORS_HEADERS }
     );
+  }
+
+  // 9bis. Code parrainage US (issue #155) — non-bloquant. Pas de checkout
+  // Stripe côté /en/*, donc pas de webhook pour créer le lead référence
+  // automatiquement : on l'enregistre ici, à la soumission, en Pending —
+  // l'offre réelle et la récompense sont fixées manuellement à la vente.
+  const referralCode = normalizeReferralCode(data.referralCode);
+  if (referralCode) {
+    const partner = getReferralPartner(referralCode);
+    if (partner) {
+      try {
+        await createReferralLead({
+          referralCode,
+          referrerName: partner.name,
+          offerInterest: offreLabel,
+          customerName: `${safe(data.prenom, 100)} ${safe(data.nom, 100)}`.trim(),
+          customerEmail: safe(data.email, 254),
+        });
+      } catch (err) {
+        const e = err as { message?: string };
+        console.error('[submit-lead] US referral lead recording failed:', e.message);
+      }
+    } else {
+      console.warn(`[submit-lead] Invalid US referral code: ${referralCode}`);
+    }
   }
 
   // 10. Envoi des emails — non-bloquant (echecs silencieux loggés)
