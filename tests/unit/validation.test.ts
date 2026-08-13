@@ -45,6 +45,13 @@ describe('LeadSchema', () => {
     expect(result.data.prenom).toBe('');
     expect(result.data.painPoints).toEqual([]);
     expect(result.data.visiteurs).toBeNull();
+    expect(result.data.referralCode).toBe('');
+  });
+
+  it('accepte un referralCode optionnel (issue #155)', () => {
+    const result = LeadSchema.safeParse({ email: 'ok@test.com', referralCode: 'PIXELORIA-FELIADA' });
+    if (!result.success) throw result.error;
+    expect(result.data.referralCode).toBe('PIXELORIA-FELIADA');
   });
 
   it('coerce visiteurs et leads en nombre', () => {
