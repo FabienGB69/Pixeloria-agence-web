@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { LocalSeoData } from '@/lib/local-seo';
 import ContactForm from '@/components/forms/ContactForm';
-import ContactFormEn from '@/app/en/ContactFormEn';
 
 interface Props {
   data: LocalSeoData;
@@ -198,7 +197,7 @@ export default function LocalAgencyPage({ data, locale = 'fr' }: Props) {
           <div className="section-eyebrow">{t.contactEyebrow}</div>
           <h2>{t.contactTitle(data.department)}</h2>
           <p style={{ opacity: 0.75, marginBottom: '2rem' }}>{t.contactSub}</p>
-          {locale === 'en' ? <ContactFormEn /> : <ContactForm />}
+          <ContactForm locale={locale} />
         </div>
       </section>
     </>

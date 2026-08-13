@@ -4,7 +4,7 @@ import { hreflangLanguages } from '@/lib/hreflang';
 import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
-import ContactFormEn from '@/app/en/ContactFormEn';
+import ContactForm from '@/components/forms/ContactForm';
 
 export const metadata: Metadata = {
   title: 'About — The Agency Behind Your Website | Pixeloria',
@@ -211,7 +211,7 @@ export default function AboutEnPage() {
                 </div>
               </div>
               <div className="contact-form-wrap reveal">
-                <ContactFormEn />
+                <ContactForm locale="en" />
               </div>
             </div>
           </div>

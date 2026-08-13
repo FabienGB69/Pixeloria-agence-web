@@ -4,7 +4,7 @@ import HeaderEn from '@/components/layout/HeaderEn';
 import Footer from '@/components/layout/Footer';
 import ClientEffects from '@/components/layout/ClientEffects';
 import GoogleReviews from '@/components/sections/GoogleReviews';
-import ContactFormEn from './ContactFormEn';
+import ContactForm from '@/components/forms/ContactForm';
 import { TrackedOfferAction, TrackedContactChannel } from '@/components/analytics/TrackedAction';
 
 const organizationJsonLd = {
@@ -939,7 +939,7 @@ export default function EnHomePage() {
               </div>
 
               <div className="contact-form-wrapper reveal">
-                <ContactFormEn />
+                <ContactForm locale="en" />
               </div>
             </div>
           </div>

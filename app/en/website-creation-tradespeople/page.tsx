@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { OFFERS_US } from '@/lib/pricing-us';
+import { PROVIDER_US } from '@/lib/organization';
 import Link from 'next/link';
 import { hreflangLanguages } from '@/lib/hreflang';
 import HeaderEn from '@/components/layout/HeaderEn';
@@ -54,12 +55,7 @@ export default function WebsiteCreationTradespeoplePage() {
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: 'Website creation for contractors and tradespeople',
-    provider: {
-      '@type': 'ProfessionalService',
-      name: 'Pixeloria',
-      url: 'https://pixeloria.fr',
-      email: 'contact@pixeloria.fr',
-    },
+    provider: PROVIDER_US,
     description: 'Professional website creation for contractors and local independent tradespeople.',
     areaServed: { '@type': 'Country', name: 'United States' },
     offers: [
