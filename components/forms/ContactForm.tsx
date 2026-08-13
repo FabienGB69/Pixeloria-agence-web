@@ -136,11 +136,16 @@ export default function ContactForm({ locale = 'fr' }: { locale?: 'fr' | 'en' })
         setFormState({ loading: false, success: true, error: null });
         formRef.current?.reset();
       } else {
+        // /api/submit-lead's error messages are French-only (ignores _lang),
+        // so only surface them for FR — EN keeps its fixed English fallback,
+        // matching the pre-merge ContactFormEn behavior.
         let errMsg: string = t.defaultError;
-        try {
-          const body = await res.json() as { error?: string };
-          if (body.error) errMsg = body.error;
-        } catch { /* ignore */ }
+        if (locale === 'fr') {
+          try {
+            const body = await res.json() as { error?: string };
+            if (body.error) errMsg = body.error;
+          } catch { /* ignore */ }
+        }
         setFormState({ loading: false, success: false, error: errMsg });
       }
     } catch {
@@ -252,7 +257,7 @@ export default function ContactForm({ locale = 'fr' }: { locale?: 'fr' | 'en' })
       </div>
 
       <label>
-        <span>{t.offreLabel}</span>
+        <span>{t.offreLabel} {t.offreRequired && <abbr title={t.requiredAbbr}>*</abbr>}</span>
         <div className="select-wrap">
           <select
             name="offre"
@@ -290,6 +295,7 @@ export default function ContactForm({ locale = 'fr' }: { locale?: 'fr' | 'en' })
         type="submit"
         className={`btn btn-primary btn-full${formState.loading ? ' is-loading' : ''}`}
         disabled={formState.loading}
+        aria-label={formState.loading ? t.submitLoading : undefined}
       >
         <span className="btn-label">{t.submitLabel}</span>
         <svg className="btn-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
