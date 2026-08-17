@@ -20,7 +20,7 @@ const BUDGETS = [
 ] as const;
 
 const DELAYS = [
-  { id: 'urgent',   label: "Moins d’un mois" },
+  { id: 'urgent',   label: "Moins d'un mois" },
   { id: 'normal',   label: '1 à 3 mois'       },
   { id: 'flexible', label: '3 à 6 mois'        },
   { id: 'no-rush',  label: 'Pas de date fixe'  },
@@ -133,7 +133,7 @@ export default function CreationForm() {
         setApiError((body as { error?: string }).error ?? 'Une erreur est survenue. Contactez-nous par email.');
       }
     } catch {
-      setSubmitted(true); // dev fallback
+      setApiError('Erreur réseau. Vérifiez votre connexion ou contactez-nous à contact@pixeloria.fr.');
     } finally {
       setLoading(false);
     }
