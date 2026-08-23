@@ -1,4 +1,7 @@
+'use client';
+
 import ContactForm from '@/components/forms/ContactForm';
+import { trackPhoneClicked, trackEmailClicked } from '@/lib/gtm';
 
 export default function Contact() {
   return (
@@ -14,7 +17,7 @@ export default function Contact() {
             </p>
 
             <div className="contact-channels">
-              <a href="tel:+33601777633" className="channel-item">
+              <a href="tel:+33601777633" className="channel-item" onClick={() => trackPhoneClicked('contact')}>
                 <div className="channel-icon">
                   <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
                     <path d="M6 3h4l2 5-2.5 1.5a11 11 0 0 0 5 5L16 12l5 2v4a2 2 0 0 1-2 2C7.3 20 4 12.7 4 5a2 2 0 0 1 2-2Z" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
@@ -22,11 +25,11 @@ export default function Contact() {
                 </div>
                 <div>
                   <strong>Téléphone</strong>
-                  <span>07&nbsp;86&nbsp;12&nbsp;53&nbsp;13</span>
+                  <span>06&nbsp;01&nbsp;77&nbsp;76&nbsp;33</span>
                 </div>
               </a>
 
-              <a href="mailto:contact@pixeloria.fr?subject=Demande%20de%20devis%20%E2%80%94%20Pixeloria&body=Bonjour%2C%0A%0AJe%20souhaite%20obtenir%20un%20devis%20pour%20mon%20projet%20web.%0A%0ACordialement%2C" className="channel-item">
+              <a href="mailto:contact@pixeloria.fr?subject=Demande%20de%20devis%20%E2%80%94%20Pixeloria&body=Bonjour%2C%0A%0AJe%20souhaite%20obtenir%20un%20devis%20pour%20mon%20projet%20web.%0A%0ACordialement%2C" className="channel-item" onClick={() => trackEmailClicked('contact')}>
                 <div className="channel-icon">
                   <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
                     <rect x="2" y="4" width="20" height="16" rx="3" stroke="currentColor" strokeWidth="1.8" />
@@ -44,6 +47,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="channel-item"
+                onClick={() => trackPhoneClicked('whatsapp')}
               >
                 <div className="channel-icon">
                   <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
