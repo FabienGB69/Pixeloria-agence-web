@@ -60,6 +60,30 @@ describe('LeadSchema', () => {
     expect(result.data.visiteurs).toBe(3000);
     expect(result.data.leads).toBe(5);
   });
+
+  it('conserve les champs utm_* au lieu de les stripper (issue #182)', () => {
+    const result = LeadSchema.safeParse({
+      email: 'ok@test.com',
+      utm_source: 'google',
+      utm_medium: 'cpc',
+      utm_campaign: 'artisans-2026',
+      utm_term: 'site internet artisan',
+      utm_content: 'annonce-a',
+    });
+    if (!result.success) throw result.error;
+    expect(result.data.utm_source).toBe('google');
+    expect(result.data.utm_medium).toBe('cpc');
+    expect(result.data.utm_campaign).toBe('artisans-2026');
+    expect(result.data.utm_term).toBe('site internet artisan');
+    expect(result.data.utm_content).toBe('annonce-a');
+  });
+
+  it('applique des utm_* vides par défaut', () => {
+    const result = LeadSchema.safeParse({ email: 'ok@test.com' });
+    if (!result.success) throw result.error;
+    expect(result.data.utm_source).toBe('');
+    expect(result.data.utm_medium).toBe('');
+  });
 });
 
 describe('safe()', () => {

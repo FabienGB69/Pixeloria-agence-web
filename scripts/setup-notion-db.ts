@@ -49,7 +49,7 @@ async function createReferralsDatabase() {
           type: 'select',
           select: {
             options: [
-              { name: 'site-vitrine', color: 'purple' },
+              { name: 'site-artisan', color: 'purple' },
               { name: 'option-visibilite', color: 'blue' },
             ],
           },

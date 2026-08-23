@@ -2,12 +2,15 @@
 
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
+import { track } from '@vercel/analytics';
 import {
   normalizeReferralCode,
   isValidReferralCode,
   getReferralPartner,
 } from '@/lib/referral-partners';
 import { OFFERS_US, OFFER_ORDER_US } from '@/lib/pricing-us';
+import { getStoredUtm } from '@/lib/utm';
+import { trackAuditRequest } from '@/lib/gtm';
 import TurnstileWidget from '@/components/forms/TurnstileWidget';
 import { useTurnstileToken } from '@/components/forms/useTurnstileToken';
 
@@ -76,6 +79,7 @@ export default function ReferralLeadFormEn() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...data,
+          ...getStoredUtm(),
           referralCode: normalizedCode,
           _turnstile: turnstileToken,
           _lang: 'en',
@@ -83,6 +87,8 @@ export default function ReferralLeadFormEn() {
       });
 
       if (res.ok) {
+        track('referral_lead_submit_en', { offer: (data.offre as string) || 'none' });
+        trackAuditRequest('referral-us');
         setFormState({ loading: false, success: true, error: null });
       } else {
         setFormState({

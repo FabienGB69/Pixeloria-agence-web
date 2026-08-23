@@ -23,6 +23,14 @@ export const LeadSchema = z.object({
   city:             z.string().max(100).default(''),
   state:            z.string().max(50).default(''),
   mainGoal:         z.string().max(200).default(''),
+  // Attribution acquisition — capturée par lib/utm.ts, propagée par tous
+  // les formulaires lead. Sans ces champs, Zod stripe silencieusement les
+  // clés utm_* envoyées par le client (voir issue #182).
+  utm_source:   z.string().max(100).default(''),
+  utm_medium:   z.string().max(100).default(''),
+  utm_campaign: z.string().max(200).default(''),
+  utm_term:     z.string().max(100).default(''),
+  utm_content:  z.string().max(200).default(''),
 });
 
 export type LeadInput = z.infer<typeof LeadSchema>;

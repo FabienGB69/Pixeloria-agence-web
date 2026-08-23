@@ -75,13 +75,36 @@ export async function saveLead(data: LeadInput): Promise<void> {
         multi_select: data.objectives.map((o) => ({ name: safe(o, 100) })),
       },
       'Message':        {
-        rich_text: [{ text: { content: safe(data.message, 2000) } }],
+        rich_text: [{ text: { content: appendUtmSuffix(safe(data.message, 2000), data) } }],
       },
       'Date':           {
         date: { start: new Date().toISOString().split('T')[0] },
       },
     },
   });
+}
+
+/**
+ * Attribution acquisition (issue #182) : ajoutée en suffixe du champ
+ * `Message` plutôt qu'en colonnes Notion dédiées, pour ne pas dépendre
+ * d'un schéma de base non vérifiable par ce code (une propriété absente
+ * de la base ferait échouer `notion.pages.create()`).
+ */
+function appendUtmSuffix(message: string, data: LeadInput): string {
+  const parts = (
+    [
+      ['source', data.utm_source],
+      ['medium', data.utm_medium],
+      ['campaign', data.utm_campaign],
+      ['term', data.utm_term],
+      ['content', data.utm_content],
+    ] as const
+  ).filter(([, v]) => v);
+
+  if (parts.length === 0) return message;
+
+  const utmLine = `[UTM] ${parts.map(([k, v]) => `${k}=${v}`).join(' | ')}`;
+  return message ? `${message}\n\n${utmLine}` : utmLine;
 }
 
 /**

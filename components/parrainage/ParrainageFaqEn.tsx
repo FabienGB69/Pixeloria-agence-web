@@ -1,40 +1,46 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { OFFERS_US } from '@/lib/pricing-us';
+import { REFERRAL_REWARDS_US } from '@/lib/referral-rewards-us';
 
 interface FaqItem {
   question: string;
   answer: string;
 }
 
+const rewardStarter = REFERRAL_REWARDS_US.starter;
+const rewardGrowth = REFERRAL_REWARDS_US.growth;
+const rewardCare = REFERRAL_REWARDS_US.care;
+
 const faqItems: FaqItem[] = [
   {
     question: "How much does the sponsor earn?",
-    answer: "Craftsman Website: you earn €100 after payment is received. Visibility Option: you earn €25 per month as long as the subscription is active. Cumulative potential: €100 + €25/month if your referral takes both offers.",
+    answer: `${OFFERS_US.starter.title}: you earn $${rewardStarter} once the project is signed. ${OFFERS_US.growth.title}: you earn $${rewardGrowth}. Website Care: you earn $${rewardCare} per month as long as the subscription is active. Cumulative potential: up to $${rewardGrowth} + $${rewardCare}/month if your referral takes a website project and adds Website Care.`,
   },
   {
     question: "Can rewards be combined?",
-    answer: "Yes. You can sponsor multiple companies without limit. Each sponsorship generates an independent reward. If the same referral takes both Craftsman Website AND Visibility Option, you receive €100 + €25/month.",
+    answer: `Yes. You can sponsor multiple businesses without limit. Each sponsorship generates an independent reward. If the same referral takes a website project AND adds Website Care, you receive both rewards — up to $${rewardGrowth} + $${rewardCare}/month.`,
   },
   {
     question: "When is the reward triggered?",
-    answer: "Craftsman Website: immediately after payment is received via Stripe. Visibility Option: after 1 month of active continuous subscription. The reward continues each month as long as the subscription remains active.",
+    answer: "For a website project (Starter or Growth): once the referral's project is signed and confirmed — the US catalog doesn't have a self-serve checkout yet, so we confirm this manually with you. For Website Care: after 1 month of active continuous subscription. The reward continues each month as long as the subscription remains active.",
   },
   {
     question: "How is sponsorship tracked?",
-    answer: "Everything is automatic and transparent. You access your affiliate space where you see your active referrals, pending commissions, validated commissions and payment history. No manual management required.",
+    answer: "There's no self-serve sponsor dashboard for the US program yet. We record your referral code with their request and reach out directly once their project is signed to confirm and arrange your reward.",
   },
   {
     question: "Does the monthly reward continue indefinitely?",
-    answer: "Yes. You receive €25 each month as long as your referral keeps their Visibility Option subscription active. No time limit. If the subscription stops, the reward stops the following month.",
+    answer: `Yes. You receive $${rewardCare} each month as long as your referral keeps their Website Care subscription active. No time limit. If the subscription stops, the reward stops the following month.`,
   },
   {
     question: "Is the program reserved for Pixeloria customers?",
-    answer: "No. Anyone can become a sponsor: current customers, partners, professionals, freelancers, individuals, businesses. No prerequisites. Only new Pixeloria customers can be referred.",
+    answer: "No. Anyone can become a sponsor: current customers, partners, contractors, freelancers, individuals, businesses. No prerequisites. Only new Pixeloria customers can be referred.",
   },
   {
     question: "What happens if the referral cancels?",
-    answer: "For Craftsman Website: if the purchase is refunded, the commission is cancelled. For Visibility Option: if the subscription stops, you will stop receiving the monthly reward the following month. Pixeloria reserves the right to adjust or cancel in case of dispute or failed payment.",
+    answer: "For a website project: if the sale falls through or is refunded, the reward is cancelled. For Website Care: if the subscription stops, you will stop receiving the monthly reward the following month. Pixeloria reserves the right to adjust or cancel in case of dispute or failed payment.",
   },
 ];
 

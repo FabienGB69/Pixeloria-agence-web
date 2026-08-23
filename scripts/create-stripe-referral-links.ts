@@ -33,7 +33,7 @@ async function createPaymentLink(
       name: offerName,
       description,
       metadata: {
-        offer_id: offerName === 'Site Vitrine' ? 'site-vitrine' : 'option-visibilite',
+        offer_id: offerName === 'Site Artisan' ? 'site-artisan' : 'option-visibilite',
         referral_program: 'pixeloria',
       },
     });
@@ -45,7 +45,7 @@ async function createPaymentLink(
       unit_amount: amount,
       currency: 'eur',
       metadata: {
-        offer_type: offerName === 'Site Vitrine' ? 'site-vitrine' : 'option-visibilite',
+        offer_type: offerName === 'Site Artisan' ? 'site-artisan' : 'option-visibilite',
       },
     };
 
@@ -77,7 +77,7 @@ async function createPaymentLink(
       },
       customer_creation: 'always',
       metadata: {
-        offer_id: offerName === 'Site Vitrine' ? 'site-vitrine' : 'option-visibilite',
+        offer_id: offerName === 'Site Artisan' ? 'site-artisan' : 'option-visibilite',
         offer_type: offerName,
         referral_program: 'pixeloria',
       },
@@ -100,13 +100,13 @@ async function createPaymentLink(
 async function main() {
   console.log('🚀 Creating Stripe Payment Links for Pixeloria Referral Program\n');
 
-  // Create Site Vitrine (199€ one-time)
-  const siteVitrine = await createPaymentLink(
-    'Site Vitrine',
+  // Create Site Artisan (199€ one-time)
+  const siteArtisan = await createPaymentLink(
+    'Site Artisan',
     'Professional website for SMEs and craft businesses',
     19900, // 199€ in cents
     false,
-    'NEXT_PUBLIC_STRIPE_SITE_VITRINE_PAYMENT_LINK',
+    'NEXT_PUBLIC_STRIPE_SITE_ARTISAN_PAYMENT_LINK',
   );
 
   // Create Option Visibilité (49€/month)
@@ -118,7 +118,7 @@ async function main() {
     'NEXT_PUBLIC_STRIPE_OPTION_VISIBILITE_PAYMENT_LINK',
   );
 
-  if (siteVitrine) results.push(siteVitrine);
+  if (siteArtisan) results.push(siteArtisan);
   if (optionVisibilite) results.push(optionVisibilite);
 
   if (results.length === 0) {
