@@ -156,7 +156,7 @@ export default function TunnelForm() {
         update({ done: true, submitting: false });
       } else { update({ error: 'Une erreur est survenue. Réessayez ou contactez-nous.', submitting: false }); }
     } catch {
-      update({ done: true, submitting: false });
+      update({ error: 'Erreur réseau. Vérifiez votre connexion ou contactez-nous à contact@pixeloria.fr.', submitting: false });
     }
   };
 
