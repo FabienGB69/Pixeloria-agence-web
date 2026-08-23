@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 import { hreflangLanguages } from '@/lib/hreflang';
+import { OFFERS_US } from '@/lib/pricing-us';
+import { REFERRAL_REWARDS_US } from '@/lib/referral-rewards-us';
 import ParrainageFaqEn from '@/components/parrainage/ParrainageFaqEn';
 import ParrainageReveal from '@/components/parrainage/ParrainageReveal';
 
@@ -11,14 +13,19 @@ const ReferralLeadFormEn = dynamic(
   { ssr: false },
 );
 
+const rewardStarter = REFERRAL_REWARDS_US.starter;
+const rewardGrowth = REFERRAL_REWARDS_US.growth;
+const rewardCare = REFERRAL_REWARDS_US.care;
+const bestCaseFirstYear = rewardGrowth + rewardCare * 12;
+
 export const metadata: Metadata = {
-  title: "Referral Program — Earn up to €100 + €25/month | Pixeloria",
+  title: `Referral Program — Earn up to $${rewardGrowth} per referral | Pixeloria`,
   description:
-    "Recommend Pixeloria to a craftsperson or SME and earn up to €100 bonus, plus €25/month if your referral subscribes to Visibility Option. Completely transparent and automated program.",
+    `Refer a contractor or local business to Pixeloria and earn up to $${rewardGrowth} once their project is signed — plus $${rewardCare}/month if they add Website Care. Simple, transparent, no automatic checkout required.`,
   openGraph: {
-    title: "Pixeloria Referral Program — Earn up to €100 + €25/month",
+    title: `Pixeloria Referral Program — Earn up to $${rewardGrowth} per referral`,
     description:
-      "Share your referral code. Earn €100 when your referral launches a site, plus €25/month if they subscribe to Visibility Option.",
+      `Share your referral code. Earn up to $${rewardGrowth} when your referral signs up, plus $${rewardCare}/month if they add Website Care & Local Visibility.`,
     url: 'https://pixeloria.fr/en/parrainage',
   },
   alternates: { canonical: 'https://pixeloria.fr/en/parrainage', languages: hreflangLanguages('/en/parrainage') },
@@ -64,13 +71,14 @@ export default function ParrainagePageEn() {
             </div>
 
             <h1 className="hero__title" id="hero-title">
-              Recommend Pixeloria and earn up to €100&nbsp;+ €25&nbsp;/month.
+              Refer a contractor and earn up to {`$${rewardGrowth}`}&nbsp;+&nbsp;{`$${rewardCare}`}/month.
             </h1>
 
             <p className="hero__subtitle">
-              Do you know a craftsperson or SME who needs a professional website?
-              Share your referral code and automatically receive €100 when they launch their site,
-              plus €25 each month if they subscribe to Visibility Option.
+              Do you know a roofer, plumber, electrician or local business owner who needs a
+              professional website? Share your referral code — once their project is signed, you
+              earn a reward based on the package they choose, plus {`$${rewardCare}`} each month if
+              they add Website Care &amp; Local Visibility.
             </p>
 
             <div className="hero__actions">
@@ -85,35 +93,39 @@ export default function ParrainagePageEn() {
             {/* Stats bar */}
             <div className="hero__stats">
               <div className="hero__stat">
-                <div className="hero__stat-value"><span>€100</span></div>
-                <div className="hero__stat-label">Craftsman Website</div>
+                <div className="hero__stat-value"><span>{`$${rewardStarter}`}</span></div>
+                <div className="hero__stat-label">{OFFERS_US.starter.title}</div>
               </div>
               <div className="hero__stat">
-                <div className="hero__stat-value"><span>€25/month</span></div>
-                <div className="hero__stat-label">Visibility Option</div>
+                <div className="hero__stat-value"><span>{`$${rewardGrowth}`}</span></div>
+                <div className="hero__stat-label">{OFFERS_US.growth.title}</div>
+              </div>
+              <div className="hero__stat">
+                <div className="hero__stat-value"><span>{`$${rewardCare}/month`}</span></div>
+                <div className="hero__stat-label">Website Care</div>
               </div>
             </div>
           </div>
 
           {/* Right: visual cards */}
           <div className="hero__visual">
-            <div className="hero-card">
+            <div className="hero-card hero-card--highlight">
               <div className="hero-card__top">
                 <div className="hero-card__icon">🎯</div>
-                <span className="badge badge--green">Immediate</span>
+                <span className="badge badge--green">Highest one-time reward</span>
               </div>
-              <div className="hero-card__amount">€100 <span>sponsor reward</span></div>
-              <div className="hero-card__label">Craftsman Website · €199</div>
-              <div className="hero-card__sub">After payment received</div>
+              <div className="hero-card__amount">{`$${rewardGrowth}`} <span>sponsor reward</span></div>
+              <div className="hero-card__label">{OFFERS_US.growth.title} · {OFFERS_US.growth.price}</div>
+              <div className="hero-card__sub">Once the project is signed and confirmed</div>
             </div>
 
-            <div className="hero-card hero-card--highlight">
+            <div className="hero-card">
               <div className="hero-card__top">
                 <div className="hero-card__icon">🚀</div>
                 <span className="badge badge--gold">Passive Income</span>
               </div>
-              <div className="hero-card__amount">€25/month <span>sponsor reward</span></div>
-              <div className="hero-card__label">Visibility Option · €49/month</div>
+              <div className="hero-card__amount">{`$${rewardCare}/month`} <span>sponsor reward</span></div>
+              <div className="hero-card__label">Website Care · {OFFERS_US.care.price}/month</div>
               <div className="hero-card__sub">After 1 month of active subscription</div>
             </div>
           </div>
@@ -128,10 +140,11 @@ export default function ParrainagePageEn() {
           <div className="section-header section-header--center">
             <p className="section-label">How it works</p>
             <h2 className="section-title" id="steps-title">
-              Simple sponsorship, <em>automatic</em> and transparent
+              Simple sponsorship, <em>transparent</em> rewards
             </h2>
             <p className="section-subtitle" style={{ margin: '0 auto' }}>
-              Three steps. No manual management. Everything is handled via Stripe and your affiliate space.
+              Three steps. No self-serve checkout on the US catalog yet — we confirm and pay out
+              your reward manually once your referral&rsquo;s project is signed.
             </p>
           </div>
 
@@ -143,16 +156,18 @@ export default function ParrainagePageEn() {
               <p className="step__text">
                 Send your personal code in the format{' '}
                 <strong style={{ color: 'var(--purple-light)' }}>PIXELORIA-NAME</strong>
-                {' '}to a craftsperson or SME in your network. Via SMS, WhatsApp, email or LinkedIn.
+                {' '}to a contractor or local business in your network. Via text, email or LinkedIn.
               </p>
             </div>
 
             <div className="step">
               <div className="step__icon">🛒</div>
               <div className="step__number">02</div>
-              <div className="step__title">Your referral signs up with your code</div>
+              <div className="step__title">Your referral submits their request</div>
               <p className="step__text">
-                They use your code when choosing their offer. If it&apos;s the Craftsman Website (€199), they pay via Stripe. If it&apos;s Visibility Option, the subscription starts the following month.
+                They enter your code and pick the package they&rsquo;re interested in
+                ({OFFERS_US.starter.title}, {OFFERS_US.growth.title}, or Website Care). We follow up
+                directly with them to finalize the project.
               </p>
             </div>
 
@@ -161,9 +176,8 @@ export default function ParrainagePageEn() {
               <div className="step__number">03</div>
               <div className="step__title">You receive your reward</div>
               <p className="step__text">
-                Craftsman Website: €100 after the first payment received.
-                Visibility Option: €25/month after 1 month of active subscription.
-                Cumulative: €100 + €25/month if your referral takes both.
+                Once their project is signed, you earn {`$${rewardStarter}`}–{`$${rewardGrowth}`} depending
+                on the package, plus {`$${rewardCare}`}/month if they add Website Care.
               </p>
             </div>
           </div>
@@ -181,21 +195,21 @@ export default function ParrainagePageEn() {
               Your referral <em>rewards</em>
             </h2>
             <p className="section-subtitle" style={{ margin: '0 auto' }}>
-              Two offers, two reward levels. Every referral counts.
+              Three packages, three reward levels. Every referral counts.
             </p>
           </div>
 
           <div className="rewards__grid">
 
-            {/* Craftsman Website */}
+            {/* Starter Website */}
             <div className="reward-card">
               <div className="reward-card__stripe"></div>
               <div className="reward-card__top">
                 <div>
-                  <div className="reward-card__name">Craftsman Website</div>
-                  <div className="reward-card__price">Professional site · €199</div>
+                  <div className="reward-card__name">{OFFERS_US.starter.title}</div>
+                  <div className="reward-card__price">Professional site · {OFFERS_US.starter.price}</div>
                 </div>
-                <span className="badge badge--purple">One-time payment</span>
+                <span className="badge badge--purple">One-time</span>
               </div>
               <div className="reward-card__divider"></div>
               <div className="reward-card__row">
@@ -203,40 +217,81 @@ export default function ParrainagePageEn() {
                   <span className="reward-card__row-icon">🎯</span>
                   <span className="reward-card__row-label">Referral pays</span>
                 </div>
-                <span className="reward-card__row-value">€199</span>
+                <span className="reward-card__row-value">{OFFERS_US.starter.price}</span>
               </div>
               <div className="reward-card__row">
                 <div className="reward-card__row-left">
                   <span className="reward-card__row-icon">🏆</span>
                   <span className="reward-card__row-label">You earn</span>
                 </div>
-                <span className="reward-card__row-value reward-card__row-value--purple">€100</span>
+                <span className="reward-card__row-value reward-card__row-value--purple">{`$${rewardStarter}`}</span>
               </div>
               <div className="reward-card__row">
                 <div className="reward-card__row-left">
                   <span className="reward-card__row-icon">⚡</span>
-                  <span className="reward-card__row-label">Sponsorship ROI</span>
+                  <span className="reward-card__row-label">Sponsorship value</span>
                 </div>
-                <span className="reward-card__row-value reward-card__row-value--green">50% of price</span>
+                <span className="reward-card__row-value reward-card__row-value--green">~50% of price</span>
               </div>
               <div className="reward-card__trigger">
                 <div className="reward-card__trigger-label">Triggers</div>
-                <div className="reward-card__trigger-text">Immediately after Stripe payment is received.</div>
+                <div className="reward-card__trigger-text">Once the project is signed and confirmed.</div>
               </div>
               <div className="reward-card__cta">
                 <a href={REFERRAL_URL} className="btn btn--secondary">Become a Sponsor →</a>
               </div>
             </div>
 
-            {/* Visibility Option (highlighted) */}
+            {/* Growth Website (highlighted) */}
             <div className="reward-card reward-card--highlight">
               <div className="reward-card__stripe"></div>
               <div className="reward-card__top">
                 <div>
-                  <div className="reward-card__name">Visibility Option</div>
-                  <div className="reward-card__price">Subscription · €49/month</div>
+                  <div className="reward-card__name">{OFFERS_US.growth.title}</div>
+                  <div className="reward-card__price">Professional site · {OFFERS_US.growth.price}</div>
                 </div>
-                <span className="badge badge--gold">⭐ Recurring Income</span>
+                <span className="badge badge--gold">⭐ Highest reward</span>
+              </div>
+              <div className="reward-card__divider"></div>
+              <div className="reward-card__row">
+                <div className="reward-card__row-left">
+                  <span className="reward-card__row-icon">🎯</span>
+                  <span className="reward-card__row-label">Referral pays</span>
+                </div>
+                <span className="reward-card__row-value">{OFFERS_US.growth.price}</span>
+              </div>
+              <div className="reward-card__row">
+                <div className="reward-card__row-left">
+                  <span className="reward-card__row-icon">🏆</span>
+                  <span className="reward-card__row-label">You earn</span>
+                </div>
+                <span className="reward-card__row-value" style={{ color: 'var(--gold)', fontSize: '1.1875rem' }}>{`$${rewardGrowth}`}</span>
+              </div>
+              <div className="reward-card__row">
+                <div className="reward-card__row-left">
+                  <span className="reward-card__row-icon">⚡</span>
+                  <span className="reward-card__row-label">Sponsorship value</span>
+                </div>
+                <span className="reward-card__row-value reward-card__row-value--gold">~50% of price</span>
+              </div>
+              <div className="reward-card__trigger">
+                <div className="reward-card__trigger-label">Triggers</div>
+                <div className="reward-card__trigger-text">Once the project is signed and confirmed.</div>
+              </div>
+              <div className="reward-card__cta">
+                <a href={REFERRAL_URL} className="btn btn--primary">Become a Sponsor →</a>
+              </div>
+            </div>
+
+            {/* Website Care (recurring) */}
+            <div className="reward-card">
+              <div className="reward-card__stripe"></div>
+              <div className="reward-card__top">
+                <div>
+                  <div className="reward-card__name">Website Care</div>
+                  <div className="reward-card__price">Subscription · {OFFERS_US.care.price}/month</div>
+                </div>
+                <span className="badge badge--purple">Recurring</span>
               </div>
               <div className="reward-card__divider"></div>
               <div className="reward-card__row">
@@ -244,28 +299,28 @@ export default function ParrainagePageEn() {
                   <span className="reward-card__row-icon">💳</span>
                   <span className="reward-card__row-label">Referral pays</span>
                 </div>
-                <span className="reward-card__row-value">€49/month</span>
+                <span className="reward-card__row-value">{`$${OFFERS_US.care.amount}/month`}</span>
               </div>
               <div className="reward-card__row">
                 <div className="reward-card__row-left">
                   <span className="reward-card__row-icon">🏆</span>
                   <span className="reward-card__row-label">You earn</span>
                 </div>
-                <span className="reward-card__row-value" style={{ color: 'var(--gold)', fontSize: '1.1875rem' }}>€25 /month</span>
+                <span className="reward-card__row-value reward-card__row-value--purple">{`$${rewardCare}/month`}</span>
               </div>
               <div className="reward-card__row">
                 <div className="reward-card__row-left">
                   <span className="reward-card__row-icon">📊</span>
                   <span className="reward-card__row-label">Annual potential</span>
                 </div>
-                <span className="reward-card__row-value reward-card__row-value--gold">€300 /year</span>
+                <span className="reward-card__row-value reward-card__row-value--green">{`$${rewardCare * 12}/year`}</span>
               </div>
               <div className="reward-card__trigger">
                 <div className="reward-card__trigger-label">Triggers</div>
                 <div className="reward-card__trigger-text">After 1 month of active and continuous subscription.</div>
               </div>
               <div className="reward-card__cta">
-                <a href={REFERRAL_URL} className="btn btn--primary">Become a Sponsor →</a>
+                <a href={REFERRAL_URL} className="btn btn--secondary">Become a Sponsor →</a>
               </div>
             </div>
 
@@ -278,9 +333,9 @@ export default function ParrainagePageEn() {
               <div>
                 <h3 className="reward-cumul__title">Cumulative Potential</h3>
                 <p className="reward-cumul__text">
-                  If your referral takes <strong>both</strong> Craftsman Website (€199) and subscribes to Visibility Option,
-                  you earn <strong>€100 immediate + €25/month recurring</strong>.
-                  Potential: <strong>€400 in the first year</strong> from a single referral.
+                  If your referral takes the {OFFERS_US.growth.title} ({OFFERS_US.growth.price}) and adds
+                  Website Care, you earn <strong>{`$${rewardGrowth}`} immediate + {`$${rewardCare}`}/month recurring</strong>.
+                  Potential: <strong>{`$${bestCaseFirstYear}`} in the first year</strong> from a single referral.
                 </p>
               </div>
             </div>
@@ -301,27 +356,27 @@ export default function ParrainagePageEn() {
                 Who can you <em>recommend</em>?
               </h2>
               <ul className="audience__list">
-                <li className="audience__item"><span className="audience__item-icon">🔨</span> A construction tradesperson</li>
-                <li className="audience__item"><span className="audience__item-icon">🏪</span> A local shopkeeper</li>
-                <li className="audience__item"><span className="audience__item-icon">💼</span> A freelancer or independent</li>
-                <li className="audience__item"><span className="audience__item-icon">🏗️</span> A local SME</li>
-                <li className="audience__item"><span className="audience__item-icon">🏠</span> A company with an outdated site</li>
+                <li className="audience__item"><span className="audience__item-icon">🏠</span> A roofer, plumber or electrician</li>
+                <li className="audience__item"><span className="audience__item-icon">🔧</span> An HVAC or landscaping company</li>
+                <li className="audience__item"><span className="audience__item-icon">🏗️</span> A general contractor or remodeler</li>
+                <li className="audience__item"><span className="audience__item-icon">💼</span> A local service business owner</li>
+                <li className="audience__item"><span className="audience__item-icon">🏚️</span> A company with an outdated site</li>
                 <li className="audience__item"><span className="audience__item-icon">🔍</span> A company wanting better local visibility</li>
                 <li className="audience__item"><span className="audience__item-icon">✨</span> A company without a website yet</li>
               </ul>
             </div>
 
             <div className="audience__visual">
-              <div className="audience__visual-title">Your network = a source of passive income</div>
-              <div className="audience__visual-sub">Each recommendation can generate an automatic reward.</div>
+              <div className="audience__visual-title">Your network = a source of extra income</div>
+              <div className="audience__visual-sub">Each referral that signs up can earn you a reward.</div>
               <div className="audience__visual-numbers">
                 <div className="audience__num">
-                  <div className="audience__num-value audience__num-value--purple">€100</div>
-                  <div className="audience__num-label">per Craftsman Website</div>
+                  <div className="audience__num-value audience__num-value--purple">{`$${rewardStarter}`}–{`$${rewardGrowth}`}</div>
+                  <div className="audience__num-label">per website project</div>
                 </div>
                 <div className="audience__num">
-                  <div className="audience__num-value audience__num-value--gold">€25/month</div>
-                  <div className="audience__num-label">per Visibility Option</div>
+                  <div className="audience__num-value audience__num-value--gold">{`$${rewardCare}/month`}</div>
+                  <div className="audience__num-label">per Website Care subscription</div>
                 </div>
                 <div className="audience__num">
                   <div className="audience__num-value audience__num-value--green">Unlimited</div>
@@ -345,7 +400,7 @@ export default function ParrainagePageEn() {
               Cash or Pixeloria Credit: <em>you choose</em>
             </h2>
             <p className="section-subtitle" style={{ margin: '0 auto' }}>
-              Each sponsor freely chooses the form of their reward in their affiliate space.
+              Each sponsor tells us how they&rsquo;d like their reward once it&rsquo;s confirmed.
             </p>
           </div>
 
@@ -355,13 +410,13 @@ export default function ParrainagePageEn() {
               <div className="choice-card__icon-wrap choice-card__icon-wrap--purple">💵</div>
               <h3 className="choice-card__title">Financial Reward</h3>
               <p className="choice-card__text">
-                Receive your bonus directly according to the available options in your affiliate space.
-                Automatic payment triggered as soon as conditions are validated via Stripe.
+                Receive your bonus once your referral&rsquo;s project is signed and confirmed.
+                We reach out to arrange payment directly — no dashboard needed yet.
               </p>
               <ul className="choice-card__list">
-                <li>Automatic payment, no action required from you</li>
-                <li>Real-time tracking in your sponsor space</li>
-                <li>No manual management on your part</li>
+                <li>Confirmed once your referral&rsquo;s project is signed</li>
+                <li>We reach out to arrange payment</li>
+                <li>No manual tracking on your part</li>
               </ul>
             </div>
 
@@ -476,15 +531,15 @@ export default function ParrainagePageEn() {
               </li>
               <li className="conditions__item">
                 <span className="conditions__item-icon">✦</span>
-                <p>The referral code must be used <strong>before validation of the estimate or Stripe payment</strong>.</p>
+                <p>The referral code must be entered <strong>before the estimate is finalized</strong>.</p>
               </li>
               <li className="conditions__item">
                 <span className="conditions__item-icon">✦</span>
-                <p>For Craftsman Website, the <strong>€100</strong> reward is triggered after <strong>actual payment received via Stripe</strong>.</p>
+                <p>For {OFFERS_US.starter.title} or {OFFERS_US.growth.title}, the <strong>{`$${rewardStarter}`}–{`$${rewardGrowth}`}</strong> reward is confirmed <strong>once the referred project is signed</strong> — there is no automatic online checkout on the US catalog yet.</p>
               </li>
               <li className="conditions__item">
                 <span className="conditions__item-icon">✦</span>
-                <p>For Visibility Option, the <strong>€25/month</strong> reward is triggered after <strong>1 month of active subscription</strong> and continues as long as the subscription is active.</p>
+                <p>For Website Care, the <strong>{`$${rewardCare}`}/month</strong> reward is triggered after <strong>1 month of active subscription</strong> and continues as long as the subscription is active.</p>
               </li>
               <li className="conditions__item">
                 <span className="conditions__item-icon">✦</span>
