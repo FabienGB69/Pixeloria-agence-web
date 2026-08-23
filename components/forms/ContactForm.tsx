@@ -3,6 +3,7 @@
 import { useState, useRef } from 'react';
 import { track } from '@vercel/analytics';
 import { trackAuditRequest } from '@/lib/gtm';
+import { getStoredUtm } from '@/lib/utm';
 import TurnstileWidget from '@/components/forms/TurnstileWidget';
 import { useTurnstileToken } from '@/components/forms/useTurnstileToken';
 
@@ -121,6 +122,7 @@ export default function ContactForm({ locale = 'fr' }: { locale?: 'fr' | 'en' })
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...data,
+          ...getStoredUtm(),
           _turnstile: turnstileToken,
           ...(locale === 'en' ? { _lang: 'en' } : {}),
         }),
