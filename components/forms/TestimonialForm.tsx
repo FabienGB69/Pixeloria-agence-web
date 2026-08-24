@@ -3,6 +3,7 @@
 import { Fragment, useState } from 'react';
 import TurnstileWidget from '@/components/forms/TurnstileWidget';
 import { useTurnstileToken } from '@/components/forms/useTurnstileToken';
+import { trackEvent } from '@/lib/gtm';
 
 interface FormState {
   loading: boolean;
@@ -76,6 +77,11 @@ export default function TestimonialForm({ locale = 'fr' }: { locale?: 'fr' | 'en
     e.preventDefault();
 
     const form = e.currentTarget;
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
     const raw = Object.fromEntries(new FormData(form).entries());
     const data: Record<string, FormDataEntryValue | string> = {
       prenom: raw[f.prenom],
@@ -99,6 +105,7 @@ export default function TestimonialForm({ locale = 'fr' }: { locale?: 'fr' | 'en
       });
 
       if (res.ok) {
+        trackEvent('testimonial_submitted', { locale });
         setFormState({
           loading: false,
           success: true,
