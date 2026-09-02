@@ -1,5 +1,6 @@
 import { Suspense } from 'react';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import Header from '@/components/layout/Header';
 import TunnelForm from '@/components/forms/TunnelForm';
 import Footer from '@/components/layout/Footer';
@@ -20,7 +21,7 @@ export default function RefontePage() {
       <Header />
       <main className="shell" style={{ marginTop: '5rem' }}>
         <div className="topline">
-          <a className="back-link" href="/">← Retour au site Pixeloria</a>
+          <Link className="back-link" href="/">← Retour au site Pixeloria</Link>
           <div className="brand">
             <span className="brand-dot"></span>
             Pixeloria

@@ -62,7 +62,7 @@ export default function Header() {
           <Link href="/a-propos" className="nav-link" onClick={closeMenu}>À propos</Link>
           <Link href="/parrainage" className="nav-link" onClick={closeMenu}>Parrainage</Link>
           <Link href="/en" className="nav-link lang-switcher" onClick={closeMenu} aria-label="English version">🇬🇧 EN</Link>
-          <a href="/#contact" className="btn btn-nav" onClick={closeMenu}>Devis gratuit</a>
+          <Link href="/#contact" className="btn btn-nav" onClick={closeMenu}>Devis gratuit</Link>
         </nav>
 
         <button
