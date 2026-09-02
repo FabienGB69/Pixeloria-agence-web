@@ -1,15 +1,10 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { Suspense } from 'react';
-import dynamic from 'next/dynamic';
 import { hreflangLanguages } from '@/lib/hreflang';
 import ParrainageFaq from '@/components/parrainage/ParrainageFaq';
 import ParrainageReveal from '@/components/parrainage/ParrainageReveal';
-
-const ReferralCodeSection = dynamic(
-  () => import('@/components/parrainage/ReferralCodeSection'),
-  { ssr: false },
-);
+import ReferralCodeSectionClient from '@/components/parrainage/ReferralCodeSectionClient';
 
 export const metadata: Metadata = {
   title: "Programme de parrainage — Gagnez jusqu'à 100 € + 25 €/mois | Pixeloria",
@@ -430,7 +425,7 @@ export default function ParrainagePage() {
             </p>
           </div>
           <Suspense fallback={<div style={{ minHeight: '300px' }} />}>
-            <ReferralCodeSection />
+            <ReferralCodeSectionClient />
           </Suspense>
         </div>
       </section>

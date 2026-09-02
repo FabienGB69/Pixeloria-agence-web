@@ -1,17 +1,12 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { Suspense } from 'react';
-import dynamic from 'next/dynamic';
 import { hreflangLanguages } from '@/lib/hreflang';
 import { OFFERS_US } from '@/lib/pricing-us';
 import { REFERRAL_REWARDS_US } from '@/lib/referral-rewards-us';
 import ParrainageFaqEn from '@/components/parrainage/ParrainageFaqEn';
 import ParrainageReveal from '@/components/parrainage/ParrainageReveal';
-
-const ReferralLeadFormEn = dynamic(
-  () => import('@/components/parrainage/ReferralLeadFormEn'),
-  { ssr: false },
-);
+import ReferralLeadFormEnClient from '@/components/parrainage/ReferralLeadFormEnClient';
 
 const rewardStarter = REFERRAL_REWARDS_US.starter;
 const rewardGrowth = REFERRAL_REWARDS_US.growth;
@@ -485,7 +480,7 @@ export default function ParrainagePageEn() {
             </p>
           </div>
           <Suspense fallback={<div style={{ minHeight: '300px' }} />}>
-            <ReferralLeadFormEn />
+            <ReferralLeadFormEnClient />
           </Suspense>
         </div>
       </section>
